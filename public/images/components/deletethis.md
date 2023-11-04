@@ -1,0 +1,1 @@
+Delete this file when you add some files inside this folder
