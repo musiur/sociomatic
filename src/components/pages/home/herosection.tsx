@@ -2,22 +2,18 @@
 
 import VideoPlayButton from "@/components/assets/video-play-button";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
-import React from "react";
-import useEmblaCarousel from "embla-carousel-react";
-import Autoplay from "embla-carousel-autoplay";
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
+  DialogTrigger
 } from "@/components/ui/dialog";
+import Autoplay from "embla-carousel-autoplay";
+import useEmblaCarousel from "embla-carousel-react";
+import Image from "next/image";
 
 const HeroSection = () => {
   return (
-    <section className="bg-[url('/images/backgrounds/HeroBackground.svg')] bg-center bg-cover ">
+    <section className="bg-[url('/images/backgrounds/HeroBackground.svg')] bg-center bg-cover">
       <div className="container section grid grid-cols-1 md:grid-cols-2 items-center large-gap">
         <div className="order-2 md:order-1 flex flex-col small-gap">
           <h1 className="text-primary">

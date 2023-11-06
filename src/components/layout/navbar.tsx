@@ -1,7 +1,10 @@
 "use client";
 
-import Link from "next/link";
-import BrandLogo from "../assets/brandlogo";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -19,15 +22,12 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { CaretSortIcon } from "@radix-ui/react-icons";
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible";
+import Link from "next/link";
+import BrandLogo from "../assets/brandlogo";
 
+import { Menu } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { Button } from "../ui/button";
-import { Menu } from "lucide-react";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -47,11 +47,10 @@ const Navbar = () => {
                     {item.children ? (
                       <NavigationMenuItem>
                         <NavigationMenuTrigger
-                          className={`${
-                            pathname.includes(item.link)
-                              ? "text-secondary font-semibold"
-                              : "text-primary"
-                          }`}
+                          className={`${pathname.includes(item.link)
+                            ? "text-secondary font-semibold"
+                            : "text-primary"
+                            }`}
                         >
                           {item.text}
                         </NavigationMenuTrigger>
@@ -61,11 +60,10 @@ const Navbar = () => {
                               <NavigationMenuLink key={child.id}>
                                 <a
                                   href={child.link}
-                                  className={`text-primary hover:text-secondary ${
-                                    pathname === child.link
-                                      ? "text-secondary font-semibold"
-                                      : "text-primary"
-                                  }`}
+                                  className={`text-primary hover:text-secondary ${pathname === child.link
+                                    ? "text-secondary font-semibold"
+                                    : "text-primary"
+                                    }`}
                                 >
                                   {child.text}
                                 </a>
@@ -80,23 +78,21 @@ const Navbar = () => {
                           href={item.link}
                           legacyBehavior
                           passHref
-                          className={`${
-                            pathname === "/"
-                              ? "text-secondary font-semibold"
-                              : pathname.includes(item.link)
+                          className={`${pathname === "/"
+                            ? "text-secondary font-semibold"
+                            : pathname.includes(item.link)
                               ? "text-secondary font-semibold"
                               : "text-primary"
-                          }`}
+                            }`}
                         >
                           <NavigationMenuLink
                             className={navigationMenuTriggerStyle()}
                           >
                             <span
-                              className={`hover:text-secondary ${
-                                pathname === item.link
-                                  ? "text-secondary font-semibold"
-                                  : "text-primary"
-                              }`}
+                              className={`hover:text-secondary ${pathname === item.link
+                                ? "text-secondary font-semibold"
+                                : "text-primary"
+                                }`}
                             >
                               {item.text}
                             </span>
@@ -128,11 +124,10 @@ const Navbar = () => {
                           {linkItem.children ? (
                             <Collapsible>
                               <CollapsibleTrigger
-                                className={`flex items-center justify-start small-gap ${
-                                  pathname.includes(linkItem.link)
-                                    ? "text-secondary font-semibold"
-                                    : "text-primary"
-                                }`}
+                                className={`flex items-center justify-start small-gap ${pathname.includes(linkItem.link)
+                                  ? "text-secondary font-semibold"
+                                  : "text-primary"
+                                  }`}
                               >
                                 {linkItem.text}{" "}
                                 <CaretSortIcon className="h-4 w-4" />
@@ -304,5 +299,5 @@ const Links = [
     id: 5,
     text: "Contact us",
     link: "/contact-us",
-  },
+  }
 ];
