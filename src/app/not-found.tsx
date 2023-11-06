@@ -4,7 +4,7 @@ const NotFound = () => {
     return (
         <section className="bg-[url('/images/backgrounds/HeroBackground.svg')] bg-center bg-cover">
             <div className="section container min-h-[80vh] flex flex-col items-center justify-center large-gap ">
-                <p>404 | Page not found</p>
+                <p>404 | Page not found </p>
                 <Link
                     href="/"
                     className="text-secondary hover:text-primary font-medium"
