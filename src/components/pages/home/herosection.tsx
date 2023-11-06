@@ -15,8 +15,8 @@ const HeroSection = ({
   P = (
     <>
       Being digital <span>agency</span>, the sociomatic&nbsp;
-      <span>specialized with A to Z</span> to help improving business
-      <span>analytics</span>, software <span>development</span>,
+      <span>specialized with A to Z</span> to help improving business&nbsp;
+      <span>analytics</span>, software <span>development</span>,&nbsp;
       <span>campaigns</span>, and extensive <span>maintenance</span>
     </>
   ),
