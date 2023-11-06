@@ -17,6 +17,7 @@
     --primary-foreground: 210 40% 98%;
 
     --secondary: 241 77% 63%;
+    --decade: 34 100% 66%;
     --secondary-muted: 242 76% 90%;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
@@ -24,8 +25,8 @@
     --dimmed: 246, 10%, 37%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 34 100% 66%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 247 82% 98%;
+    --accent-foreground: 241 77% 63%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
@@ -106,7 +107,7 @@ h2 {
 }
 
 .container {
-  @apply max-w-[1460px] min-w-[300px] px-[10px];
+  @apply max-w-[1460px] min-w-[300px] px-[20px];
 }
 
 .section {
