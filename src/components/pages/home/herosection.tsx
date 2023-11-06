@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import React, { ReactElement } from "react";
+import { ReactElement } from "react";
 
 import { EmblaCarousel } from "@/components/core/home/carousel";
 import VideoPlayer from "@/components/core/home/video-player";
