@@ -25,7 +25,7 @@ const Home = () => {
         brands={true}
       />
       <section className="bg-[url('/images/backgrounds/SquareBackground.svg')] bg-center bg-cover">
-        <div className="container section grid grid-cols-3 justify-between items-start large-gap">
+        <div className="container section grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-between items-start large-gap">
           {[1, 2, 3, 4, 5, 6].map((item: any) => {
             return (
               <FeatureCard

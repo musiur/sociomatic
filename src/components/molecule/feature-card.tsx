@@ -21,8 +21,9 @@ const FeatureCard = ({
   list: any;
   link: string;
 }) => {
+  // max-w-[365px]
   return (
-    <div className="rounded-[10px] border border-secondary-muted hover:border-secondary bg-white/5 backdrop-blur-[8px] hover:backdrop-blur-[8px] max-w-[365px] px-[25px] py-[50px] shadow-[0_4px_25px_0_rgba(89,86,255,0.05)] transition ease-in-out duration-500">
+    <div className="rounded-[10px] border border-secondary-muted hover:border-secondary bg-white/5 backdrop-blur-[8px] hover:backdrop-blur-[8px] w-full px-[25px] py-[50px] shadow-[0_4px_25px_0_rgba(89,86,255,0.05)] transition ease-in-out duration-500">
       <div className="flex flex-col items-start justify-start small-gap">
         {image}
         <h4 className="font-bold text-primary">{title}</h4>
