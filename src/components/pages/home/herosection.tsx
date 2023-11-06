@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import React, { ReactElement } from "react";
+import { ReactElement } from "react";
 
 import { EmblaCarousel } from "@/components/core/home/carousel";
 import VideoPlayer from "@/components/core/home/video-player";
@@ -30,7 +30,7 @@ const HeroSection = ({
   brands: boolean;
 }) => {
   return (
-    <section className="bg-[url('/images/backgrounds/HeroBackground.svg')] bg-center bg-cover ">
+    <section className="bg-[url('/images/backgrounds/HeroBackground.svg')] bg-center bg-cover">
       <div className="container section grid grid-cols-1 md:grid-cols-2 items-center large-gap">
         <div className="order-2 md:order-1 flex flex-col small-gap">
           {H1}
