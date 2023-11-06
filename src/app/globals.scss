@@ -121,3 +121,10 @@ h2 {
 .large-gap {
   @apply gap-[50px];
 }
+
+.hero-description {
+  @apply text-[16px] md:text-[20px];
+  span {
+    @apply font-medium text-primary text-[16px] md:text-[20px];
+  }
+}

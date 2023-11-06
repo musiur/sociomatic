@@ -33,7 +33,7 @@ const Navbar = () => {
   const pathname = usePathname();
   console.log(pathname);
   return (
-    <nav className="backdrop-blur-xl bg-white/10 border-b border-muted sticky top-0 z-50">
+    <nav className="backdrop-blur-xl bg-white/70 border-b border-muted sticky top-0 z-50">
       <div className="container py-3 flex items-center justify-between">
         <Link href="/">
           <BrandLogo />
@@ -50,7 +50,7 @@ const Navbar = () => {
                           className={`${
                             pathname.includes(item.link)
                               ? "text-secondary font-semibold"
-                              : ""
+                              : "text-primary"
                           }`}
                         >
                           {item.text}
@@ -61,10 +61,10 @@ const Navbar = () => {
                               <NavigationMenuLink key={child.id}>
                                 <a
                                   href={child.link}
-                                  className={`hover:text-secondary ${
+                                  className={`text-primary hover:text-secondary ${
                                     pathname === child.link
                                       ? "text-secondary font-semibold"
-                                      : ""
+                                      : "text-primary"
                                   }`}
                                 >
                                   {child.text}
@@ -85,7 +85,7 @@ const Navbar = () => {
                               ? "text-secondary font-semibold"
                               : pathname.includes(item.link)
                               ? "text-secondary font-semibold"
-                              : ""
+                              : "text-primary"
                           }`}
                         >
                           <NavigationMenuLink
@@ -95,7 +95,7 @@ const Navbar = () => {
                               className={`hover:text-secondary ${
                                 pathname === item.link
                                   ? "text-secondary font-semibold"
-                                  : ""
+                                  : "text-primary"
                               }`}
                             >
                               {item.text}
@@ -131,7 +131,7 @@ const Navbar = () => {
                                 className={`flex items-center justify-start small-gap ${
                                   pathname.includes(linkItem.link)
                                     ? "text-secondary font-semibold"
-                                    : ""
+                                    : "text-primary"
                                 }`}
                               >
                                 {linkItem.text}{" "}
@@ -147,7 +147,7 @@ const Navbar = () => {
                                         className={
                                           pathname === child.link
                                             ? "text-secondary font-semibold"
-                                            : ""
+                                            : "text-primary"
                                         }
                                       >
                                         {child.text}
@@ -163,7 +163,7 @@ const Navbar = () => {
                               className={
                                 pathname === linkItem.link
                                   ? "text-secondary font-semibold"
-                                  : ""
+                                  : "text-primary"
                               }
                             >
                               {linkItem.text}

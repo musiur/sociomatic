@@ -1,9 +1,9 @@
-
+import HeroSection from "@/components/pages/home/herosection";
 
 const Home = () => {
   return (
-    <main className="bg-[url('/images/backgrounds/HeroBackground.svg')] bg-center bg-cover">
-      hello world!
+    <main>
+      <HeroSection />
     </main>
   );
 };
