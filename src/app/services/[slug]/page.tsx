@@ -1,8 +1,11 @@
 import HeroSection from "@/components/pages/home/herosection";
 
-const Home = () => {
+const Services = ({ params }: { params: { slug: string } }) => {
+  {
+    params.slug;
+  }
   return (
-    <main>
+    <div>
       <HeroSection
         H1={
           <h1 className="text-primary">
@@ -19,10 +22,10 @@ const Home = () => {
           </p>
         }
         videoLink="https://www.youtube.com/embed/Gl465-ugqbM?si=Njv8OZykPsz9LsYZ"
-        brands={true}
+        brands={false}
       />
-    </main>
+    </div>
   );
 };
 
-export default Home;
+export default Services;
