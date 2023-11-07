@@ -226,8 +226,8 @@ const Links = [
       },
       {
         id: 6,
-        text: "Shopify Development",
-        link: "/case-studies/shopify-development",
+        text: "Shopify Store Development",
+        link: "/case-studies/shopify-store-development",
       },
       {
         id: 7,
@@ -278,8 +278,8 @@ const Links = [
       },
       {
         id: 6,
-        text: "Shopify Development",
-        link: "/services/shopify-development",
+        text: "Shopify Store Development",
+        link: "/services/shopify-store-development",
       },
       {
         id: 7,

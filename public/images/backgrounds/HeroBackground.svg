@@ -7,12 +7,12 @@
 </g>
 <path d="M-190 623.841L1690 -161V-66.2675L-190 735.361V850.479M-190 850.479L1690 45.8526V162.769L-190 962V850.479Z" stroke="#F6F5FE"/>
 <defs>
-<filter id="filter0_f_23_4576" x="-28" y="121" width="440" height="428" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_f_23_4576" x="-28" y="121" width="440" height="428" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
 <feGaussianBlur stdDeviation="28" result="effect1_foregroundBlur_23_4576"/>
 </filter>
-<filter id="filter1_f_23_4576" x="856.628" y="42" width="794.745" height="703.5" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter1_f_23_4576" x="856.628" y="42" width="794.745" height="703.5" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
 <feGaussianBlur stdDeviation="90" result="effect1_foregroundBlur_23_4576"/>
