@@ -28,7 +28,7 @@ const Campaigns = () => {
           stroke="url(#paint0_linear_206_4334)"
           strokeWidth="2"
           strokeDasharray="6 6"
-          shape-rendering="crispEdges"
+          shapeRendering="crispEdges"
         />
       </g>
       <g filter="url(#filter2_ii_206_4334)">
@@ -53,7 +53,7 @@ const Campaigns = () => {
           filterUnits="userSpaceOnUse"
           colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feGaussianBlur in="BackgroundImageFix" stdDeviation="1" />
           <feComposite
             in2="SourceAlpha"
@@ -76,7 +76,7 @@ const Campaigns = () => {
           filterUnits="userSpaceOnUse"
           colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feGaussianBlur in="BackgroundImageFix" stdDeviation="2" />
           <feComposite
             in2="SourceAlpha"
@@ -117,7 +117,7 @@ const Campaigns = () => {
           filterUnits="userSpaceOnUse"
           colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -170,7 +170,7 @@ const Campaigns = () => {
           filterUnits="userSpaceOnUse"
           colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -222,8 +222,8 @@ const Campaigns = () => {
           y2="193.471"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.296875" stop-color="#0E56A3" />
-          <stop offset="1" stop-color="#453D81" />
+          <stop offset="0.296875" stopColor="#0E56A3" />
+          <stop offset="1" stopColor="#453D81" />
         </linearGradient>
       </defs>
     </svg>

@@ -11,7 +11,10 @@ import FeatureCard from "@/components/molecule/feature-card";
 import LinkButton from "@/components/molecule/link-button";
 import SectionHead from "@/components/molecule/section-head";
 import HeroSection from "@/components/pages/home/herosection";
+
 import ProjectIdea from "@/components/pages/home/project-idea-banner";
+
+import Testimonial from "@/components/pages/home/testimonial";
 
 const Home = () => {
   return (
@@ -66,7 +69,12 @@ const Home = () => {
           <LinkButton />
         </div>
       </section>
+
       <ProjectIdea />
+
+
+      <Testimonial />
+
     </main>
   );
 };
