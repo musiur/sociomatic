@@ -15,8 +15,8 @@ const HeroSection = ({
   P = (
     <>
       Being digital <span>agency</span>, the sociomatic&nbsp;
-      <span>specialized with A to Z</span> to help improving business
-      <span>analytics</span>, software <span>development</span>,
+      <span>specialized with A to Z</span> to help improving business&nbsp;
+      <span>analytics</span>, software <span>development</span>,&nbsp;
       <span>campaigns</span>, and extensive <span>maintenance</span>
     </>
   ),
@@ -30,8 +30,8 @@ const HeroSection = ({
 }) => {
   return (
     <section className="bg-[url('/images/backgrounds/HeroBackground.svg')] bg-center bg-cover">
-      <div className="container section grid grid-cols-1 md:grid-cols-2 items-center large-gap">
-        <div className="order-2 md:order-1 flex flex-col small-gap">
+      <div className="container section grid grid-cols-1 lg:grid-cols-2 items-center large-gap">
+        <div className="order-2 lg:order-1 flex flex-col small-gap">
           <h1 className="text-primary [&>span]:text-secondary">{H1}</h1>
           <p className="hero-description">{P}</p>
           <div className="flex flex-wrap items-center small-gap">
@@ -43,7 +43,7 @@ const HeroSection = ({
             </Link>
           </div>
         </div>
-        <div className="order-1 md:order-2">
+        <div className="order-1 lg:order-2">
           <div className="min-h-[200px] relative">
             <Image
               src="/images/pages/home/heroVideo.png"
