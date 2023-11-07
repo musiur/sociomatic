@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import {
   Sheet,
+  SheetClose,
   SheetContent,
   SheetDescription,
   SheetHeader,
@@ -47,10 +48,11 @@ const Navbar = () => {
                     {item.children ? (
                       <NavigationMenuItem>
                         <NavigationMenuTrigger
-                          className={`${pathname.includes(item.link)
-                            ? "text-secondary font-semibold"
-                            : "text-primary"
-                            }`}
+                          className={`${
+                            pathname.includes(item.link)
+                              ? "text-secondary font-semibold"
+                              : "text-primary"
+                          }`}
                         >
                           {item.text}
                         </NavigationMenuTrigger>
@@ -60,10 +62,11 @@ const Navbar = () => {
                               <NavigationMenuLink key={child.id}>
                                 <a
                                   href={child.link}
-                                  className={`text-primary hover:text-secondary ${pathname === child.link
-                                    ? "text-secondary font-semibold"
-                                    : "text-primary"
-                                    }`}
+                                  className={`text-primary hover:text-secondary ${
+                                    pathname === child.link
+                                      ? "text-secondary font-semibold"
+                                      : "text-primary"
+                                  }`}
                                 >
                                   {child.text}
                                 </a>
@@ -78,21 +81,23 @@ const Navbar = () => {
                           href={item.link}
                           legacyBehavior
                           passHref
-                          className={`${pathname === "/"
-                            ? "text-secondary font-semibold"
-                            : pathname.includes(item.link)
+                          className={`${
+                            pathname === "/"
+                              ? "text-secondary font-semibold"
+                              : pathname.includes(item.link)
                               ? "text-secondary font-semibold"
                               : "text-primary"
-                            }`}
+                          }`}
                         >
                           <NavigationMenuLink
                             className={navigationMenuTriggerStyle()}
                           >
                             <span
-                              className={`hover:text-secondary ${pathname === item.link
-                                ? "text-secondary font-semibold"
-                                : "text-primary"
-                                }`}
+                              className={`hover:text-secondary ${
+                                pathname === item.link
+                                  ? "text-secondary font-semibold"
+                                  : "text-primary"
+                              }`}
                             >
                               {item.text}
                             </span>
@@ -124,10 +129,11 @@ const Navbar = () => {
                           {linkItem.children ? (
                             <Collapsible>
                               <CollapsibleTrigger
-                                className={`flex items-center justify-start small-gap ${pathname.includes(linkItem.link)
-                                  ? "text-secondary font-semibold"
-                                  : "text-primary"
-                                  }`}
+                                className={`flex items-center justify-start small-gap ${
+                                  pathname.includes(linkItem.link)
+                                    ? "text-secondary font-semibold"
+                                    : "text-primary"
+                                }`}
                               >
                                 {linkItem.text}{" "}
                                 <CaretSortIcon className="h-4 w-4" />
@@ -136,33 +142,36 @@ const Navbar = () => {
                                 <div className="flex flex-col items-start justify-start small-gap py-[25px] px-3 border-l">
                                   {linkItem.children.map((child: any) => {
                                     return (
-                                      <Link
-                                        key={child.id}
-                                        href={child.link}
-                                        className={
-                                          pathname === child.link
-                                            ? "text-secondary font-semibold"
-                                            : "text-primary"
-                                        }
-                                      >
-                                        {child.text}
-                                      </Link>
+                                      <SheetClose key={child.id} asChild>
+                                        <Link
+                                          href={child.link}
+                                          className={
+                                            pathname === child.link
+                                              ? "text-secondary font-semibold"
+                                              : "text-primary"
+                                          }
+                                        >
+                                          {child.text}
+                                        </Link>
+                                      </SheetClose>
                                     );
                                   })}
                                 </div>
                               </CollapsibleContent>
                             </Collapsible>
                           ) : (
-                            <Link
-                              href={linkItem.link}
-                              className={
-                                pathname === linkItem.link
-                                  ? "text-secondary font-semibold"
-                                  : "text-primary"
-                              }
-                            >
-                              {linkItem.text}
-                            </Link>
+                            <SheetClose asChild>
+                              <Link
+                                href={linkItem.link}
+                                className={
+                                  pathname === linkItem.link
+                                    ? "text-secondary font-semibold"
+                                    : "text-primary"
+                                }
+                              >
+                                {linkItem.text}
+                              </Link>
+                            </SheetClose>
                           )}
                         </li>
                       );
@@ -218,8 +227,8 @@ const Links = [
       },
       {
         id: 6,
-        text: "Shopify Development",
-        link: "/case-studies/shopify-development",
+        text: "Shopify Store Development",
+        link: "/case-studies/shopify-store-development",
       },
       {
         id: 7,
@@ -270,8 +279,8 @@ const Links = [
       },
       {
         id: 6,
-        text: "Shopify Development",
-        link: "/services/shopify-development",
+        text: "Shopify Store Development",
+        link: "/services/shopify-store-development",
       },
       {
         id: 7,
@@ -299,5 +308,5 @@ const Links = [
     id: 5,
     text: "Contact us",
     link: "/contact-us",
-  }
+  },
 ];

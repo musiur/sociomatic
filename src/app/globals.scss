@@ -66,7 +66,7 @@
 }
 
 $min_width: 320px;
-$max_width: 1440px;
+$max_width: 1196px;
 $p_min_font: 14px;
 $p_max_font: 16px;
 $h1_min_font: 28px;
@@ -107,7 +107,7 @@ h2 {
 }
 
 .container {
-  @apply max-w-[1460px] min-w-[300px] px-[20px];
+  @apply max-w-[1196px] min-w-[300px] px-[20px];
 }
 
 .section {

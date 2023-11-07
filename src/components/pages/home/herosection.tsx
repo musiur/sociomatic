@@ -8,18 +8,17 @@ import Link from "next/link";
 
 const HeroSection = ({
   H1 = (
-    <h1 className="text-primary">
-      We Craft <span className="text-secondary">Solution</span> on Demand to Go
-      Online and Grow Business
-    </h1>
+    <>
+      We Craft <span>Solution</span> on Demand to Go Online and Grow Business
+    </>
   ),
   P = (
-    <p className="hero-description">
-      Being digital <span>agency</span>, the sociomatic
-      <span>specialized with A to Z</span> to help improving business
-      <span>analytics</span>, software <span>development</span>,
+    <>
+      Being digital <span>agency</span>, the sociomatic&nbsp;
+      <span>specialized with A to Z</span> to help improving business&nbsp;
+      <span>analytics</span>, software <span>development</span>,&nbsp;
       <span>campaigns</span>, and extensive <span>maintenance</span>
-    </p>
+    </>
   ),
   videoLink = "https://www.youtube.com/embed/Gl465-ugqbM?si=Njv8OZykPsz9LsYZ",
   brands = false,
@@ -31,10 +30,10 @@ const HeroSection = ({
 }) => {
   return (
     <section className="bg-[url('/images/backgrounds/HeroBackground.svg')] bg-center bg-cover">
-      <div className="container section grid grid-cols-1 md:grid-cols-2 items-center large-gap">
-        <div className="order-2 md:order-1 flex flex-col small-gap">
-          {H1}
-          {P}
+      <div className="container section grid grid-cols-1 lg:grid-cols-2 items-center large-gap">
+        <div className="order-2 lg:order-1 flex flex-col small-gap">
+          <h1 className="text-primary [&>span]:text-secondary">{H1}</h1>
+          <p className="hero-description">{P}</p>
           <div className="flex flex-wrap items-center small-gap">
             <Link href="/#calendly">
               <Button variant="outline">Get a Free Consultation</Button>
@@ -44,7 +43,7 @@ const HeroSection = ({
             </Link>
           </div>
         </div>
-        <div className="order-1 md:order-2">
+        <div className="order-1 lg:order-2">
           <div className="min-h-[200px] relative">
             <Image
               src="/images/pages/home/heroVideo.png"
