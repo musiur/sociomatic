@@ -48,7 +48,7 @@ const Home = () => {
             ]}
           />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-between items-start large-gap">
-            {FeaturesData.slice(0, 5).map((item: any) => {
+            {FeaturesData.slice(0, 6).map((item: any) => {
               const { id, image, title, description, list, link } = item;
               return (
                 <FeatureCard
