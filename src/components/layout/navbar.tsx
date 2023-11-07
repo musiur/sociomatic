@@ -126,25 +126,24 @@ const Navbar = () => {
                     {Links.map((linkItem: any) => {
                       return (
                         <li key={linkItem.id}>
-                          <SheetClose asChild>
-                            {linkItem.children ? (
-                              <Collapsible>
-                                <CollapsibleTrigger
-                                  className={`flex items-center justify-start small-gap ${
-                                    pathname.includes(linkItem.link)
-                                      ? "text-secondary font-semibold"
-                                      : "text-primary"
-                                  }`}
-                                >
-                                  {linkItem.text}{" "}
-                                  <CaretSortIcon className="h-4 w-4" />
-                                </CollapsibleTrigger>
-                                <CollapsibleContent>
-                                  <div className="flex flex-col items-start justify-start small-gap py-[25px] px-3 border-l">
-                                    {linkItem.children.map((child: any) => {
-                                      return (
+                          {linkItem.children ? (
+                            <Collapsible>
+                              <CollapsibleTrigger
+                                className={`flex items-center justify-start small-gap ${
+                                  pathname.includes(linkItem.link)
+                                    ? "text-secondary font-semibold"
+                                    : "text-primary"
+                                }`}
+                              >
+                                {linkItem.text}{" "}
+                                <CaretSortIcon className="h-4 w-4" />
+                              </CollapsibleTrigger>
+                              <CollapsibleContent>
+                                <div className="flex flex-col items-start justify-start small-gap py-[25px] px-3 border-l">
+                                  {linkItem.children.map((child: any) => {
+                                    return (
+                                      <SheetClose key={child.id} asChild>
                                         <Link
-                                          key={child.id}
                                           href={child.link}
                                           className={
                                             pathname === child.link
@@ -154,12 +153,14 @@ const Navbar = () => {
                                         >
                                           {child.text}
                                         </Link>
-                                      );
-                                    })}
-                                  </div>
-                                </CollapsibleContent>
-                              </Collapsible>
-                            ) : (
+                                      </SheetClose>
+                                    );
+                                  })}
+                                </div>
+                              </CollapsibleContent>
+                            </Collapsible>
+                          ) : (
+                            <SheetClose asChild>
                               <Link
                                 href={linkItem.link}
                                 className={
@@ -170,8 +171,8 @@ const Navbar = () => {
                               >
                                 {linkItem.text}
                               </Link>
-                            )}
-                          </SheetClose>
+                            </SheetClose>
+                          )}
                         </li>
                       );
                     })}
