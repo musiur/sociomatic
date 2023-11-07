@@ -29,6 +29,7 @@ const Footer = () => {
                             </div>
                         </div>
                         <p>
+
                             <p className="pt-[25px]">
                                 © {new Date().getFullYear()}. All rights reserved
                             </p>
