@@ -5,7 +5,7 @@ import BrandLogo from "../assets/brandlogo";
 
 const Footer = () => {
     return (
-        <footer className="bg-muted mt-10 rounded-t-[3rem] ">
+        <footer className="bg-muted rounded-t-[3rem] ">
 
             <div className="section container">
                 <section className="flex flex-col sm:flex-row flex-wrap items-start justify-between large-gap md:small-gap">
@@ -40,7 +40,7 @@ const Footer = () => {
                         return (
                             <div
                                 key={item.id}
-                                className="text-black flex flex-col items-start flex-start small-gap md:flex-start"
+                                className=" flex flex-col items-start flex-start small-gap md:flex-start"
                             >
                                 <h4 className="font-bold text-secondary text-lg md:text-xl">
                                     {item.title}
