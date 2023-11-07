@@ -1,9 +1,6 @@
 import HeroSection from "@/components/pages/home/herosection";
 
 const CaseStudies = ({ params }: { params: { slug: string } }) => {
-  {
-    params.slug;
-  }
   return (
     <div>
       <HeroSection
