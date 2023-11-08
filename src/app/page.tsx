@@ -17,7 +17,6 @@ import OurProcess from "@/components/pages/home/process";
 
 import OurServices from "@/components/pages/home/our-services";
 
-
 import ProjectIdea from "@/components/pages/home/project-idea-banner";
 
 import Testimonial from "@/components/pages/home/testimonial";
@@ -44,45 +43,8 @@ const Home = () => {
         videoLink="https://www.youtube.com/embed/Gl465-ugqbM?si=Njv8OZykPsz9LsYZ"
         brands={true}
       />
-
-      <section className="bg-[url('/images/backgrounds/SquareBackground.svg')] bg-center bg-cover">
-        <div className="container section flex flex-col large-gap">
-          <SectionHead
-            highlighter="Our Services"
-            H2={<>Understanding Your Business</>}
-            paragraphs={[
-              <>
-                We&apos;ll listen to <span>your goals</span> and complete a free
-                audit to discover if we&apos;re a great fit to work with each
-                other.
-              </>,
-            ]}
-          />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-between items-start large-gap">
-            {FeaturesData.slice(0, 6).map((item: any) => {
-              const { id, image, title, description, list, link } = item;
-              return (
-                <FeatureCard
-                  key={id}
-                  image={image}
-                  title={title}
-                  description={description}
-                  list={list}
-                  link={link}
-                />
-              );
-            })}
-          </div>
-          <LinkButton />
-        </div>
-      </section>
-      <OurProcess />
-      <ProjectIdea />
-
-
-
       <OurServices />
-
+      <OurProcess />
       <Testimonial />
       <Calendly />
       <ProjectIdea />
