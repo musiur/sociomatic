@@ -10,6 +10,7 @@ import Wordpress from "@/components/assets/wordpress";
 import FeatureCard from "@/components/molecule/feature-card";
 import LinkButton from "@/components/molecule/link-button";
 import SectionHead from "@/components/molecule/section-head";
+import Calendly from "@/components/pages/home/calendly";
 import HeroSection from "@/components/pages/home/herosection";
 import OurServices from "@/components/pages/home/our-services";
 
@@ -41,6 +42,7 @@ const Home = () => {
       />
       <OurServices />
       <Testimonial />
+      <Calendly />
       <ProjectIdea />
     </main>
   );
