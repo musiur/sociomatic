@@ -9,7 +9,7 @@ const ProjectIdea = () => {
                         Have Any Project Idea?
                     </h2>
                     <p className="text-white text-center">Lets discuss about your offshore project. We can Help you by our skillful  Global team. You can take a free counciling by taking a schedule</p>
-                    <Button variant="outline" className="w-[135px] h-[49px]rounded-[8px]">Get A Quote</Button>
+                    <Button variant="outline" className="bg-white">Get A Quote</Button>
                 </div>
             </div>
         </section>

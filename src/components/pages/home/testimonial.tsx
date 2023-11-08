@@ -43,7 +43,7 @@ const Testimonial = () => {
               }
             )}
           </div>
-          <div className="max-w-[611px] bg-[url('/images/backgrounds/Quotes.svg')] bg-center bg-contain flex items-center justify-center">
+          <div className="max-w-[611px] bg-[url('/images/backgrounds/Quotes.svg')] bg-center bg-contain bg-no-repeat flex items-center justify-center">
             <p className="hero-description text-center p-[16.5px]">
               {
                 TestimonialUserData.find(
