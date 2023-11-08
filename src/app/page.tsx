@@ -7,9 +7,6 @@ import GoogleAnalytics from "@/components/assets/google-analytics";
 import PenTool from "@/components/assets/pen-tool";
 import Shopify from "@/components/assets/shopify";
 import Wordpress from "@/components/assets/wordpress";
-import FeatureCard from "@/components/molecule/feature-card";
-import LinkButton from "@/components/molecule/link-button";
-import SectionHead from "@/components/molecule/section-head";
 import Calendly from "@/components/pages/home/calendly";
 import HeroSection from "@/components/pages/home/herosection";
 
@@ -19,6 +16,7 @@ import OurServices from "@/components/pages/home/our-services";
 
 import ProjectIdea from "@/components/pages/home/project-idea-banner";
 
+import Faq from "@/components/pages/home/faq";
 import Testimonial from "@/components/pages/home/testimonial";
 
 const Home = () => {
@@ -47,6 +45,7 @@ const Home = () => {
       <OurProcess />
       <Testimonial />
       <Calendly />
+      <Faq />
       <ProjectIdea />
     </main>
   );
