@@ -17,6 +17,7 @@ import OurServices from "@/components/pages/home/our-services";
 import ProjectIdea from "@/components/pages/home/project-idea-banner";
 
 import Faq from "@/components/pages/home/faq";
+import HowWeWork from "@/components/pages/home/how-we-work";
 import Testimonial from "@/components/pages/home/testimonial";
 
 const Home = () => {
@@ -42,6 +43,7 @@ const Home = () => {
         brands={true}
       />
       <OurServices />
+      <HowWeWork />
       <OurProcess />
       <Testimonial />
       <Calendly />
