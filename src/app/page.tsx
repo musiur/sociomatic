@@ -41,8 +41,10 @@ const Home = () => {
       <OurProcess />
       <Testimonial />
       <Calendly />
-      <Faq />
-      <ProjectIdea />
+      <div className="bg-[url('/images/backgrounds/CircleNest.svg')] bg-center bg-cover">
+        <Faq />
+        <ProjectIdea />
+      </div>
     </main>
   );
 };
