@@ -9,13 +9,9 @@ import Shopify from "@/components/assets/shopify";
 import Wordpress from "@/components/assets/wordpress";
 import Calendly from "@/components/pages/home/calendly";
 import HeroSection from "@/components/pages/home/herosection";
-
 import OurProcess from "@/components/pages/home/process";
-
 import OurServices from "@/components/pages/home/our-services";
-
 import ProjectIdea from "@/components/pages/home/project-idea-banner";
-
 import Faq from "@/components/pages/home/faq";
 import Testimonial from "@/components/pages/home/testimonial";
 
