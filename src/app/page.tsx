@@ -40,7 +40,6 @@ const Home = () => {
       <OurServices />
       <OurProcess />
       <Testimonial />
-      <Calendly />
       <div className="bg-[url('/images/backgrounds/CircleNest.svg')] bg-center bg-cover">
         <Faq />
         <ProjectIdea />
