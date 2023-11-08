@@ -10,8 +10,13 @@ import Wordpress from "@/components/assets/wordpress";
 import FeatureCard from "@/components/molecule/feature-card";
 import LinkButton from "@/components/molecule/link-button";
 import SectionHead from "@/components/molecule/section-head";
+import Calendly from "@/components/pages/home/calendly";
 import HeroSection from "@/components/pages/home/herosection";
+
 import OurProcess from "@/components/pages/home/process";
+
+import OurServices from "@/components/pages/home/our-services";
+
 
 import ProjectIdea from "@/components/pages/home/project-idea-banner";
 
@@ -39,6 +44,7 @@ const Home = () => {
         videoLink="https://www.youtube.com/embed/Gl465-ugqbM?si=Njv8OZykPsz9LsYZ"
         brands={true}
       />
+
       <section className="bg-[url('/images/backgrounds/SquareBackground.svg')] bg-center bg-cover">
         <div className="container section flex flex-col large-gap">
           <SectionHead
@@ -74,12 +80,15 @@ const Home = () => {
       <ProjectIdea />
 
 
-      <Testimonial />
 
+      <OurServices />
+
+      <Testimonial />
+      <Calendly />
+      <ProjectIdea />
     </main>
   );
 };
-
 
 export default Home;
 
