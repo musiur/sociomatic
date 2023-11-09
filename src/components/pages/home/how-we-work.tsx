@@ -10,40 +10,42 @@ import { ReactElement } from "react";
 
 const HowWeWork = () => {
     return (
-        <section className="container section">
-            <SectionHead
-                highlighter="How we work?"
-                H2={<>Getting started with us</>}
-                paragraphs={[
-                    <>
-                        We&apos;ll listen to <span> your goals</span> and complete a free audit to discover if we&apos;re a great fit to work with each other.
-                    </>,
-                ]}
-            />
-            <section className="flex small-gap flex-col pt-[50px]">
+        <section className="bg-[url('/images/backgrounds/StarBackground.svg')] bg-center bg-cover">
+            <div className="container section">
+                <SectionHead
+                    highlighter="How we work?"
+                    H2={<>Getting started with us</>}
+                    paragraphs={[
+                        <>
+                            We&apos;ll listen to <span> your goals</span> and complete a free audit to discover if we&apos;re a great fit to work with each other.
+                        </>,
+                    ]}
+                />
+                <div className="flex small-gap flex-col pt-[50px]">
 
-                {
-                    WorkProcessStepsData.map((item:
-                        {
-                            id: number;
-                            numberImage: ReactElement;
-                            image: ReactElement;
-                            title: string;
-                            description: ReactElement;
-                        }) => {
-                        const { id, numberImage, image, title, description } = item;
-                        return (
-                            <WorkCard key={id}
-                                id={id}
-                                numberImage={numberImage}
-                                image={image}
-                                title={title}
-                                description={description}
-                            />
-                        )
-                    })
-                }
-            </section>
+                    {
+                        WorkProcessStepsData.map((item:
+                            {
+                                id: number;
+                                numberImage: ReactElement;
+                                image: ReactElement;
+                                title: string;
+                                description: ReactElement;
+                            }) => {
+                            const { id, numberImage, image, title, description } = item;
+                            return (
+                                <WorkCard key={id}
+                                    id={id}
+                                    numberImage={numberImage}
+                                    image={image}
+                                    title={title}
+                                    description={description}
+                                />
+                            )
+                        })
+                    }
+                </div>
+            </div>
         </section>
     )
 }
