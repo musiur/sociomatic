@@ -21,8 +21,8 @@ const HowWeWork = () => {
                         </>,
                     ]}
                 />
-                <div className="flex small-gap flex-col pt-[50px]">
 
+                <div className="flex small-gap flex-col pt-[50px]">
                     {
                         WorkProcessStepsData.map((item:
                             {
@@ -45,6 +45,7 @@ const HowWeWork = () => {
                         })
                     }
                 </div>
+
             </div>
         </section>
     )
