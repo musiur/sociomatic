@@ -3,11 +3,12 @@
 import SectionHead from "@/components/molecule/section-head";
 import TestimonialUserCard from "@/components/molecule/testimonial-user-card";
 import { useState } from "react";
+import Calendly from "./calendly";
 
 const Testimonial = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(2);
   return (
-    <section className="bg-[url('/images/backgrounds/TestimonialBackground.svg')] bg-center bg-contain">
+    <section className="bg-[url('/images/backgrounds/TestimonialBackground.svg')] bg-center bg-contain bg-no-repeat">
       <div className="container section flex flex-col large-gap">
         <SectionHead
           highlighter="Testimonials"
@@ -54,6 +55,7 @@ const Testimonial = () => {
           </div>
         </div>
       </div>
+      <Calendly />
     </section>
   );
 };
