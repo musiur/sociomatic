@@ -5,7 +5,7 @@ import TestimonialUserCard from "@/components/molecule/testimonial-user-card";
 import { useState } from "react";
 import Calendly from "./calendly";
 
-const Testimonial = () => {
+const Testimonial = ({ calendly }: { calendly: boolean }) => {
   const [currentTestimonial, setCurrentTestimonial] = useState(2);
   return (
     <section className="bg-[url('/images/backgrounds/TestimonialBackground.svg')] bg-center bg-contain bg-no-repeat">
@@ -55,7 +55,7 @@ const Testimonial = () => {
           </div>
         </div>
       </div>
-      <Calendly />
+      {calendly ? <Calendly /> : null}
     </section>
   );
 };

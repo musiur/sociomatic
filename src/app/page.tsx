@@ -38,10 +38,10 @@ const Home = () => {
         videoLink="https://www.youtube.com/embed/Gl465-ugqbM?si=Njv8OZykPsz9LsYZ"
         brands={true}
       />
-      <OurServices />
+      <OurServices FeaturesData={FeaturesData.slice(0, 6)} />
       <HowWeWork />
       <OurProcess />
-      <Testimonial />
+      <Testimonial calendly={true} />
       <div className="bg-[url('/images/backgrounds/CircleNest.svg')] bg-center bg-cover">
         <Faq />
         <ProjectIdea />
