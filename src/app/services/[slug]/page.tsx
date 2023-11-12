@@ -156,24 +156,26 @@ const Services = ({ params }: { params: { slug: string } }) => {
                 <div
                   key={id}
                   className={`rounded-[10px] ${
-                    id === 2 ? "border border-b-[5px] border-secondarymuted border-b-secondary hover:border-secondary" : "border"
+                    id === 2
+                      ? "border border-b-[5px] border-secondarymuted border-b-secondary hover:border-secondary"
+                      : "border"
                   } border-secondary-muted hover:border-secondary bg-white/5 backdrop-blur-[8px] hover:backdrop-blur-[8px] w-full px-[25px] py-[50px] shadow-[0_4px_25px_0_rgba(89,86,255,0.05)] transition ease-in-out duration-500 group`}
                 >
                   <div className="flex flex-col items-center justify-center small-gap">
                     {image}
 
-                    <h2
+                    <h3
                       className={`${
                         id === 1
                           ? "text-decade"
                           : id === 2
                           ? "text-secondary"
                           : "text-primary"
-                      }`}
+                      } text-5xl lg:text-6xl font-black`}
                     >
                       {H1}
-                    </h2>
-                    <h4 className="text-xl lg:text-3xl font-bold text-primary">
+                    </h3>
+                    <h4 className="text-2xl lg:text-3xl font-bold text-primary">
                       {title}
                     </h4>
                     <p className="[&>span]:font-medium [&>span]:text-primary text-center">
