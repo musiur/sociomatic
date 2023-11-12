@@ -20,6 +20,7 @@ const CaseStudies = ({ params }: { params: { slug: string } }) => {
         }
         videoLink="https://www.youtube.com/embed/Gl465-ugqbM?si=Njv8OZykPsz9LsYZ"
         brands={false}
+        background="HeroBackground"
       />
     </div>
   );
