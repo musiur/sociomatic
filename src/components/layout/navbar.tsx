@@ -59,18 +59,17 @@ const Navbar = () => {
                         <NavigationMenuContent className="grid grid-cols-2 items-start justify-start small-gap p-[25px] min-w-[500px]">
                           {item.children.map((child: any) => {
                             return (
-                              <NavigationMenuLink key={child.id}>
-                                <a
-                                  href={child.link}
-                                  className={`text-primary hover:text-secondary ${
-                                    pathname === child.link
-                                      ? "text-secondary font-semibold"
-                                      : "text-primary"
-                                  }`}
-                                >
-                                  {child.text}
-                                </a>
-                              </NavigationMenuLink>
+                              <a
+                                key={child.id}
+                                href={child.link}
+                                className={`text-primary hover:text-secondary ${
+                                  pathname === child.link
+                                    ? "text-secondary font-semibold"
+                                    : "text-primary"
+                                }`}
+                              >
+                                {child.text}
+                              </a>
                             );
                           })}
                         </NavigationMenuContent>
@@ -296,6 +295,11 @@ const Links = [
         id: 9,
         text: "Content Writing & SEO",
         link: "/services/content-writing-and-seo",
+      },
+      {
+        id: 10,
+        text: "All Services",
+        link: "/services",
       },
     ],
   },

@@ -37,6 +37,7 @@ const Home = () => {
         }
         videoLink="https://www.youtube.com/embed/Gl465-ugqbM?si=Njv8OZykPsz9LsYZ"
         brands={true}
+        background="HeroBackground"
       />
       <OurServices FeaturesData={FeaturesData.slice(0, 6)} />
       <HowWeWork />

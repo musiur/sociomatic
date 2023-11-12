@@ -12,7 +12,7 @@ import OurServices from "@/components/pages/home/our-services";
 const Services = () => {
   return (
     <main>
-      <HeroSection
+      {/* <HeroSection
         H1={
           <>
             We Craft <span>Solution</span> on Demand to Go Online and Grow
@@ -30,14 +30,14 @@ const Services = () => {
         }
         videoLink="https://www.youtube.com/embed/Gl465-ugqbM?si=Njv8OZykPsz9LsYZ"
         brands={false}
-      />
+      /> */}
       <OurServices FeaturesData={FeaturesData} />
-      <HowWeWork />
-      <OurProcess />
-      <Testimonial calendly={false}/>
+      {/* <HowWeWork /> */}
+      {/* <OurProcess /> */}
+      <Testimonial calendly={false} />
       <div className="bg-[url('/images/backgrounds/CircleNest.svg')] bg-center bg-cover">
         <Faq />
-        <ProjectIdea />
+        {/* <ProjectIdea /> */}
       </div>
     </main>
   );

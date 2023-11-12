@@ -22,14 +22,18 @@ const HeroSection = ({
   ),
   videoLink = "https://www.youtube.com/embed/Gl465-ugqbM?si=Njv8OZykPsz9LsYZ",
   brands = false,
+  background = "HeroBackgroundServices",
 }: {
   H1: ReactElement;
   P: ReactElement;
   videoLink: string;
   brands: boolean;
+  background: string;
 }) => {
   return (
-    <section className="bg-[url('/images/backgrounds/HeroBackground.svg')] bg-center bg-cover">
+    <section
+      className={`bg-[url('/images/backgrounds/${background}.svg')] bg-center bg-cover`}
+    >
       <div className="container section grid grid-cols-1 lg:grid-cols-2 items-center large-gap">
         <div className="order-2 lg:order-1 flex flex-col small-gap">
           <h1 className="text-primary [&>span]:text-secondary">{H1}</h1>

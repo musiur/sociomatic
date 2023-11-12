@@ -32,11 +32,10 @@ const OurServices = ({ FeaturesData }: { FeaturesData: any }) => {
             );
           })}
         </div>
-        <LinkButton />
+        {FeaturesData.length < 7 ? <LinkButton /> : null}
       </div>
     </section>
   );
 };
-
 
 export default OurServices;
