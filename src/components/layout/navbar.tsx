@@ -34,7 +34,10 @@ const Navbar = () => {
   const pathname = usePathname();
   console.log(pathname);
   return (
-    <nav className="backdrop-blur-xl bg-white/70 border-b border-muted sticky top-0 z-50">
+    <nav
+      className="backdrop-blur-xl bg-white/70 border-b border-muted sticky top-0 z-50"
+      id="topPoint"
+    >
       <div className="container py-3 flex items-center justify-between">
         <Link href="/">
           <BrandLogo />

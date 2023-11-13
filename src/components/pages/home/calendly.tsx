@@ -5,7 +5,7 @@ import { InlineWidget } from "react-calendly";
 
 const Calendly = () => {
   return (
-    <div className="section">
+    <div className="section" id="calendly">
       <div className="container pb-[25px]">
         <SectionHead
           highlighter=""

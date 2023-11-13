@@ -40,7 +40,7 @@ const HeroSection = ({
           <h1 className="text-primary [&>span]:text-secondary">{H1}</h1>
           <p className="hero-description">{P}</p>
           <div className="flex flex-wrap items-center small-gap">
-            <Link href="/#calendly">
+            <Link href={`/#calendly`} aria-label="topTitle" title="topTitle">
               <Button variant="outline">Get a Free Consultation</Button>
             </Link>
             <Link href="/contact-us">

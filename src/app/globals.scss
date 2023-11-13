@@ -84,6 +84,11 @@ $h2_max_font: 39px;
   }
 }
 
+html {
+  --scroll-behavior: smooth !important;
+  scroll-behavior: smooth !important;
+}
+
 h1 {
   @include fluid-type($min_width, $max_width, $h1_min_font, $h1_max_font);
   @apply font-bold;

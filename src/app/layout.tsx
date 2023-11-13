@@ -1,9 +1,9 @@
-
 import Footer from "@/components/layout/footer";
 import Navbar from "@/components/layout/navbar";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.scss";
+import GotoTop from "@/components/molecule/go-to-top";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,7 +23,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Navbar />
         {children}
-
+        <GotoTop />
         <Footer />
       </body>
     </html>
