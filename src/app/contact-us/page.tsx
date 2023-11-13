@@ -124,10 +124,13 @@ const ContactUs = () => {
             <Label htmlFor="message">Your message</Label>
             <Textarea placeholder="Type your message here." id="message" />
           </div>
-          <ReCAPTCHA
-            sitekey={process.env.siteKey || ""}
-            onChange={(e: any) => console.log(e)}
-          />
+          {process.env.siteKey ? (
+            <ReCAPTCHA
+              sitekey={process.env.siteKey}
+              onChange={(e: any) => console.log(e)}
+            />
+          ) : null}
+
           <Button variant={"secondary"} className="mt-5">
             Submit
           </Button>
