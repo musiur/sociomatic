@@ -22,6 +22,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <div className="py-2 text-center bg-pink-700 text-white animate-pulse">
+          This site is under maintenance
+        </div>
         <Navbar />
         {children}
         {/* <CookiePolicyNotificationBar /> */}
