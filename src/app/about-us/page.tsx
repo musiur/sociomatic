@@ -1,7 +1,5 @@
-const Services = () => {
-    return (
-        <div>Services</div>
-    )
-}
+const AboutUS = () => {
+  return <div className="section container">Under develop</div>;
+};
 
-export default Services;
+export default AboutUS;
