@@ -1,7 +1,7 @@
 const nextConfig = {
   env: {
-    siteKey: "6LdpEQ4pAAAAAIGfMr2NMrRiLaLupS0f4znVqxuU",
-    copySecretKey: "6LdpEQ4pAAAAAAD0t1qiHlDVaRj3Pkl5F3B9jzeT",
+    siteKey: "6LdMJA4pAAAAADYN5E_ZP-FU3Wf5CEXol4y8Oriu",
+    copySecretKey: "6LdMJA4pAAAAAEsLN7h1RNb5Epw_8wGuPWY9Zjcj",
   },
 };
 

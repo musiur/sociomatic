@@ -18,6 +18,7 @@ import {
 
 const ContactUs = () => {
   const [currentTab, setCurrentTab] = useState(1);
+  const [formData, setFormData] = useState({})
   return (
     <div>
       <div className="section border-b border-secondarymuted container">
@@ -124,12 +125,10 @@ const ContactUs = () => {
             <Label htmlFor="message">Your message</Label>
             <Textarea placeholder="Type your message here." id="message" />
           </div>
-          {process.env.siteKey ? (
-            <ReCAPTCHA
-              sitekey={process.env.siteKey}
-              onChange={(e: any) => console.log(e)}
-            />
-          ) : null}
+          <ReCAPTCHA
+            sitekey={process.env.siteKey!}
+            onChange={(e: any) => console.log(e)}
+          />
 
           <Button variant={"secondary"} className="mt-5">
             Submit
