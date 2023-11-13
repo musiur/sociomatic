@@ -138,8 +138,8 @@ const Services = ({ params }: { params: { slug: string } }) => {
             highlighter="Our Packages"
             H2={
               <>
-                Choose the&nbsp;<span className="text-secondary">Best</span>
-                &nbsp;Deal
+                Tailor-made Packages to Help Your Business{" "}
+                <span className="text-secondary">Grow</span>
               </>
             }
             paragraphs={[

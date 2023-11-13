@@ -30,6 +30,7 @@ const HeroSection = ({
   brands: boolean;
   background: string;
 }) => {
+  // ${background}
   return (
     <section
       className={`bg-[url('/images/backgrounds/${background}.svg')] bg-center bg-cover`}
