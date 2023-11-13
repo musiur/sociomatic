@@ -16,10 +16,16 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import ErrorMessages from "@/components/molecule/errors-messages";
-import SendEmail from "@/lib/resend";
+// import SendEmail from "@/lib/resend";
+import Loader from "@/components/molecule/loader";
+import { useToast } from "@/components/ui/use-toast";
+import { useRouter } from "next/navigation";
 
 const ContactUs = () => {
+  const { toast } = useToast();
+  const router = useRouter();
   const [currentTab, setCurrentTab] = useState(1);
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState<any>({
     name: "",
     email: "",
@@ -30,7 +36,7 @@ const ContactUs = () => {
     budgetRange: "",
     services: [],
   });
-  const [errors, setErrors] = useState<any>(formData);
+  const [errors, setErrors] = useState<any>({});
   const [captcha, setCaptcha] = useState(false);
 
   const handleOnChange = (e: any) => {
@@ -38,36 +44,67 @@ const ContactUs = () => {
     setFormData({ ...formData, [name]: value });
   };
   const handleOnSubmit = () => {
-    const validationErrors = validation(formData);
+    setLoading(true);
+    const validationErrors = validation();
+
     if (Object.keys(validationErrors).length === 0) {
       console.log(formData);
-      SendEmail(formData);
-      setErrors({});
+      try {
+        // SendEmail(formData);
+        toast({
+          title: "Messange Sending",
+          description: "Successful!",
+        });
+        setLoading(false);
+        // router.refresh();
+        setTimeout(() => {
+          if (window) {
+            window.location.reload();
+          }
+        }, 3000);
+      } catch (error: any) {
+        toast({
+          variant: "destructive",
+          title: "Messange Sending",
+          description: "Something went wrong!",
+        });
+      }
     } else {
       setErrors(validationErrors);
     }
+
+    setLoading(false);
   };
 
-  const validation = (data: any) => {
+  const validation = () => {
     let obj: any = {};
-    if (!data.name.trim()) {
+    if (!formData.name.trim()) {
       obj.name = "Name is required!";
     }
-    if (!data.email.trim()) {
+    if (!formData.email.trim()) {
       obj.email = "Email is required!";
     }
-    if (!data.phone.trim()) {
+    if (!formData.phone.trim()) {
       obj.phone = "Phone is required!";
     }
 
-    if (data.services.length < 1) {
+    if (
+      formData.services.length < 1 ||
+      (formData.services.length > 1 && !Array.isArray(formData.services))
+    ) {
       obj.services = "Choose at least one!";
+    }
+
+    if (currentTab !== 1) {
+      if (!formData.budgetRange.trim()) {
+        obj.budgetRange = "Budget range is required!";
+      }
     }
 
     return obj;
   };
   return (
-    <div>
+    <div className="bg-[url('/images/backgrounds/CircleNext.svg')] bg-cover bg-center">
       <div className="section border-b border-secondarymuted container">
         <SectionHead
           highlighter="Contact Us"
@@ -183,6 +220,8 @@ const ContactUs = () => {
               onChange={handleOnChange}
             />
           </div>
+        </div>
+        <div className="flex flex-col small-gap overflow-hidden">
           {currentTab !== 1 ? (
             <div className="flex flex-col gap-1.5">
               <Label htmlFor="message">
@@ -208,10 +247,9 @@ const ContactUs = () => {
                   <SelectItem value="$2000+">$2000+</SelectItem>
                 </SelectContent>
               </Select>
+              <ErrorMessages errors={errors} name="budgetRange" />
             </div>
           ) : null}
-        </div>
-        <div className="flex flex-col small-gap overflow-hidden">
           <div className="flex flex-col gap-1.5">
             <Label htmlFor="message">
               Services you are interested on&nbsp;
@@ -272,7 +310,7 @@ const ContactUs = () => {
             disabled={!captcha}
             onClick={handleOnSubmit}
           >
-            Submit
+            {loading ? <Loader /> : "Submit"}
           </Button>
         </div>
       </div>

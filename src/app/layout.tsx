@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.scss";
 import GotoTop from "@/components/molecule/go-to-top";
+import { Toaster } from "@/components/ui/toaster";
 // import CookiePolicyNotificationBar from "@/components/molecule/cookie-policy";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -27,6 +28,7 @@ export default function RootLayout({
         </div>
         <Navbar />
         {children}
+        <Toaster />
         {/* <CookiePolicyNotificationBar /> */}
         <GotoTop />
         <Footer />
