@@ -9,7 +9,6 @@ import Starter from "@/components/assets/starter";
 import TargetAudience from "@/components/assets/target-audience";
 import VideoPlayer from "@/components/core/home/video-player";
 import FeatureCard from "@/components/molecule/feature-card";
-import LinkButton from "@/components/molecule/link-button";
 import SectionHead from "@/components/molecule/section-head";
 import Faq from "@/components/pages/home/faq";
 import HeroSection from "@/components/pages/home/herosection";
@@ -41,9 +40,11 @@ const Services = ({ params }: { params: { slug: string } }) => {
         }
         P={
           <>
-            Setting up and administering a is difficult for a newbie, resulting
-            in poor performance and a low <span>return on investment</span>
-            &nbsp; (ROI)
+            With our easy-to-use solutions, start a smooth Google Ads
+            experience. We streamline the procedure for newbies to guarantee
+            peak performance and the best&nbsp;
+            <span>return on investment (ROI)</span>. Start enjoying efficiency
+            and benefits right away!
           </>
         }
         videoLink="https://www.youtube.com/embed/Gl465-ugqbM?si=Njv8OZykPsz9LsYZ"
@@ -65,13 +66,13 @@ const Services = ({ params }: { params: { slug: string } }) => {
             </div>
           </div>
           <div className="flex flex-col justify-center small-gap">
-            <h6 className="text-[16px] lg:text-[20px] text-secondary font-semibold">
-              What We Provide
-            </h6>
             <h2 className="text-primary">
               Why Choose The <span className="text-secondary">Sociomatic</span>?
             </h2>
-            <p>Our strategies are proven and tested for the following keys:</p>
+            <p>
+              Choose The Sociomatic for a systematic, outcome-oriented Google
+              AdWords strategy to take your company to new heights online
+            </p>
             <ul className="grid grid-cols-1 gap-[10px]">
               {WhyChooseList.map((item, index) => {
                 return (
@@ -92,25 +93,19 @@ const Services = ({ params }: { params: { slug: string } }) => {
       <section className="bg-[url('/images/backgrounds/SquareBackground.svg')] bg-center bg-cover">
         <div className="container section flex flex-col large-gap">
           <SectionHead
-            highlighter="Our Services"
+            highlighter="What We Provide"
             H2={
               <>
-                Why we choose the approach of{" "}
-                <span className="text-secondary">Google PPC</span>?
+                Why&nbsp;
+                <span className="text-secondary">Google Paid Ads</span>?
               </>
             }
             paragraphs={[
               <>
-                Pay-per-click advertising, or PPC, is a technique that allows
-                you to advertise on Google, reaching a large audience of people
-                looking for products, services, or information that you can
-                supply.
-              </>,
-              <>
-                Millions of websites and businesses across the world use Google
-                PPC: it&apos;s a powerful, cost-effective approach to raise
-                brand awareness and bring quality traffic to your site,
-                resulting in increased sales and other conversions.
+                Unlock Google&apos;s potential with well-thought-out search,
+                display, and video ads to increase exposure and interaction.
+                With targeted and economical pay-per-click marketing, you can
+                effectively reach your audience.
               </>,
             ]}
           />
@@ -129,6 +124,10 @@ const Services = ({ params }: { params: { slug: string } }) => {
               );
             })}
           </div>
+          <p className="text-center font-semibold">
+            For cost-effective, targeted advertising on search, display, video,
+            and commerce platforms, go with Google Paid Ads.
+          </p>
         </div>
       </section>
       <HowWeWork />
@@ -236,108 +235,110 @@ const Services = ({ params }: { params: { slug: string } }) => {
 export default Services;
 
 const WhyChooseList = [
-  <>Create ads for maximum reach.</>,
   <>
-    Schedule your ad campaigns to run on weekends, weekdays, or any date you
-    choose - at the time that&apos;s <span>most convenient</span> for you
+    <span>Google Ads Mastery:</span> Make a statement where it counts with
+    professional advertisements.
   </>,
   <>
-    Optimize your campaigns with A/B testing to see what works best and give
-    your business <span>a boost</span> in conversions.
+    <span>Customized Plans:</span> We create one-of-a-kind initiatives designed
+    to meet your company&apos;s objectives.
   </>,
   <>
-    Target specific audiences with intelligent filters to keep viewers focused
-    on what they&apos;re interested in.
+    <span>Data-Driven Precision:</span> Maximize the impact of your ads by
+    optimizing them with real-time data.
   </>,
-  <>24/7 client support team</>,
-  <>Deliver you the best quality of work results</>,
+  <>
+    <span>Transparent Analytics:</span> confident choices and clear insights for
+    the best possible marketing performance
+  </>,
+  <>
+    <span>Cost-Effective Impact:</span> Optimize outcomes with sensible
+    investments and cost-effective tactics with each click.
+  </>,
+  <>
+    <span>Proven Online Success:</span> Choose Sociomatic for dependable
+    outcomes and thrive with greater visibility and conversions.
+  </>,
 ];
 
 const FeaturesData = [
   {
     id: 1,
     image: <TargetAudience />,
-    title: "Targeting Market",
-    description: (
-      <>
-        You&apos;ll find yourself in front of the appropriate people at the
-        right moment because you&apos;ll be found when they&apos;re looking for
-        what you have to give.
-      </>
-    ),
-    list: [],
-    link: "/",
+    title: "PPC Search Ads",
+    list: [
+      <>Immediately show up in pertinent search results.</>,
+      <>Find people who are actively looking for your goods or services.</>,
+      <>Increase visibility by using targeted keywords strategically</>,
+      <>Pay-per-click guarantees economy of cost.</>,
+    ],
   },
   {
     id: 2,
     image: <ROI />,
-    title: "Return on Investment",
-    description: (
+    title: "Display Ads",
+    list: [
+      <>Grab viewers attention with eye-catching banner advertisements.</>,
       <>
-        There are genuine, specific, tangible, real-time indicators that track
-        your return-on-investment, unlike traditional print and broadcast
-        marketing (ROI). There will be no more &quot;spray and pray&quot;
-        marketing.
-      </>
-    ),
-    list: [],
-    link: "/",
+        Expand your audience by using Google&apos;s extensive display network.
+      </>,
+      <>Raise brand recognition with eye-catching images.</>,
+      <>For precision, focus on particular demographics.</>,
+    ],
   },
   {
     id: 3,
     image: <Competition />,
-    title: "We never work with your competition",
-    description: (
+    title: "Video Ads",
+    list: [
       <>
-        Pay-per-click (PPC) advertising allows you to target prospects down to
-        the postal code level. Gender, age, income, and interests are additional
-        limits that can be utilised to limit campaigns to only individuals who
-        are ready to purchase from you.
-      </>
-    ),
-    list: [],
-    link: "/",
+        Take advantage of YouTube&apos;s broad user base by using video
+        advertising.
+      </>,
+      <>Captivate viewers with vibrant, engaging visual content.</>,
+      <>Use immersive video experiences to tell the story of your brand.</>,
+      <>Use in-stream advertising to increase engagement and conversions.</>,
+    ],
   },
   {
     id: 4,
     image: <GeoTargetting />,
-    title: "Geo-Targeting",
-    description: (
+    title: "Shopping Ads",
+    list: [
+      <>Display merchandise straight within Google&apos;s shopping results.</>,
       <>
-        Even $100 a month is a significant marketing investment for some small
-        firms. A $100 investment in print or broadcast advertising will not get
-        you very far, or even on the air. Pay-per-click advertising works well
-        on a limited budget (PPC).
-      </>
-    ),
-    list: [],
-    link: "/",
+        Increase online sales through aesthetically pleasing product listings.
+      </>,
+      <>Speak with people who are eager to buy.</>,
+      <>Profitable pay-per-click strategy for maximum return on investment.</>,
+    ],
   },
   {
     id: 5,
     image: <LongTermPartnership />,
-    title: "Long term partership",
-    description: (
-      <>
-        You get our undivided attention to make you the best organically in your
-        industry. It also doesn&apos;t make sense to compete against ourselves.
-      </>
-    ),
-    list: [],
-    link: "/",
+    title: "Benefits of Google Paid Advertising",
+    list: [
+      <>Consistently hold the top spots in search results.</>,
+      <>Quickly raise brand recognition and visibility.</>,
+      <>Speak to the appropriate audience when it matters.</>,
+      <>Optimize the delivery of ads based on user activity and preferences.</>,
+    ],
   },
   {
     id: 6,
     image: <SME />,
-    title: "Perfect for SMEs",
-    description: (
+    title: "Disadvantages of Google Paid Ads",
+    list: [
       <>
-        We place a high value on long-term relationships. We value the
-        friendship and trust that has developed (or is developing) between us.
-      </>
-    ),
-    list: [],
-    link: "/",
+        Expenses may rise quickly, particularly in markets with intense
+        competition.
+      </>,
+      <>Click costs could change according to consumer demand.</>,
+      <>
+        To prevent overspending, the ad budget needs to be closely monitored.
+      </>,
+      <>Ongoing tweaks could be required to achieve the best ROI.</>,
+    ],
   },
 ];
 

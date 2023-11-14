@@ -23,29 +23,29 @@ const FeatureCard = ({
 }) => {
   // max-w-[365px]
   return (
-    <div className="rounded-[10px] border border-secondary-muted hover:border-secondary bg-white/5 backdrop-blur-[8px] hover:backdrop-blur-[8px] w-full px-[25px] py-[50px] shadow-[0_4px_25px_0_rgba(89,86,255,0.05)] transition ease-in-out duration-500">
+    <div className="rounded-[10px] border border-secondary-muted hover:border-secondary bg-white/5 backdrop-blur-[8px] hover:backdrop-blur-[8px] w-full px-[25px] py-[50px] shadow-[0_4px_25px_0_rgba(89,86,255,0.05)] transition ease-in-out duration-500 hover:scale-[1.05]">
       <div className="flex flex-col items-start justify-start small-gap">
         {image}
         <h4 className="font-bold text-primary">{title}</h4>
         <p className="[&>span]:font-medium [&>span]:text-primary">
           {description}
         </p>
-        <ul>
+        <ul className="flex flex-col gap-[1rem]">
           {list.map((item: string, index: number) => {
             return (
               <li
                 key={index}
                 className="flex items-start justify-start gap-[6.7px]"
               >
-                <BadgeCheck className="mt-[4px] h-[16px] w-[16px] stroke-dimmed stroke-[1.3px]" />{" "}
-                <span>{item}</span>
+                <BadgeCheck className="mt-[4px] min-h-[16px] min-w-[16px] max-w-[16px] stroke-secondary stroke-[1.3px]" />{" "}
+                {item}
               </li>
             );
           })}
         </ul>
-        <Link href={link} className="text-primary hover:text-secondary">
+        {/* <Link href={link} className="text-primary hover:text-secondary">
           Learn more
-        </Link>
+        </Link> */}
       </div>
     </div>
   );
