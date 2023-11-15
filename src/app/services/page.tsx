@@ -1,13 +1,11 @@
-import FeatureCard from "@/components/molecule/feature-card";
-import { FeaturesData } from "../page";
-import SectionHead from "@/components/molecule/section-head";
-import HeroSection from "@/components/pages/home/herosection";
-import HowWeWork from "@/components/pages/home/how-we-work";
-import OurProcess from "@/components/pages/home/process";
 import Testimonial from "@/components/pages/home/testimonial";
 import Faq from "@/components/pages/home/faq";
-import ProjectIdea from "@/components/pages/home/project-idea-banner";
 import OurServices from "@/components/pages/home/our-services";
+import {
+  homeFAQ,
+  homeFeaturesData,
+  homeTestimonialData,
+} from "@/lib/data/data";
 
 const Services = () => {
   return (
@@ -31,12 +29,12 @@ const Services = () => {
         videoLink="https://www.youtube.com/embed/Gl465-ugqbM?si=Njv8OZykPsz9LsYZ"
         brands={false}
       /> */}
-      <OurServices FeaturesData={FeaturesData} />
+      <OurServices FeaturesData={homeFeaturesData} />
       {/* <HowWeWork /> */}
       {/* <OurProcess /> */}
-      <Testimonial calendly={false} />
+      <Testimonial calendly={true} data={homeTestimonialData} />
       <div className="bg-[url('/images/backgrounds/CircleNest.svg')] bg-center bg-cover">
-        <Faq />
+        <Faq data={homeFAQ} />
         {/* <ProjectIdea /> */}
       </div>
     </main>

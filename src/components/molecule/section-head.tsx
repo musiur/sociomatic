@@ -21,7 +21,7 @@ const SectionHead = ({
           {highlighter}
         </p>
       ) : null}
-      {H2 ? <h2 className="text-primary">{H2}</h2> : null}
+      {H2 ? <h2 className="text-primary [&>span]:text-secondary">{H2}</h2> : null}
       {paragraphs.length
         ? paragraphs.map((item: any, index: number) => {
             return (

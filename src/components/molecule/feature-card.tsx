@@ -6,18 +6,13 @@ import Link from "next/link";
 const FeatureCard = ({
   image = <BlueGoogle />,
   title = "Google Paid Advertising",
-  description = (
-    <>
-      Enhance Google platform ad strategies for effective{" "}
-      <span>demand-driven</span> results.
-    </>
-  ),
+  description,
   list = ["Google search PPC and display", "Google shopping", "YouTube Ads"],
-  link = "/",
+  link,
 }: {
   image: ReactElement;
   title: string;
-  description: ReactElement;
+  description: ReactElement | undefined;
   list: any;
   link: string;
 }) => {
@@ -27,9 +22,11 @@ const FeatureCard = ({
       <div className="flex flex-col items-start justify-start small-gap">
         {image}
         <h4 className="font-bold text-primary">{title}</h4>
-        <p className="[&>span]:font-medium [&>span]:text-primary">
-          {description}
-        </p>
+        {description ? (
+          <p className="[&>span]:font-medium [&>span]:text-primary">
+            {description}
+          </p>
+        ) : null}
         <ul className="flex flex-col gap-[1rem]">
           {list.map((item: string, index: number) => {
             return (
@@ -37,15 +34,17 @@ const FeatureCard = ({
                 key={index}
                 className="flex items-start justify-start gap-[6.7px]"
               >
-                <BadgeCheck className="mt-[4px] min-h-[16px] min-w-[16px] max-w-[16px] stroke-secondary stroke-[1.3px]" />{" "}
+                <BadgeCheck className="min-h-[16px] min-w-[16px] max-w-[16px] stroke-secondary stroke-[1.3px]" />
+                &nbsp;
                 {item}
               </li>
             );
           })}
         </ul>
-        {/* <Link href={link} className="text-primary hover:text-secondary">
-          Learn more
-        </Link> */}
+
+        {
+          link ? <Link href={link}>Learn more</Link> : null
+        }
       </div>
     </div>
   );
