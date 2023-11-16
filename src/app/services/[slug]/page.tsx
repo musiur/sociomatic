@@ -1,4 +1,3 @@
-
 import VideoPlayer from "@/components/core/home/video-player";
 import FeatureCard from "@/components/molecule/feature-card";
 import SectionHead from "@/components/molecule/section-head";
@@ -10,8 +9,13 @@ import Testimonial from "@/components/pages/home/testimonial";
 import { Button } from "@/components/ui/button";
 import {
   ContentWringAndSEOServicePageData,
+  CustomWebDevelopmentServicePageData,
   DataAnalyticsServicePageData,
   GoogleAdsServicePageData,
+  ShopifyDevelopmentServicePageData,
+  SocialMediaAdsServicePageData,
+  SoftwareDevelopmentServicePageData,
+  UIUXandGraphicDesignServicePageData,
   WordpressDevelopmentServicePageData,
 } from "@/lib/data/data";
 import { BadgeCheck } from "lucide-react";
@@ -22,15 +26,22 @@ const Services = ({ params }: { params: { slug: string } }) => {
   let data: any = GoogleAdsServicePageData;
   if (params.slug.includes("google-paid-ads")) {
     data = GoogleAdsServicePageData;
-  } 
-  else if (params.slug.includes("data-analytics")) {
+  } else if (params.slug.includes("data-analytics")) {
     data = DataAnalyticsServicePageData;
-  }
-  else if (params.slug.includes("wordpress-development")) {
+  } else if (params.slug.includes("wordpress-development")) {
     data = WordpressDevelopmentServicePageData;
-  }
-  else if (params.slug.includes("content-writing-and-seo")) {
+  } else if (params.slug.includes("content-writing-and-seo")) {
     data = ContentWringAndSEOServicePageData;
+  } else if (params.slug.includes("shopify-store-development")) {
+    data = ShopifyDevelopmentServicePageData;
+  } else if (params.slug.includes("social-media-paid-ads")) {
+    data = SocialMediaAdsServicePageData;
+  } else if (params.slug.includes("custom-web-development")) {
+    data = CustomWebDevelopmentServicePageData;
+  } else if (params.slug.includes("software-development")) {
+    data = SoftwareDevelopmentServicePageData;
+  } else if (params.slug.includes("ui-ux-and-graphic-design")) {
+    data = UIUXandGraphicDesignServicePageData;
   }
   return (
     <div>
@@ -182,4 +193,3 @@ const Services = ({ params }: { params: { slug: string } }) => {
 };
 
 export default Services;
-

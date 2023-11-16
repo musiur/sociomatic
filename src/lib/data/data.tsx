@@ -16,6 +16,7 @@ import SME from "@/components/assets/sme";
 import Starter from "@/components/assets/starter";
 import TargetAudience from "@/components/assets/target-audience";
 import Wordpress from "@/components/assets/wordpress";
+import Link from "next/link";
 
 export const homeFeaturesData = [
   {
@@ -1482,6 +1483,1648 @@ export const ContentWringAndSEOServicePageData = {
           "Analytics-Driven Strategies (Comprehensive)",
           "Google Search Console",
           "Sociomatic Support",
+        ],
+        link: "/",
+      },
+    ],
+  },
+  testimonial: {
+    highlighter: "Testimonials",
+    H2: <>Don&apos;t Take Our Words, We Embrace Their</>,
+    paragraphs: [
+      <>
+        Our <span>satisfied</span> clients are from all over the world. We
+        understand your requirements and deliver <span>growth</span>, no fluff.
+      </>,
+    ],
+    testimonialList: [
+      {
+        id: 1,
+        name: "Samuel H",
+        designation: "CEO @Analyzen",
+        imageSlug: "user1",
+        testimonial: (
+          <>
+            1I have never in my life experienced service like what I received
+            from thesociomatic. They finished 3 days of work in about 2 hrs.
+            They&apos;
+            <span>went above and beyond what was expected of him</span>. I will
+            Hire Them again and can fully recommend them to any potential
+            client.
+          </>
+        ),
+      },
+      {
+        id: 2,
+        name: "John Doe",
+        designation: "CTO @Apple Inc",
+        imageSlug: "user2",
+        testimonial: (
+          <>
+            2I have never in my life experienced service like what I received
+            from thesociomatic. They finished 3 days of work in about 2 hrs.
+            They&apos;
+            <span>went above and beyond what was expected of him</span>. I will
+            Hire Them again and can fully recommend them to any potential
+            client.
+          </>
+        ),
+      },
+      {
+        id: 3,
+        name: "Nabina Nel",
+        designation: "COO @Rabble",
+        imageSlug: "user3",
+        testimonial: (
+          <>
+            3I have never in my life experienced service like what I received
+            from thesociomatic. They finished 3 days of work in about 2 hrs.
+            They&apos;
+            <span>went above and beyond what was expected of him</span>. I will
+            Hire Them again and can fully recommend them to any potential
+            client.
+          </>
+        ),
+      },
+    ],
+  },
+  faqData: {
+    highlighter: "",
+    H2: <>Frequently Asked Questions</>,
+    paragraphs: [
+      <>
+        We are more than a generic agency. Explore our Services and our&apos;
+        <span>solutions</span> for your business.
+      </>,
+    ],
+    qnaList: [
+      {
+        id: 1,
+        title:
+          "Why should I consider your software development company as a partner?",
+        details:
+          "At Vivasoft, we take pride in developing high-quality applications in record time. We have 250+ experienced developers who understand the importance of agile methodologies and use cutting-edge technologies such as Java, NodeJS, AngularJS and React Native to deliver unique software solutions that provide maximum value for our clients. Our team is committed to delivering timely results while keeping costs low so you can maximize your ROI.",
+      },
+      {
+        id: 2,
+        title:
+          " How does The Sociomatic stand out in the digital marketing industry?",
+        details:
+          "We differentiate ourselves by offering various services, providing comprehensive solutions for our clients' digital marketing needs, and delivering tangible results.",
+      },
+      {
+        id: 3,
+        title: "What is your approach to client success?",
+        details:
+          "We're committed to ensuring the success of our clients by identifying new digital marketing opportunities and implementing strategies to help them become market leaders and achieve an outstanding return on investment (ROI).",
+      },
+      {
+        id: 4,
+        title: "What values drive The Sociomatic's operations?",
+        details:
+          "Our core values include innovation, dedication, excellence, and client-centricity. We strive to bring fresh ideas and solutions, ensuring the best possible service.",
+      },
+      {
+        id: 5,
+        title:
+          " How can I contact The Sociomatic for inquiries or collaboration?",
+        details:
+          "You can contact us through our website or our customer support team to discuss how we can assist your business. We're here to help you navigate digital marketing and achieve your goals.",
+      },
+    ],
+  },
+};
+
+export const SocialMediaAdsServicePageData = {
+  herosection: {
+    H1: (
+      <>
+        <span>Boost</span> Your Social Media Presence Wisely
+      </>
+    ),
+    P: (
+      <>
+        Maximize your brand&apos;s reach and engagement with Sociomatic&apos;s
+        expert management of Facebook, Instagram, LinkedIn, TikTok, Twitter, and
+        Pinterest Ads. Boost your social presence today.
+      </>
+    ),
+    videoLink: "https://www.youtube.com/embed/Gl465-ugqbM?si=Njv8OZykPsz9LsYZ",
+    brands: false,
+    background: "HeroBackgroundServices",
+  },
+  whyChooseSection: {
+    videoThumbnail: "whyChooseVideo.png",
+    videoLink: "https://www.youtube.com/embed/Gl465-ugqbM?si=Njv8OZykPsz9LsYZ",
+    H2: (
+      <>
+        Why Choose The <span>Sociomatic</span>?
+      </>
+    ),
+    list: [
+      <>
+        <span>Expert Management:</span> Proven proficiency in optimizing social
+        media paid ads for maximum impact.
+      </>,
+      <>
+        <span>Multi-Platform Mastery:</span> Seamlessly navigate Facebook,
+        Instagram, LinkedIn, Twitter, and Pinterest Ads.
+      </>,
+      <>
+        <span>Strategic Targeting:</span> Precise audience targeting for
+        increased engagement and conversion rates.
+      </>,
+      <>
+        <span>Analytics-Driven Optimization:</span> Continuous refinement based
+        on data insights for optimal ad performance.
+      </>,
+      <>
+        <span>Customized Campaigns:</span> Tailored ad campaigns aligning with
+        brand goals and industry trends.
+      </>,
+      <>
+        <span>Sociomatic Support:</span> Dedicated support and consultation for
+        effective social media ad strategies.
+      </>,
+    ],
+  },
+  whyService: {
+    highlighter: "What We Provide",
+    H2: (
+      <>
+        Why&nbsp;
+        <span>Social Media Paid Ads</span>?
+      </>
+    ),
+    paragraphs: [
+      <>
+        Utilize Sociomatic&apos;s skilled Social Media Paid Ads to elevate your
+        business. For digital success, precise targeting, innovative solutions,
+        and committed support are required.
+      </>,
+    ],
+    cardList: [
+      {
+        id: 1,
+        image: <TargetAudience />,
+        title: "Targeted Audience Reach",
+        list: [
+          <>Precision targeting strategies</>,
+          <>Engage your ideal audience</>,
+          <>Maximize ad visibility</>,
+          <>Demographic and interest-based targeting</>,
+        ],
+      },
+      {
+        id: 2,
+        image: <ROI />,
+        title: "Enhanced Brand Awereness",
+        list: [
+          <>Boost brand recognition</>,
+          <>Strategic ad placements</>,
+          <>Elevate brand visibility</>,
+          <>Consistent online presence</>,
+        ],
+      },
+      {
+        id: 3,
+        image: <Competition />,
+        title: "Conversion-Driven Campaigns",
+        list: [
+          <>Drive targated conversions</>,
+          <>Optimize for lead generation</>,
+          <>Track conversion metrics</>,
+          <>Tailored call-to-action strategics</>,
+        ],
+      },
+      {
+        id: 4,
+        image: <GeoTargetting />,
+        title: "Data-Driven Insights",
+        list: [
+          <>Analyze performance metrics</>,
+          <>Refine strategies based on data</>,
+          <>Continuous optimization efforts</>,
+          <>Measure campaign success</>,
+        ],
+      },
+      {
+        id: 5,
+        image: <LongTermPartnership />,
+        title: "Creative Ad Solutions",
+        list: [
+          <>Customized ad creatives</>,
+          <>Diverse ad formats</>,
+          <>Compelling copywriting strategies</>,
+          <>Visual storytelling techniques</>,
+        ],
+      },
+      {
+        id: 6,
+        image: <SME />,
+        title: "Sociomatic Support",
+        list: [
+          <>Expert consultation available</>,
+          <>Responsive issue resolution</>,
+          <>Collaborative ad strategy planning</>,
+          <>Ongoing performance monitoring</>,
+        ],
+      },
+    ],
+  },
+  ourPackages: {
+    highlighter: "Our Packages",
+    H2: (
+      <>
+        Tailor-made Packages to Help Your Business&nbsp;
+        <span className="text-secondary">Grow</span>
+      </>
+    ),
+    paragraphs: [
+      <>
+        We&apos;ll listen to your goals and complete a free audit to discover if
+        we&apos;re a great fit to work with each other.
+      </>,
+    ],
+    packageList: [
+      {
+        id: 1,
+        image: <Starter />,
+        title: "Starter",
+        H1: "$2000",
+        description: (
+          <>
+            Pariatur ut sint esse ut ea non veniam officia ipsum fugiat nisi sit
+            in et.
+          </>
+        ),
+        list: [
+          "Basic Ad Campaign Setup",
+          "Targeted Ad Placements",
+          "Standard Analytics Reporting",
+          "Sociomatic Support (Basic)",
+        ],
+        link: "/",
+      },
+      {
+        id: 2,
+        image: <Popular />,
+        title: "Popular",
+        H1: "$2500",
+        description: (
+          <>
+            Pariatur ut sint esse ut ea non veniam officia ipsum fugiat nisi sit
+            in et.
+          </>
+        ),
+        list: [
+          "Advanced Ad Campaign Setup",
+          "Targeted Ad Placements (Extended)",
+          "Enhanced Analytics and Reporting",
+          "A/B Testing for Ad Performance",
+          "Sociomatic Support (Priority)",
+        ],
+        link: "/",
+      },
+      {
+        id: 3,
+        image: <Premium />,
+        title: "Premium",
+        H1: "$3500",
+        description: (
+          <>
+            Pariatur ut sint esse ut ea non veniam officia ipsum fugiat nisi sit
+            in et.
+          </>
+        ),
+        list: [
+          "Premium Ad Campaign Setup",
+          "Comprehensive Targeted Ad Placements",
+          "Advanced Analytics and Reporting",
+          "A/B Testing for Ad Performance",
+          "Customized Ad Creatives and Copies",
+          "Sociomatic Support (Priority + Ongoing Consultation)",
+        ],
+        link: "/",
+      },
+    ],
+  },
+  testimonial: {
+    highlighter: "Testimonials",
+    H2: <>Don&apos;t Take Our Words, We Embrace Their</>,
+    paragraphs: [
+      <>
+        Our <span>satisfied</span> clients are from all over the world. We
+        understand your requirements and deliver <span>growth</span>, no fluff.
+      </>,
+    ],
+    testimonialList: [
+      {
+        id: 1,
+        name: "Samuel H",
+        designation: "CEO @Analyzen",
+        imageSlug: "user1",
+        testimonial: (
+          <>
+            1I have never in my life experienced service like what I received
+            from thesociomatic. They finished 3 days of work in about 2 hrs.
+            They&apos;
+            <span>went above and beyond what was expected of him</span>. I will
+            Hire Them again and can fully recommend them to any potential
+            client.
+          </>
+        ),
+      },
+      {
+        id: 2,
+        name: "John Doe",
+        designation: "CTO @Apple Inc",
+        imageSlug: "user2",
+        testimonial: (
+          <>
+            2I have never in my life experienced service like what I received
+            from thesociomatic. They finished 3 days of work in about 2 hrs.
+            They&apos;
+            <span>went above and beyond what was expected of him</span>. I will
+            Hire Them again and can fully recommend them to any potential
+            client.
+          </>
+        ),
+      },
+      {
+        id: 3,
+        name: "Nabina Nel",
+        designation: "COO @Rabble",
+        imageSlug: "user3",
+        testimonial: (
+          <>
+            3I have never in my life experienced service like what I received
+            from thesociomatic. They finished 3 days of work in about 2 hrs.
+            They&apos;
+            <span>went above and beyond what was expected of him</span>. I will
+            Hire Them again and can fully recommend them to any potential
+            client.
+          </>
+        ),
+      },
+    ],
+  },
+  faqData: {
+    highlighter: "",
+    H2: <>Frequently Asked Questions</>,
+    paragraphs: [
+      <>
+        We are more than a generic agency. Explore our Services and our&apos;
+        <span>solutions</span> for your business.
+      </>,
+    ],
+    qnaList: [
+      {
+        id: 1,
+        title:
+          "Why should I consider your software development company as a partner?",
+        details:
+          "At Vivasoft, we take pride in developing high-quality applications in record time. We have 250+ experienced developers who understand the importance of agile methodologies and use cutting-edge technologies such as Java, NodeJS, AngularJS and React Native to deliver unique software solutions that provide maximum value for our clients. Our team is committed to delivering timely results while keeping costs low so you can maximize your ROI.",
+      },
+      {
+        id: 2,
+        title:
+          " How does The Sociomatic stand out in the digital marketing industry?",
+        details:
+          "We differentiate ourselves by offering various services, providing comprehensive solutions for our clients' digital marketing needs, and delivering tangible results.",
+      },
+      {
+        id: 3,
+        title: "What is your approach to client success?",
+        details:
+          "We're committed to ensuring the success of our clients by identifying new digital marketing opportunities and implementing strategies to help them become market leaders and achieve an outstanding return on investment (ROI).",
+      },
+      {
+        id: 4,
+        title: "What values drive The Sociomatic's operations?",
+        details:
+          "Our core values include innovation, dedication, excellence, and client-centricity. We strive to bring fresh ideas and solutions, ensuring the best possible service.",
+      },
+      {
+        id: 5,
+        title:
+          " How can I contact The Sociomatic for inquiries or collaboration?",
+        details:
+          "You can contact us through our website or our customer support team to discuss how we can assist your business. We're here to help you navigate digital marketing and achieve your goals.",
+      },
+    ],
+  },
+};
+
+export const ShopifyDevelopmentServicePageData = {
+  herosection: {
+    H1: (
+      <>
+        Elevate Your <span>Ecommerce</span> Websites
+      </>
+    ),
+    P: (
+      <>
+        Dive into Shopify Symphony, Where seamless web development meets
+        marketing brilliance for unparalleled e-commerce success.
+      </>
+    ),
+    videoLink: "https://www.youtube.com/embed/Gl465-ugqbM?si=Njv8OZykPsz9LsYZ",
+    brands: false,
+    background: "HeroBackgroundServices",
+  },
+  whyChooseSection: {
+    videoThumbnail: "whyChooseVideo.png",
+    videoLink: "https://www.youtube.com/embed/Gl465-ugqbM?si=Njv8OZykPsz9LsYZ",
+    H2: (
+      <>
+        Why Choose The <span>Sociomatic</span>?
+      </>
+    ),
+    list: [
+      <>
+        <span>Responsive Design Excellence:</span> Expertise in creating Shopify
+        stores with responsive design, ensuring seamless user experience across
+        devices.
+      </>,
+      <>
+        <span>Innovative Feature Integration:</span> Integration of cutting-edge
+        features for Shopify, enhancing functionality and user engagement
+      </>,
+      <>
+        <span>User-Centric Design:</span> Prioritize user experience in Shopify
+        web development, creating intuitive interfaces for enhanced customer
+        satisfaction.
+      </>,
+      <>
+        <span>Timely Project Delivery:</span> Attach to efficient timelines in
+        Shopify web development projects, ensuring swift delivery without
+        compromising quality.
+      </>,
+    ],
+  },
+  whyService: {
+    highlighter: "What We Provide",
+    H2: (
+      <>
+        Why&nbsp;
+        <span>Social Media Paid Ads</span>?
+      </>
+    ),
+    paragraphs: [
+      <>
+        Utilize Sociomatic&apos;s skilled Social Media Paid Ads to elevate your
+        business. For digital success, precise targeting, innovative solutions,
+        and committed support are required.
+      </>,
+    ],
+    cardList: [
+      {
+        id: 1,
+        image: <TargetAudience />,
+        title: "Ease of Use",
+        list: [
+          <>User-friendly interface</>,
+          <>Intuitive content management</>,
+          <>Streamlined store management</>,
+          <>Quick setup and launch</>,
+        ],
+      },
+      {
+        id: 2,
+        image: <ROI />,
+        title: "Veratility Unleashed",
+        list: [
+          <>Diverse theme options</>,
+          <>Extensive plugin availability</>,
+          <>Scalable for any business</>,
+          <>Responsive design option</>,
+        ],
+      },
+      {
+        id: 3,
+        image: <Competition />,
+        title: "Mobile Optimization",
+        list: [
+          <>Responsive design principles</>,
+          <>Mobile commerce capabilities</>,
+          <>Enhanced mobile user experience</>,
+          <>Accelerated mobile pages (AMP)</>,
+        ],
+      },
+      {
+        id: 4,
+        image: <GeoTargetting />,
+        title: "App Integration Mastery",
+        list: [
+          <>Seamless integration of Shopify apps</>,
+          <>Extend functionality effortlessly</>,
+          <>Optimize business operations</>,
+          <>Regular app updates</>,
+        ],
+      },
+      {
+        id: 5,
+        image: <LongTermPartnership />,
+        title: "Payment Integration Expertise",
+        list: [
+          <>Integrated payment gateways</>,
+          <>Smooth transaction processing</>,
+          <>Enhanced customer checkout experience</>,
+          <>Multiple payment options</>,
+        ],
+      },
+      {
+        id: 6,
+        image: <SME />,
+        title: "SEO-Ready Foundation",
+        list: [
+          <>SEO-friendly structure</>,
+          <>Optimized product pages</>,
+          <>Built-in SEO features</>,
+          <>XML stemapp generation</>,
+        ],
+      },
+    ],
+  },
+  ourPackages: {
+    highlighter: "Our Packages",
+    H2: (
+      <>
+        Tailor-made Packages to Help Your Business&nbsp;
+        <span className="text-secondary">Grow</span>
+      </>
+    ),
+    paragraphs: [
+      <>
+        We&apos;ll listen to your goals and complete a free audit to discover if
+        we&apos;re a great fit to work with each other.
+      </>,
+    ],
+    packageList: [
+      {
+        id: 1,
+        image: <Starter />,
+        title: "Starter",
+        H1: "$2000",
+        description: (
+          <>
+            Pariatur ut sint esse ut ea non veniam officia ipsum fugiat nisi sit
+            in et.
+          </>
+        ),
+        list: [
+          "Basic Shopify setup",
+          "Standard theme customization",
+          "Essential plugin integration",
+          "Content upload",
+          "E-commerce functionality",
+          "Standard support",
+          "Up to 15 products",
+          "Up to 5 pages",
+        ],
+        link: "/",
+      },
+      {
+        id: 2,
+        image: <Popular />,
+        title: "Popular",
+        H1: "$2500",
+        description: (
+          <>
+            Pariatur ut sint esse ut ea non veniam officia ipsum fugiat nisi sit
+            in et.
+          </>
+        ),
+        list: [
+          "Advanced Shopify setup",
+          "Extensive theme customization",
+          "Comprehensive plugin integration",
+          "Priority support",
+          "Content upload",
+          "E-commerce functionality",
+          "Product Limit: Up to 30 products",
+          "Up to 10 pages",
+        ],
+        link: "/",
+      },
+      {
+        id: 3,
+        image: <Premium />,
+        title: "Premium",
+        H1: "$3500",
+        description: (
+          <>
+            Pariatur ut sint esse ut ea non veniam officia ipsum fugiat nisi sit
+            in et.
+          </>
+        ),
+        list: [
+          "Premium Shopify setup",
+          "Tailored theme customization",
+          "Full suite of plugin integration",
+          "E-commerce functionality",
+          "Content upload",
+          "Priority support + ongoing consultation",
+          "Up to 60 products",
+          "Up to 15 pages",
+        ],
+        link: "/",
+      },
+    ],
+  },
+  testimonial: {
+    highlighter: "Testimonials",
+    H2: <>Don&apos;t Take Our Words, We Embrace Their</>,
+    paragraphs: [
+      <>
+        Our <span>satisfied</span> clients are from all over the world. We
+        understand your requirements and deliver <span>growth</span>, no fluff.
+      </>,
+    ],
+    testimonialList: [
+      {
+        id: 1,
+        name: "Samuel H",
+        designation: "CEO @Analyzen",
+        imageSlug: "user1",
+        testimonial: (
+          <>
+            1I have never in my life experienced service like what I received
+            from thesociomatic. They finished 3 days of work in about 2 hrs.
+            They&apos;
+            <span>went above and beyond what was expected of him</span>. I will
+            Hire Them again and can fully recommend them to any potential
+            client.
+          </>
+        ),
+      },
+      {
+        id: 2,
+        name: "John Doe",
+        designation: "CTO @Apple Inc",
+        imageSlug: "user2",
+        testimonial: (
+          <>
+            2I have never in my life experienced service like what I received
+            from thesociomatic. They finished 3 days of work in about 2 hrs.
+            They&apos;
+            <span>went above and beyond what was expected of him</span>. I will
+            Hire Them again and can fully recommend them to any potential
+            client.
+          </>
+        ),
+      },
+      {
+        id: 3,
+        name: "Nabina Nel",
+        designation: "COO @Rabble",
+        imageSlug: "user3",
+        testimonial: (
+          <>
+            3I have never in my life experienced service like what I received
+            from thesociomatic. They finished 3 days of work in about 2 hrs.
+            They&apos;
+            <span>went above and beyond what was expected of him</span>. I will
+            Hire Them again and can fully recommend them to any potential
+            client.
+          </>
+        ),
+      },
+    ],
+  },
+  faqData: {
+    highlighter: "",
+    H2: <>Frequently Asked Questions</>,
+    paragraphs: [
+      <>
+        We are more than a generic agency. Explore our Services and our&apos;
+        <span>solutions</span> for your business.
+      </>,
+    ],
+    qnaList: [
+      {
+        id: 1,
+        title:
+          "Why should I consider your software development company as a partner?",
+        details:
+          "At Vivasoft, we take pride in developing high-quality applications in record time. We have 250+ experienced developers who understand the importance of agile methodologies and use cutting-edge technologies such as Java, NodeJS, AngularJS and React Native to deliver unique software solutions that provide maximum value for our clients. Our team is committed to delivering timely results while keeping costs low so you can maximize your ROI.",
+      },
+      {
+        id: 2,
+        title:
+          " How does The Sociomatic stand out in the digital marketing industry?",
+        details:
+          "We differentiate ourselves by offering various services, providing comprehensive solutions for our clients' digital marketing needs, and delivering tangible results.",
+      },
+      {
+        id: 3,
+        title: "What is your approach to client success?",
+        details:
+          "We're committed to ensuring the success of our clients by identifying new digital marketing opportunities and implementing strategies to help them become market leaders and achieve an outstanding return on investment (ROI).",
+      },
+      {
+        id: 4,
+        title: "What values drive The Sociomatic's operations?",
+        details:
+          "Our core values include innovation, dedication, excellence, and client-centricity. We strive to bring fresh ideas and solutions, ensuring the best possible service.",
+      },
+      {
+        id: 5,
+        title:
+          " How can I contact The Sociomatic for inquiries or collaboration?",
+        details:
+          "You can contact us through our website or our customer support team to discuss how we can assist your business. We're here to help you navigate digital marketing and achieve your goals.",
+      },
+    ],
+  },
+};
+
+export const SoftwareDevelopmentServicePageData = {
+  herosection: {
+    H1: (
+      <>
+        We Craft <span>World Class</span> Agile Product on Demand
+      </>
+    ),
+    P: (
+      <>
+        Helping businesses go line and grow bigger with high-tech web
+        applications.
+      </>
+    ),
+    videoLink: "https://www.youtube.com/embed/Gl465-ugqbM?si=Njv8OZykPsz9LsYZ",
+    brands: false,
+    background: "HeroBackgroundServices",
+  },
+  whyChooseSection: {
+    videoThumbnail: "whyChooseVideo.png",
+    videoLink: "https://www.youtube.com/embed/Gl465-ugqbM?si=Njv8OZykPsz9LsYZ",
+    H2: (
+      <>
+        Why Choose The <span>Sociomatic</span>?
+      </>
+    ),
+    list: [
+      <>
+        <span>Induvidual Entity:</span> Depend on our custom platform
+        development services to establish a secure system, enhancing all sorts
+        of information you need to find solution of your pain point.
+      </>,
+      <>
+        <span>Small Industries:</span>
+        We can develop a personalized web solution highlighting your products or
+        services, enhancing your online visibility and operational efficiency.
+      </>,
+      <>
+        <span>Medium Businesses and Enterprises:</span> Maximize the advantages
+        of our tailor-made web applications and e-commerce solutions, designed
+        to streamline your operations and foster the scalable growth of your
+        business.
+      </>,
+      <>
+        <span>Startups:</span> Depending on our proficiency in constructing your
+        website or web application from the ground up, you are receiving
+        essential guidance to align with your overall digital plan.
+      </>,
+    ],
+  },
+  whyService: {
+    highlighter: "What We Provide",
+    H2: (
+      <>
+        Why&nbsp;
+        <span>Software Development</span> with sociomatic?
+      </>
+    ),
+    paragraphs: [
+      <>
+        We follow an agile methodology to deliver high-quality tasks to meet
+        established deadlines. A business can choose the software outsourcing
+        model that best matches its needs. We will help them increase their core
+        competencies.
+      </>,
+    ],
+    cardList: [
+      {
+        id: 1,
+        image: <TargetAudience />,
+        title: "Team Augmentation",
+        list: [
+          <>Seamless collaboration with experts</>,
+          <>Boosted workflow assurance</>,
+          <>Tackle complex projects confidently</>,
+          <>Enhances in-house team dynamics</>,
+        ],
+      },
+      {
+        id: 2,
+        image: <ROI />,
+        title: "Project Development",
+        list: [
+          <>Transform ideas into top-notch products.</>,
+          <>Efficient, cost-effective process</>,
+          <>Deliver ready-for-testing products</>,
+          <>Emphasis on user-friendly designs</>,
+        ],
+      },
+      {
+        id: 3,
+        image: <Competition />,
+        title: "MVP Services",
+        list: [
+          <>Experienced MVP development firm</>,
+          <>Assistance from ideation to delivery</>,
+          <>Comprehensive end-to-end service</>,
+          <>Rapid prototype development</>,
+        ],
+      },
+      {
+        id: 4,
+        image: <GeoTargetting />,
+        title: "Offshore Development",
+        list: [
+          <>Outsource to an offshore team</>,
+          <>Functions as an in-house extension</>,
+          <>Accelerates project timelines</>,
+          <>Time zone flexibility advantages</>,
+        ],
+      },
+      {
+        id: 5,
+        image: <LongTermPartnership />,
+        title: "Marketing & Branding",
+        list: [
+          <>
+            <Link href="/serivces/social-media-paid-ads">
+              Social Media Paid Ads
+            </Link>
+          </>,
+          <>
+            <Link href="/serivces/google-paid-ads">Google Paid Ads</Link>
+          </>,
+          <>
+            <Link href="/serivces/data-analytics">Data Analytics</Link>
+          </>,
+          <>
+            <Link href="/serivces/ui-ux-and-graphic-design">
+              UI/UX and Graphic Design
+            </Link>
+          </>,
+        ],
+      },
+      {
+        id: 6,
+        image: <SME />,
+        title: "Technology Agnostic",
+        list: [
+          <>Solution for specific pain points</>,
+          <>Prioritize compatibility overabundance</>,
+          <>Adopt any needed technology</>,
+          <>Integration with existing system</>,
+        ],
+      },
+    ],
+  },
+  ourPackages: {
+    highlighter: "Our Packages",
+    H2: (
+      <>
+        Tailor-made Packages to Help Your Business&nbsp;
+        <span className="text-secondary">Grow</span>
+      </>
+    ),
+    paragraphs: [
+      <>
+        We&apos;ll listen to your goals and complete a free audit to discover if
+        we&apos;re a great fit to work with each other.
+      </>,
+    ],
+    packageList: [
+      {
+        id: 1,
+        image: <Starter />,
+        title: "Starter",
+        H1: "$2000",
+        description: (
+          <>
+            Pariatur ut sint esse ut ea non veniam officia ipsum fugiat nisi sit
+            in et.
+          </>
+        ),
+        list: [
+          "Basic Shopify setup",
+          "Standard theme customization",
+          "Essential plugin integration",
+          "Content upload",
+          "E-commerce functionality",
+          "Standard support",
+          "Up to 15 products",
+          "Up to 5 pages",
+        ],
+        link: "/",
+      },
+      {
+        id: 2,
+        image: <Popular />,
+        title: "Popular",
+        H1: "$2500",
+        description: (
+          <>
+            Pariatur ut sint esse ut ea non veniam officia ipsum fugiat nisi sit
+            in et.
+          </>
+        ),
+        list: [
+          "Advanced Shopify setup",
+          "Extensive theme customization",
+          "Comprehensive plugin integration",
+          "Priority support",
+          "Content upload",
+          "E-commerce functionality",
+          "Product Limit: Up to 30 products",
+          "Up to 10 pages",
+        ],
+        link: "/",
+      },
+      {
+        id: 3,
+        image: <Premium />,
+        title: "Premium",
+        H1: "$3500",
+        description: (
+          <>
+            Pariatur ut sint esse ut ea non veniam officia ipsum fugiat nisi sit
+            in et.
+          </>
+        ),
+        list: [
+          "Premium Shopify setup",
+          "Tailored theme customization",
+          "Full suite of plugin integration",
+          "E-commerce functionality",
+          "Content upload",
+          "Priority support + ongoing consultation",
+          "Up to 60 products",
+          "Up to 15 pages",
+        ],
+        link: "/",
+      },
+    ],
+  },
+  testimonial: {
+    highlighter: "Testimonials",
+    H2: <>Don&apos;t Take Our Words, We Embrace Their</>,
+    paragraphs: [
+      <>
+        Our <span>satisfied</span> clients are from all over the world. We
+        understand your requirements and deliver <span>growth</span>, no fluff.
+      </>,
+    ],
+    testimonialList: [
+      {
+        id: 1,
+        name: "Samuel H",
+        designation: "CEO @Analyzen",
+        imageSlug: "user1",
+        testimonial: (
+          <>
+            1I have never in my life experienced service like what I received
+            from thesociomatic. They finished 3 days of work in about 2 hrs.
+            They&apos;
+            <span>went above and beyond what was expected of him</span>. I will
+            Hire Them again and can fully recommend them to any potential
+            client.
+          </>
+        ),
+      },
+      {
+        id: 2,
+        name: "John Doe",
+        designation: "CTO @Apple Inc",
+        imageSlug: "user2",
+        testimonial: (
+          <>
+            2I have never in my life experienced service like what I received
+            from thesociomatic. They finished 3 days of work in about 2 hrs.
+            They&apos;
+            <span>went above and beyond what was expected of him</span>. I will
+            Hire Them again and can fully recommend them to any potential
+            client.
+          </>
+        ),
+      },
+      {
+        id: 3,
+        name: "Nabina Nel",
+        designation: "COO @Rabble",
+        imageSlug: "user3",
+        testimonial: (
+          <>
+            3I have never in my life experienced service like what I received
+            from thesociomatic. They finished 3 days of work in about 2 hrs.
+            They&apos;
+            <span>went above and beyond what was expected of him</span>. I will
+            Hire Them again and can fully recommend them to any potential
+            client.
+          </>
+        ),
+      },
+    ],
+  },
+  faqData: {
+    highlighter: "",
+    H2: <>Frequently Asked Questions</>,
+    paragraphs: [
+      <>
+        We are more than a generic agency. Explore our Services and our&apos;
+        <span>solutions</span> for your business.
+      </>,
+    ],
+    qnaList: [
+      {
+        id: 1,
+        title:
+          "Why should I consider your software development company as a partner?",
+        details:
+          "At Vivasoft, we take pride in developing high-quality applications in record time. We have 250+ experienced developers who understand the importance of agile methodologies and use cutting-edge technologies such as Java, NodeJS, AngularJS and React Native to deliver unique software solutions that provide maximum value for our clients. Our team is committed to delivering timely results while keeping costs low so you can maximize your ROI.",
+      },
+      {
+        id: 2,
+        title:
+          " How does The Sociomatic stand out in the digital marketing industry?",
+        details:
+          "We differentiate ourselves by offering various services, providing comprehensive solutions for our clients' digital marketing needs, and delivering tangible results.",
+      },
+      {
+        id: 3,
+        title: "What is your approach to client success?",
+        details:
+          "We're committed to ensuring the success of our clients by identifying new digital marketing opportunities and implementing strategies to help them become market leaders and achieve an outstanding return on investment (ROI).",
+      },
+      {
+        id: 4,
+        title: "What values drive The Sociomatic's operations?",
+        details:
+          "Our core values include innovation, dedication, excellence, and client-centricity. We strive to bring fresh ideas and solutions, ensuring the best possible service.",
+      },
+      {
+        id: 5,
+        title:
+          " How can I contact The Sociomatic for inquiries or collaboration?",
+        details:
+          "You can contact us through our website or our customer support team to discuss how we can assist your business. We're here to help you navigate digital marketing and achieve your goals.",
+      },
+    ],
+  },
+};
+
+export const UIUXandGraphicDesignServicePageData = {
+  herosection: {
+    H1: (
+      <>
+        Crafting Digital <span>Masterpieces</span> with <span>Design</span>
+      </>
+    ),
+    P: (
+      <>
+        Discover design brilliance with Sociomatic. Boost your brand with
+        superior UI/UX and Graphic Design, where creativity and mastery live
+        together.
+      </>
+    ),
+    videoLink: "https://www.youtube.com/embed/Gl465-ugqbM?si=Njv8OZykPsz9LsYZ",
+    brands: false,
+    background: "HeroBackgroundServices",
+  },
+  whyChooseSection: {
+    videoThumbnail: "whyChooseVideo.png",
+    videoLink: "https://www.youtube.com/embed/Gl465-ugqbM?si=Njv8OZykPsz9LsYZ",
+    H2: (
+      <>
+        Why Choose The <span>Sociomatic</span>?
+      </>
+    ),
+    list: [
+      <>
+        <span>User Experience (UX) Development:</span> Tailor exceptional
+        digital journeys that captivate users, blending intuitive navigation
+        with seamless interactions for a truly immersive experience.
+      </>,
+      <>
+        <span>User Interface (UI) Development:</span>
+        Craft visually stunning interfaces that fuse technology and design,
+        amplifying user engagement and satisfaction while reflecting your
+        brand&apos;s essence.
+      </>,
+      <>
+        <span>Cross-platform Experience Design:</span> Create cohesive user
+        experiences across devices, ensuring seamless interaction and engagement
+        on any platform. Our designs bridge the digital divide effortlessly.
+      </>,
+      <>
+        <span>Mobile-first and Responsive Design:</span> Prioritize mobile
+        experiences with responsive design, ensuring optimal functionality and
+        aesthetics across diverse screen sizes. Seamlessly adapt your content to
+        captivate users wherever they are.
+      </>,
+    ],
+  },
+  whyService: {
+    highlighter: "What We Provide",
+    H2: (
+      <>
+        Why&nbsp;
+        <span>UI/UX and Graphic Design</span> with sociomatic?
+      </>
+    ),
+    paragraphs: [
+      <>
+        We follow an agile methodology to deliver high-quality tasks to meet
+        established deadlines. A business can choose the software outsourcing
+        model that best matches its needs. We will help them increase their core
+        competencies.
+      </>,
+    ],
+    cardList: [
+      {
+        id: 1,
+        image: <TargetAudience />,
+        title: "UI/UX Design Services",
+        list: [
+          <>Creative captivating app experiences</>,
+          <>Harmonize design for all platforms</>,
+          <>Ensure seamless navigation</>,
+          <>Deliver visually stunning interfaces</>,
+        ],
+      },
+      {
+        id: 2,
+        image: <ROI />,
+        title: "UI/UX Consulting",
+        list: [
+          <>Unlock full platform potential</>,
+          <>Analyze user behaviors</>,
+          <>Provide strategic insights</>,
+          <>Enhance usability and conversions</>,
+        ],
+      },
+      {
+        id: 3,
+        image: <Competition />,
+        title: "Web Design Services",
+        list: [
+          <>Seamlessly fuse aesthetics and usability</>,
+          <>Craft impactful digital product designs</>,
+          <>Tailor designs to brand identity</>,
+          <>Ensure seamless navigation and engagement</>
+        ],
+      },
+      {
+        id: 4,
+        image: <GeoTargetting />,
+        title: "Creative Branding",
+        list: [
+          <>Unique Logo Design</>,
+          <>Brand Identity Creation</>,
+          <>Graphic Style Guides</>,
+          <>Visual Branding Expertise</>
+        ],
+      },
+      {
+        id: 5,
+        image: <LongTermPartnership />,
+        title: "Striking Visuals",
+        list: [
+          <>Custom Illustrations</>,
+          <>Infographics Mastery</>,
+          <>Vibrant Image Editing</>,
+          <>Visual Storytelling</>,
+        ],
+      },
+      {
+        id: 6,
+        image: <SME />,
+        title: "Print & Digital Design",
+        list: [
+          <>Print Material Design</>,
+          <>Digital Ad creatives</>,
+          <>Web Graphics Excellence</>,
+          <>Responsive Design Solutions</>,
+        ],
+      },
+    ],
+  },
+  ourPackages: {
+    highlighter: "Our Packages",
+    H2: (
+      <>
+        Tailor-made Packages to Help Your Business&nbsp;
+        <span className="text-secondary">Grow</span>
+      </>
+    ),
+    paragraphs: [
+      <>
+        We&apos;ll listen to your goals and complete a free audit to discover if
+        we&apos;re a great fit to work with each other.
+      </>,
+    ],
+    packageList: [
+      {
+        id: 1,
+        image: <Starter />,
+        title: "Starter",
+        H1: "$2000",
+        description: (
+          <>
+            Pariatur ut sint esse ut ea non veniam officia ipsum fugiat nisi sit
+            in et.
+          </>
+        ),
+        list: [
+          "Basic Shopify setup",
+          "Standard theme customization",
+          "Essential plugin integration",
+          "Content upload",
+          "E-commerce functionality",
+          "Standard support",
+          "Up to 15 products",
+          "Up to 5 pages",
+        ],
+        link: "/",
+      },
+      {
+        id: 2,
+        image: <Popular />,
+        title: "Popular",
+        H1: "$2500",
+        description: (
+          <>
+            Pariatur ut sint esse ut ea non veniam officia ipsum fugiat nisi sit
+            in et.
+          </>
+        ),
+        list: [
+          "Advanced Shopify setup",
+          "Extensive theme customization",
+          "Comprehensive plugin integration",
+          "Priority support",
+          "Content upload",
+          "E-commerce functionality",
+          "Product Limit: Up to 30 products",
+          "Up to 10 pages",
+        ],
+        link: "/",
+      },
+      {
+        id: 3,
+        image: <Premium />,
+        title: "Premium",
+        H1: "$3500",
+        description: (
+          <>
+            Pariatur ut sint esse ut ea non veniam officia ipsum fugiat nisi sit
+            in et.
+          </>
+        ),
+        list: [
+          "Premium Shopify setup",
+          "Tailored theme customization",
+          "Full suite of plugin integration",
+          "E-commerce functionality",
+          "Content upload",
+          "Priority support + ongoing consultation",
+          "Up to 60 products",
+          "Up to 15 pages",
+        ],
+        link: "/",
+      },
+    ],
+  },
+  testimonial: {
+    highlighter: "Testimonials",
+    H2: <>Don&apos;t Take Our Words, We Embrace Their</>,
+    paragraphs: [
+      <>
+        Our <span>satisfied</span> clients are from all over the world. We
+        understand your requirements and deliver <span>growth</span>, no fluff.
+      </>,
+    ],
+    testimonialList: [
+      {
+        id: 1,
+        name: "Samuel H",
+        designation: "CEO @Analyzen",
+        imageSlug: "user1",
+        testimonial: (
+          <>
+            1I have never in my life experienced service like what I received
+            from thesociomatic. They finished 3 days of work in about 2 hrs.
+            They&apos;
+            <span>went above and beyond what was expected of him</span>. I will
+            Hire Them again and can fully recommend them to any potential
+            client.
+          </>
+        ),
+      },
+      {
+        id: 2,
+        name: "John Doe",
+        designation: "CTO @Apple Inc",
+        imageSlug: "user2",
+        testimonial: (
+          <>
+            2I have never in my life experienced service like what I received
+            from thesociomatic. They finished 3 days of work in about 2 hrs.
+            They&apos;
+            <span>went above and beyond what was expected of him</span>. I will
+            Hire Them again and can fully recommend them to any potential
+            client.
+          </>
+        ),
+      },
+      {
+        id: 3,
+        name: "Nabina Nel",
+        designation: "COO @Rabble",
+        imageSlug: "user3",
+        testimonial: (
+          <>
+            3I have never in my life experienced service like what I received
+            from thesociomatic. They finished 3 days of work in about 2 hrs.
+            They&apos;
+            <span>went above and beyond what was expected of him</span>. I will
+            Hire Them again and can fully recommend them to any potential
+            client.
+          </>
+        ),
+      },
+    ],
+  },
+  faqData: {
+    highlighter: "",
+    H2: <>Frequently Asked Questions</>,
+    paragraphs: [
+      <>
+        We are more than a generic agency. Explore our Services and our&apos;
+        <span>solutions</span> for your business.
+      </>,
+    ],
+    qnaList: [
+      {
+        id: 1,
+        title:
+          "Why should I consider your software development company as a partner?",
+        details:
+          "At Vivasoft, we take pride in developing high-quality applications in record time. We have 250+ experienced developers who understand the importance of agile methodologies and use cutting-edge technologies such as Java, NodeJS, AngularJS and React Native to deliver unique software solutions that provide maximum value for our clients. Our team is committed to delivering timely results while keeping costs low so you can maximize your ROI.",
+      },
+      {
+        id: 2,
+        title:
+          " How does The Sociomatic stand out in the digital marketing industry?",
+        details:
+          "We differentiate ourselves by offering various services, providing comprehensive solutions for our clients' digital marketing needs, and delivering tangible results.",
+      },
+      {
+        id: 3,
+        title: "What is your approach to client success?",
+        details:
+          "We're committed to ensuring the success of our clients by identifying new digital marketing opportunities and implementing strategies to help them become market leaders and achieve an outstanding return on investment (ROI).",
+      },
+      {
+        id: 4,
+        title: "What values drive The Sociomatic's operations?",
+        details:
+          "Our core values include innovation, dedication, excellence, and client-centricity. We strive to bring fresh ideas and solutions, ensuring the best possible service.",
+      },
+      {
+        id: 5,
+        title:
+          " How can I contact The Sociomatic for inquiries or collaboration?",
+        details:
+          "You can contact us through our website or our customer support team to discuss how we can assist your business. We're here to help you navigate digital marketing and achieve your goals.",
+      },
+    ],
+  },
+};
+
+export const CustomWebDevelopmentServicePageData = {
+  herosection: {
+    H1: <>Custom Web Application Development Services</>,
+    P: (
+      <>
+        Select top-notch web solutions through our meticulously crafted and
+        customized web development services. CleverDev Software is committed to
+        providing technological excellence tailored to your business objectives.
+      </>
+    ),
+    videoLink: "https://www.youtube.com/embed/Gl465-ugqbM?si=Njv8OZykPsz9LsYZ",
+    brands: false,
+    background: "HeroBackgroundServices",
+  },
+  whyChooseSection: {
+    videoThumbnail: "whyChooseVideo.png",
+    videoLink: "https://www.youtube.com/embed/Gl465-ugqbM?si=Njv8OZykPsz9LsYZ",
+    H2: (
+      <>
+        Why Choose The <span>Sociomatic</span>?
+      </>
+    ),
+    list: [
+      <>
+        <span>Induvidual Entity:</span> Depend on our custom platform
+        development services to establish a secure system, enhancing all sorts
+        of information you need to find solution of your pain point.
+      </>,
+      <>
+        <span>Small Industries:</span>
+        We can develop a personalized web solution highlighting your products or
+        services, enhancing your online visibility and operational efficiency.
+      </>,
+      <>
+        <span>Medium Businesses and Enterprises:</span> Maximize the advantages
+        of our tailor-made web applications and e-commerce solutions, designed
+        to streamline your operations and foster the scalable growth of your
+        business.
+      </>,
+      <>
+        <span>Startups:</span> Depending on our proficiency in constructing your
+        website or web application from the ground up, you are receiving
+        essential guidance to align with your overall digital plan.
+      </>,
+    ],
+  },
+  whyService: {
+    highlighter: "What We Provide",
+    H2: (
+      <>
+        Why&nbsp;
+        <span>Software Development</span> with sociomatic?
+      </>
+    ),
+    paragraphs: [
+      <>
+        We follow an agile methodology to deliver high-quality tasks to meet
+        established deadlines. A business can choose the software outsourcing
+        model that best matches its needs. We will help them increase their core
+        competencies.
+      </>,
+    ],
+    cardList: [
+      {
+        id: 1,
+        image: <TargetAudience />,
+        title: "Web Solutions Tailored to Your Branding",
+        list: [
+          <>Tailored software for corporate style.</>,
+          <>Visually appealing interface design.</>,
+          <>Exceptional customer experience focus.</>,
+          <>Move beyond generic templates.</>,
+          <>Showcase unique products effectively</>,
+        ],
+      },
+      {
+        id: 2,
+        image: <ROI />,
+        title: "Customer-Driven Design",
+        list: [
+          <>Utilize customized web software development.</>,
+          <>App architecture meeting customer needs</>,
+          <>Deliver precise business results</>,
+          <>Amplify industry impact</>,
+          <>Enhance customer-driven experience</>,
+        ],
+      },
+      {
+        id: 3,
+        image: <Competition />,
+        title: "Flexibility",
+        list: [
+          <>Adapt to dynamic</>,
+          <>Avoid vendor lock-in constraints</>,
+          <>Fuel innovation with custom solutions</>,
+          <>Choose a relevant tech stack</>,
+          <>Stay agile in a changing landscape</>,
+        ],
+      },
+      {
+        id: 4,
+        image: <GeoTargetting />,
+        title: "Security",
+        list: [
+          <>Ensure compliance with regulations</>,
+          <>Address security needs comprehensively</>,
+          <>Implement robust information security</>,
+          <>Maintain industry standards for development</>,
+          <>Prioritize data protection measures</>,
+        ],
+      },
+      {
+        id: 5,
+        image: <LongTermPartnership />,
+        title: "Scalability",
+        list: [
+          <>Align tech assets with business growth</>,
+          <>Accommodate fluctuating load requirements</>,
+          <>Maintain performance standards</>,
+          <>Avoid compromising user experience</>,
+          <>Scale seamlessly with demand</>,
+        ],
+      },
+      {
+        id: 6,
+        image: <SME />,
+        title: "Business Automation",
+        list: [
+          <>Optimize workflows with custom development</>,
+          <>Streamline operations efficiently</>,
+          <>Enhance integration capabilities</>,
+          <>Tailored software for business efficiency</>,
+        ],
+      },
+    ],
+  },
+  ourPackages: {
+    highlighter: "Our Packages",
+    H2: (
+      <>
+        Tailor-made Packages to Help Your Business&nbsp;
+        <span className="text-secondary">Grow</span>
+      </>
+    ),
+    paragraphs: [
+      <>
+        We&apos;ll listen to your goals and complete a free audit to discover if
+        we&apos;re a great fit to work with each other.
+      </>,
+    ],
+    packageList: [
+      {
+        id: 1,
+        image: <Starter />,
+        title: "Starter",
+        H1: "$2000",
+        description: (
+          <>
+            Pariatur ut sint esse ut ea non veniam officia ipsum fugiat nisi sit
+            in et.
+          </>
+        ),
+        list: [
+          "Basic Shopify setup",
+          "Standard theme customization",
+          "Essential plugin integration",
+          "Content upload",
+          "E-commerce functionality",
+          "Standard support",
+          "Up to 15 products",
+          "Up to 5 pages",
+        ],
+        link: "/",
+      },
+      {
+        id: 2,
+        image: <Popular />,
+        title: "Popular",
+        H1: "$2500",
+        description: (
+          <>
+            Pariatur ut sint esse ut ea non veniam officia ipsum fugiat nisi sit
+            in et.
+          </>
+        ),
+        list: [
+          "Advanced Shopify setup",
+          "Extensive theme customization",
+          "Comprehensive plugin integration",
+          "Priority support",
+          "Content upload",
+          "E-commerce functionality",
+          "Product Limit: Up to 30 products",
+          "Up to 10 pages",
+        ],
+        link: "/",
+      },
+      {
+        id: 3,
+        image: <Premium />,
+        title: "Premium",
+        H1: "$3500",
+        description: (
+          <>
+            Pariatur ut sint esse ut ea non veniam officia ipsum fugiat nisi sit
+            in et.
+          </>
+        ),
+        list: [
+          "Premium Shopify setup",
+          "Tailored theme customization",
+          "Full suite of plugin integration",
+          "E-commerce functionality",
+          "Content upload",
+          "Priority support + ongoing consultation",
+          "Up to 60 products",
+          "Up to 15 pages",
         ],
         link: "/",
       },
