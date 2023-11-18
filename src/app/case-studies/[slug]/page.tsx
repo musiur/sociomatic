@@ -56,7 +56,7 @@ const CaseStudies = ({ params }: { params: { slug: string } }) => {
                 className="rounded-[10px] border border-secondary-muted hover:border-secondary bg-white/5 backdrop-blur-[8px] hover:backdrop-blur-[8px] w-full shadow-[0_4px_25px_0_rgba(89,86,255,0.05)] transition ease-in-out duration-500 overflow-hidden"
               >
                 <div
-                  className={`bg-[url('/images/pages/case-studies/${image}')] min-h-[300px] w-full bg-cover bg-center`}
+                  className={`bg-[url('/images/pages/case-studies/${image ? image : "image1.jpg"}')] min-h-[300px] w-full bg-cover bg-center`}
                 ></div>
                 <div className="flex flex-col items-start justify-start small-gap px-[25px] py-[50px]">
                   <h3 className="text-[20px] lg:text-[24px] font-bold">
