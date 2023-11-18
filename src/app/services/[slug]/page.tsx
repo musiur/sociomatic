@@ -200,5 +200,5 @@ const Services = ({ params }: { params: { slug: string } }) => {
     </div>
   );
 };
-
+ 
 export default Services;
