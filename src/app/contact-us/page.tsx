@@ -20,6 +20,7 @@ import ErrorMessages from "@/components/molecule/errors-messages";
 import Loader from "@/components/molecule/loader";
 import { useToast } from "@/components/ui/use-toast";
 import { useRouter } from "next/navigation";
+import { Building, MessageCircle, Phone } from "lucide-react";
 
 const ContactUs = () => {
   const { toast } = useToast();
@@ -145,7 +146,7 @@ const ContactUs = () => {
         </ul>
       </div>
       <div className="container">
-        <div className="w-full md:w-1/2 mx-auto section grid grid-cols-1 large-gap bg-white">
+        <div className="mx-auto section grid grid-cols-1 md:grid-cols-2 large-gap bg-white">
           <div className="flex flex-col small-gap">
             <div className="grid w-full items-center gap-1.5">
               <Label htmlFor="name">
@@ -316,16 +317,19 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
-      <div className="container section grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 large-gap">
+      <div className="container section grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 large-gap border-t border-secondarymuted">
         <div className="p-[25px] rounded-[10px] border border-secondarymuted grid grid-cols-1 small-gap">
+          <Phone />
           <h3 className="text-[16px] lg:text-[24px] font-bold">Make a Call</h3>
           <p>+24524352345</p>
         </div>
-        <div className="p-[25px] rounded-[10px] border border-secondarymuted grid grid-cols-1 small-gap">
+        <div className="p-[25px] rounded-[10px] border border-secondarymuted grid grid-cols-1 gap-[10px]">
+          <Building />
           <h3 className="text-[16px] lg:text-[24px] font-bold">Main Office</h3>
           <p>Damac Tower by Paramount, Dubai, UAE</p>
         </div>
         <div className="p-[25px] rounded-[10px] border border-secondarymuted grid grid-cols-1 small-gap">
+          <MessageCircle />
           <h3 className="text-[16px] lg:text-[24px] font-bold">WhatsApp</h3>
           <p>+984793900</p>
         </div>
