@@ -55,9 +55,7 @@ const CaseStudies = ({ params }: { params: { slug: string } }) => {
                 key={id}
                 className="rounded-[10px] border border-secondary-muted hover:border-secondary bg-white/5 backdrop-blur-[8px] hover:backdrop-blur-[8px] w-full shadow-[0_4px_25px_0_rgba(89,86,255,0.05)] transition ease-in-out duration-500 overflow-hidden"
               >
-                <div
-                  className={`bg-[url('/images/pages/case-studies/${image ? image : "image1.jpg"}')] min-h-[300px] w-full bg-cover bg-center`}
-                ></div>
+                {image}
                 <div className="flex flex-col items-start justify-start small-gap px-[25px] py-[50px]">
                   <h3 className="text-[20px] lg:text-[24px] font-bold">
                     {brand}
@@ -144,7 +142,9 @@ const CaseStudyPageData = {
   studies: [
     {
       id: 1,
-      image: "image1.jpg",
+      image: <div
+      className={`bg-[url('/images/pages/case-studies/image2.jpeg')] min-h-[300px] w-full bg-cover bg-center`}
+    ></div>,
       brand: "Floganza Dubai",
       title: (
         <>
@@ -186,7 +186,9 @@ const CaseStudyPageData = {
     },
     {
       id: 2,
-      image: "image1.png",
+      image: <div
+      className={`bg-[url('/images/pages/case-studies/image1.png')] min-h-[300px] w-full bg-cover bg-center`}
+    ></div>,
       brand: "Photoshoot Dubai Escape",
       title: (
         <>
