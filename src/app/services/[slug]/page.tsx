@@ -112,79 +112,88 @@ const Services = ({ params }: { params: { slug: string } }) => {
         </div>
       </section>
       <HowWeWork />
-      <section className="bg-[url('/images/backgrounds/SquareBackground.svg')] bg-center bg-cover">
-        <div className="container section flex flex-col large-gap">
-          <SectionHead
-            highlighter={data.ourPackages.highlighter}
-            H2={data.ourPackages.H2}
-            paragraphs={data.ourPackages.paragraphs}
-          />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-between items-start large-gap">
-            {data.ourPackages.packageList.map((item: any) => {
-              const { id, image, title, description, list, link } = item;
-              return (
-                <div
-                  key={id}
-                  className={`rounded-[10px] ${
-                    id === 2
-                      ? "border border-b-[5px] border-secondarymuted border-b-secondary hover:border-secondary"
-                      : "border"
-                  } border-secondary-muted hover:border-secondary bg-white/5 backdrop-blur-[8px] hover:backdrop-blur-[8px] w-full px-[25px] py-[50px] shadow-[0_4px_25px_0_rgba(89,86,255,0.05)] transition ease-in-out duration-500 group`}
-                >
-                  <div className="flex flex-col items-center justify-center small-gap">
-                    {image}
-                    <h4 className="text-2xl lg:text-3xl font-bold text-primary">
-                      {title}
-                    </h4>
-                    {/* <p className="[&>span]:font-medium [&>span]:text-primary text-center">
+      {params.slug.includes("software-development") ||
+      params.slug.includes("custom-web-development") ? null : (
+        <section className="bg-[url('/images/backgrounds/SquareBackground.svg')] bg-center bg-cover">
+          <div className="container section flex flex-col large-gap">
+            <SectionHead
+              highlighter={data.ourPackages.highlighter}
+              H2={data.ourPackages.H2}
+              paragraphs={data.ourPackages.paragraphs}
+            />
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-between items-start large-gap">
+              {data.ourPackages.packageList.map((item: any) => {
+                const { id, image, title, description, list, link } = item;
+                return (
+                  <div
+                    key={id}
+                    className={`rounded-[10px] ${
+                      id === 2
+                        ? "border border-b-[5px] border-secondarymuted border-b-secondary hover:border-secondary"
+                        : "border"
+                    } border-secondary-muted hover:border-secondary bg-white/5 backdrop-blur-[8px] hover:backdrop-blur-[8px] w-full px-[25px] py-[50px] shadow-[0_4px_25px_0_rgba(89,86,255,0.05)] transition ease-in-out duration-500 group`}
+                  >
+                    <div className="flex flex-col items-center justify-center small-gap">
+                      {image}
+                      <h4 className="text-2xl lg:text-3xl font-bold text-primary">
+                        {title}
+                      </h4>
+                      {/* <p className="[&>span]:font-medium [&>span]:text-primary text-center">
                       {description}
                     </p> */}
-                    <ul className="flex flex-col gap-[1rem]">
-                      {list.map((item: string, index: number) => {
-                        return (
-                          <li
-                            key={index}
-                            className="flex items-start justify-start gap-[6.7px]"
-                          >
-                            <BadgeCheck className="mt-[4px] h-[16px] min-w-[16px] max-w-[16px] stroke-dimmed stroke-[1.3px]" />
-                            &nbsp;
-                            <span>{item}</span>
-                          </li>
-                        );
-                      })}
-                    </ul>
-                    <Link
-                      href={link}
-                      className="text-primary hover:text-secondary"
-                    >
-                      <Button
-                        className={`${
-                          id === 1
-                            ? "bg-decade"
-                            : id === 2
-                            ? "bg-secondary"
-                            : "bg-primary"
-                        }`}
+                      <ul className="flex flex-col gap-[1rem]">
+                        {list.map((item: string, index: number) => {
+                          return (
+                            <li
+                              key={index}
+                              className="flex items-start justify-start gap-[6.7px]"
+                            >
+                              <BadgeCheck className="mt-[4px] h-[16px] min-w-[16px] max-w-[16px] stroke-dimmed stroke-[1.3px]" />
+                              &nbsp;
+                              <span>{item}</span>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                      <Link
+                        href={link}
+                        className="text-primary hover:text-secondary"
                       >
-                        Get A Quote
-                      </Button>
-                    </Link>
+                        <Button
+                          className={`${
+                            id === 1
+                              ? "bg-decade"
+                              : id === 2
+                              ? "bg-secondary"
+                              : "bg-primary"
+                          }`}
+                        >
+                          Get A Quote
+                        </Button>
+                      </Link>
+                    </div>
                   </div>
-                </div>
-              );
-            })}
-          </div>
-          <div className="grid grid-cols-1 small-gap">
-            {data.ourPackages?.footerContent?.p ? (
-              <p className="text-center">{data.ourPackages.footerContent.p}</p>
-            ) : null}
-            <div className="flex flex-wrap items-center justify-center small-gap">
-              <Button variant="outline">Get A Free Consultation</Button>
-              <Button>Get A Quote</Button>
+                );
+              })}
+            </div>
+            <div className="grid grid-cols-1 small-gap">
+              {data.ourPackages?.footerContent?.p ? (
+                <p className="text-center">
+                  {data.ourPackages.footerContent.p}
+                </p>
+              ) : null}
+              <div className="flex flex-wrap items-center justify-center small-gap">
+                <Link href="/#calendly">
+                  <Button variant="outline">Get A Free Consultation</Button>
+                </Link>
+                <Link href={`/case-studies/${params.slug}`}>
+                  <Button>Case Studies</Button>
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
       <Testimonial calendly={false} data={data.testimonial} />
       <Faq data={data.faqData} />
       <ProjectIdea />

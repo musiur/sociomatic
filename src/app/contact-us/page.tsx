@@ -144,174 +144,190 @@ const ContactUs = () => {
           })}
         </ul>
       </div>
-      <div className="container section grid grid-cols-1 md:grid-cols-2 large-gap bg-white">
-        <div className="flex flex-col small-gap">
-          <div className="grid w-full items-center gap-1.5">
-            <Label htmlFor="name">
-              Name <span className="text-pink-600 font-bold">*</span>
-            </Label>
-            <Input
-              type="name"
-              id="name"
-              placeholder="Name"
-              name="name"
-              onChange={handleOnChange}
-            />
-            <ErrorMessages errors={errors} name="name" />
-          </div>
+      <div className="container">
+        <div className="w-full md:w-1/2 mx-auto section grid grid-cols-1 large-gap bg-white">
+          <div className="flex flex-col small-gap">
+            <div className="grid w-full items-center gap-1.5">
+              <Label htmlFor="name">
+                Name <span className="text-pink-600 font-bold">*</span>
+              </Label>
+              <Input
+                type="name"
+                id="name"
+                placeholder="Name"
+                name="name"
+                onChange={handleOnChange}
+              />
+              <ErrorMessages errors={errors} name="name" />
+            </div>
 
-          <div className="grid w-full items-center gap-1.5">
-            <Label htmlFor="email">
-              Email <span className="text-pink-600 font-bold">*</span>
-            </Label>
-            <Input
-              type="email"
-              id="email"
-              placeholder="Email"
-              name="email"
-              onChange={handleOnChange}
-            />
-            <ErrorMessages errors={errors} name="email" />
-          </div>
+            <div className="grid w-full items-center gap-1.5">
+              <Label htmlFor="email">
+                Email <span className="text-pink-600 font-bold">*</span>
+              </Label>
+              <Input
+                type="email"
+                id="email"
+                placeholder="Email"
+                name="email"
+                onChange={handleOnChange}
+              />
+              <ErrorMessages errors={errors} name="email" />
+            </div>
 
-          <div className="grid w-full items-center gap-1.5">
-            <Label htmlFor="phone">
-              Phone <span className="text-pink-600 font-bold">*</span>
-            </Label>
-            <Input
-              type="phone"
-              id="phone"
-              placeholder="Phone"
-              name="phone"
-              onChange={handleOnChange}
-            />
-            <ErrorMessages errors={errors} name="phone" />
-          </div>
+            <div className="grid w-full items-center gap-1.5">
+              <Label htmlFor="phone">
+                Phone <span className="text-pink-600 font-bold">*</span>
+              </Label>
+              <Input
+                type="phone"
+                id="phone"
+                placeholder="Phone"
+                name="phone"
+                onChange={handleOnChange}
+              />
+              <ErrorMessages errors={errors} name="phone" />
+            </div>
 
-          <div className="grid w-full items-center gap-1.5">
-            <Label htmlFor="country">Country</Label>
-            <Input
-              type="country"
-              id="country"
-              placeholder="Country"
-              name="country"
-              onChange={handleOnChange}
-            />
-          </div>
+            <div className="grid w-full items-center gap-1.5">
+              <Label htmlFor="country">Country</Label>
+              <Input
+                type="country"
+                id="country"
+                placeholder="Country"
+                name="country"
+                onChange={handleOnChange}
+              />
+            </div>
 
-          <div className="grid w-full items-center gap-1.5">
-            <Label htmlFor="companyName">Company Name</Label>
-            <Input
-              type="companyName"
-              id="companyName"
-              placeholder="Company Name"
-              name="companyName"
-              onChange={handleOnChange}
-            />
-          </div>
+            <div className="grid w-full items-center gap-1.5">
+              <Label htmlFor="companyName">Company Name</Label>
+              <Input
+                type="companyName"
+                id="companyName"
+                placeholder="Company Name"
+                name="companyName"
+                onChange={handleOnChange}
+              />
+            </div>
 
-          <div className="grid w-full items-center gap-1.5">
-            <Label htmlFor="companyURL">Company URL</Label>
-            <Input
-              type="companyURL"
-              id="companyURL"
-              placeholder="Company URL"
-              name="companyURL"
-              onChange={handleOnChange}
-            />
+            <div className="grid w-full items-center gap-1.5">
+              <Label htmlFor="companyURL">Company URL</Label>
+              <Input
+                type="companyURL"
+                id="companyURL"
+                placeholder="Company URL"
+                name="companyURL"
+                onChange={handleOnChange}
+              />
+            </div>
           </div>
-        </div>
-        <div className="flex flex-col small-gap overflow-hidden">
-          {currentTab !== 1 ? (
+          <div className="flex flex-col small-gap overflow-hidden">
+            {currentTab !== 1 ? (
+              <div className="flex flex-col gap-1.5">
+                <Label htmlFor="message">
+                  Probable budget range&nbsp;
+                  <span className="text-pink-600 font-bold">*</span>
+                </Label>
+                <Select
+                  onValueChange={(value) => {
+                    handleOnChange({
+                      target: {
+                        name: "budgetRange",
+                        value,
+                      },
+                    });
+                  }}
+                >
+                  <SelectTrigger className="w-full">
+                    <SelectValue placeholder="Select budget range" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="$500-1000">$500-1000</SelectItem>
+                    <SelectItem value="$1000-1500">$1000-1500</SelectItem>
+                    <SelectItem value="$2000+">$2000+</SelectItem>
+                  </SelectContent>
+                </Select>
+                <ErrorMessages errors={errors} name="budgetRange" />
+              </div>
+            ) : null}
             <div className="flex flex-col gap-1.5">
               <Label htmlFor="message">
-                Probable budget range&nbsp;
+                Services you are interested on&nbsp;
                 <span className="text-pink-600 font-bold">*</span>
               </Label>
-              <Select
-                onValueChange={(value) => {
-                  handleOnChange({
-                    target: {
-                      name: "budgetRange",
-                      value,
-                    },
-                  });
-                }}
-              >
-                <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Select budget range" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="$500-1000">$500-1000</SelectItem>
-                  <SelectItem value="$1000-1500">$1000-1500</SelectItem>
-                  <SelectItem value="$2000+">$2000+</SelectItem>
-                </SelectContent>
-              </Select>
-              <ErrorMessages errors={errors} name="budgetRange" />
+              <ul className="grid grid-cols-1 lg:grid-cols-2 gap-1.5">
+                {ServicesList.map((item: any) => {
+                  return (
+                    <li key={item.id} className="flex items-center space-x-2">
+                      <Checkbox
+                        id={item.name}
+                        onCheckedChange={(value) =>
+                          setFormData({
+                            ...formData,
+                            services: value
+                              ? [...formData.services, item.value]
+                              : [
+                                  ...formData.services.filter(
+                                    (service: any) => service !== item.value
+                                  ),
+                                ],
+                          })
+                        }
+                      />
+                      <label
+                        htmlFor={item.name}
+                        className="peer-disabled:opacity-70 cursor-pointer"
+                      >
+                        {item.value}
+                      </label>
+                    </li>
+                  );
+                })}
+              </ul>
+              <ErrorMessages errors={errors} name="services" />
             </div>
-          ) : null}
-          <div className="flex flex-col gap-1.5">
-            <Label htmlFor="message">
-              Services you are interested on&nbsp;
-              <span className="text-pink-600 font-bold">*</span>
-            </Label>
-            <ul className="grid grid-cols-1 lg:grid-cols-2 gap-1.5">
-              {ServicesList.map((item: any) => {
-                return (
-                  <li key={item.id} className="flex items-center space-x-2">
-                    <Checkbox
-                      id={item.name}
-                      onCheckedChange={(value) =>
-                        setFormData({
-                          ...formData,
-                          services: value
-                            ? [...formData.services, item.value]
-                            : [
-                                ...formData.services.filter(
-                                  (service: any) => service !== item.value
-                                ),
-                              ],
-                        })
-                      }
-                    />
-                    <label
-                      htmlFor={item.name}
-                      className="peer-disabled:opacity-70 cursor-pointer"
-                    >
-                      {item.value}
-                    </label>
-                  </li>
-                );
-              })}
-            </ul>
-            <ErrorMessages errors={errors} name="services" />
-          </div>
 
-          <div className="grid w-full gap-1.5">
-            <Label htmlFor="message">Your message</Label>
-            <Textarea
-              placeholder="Type your message here."
-              id="message"
-              name="message"
-              onChange={handleOnChange}
+            <div className="grid w-full gap-1.5">
+              <Label htmlFor="message">Your message</Label>
+              <Textarea
+                placeholder="Type your message here."
+                id="message"
+                name="message"
+                onChange={handleOnChange}
+              />
+            </div>
+            <ReCAPTCHA
+              sitekey={process.env.siteKey!}
+              onChange={(e: any) => {
+                console.log(e);
+                e ? setCaptcha(true) : setCaptcha(false);
+              }}
             />
-          </div>
-          <ReCAPTCHA
-            sitekey={process.env.siteKey!}
-            onChange={(e: any) => {
-              console.log(e);
-              e ? setCaptcha(true) : setCaptcha(false);
-            }}
-          />
 
-          <Button
-            variant={"secondary"}
-            className="mt-5 max-w-[300px]"
-            disabled={!captcha}
-            onClick={handleOnSubmit}
-          >
-            {loading ? <Loader /> : "Submit"}
-          </Button>
+            <Button
+              variant={"secondary"}
+              className="mt-5 max-w-[300px]"
+              disabled={!captcha}
+              onClick={handleOnSubmit}
+            >
+              {loading ? <Loader /> : "Submit"}
+            </Button>
+          </div>
+        </div>
+      </div>
+      <div className="container section grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 large-gap">
+        <div className="p-[25px] rounded-[10px] border border-secondarymuted grid grid-cols-1 small-gap">
+          <h3 className="text-[16px] lg:text-[24px] font-bold">Make a Call</h3>
+          <p>+24524352345</p>
+        </div>
+        <div className="p-[25px] rounded-[10px] border border-secondarymuted grid grid-cols-1 small-gap">
+          <h3 className="text-[16px] lg:text-[24px] font-bold">Main Office</h3>
+          <p>Damac Tower by Paramount, Dubai, UAE</p>
+        </div>
+        <div className="p-[25px] rounded-[10px] border border-secondarymuted grid grid-cols-1 small-gap">
+          <h3 className="text-[16px] lg:text-[24px] font-bold">WhatsApp</h3>
+          <p>+984793900</p>
         </div>
       </div>
     </div>

@@ -586,36 +586,34 @@ export const GoogleAdsServicePageData = {
     qnaList: [
       {
         id: 1,
-        title:
-          "Why should I consider your software development company as a partner?",
+        title: "What are the advantages of Google Ads for my company?",
         details:
-          "At Vivasoft, we take pride in developing high-quality applications in record time. We have 250+ experienced developers who understand the importance of agile methodologies and use cutting-edge technologies such as Java, NodeJS, AngularJS and React Native to deliver unique software solutions that provide maximum value for our clients. Our team is committed to delivering timely results while keeping costs low so you can maximize your ROI.",
+          "Through targeted advertising, Google AdWords enhances visibility, traffic, and potential conversions",
       },
       {
         id: 2,
-        title:
-          " How does The Sociomatic stand out in the digital marketing industry?",
+        title: "What is the suggested Google AdWords budget?",
         details:
-          "We differentiate ourselves by offering various services, providing comprehensive solutions for our clients' digital marketing needs, and delivering tangible results.",
+          "Although budgets differ, starting with a reasonable amount and making adjustments based on performance is a good idea.",
       },
       {
         id: 3,
-        title: "What is your approach to client success?",
+        title: "How can I measure the success of my Google Ads campaign?",
         details:
-          "We're committed to ensuring the success of our clients by identifying new digital marketing opportunities and implementing strategies to help them become market leaders and achieve an outstanding return on investment (ROI).",
+          "Click-through rate (CTR), conversion rate, and return on ad spend (ROAS) are indicators of campaign effectiveness.",
       },
       {
         id: 4,
-        title: "What values drive The Sociomatic's operations?",
+        title: "What kinds of targeting are available with Google Ads?",
         details:
-          "Our core values include innovation, dedication, excellence, and client-centricity. We strive to bring fresh ideas and solutions, ensuring the best possible service.",
+          "To reach your desired audience, target based on keywords, demographics, location, interests, and more.",
       },
       {
         id: 5,
         title:
-          " How can I contact The Sociomatic for inquiries or collaboration?",
+          "I have Google Ads campaigns that I would like to optimize. Can Sociomatic help?",
         details:
-          "You can contact us through our website or our customer support team to discuss how we can assist your business. We're here to help you navigate digital marketing and achieve your goals.",
+          "Sociomatic does provide optimization services to improve the effectiveness of your Google Adwords campaigns.",
       },
     ],
   },
@@ -919,36 +917,34 @@ export const DataAnalyticsServicePageData = {
     qnaList: [
       {
         id: 1,
-        title:
-          "Why should I consider your software development company as a partner?",
+        title: "What are the benefits of data analytics for my business plan?",
         details:
-          "At Vivasoft, we take pride in developing high-quality applications in record time. We have 250+ experienced developers who understand the importance of agile methodologies and use cutting-edge technologies such as Java, NodeJS, AngularJS and React Native to deliver unique software solutions that provide maximum value for our clients. Our team is committed to delivering timely results while keeping costs low so you can maximize your ROI.",
+          "Data analytics finds trends, offers insights for well-informed decision-making, and boosts overall business productivity",
       },
       {
         id: 2,
-        title:
-          " How does The Sociomatic stand out in the digital marketing industry?",
+        title: "What data analytics tools does Sociomatic use?",
         details:
-          "We differentiate ourselves by offering various services, providing comprehensive solutions for our clients' digital marketing needs, and delivering tangible results.",
+          "For thorough data analysis, sociomatic uses cutting0edge tools like Google Analytics, Looker Studio, and Google Tag Manager",
       },
       {
         id: 3,
-        title: "What is your approach to client success?",
+        title: "Can data analytics be combined with different services?",
         details:
-          "We're committed to ensuring the success of our clients by identifying new digital marketing opportunities and implementing strategies to help them become market leaders and achieve an outstanding return on investment (ROI).",
+          "To improve overall business performance, Sociomatic guarantees the smooth integration of data analytics with various services",
       },
       {
         id: 4,
-        title: "What values drive The Sociomatic's operations?",
+        title: "How often should I review my analytics reports?",
         details:
-          "Our core values include innovation, dedication, excellence, and client-centricity. We strive to bring fresh ideas and solutions, ensuring the best possible service.",
+          "Regular , reviews, at least monthly, help stay informed about performance trends and make timely adjustments",
       },
       {
         id: 5,
         title:
-          " How can I contact The Sociomatic for inquiries or collaboration?",
+          "When utilizing Sociomatics's analytics services, is my data secure?",
         details:
-          "You can contact us through our website or our customer support team to discuss how we can assist your business. We're here to help you navigate digital marketing and achieve your goals.",
+          "Sociomatic implements robust security protocols to guarantee the privacy and accuracy of your information",
       },
     ],
   },
@@ -1242,36 +1238,33 @@ export const WordpressDevelopmentServicePageData = {
     qnaList: [
       {
         id: 1,
-        title:
-          "Why should I consider your software development company as a partner?",
+        title: "Why is Wordpress a good options for my website?",
         details:
-          "At Vivasoft, we take pride in developing high-quality applications in record time. We have 250+ experienced developers who understand the importance of agile methodologies and use cutting-edge technologies such as Java, NodeJS, AngularJS and React Native to deliver unique software solutions that provide maximum value for our clients. Our team is committed to delivering timely results while keeping costs low so you can maximize your ROI.",
+          "Wordpress is perfect for many websites because it's flexible, user-friendly, and has a large ecosystem of plugins, And it's cost-effective",
       },
       {
         id: 2,
-        title:
-          " How does The Sociomatic stand out in the digital marketing industry?",
+        title: "Does sociomatic offer Wordpress theme customization?",
         details:
-          "We differentiate ourselves by offering various services, providing comprehensive solutions for our clients' digital marketing needs, and delivering tangible results.",
+          "Sociomatic does theme customization so that your wordpress website reflects your tastes and brand identity",
       },
       {
         id: 3,
-        title: "What is your approach to client success?",
+        title: "Does Sociomatic provide Wordpress e-commerce solutions?",
         details:
-          "We're committed to ensuring the success of our clients by identifying new digital marketing opportunities and implementing strategies to help them become market leaders and achieve an outstanding return on investment (ROI).",
+          "Yes, Sociomatic offers reliable e-commerce solutions. It integrates WooCommerce plugins to enable smooth online transactions.",
       },
       {
         id: 4,
-        title: "What values drive The Sociomatic's operations?",
+        title: "Can I move my current website to Wordpress?",
         details:
-          "Our core values include innovation, dedication, excellence, and client-centricity. We strive to bring fresh ideas and solutions, ensuring the best possible service.",
+          "Sociomatic quickly moves content and functionality from other platforms to Wordpress",
       },
       {
         id: 5,
-        title:
-          " How can I contact The Sociomatic for inquiries or collaboration?",
+        title: "Why does Sociomatic use Wordpess security measures?",
         details:
-          "You can contact us through our website or our customer support team to discuss how we can assist your business. We're here to help you navigate digital marketing and achieve your goals.",
+          "To proect your Wordpress website from possible attacks, Sociomatic uses security plugins, fequent updates, and SSL integration",
       },
     ],
   },
@@ -1560,36 +1553,33 @@ export const ContentWringAndSEOServicePageData = {
     qnaList: [
       {
         id: 1,
-        title:
-          "Why should I consider your software development company as a partner?",
+        title: "How Does Content Writing Help SEO?",
         details:
-          "At Vivasoft, we take pride in developing high-quality applications in record time. We have 250+ experienced developers who understand the importance of agile methodologies and use cutting-edge technologies such as Java, NodeJS, AngularJS and React Native to deliver unique software solutions that provide maximum value for our clients. Our team is committed to delivering timely results while keeping costs low so you can maximize your ROI.",
+          "Quality content enhances search engine visibility, engages users, and contributes to a higher ranking on search engine results pages ",
       },
       {
         id: 2,
-        title:
-          " How does The Sociomatic stand out in the digital marketing industry?",
+        title: "Can Sociomatic create content for my specific industry?",
         details:
-          "We differentiate ourselves by offering various services, providing comprehensive solutions for our clients' digital marketing needs, and delivering tangible results.",
+          "Sociomatic offers industry-specific content creation to ensure relevance and resonance with your target audience.",
       },
       {
         id: 3,
-        title: "What is your approach to client success?",
+        title: "What is the turnaround time for SEO results?",
         details:
-          "We're committed to ensuring the success of our clients by identifying new digital marketing opportunities and implementing strategies to help them become market leaders and achieve an outstanding return on investment (ROI).",
+          "SEO turnaround times differ, but Sociomatic uses tactics for long-term, steady gains that are usually apparent in a few months.",
       },
       {
         id: 4,
-        title: "What values drive The Sociomatic's operations?",
+        title: "Does Sociomatic carry out keyword analysis for SEO?",
         details:
-          "Our core values include innovation, dedication, excellence, and client-centricity. We strive to bring fresh ideas and solutions, ensuring the best possible service.",
+          "Absolutely; Sociomatic conducts in-depth keyword research to find and target your company's most advantageous and pertinent terms.",
       },
       {
         id: 5,
-        title:
-          " How can I contact The Sociomatic for inquiries or collaboration?",
+        title: "Can I ask for changes to the content that Sociomatic created?",
         details:
-          "You can contact us through our website or our customer support team to discuss how we can assist your business. We're here to help you navigate digital marketing and achieve your goals.",
+          "Sociomatic is happy to receive feedback and adjustments to ensure the material is consistent with your brand voice and goals.",
       },
     ],
   },
@@ -1881,36 +1871,35 @@ export const SocialMediaAdsServicePageData = {
     qnaList: [
       {
         id: 1,
-        title:
-          "Why should I consider your software development company as a partner?",
+        title: "Why Should I Invest in Paid Social Media Advertising?",
         details:
-          "At Vivasoft, we take pride in developing high-quality applications in record time. We have 250+ experienced developers who understand the importance of agile methodologies and use cutting-edge technologies such as Java, NodeJS, AngularJS and React Native to deliver unique software solutions that provide maximum value for our clients. Our team is committed to delivering timely results while keeping costs low so you can maximize your ROI.",
+          "By reaching a more diverse and focused audience, sponsored social media advertisements increase brand visibility, engagement, and sales rates.",
       },
       {
         id: 2,
-        title:
-          " How does The Sociomatic stand out in the digital marketing industry?",
+        title: "Which websites does Sociomatic offer paid advertising on",
         details:
-          "We differentiate ourselves by offering various services, providing comprehensive solutions for our clients' digital marketing needs, and delivering tangible results.",
+          "Sociomatic provides complete social media advertising across major platforms, including Facebook, Instagram, LinkedIn, Twitter, and Pinterest",
       },
       {
         id: 3,
-        title: "What is your approach to client success?",
+        title:
+          "How can I evaluate whether my social media marketing plan is successful?",
         details:
-          "We're committed to ensuring the success of our clients by identifying new digital marketing opportunities and implementing strategies to help them become market leaders and achieve an outstanding return on investment (ROI).",
+          "Conversions, click-through rates, and engagement are examples of metrics that provide information about your social media advertisements' effectiveness.",
       },
       {
         id: 4,
-        title: "What values drive The Sociomatic's operations?",
+        title: "Can Sociomatic create ad creatives for my campaign?",
         details:
-          "Our core values include innovation, dedication, excellence, and client-centricity. We strive to bring fresh ideas and solutions, ensuring the best possible service.",
+          "In response to your campaign objectives, Sociomatic offers innovative advertising solutions, including copywriting, graphics, and strategic planning.",
       },
       {
         id: 5,
         title:
-          " How can I contact The Sociomatic for inquiries or collaboration?",
+          "Does Sociomatic provide continuous social media ad optimization?",
         details:
-          "You can contact us through our website or our customer support team to discuss how we can assist your business. We're here to help you navigate digital marketing and achieve your goals.",
+          "Certainly, Sociomatic continuously optimizes social media ad campaigns based on performance data, ensuring maximum return on investment (ROI)",
       },
     ],
   },
@@ -2205,36 +2194,34 @@ export const ShopifyDevelopmentServicePageData = {
     qnaList: [
       {
         id: 1,
-        title:
-          "Why should I consider your software development company as a partner?",
+        title: "Why should I use Shopify for my online business?",
         details:
-          "At Vivasoft, we take pride in developing high-quality applications in record time. We have 250+ experienced developers who understand the importance of agile methodologies and use cutting-edge technologies such as Java, NodeJS, AngularJS and React Native to deliver unique software solutions that provide maximum value for our clients. Our team is committed to delivering timely results while keeping costs low so you can maximize your ROI.",
+          "Shopify is perfect for practical and eye-catching online stores since it provides a secure platform, flexible customization options, and ease of use.",
       },
       {
         id: 2,
         title:
-          " How does The Sociomatic stand out in the digital marketing industry?",
+          "Is it possible for Sociomatic to move my current store to Shopify?",
         details:
-          "We differentiate ourselves by offering various services, providing comprehensive solutions for our clients' digital marketing needs, and delivering tangible results.",
+          "Absolutely; Sociomatic makes migrating to the Shopify platform easier by maintaining data and functionality.",
       },
       {
         id: 3,
-        title: "What is your approach to client success?",
+        title: "What features can Sociomatic integrate into my Shopify store?",
         details:
-          "We're committed to ensuring the success of our clients by identifying new digital marketing opportunities and implementing strategies to help them become market leaders and achieve an outstanding return on investment (ROI).",
+          "Sociomatic can improve your Shopify store by integrating features like personalized product displays, comprehensive analytics, and tailored checkout experiences.",
       },
       {
         id: 4,
-        title: "What values drive The Sociomatic's operations?",
+        title: "Can Sociomatic help my Shopify store with continuous support?",
         details:
-          "Our core values include innovation, dedication, excellence, and client-centricity. We strive to bring fresh ideas and solutions, ensuring the best possible service.",
+          "Of course, Sociomatic provides continuous assistance to make sure your Shopify store stays safe, optimized, and in line with your company objectives.",
       },
       {
         id: 5,
-        title:
-          " How can I contact The Sociomatic for inquiries or collaboration?",
+        title: "How long does the Shopify store development process take?",
         details:
-          "You can contact us through our website or our customer support team to discuss how we can assist your business. We're here to help you navigate digital marketing and achieve your goals.",
+          "Project scope determines timelines, but Sociomatic prioritizes speedy development without sacrificing quality.",
       },
     ],
   },
@@ -2544,36 +2531,36 @@ export const SoftwareDevelopmentServicePageData = {
     qnaList: [
       {
         id: 1,
-        title:
-          "Why should I consider your software development company as a partner?",
+        title: "Why should my company use custom software development?",
         details:
-          "At Vivasoft, we take pride in developing high-quality applications in record time. We have 250+ experienced developers who understand the importance of agile methodologies and use cutting-edge technologies such as Java, NodeJS, AngularJS and React Native to deliver unique software solutions that provide maximum value for our clients. Our team is committed to delivering timely results while keeping costs low so you can maximize your ROI.",
+          "Tailored software provides flexible, scalable solutions that precisely match your company's goals and requirements.",
       },
       {
         id: 2,
         title:
-          " How does The Sociomatic stand out in the digital marketing industry?",
+          "What technologies does Sociomatic use for software development?",
         details:
-          "We differentiate ourselves by offering various services, providing comprehensive solutions for our clients' digital marketing needs, and delivering tangible results.",
+          "Depending on the particular needs of the project, Sociomatic uses a variety of technologies, such as Python, Java, Ruby, and others.",
       },
       {
         id: 3,
-        title: "What is your approach to client success?",
+        title:
+          "Can Sociomatic integrate my existing systems with new software?",
         details:
-          "We're committed to ensuring the success of our clients by identifying new digital marketing opportunities and implementing strategies to help them become market leaders and achieve an outstanding return on investment (ROI).",
+          "To guarantee efficiency and compatibility while integrating new software into current systems, Sociomatic offers seamless integration solutions.",
       },
       {
         id: 4,
-        title: "What values drive The Sociomatic's operations?",
+        title: "What is the duration required for developing custom software?",
         details:
-          "Our core values include innovation, dedication, excellence, and client-centricity. We strive to bring fresh ideas and solutions, ensuring the best possible service.",
+          "Project complexity determines timelines, but Sociomatic prioritizes speedy development without sacrificing quality.",
       },
       {
         id: 5,
         title:
-          " How can I contact The Sociomatic for inquiries or collaboration?",
+          "Does Sociomatic provide continuous assistance for personalized software?",
         details:
-          "You can contact us through our website or our customer support team to discuss how we can assist your business. We're here to help you navigate digital marketing and achieve your goals.",
+          "Sociomatic offers continuous support to ensure your unique software stays current, safe, and in line with changing company requirements.",
       },
     ],
   },
@@ -2677,7 +2664,7 @@ export const UIUXandGraphicDesignServicePageData = {
           <>Seamlessly fuse aesthetics and usability</>,
           <>Craft impactful digital product designs</>,
           <>Tailor designs to brand identity</>,
-          <>Ensure seamless navigation and engagement</>
+          <>Ensure seamless navigation and engagement</>,
         ],
       },
       {
@@ -2688,7 +2675,7 @@ export const UIUXandGraphicDesignServicePageData = {
           <>Unique Logo Design</>,
           <>Brand Identity Creation</>,
           <>Graphic Style Guides</>,
-          <>Visual Branding Expertise</>
+          <>Visual Branding Expertise</>,
         ],
       },
       {
@@ -2873,36 +2860,34 @@ export const UIUXandGraphicDesignServicePageData = {
     qnaList: [
       {
         id: 1,
-        title:
-          "Why should I consider your software development company as a partner?",
+        title: "Why invest in professional UI/UX design?",
         details:
-          "At Vivasoft, we take pride in developing high-quality applications in record time. We have 250+ experienced developers who understand the importance of agile methodologies and use cutting-edge technologies such as Java, NodeJS, AngularJS and React Native to deliver unique software solutions that provide maximum value for our clients. Our team is committed to delivering timely results while keeping costs low so you can maximize your ROI.",
+          "Expert UI/UX design improves user experience, perception of the brand, and general functionality, which raises engagement and increases conversions.",
       },
       {
         id: 2,
-        title:
-          " How does The Sociomatic stand out in the digital marketing industry?",
+        title: "Can Sociomatic design unique visuals for my company?",
         details:
-          "We differentiate ourselves by offering various services, providing comprehensive solutions for our clients' digital marketing needs, and delivering tangible results.",
+          "Sociomatic provides customized graphic design services, such as logo creation, branding materials, and images that match your company's identity.",
       },
       {
         id: 3,
-        title: "What is your approach to client success?",
+        title:
+          "How does UI/UX design affect the functionality of an app or website?",
         details:
-          "We're committed to ensuring the success of our clients by identifying new digital marketing opportunities and implementing strategies to help them become market leaders and achieve an outstanding return on investment (ROI).",
+          "Good UI/UX design boosts user happiness, lowers bounce rates, and enables more straightforward user navigation, contributing to better performance.",
       },
       {
         id: 4,
-        title: "What values drive The Sociomatic's operations?",
+        title: "What graphic design tools does Sociomatic employ?",
         details:
-          "Our core values include innovation, dedication, excellence, and client-centricity. We strive to bring fresh ideas and solutions, ensuring the best possible service.",
+          "Sociomatic uses industry-standard software like Adobe Creative Suite to guarantee expert and high-caliber graphic design results.",
       },
       {
         id: 5,
-        title:
-          " How can I contact The Sociomatic for inquiries or collaboration?",
+        title: "Can Sociomatic rework the website or app I already have?",
         details:
-          "You can contact us through our website or our customer support team to discuss how we can assist your business. We're here to help you navigate digital marketing and achieve your goals.",
+          "Sociomatic does offer redesign services, guaranteeing a contemporary appearance while preserving or improving functionality.",
       },
     ],
   },
@@ -3202,36 +3187,33 @@ export const CustomWebDevelopmentServicePageData = {
     qnaList: [
       {
         id: 1,
-        title:
-          "Why should I consider your software development company as a partner?",
+        title: "What makes custom web development the better choice?",
         details:
-          "At Vivasoft, we take pride in developing high-quality applications in record time. We have 250+ experienced developers who understand the importance of agile methodologies and use cutting-edge technologies such as Java, NodeJS, AngularJS and React Native to deliver unique software solutions that provide maximum value for our clients. Our team is committed to delivering timely results while keeping costs low so you can maximize your ROI.",
+          "Compared to template-based solutions, custom development offers distinctive features, scalability, and a customized user experience",
       },
       {
         id: 2,
-        title:
-          " How does The Sociomatic stand out in the digital marketing industry?",
+        title: "What technologies does Sociomatic use for web development?",
         details:
-          "We differentiate ourselves by offering various services, providing comprehensive solutions for our clients' digital marketing needs, and delivering tangible results.",
+          "Sociomatic uses state-of-the-art technologies including core programing language i.e. Javascript and it's library ReactJS with industry proven framework NextJS and agnostic in terms of technology preferences",
       },
       {
         id: 3,
-        title: "What is your approach to client success?",
+        title: "Are you able to have Sociomatic rework my current website?",
         details:
-          "We're committed to ensuring the success of our clients by identifying new digital marketing opportunities and implementing strategies to help them become market leaders and achieve an outstanding return on investment (ROI).",
+          "To improve the look, feel, and general user experience of websites, Sociomatic does offer website redesign services.",
       },
       {
         id: 4,
-        title: "What values drive The Sociomatic's operations?",
+        title: "How long does it take to develop a custom website?",
         details:
-          "Our core values include innovation, dedication, excellence, and client-centricity. We strive to bring fresh ideas and solutions, ensuring the best possible service.",
+          "Project complexity affects timelines, but Sociomatic guarantees timely development without sacrificing quality",
       },
       {
         id: 5,
-        title:
-          " How can I contact The Sociomatic for inquiries or collaboration?",
+        title: "Does Sociomatic Provide ongoing website maintenance",
         details:
-          "You can contact us through our website or our customer support team to discuss how we can assist your business. We're here to help you navigate digital marketing and achieve your goals.",
+          "To guarantee that your website is current and safe, Sociomatic does provide continuous support and maintenance",
       },
     ],
   },
