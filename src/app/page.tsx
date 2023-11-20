@@ -44,8 +44,8 @@ const Home = () => {
         background="HeroBackground"
       />
       <OurServices FeaturesData={homeFeaturesData.slice(0, 6)} />
-      <HowWeWork />
       <OurProcess />
+      <HowWeWork />
       <Testimonial calendly={true} data={homeTestimonialData} />
       <div className="bg-[url('/images/backgrounds/CircleNest.svg')] bg-center bg-cover">
         <Faq data={homeFAQ} />

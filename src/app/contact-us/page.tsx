@@ -104,50 +104,59 @@ const ContactUs = () => {
 
     return obj;
   };
+  const ContactInfo = [
+    {
+      id: 0,
+      icon: <Phone />,
+      title: "Make a Call",
+      info: "+24524352",
+    },
+    {
+      id: 1,
+      icon: <Building />,
+      title: "Main Office",
+      info: "Damac Tower by Paramount, Dubai, UAE",
+    },
+    {
+      id: 2,
+      icon: <MessageCircle />,
+      title: "WhatsApp",
+      info: "+91524352382",
+    },
+  ];
   return (
-    <div className="bg-[url('/images/backgrounds/CircleNext.svg')] bg-cover bg-center">
-      <div className="section border-b border-secondarymuted container">
-        <SectionHead
-          highlighter="Contact Us"
-          H2={<>Get Touch with Us</>}
-          paragraphs={[
-            <>
-              Anim et laborum consequat incididunt consequat ex incididunt
-              laborum. Pariatur veniam minim Lorem et officia qui esse nisi est
-              irure voluptate enim consequat. Eiusmod ad et consequat in. Dolor
-              ea exercitation pariatur non Lorem et consectetur quis quis veniam
-              aliqua ut. Culpa sint qui irure Lorem dolor ex cupidatat dolor.
-              Laboris eu velit ex irure nulla fugiat aute ipsum.
-            </>,
-          ]}
-        />
-      </div>
-      <div className="-mt-[20px] md:-mt-[25px]">
-        <ul className="flex items-center justify-center">
-          {["One Time", "Quarterly", "Yearly"].map((item, index) => {
+    <div className="bg-[url('/images/backgrounds/StarBackground.svg')] bg-cover bg-center">
+      <div className="container section grid grid-cols-1 md:grid-cols-2 small-gap">
+        <div className="flex flex-col bg-primary rounded-xl p-[25px] lg:p-[50px] large-gap">
+          <div className="flex flex-col small-gap">
+            <h1 className="text-white">Contact Us</h1>
+            <p className="text-secondarymuted">
+              Sit sit dolore ipsum culpa deserunt sint id. Consectetur aute
+              ullamco ut in Lorem deserunt reprehenderit. Dolore qui quis
+              officia irure culpa et ullamco laborum fugiat occaecat. Irure
+              excepteur amet cupidatat commodo officia id nulla pariatur
+            </p>
+          </div>
+          {ContactInfo.map((item: any) => {
             return (
-              <li
-                key={index}
-                className={`px-4 py-2 md:px-8 md:py-3 border  font-bold cursor-pointer ${
-                  index + 1 === currentTab
-                    ? "bg-secondary text-white hover:bg-blue-600 border-secondary "
-                    : "bg-white hover:bg-muted hover:text-secondary border-secondarymuted "
-                } ${index + 1 === 1 ? "rounded-l-[10px]" : ""} ${
-                  index + 1 === 3 ? "rounded-r-[10px]" : ""
-                } ${
-                  index + 1 === 2 ? "border border-l-0 border-r-0" : "border"
-                } transition ease-in-out duration-300`}
-                onClick={() => setCurrentTab(index + 1)}
+              <div
+                key={item.id}
+                className="grid grid-cols-1 gap-[10px] [&>svg]:stroke-white"
               >
-                {item}
-              </li>
+                {item.icon}
+                <h3 className="text-[16px] lg:text-[20px] font-bold text-white">
+                  {item.title}
+                </h3>
+                <p className="text-white">{item.info}</p>
+              </div>
             );
           })}
-        </ul>
-      </div>
-      <div className="container">
-        <div className="mx-auto section grid grid-cols-1 md:grid-cols-2 large-gap bg-white">
+        </div>
+        <div className="mx-auto pt-[50px] grid grid-cols-1 large-gap bg-white">
           <div className="flex flex-col small-gap">
+            <h4 className="text-xl md:text-2xl font-bold text-primary">
+              Get Touch With Us
+            </h4>
             <div className="grid w-full items-center gap-1.5">
               <Label htmlFor="name">
                 Name <span className="text-pink-600 font-bold">*</span>
@@ -189,69 +198,8 @@ const ContactUs = () => {
               />
               <ErrorMessages errors={errors} name="phone" />
             </div>
-
-            <div className="grid w-full items-center gap-1.5">
-              <Label htmlFor="country">Country</Label>
-              <Input
-                type="country"
-                id="country"
-                placeholder="Country"
-                name="country"
-                onChange={handleOnChange}
-              />
-            </div>
-
-            <div className="grid w-full items-center gap-1.5">
-              <Label htmlFor="companyName">Company Name</Label>
-              <Input
-                type="companyName"
-                id="companyName"
-                placeholder="Company Name"
-                name="companyName"
-                onChange={handleOnChange}
-              />
-            </div>
-
-            <div className="grid w-full items-center gap-1.5">
-              <Label htmlFor="companyURL">Company URL</Label>
-              <Input
-                type="companyURL"
-                id="companyURL"
-                placeholder="Company URL"
-                name="companyURL"
-                onChange={handleOnChange}
-              />
-            </div>
           </div>
-          <div className="flex flex-col small-gap overflow-hidden">
-            {currentTab !== 1 ? (
-              <div className="flex flex-col gap-1.5">
-                <Label htmlFor="message">
-                  Probable budget range&nbsp;
-                  <span className="text-pink-600 font-bold">*</span>
-                </Label>
-                <Select
-                  onValueChange={(value) => {
-                    handleOnChange({
-                      target: {
-                        name: "budgetRange",
-                        value,
-                      },
-                    });
-                  }}
-                >
-                  <SelectTrigger className="w-full">
-                    <SelectValue placeholder="Select budget range" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="$500-1000">$500-1000</SelectItem>
-                    <SelectItem value="$1000-1500">$1000-1500</SelectItem>
-                    <SelectItem value="$2000+">$2000+</SelectItem>
-                  </SelectContent>
-                </Select>
-                <ErrorMessages errors={errors} name="budgetRange" />
-              </div>
-            ) : null}
+          <div className="flex flex-col small-gap">
             <div className="flex flex-col gap-1.5">
               <Label htmlFor="message">
                 Services you are interested on&nbsp;
@@ -317,23 +265,6 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
-      <div className="container section grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 large-gap border-t border-secondarymuted">
-        <div className="p-[25px] rounded-[10px] border border-secondarymuted grid grid-cols-1 small-gap">
-          <Phone />
-          <h3 className="text-[16px] lg:text-[24px] font-bold">Make a Call</h3>
-          <p>+24524352345</p>
-        </div>
-        <div className="p-[25px] rounded-[10px] border border-secondarymuted grid grid-cols-1 gap-[10px]">
-          <Building />
-          <h3 className="text-[16px] lg:text-[24px] font-bold">Main Office</h3>
-          <p>Damac Tower by Paramount, Dubai, UAE</p>
-        </div>
-        <div className="p-[25px] rounded-[10px] border border-secondarymuted grid grid-cols-1 small-gap">
-          <MessageCircle />
-          <h3 className="text-[16px] lg:text-[24px] font-bold">WhatsApp</h3>
-          <p>+984793900</p>
-        </div>
-      </div>
     </div>
   );
 };
@@ -382,3 +313,29 @@ const ServicesList = [
     name: "uiUxAndGraphicDesign",
   },
 ];
+
+{
+  /* <div className="-mt-[20px] md:-mt-[25px]">
+        <ul className="flex items-center justify-center">
+          {["One Time", "Quarterly", "Yearly"].map((item, index) => {
+            return (
+              <li
+                key={index}
+                className={`px-4 py-2 md:px-8 md:py-3 border  font-bold cursor-pointer ${
+                  index + 1 === currentTab
+                    ? "bg-secondary text-white hover:bg-blue-600 border-secondary "
+                    : "bg-white hover:bg-muted hover:text-secondary border-secondarymuted "
+                } ${index + 1 === 1 ? "rounded-l-[10px]" : ""} ${
+                  index + 1 === 3 ? "rounded-r-[10px]" : ""
+                } ${
+                  index + 1 === 2 ? "border border-l-0 border-r-0" : "border"
+                } transition ease-in-out duration-300`}
+                onClick={() => setCurrentTab(index + 1)}
+              >
+                {item}
+              </li>
+            );
+          })}
+        </ul>
+      </div> */
+}
