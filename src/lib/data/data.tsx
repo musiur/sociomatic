@@ -2236,7 +2236,7 @@ export const SoftwareDevelopmentServicePageData = {
     ),
     P: (
       <>
-        Helping businesses go line and grow bigger with high-tech web
+        Helping businesses go online and grow bigger with high-tech web
         applications.
       </>
     ),
