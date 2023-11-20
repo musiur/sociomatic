@@ -155,7 +155,7 @@ const ContactUs = () => {
         <div className="mx-auto pt-[50px] grid grid-cols-1 large-gap bg-white">
           <div className="flex flex-col small-gap">
             <h4 className="text-xl md:text-2xl font-bold text-primary">
-              Get Touch With Us
+              Get in Touch With Us
             </h4>
             <div className="grid w-full items-center gap-1.5">
               <Label htmlFor="name">
