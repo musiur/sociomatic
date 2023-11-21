@@ -236,15 +236,14 @@ export const homeFAQ = {
   qnaList: [
     {
       id: 1,
-      title:
-        "Why should I consider your software development company as a partner?",
+      title: "What is Sociomatic, and what is your primary mission?",
       details:
-        "At Vivasoft, we take pride in developing high-quality applications in record time. We have 250+ experienced developers who understand the importance of agile methodologies and use cutting-edge technologies such as Java, NodeJS, AngularJS and React Native to deliver unique software solutions that provide maximum value for our clients. Our team is committed to delivering timely results while keeping costs low so you can maximize your ROI.",
+        "The Sociomatic is a digital marketing organization with a primary mission to help businesses succeed online. We're dedicated to enhancing our online presence and achieving growth for our clients.",
     },
     {
       id: 2,
       title:
-        " How does The Sociomatic stand out in the digital marketing industry?",
+        "How does The Sociomatic stand out in the digital marketing industry?",
       details:
         "We differentiate ourselves by offering various services, providing comprehensive solutions for our clients' digital marketing needs, and delivering tangible results.",
     },
@@ -262,8 +261,7 @@ export const homeFAQ = {
     },
     {
       id: 5,
-      title:
-        " How can I contact The Sociomatic for inquiries or collaboration?",
+      title: "How can I contact The Sociomatic for inquiries or collaboration?",
       details:
         "You can contact us through our website or our customer support team to discuss how we can assist your business. We're here to help you navigate digital marketing and achieve your goals.",
     },
