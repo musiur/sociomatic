@@ -74,6 +74,9 @@ dependencies:
   react-hook-form:
     specifier: ^7.48.2
     version: 7.48.2(react@18.2.0)
+  react-whatsapp:
+    specifier: ^0.3.0
+    version: 0.3.0
   resend:
     specifier: ^2.0.0
     version: 2.0.0
@@ -3268,6 +3271,10 @@ packages:
       invariant: 2.2.4
       react: 18.2.0
       tslib: 2.6.2
+    dev: false
+
+  /react-whatsapp@0.3.0:
+    resolution: {integrity: sha512-ZuCKhd30crVVNdLf/3BfDffqEOZLFW6mYRITA4fB6Vk5p3TU1Gl3YfTEfLE/7W+kTuwYPzF6aDnzbNt6GcatiQ==}
     dev: false
 
   /react@18.2.0:

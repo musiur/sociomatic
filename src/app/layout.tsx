@@ -5,6 +5,7 @@ import { Inter } from "next/font/google";
 import "./globals.scss";
 import GotoTop from "@/components/molecule/go-to-top";
 import { Toaster } from "@/components/ui/toaster";
+import WhatsApp from "@/components/molecule/whatsapp";
 // import CookiePolicyNotificationBar from "@/components/molecule/cookie-policy";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -30,6 +31,7 @@ export default function RootLayout({
         {children}
         <Toaster />
         {/* <CookiePolicyNotificationBar /> */}
+        <WhatsApp />
         <GotoTop />
         <Footer />
       </body>
