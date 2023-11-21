@@ -29,6 +29,7 @@ import BrandLogo from "../assets/brandlogo";
 import { Menu } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { Button } from "../ui/button";
+import GetAQuote from "../molecule/get-a-quote";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -112,7 +113,7 @@ const Navbar = () => {
               })}
             </NavigationMenuList>
           </NavigationMenu>
-          <Button>Get a Quote</Button>
+          <GetAQuote />
         </div>
 
         <div className="block lg:hidden">
@@ -178,6 +179,11 @@ const Navbar = () => {
                         </li>
                       );
                     })}
+                    <SheetClose asChild>
+                      <Link href="/contact-us">
+                        <Button>Get a Quote</Button>
+                      </Link>
+                    </SheetClose>
                   </ul>
                 </SheetDescription>
               </SheetHeader>

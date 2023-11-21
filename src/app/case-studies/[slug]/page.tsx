@@ -1,5 +1,8 @@
+import GetAQuote from "@/components/molecule/get-a-quote";
+import GetConsultation from "@/components/molecule/get-consultation";
 import { Button } from "@/components/ui/button";
 import { BadgeCheck, Frown, Smile } from "lucide-react";
+import Link from "next/link";
 
 const CaseStudies = ({ params }: { params: { slug: string } }) => {
   let data: any = GoogleAdsCaseStudyPageData;
@@ -121,8 +124,19 @@ const CaseStudies = ({ params }: { params: { slug: string } }) => {
                     </div>
                   ) : null}
                   <div className="flex justify-center flex-wrap items-center w-full small-gap">
-                    <Button variant="outline">Get a free consultation</Button>
-                    <Button>Get a Quote</Button>
+                    {params.slug.includes("shopify-store-development") ? (
+                      <Link
+                        href={item.websiteLink}
+                        passHref={true}
+                        target="_blank"
+                      >
+                        <Button variant="outline">Visit Website</Button>
+                      </Link>
+                    ) : (
+                      <GetConsultation />
+                    )}
+
+                    <GetAQuote />
                   </div>
                 </div>
               </div>
@@ -469,6 +483,8 @@ const ShopifyCaseStudyPageData = {
   studies: [
     {
       id: 1,
+      websiteLink:
+        "https://fokandstuff.com/?utm_source=google&utm_medium=organic",
       image: (
         <div
           className={`bg-[url('/images/pages/case-studies/image6.png')] min-h-[50vh] w-full bg-contain bg-no-repeat bg-center`}
@@ -511,6 +527,7 @@ const ShopifyCaseStudyPageData = {
     },
     {
       id: 2,
+      websiteLink: "https://prefurn.nl/?utm_source=google&utm_medium=organic",
       image: (
         <div
           className={`bg-[url('/images/pages/case-studies/image7.png')] min-h-[50vh] w-full bg-contain bg-no-repeat bg-center`}
@@ -555,6 +572,8 @@ const ShopifyCaseStudyPageData = {
     },
     {
       id: 3,
+      websiteLink:
+        "https://www.newsundesigns.com/?utm_source=google&utm_medium=organic",
       image: (
         <div
           className={`bg-[url('/images/pages/case-studies/image8.png')] min-h-[50vh] w-full bg-contain bg-no-repeat bg-center`}
@@ -596,6 +615,8 @@ const ShopifyCaseStudyPageData = {
     },
     {
       id: 4,
+      websiteLink:
+        "https://www.thenewmangallery.com/?utm_source=google&utm_medium=organic",
       image: (
         <div
           className={`bg-[url('/images/pages/case-studies/image9.png')] min-h-[50vh] w-full bg-contain bg-no-repeat bg-center`}

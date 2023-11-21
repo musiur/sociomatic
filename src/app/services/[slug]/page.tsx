@@ -1,5 +1,6 @@
 import VideoPlayer from "@/components/core/home/video-player";
 import FeatureCard from "@/components/molecule/feature-card";
+import GetConsultation from "@/components/molecule/get-consultation";
 import SectionHead from "@/components/molecule/section-head";
 import Faq from "@/components/pages/home/faq";
 import HeroSection from "@/components/pages/home/herosection";
@@ -138,9 +139,6 @@ const Services = ({ params }: { params: { slug: string } }) => {
                       <h4 className="text-2xl lg:text-3xl font-bold text-primary">
                         {title}
                       </h4>
-                      {/* <p className="[&>span]:font-medium [&>span]:text-primary text-center">
-                      {description}
-                    </p> */}
                       <ul className="flex flex-col gap-[1rem]">
                         {list.map((item: string, index: number) => {
                           return (
@@ -156,7 +154,7 @@ const Services = ({ params }: { params: { slug: string } }) => {
                         })}
                       </ul>
                       <Link
-                        href={link}
+                        href="/contact-us"
                         className="text-primary hover:text-secondary"
                       >
                         <Button
@@ -183,9 +181,7 @@ const Services = ({ params }: { params: { slug: string } }) => {
                 </p>
               ) : null}
               <div className="flex flex-wrap items-center justify-center small-gap">
-                <Link href="/#calendly">
-                  <Button variant="outline">Get A Free Consultation</Button>
-                </Link>
+                <GetConsultation />
                 <Link href={`/case-studies/${params.slug}`}>
                   <Button>Case Studies</Button>
                 </Link>

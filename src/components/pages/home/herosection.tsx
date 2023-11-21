@@ -5,6 +5,8 @@ import { ReactElement } from "react";
 import { EmblaCarousel } from "@/components/core/home/carousel";
 import VideoPlayer from "@/components/core/home/video-player";
 import Link from "next/link";
+import GetConsultation from "@/components/molecule/get-consultation";
+import GetAQuote from "@/components/molecule/get-a-quote";
 
 const HeroSection = ({
   H1 = (
@@ -40,12 +42,8 @@ const HeroSection = ({
           <h1 className="text-primary [&>span]:text-secondary">{H1}</h1>
           <p className="hero-description">{P}</p>
           <div className="flex flex-wrap items-center small-gap">
-            <Link href={`/#calendly`} aria-label="topTitle" title="topTitle">
-              <Button variant="outline">Get a Free Consultation</Button>
-            </Link>
-            <Link href="/contact-us">
-              <Button>Get a Quote</Button>
-            </Link>
+            <GetConsultation />
+            <GetAQuote />
           </div>
         </div>
         <div className="order-1 lg:order-2">
