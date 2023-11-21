@@ -43,11 +43,11 @@ const CaseStudies = ({ params }: { params: { slug: string } }) => {
               >
                 {image}
                 <div className="flex flex-col items-start justify-start small-gap pt-10">
-                  <h3 className="text-[20px] lg:text-[24px] font-bold">
+                  <h3 className="text-[20px] lg:text-[24px] font-bold text-center w-full">
                     {brand}
                   </h3>
                   {item.title ? (
-                    <h4 className="font-bold text-primary text-[16px] md:text-[20px]">
+                    <h4 className="font-bold text-primary text-[16px] md:text-[20px] w-full text-center mb-10">
                       {item.title}
                     </h4>
                   ) : null}
@@ -89,8 +89,9 @@ const CaseStudies = ({ params }: { params: { slug: string } }) => {
                                 key={index}
                                 className="flex items-start justify-start gap-[5px]"
                               >
-                                <BadgeCheck className="min-h-[16px] max-h-[16px] min-w-[16px] max-w-[16px] mt-[5px]" />{" "}
-                                {li}
+                                <BadgeCheck className="min-h-[16px] max-h-[16px] min-w-[16px] max-w-[16px] mt-[5px]" />
+                                &nbsp;
+                                <p>{li}</p>
                               </li>
                             );
                           })}
@@ -271,7 +272,7 @@ const DataAnalyticsCaseStudyPageData = {
       id: 1,
       image: (
         <div
-          className={`bg-[url('/images/pages/case-studies/image2.jpeg')] min-h-[50vh] w-full bg-contain bg-no-repeat bg-center`}
+          className={`bg-[url('/images/pages/case-studies/image4.jpg')] min-h-[50vh] w-full bg-contain bg-no-repeat bg-center`}
         ></div>
       ),
       brand: "Old Navy Chili: Unveiling E-commerce Revenue",
@@ -312,7 +313,7 @@ const DataAnalyticsCaseStudyPageData = {
       id: 2,
       image: (
         <div
-          className={`bg-[url('/images/pages/case-studies/image1.png')] min-h-[50vh] w-full bg-contain bg-no-repeat bg-center`}
+          className={`bg-[url('/images/pages/case-studies/image3.png')] min-h-[50vh] w-full bg-contain bg-no-repeat bg-center`}
         ></div>
       ),
       brand: "Upvc Spray Painter : Crafting Event Symphony",
@@ -405,7 +406,7 @@ const DataAnalyticsCaseStudyPageData = {
       id: 4,
       image: (
         <div
-          className={`bg-[url('/images/pages/case-studies/image1.png')] min-h-[50vh] w-full bg-contain bg-no-repeat bg-center`}
+          className={`bg-[url('/images/pages/case-studies/image5.png')] min-h-[50vh] w-full bg-contain bg-no-repeat bg-center`}
         ></div>
       ),
       brand:
@@ -470,7 +471,7 @@ const ShopifyCaseStudyPageData = {
       id: 1,
       image: (
         <div
-          className={`bg-[url('/images/pages/case-studies/image2.jpeg')] min-h-[50vh] w-full bg-contain bg-no-repeat bg-center`}
+          className={`bg-[url('/images/pages/case-studies/image6.png')] min-h-[50vh] w-full bg-contain bg-no-repeat bg-center`}
         ></div>
       ),
       brand: "Fok & Stuff - Crafting an Online Haven",
@@ -512,7 +513,7 @@ const ShopifyCaseStudyPageData = {
       id: 2,
       image: (
         <div
-          className={`bg-[url('/images/pages/case-studies/image1.png')] min-h-[50vh] w-full bg-contain bg-no-repeat bg-center`}
+          className={`bg-[url('/images/pages/case-studies/image7.png')] min-h-[50vh] w-full bg-contain bg-no-repeat bg-center`}
         ></div>
       ),
       brand: "Prefurn - Crafting Furniture Dreams",
@@ -556,7 +557,7 @@ const ShopifyCaseStudyPageData = {
       id: 3,
       image: (
         <div
-          className={`bg-[url('/images/pages/case-studies/image1.png')] min-h-[50vh] w-full bg-contain bg-no-repeat bg-center`}
+          className={`bg-[url('/images/pages/case-studies/image8.png')] min-h-[50vh] w-full bg-contain bg-no-repeat bg-center`}
         ></div>
       ),
       brand: "New Sun Designs - Igniting Creative Sparks",
@@ -597,7 +598,7 @@ const ShopifyCaseStudyPageData = {
       id: 4,
       image: (
         <div
-          className={`bg-[url('/images/pages/case-studies/image1.png')] min-h-[50vh] w-full bg-contain bg-no-repeat bg-center`}
+          className={`bg-[url('/images/pages/case-studies/image9.png')] min-h-[50vh] w-full bg-contain bg-no-repeat bg-center`}
         ></div>
       ),
       brand: "The New Man Gallery - Brightening Artistry",

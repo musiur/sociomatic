@@ -1,5 +1,4 @@
 
-import Link from "next/link";
 import { ReactElement } from 'react';
 import Dollar from "../assets/dollar";
 
@@ -21,7 +20,6 @@ const ProcessCard = ({
             {image}
             <h5 className="font-extrabold text-primary">{title}</h5>
             <p className="[&>span]:font-bold">{details}</p>
-            <Link href="/" className="text-center">Learn more</Link>
         </div>
 
 
