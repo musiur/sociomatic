@@ -12,7 +12,7 @@ const ProjectIdea = () => {
             skillful Global team. You can take a free counciling by taking a
             schedule
           </p>
-          <Link href="/contact-us">
+          <Link href="/get-a-quote">
             <Button variant="outline" className="bg-white">
               Get A Quote
             </Button>

@@ -180,7 +180,7 @@ const Navbar = () => {
                       );
                     })}
                     <SheetClose asChild>
-                      <Link href="/contact-us">
+                      <Link href="/get-a-quote">
                         <Button>Get a Quote</Button>
                       </Link>
                     </SheetClose>
