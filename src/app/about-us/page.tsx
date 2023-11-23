@@ -345,8 +345,8 @@ const AboutUS = () => {
       <section className="bg-primary">
         <div className="container section flex flex-col md:flex-row justify-between items-center large-gap">
           <div className="flex flex-col small-gap">
-            <h2 className="text-muted">Join Us on the Journey</h2>
-            <p className="text-muted">
+            <h2 className="text-muted text-center md:text-left">Join Us on the Journey</h2>
+            <p className="text-muted text-center md:text-left">
               Whether you&apos;re a startup seeking a digital foothold or an
               established enterprise aiming for growth, Sociomatics is your
               trusted partner on the Journey to digital success. Let&apos;s
