@@ -1,4 +1,4 @@
-import { EmblaCarousel } from "@/components/core/home/carousel";
+import { BrandCarousel } from "@/components/core/home/carousel";
 import SectionHead from "@/components/molecule/section-head";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -232,7 +232,7 @@ const AboutUS = () => {
       </section>
       <section className="bg-muted rounded-b-[20px] md:rounded-b-[40px]">
         <div className="py-[63px] container">
-          <EmblaCarousel />
+          <BrandCarousel />
         </div>
       </section>
       <section className="container section bg-[url('/images/backgrounds/CircleNest.svg')] bg-cover bg-center">

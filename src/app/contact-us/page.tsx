@@ -1,26 +1,27 @@
 "use client";
 
 import ReCAPTCHA from "react-google-recaptcha";
-import SectionHead from "@/components/molecule/section-head";
+// import SectionHead from "@/components/molecule/section-head";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+// import {
+//   Select,
+//   SelectContent,
+//   SelectItem,
+//   SelectTrigger,
+//   SelectValue,
+// } from "@/components/ui/select";
 import ErrorMessages from "@/components/molecule/errors-messages";
 // import SendEmail from "@/lib/resend";
 import Loader from "@/components/molecule/loader";
 import { useToast } from "@/components/ui/use-toast";
 import { useRouter } from "next/navigation";
 import { Building, MessageCircle, Phone } from "lucide-react";
+// import { EmailRegex, FullNameRegex } from "@/lib/regexes";
 
 const ContactUs = () => {
   const { toast } = useToast();
@@ -51,13 +52,11 @@ const ContactUs = () => {
     if (Object.keys(validationErrors).length === 0) {
       console.log(formData);
       try {
-        // SendEmail(formData);
         toast({
           title: "Messange Sending",
           description: "Successful!",
         });
         setLoading(false);
-        // router.refresh();
         setTimeout(() => {
           if (window) {
             window.location.reload();
@@ -78,13 +77,21 @@ const ContactUs = () => {
   };
 
   const validation = () => {
+    console.log(formData);
     let obj: any = {};
     if (!formData.name.trim()) {
       obj.name = "Name is required!";
     }
+    //  else if (!FullNameRegex.test(formData.name)) {
+    //   obj.name = "Invalid name!";
+    // }
     if (!formData.email.trim()) {
       obj.email = "Email is required!";
-    }
+    } 
+    // else if (EmailRegex.test(formData.email)) {
+    //   obj.email = "Invalid email!";
+    // }
+
     if (!formData.phone.trim()) {
       obj.phone = "Phone is required!";
     }
@@ -313,29 +320,3 @@ const ServicesList = [
     name: "uiUxAndGraphicDesign",
   },
 ];
-
-{
-  /* <div className="-mt-[20px] md:-mt-[25px]">
-        <ul className="flex items-center justify-center">
-          {["One Time", "Quarterly", "Yearly"].map((item, index) => {
-            return (
-              <li
-                key={index}
-                className={`px-4 py-2 md:px-8 md:py-3 border  font-bold cursor-pointer ${
-                  index + 1 === currentTab
-                    ? "bg-secondary text-white hover:bg-blue-600 border-secondary "
-                    : "bg-white hover:bg-muted hover:text-secondary border-secondarymuted "
-                } ${index + 1 === 1 ? "rounded-l-[10px]" : ""} ${
-                  index + 1 === 3 ? "rounded-r-[10px]" : ""
-                } ${
-                  index + 1 === 2 ? "border border-l-0 border-r-0" : "border"
-                } transition ease-in-out duration-300`}
-                onClick={() => setCurrentTab(index + 1)}
-              >
-                {item}
-              </li>
-            );
-          })}
-        </ul>
-      </div> */
-}

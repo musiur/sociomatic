@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { ReactElement } from "react";
 
-import { EmblaCarousel } from "@/components/core/home/carousel";
+import { BrandCarousel } from "@/components/core/home/carousel";
 import VideoPlayer from "@/components/core/home/video-player";
 import Link from "next/link";
 import GetConsultation from "@/components/molecule/get-consultation";
@@ -64,7 +64,7 @@ const HeroSection = ({
       {brands ? (
         <div className="bg-muted rounded-b-[20px] md:rounded-b-[40px]">
           <div className="py-[63px] container">
-            <EmblaCarousel />
+            <BrandCarousel />
           </div>
         </div>
       ) : null}
