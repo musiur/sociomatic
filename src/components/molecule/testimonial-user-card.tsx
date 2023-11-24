@@ -2,12 +2,12 @@ import Image from "next/image";
 
 const TestimonialUserCard = ({
   name = "John Doe",
-  designation = "User @Example",
+  country = "User @Example",
   imageSlug = "user1",
   selected = false,
 }: {
   name: string;
-  designation: string;
+  country: string;
   imageSlug: string;
   selected: boolean;
 }) => {
@@ -29,13 +29,19 @@ const TestimonialUserCard = ({
             alt=""
             width={500}
             height={500}
-            className="w-[30px] h-[30px] lg:w-[60px] lg:h-[60px] rounded-full"
+            className="w-[30px] h-[30px] lg:w-[60px] lg:h-[60px] rounded-full bg-secondary"
           />
           <div className="flex flex-col items-center lg:items-start justify-center gap-[10px] ">
             <p className="font-bold text-primary text-[12px] sm:text-[14px] lg:text-[20px]">
               {name}
             </p>
-            <p className="leading-tight text-center lg:text-left text-[10px] lg:text-[16px]">{designation}</p>
+            <Image
+              src={`/images/flags/${country}`}
+              alt=""
+              width={1000}
+              height={1000}
+              className="w-[30px]"
+            />
           </div>
         </div>
       </div>

@@ -181,43 +181,46 @@ export const homeTestimonialData = {
   testimonialList: [
     {
       id: 1,
-      name: "Samuel H",
-      designation: "CEO @Analyzen",
+      name: "Anhtieu415",
+      country: "usa.svg",
       imageSlug: "user1",
       testimonial: (
         <>
-          1I have never in my life experienced service like what I received from
-          thesociomatic. They finished 3 days of work in about 2 hrs. They&apos;
-          <span>went above and beyond what was expected of him</span>. I will
-          Hire Them again and can fully recommend them to any potential client.
+          I liked that he Yeatiq was patient with me and answered my questions
+          in a timely manner. I appreciate the video that he made to explain
+          things to me. He was very professional with his work and communication
+          skills.
         </>
       ),
     },
     {
       id: 2,
-      name: "John Doe",
-      designation: "CTO @Apple Inc",
+      name: "agnieszkavv",
+      country: "ireland.svg",
       imageSlug: "user2",
       testimonial: (
         <>
-          2I have never in my life experienced service like what I received from
-          thesociomatic. They finished 3 days of work in about 2 hrs. They&apos;
-          <span>went above and beyond what was expected of him</span>. I will
-          Hire Them again and can fully recommend them to any potential client.
+          It&apos;s been a great pleasure working with Yeatiq. Very responsive
+          and helpful. Since the universal analytics shut down, we couldn&apos;t
+          see our old data in Looker Studio. . Yeatig configured Google
+          Analytics 4 for us and also created two Looker Studio dashboards for
+          us to be able to view both the old and new data. Amazing job and saved
+          us a lot of stress at the end of the year.
         </>
       ),
     },
     {
       id: 3,
-      name: "Nabina Nel",
-      designation: "COO @Rabble",
+      name: "maxinetubbe",
+      country: "canada.svg",
       imageSlug: "user3",
       testimonial: (
         <>
-          3I have never in my life experienced service like what I received from
-          thesociomatic. They finished 3 days of work in about 2 hrs. They&apos;
-          <span>went above and beyond what was expected of him</span>. I will
-          Hire Them again and can fully recommend them to any potential client.
+          Yeatiq did such a great job of setting up my analytics and pixels that
+          I also hired him for FB ads. You have to supply the graphics, he sets
+          up, monitors and adjusts the ad campaigns. Knowledgeable and great
+          communication (sent me Loom videos to explain what he was doing or
+          what he needed, etc ).
         </>
       ),
     },

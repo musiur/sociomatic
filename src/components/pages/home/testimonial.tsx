@@ -21,15 +21,15 @@ const Testimonial = ({ data, calendly }: { data: any; calendly: boolean }) => {
               (item: {
                 id: number;
                 name: string;
-                designation: string;
+                country: string;
                 imageSlug: string;
               }) => {
-                const { id, name, designation, imageSlug } = item;
+                const { id, name, country, imageSlug } = item;
                 return (
                   <div key={id} onClick={() => setCurrentTestimonial(id)}>
                     <TestimonialUserCard
                       name={name}
-                      designation={designation}
+                      country={country}
                       imageSlug={imageSlug}
                       selected={id === currentTestimonial}
                     />
