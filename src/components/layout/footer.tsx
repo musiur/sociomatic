@@ -12,7 +12,9 @@ const Footer = () => {
             <div className="small-gap">
               <BrandLogo />
             </div>
-            <p className="py-[25px]">Damac Tower By paramount, Dubai, UAE</p>
+            <p className="py-[25px]">
+              Business Center 1, M Floor, Nad Al Sheba, Dubai, U.A.E
+            </p>
             <div className="text-icon py-[25px]">
               <p className="pb-[25px]">Get Updated with Us Regularly</p>
               <div className="icons flex flex-row small-gap">

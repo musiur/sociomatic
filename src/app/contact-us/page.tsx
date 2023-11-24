@@ -87,7 +87,7 @@ const ContactUs = () => {
     // }
     if (!formData.email.trim()) {
       obj.email = "Email is required!";
-    } 
+    }
     // else if (EmailRegex.test(formData.email)) {
     //   obj.email = "Invalid email!";
     // }
@@ -116,19 +116,19 @@ const ContactUs = () => {
       id: 0,
       icon: <Phone />,
       title: "Make a Call",
-      info: "+24524352",
+      info: "+880142685805",
     },
     {
       id: 1,
       icon: <Building />,
       title: "Main Office",
-      info: "Damac Tower by Paramount, Dubai, UAE",
+      info: "Business Center 1, M Floor, Nad Al Sheba, Dubai, U.A.E",
     },
     {
       id: 2,
       icon: <MessageCircle />,
       title: "WhatsApp",
-      info: "+91524352382",
+      info: "+971567268607",
     },
   ];
   return (
@@ -138,10 +138,9 @@ const ContactUs = () => {
           <div className="flex flex-col small-gap">
             <h1 className="text-white">Contact Us</h1>
             <p className="text-secondarymuted">
-              Sit sit dolore ipsum culpa deserunt sint id. Consectetur aute
-              ullamco ut in Lorem deserunt reprehenderit. Dolore qui quis
-              officia irure culpa et ullamco laborum fugiat occaecat. Irure
-              excepteur amet cupidatat commodo officia id nulla pariatur
+              Feel free to reach out to us via email or WhatsApp at any time! We
+              aim to respond to all inquiries within 24 hours on business days.
+              We&apos;re delighted to address any questions you may have.
             </p>
           </div>
           {ContactInfo.map((item: any) => {
