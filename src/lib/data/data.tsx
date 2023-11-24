@@ -527,49 +527,41 @@ export const GoogleAdsServicePageData = {
     testimonialList: [
       {
         id: 1,
-        name: "Samuel H",
-        designation: "CEO @Analyzen",
+        name: "Kimgray183",
+        country: "usa.svg",
         imageSlug: "user1",
         testimonial: (
           <>
-            1I have never in my life experienced service like what I received
-            from thesociomatic. They finished 3 days of work in about 2 hrs.
-            They&apos;
-            <span>went above and beyond what was expected of him</span>. I will
-            Hire Them again and can fully recommend them to any potential
-            client.
+            Would definitely use his services again!! Not only did he perform
+            the services as ordered, but he also sent a video explaining how to
+            use the Analytics and any issues that need to be fixed on our end.
+            Great Communication, spent time testing and delivered on time.
           </>
         ),
       },
       {
         id: 2,
-        name: "John Doe",
-        designation: "CTO @Apple Inc",
+        name: "Topjimmy68",
+        country: "usa.svg",
         imageSlug: "user2",
         testimonial: (
           <>
-            2I have never in my life experienced service like what I received
-            from thesociomatic. They finished 3 days of work in about 2 hrs.
-            They&apos;
-            <span>went above and beyond what was expected of him</span>. I will
-            Hire Them again and can fully recommend them to any potential
-            client.
+            I had a great experience working with Yeatiq. He answered my
+            questions quickly and completed the task in a timely fashion. He was
+            professional and delivered the results I wanted. I would recommend
+            his services very highly. Thank you, Yeatiq!
           </>
         ),
       },
       {
         id: 3,
-        name: "Nabina Nel",
-        designation: "COO @Rabble",
+        name: "Shermstevens",
+        country: "usa.svg",
         imageSlug: "user3",
         testimonial: (
           <>
-            3I have never in my life experienced service like what I received
-            from thesociomatic. They finished 3 days of work in about 2 hrs.
-            They&apos;
-            <span>went above and beyond what was expected of him</span>. I will
-            Hire Them again and can fully recommend them to any potential
-            client.
+            Communication was great, service was provided at a great price and
+            well within the promised timeline. Highly recommend this gig.
           </>
         ),
       },
@@ -858,49 +850,54 @@ export const DataAnalyticsServicePageData = {
     testimonialList: [
       {
         id: 1,
-        name: "Samuel H",
-        designation: "CEO @Analyzen",
+        name: "Maxinetubbe",
+        country: "canada.svg",
         imageSlug: "user1",
         testimonial: (
           <>
-            1I have never in my life experienced service like what I received
-            from thesociomatic. They finished 3 days of work in about 2 hrs.
-            They&apos;
-            <span>went above and beyond what was expected of him</span>. I will
-            Hire Them again and can fully recommend them to any potential
-            client.
+            Yeatiq is fantastic at setting up goals with Tag Manager, GA4, FB
+            Pixels, etc. I will never waste time trying to do it myself when
+            Yeatiq can do it better and faster. He has worked on multiple
+            platforms for me: WP, Woo, GHL, Webflow and more. All perfectly
+            done, and in a timely manner, with perfect communication - add on
+            the $10 Loom video and get a video of him explaining the setup,
+            goals - and he also makes recommendations too. Great vendor!
           </>
         ),
       },
       {
         id: 2,
-        name: "John Doe",
-        designation: "CTO @Apple Inc",
+        name: "Jason_makki",
+        country: "uae.svg",
         imageSlug: "user2",
         testimonial: (
           <>
-            2I have never in my life experienced service like what I received
-            from thesociomatic. They finished 3 days of work in about 2 hrs.
-            They&apos;
-            <span>went above and beyond what was expected of him</span>. I will
-            Hire Them again and can fully recommend them to any potential
-            client.
+            Honestly after working with several Sellers and disappointment.
+            Finally I found Yeatiq. At the beginning I was hesitating to start
+            the project with him due to my previous negative experience. However
+            I decided to give it a shot. He has knowledge and works hard until
+            he fixes it. I have a website with Euro Currency and Facebook Pixel
+            were not able to recognize the value when someone purchases products
+            and everything has to be done in GTM (data layer issue). The other 2
+            sellers were not able to fix it. But I&apos;m glad that I&apos;ve
+            met Yeatiq. Thanks man for solving the issue. 100%. Recommended. He
+            also does support your project even if it&apos;s a done delivery.
           </>
         ),
       },
       {
         id: 3,
-        name: "Nabina Nel",
-        designation: "COO @Rabble",
+        name: "agnieszkavv",
+        country: "ireland.svg",
         imageSlug: "user3",
         testimonial: (
           <>
-            3I have never in my life experienced service like what I received
-            from thesociomatic. They finished 3 days of work in about 2 hrs.
-            They&apos;
-            <span>went above and beyond what was expected of him</span>. I will
-            Hire Them again and can fully recommend them to any potential
-            client.
+            It&apos;s been a great pleasure working with Yeatiq. Very responsive
+            and helpful. Since the universal analytics shut down, we
+            couldn&apos;t see our old data in Looker Studio. . Yeatig configured
+            Google Analytics 4 for us and also created two Looker Studio
+            dashboards for us to be able to view both the old and new data.
+            Amazing job and saved us a lot of stress at the end of the year.
           </>
         ),
       },
@@ -1179,49 +1176,40 @@ export const WordpressDevelopmentServicePageData = {
     testimonialList: [
       {
         id: 1,
-        name: "Samuel H",
-        designation: "CEO @Analyzen",
+        name: "Khurraminam_",
+        country: "english.svg",
         imageSlug: "user1",
         testimonial: (
           <>
-            1I have never in my life experienced service like what I received
-            from thesociomatic. They finished 3 days of work in about 2 hrs.
-            They&apos;
-            <span>went above and beyond what was expected of him</span>. I will
-            Hire Them again and can fully recommend them to any potential
-            client.
+            Yeatiq was amazing to work with delivering on exactly what was
+            promised. Will definitely be using him for future projects. Highly
+            recommended
           </>
         ),
       },
       {
         id: 2,
-        name: "John Doe",
-        designation: "CTO @Apple Inc",
+        name: "Ricjam",
+        country: "usa.svg",
         imageSlug: "user2",
         testimonial: (
           <>
-            2I have never in my life experienced service like what I received
-            from thesociomatic. They finished 3 days of work in about 2 hrs.
-            They&apos;
-            <span>went above and beyond what was expected of him</span>. I will
-            Hire Them again and can fully recommend them to any potential
-            client.
+            Yeatiq was awesome to work with. He was very communicative and
+            delivered the work on time. I will definitely recommend his services
+            and will be using him again for future work. Great job Yeatiq.
           </>
         ),
       },
       {
         id: 3,
-        name: "Nabina Nel",
-        designation: "COO @Rabble",
+        name: "paulhelmick",
+        country: "usa.svg",
         imageSlug: "user3",
         testimonial: (
           <>
-            3I have never in my life experienced service like what I received
-            from thesociomatic. They finished 3 days of work in about 2 hrs.
-            They&apos;
-            <span>went above and beyond what was expected of him</span>. I will
-            Hire Them again and can fully recommend them to any potential
-            client.
+            Exceptional understanding of our need. Great communication via zoom
+            call. Above and beyond work and talent to help get things working
+            and configured well.
           </>
         ),
       },
@@ -1495,7 +1483,7 @@ export const ContentWringAndSEOServicePageData = {
       {
         id: 1,
         name: "Samuel H",
-        designation: "CEO @Analyzen",
+        country: "CEO @Analyzen",
         imageSlug: "user1",
         testimonial: (
           <>
@@ -1511,7 +1499,7 @@ export const ContentWringAndSEOServicePageData = {
       {
         id: 2,
         name: "John Doe",
-        designation: "CTO @Apple Inc",
+        country: "CTO @Apple Inc",
         imageSlug: "user2",
         testimonial: (
           <>
@@ -1527,7 +1515,7 @@ export const ContentWringAndSEOServicePageData = {
       {
         id: 3,
         name: "Nabina Nel",
-        designation: "COO @Rabble",
+        country: "COO @Rabble",
         imageSlug: "user3",
         testimonial: (
           <>
@@ -1812,51 +1800,38 @@ export const SocialMediaAdsServicePageData = {
     testimonialList: [
       {
         id: 1,
-        name: "Samuel H",
-        designation: "CEO @Analyzen",
+        name: "malia13",
+        country: "fiji.svg",
         imageSlug: "user1",
         testimonial: (
           <>
-            1I have never in my life experienced service like what I received
-            from thesociomatic. They finished 3 days of work in about 2 hrs.
-            They&apos;
-            <span>went above and beyond what was expected of him</span>. I will
-            Hire Them again and can fully recommend them to any potential
-            client.
+            Yeatiq was very easy to work with. He did an excellent job at
+            communicating with me and guiding me through the things I needed to
+            know to get the most out of this gig. I tried doing what he did for
+            me and gave up multiple times! I just wish I had thought of using
+            his services sooner! Would definitely recommend!
           </>
         ),
       },
       {
         id: 2,
-        name: "John Doe",
-        designation: "CTO @Apple Inc",
+        name: "togs_swimwear",
+        country: "australia.svg",
         imageSlug: "user2",
         testimonial: (
           <>
-            2I have never in my life experienced service like what I received
-            from thesociomatic. They finished 3 days of work in about 2 hrs.
-            They&apos;
-            <span>went above and beyond what was expected of him</span>. I will
-            Hire Them again and can fully recommend them to any potential
-            client.
+            Yeatiq is thorough and trustworthy. Gets the job done in a timely
+            and professional manner. I would not hesitate to use him again in
+            the future. This is my second time using Yeatiq.
           </>
         ),
       },
       {
         id: 3,
-        name: "Nabina Nel",
-        designation: "COO @Rabble",
+        name: "revivos",
+        country: "israel.svg",
         imageSlug: "user3",
-        testimonial: (
-          <>
-            3I have never in my life experienced service like what I received
-            from thesociomatic. They finished 3 days of work in about 2 hrs.
-            They&apos;
-            <span>went above and beyond what was expected of him</span>. I will
-            Hire Them again and can fully recommend them to any potential
-            client.
-          </>
-        ),
+        testimonial: <>great service thanks</>,
       },
     ],
   },
@@ -2135,49 +2110,29 @@ export const ShopifyDevelopmentServicePageData = {
     testimonialList: [
       {
         id: 1,
-        name: "Samuel H",
-        designation: "CEO @Analyzen",
+        name: "mementor",
+        country: "norway.svg",
         imageSlug: "user1",
-        testimonial: (
-          <>
-            1I have never in my life experienced service like what I received
-            from thesociomatic. They finished 3 days of work in about 2 hrs.
-            They&apos;
-            <span>went above and beyond what was expected of him</span>. I will
-            Hire Them again and can fully recommend them to any potential
-            client.
-          </>
-        ),
+        testimonial: <>Very happy with the work done. Will use again.</>,
       },
       {
         id: 2,
-        name: "John Doe",
-        designation: "CTO @Apple Inc",
+        name: "brrrent",
+        country: "usa.svg",
         imageSlug: "user2",
         testimonial: (
-          <>
-            2I have never in my life experienced service like what I received
-            from thesociomatic. They finished 3 days of work in about 2 hrs.
-            They&apos;
-            <span>went above and beyond what was expected of him</span>. I will
-            Hire Them again and can fully recommend them to any potential
-            client.
-          </>
+          <>I really like this guy. I plan on working with him more.</>
         ),
       },
       {
         id: 3,
-        name: "Nabina Nel",
-        designation: "COO @Rabble",
+        name: "damiantenbohmer",
+        country: "australia.svg",
         imageSlug: "user3",
         testimonial: (
           <>
-            3I have never in my life experienced service like what I received
-            from thesociomatic. They finished 3 days of work in about 2 hrs.
-            They&apos;
-            <span>went above and beyond what was expected of him</span>. I will
-            Hire Them again and can fully recommend them to any potential
-            client.
+            Very fast and efficient, knows his stuff and got it done in a
+            timeframe that would have taken me much longer. Thank you…
           </>
         ),
       },
@@ -2472,49 +2427,37 @@ export const SoftwareDevelopmentServicePageData = {
     testimonialList: [
       {
         id: 1,
-        name: "Samuel H",
-        designation: "CEO @Analyzen",
+        name: "iziweb",
+        country: "netherlands.svg",
         imageSlug: "user1",
         testimonial: (
           <>
-            1I have never in my life experienced service like what I received
-            from thesociomatic. They finished 3 days of work in about 2 hrs.
-            They&apos;
-            <span>went above and beyond what was expected of him</span>. I will
-            Hire Them again and can fully recommend them to any potential
-            client.
+            Again great example of amazing services provided by Yeatic. Very
+            happy with the work delivery!
           </>
         ),
       },
       {
         id: 2,
-        name: "John Doe",
-        designation: "CTO @Apple Inc",
+        name: "locofinance",
+        country: "switzerland.svg",
         imageSlug: "user2",
         testimonial: (
           <>
-            2I have never in my life experienced service like what I received
-            from thesociomatic. They finished 3 days of work in about 2 hrs.
-            They&apos;
-            <span>went above and beyond what was expected of him</span>. I will
-            Hire Them again and can fully recommend them to any potential
-            client.
+            I&apos;m impressed with the service! Very fast response, very
+            competent service and fast aswell! 😄
           </>
         ),
       },
       {
         id: 3,
-        name: "Nabina Nel",
-        designation: "COO @Rabble",
+        name: "danschreiber",
+        country: "usa.svg",
         imageSlug: "user3",
         testimonial: (
           <>
-            3I have never in my life experienced service like what I received
-            from thesociomatic. They finished 3 days of work in about 2 hrs.
-            They&apos;
-            <span>went above and beyond what was expected of him</span>. I will
-            Hire Them again and can fully recommend them to any potential
-            client.
+            Nice work done on time. Also helpful explainer videos included.
+            Would recommend!
           </>
         ),
       },
@@ -2801,51 +2744,24 @@ export const UIUXandGraphicDesignServicePageData = {
     testimonialList: [
       {
         id: 1,
-        name: "Samuel H",
-        designation: "CEO @Analyzen",
+        name: "chyhairgrow",
+        country: "usa.svg",
         imageSlug: "user1",
-        testimonial: (
-          <>
-            1I have never in my life experienced service like what I received
-            from thesociomatic. They finished 3 days of work in about 2 hrs.
-            They&apos;
-            <span>went above and beyond what was expected of him</span>. I will
-            Hire Them again and can fully recommend them to any potential
-            client.
-          </>
-        ),
+        testimonial: <>Quick. Fast. Efficient. Insightful</>,
       },
       {
         id: 2,
-        name: "John Doe",
-        designation: "CTO @Apple Inc",
+        name: "samcooper1993",
+        country: "australia.svg",
         imageSlug: "user2",
-        testimonial: (
-          <>
-            2I have never in my life experienced service like what I received
-            from thesociomatic. They finished 3 days of work in about 2 hrs.
-            They&apos;
-            <span>went above and beyond what was expected of him</span>. I will
-            Hire Them again and can fully recommend them to any potential
-            client.
-          </>
-        ),
+        testimonial: <>The best in the business</>,
       },
       {
         id: 3,
-        name: "Nabina Nel",
-        designation: "COO @Rabble",
+        name: "internetlava",
+        country: "usa.svg",
         imageSlug: "user3",
-        testimonial: (
-          <>
-            3I have never in my life experienced service like what I received
-            from thesociomatic. They finished 3 days of work in about 2 hrs.
-            They&apos;
-            <span>went above and beyond what was expected of him</span>. I will
-            Hire Them again and can fully recommend them to any potential
-            client.
-          </>
-        ),
+        testimonial: <>Great job and quick. Very happy.</>,
       },
     ],
   },
@@ -3128,49 +3044,34 @@ export const CustomWebDevelopmentServicePageData = {
     testimonialList: [
       {
         id: 1,
-        name: "Samuel H",
-        designation: "CEO @Analyzen",
+        name: "Dflash711",
+        country: "canada.svg",
         imageSlug: "user1",
         testimonial: (
           <>
-            1I have never in my life experienced service like what I received
-            from thesociomatic. They finished 3 days of work in about 2 hrs.
-            They&apos;
-            <span>went above and beyond what was expected of him</span>. I will
-            Hire Them again and can fully recommend them to any potential
-            client.
+            What an absolute pleasure working with Yeatiq. Professional, highly
+            skilled and quick! I look forward to working with Yeatiq again.
+            Thank you!
           </>
         ),
       },
       {
         id: 2,
-        name: "John Doe",
-        designation: "CTO @Apple Inc",
+        name: "Iziweb",
+        country: "netherlands.svg",
         imageSlug: "user2",
-        testimonial: (
-          <>
-            2I have never in my life experienced service like what I received
-            from thesociomatic. They finished 3 days of work in about 2 hrs.
-            They&apos;
-            <span>went above and beyond what was expected of him</span>. I will
-            Hire Them again and can fully recommend them to any potential
-            client.
-          </>
-        ),
+        testimonial: <>Fantastic work! I will always come back to Yeatiq</>,
       },
       {
         id: 3,
-        name: "Nabina Nel",
-        designation: "COO @Rabble",
+        name: "Omcparts",
+        country: "canada.svg",
         imageSlug: "user3",
         testimonial: (
           <>
-            3I have never in my life experienced service like what I received
-            from thesociomatic. They finished 3 days of work in about 2 hrs.
-            They&apos;
-            <span>went above and beyond what was expected of him</span>. I will
-            Hire Them again and can fully recommend them to any potential
-            client.
+            This person did what no one else could and it only took a day he is
+            worth his weight in gold. thank you for all your help. I would use
+            him again for sure. Best money i ever spent thanks again.
           </>
         ),
       },

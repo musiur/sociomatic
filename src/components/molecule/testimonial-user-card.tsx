@@ -24,16 +24,17 @@ const TestimonialUserCard = ({
           } rounded-b-full lg:rounded-l-full lg:rounded-br-none`}
         ></div>
         <div className="flex flex-col lg:flex-row flex-wrap items-center justify-start gap-[5px] lg:gap-[10px] p-[5px] lg:p-0">
-          <Image
+          {/* <Image
             src={`/images/pages/home/testimonial/${imageSlug}.png`}
             alt=""
             width={500}
             height={500}
             className="w-[30px] h-[30px] lg:w-[60px] lg:h-[60px] rounded-full bg-secondary"
-          />
+          /> */}
           <div className="flex flex-col items-center lg:items-start justify-center gap-[10px] ">
             <p className="font-bold text-primary text-[12px] sm:text-[14px] lg:text-[20px]">
-              {name}
+              {name.slice(0, 15)}
+              {name.length > 15 ? "..." : null}
             </p>
             <Image
               src={`/images/flags/${country}`}
