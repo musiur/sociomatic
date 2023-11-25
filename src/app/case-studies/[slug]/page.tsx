@@ -28,9 +28,9 @@ const CaseStudies = ({ params }: { params: { slug: string } }) => {
   }
   return (
     <div>
-      <section className="container section">
+      {/* <section className="container section">
         <ProductCards />
-      </section>
+      </section> */}
       <section className="section grid grid-cols-1 large-gap">
         <div className="max-w-[600px] mx-auto px-5 flex flex-col small-gap items-center justify-center text-center">
           <h4 className="text-[16px] lg:text-[20px] font-semibold text-secondary">
