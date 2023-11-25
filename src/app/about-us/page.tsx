@@ -1,7 +1,6 @@
-"use client";
-
 import { BrandCarousel } from "@/components/core/home/carousel";
 import SectionHead from "@/components/molecule/section-head";
+import ShortReviews from "@/components/molecule/short-reviews";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -14,8 +13,6 @@ import {
   Wand2Icon,
 } from "lucide-react";
 import Image from "next/image";
-import Script from "next/script";
-// import Head from "next/head";
 
 const AboutUS = () => {
   const NumberCards = [
@@ -160,12 +157,6 @@ const AboutUS = () => {
   ];
   return (
     <>
-      <Script
-        src="https://static.senja.io/dist/platform.js"
-        onLoad={() => {
-          console.log("console hoilo...");
-        }}
-      />
       <section className="bg-muted">
         <div className="bg-[url('/images/backgrounds/WhiteGrid.svg')] bg-cover bg-center">
           <div className="container section flex flex-col large-gap">
@@ -341,13 +332,8 @@ const AboutUS = () => {
           </div>
         </div>
       </section>
-      <section className="container section">
-        <div
-          className="senja-embed"
-          data-id="4edcde1c-797a-4469-b0b2-abac5fdd3d58"
-          data-lazyload="false"
-        ></div>
-      </section>
+
+      <ShortReviews />
       <section className="bg-primary">
         <div className="container section flex flex-col md:flex-row justify-between items-center large-gap">
           <div className="flex flex-col small-gap">
