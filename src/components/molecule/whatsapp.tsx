@@ -1,5 +1,4 @@
-import { MessageCircle } from "lucide-react";
-import Image from "next/image";
+import { MessageSquare } from "lucide-react";
 import Link from "next/link";
 
 const WhatsApp = () => {
@@ -8,16 +7,9 @@ const WhatsApp = () => {
       href="https://wa.me/+971567268607"
       passHref={true}
       target="_blank"
-      className="fixed bottom-[100px] right-[30px]"
+      className="fixed bottom-[100px] right-[30px] group border border-secondary bg-secondary hover:bg-indigo-700 h-[60px] w-[60px] rounded-full flex items-center justify-center"
     >
-      {/* <MessageCircle className="w-[30px] h-[30px] stroke-white group-hover:stroke-white"/> */}
-      <Image
-        src="/images/whatsapp.png"
-        alt=""
-        height={1000}
-        width={1000}
-        className="max-w-[60px] max-h-[60px]"
-      />
+      <MessageSquare className="w-[30px] h-[30px] stroke-white" />
     </Link>
   );
 };

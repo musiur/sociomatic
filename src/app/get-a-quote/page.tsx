@@ -117,7 +117,6 @@ const GetAQuotePage = () => {
                 Dolor ea exercitation pariatur non Lorem et consectetur quis
                 quis veniam aliqua ut. Culpa sint qui irure Lorem dolor ex
                 cupidatat dolor. Laboris eu velit ex irure nulla fugiat aute
-                ipsum.
               </>,
             ]}
           />
