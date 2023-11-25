@@ -676,7 +676,7 @@ export const DataAnalyticsServicePageData = {
     H2: (
       <>
         Why&nbsp;
-        <span className="text-secondary">data analytics?</span>?
+        <span className="text-secondary">data analytics</span>?
       </>
     ),
     paragraphs: [

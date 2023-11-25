@@ -7,7 +7,7 @@ const WhatsApp = () => {
       href="https://wa.me/+971567268607"
       passHref={true}
       target="_blank"
-      className="fixed bottom-[100px] right-[30px] group border border-secondary bg-secondary hover:bg-indigo-700 h-[60px] w-[60px] rounded-full flex items-center justify-center"
+      className="fixed bottom-[100px] right-[30px] group border border-secondary bg-secondary hover:bg-indigo-700 h-[60px] w-[60px] rounded-full flex items-center justify-center hover:shadow-2xl"
     >
       <MessageSquare className="w-[30px] h-[30px] stroke-white" />
     </Link>
