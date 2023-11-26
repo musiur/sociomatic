@@ -468,9 +468,11 @@ export const GoogleAdsServicePageData = {
           </>
         ),
         list: [
-          "Lorem ipsum tellie testie",
-          "Lorem ipsum tellie testie",
-          "Lorem ipsum tellie testie",
+          "Ad Campaign Setup: Basic targeting and ad creation",
+          "Keyword Research: Limited",
+          "Ad Platforms: Google Search",
+          "Ad Copy Variations: Basic",
+          "Monthly Reporting: Standard metrics",
         ],
         link: "/",
       },
@@ -486,9 +488,13 @@ export const GoogleAdsServicePageData = {
           </>
         ),
         list: [
-          "Lorem ipsum tellie testie",
-          "Lorem ipsum tellie testie",
-          "Lorem ipsum tellie testie",
+          "Ad Campaign Setup: Advanced targeting and ad creation",
+          "Keyword Research: Moderate",
+          "Ad Platforms: Google Search and Display",
+          "Ad Copy Variations:** Enhanced",
+          "Monthly Reporting",
+          "Competitor Analysis",
+          "Remarketing Campaign",
         ],
         link: "/",
       },
@@ -504,16 +510,22 @@ export const GoogleAdsServicePageData = {
           </>
         ),
         list: [
-          "Lorem ipsum tellie testie",
-          "Lorem ipsum tellie testie",
-          "Lorem ipsum tellie testie",
+          "Ad Campaign Setup:Customized targeting and ad creation",
+          "Keyword Research:Comprehensive",
+          "Ad Platforms-Google Search, Display, and Video",
+          "Advanced A/B testing",
+          "Monthly Reporting",
+          "Ad Extension Optimization",
+          "Competitor Analysis",
+          "Landing Page Optimization",
+          "Advanced Audience Targeting",
+          "Cross-Platform Integration",
+          "Custom Analytics Dashboard",
+          "Dedicated Account Manager",
         ],
         link: "/",
       },
-    ],
-    footerContent: {
-      p: <>Consequat amet veniam qui cillum magna ipsum ipsum culpa.</>,
-    },
+    ]
   },
   testimonial: {
     highlighter: "Testimonials",

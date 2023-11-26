@@ -97,7 +97,6 @@ const CaseStudies = ({ params }: { params: { slug: string } }) => {
                                 className="flex items-start justify-start gap-[5px]"
                               >
                                 <BadgeCheck className="min-h-[16px] max-h-[16px] min-w-[16px] max-w-[16px] mt-[5px]" />
-                                &nbsp;
                                 <p>{li}</p>
                               </li>
                             );
@@ -106,14 +105,14 @@ const CaseStudies = ({ params }: { params: { slug: string } }) => {
                       </div>
                     </div>
                   </div>
-                  <div className="w-full flex items-center justify-between small-gap pt-[25px] border-t">
+                  {/* <div className="w-full flex items-center justify-between small-gap pt-[25px] border-t">
                     <p className="text-primary text-xl md:text-2xl font-bold">
                       26X Revenue
                     </p>
                     <p className="text-primary text-xl md:text-2xl font-bold">
                       -87% CPA
                     </p>
-                  </div>
+                  </div> */}
                   {item.footerParagraphs ? (
                     <div className="flex flex-col items-center justify-center small-gap py-5 w-full">
                       {item?.footerParagraphs.map(
@@ -210,7 +209,7 @@ const GoogleAdsCaseStudyPageData = {
           a sold-out success.
         </>,
         <>
-          &nbsp; Amplified brand visibility, higher engagement rates, and a
+          Amplified brand visibility, higher engagement rates, and a
           spectacular&nbsp;
           <span className="text-primary font-medium">
             1160% increase in lead generation
@@ -842,6 +841,130 @@ const SocialMediaPaidAdsCaseStudyPageData = {
           Brilliance
         </>,
       ],
+    },
+  ],
+};
+
+const ContentSEOCaseStudyPageData = {
+  H4: <>Case Studies</>,
+  H2: (
+    <>
+      Let the <span className="text-secondary">Numbers</span> <br /> Do the
+      Talking.
+    </>
+  ),
+  P: (
+    <>
+      As you brows through the case studies, you will understand that we
+      don&apos;t require a “budget”, there is no “expense” as such. We are
+      revenue and profit generators, so the sooner you start working with us,
+      the faster you will get ahead of your competition.
+    </>
+  ),
+  studies: [
+    {
+      id: 1,
+      image: (
+        <div
+          className={`bg-[url('/images/pages/case-studies/image2.jpeg')] min-h-[50vh] w-full bg-contain bg-no-repeat bg-center`}
+        ></div>
+      ),
+      brand: "Floganza Dubai - A Fashion Renaissance",
+      title: (
+        <>
+          Revolutionizing Fashion: Floganza Dubai&apso;s Journey from Obscurity
+          to Runway Fame
+        </>
+      ),
+      challenge: (
+        <>
+          Brief background on Floganza Dubai. Highlight the challenges faced in
+          the competitive fashion market.
+        </>
+      ),
+      followupH: <>Sociomatic&apos;s Strategic Intervention:</>,
+      followup: (
+        <>
+          In-depth SEO analysis and optimization. Tailored content creation for
+          enhanced brand representation. Targeted social media campaigns to
+          boost engagement. Implementation of user-friendly website design.
+        </>
+      ),
+      before: (
+        <>
+          Struggled with low online visibility. Limited reach impacting brand
+          promotion. Challenges in showcasing trendy fashion collections
+          effectively. Suboptimal SEO strategies leading to missed
+          opportunities.
+        </>
+      ),
+      after: [
+        <>Achieved first-page visibility on Google.</>,
+        <>Significant increase in online presence.</>,
+        <>Enhanced brand credibility and visibility.</>,
+        <>Substantial surge in organic leads and customer inquiries.</>,
+        <>
+          Increased online presence by&nbsp;
+          <span>60% within the first three months</span>.
+        </>,
+        <>
+          Fashion collection showcases received a <span>40% boost</span> in user
+          engagement.
+        </>,
+        <>
+          User-friendly website design contributed to a&nbsp;
+          <span>20% reduction</span> in bounce rates.
+        </>,
+      ],
+      // footerParagraphs: [<>Experience the Event Transformation</>],
+    },
+    {
+      id: 2,
+      image: (
+        <div
+          className={`bg-[url('/images/pages/case-studies/image1.png')] min-h-[50vh] w-full bg-contain bg-no-repeat bg-center`}
+        ></div>
+      ),
+      brand: "Photoshoot Dubai Escape",
+      title: (
+        <>
+          Capturing Dreams: From 0 to&nbsp;
+          <span className="text-[16px] md:text-[20px] text-secondary">
+            60+ Form Submissions
+          </span>
+          !
+        </>
+      ),
+      challenge: (
+        <>
+          Photoshoot Dubai Escape, a visionary in photography, faced a silent
+          stage with a meager 0 to 50 monthly form submissions. The echo of
+          their artistry wasn&apos;t reaching the right ears.
+        </>
+      ),
+      followupH: <>Our followups</>,
+      followup: (
+        <>
+          Sociomatic stepped into the frame, orchestrating a symphony of
+          targeted visuals and strategic outreach. The goal is to transform
+          their silent stage into a vibrant showcase.
+        </>
+      ),
+      before: <>Monthly form submissions: 0 to 5</>,
+      after: [
+        <>
+          Monthly form submissions surged to 60+, capturing the hearts of a
+          broader audience.
+        </>,
+        <>
+          &nbsp; Enhanced brand visibility, amplified engagement, and a
+          stunning&nbsp;
+          <span className="text-primary font-medium">
+            200% increase in lead generation
+          </span>
+        </>,
+      ],
+      footerParagraphs: [<>Are you ready for your encore?</>],
     },
   ],
 };

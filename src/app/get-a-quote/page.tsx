@@ -107,16 +107,15 @@ const GetAQuotePage = () => {
       <div className="bg-[url('/images/backgrounds/CircleNest.svg')] bg-cover bg-center">
         <div className="section border-b border-secondarymuted container">
           <SectionHead
-            highlighter="Contact Us"
-            H2={<>Get Touch with Us</>}
+            highlighter=""
+            H2={<>Get a Quote</>}
             paragraphs={[
               <>
-                Anim et laborum consequat incididunt consequat ex incididunt
-                laborum. Pariatur veniam minim Lorem et officia qui esse nisi
-                est irure voluptate enim consequat. Eiusmod ad et consequat in.
-                Dolor ea exercitation pariatur non Lorem et consectetur quis
-                quis veniam aliqua ut. Culpa sint qui irure Lorem dolor ex
-                cupidatat dolor. Laboris eu velit ex irure nulla fugiat aute
+                Embark on a transformative digital journey with Sociomatic. Our
+                tailored solutions redefine success, ensuring your brand&apos;s
+                unique needs are precisely met. Request a quote today and
+                witness the power of strategic innovation, elevating your brand
+                to new heights in the dynamic digital landscape.
               </>,
             ]}
           />

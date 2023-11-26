@@ -1,10 +1,8 @@
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { ReactElement } from "react";
 
 import { BrandCarousel } from "@/components/core/home/carousel";
 import VideoPlayer from "@/components/core/home/video-player";
-import Link from "next/link";
 import GetConsultation from "@/components/molecule/get-consultation";
 import GetAQuote from "@/components/molecule/get-a-quote";
 
@@ -32,11 +30,9 @@ const HeroSection = ({
   brands: boolean;
   background: string;
 }) => {
-  // ${background}
+  const backgroundImage = `bg-[url('/images/backgrounds/HeroBackground.svg')]`;
   return (
-    <section
-      className={`bg-[url('/images/backgrounds/${background}.svg')] bg-center bg-cover`}
-    >
+    <section className={`${backgroundImage} bg-center bg-cover`}>
       <div className="container section grid grid-cols-1 lg:grid-cols-2 items-center large-gap">
         <div className="order-2 lg:order-1 flex flex-col small-gap">
           <h1 className="text-primary [&>span]:text-secondary">{H1}</h1>

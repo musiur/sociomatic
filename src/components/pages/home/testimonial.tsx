@@ -4,6 +4,8 @@ import SectionHead from "@/components/molecule/section-head";
 import TestimonialUserCard from "@/components/molecule/testimonial-user-card";
 import { useState } from "react";
 import Calendly from "./calendly";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 const Testimonial = ({ data, calendly }: { data: any; calendly: boolean }) => {
   const [currentTestimonial, setCurrentTestimonial] = useState(2);
@@ -48,6 +50,9 @@ const Testimonial = ({ data, calendly }: { data: any; calendly: boolean }) => {
             </p>
           </div>
         </div>
+        <Link href="/reviews" className="flex items-center justify-center">
+          <Button variant={"outline"}>View Our Wall of Love</Button>
+        </Link>
       </div>
       {calendly ? <Calendly /> : null}
     </section>

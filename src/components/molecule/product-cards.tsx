@@ -10,20 +10,23 @@ const ProductCards = () => {
           <div key={index} className="grid grid-cols-1 large-gap">
             {col.map((item: any) => {
               const { id, title, description, image, link } = item;
-              return ( 
+              const background = `bg-[url('/images/projects/${image}')]`;
+              return (
                 <div key={id} className="flex flex-col gap-4 group">
-                  <div className="overflow-hidden rounded-[40px]">
-                    <div
-                      className={`bg-[url('/images/projects/${image}')] bg-cover bg-center group-hover:scale-[110%] transition ease-linear
+                  {image ? (
+                    <div className="overflow-hidden rounded-[40px]">
+                      <div
+                        className={`${background} bg-cover bg-center group-hover:scale-[110%] transition ease-linear
                       ${
                         (index === 1 && item.id === 1) ||
                         (index === 0 && item.id === 2)
                           ? "min-h-[400px]"
                           : "min-h-[400px] md:min-h-[500px]"
                       }
-              `}
-                    ></div>
-                  </div>
+                      `}
+                      />
+                    </div>
+                  ) : null}
                   <div className="flex flex-col gap-4">
                     <h5 className="text-[16px] lg:text-[20px] font-semibold text-primary">
                       {title}
