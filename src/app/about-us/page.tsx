@@ -1,3 +1,4 @@
+"use client";
 import { BrandCarousel } from "@/components/core/home/carousel";
 import SectionHead from "@/components/molecule/section-head";
 import ShortReviews from "@/components/molecule/short-reviews";
@@ -13,8 +14,11 @@ import {
   Wand2Icon,
 } from "lucide-react";
 import Image from "next/image";
+import { useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const AboutUS = () => {
+  const [captcha, setCaptcha] = useState(false);
   const NumberCards = [
     {
       id: 1,
@@ -349,7 +353,16 @@ const AboutUS = () => {
           </div>
           <div className="flex flex-col small-gap min-w-[300px]">
             <Input placeholder="Enter your email" />
-            <Button variant="secondary">Subscribe</Button>
+            <ReCAPTCHA
+              sitekey={process.env.siteKey!}
+              onChange={(e: any) => {
+                console.log(e);
+                e ? setCaptcha(true) : setCaptcha(false);
+              }}
+            />
+            <Button disabled={!captcha} variant="secondary">
+              Subscribe
+            </Button>
           </div>
         </div>
       </section>

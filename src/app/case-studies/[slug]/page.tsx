@@ -683,7 +683,7 @@ const SocialMediaPaidAdsCaseStudyPageData = {
       id: 1,
       image: (
         <div
-          className={`bg-[url('/images/pages/case-studies/image2.jpeg')] min-h-[50vh] w-full bg-contain bg-no-repeat bg-center`}
+          className={`bg-[url('/images/pages/case-studies/image10.png')] min-h-[50vh] w-full bg-contain bg-no-repeat bg-center`}
         ></div>
       ),
       brand: "How Sociomatic Supercharged Wildly Boutique's Social Media",
@@ -721,7 +721,7 @@ const SocialMediaPaidAdsCaseStudyPageData = {
       id: 2,
       image: (
         <div
-          className={`bg-[url('/images/pages/case-studies/image1.png')] min-h-[50vh] w-full bg-contain bg-no-repeat bg-center`}
+          className={`bg-[url('/images/pages/case-studies/image12.png')] min-h-[50vh] w-full bg-contain bg-no-repeat bg-center`}
         ></div>
       ),
       brand: "Togs Australia's Big Win on Social Media",
@@ -764,7 +764,7 @@ const SocialMediaPaidAdsCaseStudyPageData = {
       id: 3,
       image: (
         <div
-          className={`bg-[url('/images/pages/case-studies/image1.png')] min-h-[50vh] w-full bg-contain bg-no-repeat bg-center`}
+          className={`bg-[url('/images/pages/case-studies/image11.png')] min-h-[50vh] w-full bg-contain bg-no-repeat bg-center`}
         ></div>
       ),
       brand: "Floganza Dubai's Online Journey",
@@ -866,7 +866,7 @@ const ContentSEOCaseStudyPageData = {
       id: 1,
       image: (
         <div
-          className={`bg-[url('/images/pages/case-studies/image2.jpeg')] min-h-[50vh] w-full bg-contain bg-no-repeat bg-center`}
+          className={`bg-[url('/images/pages/case-studies/image10.png')] min-h-[50vh] w-full bg-contain bg-no-repeat bg-center`}
         ></div>
       ),
       brand: "Floganza Dubai - A Fashion Renaissance",
@@ -922,7 +922,7 @@ const ContentSEOCaseStudyPageData = {
       id: 2,
       image: (
         <div
-          className={`bg-[url('/images/pages/case-studies/image1.png')] min-h-[50vh] w-full bg-contain bg-no-repeat bg-center`}
+          className={`bg-[url('/images/pages/case-studies/image11.png')] min-h-[50vh] w-full bg-contain bg-no-repeat bg-center`}
         ></div>
       ),
       brand: "Photoshoot Dubai Escape",
