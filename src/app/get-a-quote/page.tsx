@@ -105,7 +105,7 @@ const GetAQuotePage = () => {
   return (
     <>
       <div className="bg-[url('/images/backgrounds/CircleNest.svg')] bg-cover bg-center">
-        <div className="section border-b border-secondarymuted container">
+        <div className="section container">
           <SectionHead
             highlighter=""
             H2={<>Get a Quote</>}
@@ -120,30 +120,33 @@ const GetAQuotePage = () => {
             ]}
           />
         </div>
-        <div className="-mt-[20px] md:-mt-[25px]">
-          <ul className="flex items-center justify-center">
-            {["One Time", "Quarterly", "Yearly"].map((item, index) => {
-              return (
-                <li
-                  key={index}
-                  className={`px-4 py-2 md:px-8 md:py-3 border  font-bold cursor-pointer ${
-                    index + 1 === currentTab
-                      ? "bg-secondary text-white hover:bg-blue-600 border-secondary "
-                      : "bg-white hover:bg-muted hover:text-secondary border-secondarymuted "
-                  } ${index + 1 === 1 ? "rounded-l-[10px]" : ""} ${
-                    index + 1 === 3 ? "rounded-r-[10px]" : ""
-                  } ${
-                    index + 1 === 2 ? "border border-l-0 border-r-0" : "border"
-                  } transition ease-in-out duration-300`}
-                  onClick={() => setCurrentTab(index + 1)}
-                >
-                  {item}
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-        <div className="container section grid grid-cols-1 md:grid-cols-2 large-gap backdrop-blur shadow-md rounded-[40px]">
+
+        <div className="relative container section grid grid-cols-1 md:grid-cols-2 large-gap backdrop-blur rounded-lg border border-secondarymuted">
+          <div className="absolute top-0 left-0 w-full -mt-[20px] md:-mt-[25px]">
+            <ul className="flex items-center justify-center">
+              {["One Time", "Quarterly", "Yearly"].map((item, index) => {
+                return (
+                  <li
+                    key={index}
+                    className={`px-4 py-2 md:px-8 md:py-3 border  font-bold cursor-pointer ${
+                      index + 1 === currentTab
+                        ? "bg-secondary text-white hover:bg-blue-600 border-secondary "
+                        : "bg-white hover:bg-muted hover:text-secondary border-secondarymuted "
+                    } ${index + 1 === 1 ? "rounded-l-[10px]" : ""} ${
+                      index + 1 === 3 ? "rounded-r-[10px]" : ""
+                    } ${
+                      index + 1 === 2
+                        ? "border border-l-0 border-r-0"
+                        : "border"
+                    } transition ease-in-out duration-300`}
+                    onClick={() => setCurrentTab(index + 1)}
+                  >
+                    {item}
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
           <div className="flex flex-col small-gap">
             <div className="grid w-full items-center gap-1.5">
               <Label htmlFor="name">

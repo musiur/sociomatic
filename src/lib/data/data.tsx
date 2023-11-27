@@ -525,7 +525,7 @@ export const GoogleAdsServicePageData = {
         ],
         link: "/",
       },
-    ]
+    ],
   },
   testimonial: {
     highlighter: "Testimonials",
@@ -1897,7 +1897,7 @@ export const ShopifyDevelopmentServicePageData = {
   herosection: {
     H1: (
       <>
-        Elevate Your <span>Ecommerce</span> Websites
+        Elevate Your <span>Ecommerce</span> Websites with Shopify
       </>
     ),
     P: (
@@ -1945,7 +1945,7 @@ export const ShopifyDevelopmentServicePageData = {
     H2: (
       <>
         Why&nbsp;
-        <span>Social Media Paid Ads</span>?
+        <span>Shopify Store Development</span>?
       </>
     ),
     paragraphs: [
@@ -2532,8 +2532,8 @@ export const UIUXandGraphicDesignServicePageData = {
     P: (
       <>
         Discover design brilliance with Sociomatic. Boost your brand with
-        superior UI/UX and Graphic Design, where creativity and mastery live
-        together.
+        superior <span>UI/UX</span> and <span>Graphic Design</span>, where
+        creativity and mastery live together.
       </>
     ),
     videoLink: "https://www.youtube.com/embed/Gl465-ugqbM?si=Njv8OZykPsz9LsYZ",
