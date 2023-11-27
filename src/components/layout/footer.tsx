@@ -18,13 +18,25 @@ const Footer = () => {
             <div className="text-icon py-[25px]">
               <p className="pb-[25px]">Get Updated with Us Regularly</p>
               <div className="icons flex flex-row small-gap">
-                <Link href="/">
+                <Link
+                  href="https://www.facebook.com/thesociomatic"
+                  passHref={true}
+                  target="_blank"
+                >
                   <Facebook className=" cursor-pointer stroke-[1.3px] hover:stroke-secondary" />
                 </Link>
-                <Link href="/">
+                <Link
+                  href="https://www.linkedin.com/company/thesociomatic/"
+                  passHref={true}
+                  target="_blank"
+                >
                   <Linkedin className=" cursor-pointer stroke-[1.3px] hover:stroke-secondary" />
                 </Link>
-                <Link href="/">
+                <Link
+                  href="https://www.instagram.com/thesociomatic"
+                  passHref={true}
+                  target="_blank"
+                >
                   <Instagram className=" cursor-pointer stroke-[1.3px] hover:stroke-secondary" />
                 </Link>
               </div>
