@@ -14,7 +14,7 @@ const CaseStudies = ({ params }: { params: { slug: string } }) => {
   } else if (params.slug.includes("wordpress-development")) {
     data = GoogleAdsCaseStudyPageData;
   } else if (params.slug.includes("content-writing-and-seo")) {
-    data = GoogleAdsCaseStudyPageData;
+    data = ContentSEOCaseStudyPageData;
   } else if (params.slug.includes("shopify-store-development")) {
     data = ShopifyCaseStudyPageData;
   } else if (params.slug.includes("social-media-paid-ads")) {
@@ -28,125 +28,130 @@ const CaseStudies = ({ params }: { params: { slug: string } }) => {
   }
   return (
     <div>
-      {/* <section className="container section">
-        <ProductCards />
-      </section> */}
-      <section className="section grid grid-cols-1 large-gap">
-        <div className="max-w-[600px] mx-auto px-5 flex flex-col small-gap items-center justify-center text-center">
-          <h4 className="text-[16px] lg:text-[20px] font-semibold text-secondary">
-            {data.H4}
-          </h4>
-          <h2 className="text-primary">{data.H2}</h2>
-          <p className="">{data.P}</p>
-        </div>
-        <div className="container grid grid-cols-1 large-gap">
-          {data.studies.map((item: any) => {
-            const { id, image, brand, challenge, followup, after, followupH } =
-              item;
-            return (
-              <div
-                key={id}
-                className="rounded-[10px] border border-secondary-muted hover:border-secondary bg-white/5 backdrop-blur-[8px] hover:backdrop-blur-[8px] w-full shadow-[0_4px_25px_0_rgba(89,86,255,0.15)] transition ease-in-out duration-500 overflow-hidden px-[25px] py-[50px]"
-              >
-                {image}
-                <div className="flex flex-col items-start justify-start small-gap pt-10">
-                  <h3 className="text-[20px] lg:text-[24px] font-bold text-center w-full">
-                    {brand}
-                  </h3>
-                  {item.title ? (
-                    <h4 className="font-bold text-primary text-[16px] md:text-[20px] w-full text-center mb-10">
-                      {item.title}
-                    </h4>
-                  ) : null}
-                  <div className="grid grid-cols-1 small-gap">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 small-gap items-start justify-start">
-                      <div className="grid grid-cols-1 gap-[10px] ">
-                        <h4 className="font-bold text-dimmed flex items-center gap-[5px]">
-                          <Frown /> The Challenge
-                        </h4>
-                        <p>{challenge}</p>
-                      </div>
-                      <div className="grid grid-cols-1 gap-[10px]">
-                        <h4 className="font-bold text-secondary flex items-center gap-[5px]">
-                          <Smile className="stroke-secondary" /> {followupH}
-                        </h4>
-                        <p>{followup}</p>
-                      </div>
-                    </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 small-gap ms:pl-[20px]">
-                      {item.before ? (
-                        <div className="flex flex-col justify-start items-start gap-[10px]">
+      {params.slug.includes("software-development") ||
+      params.slug.includes("custom-web-development") ||
+      params.slug.includes("wordpress-development") ||
+      params.slug.includes("ui-ux-and-graphic-design") ? (
+        <section className="container section">
+          <ProductCards params={params}/>
+        </section>
+      ) : (
+        <section className="section grid grid-cols-1 large-gap">
+          <div className="max-w-[600px] mx-auto px-5 flex flex-col small-gap items-center justify-center text-center">
+            <h4 className="text-[16px] lg:text-[20px] font-semibold text-secondary">
+              {data.H4}
+            </h4>
+            <h2 className="text-primary">{data.H2}</h2>
+            <p className="">{data.P}</p>
+          </div>
+          <div className="container grid grid-cols-1 large-gap">
+            {data.studies.map((item: any) => {
+              const {
+                id,
+                image,
+                brand,
+                challenge,
+                followup,
+                after,
+                followupH,
+              } = item;
+              return (
+                <div
+                  key={id}
+                  className="rounded-[10px] border border-secondary-muted hover:border-secondary bg-white/5 backdrop-blur-[8px] hover:backdrop-blur-[8px] w-full shadow-[0_4px_25px_0_rgba(89,86,255,0.15)] transition ease-in-out duration-500 overflow-hidden px-[25px] py-[50px]"
+                >
+                  {image}
+                  <div className="flex flex-col items-start justify-start small-gap pt-10">
+                    <h3 className="text-[20px] lg:text-[24px] font-bold text-center w-full">
+                      {brand}
+                    </h3>
+                    {item.title ? (
+                      <h4 className="font-bold text-primary text-[16px] md:text-[20px] w-full text-center mb-10">
+                        {item.title}
+                      </h4>
+                    ) : null}
+                    <div className="grid grid-cols-1 small-gap">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 small-gap items-start justify-start">
+                        <div className="grid grid-cols-1 gap-[10px] ">
                           <h4 className="font-bold text-dimmed flex items-center gap-[5px]">
-                            <Frown /> Results Before
+                            <Frown /> The Challenge
                           </h4>
-                          <p>{item.before}</p>
+                          <p>{challenge}</p>
                         </div>
-                      ) : (
-                        <div></div>
-                      )}
-                      <div className="flex flex-col items-start justify-start gap-[15px]">
-                        <h4 className="font-bold text-secondary flex items-center gap-[5px]">
-                          <Smile className="stroke-secondary" /> After
-                          Sociomatic
-                        </h4>
-                        <ul className="flex flex-col gap-[10px]">
-                          {after.map((li: any, index: number) => {
-                            return (
-                              <li
-                                key={index}
-                                className="flex items-start justify-start gap-[5px]"
-                              >
-                                <BadgeCheck className="min-h-[16px] max-h-[16px] min-w-[16px] max-w-[16px] mt-[5px]" />
-                                <p>{li}</p>
-                              </li>
-                            );
-                          })}
-                        </ul>
+                        <div className="grid grid-cols-1 gap-[10px]">
+                          <h4 className="font-bold text-secondary flex items-center gap-[5px]">
+                            <Smile className="stroke-secondary" /> {followupH}
+                          </h4>
+                          <p>{followup}</p>
+                        </div>
+                      </div>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 small-gap ms:pl-[20px]">
+                        {item.before ? (
+                          <div className="flex flex-col justify-start items-start gap-[10px]">
+                            <h4 className="font-bold text-dimmed flex items-center gap-[5px]">
+                              <Frown /> Results Before
+                            </h4>
+                            <p>{item.before}</p>
+                          </div>
+                        ) : (
+                          <div></div>
+                        )}
+                        <div className="flex flex-col items-start justify-start gap-[15px]">
+                          <h4 className="font-bold text-secondary flex items-center gap-[5px]">
+                            <Smile className="stroke-secondary" /> After
+                            Sociomatic
+                          </h4>
+                          <ul className="flex flex-col gap-[10px]">
+                            {after.map((li: any, index: number) => {
+                              return (
+                                <li
+                                  key={index}
+                                  className="flex items-start justify-start gap-[5px]"
+                                >
+                                  <BadgeCheck className="min-h-[16px] max-h-[16px] min-w-[16px] max-w-[16px] mt-[5px]" />
+                                  <p>{li}</p>
+                                </li>
+                              );
+                            })}
+                          </ul>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  {/* <div className="w-full flex items-center justify-between small-gap pt-[25px] border-t">
-                    <p className="text-primary text-xl md:text-2xl font-bold">
-                      26X Revenue
-                    </p>
-                    <p className="text-primary text-xl md:text-2xl font-bold">
-                      -87% CPA
-                    </p>
-                  </div> */}
-                  {item.footerParagraphs ? (
-                    <div className="flex flex-col items-center justify-center small-gap py-5 w-full">
-                      {item?.footerParagraphs.map(
-                        (para: any, index: number) => {
-                          return (
-                            <p key={index} className="text-center">
-                              {para}
-                            </p>
-                          );
-                        }
+                    {item.footerParagraphs ? (
+                      <div className="flex flex-col items-center justify-center small-gap py-5 w-full">
+                        {item?.footerParagraphs.map(
+                          (para: any, index: number) => {
+                            return (
+                              <p key={index} className="text-center">
+                                {para}
+                              </p>
+                            );
+                          }
+                        )}
+                      </div>
+                    ) : null}
+                    <div className="flex justify-center flex-wrap items-center w-full small-gap">
+                      {params.slug.includes("shopify-store-development") ? (
+                        <Link
+                          href={item.websiteLink}
+                          passHref={true}
+                          target="_blank"
+                        >
+                          <Button variant="outline">Visit Website</Button>
+                        </Link>
+                      ) : (
+                        <GetConsultation />
                       )}
-                    </div>
-                  ) : null}
-                  <div className="flex justify-center flex-wrap items-center w-full small-gap">
-                    {params.slug.includes("shopify-store-development") ? (
-                      <Link
-                        href={item.websiteLink}
-                        passHref={true}
-                        target="_blank"
-                      >
-                        <Button variant="outline">Visit Website</Button>
-                      </Link>
-                    ) : (
-                      <GetConsultation />
-                    )}
 
-                    <GetAQuote />
+                      <GetAQuote />
+                    </div>
                   </div>
                 </div>
-              </div>
-            );
-          })}
-        </div>
-      </section>
+              );
+            })}
+          </div>
+        </section>
+      )}
     </div>
   );
 };
@@ -844,7 +849,6 @@ const SocialMediaPaidAdsCaseStudyPageData = {
     },
   ],
 };
-
 const ContentSEOCaseStudyPageData = {
   H4: <>Case Studies</>,
   H2: (
