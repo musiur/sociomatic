@@ -1495,7 +1495,7 @@ export const ContentWringAndSEOServicePageData = {
       {
         id: 1,
         name: "Samuel H",
-        country: "CEO @Analyzen",
+        country: "usa.svg",
         imageSlug: "user1",
         testimonial: (
           <>
@@ -1511,7 +1511,7 @@ export const ContentWringAndSEOServicePageData = {
       {
         id: 2,
         name: "John Doe",
-        country: "CTO @Apple Inc",
+        country: "usa.svg",
         imageSlug: "user2",
         testimonial: (
           <>
@@ -1527,7 +1527,7 @@ export const ContentWringAndSEOServicePageData = {
       {
         id: 3,
         name: "Nabina Nel",
-        country: "COO @Rabble",
+        country: "usa.svg",
         imageSlug: "user3",
         testimonial: (
           <>
@@ -2122,18 +2122,27 @@ export const ShopifyDevelopmentServicePageData = {
     testimonialList: [
       {
         id: 1,
-        name: "mementor",
-        country: "norway.svg",
+        name: "brrrent",
+        country: "usa.svg",
         imageSlug: "user1",
-        testimonial: <>Very happy with the work done. Will use again.</>,
+        testimonial: (
+          <>
+            Very happy with the work done. Will use again. I really like this
+            guy. I plan on working with him more.
+          </>
+        ),
       },
       {
         id: 2,
-        name: "brrrent",
+        name: "ricjam",
         country: "usa.svg",
         imageSlug: "user2",
         testimonial: (
-          <>I really like this guy. I plan on working with him more.</>
+          <>
+            Yeatiq was awesome to work with. He was very communicative and
+            delivered the work on time. I will definitely recommend his services
+            and will be using him again for future work. Great job Yeatiq.
+          </>
         ),
       },
       {
