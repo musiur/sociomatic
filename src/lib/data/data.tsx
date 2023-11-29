@@ -1494,49 +1494,40 @@ export const ContentWringAndSEOServicePageData = {
     testimonialList: [
       {
         id: 1,
-        name: "Samuel H",
+        name: "kellyday902",
         country: "usa.svg",
         imageSlug: "user1",
         testimonial: (
           <>
-            1I have never in my life experienced service like what I received
-            from thesociomatic. They finished 3 days of work in about 2 hrs.
-            They&apos;
-            <span>went above and beyond what was expected of him</span>. I will
-            Hire Them again and can fully recommend them to any potential
-            client.
+            Great work! Very efficient and thorough. English is perfect and that
+            helps when doing these sorts of projects. I will hire him again!
           </>
         ),
       },
       {
         id: 2,
-        name: "John Doe",
-        country: "usa.svg",
+        name: "patrickwacker",
+        country: "germany.svg",
         imageSlug: "user2",
         testimonial: (
           <>
-            2I have never in my life experienced service like what I received
-            from thesociomatic. They finished 3 days of work in about 2 hrs.
-            They&apos;
-            <span>went above and beyond what was expected of him</span>. I will
-            Hire Them again and can fully recommend them to any potential
-            client.
+            Very explicit with vivid documentation, which went beyond my
+            expectations. The delivery time was a tiny bit beyond the agreed
+            time, which did not detract from the quality at all. I am already
+            looking forward to further cooperation and recommend the service
+            unreservedly.
           </>
         ),
       },
       {
         id: 3,
-        name: "Nabina Nel",
+        name: "shimone1995",
         country: "usa.svg",
         imageSlug: "user3",
         testimonial: (
           <>
-            3I have never in my life experienced service like what I received
-            from thesociomatic. They finished 3 days of work in about 2 hrs.
-            They&apos;
-            <span>went above and beyond what was expected of him</span>. I will
-            Hire Them again and can fully recommend them to any potential
-            client.
+            Yeatiq is a great seller. I highly recommend.... His communication
+            is great. And he informed me every step of the way.
           </>
         ),
       },
@@ -2772,24 +2763,47 @@ export const UIUXandGraphicDesignServicePageData = {
     testimonialList: [
       {
         id: 1,
-        name: "chyhairgrow",
+        name: "jasontwomey",
         country: "usa.svg",
         imageSlug: "user1",
-        testimonial: <>Quick. Fast. Efficient. Insightful</>,
+        testimonial: (
+          <>
+            legend, very helpful setting up google and also spotted some website
+            errors, look forward to working with you again
+          </>
+        ),
       },
       {
         id: 2,
-        name: "samcooper1993",
+        name: "gmiller1990",
         country: "australia.svg",
         imageSlug: "user2",
-        testimonial: <>The best in the business</>,
+        testimonial: (
+          <>
+            Yeatiq is lightning fast. Definitely message him with questions
+            before starting the gig because he treats the fiverr chat like his
+            personal text messages - very responsive and helpful! We created a
+            custom offering based on my unique issues and he walked me through
+            step by step what he was doing and why. He way over-delivered
+          </>
+        ),
       },
       {
         id: 3,
-        name: "internetlava",
+        name: "jenniferdyer494",
         country: "usa.svg",
         imageSlug: "user3",
-        testimonial: <>Great job and quick. Very happy.</>,
+        testimonial: (
+          <>
+            This seller is so great to work with. One of the downsides of
+            working with Fiverr online is that it&apos;s not always easy to
+            communicate. This seller did an exceptional job sending a very
+            detailed video explanation of what he did to fix my Google issue.
+            This is not an area I know anything about and even so, he made his
+            description of what he completed very easy for me to understand.
+            I&apos;ll definitely use him again!
+          </>
+        ),
       },
     ],
   },

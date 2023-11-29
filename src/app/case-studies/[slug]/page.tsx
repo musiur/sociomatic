@@ -33,7 +33,7 @@ const CaseStudies = ({ params }: { params: { slug: string } }) => {
       params.slug.includes("wordpress-development") ||
       params.slug.includes("ui-ux-and-graphic-design") ? (
         <section className="container section">
-          <ProductCards params={params}/>
+          <ProductCards params={params} />
         </section>
       ) : (
         <section className="section grid grid-cols-1 large-gap">
@@ -870,7 +870,7 @@ const ContentSEOCaseStudyPageData = {
       id: 1,
       image: (
         <div
-          className={`bg-[url('/images/pages/case-studies/image10.png')] min-h-[50vh] w-full bg-contain bg-no-repeat bg-center`}
+          className={`bg-[url('/images/pages/case-studies/image15.png')] min-h-[50vh] w-full bg-contain bg-no-repeat bg-center`}
         ></div>
       ),
       brand: "Floganza Dubai - A Fashion Renaissance",
@@ -926,7 +926,7 @@ const ContentSEOCaseStudyPageData = {
       id: 2,
       image: (
         <div
-          className={`bg-[url('/images/pages/case-studies/image11.png')] min-h-[50vh] w-full bg-contain bg-no-repeat bg-center`}
+          className={`bg-[url('/images/pages/case-studies/image14.png')] min-h-[50vh] w-full bg-contain bg-no-repeat bg-center`}
         ></div>
       ),
       brand: "Photoshoot Dubai Escape",
@@ -961,8 +961,7 @@ const ContentSEOCaseStudyPageData = {
           broader audience.
         </>,
         <>
-          &nbsp; Enhanced brand visibility, amplified engagement, and a
-          stunning&nbsp;
+          Enhanced brand visibility, amplified engagement, and a stunning&nbsp;
           <span className="text-primary font-medium">
             200% increase in lead generation
           </span>
