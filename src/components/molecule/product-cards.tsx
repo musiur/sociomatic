@@ -44,15 +44,20 @@ const ProductCards = ({ params }: { params: { slug: string } }) => {
                       {title}
                     </h5>
                     <p>{description}</p>
-                    <GetAQuote />
-                    {!params.slug.includes("ui-ux-and-graphic-design") ? (
-                      <Link href={link} passHref={true} target="_blank">
-                        <Button variant={"outline"} className="group gap-[8px]">
-                          Explore&nbsp;
-                          <MoveRight className="stroke-[1.3px] w-[16px] stroke-primary group-hover:stroke-secondary" />
-                        </Button>
-                      </Link>
-                    ) : null}
+                    <div className="flex items-center small-gap">
+                      <GetAQuote />
+                      {!params.slug.includes("ui-ux-and-graphic-design") ? (
+                        <Link href={link} passHref={true} target="_blank">
+                          <Button
+                            variant={"outline"}
+                            className="group gap-[8px]"
+                          >
+                            Explore&nbsp;
+                            <MoveRight className="stroke-[1.3px] w-[16px] stroke-primary group-hover:stroke-secondary" />
+                          </Button>
+                        </Link>
+                      ) : null}
+                    </div>
                   </div>
                 </div>
               );

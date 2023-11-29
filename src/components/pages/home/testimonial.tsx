@@ -40,8 +40,8 @@ const Testimonial = ({ data, calendly }: { data: any; calendly: boolean }) => {
               }
             )}
           </div>
-          <div className="max-w-[611px] bg-[url('/images/backgrounds/Quotes.svg')] bg-center bg-contain bg-no-repeat flex items-center justify-center">
-            <p className="hero-description text-center p-[16.5px]">
+          <div className="max-w-[611px] min-w-[300px] bg-[url('/images/backgrounds/Quotes.svg')] bg-center bg-contain bg-no-repeat flex items-center justify-center">
+            <p className="hero-description text-center lg:text-left p-[16.5px]">
               {
                 data.testimonialList.find(
                   (item: any) => item.id === currentTestimonial
