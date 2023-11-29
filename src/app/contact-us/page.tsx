@@ -53,9 +53,21 @@ const ContactUs = () => {
         subject: "Sociomatic - Contact",
         react: <EmailTemplate firstName={formData.name || "John"} />,
       });
-      console.log(response, "<---");
+      console.log(response);
+      toast({
+        title: "Message Sending",
+        description: "Successful! Mail send successfully.",
+      });
+      setTimeout(() => {
+        window.location.reload();
+      }, 5000);
     } catch (error) {
       console.log(error);
+      toast({
+        variant: "error",
+        title: "Messange Sending",
+        description: "Failed! Something went wrong.",
+      });
     }
   };
 
@@ -68,26 +80,8 @@ const ContactUs = () => {
     const validationErrors = validation();
 
     if (Object.keys(validationErrors).length === 0) {
-      console.log(formData);
-      try {
-        SendEmail(formData);
-        toast({
-          title: "Messange Sending",
-          description: "Successful!",
-        });
-        setLoading(false);
-        // setTimeout(() => {
-        //   if (window) {
-        //     window.location.reload();
-        //   }
-        // }, 3000);
-      } catch (error: any) {
-        toast({
-          variant: "destructive",
-          title: "Messange Sending",
-          description: "Something went wrong!",
-        });
-      }
+      SendEmail(formData);
+      setLoading(false);
     } else {
       setErrors(validationErrors);
     }
@@ -282,7 +276,7 @@ const ContactUs = () => {
             <Button
               variant={"secondary"}
               className="mt-5 max-w-[300px]"
-              disabled={!captcha}
+              // disabled={!captcha}
               onClick={handleOnSubmit}
             >
               {loading ? <Loader /> : "Submit"}

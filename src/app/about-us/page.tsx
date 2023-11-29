@@ -14,6 +14,7 @@ import {
   Wand2Icon,
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 
@@ -306,8 +307,15 @@ const AboutUS = () => {
             </h4>
             <p>
               Sociomatic recently spread its&nbsp;
-              <span className="text-primary font-medium">wings to Dubai</span>,
-              adding a new chapter to its Journey. We envision Sociomatic as a
+              <Link
+                href="https://drive.google.com/file/d/1g6Vz623OdZHR_YtJfUbDUIXyxIH_K513/view?usp=sharing"
+                passHref={true}
+                target="_blank"
+                className="text-secondary underline font-medium"
+              >
+                wings to Dubai
+              </Link>
+              , adding a new chapter to its Journey. We envision Sociomatic as a
               catalyst for brands in Dubai, propelling them to new heights in
               the digital realm
             </p>

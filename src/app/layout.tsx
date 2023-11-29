@@ -7,6 +7,7 @@ import GotoTop from "@/components/molecule/go-to-top";
 import { Toaster } from "@/components/ui/toaster";
 import WhatsApp from "@/components/molecule/whatsapp";
 import CookiePolicyNotificationBar from "@/components/molecule/cookie-policy";
+import Script from "next/script";
 // import CookiePolicyNotificationBar from "@/components/molecule/cookie-policy";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -24,6 +25,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Script src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID" />
+      <Script id="google-analytics">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+ 
+          gtag('config', 'GA_MEASUREMENT_ID');
+        `}
+      </Script>
       <body className={inter.className}>
         <div className="py-2 text-center bg-pink-700 text-white animate-pulse">
           This site is under maintenance
