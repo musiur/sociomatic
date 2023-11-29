@@ -44,16 +44,15 @@ const ProductCards = ({ params }: { params: { slug: string } }) => {
                       {title}
                     </h5>
                     <p>{description}</p>
-                    {params.slug.includes("ui-ux-and-graphic-design") ? (
-                      <GetAQuote />
-                    ) : (
+                    <GetAQuote />
+                    {!params.slug.includes("ui-ux-and-graphic-design") ? (
                       <Link href={link} passHref={true} target="_blank">
                         <Button variant={"outline"} className="group gap-[8px]">
                           Explore&nbsp;
                           <MoveRight className="stroke-[1.3px] w-[16px] stroke-primary group-hover:stroke-secondary" />
                         </Button>
                       </Link>
-                    )}
+                    ) : null}
                   </div>
                 </div>
               );
@@ -71,37 +70,37 @@ const WordpressProducts = [
   [
     {
       id: 1,
-      image: "bg-[url('/images/projects/wordpress/project.png')]",
-      title: "WellDev",
+      image: "bg-[url('/images/projects/wordpress/pest.png')]",
+      title: "Erase Pest Control Australia",
       description:
-        "Incididunt minim id dolor et sint esse. Tempor occaecat ex dolore nisi enim nulla labore dolore. In laboris cillum et pariatur ut fugiat dolor ad id occaecat. Et reprehenderit      adipisicing non aliquip.",
-      link: "",
+        "Erase Pest Control's website is a one-stop solution for pest management services in Australia. The site showcases their expertise, services, and commitment to a pest-free environment.",
+      link: "https://www.erasepestcontrol.com.au/?utm_source=google&utm_medium=organic",
     },
     {
       id: 2,
-      image: "bg-[url('/images/projects/wordpress/project.png')]",
-      title: "WellDev",
+      image: "bg-[url('/images/projects/wordpress/health.png')]",
+      title: "Sante Family Dental Canada",
       description:
-        "Incididunt minim id dolor et sint esse. Tempor occaecat ex dolore nisi enim nulla labore dolore. In laboris cillum et pariatur ut fugiat dolor ad id occaecat. Et reprehenderit      adipisicing non aliquip.",
-      link: "",
+        "Sante Family Dental's website is a friendly digital space reflecting their dental care services in Canada. The site emphasizes family-friendly dentistry and highlights its commitment to oral health.",
+      link: "https://santefamilydental.ca/?utm_source=google&utm_medium=organic",
     },
   ],
   [
     {
       id: 1,
-      image: "bg-[url('/images/projects/wordpress/project.png')]",
-      title: "WellDev",
+      image: "bg-[url('/images/projects/wordpress/furniture.png')]",
+      title: "John Sankey UK",
       description:
-        "Incididunt minim id dolor et sint esse. Tempor occaecat ex dolore nisi enim nulla labore dolore. In laboris cillum et pariatur ut fugiat dolor ad id occaecat. Et reprehenderit      adipisicing non aliquip.",
-      link: "",
+        "John Sankey's website is a virtual showcase of bespoke furniture craftsmanship in the UK. The site captures the essence of its high-quality, handcrafted furniture, portraying a blend of tradition and contemporary design.",
+      link: "https://www.johnsankey.co.uk/?utm_source=google&utm_medium=organic",
     },
     {
       id: 2,
-      image: "bg-[url('/images/projects/wordpress/project.png')]",
-      title: "WellDev",
+      image: "bg-[url('/images/projects/wordpress/fish.png')]",
+      title: "One Fisherman UK",
       description:
-        "Incididunt minim id dolor et sint esse. Tempor occaecat ex dolore nisi enim nulla labore dolore. In laboris cillum et pariatur ut fugiat dolor ad id occaecat. Et reprehenderit      adipisicing non aliquip.",
-      link: "",
+        "One Fisherman's website immerses visitors in the UK fishing world. From fishing gear to tips and insights, the site is a haven for fishing enthusiasts, providing valuable information and a sense of community.",
+      link: "https://onefisherman.co.uk/?utm_source=google&utm_medium=organic",
     },
   ],
 ];
