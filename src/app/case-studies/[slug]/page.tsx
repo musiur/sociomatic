@@ -807,7 +807,7 @@ const SocialMediaPaidAdsCaseStudyPageData = {
       id: 4,
       image: (
         <div
-          className={`bg-[url('/images/pages/case-studies/image1.png')] min-h-[50vh] w-full bg-contain bg-no-repeat bg-center`}
+          className={`bg-[url('/images/pages/case-studies/image13.png')] min-h-[50vh] w-full bg-contain bg-no-repeat bg-center`}
         ></div>
       ),
       brand: "Photoshoot Dubai Escape's Success Story",
