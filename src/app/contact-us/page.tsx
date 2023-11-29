@@ -16,12 +16,14 @@ import { useState } from "react";
 //   SelectValue,
 // } from "@/components/ui/select";
 import ErrorMessages from "@/components/molecule/errors-messages";
-// import SendEmail from "@/lib/resend";
 import Loader from "@/components/molecule/loader";
 import { useToast } from "@/components/ui/use-toast";
 import { useRouter } from "next/navigation";
 import { Building, MessageCircle, Phone } from "lucide-react";
 // import { EmailRegex, FullNameRegex } from "@/lib/regexes";
+import { EmailTemplate } from "@/components/molecule/email-template";
+import { Resend } from "resend";
+const resend = new Resend("re_MW99tPLg_9WZjLQaDWXP5tUUfb3mMA9A6");
 
 const ContactUs = () => {
   const { toast } = useToast();
@@ -41,6 +43,22 @@ const ContactUs = () => {
   const [errors, setErrors] = useState<any>({});
   const [captcha, setCaptcha] = useState(false);
 
+  // testing api route
+  const SendEmail = async (formData: any) => {
+    try {
+      ("use server");
+      const response = await resend.emails.send({
+        from: formData.email || "musiur.opu@gmail.com",
+        to: "musiuralamo@gmail.com",
+        subject: "Sociomatic - Contact",
+        react: <EmailTemplate firstName={formData.name || "John"} />,
+      });
+      console.log(response, "<---");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   const handleOnChange = (e: any) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -52,16 +70,17 @@ const ContactUs = () => {
     if (Object.keys(validationErrors).length === 0) {
       console.log(formData);
       try {
+        SendEmail(formData);
         toast({
           title: "Messange Sending",
           description: "Successful!",
         });
         setLoading(false);
-        setTimeout(() => {
-          if (window) {
-            window.location.reload();
-          }
-        }, 3000);
+        // setTimeout(() => {
+        //   if (window) {
+        //     window.location.reload();
+        //   }
+        // }, 3000);
       } catch (error: any) {
         toast({
           variant: "destructive",
