@@ -5,6 +5,7 @@ import ShortReviews from "@/components/molecule/short-reviews";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
+  ArrowUpRight,
   Clock,
   Globe,
   MessageCircle,
@@ -311,9 +312,9 @@ const AboutUS = () => {
                 href="https://drive.google.com/file/d/1g6Vz623OdZHR_YtJfUbDUIXyxIH_K513/view?usp=sharing"
                 passHref={true}
                 target="_blank"
-                className="text-secondary underline font-medium"
+                className="text-secondary hover:underline font-medium inline-flex items-center group gap-[2px]"
               >
-                wings to Dubai
+                wings to Dubai <ArrowUpRight className="w-[12px] h-[12px] stroke-secondary group-hover:mb-2 transition ease-in-out duration-500"/>
               </Link>
               , adding a new chapter to its Journey. We envision Sociomatic as a
               catalyst for brands in Dubai, propelling them to new heights in
