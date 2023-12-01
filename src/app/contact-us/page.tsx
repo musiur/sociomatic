@@ -20,10 +20,10 @@ import Loader from "@/components/molecule/loader";
 import { useToast } from "@/components/ui/use-toast";
 import { useRouter } from "next/navigation";
 import { Building, MessageCircle, Phone } from "lucide-react";
+import axios from "axios";
+import Link from "next/link";
+
 // import { EmailRegex, FullNameRegex } from "@/lib/regexes";
-import { EmailTemplate } from "@/components/molecule/email-template";
-import { Resend } from "resend";
-const resend = new Resend("re_MW99tPLg_9WZjLQaDWXP5tUUfb3mMA9A6");
 
 const ContactUs = () => {
   const { toast } = useToast();
@@ -46,22 +46,23 @@ const ContactUs = () => {
   // testing api route
   const SendEmail = async (formData: any) => {
     try {
-      ("use server");
-      const response = await resend.emails.send({
-        // from: formData.email || "musiuralamo@gmail.com",
-        from: "hello@thesociomatic.com",
-        to: "musiur.opu@gmail.com",
-        subject: "Sociomatic - Contact",
-        react: <EmailTemplate name={formData.name || "John"} />,
-      });
+      const response = await axios.post(
+        "https://thesociomatic.com/api/send",
+        formData,
+        {
+          headers: {
+            "Content-type": "application/json",
+          },
+        }
+      );
       console.log(response);
       toast({
         title: "Message Sending",
         description: "Successful! Mail send successfully.",
       });
-      setTimeout(() => {
-        window.location.reload();
-      }, 5000);
+      // setTimeout(() => {
+      //   window.location.reload();
+      // }, 5000);
     } catch (error) {
       console.log(error);
       toast({
@@ -167,12 +168,18 @@ const ContactUs = () => {
                 <h3 className="text-[16px] lg:text-[20px] font-bold text-white">
                   {item.title}
                 </h3>
-                <p className="text-white">{item.info}</p>
+                {item.id === 2 || item.id === 0 ? (
+                  <Link href={`tel:${item.info}`} className="text-white">
+                    {item.info}
+                  </Link>
+                ) : (
+                  <p className="text-white">{item.info}</p>
+                )}
               </div>
             );
           })}
         </div>
-        <div className="mx-auto pt-[50px] grid grid-cols-1 large-gap bg-white">
+        <div className="mx-auto pt-[50px] grid grid-cols-1 large-gap">
           <div className="flex flex-col small-gap">
             <h4 className="text-xl md:text-2xl font-bold text-primary">
               Get in Touch With Us
@@ -277,7 +284,7 @@ const ContactUs = () => {
             <Button
               variant={"secondary"}
               className="mt-5 max-w-[300px]"
-              disabled={!captcha}
+              // disabled={!captcha}
               onClick={handleOnSubmit}
             >
               {loading ? <Loader /> : "Submit"}
