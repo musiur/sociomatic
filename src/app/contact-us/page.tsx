@@ -48,10 +48,10 @@ const ContactUs = () => {
     try {
       ("use server");
       const response = await resend.emails.send({
-        from: formData.email || "musiur.opu@gmail.com",
-        to: "musiuralamo@gmail.com",
+        from: formData.email || "musiuralamo@gmail.com",
+        to: "musiur.opu@gmail.com",
         subject: "Sociomatic - Contact",
-        react: <EmailTemplate firstName={formData.name || "John"} />,
+        react: <EmailTemplate name={formData.name || "John"} />,
       });
       console.log(response);
       toast({
@@ -65,7 +65,7 @@ const ContactUs = () => {
       console.log(error);
       toast({
         variant: "error",
-        title: "Messange Sending",
+        title: "Messang Sending",
         description: "Failed! Something went wrong.",
       });
     }
@@ -276,7 +276,7 @@ const ContactUs = () => {
             <Button
               variant={"secondary"}
               className="mt-5 max-w-[300px]"
-              // disabled={!captcha}
+              disabled={!captcha}
               onClick={handleOnSubmit}
             >
               {loading ? <Loader /> : "Submit"}
