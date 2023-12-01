@@ -48,7 +48,8 @@ const ContactUs = () => {
     try {
       ("use server");
       const response = await resend.emails.send({
-        from: formData.email || "musiuralamo@gmail.com",
+        // from: formData.email || "musiuralamo@gmail.com",
+        from: "onboarding@resend.dev",
         to: "musiur.opu@gmail.com",
         subject: "Sociomatic - Contact",
         react: <EmailTemplate name={formData.name || "John"} />,
