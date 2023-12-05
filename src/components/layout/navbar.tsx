@@ -138,7 +138,7 @@ const Navbar = () => {
                                     : "text-primary"
                                 }`}
                               >
-                                {linkItem.text}{" "}
+                                {linkItem.text}
                                 <CaretSortIcon className="h-4 w-4" />
                               </CollapsibleTrigger>
                               <CollapsibleContent>
@@ -314,11 +314,16 @@ const Links = [
   },
   {
     id: 4,
+    text: "Reviews",
+    link: "/reviews",
+  },
+  {
+    id: 5,
     text: "About us",
     link: "/about-us",
   },
   {
-    id: 5,
+    id: 6,
     text: "Contact us",
     link: "/contact-us",
   },
