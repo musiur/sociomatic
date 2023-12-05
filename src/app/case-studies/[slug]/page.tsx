@@ -1,8 +1,10 @@
+import UiUxTabLayout from "@/components/layout/uiuxtab-layout";
 import GetAQuote from "@/components/molecule/get-a-quote";
 import GetConsultation from "@/components/molecule/get-consultation";
 import ProductCards from "@/components/molecule/product-cards";
 import { Button } from "@/components/ui/button";
 import { BadgeCheck, Frown, Smile } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 const CaseStudies = ({ params }: { params: { slug: string } }) => {
@@ -26,15 +28,49 @@ const CaseStudies = ({ params }: { params: { slug: string } }) => {
   } else if (params.slug.includes("ui-ux-and-graphic-design")) {
     data = GoogleAdsCaseStudyPageData;
   }
+  const LogoImageLinks = [];
+  for (let i = 1; i <= 26; i++) {
+    LogoImageLinks.push(`image (${i}).webp`);
+  }
   return (
     <div>
       {params.slug.includes("software-development") ||
       params.slug.includes("custom-web-development") ||
       params.slug.includes("wordpress-development") ||
       params.slug.includes("ui-ux-and-graphic-design") ? (
-        <section className="container section">
-          <ProductCards params={params} />
-        </section>
+        <>
+          {params.slug.includes("ui-ux-and-graphic-design") ? (
+            <UiUxTabLayout>
+              <div className="container section">
+                <ProductCards params={params} />
+              </div>
+              <div className="container section">
+                <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-5 mb-10">
+                  {LogoImageLinks.map((item: string) => {
+                    return (
+                      <div key={item}>
+                        <Image
+                          src={`/images/projects/uiux/logo/${item}`}
+                          alt={`Logo: ${item}`}
+                          width={500}
+                          height={500}
+                          className="w-full h-auto border rounded-[16px] lg:rounded-[32px] hover:shadow-lg"
+                        />
+                      </div>
+                    );
+                  })}
+                </div>
+                <div className="flex items-center justify-center">
+                  <GetAQuote />
+                </div>
+              </div>
+            </UiUxTabLayout>
+          ) : (
+            <section className="container section">
+              <ProductCards params={params} />
+            </section>
+          )}
+        </>
       ) : (
         <section className="section grid grid-cols-1 large-gap">
           <div className="max-w-[600px] mx-auto px-5 flex flex-col small-gap items-center justify-center text-center">
