@@ -131,7 +131,7 @@ const ContactUs = () => {
       id: 0,
       icon: <Phone />,
       title: "Make a Call",
-      info: "+880142685805",
+      info: "+971507477541",
     },
     {
       id: 1,
@@ -284,7 +284,7 @@ const ContactUs = () => {
             <Button
               variant={"secondary"}
               className="mt-5 max-w-[300px]"
-              // disabled={!captcha}
+              disabled={!captcha}
               onClick={handleOnSubmit}
             >
               {loading ? <Loader /> : "Submit"}
