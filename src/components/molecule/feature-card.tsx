@@ -43,7 +43,7 @@ const FeatureCard = ({
         </ul>
 
         {
-          link ? <Link href={link}>Learn more</Link> : null
+          link ? <Link href={link} className="text-secondary hover:text-secondary/70 hover:underline">Learn more</Link> : null
         }
       </div>
     </div>

@@ -131,12 +131,12 @@ export const homeFeaturesData = [
       </>
     ),
     list: ["Research on project", "Wireframe & prototype", "Responsive design"],
-    link: "/services/shopify-store-development",
+    link: "/services/ui-ux-and-graphic-design",
   },
   {
     id: 8,
     image: <Feather />,
-    title: "Search Engine Optimization (SEO)",
+    title: "Content Writing & SEO",
     description: (
       <>
         Crafting <span>custom</span>, user-friendly websites using the power of
@@ -148,25 +148,25 @@ export const homeFeaturesData = [
       "Plugin Integration and Functionality",
       "Security and Maintenance",
     ],
-    link: "/services/shopify-store-development",
+    link: "/services/content-writing-and-seo",
   },
-  {
-    id: 9,
-    image: <Contents />,
-    title: "Content Development",
-    description: (
-      <>
-        Crafting <span>high-converting</span> Shopify stores for your e-commerce
-        success.
-      </>
-    ),
-    list: [
-      "Custom Store Design",
-      "Product and Inventory Management",
-      "Payment and Security Integration",
-    ],
-    link: "/services/shopify-store-development",
-  },
+  // {
+  //   id: 9,
+  //   image: <Contents />,
+  //   title: "Content Development",
+  //   description: (
+  //     <>
+  //       Crafting <span>high-converting</span> Shopify stores for your e-commerce
+  //       success.
+  //     </>
+  //   ),
+  //   list: [
+  //     "Custom Store Design",
+  //     "Product and Inventory Management",
+  //     "Payment and Security Integration",
+  //   ],
+  //   link: "/services/shopify-store-development",
+  // },
 ];
 
 export const homeTestimonialData = {
