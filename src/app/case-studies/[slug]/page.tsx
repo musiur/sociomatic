@@ -7,11 +7,7 @@ import { BadgeCheck, Frown, Smile } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-const CaseStudies = ({
-  params,
-}: {
-  params: { slug: string };
-}) => {
+const CaseStudies = ({ params }: { params: { slug: string } }) => {
   let data: any = GoogleAdsCaseStudyPageData;
   if (params.slug.includes("google-paid-ads")) {
     data = GoogleAdsCaseStudyPageData;
