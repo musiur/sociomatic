@@ -239,9 +239,9 @@ const GetAQuotePage = () => {
                     <SelectValue placeholder="Select budget range" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="$500-1000">$500-1000</SelectItem>
                     <SelectItem value="$1000-1500">$1000-1500</SelectItem>
-                    <SelectItem value="$2000+">$2000+</SelectItem>
+                    <SelectItem value="$1500-2000">$1500-2000</SelectItem>
+                    <SelectItem value="$2500+">$2500+</SelectItem>
                   </SelectContent>
                 </Select>
                 <ErrorMessages errors={errors} name="budgetRange" />
