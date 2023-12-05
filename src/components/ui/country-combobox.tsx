@@ -61,6 +61,7 @@ const CountryCombobox = ({ onChange }: { onChange: Function }) => {
                   });
                   setOpen(false);
                 }}
+                className={country.value === "canada" ? "border-b pb-2 mb-2" : ""}
               >
                 <Check
                   className={cn(
@@ -81,6 +82,11 @@ const CountryCombobox = ({ onChange }: { onChange: Function }) => {
 export default CountryCombobox;
 
 const countries = [
+  "United States of America",
+  "United Arab Emirates",
+  "United Kingdom",
+  "Australia",
+  "Canada",
   "Afghanistan",
   "Albania",
   "Algeria",
@@ -89,7 +95,6 @@ const countries = [
   "Antigua and Barbuda",
   "Argentina",
   "Armenia",
-  "Australia",
   "Austria",
   "Azerbaijan",
   "Bahamas",
@@ -112,7 +117,6 @@ const countries = [
   "Cabo Verde",
   "Cambodia",
   "Cameroon",
-  "Canada",
   "Central African Republic",
   "Chad",
   "Chile",
@@ -263,9 +267,6 @@ const countries = [
   "Tuvalu",
   "Uganda",
   "Ukraine",
-  "United Arab Emirates",
-  "United Kingdom",
-  "United States of America",
   "Uruguay",
   "Uzbekistan",
   "Vanuatu",

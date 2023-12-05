@@ -193,13 +193,6 @@ const GetAQuotePage = () => {
             </div>
             <div className="grid w-full items-center gap-1.5">
               <Label htmlFor="country">Country</Label>
-              {/* <Input
-                type="country"
-                id="country"
-                placeholder="Country"
-                name="country"
-                onChange={handleOnChange}
-              /> */}
               <CountryCombobox onChange={handleOnChange} />
             </div>
             <div className="grid w-full items-center gap-1.5">
