@@ -60,9 +60,9 @@ const ContactUs = () => {
         title: "Message Sending",
         description: "Successful! Mail send successfully.",
       });
-      // setTimeout(() => {
-      //   window.location.reload();
-      // }, 5000);
+      setTimeout(() => {
+        window.location.reload();
+      }, 3000);
     } catch (error) {
       console.log(error);
       toast({
