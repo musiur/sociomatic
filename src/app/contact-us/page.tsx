@@ -46,16 +46,16 @@ const ContactUs = () => {
   // testing api route
   const SendEmail = async (formData: any) => {
     try {
-      const response = await axios.post(
-        "https://thesociomatic.com/api/send",
-        formData,
-        {
-          headers: {
-            "Content-type": "application/json",
-          },
-        }
-      );
-      console.log(response);
+      // const response = await axios.post(
+      //   "https://thesociomatic.com/api/send",
+      //   formData,
+      //   {
+      //     headers: {
+      //       "Content-type": "application/json",
+      //     },
+      //   }
+      // );
+      // console.log(response);
       toast({
         title: "Message Sending",
         description: "Successful! Mail send successfully.",
