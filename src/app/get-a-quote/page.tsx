@@ -21,6 +21,7 @@ import Loader from "@/components/molecule/loader";
 import { useToast } from "@/components/ui/use-toast";
 import { useRouter } from "next/navigation";
 import ShortReviews from "@/components/molecule/short-reviews";
+import CountryCombobox from "@/components/ui/country-combobox";
 
 const GetAQuotePage = () => {
   const { toast } = useToast();
@@ -36,6 +37,7 @@ const GetAQuotePage = () => {
     companyURL: "",
     budgetRange: "",
     services: [],
+    message: "",
   });
   const [errors, setErrors] = useState<any>({});
   const [captcha, setCaptcha] = useState(false);
@@ -49,15 +51,14 @@ const GetAQuotePage = () => {
     const validationErrors = validation();
 
     if (Object.keys(validationErrors).length === 0) {
-      console.log(formData);
       try {
         // SendEmail(formData);
+        console.log(formData)
         toast({
-          title: "Messange Sending",
+          title: "Message Sending",
           description: "Successful!",
         });
         setLoading(false);
-        // router.refresh();
         setTimeout(() => {
           if (window) {
             window.location.reload();
@@ -86,6 +87,9 @@ const GetAQuotePage = () => {
     }
     if (!formData.phone.trim()) {
       obj.phone = "Phone is required!";
+    }
+    if (!formData.message.trim()) {
+      obj.message = "Message is required!";
     }
     if (
       formData.services.length < 1 ||
@@ -189,13 +193,14 @@ const GetAQuotePage = () => {
             </div>
             <div className="grid w-full items-center gap-1.5">
               <Label htmlFor="country">Country</Label>
-              <Input
+              {/* <Input
                 type="country"
                 id="country"
                 placeholder="Country"
                 name="country"
                 onChange={handleOnChange}
-              />
+              /> */}
+              <CountryCombobox onChange={handleOnChange} />
             </div>
             <div className="grid w-full items-center gap-1.5">
               <Label htmlFor="companyName">Company Name</Label>
@@ -221,7 +226,7 @@ const GetAQuotePage = () => {
           <div className="flex flex-col small-gap overflow-hidden">
             {currentTab !== 1 ? (
               <div className="flex flex-col gap-1.5">
-                <Label htmlFor="message">
+                <Label htmlFor="budget">
                   Probable budget range&nbsp;
                   <span className="text-pink-600 font-bold">*</span>
                 </Label>
@@ -284,13 +289,17 @@ const GetAQuotePage = () => {
               <ErrorMessages errors={errors} name="services" />
             </div>
             <div className="grid w-full gap-1.5">
-              <Label htmlFor="message">Your message</Label>
+              <Label htmlFor="message">
+                Your message&nbsp;
+                <span className="text-pink-600 font-bold">*</span>
+              </Label>
               <Textarea
                 placeholder="Type your message here."
                 id="message"
                 name="message"
                 onChange={handleOnChange}
               />
+              <ErrorMessages errors={errors} name="message" />
             </div>
             <ReCAPTCHA
               sitekey={process.env.siteKey!}
