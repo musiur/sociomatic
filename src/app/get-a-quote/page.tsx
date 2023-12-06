@@ -48,6 +48,7 @@ const GetAQuotePage = () => {
     const validationErrors = validation();
 
     if (Object.keys(validationErrors).length === 0) {
+      setLoading(true)
       try {
         const response = await axios.post(
           "https://sociomatic-backend.onrender.com/auth/receive-mail",
