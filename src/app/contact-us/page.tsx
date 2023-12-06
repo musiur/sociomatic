@@ -10,16 +10,12 @@ import { useState } from "react";
 import ErrorMessages from "@/components/molecule/errors-messages";
 import Loader from "@/components/molecule/loader";
 import { useToast } from "@/components/ui/use-toast";
-import { useRouter } from "next/navigation";
 import { Building, MessageCircle, Phone } from "lucide-react";
 import axios from "axios";
 import Link from "next/link";
 
-// import { EmailRegex, FullNameRegex } from "@/lib/regexes";
-
 const ContactUs = () => {
   const { toast } = useToast();
-  const router = useRouter();
   const [currentTab, setCurrentTab] = useState(1);
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState<any>({
@@ -34,6 +30,7 @@ const ContactUs = () => {
 
   // testing api route
   const SendEmail = async (formData: any) => {
+    setLoading(true);
     try {
       const response = await axios.post(
         "https://sociomatic-backend.onrender.com/auth/receive-mail",
@@ -49,12 +46,14 @@ const ContactUs = () => {
           title: "Message Sending",
           description: "Successful! Mail send successfully.",
         });
+        setLoading(false);
         setTimeout(() => {
           window.location.reload();
         }, 5000);
       }
     } catch (error) {
       console.log(error);
+      setLoading(false);
       toast({
         variant: "error",
         title: "Message Sending",
@@ -68,17 +67,13 @@ const ContactUs = () => {
     setFormData({ ...formData, [name]: value });
   };
   const handleOnSubmit = () => {
-    setLoading(true);
     const validationErrors = validation();
 
     if (Object.keys(validationErrors).length === 0) {
       SendEmail(formData);
-      setLoading(false);
     } else {
       setErrors(validationErrors);
     }
-
-    setLoading(false);
   };
 
   const validation = () => {
