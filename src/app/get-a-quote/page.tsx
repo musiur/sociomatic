@@ -20,6 +20,7 @@ import Loader from "@/components/molecule/loader";
 import { useToast } from "@/components/ui/use-toast";
 import ShortReviews from "@/components/molecule/short-reviews";
 import CountryCombobox from "@/components/ui/country-combobox";
+import axios from "axios";
 
 const GetAQuotePage = () => {
   const { toast } = useToast();
@@ -43,22 +44,30 @@ const GetAQuotePage = () => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
-  const handleOnSubmit = () => {
-    setLoading(true);
+  const handleOnSubmit = async () => {
     const validationErrors = validation();
 
     if (Object.keys(validationErrors).length === 0) {
       try {
-        toast({
-          title: "Message Sending",
-          description: "Successful!",
-        });
-        setLoading(false);
-        setTimeout(() => {
-          if (window) {
-            window.location.reload();
+        const response = await axios.post(
+          "https://sociomatic-backend.onrender.com/auth/receive-mail",
+          formData,
+          {
+            headers: {
+              "Content-type": "application/json",
+            },
           }
-        }, 3000);
+        );
+        if (response.status === 200) {
+          toast({
+            title: "Message Sending",
+            description: "Successful! Mail send successfully.",
+          });
+          setLoading(false);
+          setTimeout(() => {
+            window.location.reload();
+          }, 5000);
+        }
       } catch (error: any) {
         toast({
           variant: "destructive",
@@ -69,8 +78,6 @@ const GetAQuotePage = () => {
     } else {
       setErrors(validationErrors);
     }
-
-    setLoading(false);
   };
   const validation = () => {
     let obj: any = {};
