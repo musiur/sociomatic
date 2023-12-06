@@ -39,7 +39,7 @@ const ContactUs = () => {
   const SendEmail = async (formData: any) => {
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/send",
+        "http://thesociomatic.com/api/send",
         formData,
         {
           headers: {
