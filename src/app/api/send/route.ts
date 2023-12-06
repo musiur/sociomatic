@@ -21,7 +21,7 @@ export async function POST(request: Request, response: Response) {
     const Cors = require("cors");
     const cors = Cors({
       methods: ["POST", "GET", "HEAD"],
-      allowedOrigin: "*",
+      allowedOrigin: ["https://www.thesociomatic.com"],
     });
 
     await runMiddleware(request, response, cors);
