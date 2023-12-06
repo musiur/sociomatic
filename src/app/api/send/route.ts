@@ -6,7 +6,7 @@ export async function POST(request: Request) {
     const origin = request.headers.get("origin");
     if (
       origin &&
-      !["http://localhost:3000", "https://thesociomatic.com"].includes(origin)
+      !["http://localhost:3000", "https://thesociomatic.com", "https://www.thesociomatic.com"].includes(origin)
     ) {
       return new NextResponse(null, {
         status: 400,
