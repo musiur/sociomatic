@@ -16,16 +16,13 @@ import {
 } from "@/components/ui/select";
 import ErrorMessages from "@/components/molecule/errors-messages";
 
-// import SendEmail from "@/lib/resend";
 import Loader from "@/components/molecule/loader";
 import { useToast } from "@/components/ui/use-toast";
-import { useRouter } from "next/navigation";
 import ShortReviews from "@/components/molecule/short-reviews";
 import CountryCombobox from "@/components/ui/country-combobox";
 
 const GetAQuotePage = () => {
   const { toast } = useToast();
-  const router = useRouter();
   const [currentTab, setCurrentTab] = useState(1);
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState<any>({
@@ -52,8 +49,6 @@ const GetAQuotePage = () => {
 
     if (Object.keys(validationErrors).length === 0) {
       try {
-        // SendEmail(formData);
-        console.log(formData)
         toast({
           title: "Message Sending",
           description: "Successful!",

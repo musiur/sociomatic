@@ -10,36 +10,30 @@ import { useState } from "react";
 import ErrorMessages from "@/components/molecule/errors-messages";
 import Loader from "@/components/molecule/loader";
 import { useToast } from "@/components/ui/use-toast";
-import { useRouter } from "next/navigation";
 import { Building, MessageCircle, Phone } from "lucide-react";
 import axios from "axios";
 import Link from "next/link";
 
-// import { EmailRegex, FullNameRegex } from "@/lib/regexes";
-
 const ContactUs = () => {
   const { toast } = useToast();
-  const router = useRouter();
   const [currentTab, setCurrentTab] = useState(1);
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState<any>({
     name: "",
     email: "",
     phone: "",
-    country: "",
-    companyName: "",
-    companyURL: "",
-    budgetRange: "",
     services: [],
+    message: ""
   });
   const [errors, setErrors] = useState<any>({});
   const [captcha, setCaptcha] = useState(false);
 
   // testing api route
   const SendEmail = async (formData: any) => {
+    setLoading(true);
     try {
       const response = await axios.post(
-        "https://thesociomatic.com/api/send",
+        "https://sociomatic-backend.onrender.com/auth/receive-mail",
         formData,
         {
           headers: {
@@ -47,18 +41,19 @@ const ContactUs = () => {
           },
         }
       );
-      console.log(response);
       if (response.status === 200) {
         toast({
           title: "Message Sending",
           description: "Successful! Mail send successfully.",
         });
-        // setTimeout(() => {
-        //   window.location.reload();
-        // }, 5000);
+        setLoading(false);
+        setTimeout(() => {
+          window.location.reload();
+        }, 5000);
       }
     } catch (error) {
       console.log(error);
+      setLoading(false);
       toast({
         variant: "error",
         title: "Message Sending",
@@ -72,17 +67,13 @@ const ContactUs = () => {
     setFormData({ ...formData, [name]: value });
   };
   const handleOnSubmit = () => {
-    setLoading(true);
     const validationErrors = validation();
 
     if (Object.keys(validationErrors).length === 0) {
       SendEmail(formData);
-      setLoading(false);
     } else {
       setErrors(validationErrors);
     }
-
-    setLoading(false);
   };
 
   const validation = () => {
@@ -91,15 +82,9 @@ const ContactUs = () => {
     if (!formData.name.trim()) {
       obj.name = "Name is required!";
     }
-    //  else if (!FullNameRegex.test(formData.name)) {
-    //   obj.name = "Invalid name!";
-    // }
     if (!formData.email.trim()) {
       obj.email = "Email is required!";
     }
-    // else if (EmailRegex.test(formData.email)) {
-    //   obj.email = "Invalid email!";
-    // }
 
     if (!formData.phone.trim()) {
       obj.phone = "Phone is required!";
