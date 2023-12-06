@@ -1,27 +1,35 @@
-import VercelInviteUserEmail from "@/components/molecule/email-template";
 import { NextResponse } from "next/server";
-import { Resend } from "resend";
-
-const resend = new Resend(process.env.NEXT_RESEND_API_KEY);
 
 export async function POST(request: Request) {
   try {
     const body = await request.json();
     const { email, name, message, phone, services } = body;
-    const data = await resend.emails.send({
-      from: 'The Sociomatic Contact <hello@thesociomatic.com>',
-      to: ["musiur.opu@gmail.com"],
-      subject: "Contact Us - Sociomatic",
-      react: `
-        Name: ${name}
-        Phone: ${phone}
-        Email: ${email}
-        services: ${services}
-        message: ${message}
-      `,
-    });
 
-    return NextResponse.json(data);
+    const nodemailer = require("nodemailer");
+    const personalMailServerTransporter = nodemailer.createTransport({
+      host: process.env.NEXT_HOST,
+      port: 465,
+      secure: true,
+      auth: {
+        user: process.env.NEXT_USER,
+        pass: process.env.NEXT_PASSWORD,
+      },
+    });
+    
+    const mailOptions = {
+      from: process.env.NEXT_PASSWORD,
+      to: process.env.NEXT_PASSWORD,
+      replyTo: email,
+      subject: "Sociomatic - Contact Form",
+      text: `name: ${name}; phone: ${phone}; services: ${services}; message: ${message}`,
+    };
+
+    const personalServerInfo = await personalMailServerTransporter.sendMail(
+      mailOptions
+    );
+    console.log("Email sent to personal mail server:", personalServerInfo);
+
+    return NextResponse.json({ message: "Email sent successfully" });
   } catch (error) {
     return NextResponse.json({ error });
   }
