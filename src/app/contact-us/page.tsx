@@ -1,20 +1,12 @@
 "use client";
 
 import ReCAPTCHA from "react-google-recaptcha";
-// import SectionHead from "@/components/molecule/section-head";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
-// import {
-//   Select,
-//   SelectContent,
-//   SelectItem,
-//   SelectTrigger,
-//   SelectValue,
-// } from "@/components/ui/select";
 import ErrorMessages from "@/components/molecule/errors-messages";
 import Loader from "@/components/molecule/loader";
 import { useToast } from "@/components/ui/use-toast";
@@ -46,28 +38,28 @@ const ContactUs = () => {
   // testing api route
   const SendEmail = async (formData: any) => {
     try {
-      // const response = await axios.post(
-      //   "https://thesociomatic.com/api/send",
-      //   formData,
-      //   {
-      //     headers: {
-      //       "Content-type": "application/json",
-      //     },
-      //   }
-      // );
-      // console.log(response);
+      const response = await axios.post(
+        "https://thesociomatic.com/api/send",
+        formData,
+        {
+          headers: {
+            "Content-type": "application/json",
+          },
+        }
+      );
+      console.log(response);
       toast({
         title: "Message Sending",
         description: "Successful! Mail send successfully.",
       });
       setTimeout(() => {
         window.location.reload();
-      }, 3000);
+      }, 5000);
     } catch (error) {
       console.log(error);
       toast({
         variant: "error",
-        title: "Messang Sending",
+        title: "Message Sending",
         description: "Failed! Something went wrong.",
       });
     }

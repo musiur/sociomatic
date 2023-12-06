@@ -77,6 +77,9 @@ dependencies:
   next:
     specifier: 14.0.1
     version: 14.0.1(react-dom@18.2.0)(react@18.2.0)(sass@1.69.5)
+  nodemailer:
+    specifier: ^6.9.7
+    version: 6.9.7
   react:
     specifier: ^18
     version: 18.2.0
@@ -95,9 +98,6 @@ dependencies:
   react-whatsapp:
     specifier: ^0.3.0
     version: 0.3.0
-  resend:
-    specifier: ^2.0.0
-    version: 2.0.0
   sass:
     specifier: ^1.69.5
     version: 1.69.5
@@ -3394,6 +3394,11 @@ packages:
     resolution: {integrity: sha512-uYr7J37ae/ORWdZeQ1xxMJe3NtdmqMC/JZK+geofDrkLUApKRHPd18/TxtBOJ4A0/+uUIliorNrfYV6s1b02eQ==}
     dev: true
 
+  /nodemailer@6.9.7:
+    resolution: {integrity: sha512-rUtR77ksqex/eZRLmQ21LKVH5nAAsVicAtAYudK7JgwenEDZ0UIQ1adUGqErz7sMkWYxWTTU1aeP2Jga6WQyJw==}
+    engines: {node: '>=6.0.0'}
+    dev: false
+
   /nopt@7.2.0:
     resolution: {integrity: sha512-CVDtwCdhYIvnAzFoJ6NJ6dX3oga9/HyciQDnG1vQDjSLMeKLJ4A93ZqYKDrgYSr1FBY5/hMYC+2VCi24pgpkGA==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
@@ -3854,13 +3859,6 @@ packages:
       define-properties: 1.2.1
       set-function-name: 2.0.1
     dev: true
-
-  /resend@2.0.0:
-    resolution: {integrity: sha512-jAh0DN84ZjjmzGM2vMjJ1hphPBg1mG98dzopF7kJzmin62v8ESg4og2iCKWdkAboGOT2SeO5exbr/8Xh8gLddw==}
-    engines: {node: '>=18'}
-    dependencies:
-      '@react-email/render': 0.0.9
-    dev: false
 
   /resolve-from@4.0.0:
     resolution: {integrity: sha512-pb/MYmXstAkysRFx8piNI1tGFNQIFA3vkE3Gq4EuA1dF6gHp/+vgZqsCGJapvy8N3Q+4o7FwvquPJcnZ7RYy4g==}
