@@ -1,30 +1,24 @@
 import { NextResponse } from "next/server";
 
-function runMiddleware(request: Request, response: Response, fn: Function) {
-  return new Promise((resolve, reject) => {
-    fn(request, response, (result: any) => {
-      if (result instanceof Error) {
-        return reject(result);
-      }
-
-      return resolve(result);
-    });
-  });
-}
-
-export async function POST(request: Request, response: Response) {
+export async function POST(request: Request) {
   try {
     const body = await request.json();
+    const origin = request.headers.get("origin");
+    if (
+      origin &&
+      !["http://localhost:3000", "https://thesociomatic.com"].includes(origin)
+    ) {
+      return new NextResponse(null, {
+        status: 400,
+        statusText: "Bad Request",
+        headers: {
+          "Content-Type": "text/plain",
+        },
+      });
+    }
     const { email, name, message, phone, services } = body;
 
     const nodemailer = require("nodemailer");
-    const Cors = require("cors");
-    const cors = Cors({
-      methods: ["POST", "GET", "HEAD"],
-      allowedOrigin: ["https://www.thesociomatic.com"],
-    });
-
-    await runMiddleware(request, response, cors);
 
     const personalMailServerTransporter = nodemailer.createTransport({
       host: process.env.NEXT_HOST,
@@ -37,8 +31,8 @@ export async function POST(request: Request, response: Response) {
     });
 
     const mailOptions = {
-      from: process.env.NEXT_PASSWORD,
-      to: process.env.NEXT_PASSWORD,
+      from: process.env.NEXT_VIA_FROM,
+      to: process.env.NEXT_TO,
       replyTo: email,
       subject: "Sociomatic - Contact Form",
       text: `name: ${name}; phone: ${phone}; services: ${services}; message: ${message}`,
@@ -51,6 +45,7 @@ export async function POST(request: Request, response: Response) {
 
     return NextResponse.json({ message: "Email sent successfully" });
   } catch (error) {
+    console.log(error);
     return NextResponse.json({ error });
   }
 }
