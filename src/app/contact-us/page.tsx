@@ -26,11 +26,8 @@ const ContactUs = () => {
     name: "",
     email: "",
     phone: "",
-    country: "",
-    companyName: "",
-    companyURL: "",
-    budgetRange: "",
     services: [],
+    message: ""
   });
   const [errors, setErrors] = useState<any>({});
   const [captcha, setCaptcha] = useState(false);
@@ -39,7 +36,7 @@ const ContactUs = () => {
   const SendEmail = async (formData: any) => {
     try {
       const response = await axios.post(
-        "https://thesociomatic.com/api/send",
+        "https://sociomatic-backend.onrender.com/auth/receive-mail",
         formData,
         {
           headers: {
@@ -47,15 +44,14 @@ const ContactUs = () => {
           },
         }
       );
-      console.log(response);
       if (response.status === 200) {
         toast({
           title: "Message Sending",
           description: "Successful! Mail send successfully.",
         });
-        // setTimeout(() => {
-        //   window.location.reload();
-        // }, 5000);
+        setTimeout(() => {
+          window.location.reload();
+        }, 5000);
       }
     } catch (error) {
       console.log(error);
@@ -91,15 +87,9 @@ const ContactUs = () => {
     if (!formData.name.trim()) {
       obj.name = "Name is required!";
     }
-    //  else if (!FullNameRegex.test(formData.name)) {
-    //   obj.name = "Invalid name!";
-    // }
     if (!formData.email.trim()) {
       obj.email = "Email is required!";
     }
-    // else if (EmailRegex.test(formData.email)) {
-    //   obj.email = "Invalid email!";
-    // }
 
     if (!formData.phone.trim()) {
       obj.phone = "Phone is required!";

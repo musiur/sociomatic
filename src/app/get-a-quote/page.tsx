@@ -16,7 +16,6 @@ import {
 } from "@/components/ui/select";
 import ErrorMessages from "@/components/molecule/errors-messages";
 
-// import SendEmail from "@/lib/resend";
 import Loader from "@/components/molecule/loader";
 import { useToast } from "@/components/ui/use-toast";
 import { useRouter } from "next/navigation";
