@@ -39,7 +39,7 @@ const ContactUs = () => {
   const SendEmail = async (formData: any) => {
     try {
       const response = await axios.post(
-        "https://thesociomatic.com/api/send",
+        "http://localhost:3000/api/send",
         formData,
         {
           headers: {
@@ -48,13 +48,15 @@ const ContactUs = () => {
         }
       );
       console.log(response);
-      toast({
-        title: "Message Sending",
-        description: "Successful! Mail send successfully.",
-      });
-      setTimeout(() => {
-        window.location.reload();
-      }, 5000);
+      if (response.status === 200) {
+        toast({
+          title: "Message Sending",
+          description: "Successful! Mail send successfully.",
+        });
+        // setTimeout(() => {
+        //   window.location.reload();
+        // }, 5000);
+      }
     } catch (error) {
       console.log(error);
       toast({
