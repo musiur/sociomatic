@@ -163,12 +163,12 @@ const HeadingLinks = [
       {
         id: 0,
         text: "Privacy Policy",
-        link: "/",
+        link: "/privacy-policy",
       },
       {
         id: 1,
         text: "Terms and Conditions",
-        link: "/",
+        link: "/terms-and-conditions",
       },
     ],
   },
