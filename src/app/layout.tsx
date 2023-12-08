@@ -11,7 +11,7 @@ import CookiePolicyNotificationBar from "@/components/molecule/cookie-policy";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Sociomatic",
+  title: "The Sociomatic | Home",
   description:
     "An agency for every aspect in IT industries with all sorts of services from software development to business development.",
 };
@@ -35,6 +35,36 @@ export default function RootLayout({
           `,
           }}
         />
+        <script
+          id="data-layer"
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+
+          function trackPageView() {
+            var pagePath = window.location.pathname;
+            var pageURL = window.location.href;
+            var referrer = document.referrer || 'unknown'; // Default to 'unknown' if no referrer is available
+            var pageHostname = window.location.hostname;
+        
+            window.dataLayer.push({
+              'event': 'pageview',
+              'pagePath': pagePath,
+              'pageURL': pageURL,
+              'referrer': referrer,
+              'pageHostname': pageHostname
+            });
+          }
+        
+          // Call trackPageView on initial page load
+          trackPageView();
+        
+          // Listen for the popstate event to track dynamic page changes
+          window.addEventListener('popstate', function() {
+            // Call trackPageView on dynamic page change
+            trackPageView();
+          });`,
+          }}
+        ></script>
       </head>
       <body className={inter.className}>
         <noscript>

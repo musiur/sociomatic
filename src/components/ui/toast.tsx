@@ -28,7 +28,7 @@ const toastVariants = cva(
     variants: {
       variant: {
         default:
-          "border bg-gradient-to-r from-secondary/20 to-secondary/5 text-secondary backdrop-blur",
+          "border bg-gradient-to-r from-blue-200 to-secondary/5 text-secondary backdrop-blur",
         error:
           "border bg-gradient-to-r from-pink-100 to-pink/50 text-destructive backdrop-blur",
         destructive:
@@ -84,7 +84,7 @@ const ToastClose = React.forwardRef<
     toast-close=""
     {...props}
   >
-    <X className="h-4 w-4" />
+    <X className="h-4 w-4 stroke-red-500" />
   </ToastPrimitives.Close>
 ));
 ToastClose.displayName = ToastPrimitives.Close.displayName;
