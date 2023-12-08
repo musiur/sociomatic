@@ -4,6 +4,7 @@ import SectionHead from "@/components/molecule/section-head";
 import ShortReviews from "@/components/molecule/short-reviews";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { toast } from "@/components/ui/use-toast";
 import {
   ArrowUpRight,
   Clock,
@@ -21,6 +22,8 @@ import ReCAPTCHA from "react-google-recaptcha";
 
 const AboutUS = () => {
   const [captcha, setCaptcha] = useState(false);
+  const [disable, setDisable] = useState(false);
+  const [email, setEmail] = useState("");
   const NumberCards = [
     {
       id: 1,
@@ -314,7 +317,8 @@ const AboutUS = () => {
                 target="_blank"
                 className="text-secondary hover:underline font-medium inline-flex items-center group gap-[2px]"
               >
-                wings to Dubai <ArrowUpRight className="w-[12px] h-[12px] stroke-secondary group-hover:mb-2 transition ease-in-out duration-500"/>
+                wings to Dubai{" "}
+                <ArrowUpRight className="w-[12px] h-[12px] stroke-secondary group-hover:mb-2 transition ease-in-out duration-500" />
               </Link>
               , adding a new chapter to its Journey. We envision Sociomatic as a
               catalyst for brands in Dubai, propelling them to new heights in
@@ -361,7 +365,11 @@ const AboutUS = () => {
             </p>
           </div>
           <div className="flex flex-col small-gap min-w-[300px]">
-            <Input placeholder="Enter your email" />
+            <Input
+              placeholder="Enter your email"
+              defaultValue={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
             <ReCAPTCHA
               sitekey={process.env.siteKey!}
               onChange={(e: any) => {
@@ -369,7 +377,29 @@ const AboutUS = () => {
                 e ? setCaptcha(true) : setCaptcha(false);
               }}
             />
-            <Button disabled={!captcha} variant="secondary">
+            <Button
+              disabled={!captcha || disable}
+              variant="secondary"
+              onClick={() => {
+                setDisable(true);
+                setTimeout(() => {
+                  setDisable(false);
+                }, 1000);
+                console.log("hello")
+                if (email) {
+                  toast({
+                    title: "Request Sending",
+                    description: "Thank you for your subscription!",
+                  });
+                } else {
+                  toast({
+                    variant: "error",
+                    title: "Request Sending",
+                    description: "Opps! Something went wrong.",
+                  });
+                }
+              }}
+            >
               Subscribe
             </Button>
           </div>
