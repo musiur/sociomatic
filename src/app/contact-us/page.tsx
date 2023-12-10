@@ -14,6 +14,27 @@ import { Building, MessageCircle, Phone } from "lucide-react";
 import axios from "axios";
 import Link from "next/link";
 
+
+
+  // // Function to track contact form submissions
+  // function trackContactFormSubmission(formdata: any) {
+  //   if(typeof window !== "undefined"){
+  //     window["dataLayer"] = window?.dataLayer || [];
+  //   var formData = formdata;
+
+  //   window.dataLayer.push({
+  //     'event': 'contactFormSubmission',
+  //     'formName': 'Contact Form',
+  //     'formData': formData
+  //     // Add other necessary parameters for form submission
+  //     // Example: 'formType': 'Contact Us',
+  //     //          'customParameter': 'value',
+  //   });
+  //   }
+  // }
+
+
+
 const ContactUs = () => {
   const { toast } = useToast();
   const [currentTab, setCurrentTab] = useState(1);
@@ -47,9 +68,9 @@ const ContactUs = () => {
           description: "Successful! Mail send successfully.",
         });
         setLoading(false);
-        setTimeout(() => {
-          window.location.reload();
-        }, 5000);
+        // setTimeout(() => {
+        //   window.location.reload();
+        // }, 5000);
       }
     } catch (error) {
       console.log(error);
@@ -66,7 +87,8 @@ const ContactUs = () => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
-  const handleOnSubmit = () => {
+  const handleOnSubmit = (e: any) => {
+    e.preventDefault();
     const validationErrors = validation();
 
     if (Object.keys(validationErrors).length === 0) {
@@ -158,7 +180,7 @@ const ContactUs = () => {
             );
           })}
         </div>
-        <div className="mx-auto pt-[50px] grid grid-cols-1 large-gap">
+        <form className="mx-auto pt-[50px] grid grid-cols-1 large-gap">
           <div className="flex flex-col small-gap">
             <h4 className="text-xl md:text-2xl font-bold text-primary">
               Get in Touch With Us
@@ -265,11 +287,12 @@ const ContactUs = () => {
               className="mt-5 max-w-[300px]"
               disabled={!captcha}
               onClick={handleOnSubmit}
+              type="submit"
             >
               {loading ? <Loader /> : "Submit"}
             </Button>
           </div>
-        </div>
+        </form>
       </div>
     </div>
   );
