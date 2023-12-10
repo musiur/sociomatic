@@ -65,6 +65,43 @@ export default function RootLayout({
           });`,
           }}
         ></script>
+        <script
+          id="contact-us-data-layer"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+          
+              // Function to track contact form submissions
+              function trackContactFormSubmission() {
+                var formData = {
+                  'name': document.getElementById('name').value,
+                  'email': document.getElementById('email').value,
+                  'phone': document.getElementById('phone').value,
+                  'service': document.getElementById('service').value,
+                  'message': document.getElementById('message').value
+                };
+            
+                window.dataLayer.push({
+                  'event': 'contactFormSubmission',
+                  'formName': 'Contact Form',
+                  'formData': formData
+                  // Add other necessary parameters for form submission
+                  // Example: 'formType': 'Contact Us',
+                  //          'customParameter': 'value',
+                });
+              }
+            
+              // Example: Assume you have a function that handles form submission on the server side
+              function submitContactForm() {
+                // Call the function to track form submission
+                trackContactFormSubmission();
+            
+                // Additional code to submit the form to the server
+                // ...
+              }
+          `,
+          }}
+        ></script>
       </head>
       <body className={inter.className}>
         <noscript>
