@@ -7,6 +7,8 @@ import GotoTop from "@/components/molecule/go-to-top";
 import { Toaster } from "@/components/ui/toaster";
 import WhatsApp from "@/components/molecule/whatsapp";
 import CookiePolicyNotificationBar from "@/components/molecule/cookie-policy";
+import GoogleAnalytics from "@bradgarropy/next-google-analytics";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <script
+        {/* <script
           id="google-analytics"
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -34,7 +36,15 @@ export default function RootLayout({
           })(window,document,'script','dataLayer','GTM-WP6VXKV');
           `,
           }}
-        />
+        /> */}
+        <Script id="google-analytics">
+          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-WP6VXKV');
+          `}
+        </Script>
         <script
           id="data-layer"
           dangerouslySetInnerHTML={{
@@ -92,7 +102,9 @@ export default function RootLayout({
               }
             
               // Example: Assume you have a function that handles form submission on the server side
-              function submitContactForm() {
+              function handleOnSubmit(e) {
+                e.preventDefault();
+                console.log("On Submit Clicked!")
                 // Call the function to track form submission
                 trackContactFormSubmission();
             
