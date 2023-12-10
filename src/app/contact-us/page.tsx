@@ -180,7 +180,7 @@ const ContactUs = () => {
             );
           })}
         </div>
-        <form className="mx-auto pt-[50px] grid grid-cols-1 large-gap">
+        <form onSubmit={handleOnSubmit} className="mx-auto pt-[50px] grid grid-cols-1 large-gap">
           <div className="flex flex-col small-gap">
             <h4 className="text-xl md:text-2xl font-bold text-primary">
               Get in Touch With Us
@@ -286,7 +286,7 @@ const ContactUs = () => {
               variant={"secondary"}
               className="mt-5 max-w-[300px]"
               disabled={!captcha}
-              onClick={handleOnSubmit}
+              // onClick={handleOnSubmit}
               type="submit"
             >
               {loading ? <Loader /> : "Submit"}
