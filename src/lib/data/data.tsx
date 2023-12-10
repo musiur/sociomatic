@@ -2,7 +2,6 @@ import BlueGoogle from "@/components/assets/blue-google";
 import Campaigns from "@/components/assets/campaigns";
 import CodeCloud from "@/components/assets/code-cloud";
 import Competition from "@/components/assets/competition";
-import Contents from "@/components/assets/contents";
 import Feather from "@/components/assets/feather";
 import GeoTargetting from "@/components/assets/geo-targetting";
 import GoogleAnalytics from "@/components/assets/google-analytics";
