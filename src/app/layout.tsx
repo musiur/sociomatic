@@ -7,7 +7,6 @@ import GotoTop from "@/components/molecule/go-to-top";
 import { Toaster } from "@/components/ui/toaster";
 import WhatsApp from "@/components/molecule/whatsapp";
 import CookiePolicyNotificationBar from "@/components/molecule/cookie-policy";
-import GoogleAnalytics from "@bradgarropy/next-google-analytics";
 import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
