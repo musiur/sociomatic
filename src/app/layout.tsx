@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/next-script-for-ga */
 import Footer from "@/components/layout/footer";
 import Navbar from "@/components/layout/navbar";
 import type { Metadata } from "next";
@@ -7,14 +8,13 @@ import GotoTop from "@/components/molecule/go-to-top";
 import { Toaster } from "@/components/ui/toaster";
 import WhatsApp from "@/components/molecule/whatsapp";
 import CookiePolicyNotificationBar from "@/components/molecule/cookie-policy";
-import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "The Sociomatic | Home",
+  title: "The Sociomatic | Digital Solutions for Growth",
   description:
-    "An agency for every aspect in IT industries with all sorts of services from software development to business development.",
+    "Elevate your online presence with Sociomatic. We provide cutting-edge digital marketing and web development services, delivering measurable results for businesses worldwide.",
 };
 
 export default function RootLayout({
