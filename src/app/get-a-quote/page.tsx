@@ -36,6 +36,8 @@ const GetAQuotePage = () => {
     budgetRange: "",
     services: [],
     message: "",
+    subject: "Contact Us",
+    title: "Contact Us Submission"
   });
   const [errors, setErrors] = useState<any>({});
   const [captcha, setCaptcha] = useState(false);

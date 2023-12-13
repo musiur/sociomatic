@@ -44,7 +44,9 @@ const ContactUs = () => {
     email: "",
     phone: "",
     services: [],
-    message: ""
+    message: "",
+    subject: "Contact Us",
+    title: "Get A Quote Submission"
   });
   const [errors, setErrors] = useState<any>({});
   const [captcha, setCaptcha] = useState(false);
