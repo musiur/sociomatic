@@ -36,7 +36,7 @@ const GetAQuotePage = () => {
     budgetRange: "",
     services: [],
     message: "",
-    subject: "Contact Us",
+    subject: "Get a Quote",
     title: "Get a Quote Form Submission",
   });
   const [errors, setErrors] = useState<any>({});
