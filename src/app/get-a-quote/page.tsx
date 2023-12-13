@@ -37,7 +37,7 @@ const GetAQuotePage = () => {
     services: [],
     message: "",
     subject: "Contact Us",
-    title: "Contact Us Submission"
+    title: "Get a Quote Form Submission",
   });
   const [errors, setErrors] = useState<any>({});
   const [captcha, setCaptcha] = useState(false);
@@ -50,7 +50,7 @@ const GetAQuotePage = () => {
     const validationErrors = validation();
 
     if (Object.keys(validationErrors).length === 0) {
-      setLoading(true)
+      setLoading(true);
       try {
         const response = await axios.post(
           "https://sociomatic-backend.onrender.com/auth/receive-mail",
