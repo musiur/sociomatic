@@ -8,6 +8,7 @@ import GotoTop from "@/components/molecule/go-to-top";
 import { Toaster } from "@/components/ui/toaster";
 import WhatsApp from "@/components/molecule/whatsapp";
 import CookiePolicyNotificationBar from "@/components/molecule/cookie-policy";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -120,6 +121,7 @@ export default function RootLayout({
         </div>
         <Navbar />
         {children}
+        <SpeedInsights />
         <Toaster />
         <CookiePolicyNotificationBar />
         <WhatsApp />
