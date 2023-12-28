@@ -13,7 +13,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "The Sociomatic | Digital Solutions for Growth",
+  title: "Sociomatic | Digital Solutions for Growth",
   description:
     "Elevate your online presence with Sociomatic. We provide cutting-edge digital marketing and web development services, delivering measurable results for businesses worldwide.",
 };
