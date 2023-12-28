@@ -160,10 +160,10 @@ const CustomWebProducts = [
     {
       id: 2,
       image: "bg-[url('/images/projects/custom-web/houses.png')]",
-      title: "Musiur",
+      title: "Emaar Decor",
       description:
-        "Technical blog site of Software Engineer Musiur Alam Opu. There he  tries to put all the knowledges that he experienced during his learning to working in the industry and so on.",
-      link: "https://musiur-blog.vercel.app",
+        "Step into a world of refined luxury with EmaarDecor! Elevate your space with our exquisite range - from chic curtains to lush artificial grass, plush sofas, dazzling lights, and more. Our design expertise extends from villas to events. Redefine your style with EmaarDecor, where every detail tells a captivating story!",
+      link: "https://emaardecor.vercel.app",
     },
   ],
   [
