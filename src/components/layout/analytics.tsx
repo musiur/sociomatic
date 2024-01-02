@@ -66,8 +66,9 @@ export default function Analytics() {
         name="google-site-verification"
         content="HGW6vnWMh6mOAQ_1OQdnsVq8n7YXAH6r3EtBFiXxs5E"
       />
-      <script
+      <Script
         id="data-layer"
+        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `window.dataLayer = window.dataLayer || [];
 
@@ -96,8 +97,9 @@ export default function Analytics() {
           });`,
         }}
       />
-      <script
+      <Script
         id="contact-us-data-layer"
+        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
               window.dataLayer = window.dataLayer || [];
