@@ -50,6 +50,9 @@ dependencies:
   '@types/react-google-recaptcha':
     specifier: ^2.1.8
     version: 2.1.8
+  '@types/react-gtm-module':
+    specifier: ^2.0.3
+    version: 2.0.3
   '@vercel/speed-insights':
     specifier: ^1.0.2
     version: 1.0.2
@@ -95,6 +98,9 @@ dependencies:
   react-google-recaptcha:
     specifier: ^3.1.0
     version: 3.1.0(react@18.2.0)
+  react-gtm-module:
+    specifier: ^2.0.11
+    version: 2.0.11
   react-hook-form:
     specifier: ^7.48.2
     version: 7.48.2(react@18.2.0)
@@ -1528,6 +1534,10 @@ packages:
     resolution: {integrity: sha512-nYI3ZDoteZ0g4FYusyKWqz7AZqRdu70R3wDkosCcN0peb2WLn57i0Alm4IPiCRIx59yTUVPTiOELZH08gV1wXA==}
     dependencies:
       '@types/react': 18.2.34
+    dev: false
+
+  /@types/react-gtm-module@2.0.3:
+    resolution: {integrity: sha512-fL2zKdDFN5LckSsVBXEhhm9M4tFTM9oHJfGcfZJzktQkzpOTGtDM8oXIP9d9UBDxO4xLNZhS22dlgRVv6wgK9w==}
     dev: false
 
   /@types/react@18.2.34:
@@ -3737,6 +3747,10 @@ packages:
       prop-types: 15.8.1
       react: 18.2.0
       react-async-script: 1.2.0(react@18.2.0)
+    dev: false
+
+  /react-gtm-module@2.0.11:
+    resolution: {integrity: sha512-8gyj4TTxeP7eEyc2QKawEuQoAZdjKvMY4pgWfycGmqGByhs17fR+zEBs0JUDq4US/l+vbTl+6zvUIx27iDo/Vw==}
     dev: false
 
   /react-hook-form@7.48.2(react@18.2.0):
