@@ -9,15 +9,15 @@ import { Toaster } from "@/components/ui/toaster";
 import WhatsApp from "@/components/molecule/whatsapp";
 import CookiePolicyNotificationBar from "@/components/molecule/cookie-policy";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import TagManager from "react-gtm-module";
-import { Suspense } from "react";
 import Analytics from "@/components/layout/analytics";
+import { Suspense } from "react";
+// import TagManager from "react-gtm-module";
 
-const tagManagerArgs = {
-  gtmId: "GTM-WP6VXKV",
-};
+// const tagManagerArgs = {
+//   gtmId: "GTM-WP6VXKV",
+// };
 
-TagManager.initialize(tagManagerArgs);
+// TagManager.initialize(tagManagerArgs);
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -34,10 +34,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Suspense>
-        <Analytics />
-      </Suspense>
       <body className={inter.className}>
+        <Suspense>
+          <Analytics />
+        </Suspense>
         <div className="py-2 text-center bg-pink-700 text-white animate-pulse">
           This site is under maintenance
         </div>
