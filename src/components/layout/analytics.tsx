@@ -62,10 +62,12 @@ export default function Analytics() {
           `,
         }}
       />
+      {/**  
       <meta
         name="google-site-verification"
         content="HGW6vnWMh6mOAQ_1OQdnsVq8n7YXAH6r3EtBFiXxs5E"
       />
+      */}
       <script
         id="data-layer"
         dangerouslySetInnerHTML={{
