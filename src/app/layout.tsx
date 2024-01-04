@@ -11,13 +11,8 @@ import CookiePolicyNotificationBar from "@/components/molecule/cookie-policy";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Analytics from "@/components/layout/analytics";
 import { Suspense } from "react";
-// import TagManager from "react-gtm-module";
-
-// const tagManagerArgs = {
-//   gtmId: "GTM-WP6VXKV",
-// };
-
-// TagManager.initialize(tagManagerArgs);
+import Head from "next/head";
+export const GTM_ID = process.env.NEXT_PUBLIC_GTM;
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -34,9 +29,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Head>
+        <Analytics />
+      </Head>
       <body className={inter.className}>
         <Suspense>
-          <Analytics />
+          <noscript>
+            <iframe
+              src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+              height="0"
+              width="0"
+              style={{ display: "none", visibility: "hidden" }}
+            />
+          </noscript>
         </Suspense>
         <div className="py-2 text-center bg-pink-700 text-white animate-pulse">
           This site is under maintenance
