@@ -29,9 +29,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Head>
-        <Analytics />
-      </Head>
+      <head>
+      <Analytics />
+      </head>
       <body className={inter.className}>
         <Suspense>
           <noscript>
