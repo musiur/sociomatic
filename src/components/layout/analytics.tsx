@@ -36,20 +36,8 @@ export default function Analytics() {
     }
   }, [pathname, searchParams]);
 
-  //   if (process.env.NEXT_PUBLIC_VERCEL_ENV !== "production") {
-  //     return null;
-  //   }
-
   return (
     <>
-      <noscript>
-        <iframe
-          src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
-          height="0"
-          width="0"
-          style={{ display: "none", visibility: "hidden" }}
-        />
-      </noscript>
       <Script
         id="gtm-script"
         strategy="afterInteractive"
@@ -62,80 +50,9 @@ export default function Analytics() {
           `,
         }}
       />
-      {/**  
       <meta
         name="google-site-verification"
         content="HGW6vnWMh6mOAQ_1OQdnsVq8n7YXAH6r3EtBFiXxs5E"
-      />
-      */}
-      <script
-        id="data-layer"
-        dangerouslySetInnerHTML={{
-          __html: `window.dataLayer = window.dataLayer || [];
-
-          function trackPageView() {
-            var pagePath = window.location.pathname;
-            var pageURL = window.location.href;
-            var referrer = document.referrer || 'unknown'; // Default to 'unknown' if no referrer is available
-            var pageHostname = window.location.hostname;
-        
-            window.dataLayer.push({
-              'event': 'pageview',
-              'pagePath': pagePath,
-              'pageURL': pageURL,
-              'referrer': referrer,
-              'pageHostname': pageHostname
-            });
-          }
-        
-          // Call trackPageView on initial page load
-          trackPageView();
-        
-          // Listen for the popstate event to track dynamic page changes
-          window.addEventListener('popstate', function() {
-            // Call trackPageView on dynamic page change
-            trackPageView();
-          });`,
-        }}
-      />
-      <script
-        id="contact-us-data-layer"
-        dangerouslySetInnerHTML={{
-          __html: `
-              window.dataLayer = window.dataLayer || [];
-          
-              // Function to track contact form submissions
-              function trackContactFormSubmission() {
-                var formData = {
-                  'name': document.getElementById('name').value,
-                  'email': document.getElementById('email').value,
-                  'phone': document.getElementById('phone').value,
-                  'service': document.getElementById('service').value,
-                  'message': document.getElementById('message').value
-                };
-            
-                window.dataLayer.push({
-                  'event': 'contactFormSubmission',
-                  'formName': 'Contact Form',
-                  'formData': formData
-                  // Add other necessary parameters for form submission
-                  // Example: 'formType': 'Contact Us',
-                  //          'customParameter': 'value',
-                });
-              }
-            
-              // Example: Assume you have a function that handles form submission on the server side
-              function handleOnSubmit(e) {
-                e.preventDefault();
-                console.log("On Submit Clicked!")
-                // Call the function to track form submission
-                trackContactFormSubmission();
-            
-                // Additional code to submit the form to the server
-                // ...
-              }
-          `,
-        }}
       />
     </>
   );
