@@ -10,7 +10,6 @@ import WhatsApp from "@/components/molecule/whatsapp";
 import CookiePolicyNotificationBar from "@/components/molecule/cookie-policy";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Analytics from "@/components/layout/analytics";
-import { Suspense } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,8 +30,7 @@ export default function RootLayout({
       <Analytics />
       </head>
       <body className={inter.className}>
-        <Suspense>
-          <noscript>
+        <noscript>
             <iframe
               src={`https://www.googletagmanager.com/ns.html?id=GTM-WP6VXKV`}
               height="0"
@@ -40,7 +38,6 @@ export default function RootLayout({
               style={{ display: "none", visibility: "hidden" }}
             />
           </noscript>
-        </Suspense>
         <div className="py-2 text-center bg-pink-700 text-white animate-pulse">
           This site is under maintenance
         </div>
