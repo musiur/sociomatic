@@ -11,8 +11,6 @@ import CookiePolicyNotificationBar from "@/components/molecule/cookie-policy";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Analytics from "@/components/layout/analytics";
 import { Suspense } from "react";
-import Head from "next/head";
-export const GTM_ID = process.env.NEXT_PUBLIC_GTM;
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -36,7 +34,7 @@ export default function RootLayout({
         <Suspense>
           <noscript>
             <iframe
-              src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+              src={`https://www.googletagmanager.com/ns.html?id=GTM-WP6VXKV`}
               height="0"
               width="0"
               style={{ display: "none", visibility: "hidden" }}
