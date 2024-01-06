@@ -22,15 +22,14 @@ declare global {
 }
 
 // Function to track contact form submissions
-function trackContactFormSubmission(formdata: any) {
+function trackContactFormSubmission(formData: any) {
   if (typeof window !== "undefined") {
     window[`dataLayer`] = window?.dataLayer || [];
-    var formData = formdata;
 
     window.dataLayer.push({
       event: "contactFormSubmission",
-      formName: "Contact Form",
-      formData: formData,
+      formName: "contact_form",
+      formData,
     });
   }
 }
