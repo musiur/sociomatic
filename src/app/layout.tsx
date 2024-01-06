@@ -42,6 +42,12 @@ export default function RootLayout({
           name="google-site-verification"
           content="HGW6vnWMh6mOAQ_1OQdnsVq8n7YXAH6r3EtBFiXxs5E"
         />
+        <script
+          id="data-layer"
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];`,
+          }}
+        />
       </head>
       <body className={inter.className}>
         <noscript>

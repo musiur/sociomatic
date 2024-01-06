@@ -14,26 +14,26 @@ import { Building, MessageCircle, Phone } from "lucide-react";
 import axios from "axios";
 import Link from "next/link";
 
+// Declare the dataLayer object as a global variable
+declare global {
+  interface Window {
+    dataLayer: any[];
+  }
+}
 
+// Function to track contact form submissions
+function trackContactFormSubmission(formdata: any) {
+  if (typeof window !== "undefined") {
+    window[`dataLayer`] = window?.dataLayer || [];
+    var formData = formdata;
 
-  // // Function to track contact form submissions
-  // function trackContactFormSubmission(formdata: any) {
-  //   if(typeof window !== "undefined"){
-  //     window["dataLayer"] = window?.dataLayer || [];
-  //   var formData = formdata;
-
-  //   window.dataLayer.push({
-  //     'event': 'contactFormSubmission',
-  //     'formName': 'Contact Form',
-  //     'formData': formData
-  //     // Add other necessary parameters for form submission
-  //     // Example: 'formType': 'Contact Us',
-  //     //          'customParameter': 'value',
-  //   });
-  //   }
-  // }
-
-
+    window.dataLayer.push({
+      event: "contactFormSubmission",
+      formName: "Contact Form",
+      formData: formData,
+    });
+  }
+}
 
 const ContactUs = () => {
   const { toast } = useToast();
@@ -46,7 +46,7 @@ const ContactUs = () => {
     services: [],
     message: "",
     subject: "Contact Us",
-    title: "Contact Us Form Submission"
+    title: "Contact Us Form Submission",
   });
   const [errors, setErrors] = useState<any>({});
   const [captcha, setCaptcha] = useState(false);
@@ -70,9 +70,10 @@ const ContactUs = () => {
           description: "Successful! Mail send successfully.",
         });
         setLoading(false);
-        // setTimeout(() => {
-        //   window.location.reload();
-        // }, 5000);
+        trackContactFormSubmission(formData);
+        setTimeout(() => {
+          window.location.reload();
+        }, 5000);
       }
     } catch (error) {
       console.log(error);
@@ -182,7 +183,10 @@ const ContactUs = () => {
             );
           })}
         </div>
-        <form onSubmit={handleOnSubmit} className="mx-auto pt-[50px] grid grid-cols-1 large-gap">
+        <form
+          onSubmit={handleOnSubmit}
+          className="mx-auto pt-[50px] grid grid-cols-1 large-gap"
+        >
           <div className="flex flex-col small-gap">
             <h4 className="text-xl md:text-2xl font-bold text-primary">
               Get in Touch With Us
