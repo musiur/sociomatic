@@ -10,7 +10,13 @@ import WhatsApp from "@/components/molecule/whatsapp";
 import CookiePolicyNotificationBar from "@/components/molecule/cookie-policy";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import PageView from "@/lib/datalayer/page-view";
-// import Analytics from "@/components/layout/analytics";
+
+// Declare the dataLayer object as a global variable
+declare global {
+  interface Window {
+    dataLayer: any[];
+  }
+}
 
 const inter = Inter({ subsets: ["latin"] });
 

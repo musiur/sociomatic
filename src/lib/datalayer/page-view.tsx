@@ -6,11 +6,22 @@ const PageView = () => {
   const pathname = usePathname();
 
   useEffect(() => {
+    var pagePath = window.location.pathname;
+    var pageURL = window.location.href;
+    var referrer = document.referrer || "unknown";
+    var pageHostname = window.location.hostname;
+
     window.dataLayer.push({
-      event: "pageView",
-      pageUrl: window.location.href,
+      event: "pageview",
+      pagePath,
+      pageURL,
+      referrer,
+      pageHostname,
+      // Add other necessary parameters for page view
+      // Example: 'pageTitle': document.title,
+      //          'pageType': 'article',
+      //          'customParameter': 'value',
     });
-    console.log("Page Data Layer pushed");
   }, [pathname]);
   return null;
 };

@@ -22,13 +22,6 @@ import ShortReviews from "@/components/molecule/short-reviews";
 import CountryCombobox from "@/components/ui/country-combobox";
 import axios from "axios";
 
-// Declare the dataLayer object as a global variable
-declare global {
-  interface Window {
-    dataLayer: any[];
-  }
-}
-
 // Function to track Get A Get form submissions
 function trackGetAQuoteFormSubmission(formData: any) {
   if (typeof window !== "undefined") {
