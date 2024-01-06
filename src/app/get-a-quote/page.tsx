@@ -115,6 +115,9 @@ const GetAQuotePage = () => {
     if (!formData.phone.trim()) {
       obj.phone = "Phone is required!";
     }
+    if (!formData.country.trim()) {
+      obj.country = "Country is required!";
+    }
     if (!formData.message.trim()) {
       obj.message = "Message is required!";
     }
@@ -219,8 +222,11 @@ const GetAQuotePage = () => {
               <ErrorMessages errors={errors} name="phone" />
             </div>
             <div className="grid w-full items-center gap-1.5">
-              <Label htmlFor="country">Country</Label>
+              <Label htmlFor="country">
+                Country <span className="text-pink-600 font-bold">*</span>
+              </Label>
               <CountryCombobox onChange={handleOnChange} />
+              <ErrorMessages errors={errors} name="country" />
             </div>
             <div className="grid w-full items-center gap-1.5">
               <Label htmlFor="companyName">Company Name</Label>
