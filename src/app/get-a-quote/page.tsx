@@ -22,6 +22,26 @@ import ShortReviews from "@/components/molecule/short-reviews";
 import CountryCombobox from "@/components/ui/country-combobox";
 import axios from "axios";
 
+// Declare the dataLayer object as a global variable
+declare global {
+  interface Window {
+    dataLayer: any[];
+  }
+}
+
+// Function to track Get A Get form submissions
+function trackGetAQuoteFormSubmission(formData: any) {
+  if (typeof window !== "undefined") {
+    window[`dataLayer`] = window?.dataLayer || [];
+
+    window.dataLayer.push({
+      event: "getAQuoteFormSubmission",
+      formName: "get_a_quote_form",
+      formData,
+    });
+  }
+}
+
 const GetAQuotePage = () => {
   const { toast } = useToast();
   const [currentTab, setCurrentTab] = useState(1);
@@ -65,6 +85,15 @@ const GetAQuotePage = () => {
           toast({
             title: "Message Sending",
             description: "Successful! Mail send successfully.",
+          });
+          trackGetAQuoteFormSubmission({
+            ...formData,
+            months:
+              currentTab === 1
+                ? "One month"
+                : currentTab === 2
+                ? "Six months"
+                : "Yearly",
           });
           setLoading(false);
           setTimeout(() => {
