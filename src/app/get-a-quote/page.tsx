@@ -92,7 +92,7 @@ const GetAQuotePage = () => {
               currentTab === 1
                 ? "One month"
                 : currentTab === 2
-                ? "Six months"
+                ? "Half yearly"
                 : "Yearly",
           });
           setLoading(false);
@@ -162,7 +162,7 @@ const GetAQuotePage = () => {
         <div className="relative container section grid grid-cols-1 md:grid-cols-2 large-gap backdrop-blur rounded-lg border border-secondarymuted">
           <div className="absolute top-0 left-0 w-full -mt-[20px] md:-mt-[25px]">
             <ul className="flex items-center justify-center">
-              {["One Time", "Quarterly", "Yearly"].map((item, index) => {
+              {["One Time", "Half Yearly", "Yearly"].map((item, index) => {
                 return (
                   <li
                     key={index}
