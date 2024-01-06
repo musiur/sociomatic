@@ -9,7 +9,14 @@ import { Toaster } from "@/components/ui/toaster";
 import WhatsApp from "@/components/molecule/whatsapp";
 import CookiePolicyNotificationBar from "@/components/molecule/cookie-policy";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-// import Analytics from "@/components/layout/analytics";
+import PageView from "@/lib/datalayer/page-view";
+
+// Declare the dataLayer object as a global variable
+declare global {
+  interface Window {
+    dataLayer: any[];
+  }
+}
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -58,6 +65,7 @@ export default function RootLayout({
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
+        <PageView />
         <div className="py-2 text-center bg-pink-700 text-white animate-pulse">
           This site is under maintenance
         </div>

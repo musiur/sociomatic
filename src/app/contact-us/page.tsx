@@ -14,13 +14,6 @@ import { Building, MessageCircle, Phone } from "lucide-react";
 import axios from "axios";
 import Link from "next/link";
 
-// Declare the dataLayer object as a global variable
-declare global {
-  interface Window {
-    dataLayer: any[];
-  }
-}
-
 // Function to track contact form submissions
 function trackContactFormSubmission(formData: any) {
   if (typeof window !== "undefined") {

@@ -22,13 +22,6 @@ import ShortReviews from "@/components/molecule/short-reviews";
 import CountryCombobox from "@/components/ui/country-combobox";
 import axios from "axios";
 
-// Declare the dataLayer object as a global variable
-declare global {
-  interface Window {
-    dataLayer: any[];
-  }
-}
-
 // Function to track Get A Get form submissions
 function trackGetAQuoteFormSubmission(formData: any) {
   if (typeof window !== "undefined") {
@@ -92,7 +85,7 @@ const GetAQuotePage = () => {
               currentTab === 1
                 ? "One month"
                 : currentTab === 2
-                ? "Six months"
+                ? "Half yearly"
                 : "Yearly",
           });
           setLoading(false);
@@ -121,6 +114,9 @@ const GetAQuotePage = () => {
     }
     if (!formData.phone.trim()) {
       obj.phone = "Phone is required!";
+    }
+    if (!formData.country.trim()) {
+      obj.country = "Country is required!";
     }
     if (!formData.message.trim()) {
       obj.message = "Message is required!";
@@ -162,7 +158,7 @@ const GetAQuotePage = () => {
         <div className="relative container section grid grid-cols-1 md:grid-cols-2 large-gap backdrop-blur rounded-lg border border-secondarymuted">
           <div className="absolute top-0 left-0 w-full -mt-[20px] md:-mt-[25px]">
             <ul className="flex items-center justify-center">
-              {["One Time", "Quarterly", "Yearly"].map((item, index) => {
+              {["One Time", "Half Yearly", "Yearly"].map((item, index) => {
                 return (
                   <li
                     key={index}
@@ -226,8 +222,11 @@ const GetAQuotePage = () => {
               <ErrorMessages errors={errors} name="phone" />
             </div>
             <div className="grid w-full items-center gap-1.5">
-              <Label htmlFor="country">Country</Label>
+              <Label htmlFor="country">
+                Country <span className="text-pink-600 font-bold">*</span>
+              </Label>
               <CountryCombobox onChange={handleOnChange} />
+              <ErrorMessages errors={errors} name="country" />
             </div>
             <div className="grid w-full items-center gap-1.5">
               <Label htmlFor="companyName">Company Name</Label>
