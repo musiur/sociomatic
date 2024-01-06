@@ -9,6 +9,7 @@ import { Toaster } from "@/components/ui/toaster";
 import WhatsApp from "@/components/molecule/whatsapp";
 import CookiePolicyNotificationBar from "@/components/molecule/cookie-policy";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import PageView from "@/lib/datalayer/page-view";
 // import Analytics from "@/components/layout/analytics";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -58,6 +59,7 @@ export default function RootLayout({
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
+        <PageView />
         <div className="py-2 text-center bg-pink-700 text-white animate-pulse">
           This site is under maintenance
         </div>
