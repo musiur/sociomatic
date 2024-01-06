@@ -32,6 +32,7 @@ function trackContactFormSubmission(formdata: any) {
       formName: "Contact Form",
       formData: formData,
     });
+    console.log("datalayer pushed")
   }
 }
 
