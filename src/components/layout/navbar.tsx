@@ -14,26 +14,20 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import {
-  Sheet,
-  SheetClose,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTrigger,
-} from "@/components/ui/sheet";
 import { CaretSortIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 import BrandLogo from "../assets/brandlogo";
 
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { Button } from "../ui/button";
 import GetAQuote from "../molecule/get-a-quote";
+import { useState } from "react";
+import clsx from "clsx";
 
 const Navbar = () => {
   const pathname = usePathname();
-  console.log(pathname);
+  const [openMobileMenu, setOpenMobileMenu] = useState(false);
   return (
     <nav
       className="backdrop-blur-xl bg-white/70 border-b border-secondarymuted sticky top-0 z-50"
@@ -117,78 +111,98 @@ const Navbar = () => {
         </div>
 
         <div className="block lg:hidden">
-          <Sheet>
-            <SheetTrigger asChild>
-              <Menu />
-            </SheetTrigger>
-            <SheetContent>
-              <SheetHeader>
+          <div>
+            <Menu role="button" onClick={() => setOpenMobileMenu(true)} />
+          </div>
+          <div
+            className={clsx(
+              "absolute top-0 right-0 bg-black/60  w-[100vw] overflow-hidden transition ease-in-out duration-300",
+              {
+                "opacity-100 z-10 delay-150": openMobileMenu,
+                "opacity-0 z-[-1] delay-0": !openMobileMenu,
+              }
+            )}
+            role="button"
+            onClick={() => setOpenMobileMenu(false)}
+          >
+            <div
+              className={clsx(
+                "bg-white px-[16px] py-[32px] h-[100dvh] shadow-2xl ml-auto max-w-[300px] min-w-[280px] transition ease-in-out duration-300",
+                {
+                  "translate-x-0 delay-0": openMobileMenu,
+                  "translate-x-[1000px] delay-150": !openMobileMenu,
+                }
+              )}
+            >
+              <div className="flex items-center justify-between gap-[10px] pb-[50px]">
                 <BrandLogo />
-                <SheetDescription className="max-h-[90vh] overflow-auto">
-                  <ul className="flex flex-col items-start justify-start small-gap pt-[50px]">
-                    {Links.map((linkItem: any) => {
-                      return (
-                        <li key={linkItem.id}>
-                          {linkItem.children ? (
-                            <Collapsible>
-                              <CollapsibleTrigger
-                                className={`flex items-center justify-start small-gap ${
-                                  pathname.includes(linkItem.link)
-                                    ? "text-secondary font-semibold"
-                                    : "text-primary"
-                                }`}
-                              >
-                                {linkItem.text}
-                                <CaretSortIcon className="h-4 w-4" />
-                              </CollapsibleTrigger>
-                              <CollapsibleContent>
-                                <div className="flex flex-col items-start justify-start small-gap py-[25px] px-3 border-l">
-                                  {linkItem.children.map((child: any) => {
-                                    return (
-                                      <SheetClose key={child.id} asChild>
-                                        <Link
-                                          href={child.link}
-                                          className={
-                                            pathname === child.link
-                                              ? "text-secondary font-semibold"
-                                              : "text-primary"
-                                          }
-                                        >
-                                          {child.text}
-                                        </Link>
-                                      </SheetClose>
-                                    );
-                                  })}
-                                </div>
-                              </CollapsibleContent>
-                            </Collapsible>
-                          ) : (
-                            <SheetClose asChild>
-                              <Link
-                                href={linkItem.link}
-                                className={
-                                  pathname === linkItem.link
-                                    ? "text-secondary font-semibold"
-                                    : "text-primary"
-                                }
-                              >
-                                {linkItem.text}
-                              </Link>
-                            </SheetClose>
-                          )}
-                        </li>
-                      );
-                    })}
-                    <SheetClose asChild>
-                      <Link href="/get-a-quote">
-                        <Button>Get a Quote</Button>
-                      </Link>
-                    </SheetClose>
-                  </ul>
-                </SheetDescription>
-              </SheetHeader>
-            </SheetContent>
-          </Sheet>
+                <X
+                  className="stroke-[1.3px] stroke-gray-500"
+                  role="button"
+                  onClick={() => setOpenMobileMenu(false)}
+                />
+              </div>
+              <div className="max-h-[80vh] overflow-auto">
+                <ul className="flex flex-col items-start justify-start small-gap">
+                  {Links.map((linkItem: any) => {
+                    return (
+                      <li key={linkItem.id}>
+                        {linkItem.children ? (
+                          <Collapsible
+                            onClick={(event: any) => event.stopPropagation()}
+                          >
+                            <CollapsibleTrigger
+                              className={`flex items-center justify-start small-gap ${
+                                pathname.includes(linkItem.link)
+                                  ? "text-secondary font-semibold"
+                                  : "text-primary"
+                              }`}
+                            >
+                              {linkItem.text}
+                              <CaretSortIcon className="h-4 w-4" />
+                            </CollapsibleTrigger>
+                            <CollapsibleContent>
+                              <div className="flex flex-col items-start justify-start small-gap py-[25px] px-3 border-l">
+                                {linkItem.children.map((child: any) => {
+                                  return (
+                                    <Link
+                                      key={child.id}
+                                      href={child.link}
+                                      className={
+                                        pathname === child.link
+                                          ? "text-secondary font-semibold"
+                                          : "text-primary"
+                                      }
+                                    >
+                                      {child.text}
+                                    </Link>
+                                  );
+                                })}
+                              </div>
+                            </CollapsibleContent>
+                          </Collapsible>
+                        ) : (
+                          <Link
+                            href={linkItem.link}
+                            className={
+                              pathname === linkItem.link
+                                ? "text-secondary font-semibold"
+                                : "text-primary"
+                            }
+                          >
+                            {linkItem.text}
+                          </Link>
+                        )}
+                      </li>
+                    );
+                  })}
+                  <Link href="/get-a-quote">
+                    <Button>Get a Quote</Button>
+                  </Link>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
