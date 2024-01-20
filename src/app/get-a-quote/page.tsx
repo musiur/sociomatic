@@ -6,7 +6,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Select,
   SelectContent,
@@ -30,6 +30,18 @@ function trackGetAQuoteFormSubmission(formData: any) {
     window.dataLayer.push({
       event: "getAQuoteFormSubmission",
       formName: "get_a_quote_form",
+      formData,
+    });
+  }
+}
+// Function to track Get A Get form submissions abandoned
+function trackGetAQuoteFormSubmissionA(formData: any) {
+  if (typeof window !== "undefined") {
+    window[`dataLayer`] = window?.dataLayer || [];
+
+    window.dataLayer.push({
+      event: "getAQuoteFormSubmissionAbandoned",
+      formName: "Quote_form_abandoned",
       formData,
     });
   }
@@ -59,11 +71,15 @@ const GetAQuotePage = () => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
+  useEffect(() => {
+    trackGetAQuoteFormSubmissionA(formData)
+  }, [formData])
   const handleOnSubmit = async () => {
     const validationErrors = validation();
 
     if (Object.keys(validationErrors).length === 0) {
       setLoading(true);
+      trackGetAQuoteFormSubmissionA(formData)
       try {
         const response = await axios.post(
           "https://sociomatic-backend.onrender.com/auth/receive-mail",

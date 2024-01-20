@@ -6,7 +6,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ErrorMessages from "@/components/molecule/errors-messages";
 import Loader from "@/components/molecule/loader";
 import { useToast } from "@/components/ui/use-toast";
@@ -22,6 +22,19 @@ function trackContactFormSubmission(formData: any) {
     window.dataLayer.push({
       event: "contactFormSubmission",
       formName: "contact_form",
+      formData,
+    });
+  }
+}
+
+// Function to track contact form submissions which is abandoned
+function trackContactFormSubmissionA(formData: any) {
+  if (typeof window !== "undefined") {
+    window[`dataLayer`] = window?.dataLayer || [];
+
+    window.dataLayer.push({
+      event: "contactFormSubmissionAbandoned",
+      formName: "Contact_form_abandoned",
       formData,
     });
   }
@@ -82,11 +95,15 @@ const ContactUs = () => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
+  useEffect(() => {
+    trackContactFormSubmissionA(formData);
+  }, [formData]);
   const handleOnSubmit = (e: any) => {
     e.preventDefault();
     const validationErrors = validation();
 
     if (Object.keys(validationErrors).length === 0) {
+      trackContactFormSubmissionA(formData);
       SendEmail(formData);
     } else {
       setErrors(validationErrors);
