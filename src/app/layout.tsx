@@ -66,9 +66,9 @@ export default function RootLayout({
           />
         </noscript>
         <PageView />
-        <div className="py-2 text-center bg-pink-700 text-white animate-pulse">
+        {/* <div className="py-2 text-center bg-pink-700 text-white animate-pulse">
           This site is under maintenance
-        </div>
+        </div> */}
         <Navbar />
         {children}
         <SpeedInsights />
