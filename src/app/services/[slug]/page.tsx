@@ -63,9 +63,9 @@ const Services = ({ params }: { params: { slug: string } }) => {
               height={1000}
               className="w-full"
             />
-            <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+            {/* <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
               <VideoPlayer videoLink={data.whyChooseSection.videoLink} />
-            </div>
+            </div> */}
           </div>
           <div className="flex flex-col justify-center small-gap">
             <h2 className="text-primary [&>span]:text-secondary">
