@@ -156,7 +156,7 @@ const ContactUs = () => {
       id: 2,
       icon: <MessageCircle />,
       title: "WhatsApp",
-      info: "+971567268607",
+      info: "+971507477541",
     },
   ];
   return (
