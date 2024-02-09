@@ -118,8 +118,8 @@ const Navbar = () => {
             className={clsx(
               "absolute top-0 right-0 bg-black/60  w-[100vw] overflow-hidden transition ease-in-out duration-300",
               {
-                "opacity-100 z-10 delay-150": openMobileMenu,
-                "opacity-0 z-[-1] delay-0": !openMobileMenu,
+                "opacity-100 z-10 w-full delay-150": openMobileMenu,
+                "opacity-0 z-[-1] w-0 delay-0": !openMobileMenu,
               }
             )}
             role="button"
