@@ -40,7 +40,7 @@ export default function RootLayout({
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-WBXPQRBB');`,
+            })(window,document,'script','dataLayer','GTM-WP6VXKV');`,
           }}
         />
         <meta
@@ -58,11 +58,11 @@ export default function RootLayout({
       <body className={inter.className}>
         <noscript>
           <iframe
-            src={`https://www.googletagmanager.com/ns.html?id=GTM-WP6VXKV`}
+            src="https://www.googletagmanager.com/ns.html?id=GTM-WP6VXKV"
             height="0"
             width="0"
-            style={{ display: "none", visibility: "hidden" }}
-          />
+            style={{ display: "none", opacity: "none" }}
+          ></iframe>
         </noscript>
         <PageView />
         {/* <div className="py-2 text-center bg-pink-700 text-white animate-pulse">
