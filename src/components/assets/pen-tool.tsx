@@ -21,23 +21,23 @@ const PenTool = () => {
           width="98"
           height="98"
           rx="9"
-          stroke="#5956E9"
+          stroke="#1355FF"
           strokeWidth="2"
           strokeLinejoin="round"
           strokeDasharray="4 4"
         />
       </g>
-      <path d="M43 9L89.5 55.5" stroke="#5956E9" strokeWidth="3" />
+      <path d="M43 9L89.5 55.5" stroke="#1355FF" strokeWidth="3" />
       <path d="M69 36.5L92.5 13L23.5 82" stroke="#FFB454" strokeWidth="2" />
       <path
         d="M14.5 19.5C40.1667 16.6667 88.9 25.5 78.5 83.5"
-        stroke="#5956E9"
+        stroke="#1355FF"
         strokeWidth="3"
       />
       <path
         d="M62.7071 36.071L69.0711 29.7071L75.435 36.071L69.0711 42.435L62.7071 36.071Z"
         fill="#FFB454"
-        stroke="#5956E9"
+        stroke="#1355FF"
       />
       <rect
         x="72.571"
@@ -45,7 +45,7 @@ const PenTool = () => {
         width="9"
         height="9"
         fill="white"
-        stroke="#5956E9"
+        stroke="#1355FF"
       />
       <rect
         x="8.5"
@@ -53,7 +53,7 @@ const PenTool = () => {
         width="9"
         height="9"
         fill="white"
-        stroke="#5956E9"
+        stroke="#1355FF"
       />
       <defs>
         <filter

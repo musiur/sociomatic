@@ -23,7 +23,7 @@ const CodeCloud = () => {
           width="71"
           height="46.5149"
           rx="7"
-          stroke="#5956E9"
+          stroke="#1355FF"
           strokeWidth="2"
           strokeLinejoin="round"
           strokeDasharray="4 4"
@@ -31,7 +31,7 @@ const CodeCloud = () => {
       </g>
       <path
         d="M44.375 66.3367L33.875 76.2377L43.875 84.1585"
-        stroke="#5956E9"
+        stroke="#1355FF"
         strokeWidth="4"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -45,7 +45,7 @@ const CodeCloud = () => {
       />
       <path
         d="M58.875 67.3268L69.375 75.7426L60.375 83.1684"
-        stroke="#5956E9"
+        stroke="#1355FF"
         strokeWidth="4"
         strokeLinecap="round"
         strokeLinejoin="round"

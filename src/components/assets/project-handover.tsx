@@ -4,13 +4,13 @@ const ProjectHandover = () => {
         <svg width="100" height="101" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g filter="url(#filter0_b_113_9865)">
                 <rect y="0.981689" width="100" height="100" rx="10" fill="white" fillOpacity="0.03" />
-                <rect x="0.5" y="1.48169" width="99" height="99" rx="9.5" stroke="#5956E9" strokeLinejoin="round" strokeDasharray="2 2" />
+                <rect x="0.5" y="1.48169" width="99" height="99" rx="9.5" stroke="#1355FF" strokeLinejoin="round" strokeDasharray="2 2" />
             </g>
             <g filter="url(#filter1_ii_113_9865)">
                 <path d="M34.1704 62.7171C35.6576 62.3186 37.0184 63.6794 36.6199 65.1666L32.8095 79.3874C32.411 80.8745 30.5521 81.3726 29.4634 80.2839L19.0531 69.8736C17.9644 68.7849 18.4625 66.926 19.9497 66.5275L34.1704 62.7171Z" fill="#FFB454" />
             </g>
             <g filter="url(#filter2_ii_113_9865)">
-                <rect x="61.3553" y="20.9817" width="25" height="50" rx="2" transform="rotate(45 61.3553 20.9817)" fill="#5956E9" />
+                <rect x="61.3553" y="20.9817" width="25" height="50" rx="2" transform="rotate(45 61.3553 20.9817)" fill="#1355FF" />
             </g>
             <g filter="url(#filter3_ii_113_9865)">
                 <path d="M81.1704 16.7171C82.6576 16.3186 84.0184 17.6794 83.6199 19.1666L79.8095 33.3874C79.411 34.8745 77.5521 35.3726 76.4634 34.2839L66.0531 23.8736C64.9644 22.7849 65.4625 20.926 66.9497 20.5275L81.1704 16.7171Z" fill="#191641" />
