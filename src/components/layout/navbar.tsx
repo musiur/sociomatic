@@ -262,11 +262,6 @@ const Links = [
         text: "UI/UX & Graphic Design",
         link: "/case-studies/ui-ux-and-graphic-design",
       },
-      {
-        id: 9,
-        text: "Content Writing & SEO",
-        link: "/case-studies/content-writing-and-seo",
-      },
     ],
   },
   {
@@ -313,11 +308,6 @@ const Links = [
         id: 8,
         text: "UI/UX & Graphic Design",
         link: "/services/ui-ux-and-graphic-design",
-      },
-      {
-        id: 9,
-        text: "Content Writing & SEO",
-        link: "/services/content-writing-and-seo",
       },
       {
         id: 10,
