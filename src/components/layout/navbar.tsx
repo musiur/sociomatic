@@ -118,8 +118,8 @@ const Navbar = () => {
             className={clsx(
               "absolute top-0 right-0 bg-black/60  w-[100vw] overflow-hidden transition ease-in-out duration-300",
               {
-                "translate-x-0 delay-0": openMobileMenu,
-                "translate-x-[1000px] delay-150": !openMobileMenu,
+                "block delay-0": openMobileMenu,
+                "hidden delay-150": !openMobileMenu,
               }
             )}
             role="button"
@@ -129,8 +129,8 @@ const Navbar = () => {
               className={clsx(
                 "bg-white px-[16px] py-[32px] h-[100dvh] shadow-2xl ml-auto max-w-[300px] min-w-[280px] transition ease-in-out duration-300",
                 {
-                  "translate-x-0 delay-150": openMobileMenu,
-                  "translate-x-[1000px] delay-150": !openMobileMenu,
+                  "block delay-150": openMobileMenu,
+                  "hidden delay-150": !openMobileMenu,
                 }
               )}
             >

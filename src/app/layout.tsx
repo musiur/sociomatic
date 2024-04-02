@@ -70,7 +70,7 @@ export default function RootLayout({
           This site is under maintenance
         </div> */}
         <Navbar />
-        {children}
+        <main className="overflow-hidden">{children}</main>
         <SpeedInsights />
         <Toaster />
         <CookiePolicyNotificationBar />
