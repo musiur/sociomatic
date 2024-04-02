@@ -34,6 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -54,7 +55,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      
+
       <body className={inter.className}>
         <noscript>
           <iframe
