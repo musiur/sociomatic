@@ -134,7 +134,7 @@ const Popular = () => {
           y2="90"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#5956E9" />
+          <stop stopColor="#1355FF" />
           <stop offset="1" stopColor="#7B0EBD" />
         </linearGradient>
       </defs>

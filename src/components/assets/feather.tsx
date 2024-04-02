@@ -21,7 +21,7 @@ const Feather = () => {
           width="98"
           height="98"
           rx="9"
-          stroke="#5956E9"
+          stroke="#1355FF"
           strokeWidth="2"
           strokeLinejoin="round"
           strokeDasharray="4 4"
@@ -118,7 +118,7 @@ const Feather = () => {
           y2="86"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#5956E9" />
+          <stop stopColor="#1355FF" />
           <stop offset="0.760417" stopColor="#FFB454" />
         </linearGradient>
       </defs>

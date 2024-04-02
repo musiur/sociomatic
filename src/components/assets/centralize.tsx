@@ -1,7 +1,7 @@
 const Centralized = () => {
     return (
         <svg width="100" height="101" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="60.8108" y="0.981689" width="39.1892" height="45.3333" rx="4" fill="#5956E9" />
+            <rect x="60.8108" y="0.981689" width="39.1892" height="45.3333" rx="4" fill="#1355FF" />
             <rect y="55.6484" width="39.1892" height="45.3333" rx="4" fill="#FFB454" />
             <g filter="url(#filter0_b_316_4293)">
                 <rect x="12.1622" y="11.6484" width="77.027" height="77.3333" rx="4" fill="white" fillOpacity="0.5" />

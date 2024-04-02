@@ -15,7 +15,7 @@ const Contents = () => {
         rx="9"
         fill="white"
         fillOpacity="0.05"
-        stroke="#5956E9"
+        stroke="#1355FF"
         strokeWidth="2"
         strokeLinejoin="round"
         strokeDasharray="4 4"
@@ -29,7 +29,7 @@ const Contents = () => {
         width="42.075"
         height="7.4375"
         rx="1"
-        fill="#5956E9"
+        fill="#1355FF"
       />
       <rect
         x="15.4624"
@@ -61,7 +61,7 @@ const Contents = () => {
         width="42.075"
         height="7.4375"
         rx="1"
-        fill="#5956E9"
+        fill="#1355FF"
       />
       <g filter="url(#filter1_i_123_16017)">
         <rect x="52" y="40" width="37.5" height="50" rx="2" fill="white" />
@@ -72,7 +72,7 @@ const Contents = () => {
         width="30.9375"
         height="5.46875"
         rx="1"
-        fill="#5956E9"
+        fill="#1355FF"
       />
       <rect
         x="55.2812"
@@ -104,7 +104,7 @@ const Contents = () => {
         width="30.9375"
         height="5.46875"
         rx="1"
-        fill="#5956E9"
+        fill="#1355FF"
       />
       <defs>
         <filter

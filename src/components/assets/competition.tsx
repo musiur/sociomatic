@@ -16,7 +16,7 @@ const Competition = () => {
           width="100"
           height="100"
           rx="10"
-          fill="#5956E9"
+          fill="#1355FF"
           fillOpacity="0.05"
         />
       </g>
@@ -45,21 +45,21 @@ const Competition = () => {
       <path d="M18.0005 90H82.0002H18.0005Z" fill="#F6F5FE" />
       <path
         d="M18.0005 90H82.0002"
-        stroke="#5956E9"
+        stroke="#1355FF"
         strokeWidth="5"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M42.0004 60.6399V69.9999C42.0004 72.1999 40.1204 73.9199 38.1205 74.8399C33.4005 76.9999 30.0005 82.9598 30.0005 89.9998"
-        stroke="#5956E9"
+        stroke="#1355FF"
         strokeWidth="5"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M58 60.6399V69.9999C58 72.1999 59.88 73.9199 61.88 74.8399C66.6 76.9999 70 82.9598 70 89.9998"
-        stroke="#5956E9"
+        stroke="#1355FF"
         strokeWidth="5"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -67,7 +67,7 @@ const Competition = () => {
       <path
         d="M74.0001 10H26.0002V37.9999C26.0002 44.3651 28.5288 50.4696 33.0297 54.9705C37.5305 59.4713 43.635 61.9999 50.0002 61.9999C56.3653 61.9999 62.4698 59.4713 66.9706 54.9705C71.4715 50.4696 74.0001 44.3651 74.0001 37.9999V10Z"
         fill="#F6F5FE"
-        stroke="#5956E9"
+        stroke="#1355FF"
         strokeWidth="5"
         strokeLinecap="round"
         strokeLinejoin="round"

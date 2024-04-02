@@ -12,15 +12,15 @@ const TargetAudience = () => {
           width="100"
           height="100"
           rx="10"
-          fill="#5956E9"
+          fill="#1355FF"
           fillOpacity="0.05"
         />
       </g>
-      <circle cx="50" cy="50" r="40" fill="#5956E9" />
+      <circle cx="50" cy="50" r="40" fill="#1355FF" />
       <circle cx="50" cy="50" r="35" fill="#F6F5FE" />
       <circle cx="50" cy="50" r="30" fill="#FFB454" />
       <circle cx="50" cy="50" r="25" fill="#F6F5FE" />
-      <circle cx="50" cy="50" r="20" fill="#5956E9" />
+      <circle cx="50" cy="50" r="20" fill="#1355FF" />
       <circle cx="50" cy="50" r="15" fill="#F6F5FE" />
       <defs>
         <filter
