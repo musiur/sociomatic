@@ -197,7 +197,7 @@ const Navbar = () => {
                     );
                   })}
                   <Link href="/get-a-quote">
-                    <Button>Get a Quote</Button>
+                    <Button variant="secondary">Get a Quote</Button>
                   </Link>
                 </ul>
               </div>
