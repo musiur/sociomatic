@@ -6,6 +6,7 @@ import BrandLogo from "../assets/brandlogo";
 const Footer = () => {
   return (
     <footer className="bg-muted">
+      <div className="h-2 bg-gradient-to-r from-secondary/5 via-secondary to-secondary/5"></div>
       <div className="section container">
         <section className="flex flex-col sm:flex-row flex-wrap items-start justify-between large-gap md:small-gap">
           <div className="order-4 md:order-first w-full md:w-auto">

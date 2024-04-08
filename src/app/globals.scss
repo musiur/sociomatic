@@ -180,3 +180,13 @@ h2 {
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-secondary/60 rounded-[10px];
 }
+
+.marquee {
+  @apply flex items-center z-[1] gap-8;
+  cursor: -webkit-grab;
+}
+
+.drag {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
