@@ -1,5 +1,6 @@
 import RoadmapBoard from "@/components/assets/roadmap-board";
 import Springle from "@/components/assets/springle";
+import Tagline from "@/components/molecule/tagline";
 
 const WhatAndWhySection = () => {
   const CardsData1 = [
@@ -49,9 +50,7 @@ const WhatAndWhySection = () => {
   return (
     <div className="py-16">
       <div className="container flex flex-col items-center justify-center gap-[32px]">
-        <p className="inline-flex border px-4 py-1 rounded-full text-[14px]">
-          Sociomatic Google Ads Service
-        </p>
+        <Tagline text="Sociomatic Google Ads Service" />
         <h2 className="h2 text-primary text-center">
           Our solution &nbsp;
           <span className="text-secondary relative">
@@ -80,7 +79,9 @@ const WhatAndWhySection = () => {
             const { id, image, title, description } = item;
             return (
               <div key={id} className="p-4 bg-gray-100 rounded-[40px]">
-                <div className="rounded-2xl overflow-hidden [&>svg]:w-full [&>svg]:h-auto">{image}</div>
+                <div className="rounded-2xl overflow-hidden [&>svg]:w-full [&>svg]:h-auto">
+                  {image}
+                </div>
                 <div className="space-y-[12px] p-2 pt-8">
                   <h3 className="font-semibold">{title}</h3>
                   <p>{description}</p>
@@ -93,7 +94,7 @@ const WhatAndWhySection = () => {
           {CardsData2.map((item) => {
             const { id, title, description } = item;
             return (
-              <div key={id} className="p-4 rounded-2xl border">
+              <div key={id} className="p-4 rounded-2xl border border-[#dedede]">
                 <div className="space-y-[12px] p-2">
                   <h3 className="font-semibold">{title}</h3>
                   <p>{description}</p>

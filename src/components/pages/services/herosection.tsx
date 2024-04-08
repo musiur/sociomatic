@@ -1,14 +1,13 @@
 import LunarCircle from "@/components/assets/lunar-circle";
 import Springle from "@/components/assets/springle";
+import Tagline from "@/components/molecule/tagline";
 import { Button } from "@/components/ui/button";
 
 const ServiceHeroSection = () => {
   return (
     <div className="py-16">
       <div className="container flex flex-col items-center justify-center gap-[32px]">
-        <p className="inline-flex border px-4 py-1 rounded-full text-[14px]">
-          100% Trust Worthy Solutions
-        </p>
+        <Tagline text="100% Trust Worthy Solutions" />
         <h1 className="h1 text-primary text-center">
           Setup, manage and <br />
           <span className="text-secondary relative">
