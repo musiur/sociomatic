@@ -1,5 +1,6 @@
 import Faq from "@/components/pages/home/faq";
 import CoreBenefits from "@/components/pages/services/core-benefits";
+import EndingFunnel from "@/components/pages/services/ending-funnel";
 import ServiceHeroSection from "@/components/pages/services/herosection";
 import LimitedOfferSection from "@/components/pages/services/limited-offer-section";
 import Testimonials from "@/components/pages/services/testimonials";
@@ -16,6 +17,7 @@ const NewUI = () => {
       <UserEmpathyBanner />
       <Testimonials />
       <CoreBenefits />
+      <EndingFunnel />
       <Faq data={GoogleAdsServicePageData.faqData} />
     </div>
   );

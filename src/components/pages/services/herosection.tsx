@@ -1,5 +1,6 @@
 import LunarCircle from "@/components/assets/lunar-circle";
 import Springle from "@/components/assets/springle";
+import ServicesCTA from "@/components/molecule/services-cta";
 import Tagline from "@/components/molecule/tagline";
 import { Button } from "@/components/ui/button";
 
@@ -41,9 +42,8 @@ const ServiceHeroSection = () => {
             referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen
           ></iframe>
-          <div className="grid grid-cols-1 sm:flex flex-wrap items-center justify-center gap-[12px]">
-            <Button variant="secondary">Get Started right away</Button>
-            <Button variant="outline">Get a free consultation</Button>
+          <div className="flex justify-center">
+            <ServicesCTA position="center"/>
           </div>
         </div>
       </div>

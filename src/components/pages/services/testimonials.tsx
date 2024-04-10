@@ -1,6 +1,7 @@
 import LunarCircle from "@/components/assets/lunar-circle";
 import Springle from "@/components/assets/springle";
 import { InteractiveMarquee } from "@/components/framer/marquee/marquee";
+import ServicesCTA from "@/components/molecule/services-cta";
 import Tagline from "@/components/molecule/tagline";
 import { Button } from "@/components/ui/button";
 import { Sparkle, StarIcon } from "lucide-react";
@@ -103,10 +104,7 @@ const Testimonials = () => {
         <h2 className="h2 text-primary text-center">
           Checkout what our
           <br />
-          <span className="text-secondary relative">
-            customers
-            {/* <Springle className="absolute bottom-[-16px] left-0 z-[-1] w-full" /> */}
-          </span>
+          <span className="text-secondary relative">customers</span>
           &nbsp;have to say
         </h2>
       </div>
@@ -136,9 +134,8 @@ const Testimonials = () => {
               </InteractiveMarquee>
             </div>
           </div>
-          <div className="container grid grid-cols-1 sm:flex flex-wrap items-center justify-center gap-[12px]">
-            <Button variant="secondary">Get Started right away</Button>
-            <Button variant="outline">Get a free consultation</Button>
+          <div className="flex justify-center">
+            <ServicesCTA position="center"/>
           </div>
         </div>
       </div>
@@ -166,7 +163,9 @@ export const TestimonialCard = ({
           return <Sparkle key={item} className="rotate-45" />;
         })}
       </div>
-      <p><i>{`"${testimonial}"`}</i></p>
+      <p>
+        <i>{`"${testimonial}"`}</i>
+      </p>
       <div className="flex items-center gap-4">
         <div className="h-10 w-10 rounded-full bg-gray-200"></div>
         <div>
