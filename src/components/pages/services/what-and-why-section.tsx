@@ -55,7 +55,7 @@ const WhatAndWhySection = () => {
           Our solution &nbsp;
           <span className="text-secondary relative">
             empowers
-            <Springle className="absolute bottom-[-8px] left-0 z-[-1] w-full" />
+            {/* <Springle className="absolute bottom-[-8px] left-0 z-[-1] w-full" /> */}
           </span>
           <br />
           the marketing freedom
@@ -94,7 +94,7 @@ const WhatAndWhySection = () => {
           {CardsData2.map((item) => {
             const { id, title, description } = item;
             return (
-              <div key={id} className="p-4 rounded-2xl border border-[#dedede]">
+              <div key={id} className="p-4 rounded-2xl border border-black/40">
                 <div className="space-y-[12px] p-2">
                   <h3 className="font-semibold">{title}</h3>
                   <p>{description}</p>

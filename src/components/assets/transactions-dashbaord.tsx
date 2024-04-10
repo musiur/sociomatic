@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 
-const TransactionDashboard = ({ className }: { className: string }) => {
+const TransactionDashboard = ({ className }: { className?: string }) => {
   return (
     <svg
       width="573"
@@ -8,7 +8,7 @@ const TransactionDashboard = ({ className }: { className: string }) => {
       viewBox="0 0 573 623"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={cn(className, "")}
+      className={cn(className, "w-full")}
     >
       <g filter="url(#filter0_d_84_5233)">
         <g clipPath="url(#clip0_84_5233)">

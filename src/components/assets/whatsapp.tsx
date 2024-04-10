@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 
-const WhatsAppIcon = ({ className }: { className: string }) => {
+const WhatsAppIcon = ({ className }: { className?: string }) => {
   return (
     <svg
       width="30"

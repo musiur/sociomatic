@@ -105,7 +105,7 @@ const Testimonials = () => {
           <br />
           <span className="text-secondary relative">
             customers
-            <Springle className="absolute bottom-[-16px] left-0 z-[-1] w-full" />
+            {/* <Springle className="absolute bottom-[-16px] left-0 z-[-1] w-full" /> */}
           </span>
           &nbsp;have to say
         </h2>
@@ -157,18 +157,16 @@ export const TestimonialCard = ({
     customer: { name: string; company: string; image: string; rating: number };
   };
 }) => {
-  const { id, testimonial, customer } = details;
+  const { testimonial, customer } = details;
   const { name, company, image, rating } = customer;
   return (
-    <div className="inline-block min-w-[300px] max-w-[450px] border p-4 rounded-2xl space-y-[16px]">
+    <div className="inline-block min-w-[300px] max-w-[450px] shadow p-4 rounded-2xl space-y-[16px]">
       <div className="flex">
         {[1, 2, 3, 4, 5].map((item: number) => {
           return <Sparkle key={item} className="rotate-45" />;
         })}
       </div>
-      <p>
-        <i>{`"${testimonial}"`}</i>
-      </p>
+      <p><i>{`"${testimonial}"`}</i></p>
       <div className="flex items-center gap-4">
         <div className="h-10 w-10 rounded-full bg-gray-200"></div>
         <div>

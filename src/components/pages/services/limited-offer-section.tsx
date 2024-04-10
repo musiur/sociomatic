@@ -14,7 +14,7 @@ const LimitedOfferSection = () => {
           to get our offered services with&nbsp;
           <span className="text-secondary relative">
             low cost
-            <Springle className="absolute bottom-[-16px] left-0 z-[-1] w-full" />
+            {/* <Springle className="absolute bottom-[-16px] left-0 z-[-1] w-full" /> */}
           </span>
         </h2>
         <p>

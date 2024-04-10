@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 
-const VideoPlayButton = ({ className }: { className: string }) => {
+const VideoPlayButton = ({ className }: { className?: string }) => {
   return (
     <svg
       width="100"
