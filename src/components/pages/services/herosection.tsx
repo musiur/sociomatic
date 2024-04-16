@@ -10,24 +10,25 @@ const ServiceHeroSection = () => {
       <div className="container flex flex-col items-center justify-center gap-[32px]">
         <Tagline text="100% Trust Worthy Solutions" />
         <h1 className="h1 text-primary text-center">
-          Setup, manage and <br />
+          2024 is Your&nbsp;
           <span className="text-secondary relative">
-            optimize
-            <Springle className="absolute bottom-[-16px] left-0 z-[-1] w-full" />
+            Year to Explode Growth:
+            {/* <Springle className="absolute bottom-[-16px] left-0 z-[-1] w-full" /> */}
           </span>
-          &nbsp;with us
+          &nbsp;Will Your Business Be Left Behind? (Limited Spots Available)
         </h1>
         <p className="max-w-[640px] text-center">
-          With our easy-to-use solutions,&nbsp;
+          Just a handful of business owners are about to unlock explosive growth
+          in 2024... Are you ready to join them? At The Sociomatic, Take your
+          chance to be one of them. &nbsp;
           <span className="font-semibold">
-            start a smooth Google Ads experience
+            we&apos;re on a mission to empower Fifty businesses
           </span>
-          &nbsp;to streamline the procedure for newbies to guarantee peak
-          performance - the best{" "}
+          &nbsp;this year with game-changing Google Ads strategies. &nbsp;
           <span className="text-secondary font-semibold">
-            Return On Investment
+            Get a FREE Google Ads audit today
           </span>
-          &nbsp; (ROI)
+          &nbsp;and see how we can transform your business!
         </p>
       </div>
       <div className="py-[48px] relative">
@@ -43,7 +44,7 @@ const ServiceHeroSection = () => {
             allowFullScreen
           ></iframe>
           <div className="flex justify-center">
-            <ServicesCTA position="center"/>
+            <ServicesCTA position="center" />
           </div>
         </div>
       </div>

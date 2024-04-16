@@ -12,15 +12,36 @@ const LimitedOfferSection = () => {
           <span className="bg-secondary text-white py-1 px-2 rounded mr-2">
             Hurry up!
           </span>
-          to get our offered services with&nbsp;
+          to Supercharge&nbsp;
           <span className="text-secondary relative">
-            low cost
+            Your Growth with Google Ads!
           </span>
         </h2>
         <p>
-          Supercharge your productivity and optimize your workflow with Sublime.
-          Our intuitive interface and robust features for you
+          Unlock explosive results and outpace your competition with our
+          exclusive Google Ads offer.
         </p>
+        <ul className="space-y-2">
+          <li className="font-medium mb-2">
+            Here&apos;s what you&apos;ll get:
+          </li>
+          <li>
+            <span className="font-semibold">Free Google Ads Audit:</span>&nbsp;
+            Identify hidden opportunities and optimize your campaigns (a $2.50
+            Million Value)
+          </li>
+          <li>
+            <span className="font-semibold">20% Off:</span>&nbsp;Your First
+            Month&apos;s Management Fee: Get expert management at a discounted
+            rate to kickstart your growth.
+          </li>
+          <li>
+            <span className="font-semibold">Bonus:</span>&nbsp;Google Analytics
+            & Ads Conversion Tracking Mastery! Our team will set up conversion
+            tracking and ensure it&nbsp;s integrated seamlessly between Google
+            Ads and Google Analytics
+          </li>
+        </ul>
         <ServicesCTA />
       </div>
     </div>

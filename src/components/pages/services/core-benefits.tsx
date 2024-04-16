@@ -12,26 +12,30 @@ const CoreBenefits = () => {
     {
       id: 1,
       icon: <ThreeDStar />,
-      title: "Real-time update",
-      description: "Sync your calendar and track your meeting expenses",
+      title: "Direct Access & Measurable Results",
+      description:
+        "Focus on running your business while Yeatiq(CEO) and his team handle the heavy lifting of Google Ads, ensuring you get the most out of your advertising budget. Plus, you can contact Yeatiq directly through WhatsApp or email.",
     },
     {
       id: 2,
       icon: <ThreeBoxes />,
-      title: "Boost savings",
-      description: "Sync your calendar and track your meeting expenses",
+      title: "Get the Support You Deserve",
+      description:
+        "Stay aware of the crowd. We are here to answer your questions and address any concerns",
     },
     {
       id: 3,
       icon: <ThreeItemsStack />,
-      title: "Testing feedback",
-      description: "Sync your calendar and track your meeting expenses",
+      title: "Ongoing Campaign Optimization",
+      description:
+        "continuously analyze data and refine your campaigns to maximize ROI and keep you ahead of the competition.",
     },
     {
       id: 4,
       icon: <ThreeRolesBar />,
-      title: "Boost savings",
-      description: "Sync your calendar and track your meeting expenses.",
+      title: "Your Success is Our CEO's Passion",
+      description:
+        "Yeatiq is invested in your success and is always available to provide direct support and strategic insights.",
     },
   ];
   return (
@@ -39,18 +43,17 @@ const CoreBenefits = () => {
       <div className="container flex flex-col items-center justify-center gap-[32px]">
         <Tagline text="Core benefits" />
         <h2 className="h2 text-primary text-center">
-          Power&nbsp;
+          Additionally, When You&apos;re,&nbsp;
           <span className="text-secondary relative">
-            your business
-            {/* <Springle className="absolute bottom-[-12px] left-0 z-[-1] w-full" /> */}
+            Part Of The Sociomatic Family
           </span>
-          <br />
-          with sociomatic
+          We will Work Together, Learn together ,Build Together and Implement
         </h2>
         <p className="max-w-[640px] text-center">
-          Sublime seamlessly integrates with your existing infrastructure,
-          allowing you to effortlessly connect and consolidate data from various
-          sources.
+          Joining Sociomatic Google Ads Family goes beyond powerful advertising
+          strategies. Our community is dedicated to your success, offering a
+          unique blend of expert guidance, results-driven support, and exclusive
+          networking opportunities.
         </p>
       </div>
       <div className="container pt-[48px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">

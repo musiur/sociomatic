@@ -52,25 +52,19 @@ const WhatAndWhySection = () => {
       <div className="container flex flex-col items-center justify-center gap-[32px]">
         <Tagline text="Sociomatic Google Ads Service" />
         <h2 className="h2 text-primary text-center">
-          Our solution &nbsp;
+          Frustrated with Static Growth?&nbsp;
           <span className="text-secondary relative">
-            empowers
-            {/* <Springle className="absolute bottom-[-8px] left-0 z-[-1] w-full" /> */}
+            We Help Businesses Explode
           </span>
-          <br />
-          the marketing freedom
+          with Targeted Google Ads.
         </h2>
         <p className="max-w-[640px] text-center">
-          With our easy-to-use solutions,&nbsp;
           <span className="font-semibold">
-            start a smooth Google Ads experience
+            We are a passionate team of Google Ads specialists with a proven
+            track record of helping businesses achieve explosive growth.
           </span>
-          &nbsp;to streamline the procedure for newbies to guarantee peak
-          performance - the best&nbsp;
-          <span className="text-secondary font-semibold">
-            Return On Investment
-          </span>
-          &nbsp; (ROI)
+          &nbsp;Our data-driven approach and focus on results ensure your
+          campaigns are optimized for maximum impact.
         </p>
       </div>
       <div className="container pt-[48px] space-y-10">
