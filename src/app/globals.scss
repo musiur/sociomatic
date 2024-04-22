@@ -49,15 +49,14 @@
   $u3: unit($min-font-size);
   $u4: unit($max-font-size);
 
-  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+  @if $u1 ==$u2 and $u1 ==$u3 and $u1 ==$u4 {
     & {
       font-size: $min-font-size;
+
       @media screen and (min-width: $min-vw) {
-        font-size: calc(
-          #{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} *
-            ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})
-        );
+        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
       }
+
       @media screen and (min-width: $max-vw) {
         font-size: $max-font-size;
       }
@@ -75,6 +74,7 @@ $h2_min_font: 22px;
 $h2_max_font: 39px;
 
 @layer base {
+
   *,
   *::before,
   *::after {
@@ -100,10 +100,12 @@ h1 {
     line-height: 120%;
   }
 }
+
 h2 {
   @include fluid-type($min_width, $max_width, $h2_min_font, $h2_max_font);
   @apply font-bold;
   line-height: 120%;
+
   span {
     @include fluid-type($min_width, $max_width, $h2_min_font, $h2_max_font);
     @apply font-bold;
@@ -129,6 +131,7 @@ h2 {
 
 .hero-description {
   @apply text-[16px] md:text-[20px];
+
   span {
     @apply font-medium text-primary text-[16px] md:text-[20px];
   }
@@ -181,12 +184,8 @@ h2 {
   @apply bg-secondary/60 rounded-[10px];
 }
 
-.marquee {
-  @apply flex items-center z-[1] gap-8;
-  cursor: -webkit-grab;
-}
 
-.drag {
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
+
+.swiper-slide {
+  height: calc((100% - 30px) / 2) !important;
 }

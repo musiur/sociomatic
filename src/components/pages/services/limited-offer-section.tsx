@@ -8,12 +8,12 @@ const LimitedOfferSection = () => {
     <div className="container pb-[96px] flex flex-col min-[700px]:flex-row gap-10 items-center justify-center">
       <TransactionDashboard className="w-full hidden sm:block" />
       <div className="space-y-[32px] max-w-[600px]">
-        <h2 className="h2 text-primary">
-          <span className="bg-secondary text-white py-1 px-2 rounded mr-2">
+        <h2 className="h2 text-primary leading-normal">
+          <span className="bg-secondary text-white py-1 px-2 rounded mr-2 leading-normal">
             Hurry up!
           </span>
           to Supercharge&nbsp;
-          <span className="text-secondary relative">
+          <span className="text-secondary relative leading-normal">
             Your Growth with Google Ads!
           </span>
         </h2>
@@ -21,7 +21,7 @@ const LimitedOfferSection = () => {
           Unlock explosive results and outpace your competition with our
           exclusive Google Ads offer.
         </p>
-        <ul className="space-y-2">
+        <ul className="space-y-4">
           <li className="font-medium mb-2">
             Here&apos;s what you&apos;ll get:
           </li>

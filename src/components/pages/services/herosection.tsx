@@ -22,7 +22,7 @@ const ServiceHeroSection = () => {
           in 2024... Are you ready to join them? At The Sociomatic, Take your
           chance to be one of them. &nbsp;
           <span className="font-semibold">
-            we&apos;re on a mission to empower Fifty businesses
+            we&apos;re on a mission to empower thirty businesses
           </span>
           &nbsp;this year with game-changing Google Ads strategies. &nbsp;
           <span className="text-secondary font-semibold">

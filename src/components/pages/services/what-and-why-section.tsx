@@ -1,54 +1,55 @@
 import RoadmapBoard from "@/components/assets/roadmap-board";
 import Springle from "@/components/assets/springle";
+import ThreeDStar from "@/components/assets/three-d-star";
 import Tagline from "@/components/molecule/tagline";
 
 const WhatAndWhySection = () => {
-  const CardsData1 = [
-    {
-      id: 1,
-      image: <RoadmapBoard />,
-      title: "Thousands of data sources",
-      description: (
-        <>
-          Sync your calendar and track your meeting expenses. Mercury will read
-          this and categorize your expense against your budget in seconds.
-        </>
-      ),
-    },
-    {
-      id: 2,
-      image: <RoadmapBoard />,
-      title: "Focusing on Commitment",
-      description: (
-        <>
-          Sync your calendar and track your meeting expenses. Mercury will read
-          this and categorize your expense against your budget in seconds.
-        </>
-      ),
-    },
-  ];
   const CardsData2 = [
     {
       id: 1,
+      icon: <ThreeDStar />,
       title: "Real-time update",
       description:
         "Sync your calendar and track your meeting expenses. Mercury will read this and categorize your expense against your budget in seconds.",
     },
     {
       id: 2,
+      icon: <ThreeDStar />,
       title: "Testing feedback",
       description:
         "Sync your calendar and track your meeting expenses. Mercury will read this and categorize your expense against your budget in seconds.",
     },
     {
       id: 3,
+      icon: <ThreeDStar />,
+      title: "Boost savings",
+      description:
+        "Sync your calendar and track your meeting expenses. Mercury will read this and categorize your expense against your budget in seconds.",
+    },
+    {
+      id: 4,
+      icon: <ThreeDStar />,
+      title: "Thousands of data sources",
+      description:
+        "Sync your calendar and track your meeting expenses. Mercury will read this and categorize your expense against your budget in seconds.",
+    },
+    {
+      id: 5,
+      icon: <ThreeDStar />,
+      title: "Focusing on Commitment",
+      description:
+        "Sync your calendar and track your meeting expenses. Mercury will read this and categorize your expense against your budget in seconds.",
+    },
+    {
+      id: 6,
+      icon: <ThreeDStar />,
       title: "Boost savings",
       description:
         "Sync your calendar and track your meeting expenses. Mercury will read this and categorize your expense against your budget in seconds.",
     },
   ];
   return (
-    <div className="py-16">
+    <div className="py-16 bg-muted">
       <div className="container flex flex-col items-center justify-center gap-[32px]">
         <Tagline text="Sociomatic Google Ads Service" />
         <h2 className="h2 text-primary text-center">
@@ -68,28 +69,16 @@ const WhatAndWhySection = () => {
         </p>
       </div>
       <div className="container pt-[48px] space-y-10">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
-          {CardsData1.map((item) => {
-            const { id, image, title, description } = item;
-            return (
-              <div key={id} className="p-4 bg-gray-100 rounded-[40px]">
-                <div className="rounded-2xl overflow-hidden [&>svg]:w-full [&>svg]:h-auto">
-                  {image}
-                </div>
-                <div className="space-y-[12px] p-2 pt-8">
-                  <h3 className="font-semibold">{title}</h3>
-                  <p>{description}</p>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 lg:grid-cols-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:grid-cols-3">
           {CardsData2.map((item) => {
-            const { id, title, description } = item;
+            const { id, title, description, icon } = item;
             return (
-              <div key={id} className="p-4 rounded-2xl border border-black/40">
+              <div
+                key={id}
+                className="p-4 rounded-2xl border-2 border-white hover:border-secondary hover:scale-105 bg-white transition ease-in-out duration-500 hover:shadow-2xl"
+              >
                 <div className="space-y-[12px] p-2">
+                  {icon}
                   <h3 className="font-semibold">{title}</h3>
                   <p>{description}</p>
                 </div>

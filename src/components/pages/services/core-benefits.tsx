@@ -39,39 +39,40 @@ const CoreBenefits = () => {
     },
   ];
   return (
-    <div className="py-16">
+    <div className="py-[64px]">
       <div className="container flex flex-col items-center justify-center gap-[32px]">
         <Tagline text="Core benefits" />
         <h2 className="h2 text-primary text-center">
-          Additionally, When You&apos;re,&nbsp;
+          Additionally, When You&apos;re,
+          <br />
           <span className="text-secondary relative">
             Part Of The Sociomatic Family
           </span>
-          We will Work Together, Learn together ,Build Together and Implement
         </h2>
         <p className="max-w-[640px] text-center">
-          Joining Sociomatic Google Ads Family goes beyond powerful advertising
-          strategies. Our community is dedicated to your success, offering a
-          unique blend of expert guidance, results-driven support, and exclusive
-          networking opportunities.
+          <span className="font-bold">
+            We will Work Together, Learn together ,Build Together and Implement.
+          </span>
+          &nbsp; Joining Sociomatic Google Ads Family goes beyond powerful
+          advertising strategies. Our community is dedicated to your success,
+          offering a unique blend of expert guidance, results-driven support,
+          and exclusive networking opportunities.
         </p>
       </div>
-      <div className="container pt-[48px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-        <div className="flex flex-col sm:flex-row lg:flex-col items-center justify-center gap-10">
-          {CardsData.slice(0, 2).map((item) => {
-            const { id, title, description, icon } = item;
-            return (
-              <div key={id} className="space-y-[12px]">
-                <div className="inline-block p-2 bg-white border border-gray-200 rounded-[10px] shadow-md">
-                  {icon}
-                </div>
-                <h3 className="font-semibold">{title}</h3>
-                <p>{description}</p>
+      <div className="container pt-[48px] grid grid-cols-1 sm:grid-cols-2 gap-10">
+        {CardsData.map((item) => {
+          const { id, title, description, icon } = item;
+          return (
+            <div key={id} className="space-y-[12px]">
+              <div className="inline-block p-2 bg-white border  rounded-[10px] shadow-md">
+                {icon}
               </div>
-            );
-          })}
-        </div>
-        <TransactionDashboard className="hidden lg:block h-auto" />
+              <h3 className="font-semibold">{title}</h3>
+              <p>{description}</p>
+            </div>
+          );
+        })}
+        {/* <TransactionDashboard className="hidden lg:block h-auto" />
         <div className="flex flex-col sm:flex-row lg:flex-col items-center justify-center gap-10">
           {CardsData.slice(2).map((item) => {
             const { id, title, description, icon } = item;
@@ -85,7 +86,7 @@ const CoreBenefits = () => {
               </div>
             );
           })}
-        </div>
+        </div> */}
       </div>
     </div>
   );

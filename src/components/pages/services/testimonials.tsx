@@ -1,141 +1,79 @@
-import LunarCircle from "@/components/assets/lunar-circle";
-import Springle from "@/components/assets/springle";
-import { InteractiveMarquee } from "@/components/framer/marquee/marquee";
+// import { InteractiveMarquee } from "@/components/framer/marquee/marquee";
+"use client";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/grid";
+import "swiper/css/pagination";
+
+// import "./styles.css";
+
+// import required modules
+import {
+  Autoplay,
+  Keyboard,
+  Mousewheel,
+  Navigation,
+  Pagination,
+} from "swiper/modules";
 import ServicesCTA from "@/components/molecule/services-cta";
 import Tagline from "@/components/molecule/tagline";
-import { Button } from "@/components/ui/button";
-import { Sparkle, StarIcon } from "lucide-react";
+import { Sparkle } from "lucide-react";
 
 const Testimonials = () => {
-  const TestimonialCardsData = [
-    {
-      id: 1,
-      testimonial:
-        "It's intuitive, functional, easy-to-setup and presents content in an interactive and interesting way.",
-      customer: {
-        name: "John Smith",
-        company: "Marketing Manager @RabbitQ",
-        image: "",
-        rating: 5,
-      },
-    },
-    {
-      id: 2,
-      testimonial:
-        "It's intuitive, functional, easy-to-setup and presents content in an interactive and interesting way.",
-      customer: {
-        name: "John Smith",
-        company: "Marketing Manager @RabbitQ",
-        image: "",
-        rating: 5,
-      },
-    },
-    {
-      id: 3,
-      testimonial:
-        "It's intuitive, functional, easy-to-setup and presents content in an interactive and interesting way.",
-      customer: {
-        name: "John Smith",
-        company: "Marketing Manager @RabbitQ",
-        image: "",
-        rating: 5,
-      },
-    },
-    {
-      id: 4,
-      testimonial:
-        "It's intuitive, functional, easy-to-setup and presents content in an interactive and interesting way.",
-      customer: {
-        name: "John Smith",
-        company: "Marketing Manager @RabbitQ",
-        image: "",
-        rating: 5,
-      },
-    },
-    {
-      id: 5,
-      testimonial:
-        "It's intuitive, functional, easy-to-setup and presents content in an interactive and interesting way.",
-      customer: {
-        name: "John Smith",
-        company: "Marketing Manager @RabbitQ",
-        image: "",
-        rating: 5,
-      },
-    },
-    {
-      id: 6,
-      testimonial:
-        "It's intuitive, functional, easy-to-setup and presents content in an interactive and interesting way.",
-      customer: {
-        name: "John Smith",
-        company: "Marketing Manager @RabbitQ",
-        image: "",
-        rating: 5,
-      },
-    },
-    {
-      id: 7,
-      testimonial:
-        "It's intuitive, functional, easy-to-setup and presents content in an interactive and interesting way.",
-      customer: {
-        name: "John Smith",
-        company: "Marketing Manager @RabbitQ",
-        image: "",
-        rating: 5,
-      },
-    },
-    {
-      id: 8,
-      testimonial:
-        "It's intuitive, functional, easy-to-setup and presents content in an interactive and interesting way.",
-      customer: {
-        name: "John Smith",
-        company: "Marketing Manager @RabbitQ",
-        image: "",
-        rating: 5,
-      },
-    },
-  ];
   return (
-    <div className="py-16">
+    <div className="py-16 bg-muted">
       <div className="container flex flex-col items-center justify-center gap-[32px]">
         <Tagline text="Testimonials" />
         <h2 className="h2 text-primary text-center">
-          Checkout what our
+          Checkout What Our
           <br />
-          <span className="text-secondary relative">customers</span>
-          &nbsp;have to say
+          <span className="text-secondary relative">Customers</span>
+          &nbsp;Have To Say
         </h2>
       </div>
-      <div className="py-[48px]">
-        <div className="flex flex-col gap-[48px]">
+      <div className="py-[48px] container">
+        <div className="space-y-8">
           <div className="relative">
-            <div className="absolute top-0 left-0 w-[5%] h-full z-[2] bg-gradient-to-r from-white to-white/0" />
-            <div className="absolute top-0 right-0 w-[5%] h-full z-[2] bg-gradient-to-l from-white to-white/0" />
-            <div className="pt-[32px] space-y-8">
-              <InteractiveMarquee speed={1}>
-                <div className="flex items-center gap-8">
-                  {TestimonialCardsData.map((item: any) => {
-                    return item.id % 2 !== 0 ? (
-                      <TestimonialCard key={item.id} details={item} />
-                    ) : null;
-                  })}
-                </div>
-              </InteractiveMarquee>
-              <InteractiveMarquee>
-                <div className="flex items-center gap-8">
-                  {TestimonialCardsData.map((item: any) => {
-                    return item.id % 2 === 0 ? (
-                      <TestimonialCard key={item.id} details={item} />
-                    ) : null;
-                  })}
-                </div>
-              </InteractiveMarquee>
-            </div>
+            <Swiper
+              spaceBetween={0}
+              loop={true}
+              pagination={{
+                clickable: true,
+              }}
+              navigation={true}
+              mousewheel={true}
+              keyboard={true}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: true,
+              }}
+              breakpoints={{
+                640: {
+                  slidesPerView: 1,
+                },
+                768: {
+                  slidesPerView: 2,
+                },
+                1024: {
+                  slidesPerView: 3,
+                },
+              }}
+              modules={[Pagination, Navigation, Mousewheel, Keyboard, Autoplay]}
+            >
+              {TestimonialCardsData.map((item: any) => {
+                return (
+                  <SwiperSlide key={item.id} className="pt-4 pb-16 px-4">
+                    <TestimonialCard details={item} />
+                  </SwiperSlide>
+                );
+              })}
+            </Swiper>
           </div>
           <div className="flex justify-center">
-            <ServicesCTA position="center"/>
+            <ServicesCTA position="center" />
           </div>
         </div>
       </div>
@@ -157,7 +95,7 @@ export const TestimonialCard = ({
   const { testimonial, customer } = details;
   const { name, company, image, rating } = customer;
   return (
-    <div className="inline-block min-w-[300px] max-w-[450px] shadow p-4 rounded-2xl space-y-[16px]">
+    <div className="inline-block min-w-[300px] shadow p-4 rounded-2xl space-y-[16px] border-2 border-white hover:border-secondary hover:scale-105 bg-white transition ease-in-out duration-500 hover:shadow-xl">
       <div className="flex">
         {[1, 2, 3, 4, 5].map((item: number) => {
           return <Sparkle key={item} className="rotate-45" />;
@@ -176,3 +114,94 @@ export const TestimonialCard = ({
     </div>
   );
 };
+
+const TestimonialCardsData = [
+  {
+    id: 1,
+    testimonial:
+      "It's intuitive, functional, easy-to-setup and presents content in an interactive and interesting way.",
+    customer: {
+      name: "John Smith",
+      company: "Marketing Manager @RabbitQ",
+      image: "",
+      rating: 5,
+    },
+  },
+  {
+    id: 2,
+    testimonial:
+      "It's intuitive, functional, easy-to-setup and presents content in an interactive and interesting way.",
+    customer: {
+      name: "John Smith",
+      company: "Marketing Manager @RabbitQ",
+      image: "",
+      rating: 5,
+    },
+  },
+  {
+    id: 3,
+    testimonial:
+      "It's intuitive, functional, easy-to-setup and presents content in an interactive and interesting way.",
+    customer: {
+      name: "John Smith",
+      company: "Marketing Manager @RabbitQ",
+      image: "",
+      rating: 5,
+    },
+  },
+  {
+    id: 4,
+    testimonial:
+      "It's intuitive, functional, easy-to-setup and presents content in an interactive and interesting way.",
+    customer: {
+      name: "John Smith",
+      company: "Marketing Manager @RabbitQ",
+      image: "",
+      rating: 5,
+    },
+  },
+  {
+    id: 5,
+    testimonial:
+      "It's intuitive, functional, easy-to-setup and presents content in an interactive and interesting way.",
+    customer: {
+      name: "John Smith",
+      company: "Marketing Manager @RabbitQ",
+      image: "",
+      rating: 5,
+    },
+  },
+  {
+    id: 6,
+    testimonial:
+      "It's intuitive, functional, easy-to-setup and presents content in an interactive and interesting way.",
+    customer: {
+      name: "John Smith",
+      company: "Marketing Manager @RabbitQ",
+      image: "",
+      rating: 5,
+    },
+  },
+  {
+    id: 7,
+    testimonial:
+      "It's intuitive, functional, easy-to-setup and presents content in an interactive and interesting way.",
+    customer: {
+      name: "John Smith",
+      company: "Marketing Manager @RabbitQ",
+      image: "",
+      rating: 5,
+    },
+  },
+  {
+    id: 8,
+    testimonial:
+      "It's intuitive, functional, easy-to-setup and presents content in an interactive and interesting way.",
+    customer: {
+      name: "John Smith",
+      company: "Marketing Manager @RabbitQ",
+      image: "",
+      rating: 5,
+    },
+  },
+];

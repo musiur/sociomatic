@@ -30,7 +30,7 @@ const Navbar = () => {
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
   return (
     <nav
-      className="backdrop-blur-xl bg-white/70 border-b border-secondarymuted sticky top-0 z-50"
+      className="backdrop-blur-xl bg-white/70 border-b border-gray-200 sticky top-0 z-50"
       id="topPoint"
     >
       <div className="container py-3 flex items-center justify-between">
