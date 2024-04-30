@@ -1,11 +1,27 @@
 import clsx from "clsx";
 import { Button } from "../ui/button";
+import { ReactElement } from "react";
 
 const ServicesCTA = ({
   position = "left",
+  cta = {
+    primary: {
+      text: <></>,
+      link: "/",
+    },
+    secondary: {
+      text: <></>,
+      link: "/",
+    },
+  },
 }: {
   position?: "center" | "left" | "right";
+  cta: {
+    primary: { text: ReactElement; link: string };
+    secondary: { text: ReactElement; link: string };
+  };
 }) => {
+  const { primary, secondary } = cta;
   return (
     <div>
       <p
@@ -18,8 +34,8 @@ const ServicesCTA = ({
         Go Here To Fill Out A 2-Minute Application For The Coaching Program
       </p>
       <div className="grid grid-cols-1 min-[400px]:flex flex-wrap items-center justify-start gap-[12px]">
-        <Button variant="secondary">Get Started right away</Button>
-        <Button variant="outline">Get a free consultation</Button>
+        <Button variant="secondary">{primary.text}</Button>
+        <Button variant="outline">{secondary.text}</Button>
       </div>
     </div>
   );

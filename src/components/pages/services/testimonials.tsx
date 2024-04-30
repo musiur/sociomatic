@@ -26,7 +26,7 @@ const Testimonials = () => {
   return (
     <div className="py-16 bg-muted">
       <div className="container flex flex-col items-center justify-center gap-[32px]">
-        <Tagline text="Testimonials" />
+        <Tagline text={<>Testimonials</>} />
         <h2 className="h2 text-primary text-center">
           Checkout What Our
           <br />
@@ -73,7 +73,13 @@ const Testimonials = () => {
             </Swiper>
           </div>
           <div className="flex justify-center">
-            <ServicesCTA position="center" />
+            <ServicesCTA
+              position="center"
+              cta={{
+                primary: { text: <>Get Started Right Away</>, link: "/" },
+                secondary: { text: <>Get A Free Consultation</>, link: "/" },
+              }}
+            />
           </div>
         </div>
       </div>

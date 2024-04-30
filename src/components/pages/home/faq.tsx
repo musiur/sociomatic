@@ -1,50 +1,50 @@
-"use client"
+"use client";
 import SectionHead from "@/components/molecule/section-head";
 import {
-    Accordion,
-    AccordionContent,
-    AccordionItem,
-    AccordionTrigger,
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
 } from "@/components/ui/accordion";
+import { ReactElement } from "react";
 
-
-const Faq = ({data}: {data: any}) => {
-    return (
-        <section className="section container">
-            <SectionHead
-                highlighter={data.highlighter}
-                H2={data.H2}
-                paragraphs={data.paragraphs}
-            />
-            <div className=" pt-[50px] max-w-[800px] mx-auto">
-
-
-                <Accordion type="single" collapsible className="flex flex-col small-gap" >
-
-                    {
-                        data.qnaList.map((item: {
-                            id: number;
-                            title: string;
-                            details: string;
-                        }) => {
-                            const { id, title, details } = item;
-                            return (
-
-                                <AccordionItem key={id} value={`item-${id}`}>
-                                    <AccordionTrigger>{title}</AccordionTrigger>
-                                    <AccordionContent>
-                                        {details}
-                                    </AccordionContent>
-                                </AccordionItem>
-
-                            )
-                        })
-                    }
-                </Accordion>
-
-            </div>
-        </section>
-    )
-}
+const Faq = ({
+  data,
+}: {
+  data: {
+    title: ReactElement;
+    faqs: { id: number; question: ReactElement; answer: ReactElement }[];
+  };
+}) => {
+  const { title, faqs } = data;
+  return (
+    <section className="section container">
+      <h2 className="h2 text-primary text-center">{title}</h2>
+      <div className=" pt-[50px] max-w-[800px] mx-auto">
+        <Accordion
+          type="single"
+          collapsible
+          className="flex flex-col small-gap"
+        >
+          {faqs.map(
+            (item: {
+              id: number;
+              question: ReactElement;
+              answer: ReactElement;
+            }) => {
+              const { id, question, answer } = item;
+              return (
+                <AccordionItem key={id} value={`item-${id}`}>
+                  <AccordionTrigger>{question}</AccordionTrigger>
+                  <AccordionContent>{answer}</AccordionContent>
+                </AccordionItem>
+              );
+            }
+          )}
+        </Accordion>
+      </div>
+    </section>
+  );
+};
 
 export default Faq;

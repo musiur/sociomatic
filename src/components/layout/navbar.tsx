@@ -271,19 +271,19 @@ const Links = [
     children: [
       {
         id: 1,
-        text: "Google Paid Ads",
-        link: "/services/google-paid-ads",
+        text: "Google Ads",
+        link: "/services/google-ads",
       },
-      {
-        id: 2,
-        text: "Social Media Paid Ads",
-        link: "/services/social-media-paid-ads",
-      },
-      {
-        id: 3,
-        text: "Data Analytics",
-        link: "/services/data-analytics",
-      },
+      // {
+      //   id: 2,
+      //   text: "Social Media Paid Ads",
+      //   link: "/services/social-media-paid-ads",
+      // },
+      // {
+      //   id: 3,
+      //   text: "Data Analytics",
+      //   link: "/services/data-analytics",
+      // },
       {
         id: 4,
         text: "Software Development",
@@ -294,21 +294,21 @@ const Links = [
         text: "Custom Web Development",
         link: "/services/custom-web-development",
       },
-      {
-        id: 6,
-        text: "Shopify Store Development",
-        link: "/services/shopify-store-development",
-      },
-      {
-        id: 7,
-        text: "Wordpress Development",
-        link: "/services/wordpress-development",
-      },
-      {
-        id: 8,
-        text: "UI/UX & Graphic Design",
-        link: "/services/ui-ux-and-graphic-design",
-      },
+      // {
+      //   id: 6,
+      //   text: "Shopify Store Development",
+      //   link: "/services/shopify-store-development",
+      // },
+      // {
+      //   id: 7,
+      //   text: "Wordpress Development",
+      //   link: "/services/wordpress-development",
+      // },
+      // {
+      //   id: 8,
+      //   text: "UI/UX & Graphic Design",
+      //   link: "/services/ui-ux-and-graphic-design",
+      // },
       {
         id: 10,
         text: "All Services",
