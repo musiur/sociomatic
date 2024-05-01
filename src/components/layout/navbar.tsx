@@ -294,26 +294,26 @@ const Links = [
         text: "Custom Web Development",
         link: "/services/custom-web-development",
       },
-      // {
-      //   id: 6,
-      //   text: "Shopify Store Development",
-      //   link: "/services/shopify-store-development",
-      // },
-      // {
-      //   id: 7,
-      //   text: "Wordpress Development",
-      //   link: "/services/wordpress-development",
-      // },
-      // {
-      //   id: 8,
-      //   text: "UI/UX & Graphic Design",
-      //   link: "/services/ui-ux-and-graphic-design",
-      // },
       {
-        id: 10,
-        text: "All Services",
-        link: "/services",
+        id: 6,
+        text: "Shopify Development",
+        link: "/services/shopify-development",
       },
+      {
+        id: 7,
+        text: "Wordpress Development",
+        link: "/services/wordpress-development",
+      },
+      {
+        id: 8,
+        text: "UI/UX",
+        link: "/services/uiux",
+      },
+      // {
+      //   id: 10,
+      //   text: "All Services",
+      //   link: "/services",
+      // },
     ],
   },
   {

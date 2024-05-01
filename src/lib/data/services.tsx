@@ -1084,4 +1084,920 @@ export const ServicePageCOPY = {
       ],
     },
   },
+  wordpressDevelopment: {
+    hero: {
+      tagline: <>End-to-end WordPress solutions</>,
+      title: (
+        <>
+          WordPress <span>Your Way</span> to Your Needs
+        </>
+      ),
+      body: (
+        <>
+          <span>
+            Sociomatic offers expert WordPress Development services to help
+            businesses establish a robust online presence. From customizable
+            teams to advanced plugins, our team delivers tailored solutions that
+            meet your unique requirements and drive results.
+          </span>
+          Develop and expand your website using the optimal WordPress solution.
+          Benefit from lightning-fast hosting, user-friendly and adaptable
+          editing tools, and all the essential features to enhance your website
+          and engage your audience, seamlessly integrated
+        </>
+      ),
+      cta: {
+        primary: {
+          text: <>Get Started Right Away</>,
+          link: "/",
+        },
+        secondary: {
+          text: <>Get A Free Consultation</>,
+          link: "/",
+        },
+      },
+    },
+    limitedOffer: {
+      tagline: <></>,
+      title: (
+        <>
+          <span>Unlock!</span> Explosive Growth in 2024
+        </>
+      ),
+      body: {
+        para: (
+          <>
+            Don&apos;t miss the chance to elevate your website with exclusive
+            deals on WordPress development services from Sociomatic. Our team is
+            dedicated to helping you unlock the full potential of your online
+            presence. Contact us now to take advantage of these limited-time
+            offers.
+          </>
+        ),
+        benefits: [],
+      },
+      cta: {
+        primary: {
+          text: <>Get Started Right Away</>,
+          link: "/",
+        },
+        secondary: {
+          text: <>Get A Free Consultation</>,
+          link: "/",
+        },
+      },
+    },
+    whyWeAndWhatWeDo: {
+      tagline: <>Empowering Digital Growth</>,
+      title: <>Driving Success Through Collaboration</>,
+      body: {
+        para: (
+          <>
+            At sociomatic, we&apos;re passionate about WordPress and its
+            potential to transform businesses. Our team collaborates with
+            clients to create dynamic and effective WordPress solutions that
+            drive success.
+          </>
+        ),
+        benefits: [
+          {
+            id: 1,
+            icon: <></>,
+            title: <>Lightning Fast Hosting</>,
+            paragraph: (
+              <>
+                Our WordPress solutions come with high-performance hosting
+                services, ensuring your website loads quickly and provides an
+                optimal user experience
+              </>
+            ),
+          },
+          {
+            id: 2,
+            icon: <></>,
+            title: <>Intuitive Editing Tools</>,
+            paragraph: (
+              <>
+                We use great editing tools from WordPress that make it easy to
+                update and manage your website content without requiring
+                technical expertise
+              </>
+            ),
+          },
+          {
+            id: 3,
+            icon: <></>,
+            title: <>Flexible Customizable</>,
+            paragraph: (
+              <>
+                With our WordPress solutions, you have the flexibility to
+                customize your website according to your unique needs and
+                preferences, allowing for seamless integration of custom design
+                and functionalities
+              </>
+            ),
+          },
+          {
+            id: 4,
+            icon: <></>,
+            title: <>Audience Engagement</>,
+            paragraph: (
+              <>
+                We offer features and plugins that help you engage with your
+                audience effectively, such as social media integration, email
+                marketing tools, and advanced analytics.
+              </>
+            ),
+          },
+          {
+            id: 5,
+            icon: <></>,
+            title: <>Scalability</>,
+            paragraph: (
+              <>
+                Our WordPress websites are designed to scale with your business
+                growth. Whether you&apos;re a small startup or a large
+                enterprise, our solutions can accommodate your evolving needs
+              </>
+            ),
+          },
+          {
+            id: 6,
+            icon: <></>,
+            title: <>Security Measures</>,
+            paragraph: (
+              <>
+                Security is our priority. We implement robust security measures
+                to protect your website from cyber threats and ensure the safety
+                of your data and visitor&apos;s information.
+              </>
+            ),
+          },
+        ],
+      },
+    },
+    userEmpathy: {
+      tagline: <>Empathetic Support Always</>,
+      title: <>Understanding Your Digital Goals</>,
+      body: (
+        <>
+          We understand your uncertainty in choosing the right platform for your
+          website. Our empathetic team is here to guide you through the process,
+          offering support and expertise every step of the way.
+        </>
+      ),
+    },
+    coreBenefits: {
+      tagline: <>Empowering Digital Growth</>,
+      title: <>Driving Success Through Collaboration</>,
+      body: {
+        para: (
+          <>
+            At Sociomatic, we&apos;re passionate about WordPress and its
+            potential to transform businesses. Our team collaborates with
+            clients to create dynamic and effective WordPress solutions that
+            drive success.
+          </>
+        ),
+        benefits: [
+          {
+            id: 1,
+            title: <>Collaboration</>,
+            para: (
+              <>
+                We believe in collaborating closely with clients to achieve
+                shared goals.
+              </>
+            ),
+          },
+          {
+            id: 2,
+            title: <>Innovation</>,
+            para: (
+              <>
+                We continually explore new technologies and trends to deliver
+                innovative solutions
+              </>
+            ),
+          },
+          {
+            id: 3,
+            title: <>Reliability</>,
+            para: (
+              <>
+                We are committed to delivering reliable and sustainable
+                WordPress solutions.
+              </>
+            ),
+          },
+          {
+            id: 4,
+            title: <>Scalability</>,
+            para: (
+              <>
+                We build scalable WordPress websites that can grow with your
+                business.
+              </>
+            ),
+          },
+        ],
+      },
+    },
+    endingFunnel: {
+      tagline: <>Your success starts here.</>,
+      title: (
+        <>
+          Partner with Us for Dynamic WordPress Solutions,We deliver exceptional
+          results <>difference</>
+        </>
+      ),
+      body: (
+        <>
+          Ready to power up your website with WordPress? Let our experienced
+          team create a tailored solution that exceeds your expectations.
+          Contact us today, and let&apos;s make your online presence shine!
+        </>
+      ),
+      cta: {
+        primary: {
+          text: <>Get Started Right Away</>,
+          link: "/",
+        },
+        secondary: {
+          text: <>Get A Free Consultation</>,
+          link: "/",
+        },
+      },
+    },
+    faq: {
+      title: <>Frequently Asked Questions</>,
+      faqs: [
+        {
+          id: 1,
+          question: <>Why is Wordpress a good options for my website?</>,
+          answer: (
+            <>
+              Wordpress is perfect for many websites because it&apos;s flexible,
+              user-friendly, and has a large ecosystem of plugins, And it&apos;s
+              cost-effective
+            </>
+          ),
+        },
+        {
+          id: 2,
+          question: <>Does sociomatic offer Wordpress theme customization?</>,
+          answer: (
+            <>
+              Sociomatic does theme customization so that your wordpress website
+              reflects your tastes and brand identity
+            </>
+          ),
+        },
+        {
+          id: 3,
+          question: (
+            <>Does Sociomatic provide Wordpress e-commerce solutions?</>
+          ),
+          answer: (
+            <>
+              Yes, Sociomatic offers reliable e-commerce solutions. It
+              integrates WooCommerce plugins to enable smooth online
+              transactions.
+            </>
+          ),
+        },
+        {
+          id: 4,
+          question: <>Can I move my current website to Wordpress?</>,
+          answer: (
+            <>
+              Sociomatic quickly moves content and functionality from other
+              platforms to Wordpress
+            </>
+          ),
+        },
+        {
+          id: 5,
+          question: <>Why does Sociomatic use Wordpess security measures?</>,
+          answer: (
+            <>
+              To proect your Wordpress website from possible attacks, Sociomatic
+              uses security plugins, fequent updates, and SSL integration
+            </>
+          ),
+        },
+      ],
+    },
+  },
+  shopifyDevelopment: {
+    hero: {
+      tagline: <>End-to-end Shopify solutions</>,
+      title: <>Tailored Shopify Solutions for Your Online Store Success</>,
+      body: (
+        <>
+          Sociomatic offers expert Shopify development services to help
+          businesses establish and grow their e-commerce presence. From
+          customized themes to advanced functionalities, our team delivers
+          tailored solutions that drive sales and enhance customer experiences.
+        </>
+      ),
+      cta: {
+        primary: {
+          text: <>Get Started Right Away</>,
+          link: "/",
+        },
+        secondary: {
+          text: <>Get A Free Consultation</>,
+          link: "/",
+        },
+      },
+    },
+    limitedOffer: {
+      tagline: <></>,
+      title: (
+        <>
+          <span>Unlock!</span> Explosive Growth in 2024
+        </>
+      ),
+      body: {
+        para: (
+          <>
+            Just a handful of business owners are about to unlock explosive
+            growth in 2024. Are you ready to join them? At The Sociomatic,
+            we&apos;re on a mission to empower thirty businesses this year with
+            game-changing strategies.
+          </>
+        ),
+        benefits: [],
+      },
+      cta: {
+        primary: {
+          text: <>Get Started Right Away</>,
+          link: "/",
+        },
+        secondary: {
+          text: <>Get A Free Consultation</>,
+          link: "/",
+        },
+      },
+    },
+    whyWeAndWhatWeDo: {
+      tagline: <>Elevating E-commerce Experiences </>,
+      title: <>Exceeding Expectations, Every Step</>,
+      body: {
+        para: (
+          <>
+            At Sociomatic, we understand the complexity involved in launching an
+            online store. Our empathetic team is here to assist you in
+            navigating the challenges and finding the perfect solution that
+            meets your e-commerce goals.
+          </>
+        ),
+        benefits: [
+          {
+            id: 1,
+            icon: <></>,
+            title: <>Customized Store Design</>,
+            paragraph: (
+              <>
+                We create custom-designed Shopify stores tailored to your brand
+                identity and target audience, ensuring a unique and memorable
+                shopping experience
+              </>
+            ),
+          },
+          {
+            id: 2,
+            icon: <></>,
+            title: <>Responsive Design</>,
+            paragraph: (
+              <>
+                Our Shopify solutions are optimized for mobile devices, allowing
+                customers to browse and purchase products seamlessly on any
+                screen size
+              </>
+            ),
+          },
+          {
+            id: 3,
+            icon: <></>,
+            title: <>Streamlined Checkout Process</>,
+            paragraph: (
+              <>
+                Our Shopify stores feature a streamlined checkout process with
+                multiple payment options, reducing cart abandonment and
+                increasing the conversion rate
+              </>
+            ),
+          },
+          {
+            id: 4,
+            icon: <></>,
+            title: <>Advanced Functionalities</>,
+            paragraph: (
+              <>
+                We integrate advanced e-commerce features such as product
+                variants, discounts, and customer reviews to enhance the
+                shopping experience and drive sales.
+              </>
+            ),
+          },
+          {
+            id: 5,
+            icon: <></>,
+            title: <>SEO Optimization</>,
+            paragraph: (
+              <>
+                We optimize your Shopify store for search engines, ensuring that
+                your products are easily discoverable by potential customers and
+                driving organic traffic to your site
+              </>
+            ),
+          },
+          {
+            id: 6,
+            icon: <></>,
+            title: <>Robust analytics and Reporting</>,
+            paragraph: (
+              <>
+                We provide comprehensive analytics and reporting tools to track
+                your store&apos;s performance, including sales data, customer
+                demographics, and traffic sources, empowering you to make
+                informed business decisions.
+              </>
+            ),
+          },
+        ],
+      },
+    },
+    userEmpathy: {
+      tagline: <>Empathetic Support Always</>,
+      title: <>Understanding Your E-commerce Needs</>,
+      body: (
+        <>
+          We understand the complexity involved in launching an online store.
+          Our empathetic team is here to assist you in navigating the challenges
+          and finding the perfect solution that meets your e-commerce goals.
+        </>
+      ),
+    },
+    coreBenefits: {
+      tagline: <>Elevating E-commerce Experiences</>,
+      title: <>Exceeding Expectations, Every Step</>,
+      body: {
+        para: (
+          <>
+            At Sociomatic, we understand the complexity involved in launching an
+            online store. Our empathetic team is here to assist you in
+            navigating the challenges and finding the perfect solution that
+            meets your e-commerce goals.
+          </>
+        ),
+        benefits: [
+          {
+            id: 1,
+            title: <>Excellence</>,
+            para: (
+              <>
+                We strive for excellence in every aspect of our Shopify
+                development services.
+              </>
+            ),
+          },
+          {
+            id: 2,
+            title: <>Customization</>,
+            para: (
+              <>
+                We offer tailored solutions to meet the unique needs of each
+                e-commerce business.
+              </>
+            ),
+          },
+          {
+            id: 3,
+            title: <>Support</>,
+            para: (
+              <>
+                We provide dedicated support to ensure a seamless Shopify
+                experience for our clients
+              </>
+            ),
+          },
+          {
+            id: 4,
+            title: <>Performance</>,
+            para: (
+              <>
+                We optimize Shopify stores for performance to provide a smooth
+                user experience.
+              </>
+            ),
+          },
+        ],
+      },
+    },
+    endingFunnel: {
+      tagline: <>Your success starts here.</>,
+      title: <>Partner with Us for High-Impact E-commerce Solutions</>,
+      body: (
+        <>
+          Ready to boost your online sales with Shopify? Let our dedicated team
+          craft a scalable and user-friendly e-commerce solution for your
+          business. Contact us today, and let’s turn your store into a success.
+        </>
+      ),
+      cta: {
+        primary: {
+          text: <>Get Started Right Away</>,
+          link: "/",
+        },
+        secondary: {
+          text: <>Get A Free Consultation</>,
+          link: "/",
+        },
+      },
+    },
+    faq: {
+      title: <>Frequently Asked Questions</>,
+      faqs: [
+        {
+          id: 1,
+          question: <>Why should I use Shopify for my online business?</>,
+          answer: (
+            <>
+              Shopify is perfect for practical and eye-catching online stores
+              since it provides a secure platform, flexible customization
+              options, and ease of use.
+            </>
+          ),
+        },
+        {
+          id: 2,
+          question: (
+            <>
+              Is it possible for Sociomatic to move my current store to Shopify?
+            </>
+          ),
+          answer: (
+            <>
+              Absolutely, Sociomatic makes migrating to the Shopify platform
+              easier by maintaining data and functionality.
+            </>
+          ),
+        },
+        {
+          id: 3,
+          question: (
+            <>What features can Sociomatic integrate into my Shopify store?</>
+          ),
+          answer: (
+            <>
+              Sociomatic can improve your Shopify store by integrating features
+              like personalized product displays, comprehensive analytics, and
+              tailored checkout experiences.
+            </>
+          ),
+        },
+        {
+          id: 4,
+          question: (
+            <>Can Sociomatic help my Shopify store with continuous support?</>
+          ),
+          answer: (
+            <>
+              Of course, Sociomatic provides continuous assistance to make sure
+              your Shopify store stays safe, optimized, and in line with your
+              company objectives.
+            </>
+          ),
+        },
+        {
+          id: 5,
+          question: (
+            <>How long does the Shopify store development process take?</>
+          ),
+          answer: (
+            <>
+              Project scope determines timelines, but Sociomatic prioritizes
+              speedy development without sacrificing quality.
+            </>
+          ),
+        },
+      ],
+    },
+  },
+  uiux: {
+    hero: {
+      tagline: <>Modern UI/UX solutions</>,
+      title: <>Crafting Reflexive Interfaces for Seamless Interactions </>,
+      body: (
+        <>
+          Sociomatic specializes in UI/UX services to create engaging,
+          user-centric digital experiences. From wireframing to prototyping, our
+          team combines creativity and expertise to design interfaces that
+          captivate audiences and drive results.
+        </>
+      ),
+      cta: {
+        primary: {
+          text: <>Get Started Right Away</>,
+          link: "/",
+        },
+        secondary: {
+          text: <>Get A Free Consultation</>,
+          link: "/",
+        },
+      },
+    },
+    limitedOffer: {
+      tagline: <></>,
+      title: (
+        <>
+          <span>Redefine!</span> User Engagement in 2024
+        </>
+      ),
+      body: {
+        para: (
+          <>
+            Step into the future of user engagement in 2024 with
+            Sociomatic&apos;s exclusive UI/UX services. Our team is dedicated to
+            revolutionizing digital experiences through innovative design
+            solutions. Contact us now to discover how we can transform your
+            brand&apos;s online presence!
+          </>
+        ),
+        benefits: [],
+      },
+      cta: {
+        primary: {
+          text: <>Get Started Right Away</>,
+          link: "/",
+        },
+        secondary: {
+          text: <>Get A Free Consultation</>,
+          link: "/",
+        },
+      },
+    },
+    whyWeAndWhatWeDo: {
+      tagline: <>Designing Experiences, Inspiring Engagement</>,
+      title: <>User-Centric Solutions, Delivered with Passion</>,
+      body: {
+        para: (
+          <>
+            At Sociomatic,
+            <span>
+              we&apos;re passionate about designing immersive and intuitive user
+              experiences.
+            </span>
+            Our team leverages cutting-edge design principles to deliver
+            solutions that look great and resonate with users on a deeper level.
+          </>
+        ),
+        benefits: [
+          {
+            id: 1,
+            icon: <></>,
+            title: <>User Centric Design</>,
+            paragraph: (
+              <>
+                We prioritize user needs and preferences, employing Figma and
+                Adobe XD to create visually appealing interfaces that enhance
+                usability and engagement
+              </>
+            ),
+          },
+          {
+            id: 2,
+            icon: <></>,
+            title: <>UX Research</>,
+            paragraph: (
+              <>
+                We conduct thorough UX research to understand user behavior and
+                preferences, inform design decisions, and create experiences
+                that resonate with your target audience.
+              </>
+            ),
+          },
+          {
+            id: 3,
+            icon: <></>,
+            title: <>Wireframing & Prototyping</>,
+            paragraph: (
+              <>
+                Our design process begins with standard UX research,
+                wireframing, and prototyping to visualize concepts and iterate
+                quickly, ensuring seamless use flows and interactions
+              </>
+            ),
+          },
+          {
+            id: 4,
+            icon: <></>,
+            title: <>Accessibility Focus</>,
+            paragraph: (
+              <>
+                Sociomatic places a strong emphasis on accessibility, ensuring
+                that our designs are inclusive and accessible to users of all
+                abilities and backgrounds
+              </>
+            ),
+          },
+          {
+            id: 5,
+            icon: <></>,
+            title: <>Iterative Design</>,
+            paragraph: (
+              <>
+                We believe in iterative design, continuously refining and
+                improving designs based on user feedback and data insights to
+                ensure optimal user experiences.
+              </>
+            ),
+          },
+          {
+            id: 6,
+            icon: <></>,
+            title: <>Collaborative Approach</>,
+            paragraph: (
+              <>
+                Our team collaborates closely with clients throughout the design
+                process, ensuring their vision and objectives are fully realized
+                in the final product.
+              </>
+            ),
+          },
+        ],
+      },
+    },
+    userEmpathy: {
+      tagline: <>Empathetic Support Always</>,
+      title: <>Understanding Your User Experience Needs</>,
+      body: (
+        <>
+          We understand the importance of creating seamless and intuitive user
+          experiences.{" "}
+          <span>
+            Our empathetic team is here to listen to your needs and develop
+            solutions
+          </span>
+          that delight users and derive engagement.
+        </>
+      ),
+    },
+    coreBenefits: {
+      tagline: <>Designing Experience, Inspiring Engagement</>,
+      title: <>Designing Solutions Inspiring Engagement</>,
+      body: {
+        para: (
+          <>
+            At Sociomatic, we&apos;re passionate about creating immersive and
+            engaging user experiences.{" "}
+            <span>
+              Our team combines creativity and expertise to deliver solutions
+            </span>
+            that captivate audiences and drive results.
+          </>
+        ),
+        benefits: [
+          {
+            id: 1,
+            title: <>Passion</>,
+            para: (
+              <>
+                We are passionate about creating immersive and engaging user
+                experiences
+              </>
+            ),
+          },
+          {
+            id: 2,
+            title: <>User-Centricity</>,
+            para: (
+              <>
+                We prioritize user needs and preferences in every aspect of our
+                design process.
+              </>
+            ),
+          },
+          {
+            id: 3,
+            title: <>Creativity</>,
+            para: (
+              <>
+                We bring creative solutions to the table to solve complex design
+                challenges.
+              </>
+            ),
+          },
+          {
+            id: 4,
+            title: <>Accessibility</>,
+            para: (
+              <>
+                We design interfaces that are accessible to users of all
+                abilities and backgrounds.
+              </>
+            ),
+          },
+        ],
+      },
+    },
+    endingFunnel: {
+      tagline: <>Your success starts here.</>,
+      title: (
+        <>
+          Partner with Us for Engaging User Experiences,Our commitment is
+          <span>determined</span>
+        </>
+      ),
+      body: (
+        <>
+          Ready to captivate your audience with stunning design?
+          <span>
+            Let our passionate team create user-centric experiences that drive
+            engagement and loyalty.
+          </span>
+          Contact us today, and let&apos;s make your brand unforgettable!
+        </>
+      ),
+      cta: {
+        primary: {
+          text: <>Get Started Right Away</>,
+          link: "/",
+        },
+        secondary: {
+          text: <>Get A Free Consultation</>,
+          link: "/",
+        },
+      },
+    },
+    faq: {
+      title: <>Frequently Asked Questions</>,
+      faqs: [
+        {
+          id: 1,
+          question: <>Why invest in professional UI/UX design?</>,
+          answer: (
+            <>
+              Expert UI/UX design improves user experience, perception of the
+              brand, and general functionality, which raises engagement and
+              increases conversions.
+            </>
+          ),
+        },
+        {
+          id: 2,
+          question: <>Can Sociomatic design unique visuals for my company?</>,
+          answer: (
+            <>
+              Sociomatic provides customized graphic design services, such as
+              logo creation, branding materials, and images that match your
+              company&apos;s identity.
+            </>
+          ),
+        },
+        {
+          id: 3,
+          question: (
+            <>
+              How does UI/UX design affect the functionality of an app or
+              website?
+            </>
+          ),
+          answer: (
+            <>
+              Good UI/UX design boosts user happiness, lowers bounce rates, and
+              enables more straightforward user navigation, contributing to
+              better performance.
+            </>
+          ),
+        },
+        {
+          id: 4,
+          question: <>What graphic design tools does Sociomatic employ?</>,
+          answer: (
+            <>
+              Sociomatic uses industry-standard software like Adobe Creative
+              Suite to guarantee expert and high-caliber graphic design results.
+            </>
+          ),
+        },
+        {
+          id: 5,
+          question: (
+            <>Can Sociomatic rework the website or app I already have?</>
+          ),
+          answer: (
+            <>
+              Sociomatic does offer redesign services, guaranteeing a
+              contemporary appearance while preserving or improving
+              functionality.
+            </>
+          ),
+        },
+      ],
+    },
+  },
 };

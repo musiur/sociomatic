@@ -2194,7 +2194,7 @@ export const ShopifyDevelopmentServicePageData = {
         title:
           "Is it possible for Sociomatic to move my current store to Shopify?",
         details:
-          "Absolutely; Sociomatic makes migrating to the Shopify platform easier by maintaining data and functionality.",
+          "Absolutely, Sociomatic makes migrating to the Shopify platform easier by maintaining data and functionality.",
       },
       {
         id: 3,

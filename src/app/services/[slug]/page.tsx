@@ -9,7 +9,14 @@ import WhatAndWhySection from "@/components/pages/services/what-and-why-section"
 import { ServicePageCOPY } from "@/lib/data/services";
 
 const Services = ({ params }: { params: { slug: string } }) => {
-  const { googleAds, webDevelopment, softwareDevelopment } = ServicePageCOPY;
+  const {
+    googleAds,
+    webDevelopment,
+    softwareDevelopment,
+    wordpressDevelopment,
+    shopifyDevelopment,
+    uiux,
+  } = ServicePageCOPY;
   let data: any = googleAds;
   if (params.slug.includes("google-ads")) {
     data = googleAds;
@@ -19,6 +26,12 @@ const Services = ({ params }: { params: { slug: string } }) => {
     data = webDevelopment;
   } else if (params.slug.includes("software-development")) {
     data = softwareDevelopment;
+  } else if (params.slug.includes("wordpress-development")) {
+    data = wordpressDevelopment;
+  } else if (params.slug.includes("shopify-development")) {
+    data = shopifyDevelopment;
+  } else if (params.slug.includes("uiux")) {
+    data = uiux;
   }
 
   const {
