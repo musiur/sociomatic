@@ -16,12 +16,13 @@ const Services = ({ params }: { params: { slug: string } }) => {
     wordpressDevelopment,
     shopifyDevelopment,
     uiux,
+    googleAnalytics,
   } = ServicePageCOPY;
   let data: any = googleAds;
   if (params.slug.includes("google-ads")) {
     data = googleAds;
   } else if (params.slug.includes("google-analytics")) {
-    data = googleAds;
+    data = googleAnalytics;
   } else if (params.slug.includes("custom-web-development")) {
     data = webDevelopment;
   } else if (params.slug.includes("software-development")) {

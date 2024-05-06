@@ -2264,51 +2264,53 @@ export const ServicePageCOPY = {
         },
         {
           id: 2,
-          question: <>Can Sociomatic design unique visuals for my company?</>,
+          question: <>Why use Google Tag Manager (GTM)?</>,
           answer: (
             <>
-              Sociomatic provides customized graphic design services, such as
-              logo creation, branding materials, and images that match your
-              company&apos;s identity.
+              GTM simplifies managing all your marketing tags (GA4, Google Ads,
+              etc.) in one place. Update tags easily and improve website
+              performance by reducing code bloat.
+            </>
+          ),
+          tip: (
+            <>
+              Our experts will configure GTM for seamless tag management, saving
+              you time and resources
             </>
           ),
         },
         {
           id: 3,
-          question: (
-            <>
-              How does UI/UX design affect the functionality of an app or
-              website?
-            </>
-          ),
+          question: <>What&apos;s Looker Studio good for?</>,
           answer: (
             <>
-              Good UI/UX design boosts user happiness, lowers bounce rates, and
-              enables more straightforward user navigation, contributing to
-              better performance.
+              It transforms raw data from GA4 and other sources into beautiful,
+              informative dashboards and reports. Share insights and collaborate
+              with your team to make data-driven decisions.
+            </>
+          ),
+          tip: (
+            <>
+              We&apos;ll help you build engaging Looker Studio reports that
+              unlock valuable insights from your data.
             </>
           ),
         },
         {
           id: 4,
-          question: <>What graphic design tools does Sociomatic employ?</>,
+          question: <>How does Google Ads conversion tracking help?</>,
           answer: (
             <>
-              Sociomatic uses industry-standard software like Adobe Creative
-              Suite to guarantee expert and high-caliber graphic design results.
+              It measures if your ads lead to valuable actions like purchases or
+              signups. Optimize your campaigns for higher conversions and track
+              your return on investment (ROI).
             </>
           ),
-        },
-        {
-          id: 5,
-          question: (
-            <>Can Sociomatic rework the website or app I already have?</>
-          ),
-          answer: (
+          tip: (
             <>
-              Sociomatic does offer redesign services, guaranteeing a
-              contemporary appearance while preserving or improving
-              functionality.
+              We&apos;ll guide you through setting up conversion tracking and
+              analyzing data to optimize your Google Ads campaigns for maximum
+              impact.
             </>
           ),
         },
