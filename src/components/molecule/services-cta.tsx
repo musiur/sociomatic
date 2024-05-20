@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import { Button } from "../ui/button";
 import { ReactElement } from "react";
+import EmailModal from "./email-modal";
 
 const ServicesCTA = ({
   position = "left",
@@ -34,7 +35,7 @@ const ServicesCTA = ({
         Go Here To Fill Out A 2-Minute Application For The Coaching Program
       </p>
       <div className="grid grid-cols-1 min-[400px]:flex flex-wrap items-center justify-start gap-[12px]">
-        <Button variant="secondary">{primary.text}</Button>
+        <EmailModal buttonText={primary.text} />
         <Button variant="outline">{secondary.text}</Button>
       </div>
     </div>
