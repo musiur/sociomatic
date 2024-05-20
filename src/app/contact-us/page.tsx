@@ -76,9 +76,15 @@ const ContactUs = () => {
         });
         setLoading(false);
         trackContactFormSubmission(formData);
-        setTimeout(() => {
-          window.location.reload();
-        }, 5000);
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          services: [],
+          message: "",
+          subject: "Contact Us",
+          title: "Contact Us Form Submission",
+        });
       }
     } catch (error) {
       console.log(error);
@@ -111,7 +117,6 @@ const ContactUs = () => {
   };
 
   const validation = () => {
-    console.log(formData);
     let obj: any = {};
     if (!formData.name.trim()) {
       obj.name = "Name is required!";
@@ -210,6 +215,7 @@ const ContactUs = () => {
                 placeholder="Name"
                 name="name"
                 onChange={handleOnChange}
+                value={formData.name}
               />
               <ErrorMessages errors={errors} name="name" />
             </div>
@@ -224,6 +230,7 @@ const ContactUs = () => {
                 placeholder="Email"
                 name="email"
                 onChange={handleOnChange}
+                value={formData.email}
               />
               <ErrorMessages errors={errors} name="email" />
             </div>
@@ -238,6 +245,7 @@ const ContactUs = () => {
                 placeholder="Phone"
                 name="phone"
                 onChange={handleOnChange}
+                value={formData.phone}
               />
               <ErrorMessages errors={errors} name="phone" />
             </div>
@@ -254,6 +262,7 @@ const ContactUs = () => {
                     <li key={item.id} className="flex items-center space-x-2">
                       <Checkbox
                         id={item.name}
+                        checked={formData.services.includes(item.value)}
                         onCheckedChange={(value) =>
                           setFormData({
                             ...formData,
@@ -287,6 +296,7 @@ const ContactUs = () => {
                 id="message"
                 name="message"
                 onChange={handleOnChange}
+                value={formData.message}
               />
             </div>
             <ReCAPTCHA
