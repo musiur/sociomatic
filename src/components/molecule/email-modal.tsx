@@ -15,11 +15,13 @@ import { Input } from "@/components/ui/input";
 import Image from "next/image";
 import { ReactElement, useState } from "react";
 import { InputOTP, InputOTPGroup, InputOTPSlot } from "../ui/input-otp";
+import { useRouter } from "next/navigation";
 
 const EmailModal = ({ buttonText }: { buttonText: ReactElement }) => {
   const [step, setStep] = useState(1);
   const [email, setEmail] = useState("");
   const [otp, setOtp] = useState("");
+  const router = useRouter();
 
   const submitEmail = () => {
     setStep(2);
@@ -27,6 +29,7 @@ const EmailModal = ({ buttonText }: { buttonText: ReactElement }) => {
 
   const verifyEmail = () => {
     console.log("OTP: ", otp);
+    router.push("/joining");
   };
   return (
     <Dialog>
@@ -43,15 +46,14 @@ const EmailModal = ({ buttonText }: { buttonText: ReactElement }) => {
           className="object-contain object-top"
         />
         <DialogHeader className="space-y-4 pt-[240px] z-10">
-          {step === 1 ? (
-            <DialogTitle className="text-xl md:text-2xl font-normal">
-              Join a small group of&nbsp;
-              <span className="font-bold text-xl md:text-2xl">
-                elite entrepreneurs
-              </span>
-              &nbsp;today
-            </DialogTitle>
-          ) : null}
+          <DialogTitle className="text-xl md:text-2xl font-normal">
+            {step === 1 ? "Join a small group of" : "Email"}&nbsp;
+            <span className="font-bold text-xl md:text-2xl">
+              {step === 1 ? "elite entrepreneurs" : "Verification"}
+            </span>
+            &nbsp;{step === 1 ? "today" : null}
+          </DialogTitle>
+
           <DialogDescription className="text-gray-400 z-10">
             {step === 1
               ? "And finally create the life, freedom, and wealth you want!"
@@ -96,9 +98,9 @@ const EmailModal = ({ buttonText }: { buttonText: ReactElement }) => {
               {step === 1 ? "Get Started" : "Verify Email"}
             </Button>
             <DialogClose className="w-full">
-            <span className="bg-white text-center h-[38px] rounded-lg border flex items-center justify-center px-6 font-medium sm:cursor-pointer">
-          Close
-        </span>
+              <span className="bg-white text-center h-[38px] rounded-lg border flex items-center justify-center px-6 font-medium sm:cursor-pointer">
+                Close
+              </span>
             </DialogClose>
           </div>
         </DialogFooter>
