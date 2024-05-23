@@ -15,11 +15,13 @@ import { Input } from "@/components/ui/input";
 import Image from "next/image";
 import { ReactElement, useState } from "react";
 import { InputOTP, InputOTPGroup, InputOTPSlot } from "../ui/input-otp";
+import { useRouter } from "next/navigation";
 
 const EmailModal = ({ buttonText }: { buttonText: ReactElement }) => {
   const [step, setStep] = useState(1);
   const [email, setEmail] = useState("");
   const [otp, setOtp] = useState("");
+  const router = useRouter();
 
   const submitEmail = () => {
     setStep(2);
@@ -27,6 +29,7 @@ const EmailModal = ({ buttonText }: { buttonText: ReactElement }) => {
 
   const verifyEmail = () => {
     console.log("OTP: ", otp);
+    router.push("/joining");
   };
   return (
     <Dialog>
@@ -42,7 +45,11 @@ const EmailModal = ({ buttonText }: { buttonText: ReactElement }) => {
           fill
           className="w-full object-contain object-top"
         />
+<<<<<<< HEAD
         <DialogHeader className="space-y-2 pt-[180px] md:pt-[240px] z-10">
+=======
+        <DialogHeader className="space-y-4 pt-[240px] z-10">
+>>>>>>> cf64c60e33616baa452f39af7f46573f2e16226c
           <DialogTitle className="text-xl md:text-2xl font-normal">
             {step === 1 ? "Join a small group of" : "Email"}&nbsp;
             <span className="font-bold text-xl md:text-2xl">
