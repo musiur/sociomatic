@@ -28,6 +28,8 @@ export function GoogleAdsForm() {
     });
   }
 
+  console.log(form.formState.errors);
+
   return (
     <Form {...form}>
       <form
@@ -112,6 +114,7 @@ export function GoogleAdsForm() {
           form={form}
           name="budget"
           label="What's your estimated monthly budget for Google Advestising?"
+          type="number"
         />
 
         <CustomRadio

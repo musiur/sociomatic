@@ -28,7 +28,7 @@ const CustomRadio = ({
           <FormControl>
             <RadioGroup
               onValueChange={field.onChange}
-              defaultValue={field.value}
+              defaultValue={form.value}
               className="flex flex-col space-y-1"
             >
               {options?.map(
@@ -47,7 +47,6 @@ const CustomRadio = ({
                   );
                 }
               )}
-              =
             </RadioGroup>
           </FormControl>
           <FormMessage />

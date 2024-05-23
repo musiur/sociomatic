@@ -28,7 +28,12 @@ const CustomInput = ({
           {type !== "textarea" ? (
             <Input
               type={type}
-              onChange={field.onChange}
+              onChange={(e: any) => {
+                form.setValue(
+                  name,
+                  type === "number" ? parseInt(e.target.value) : e.target.value
+                );
+              }}
               defaultValue={field.value}
             />
           ) : (

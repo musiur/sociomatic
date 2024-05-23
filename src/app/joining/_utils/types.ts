@@ -1,14 +1,14 @@
 import { z } from "zod";
 
 export const GoogleAdsFormSchema = z.object({
-    businessType: z.enum(["small", "medium"]),
+    businessType: z.string().min(1),
     industryType: z.string().min(1),
     advertisingGoals: z.string().min(1),
-    advertisingGoalCustom: z.string(),
+    advertisingGoalCustom: z.string().optional(),
     challengesFaced: z.string().min(1),
     budget: z.number().min(1),
-    workExperience: z.string().min(1),
-    workExperienceDetails: z.string(),
+    workExperience: z.string().min(1).default("No"),
+    workExperienceDetails: z.string().optional(),
     painpoints: z.string(),
     commitment: z.string()
 });
