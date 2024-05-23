@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-export const GoogleAdsFormSchema = z.object({
+export const FunnelFormSchema = z.object({
     businessType: z.string().min(1),
     industryType: z.string().min(1),
     goals: z.string().min(1),
@@ -13,4 +13,4 @@ export const GoogleAdsFormSchema = z.object({
     commitment: z.string()
 });
 
-export type TGoogleAdsFormSchema = z.infer<typeof GoogleAdsFormSchema> 
+export type TFunnelFormSchema = z.infer<typeof FunnelFormSchema> 

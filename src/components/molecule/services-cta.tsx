@@ -35,7 +35,7 @@ const ServicesCTA = ({
         Go Here To Fill Out A 2-Minute Application For The Coaching Program
       </p>
       <div className="grid grid-cols-1 min-[400px]:flex flex-wrap items-center justify-start gap-[12px]">
-        <EmailModal buttonText={primary.text} />
+        <EmailModal buttonText={primary.text} path={primary.link}/>
         <Button variant="outline">{secondary.text}</Button>
       </div>
     </div>

@@ -20,7 +20,7 @@ const ServiceHeroSection = ({
         link: string;
       };
     };
-  };
+  },
 }) => {
   const { tagline, title, body, cta } = data;
 

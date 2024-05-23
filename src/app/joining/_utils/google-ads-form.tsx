@@ -6,18 +6,18 @@ import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
 import { Form } from "@/components/ui/form";
 import { toast } from "@/components/ui/use-toast";
-import { GoogleAdsFormSchema, TGoogleAdsFormSchema } from "./types";
+import { FunnelFormSchema, TFunnelFormSchema } from "./types";
 import CustomSelect from "./custom-select";
-import { Input } from "@/components/ui/input";
 import CustomInput from "./custom-input";
 import CustomRadio from "./custom-radio";
+import { FunnelFormAction } from "./actions";
 
 export function GoogleAdsForm() {
-  const form = useForm<TGoogleAdsFormSchema>({
-    resolver: zodResolver(GoogleAdsFormSchema),
+  const form = useForm<TFunnelFormSchema>({
+    resolver: zodResolver(FunnelFormSchema),
   });
 
-  function onSubmit(data: TGoogleAdsFormSchema) {
+  async function onSubmit(data: TFunnelFormSchema) {
     toast({
       title: "You submitted the following values:",
       description: (
@@ -26,6 +26,18 @@ export function GoogleAdsForm() {
         </pre>
       ),
     });
+
+
+    if (typeof window !== "undefined") {
+      console.log("Running")
+      const email = localStorage.getItem("user_email") || "dummy@mail.test";
+      if (email) {
+        const result = await FunnelFormAction({ ...data, email });
+        console.log(result);
+      }
+    }
+
+    
   }
 
   console.log(form.formState.errors);
