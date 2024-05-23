@@ -34,7 +34,7 @@ export function GoogleAdsForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="space-y-6 p-4 md:p-8 rounded-lg border"
+        className="space-y-8 p-4 md:p-8 rounded-lg border-2 shadow-[2px_2px_20px_lightgray]"
       >
         <CustomSelect
           form={form}
@@ -76,7 +76,7 @@ export function GoogleAdsForm() {
         />
         <CustomSelect
           form={form}
-          name="advertisingGoals"
+          name="goals"
           label="What are your main advertising goals? (Increase brand awareness, generate leads, drive sales, etc.)"
           options={[
             {
@@ -98,12 +98,8 @@ export function GoogleAdsForm() {
           ]}
         />
 
-        {form.watch("advertisingGoals") === "Others" ? (
-          <CustomInput
-            form={form}
-            name="advertisingGoalCustom"
-            label="Add your own"
-          />
+        {form.watch("goals") === "Others" ? (
+          <CustomInput form={form} name="customGoals" label="Add your own" />
         ) : null}
         <CustomInput
           form={form}
