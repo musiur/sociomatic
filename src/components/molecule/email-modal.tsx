@@ -39,7 +39,7 @@ const EmailModal = ({
   };
 
   const verifyEmail = async () => {
-    const result = await VerifyOtp(parseInt(otp));
+    const result = await VerifyOtp(parseInt(otp), email);
     console.log(result)
     if (result.success) {
       if (typeof window !== "undefined") {
