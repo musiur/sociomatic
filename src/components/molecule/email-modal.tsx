@@ -16,20 +16,37 @@ import Image from "next/image";
 import { ReactElement, useState } from "react";
 import { InputOTP, InputOTPGroup, InputOTPSlot } from "../ui/input-otp";
 import { useRouter } from "next/navigation";
+import { GetOtp, VerifyOtp } from "@/app/joining/_utils/actions";
 
-const EmailModal = ({ buttonText }: { buttonText: ReactElement }) => {
+const EmailModal = ({
+  buttonText,
+  path,
+}: {
+  buttonText: ReactElement;
+  path: string;
+}) => {
   const [step, setStep] = useState(1);
   const [email, setEmail] = useState("");
   const [otp, setOtp] = useState("");
   const router = useRouter();
 
-  const submitEmail = () => {
-    setStep(2);
+  const submitEmail = async () => {
+    const result = await GetOtp(email);
+    console.log(result);
+    if (result.success) {
+      setStep(2);
+    }
   };
 
-  const verifyEmail = () => {
-    console.log("OTP: ", otp);
-    router.push("/joining?type=googleads");
+  const verifyEmail = async () => {
+    const result = await VerifyOtp(parseInt(otp));
+    console.log(result)
+    if (result.success) {
+      if (typeof window !== "undefined") {
+        localStorage.setItem("user_email", email);
+      }
+      router.push(path);
+    }
   };
   return (
     <Dialog>

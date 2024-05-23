@@ -24,7 +24,7 @@ export const ServicePageCOPY = {
       cta: {
         primary: {
           text: <>Get Started Right Away</>,
-          link: "/",
+          link: "/joining?type=googleads",
         },
         secondary: {
           text: <>Get A Free Consultation</>,
@@ -420,7 +420,7 @@ export const ServicePageCOPY = {
       cta: {
         primary: {
           text: <>Get Started Right Away</>,
-          link: "/",
+          link: "/joining?type=customwebdev",
         },
         secondary: {
           text: <>Get A Free Consultation</>,
@@ -754,7 +754,7 @@ export const ServicePageCOPY = {
       cta: {
         primary: {
           text: <>Get Started Right Away</>,
-          link: "/",
+          link: "/joining?type=software",
         },
         secondary: {
           text: <>Get A Free Consultation</>,
@@ -1109,7 +1109,7 @@ export const ServicePageCOPY = {
       cta: {
         primary: {
           text: <>Get Started Right Away</>,
-          link: "/",
+          link: "/joining?type=software",
         },
         secondary: {
           text: <>Get A Free Consultation</>,
@@ -1404,7 +1404,7 @@ export const ServicePageCOPY = {
       cta: {
         primary: {
           text: <>Get Started Right Away</>,
-          link: "/",
+          link: "/joining?type=shopify",
         },
         secondary: {
           text: <>Get A Free Consultation</>,
@@ -1702,7 +1702,7 @@ export const ServicePageCOPY = {
       cta: {
         primary: {
           text: <>Get Started Right Away</>,
-          link: "/",
+          link: "/joining?type=uiux",
         },
         secondary: {
           text: <>Get A Free Consultation</>,
@@ -2020,7 +2020,7 @@ export const ServicePageCOPY = {
       cta: {
         primary: {
           text: <>Get Started Right Away</>,
-          link: "/",
+          link: "/joining?type=googleanalytics",
         },
         secondary: {
           text: <>Get A Free Consultation</>,
