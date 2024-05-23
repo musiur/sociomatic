@@ -29,7 +29,7 @@ const EmailModal = ({ buttonText }: { buttonText: ReactElement }) => {
 
   const verifyEmail = () => {
     console.log("OTP: ", otp);
-    router.push("/joining");
+    router.push("/joining?type=googleads");
   };
   return (
     <Dialog>
@@ -45,11 +45,7 @@ const EmailModal = ({ buttonText }: { buttonText: ReactElement }) => {
           fill
           className="w-full object-contain object-top"
         />
-<<<<<<< HEAD
         <DialogHeader className="space-y-2 pt-[180px] md:pt-[240px] z-10">
-=======
-        <DialogHeader className="space-y-4 pt-[240px] z-10">
->>>>>>> cf64c60e33616baa452f39af7f46573f2e16226c
           <DialogTitle className="text-xl md:text-2xl font-normal">
             {step === 1 ? "Join a small group of" : "Email"}&nbsp;
             <span className="font-bold text-xl md:text-2xl">
