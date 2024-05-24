@@ -17,6 +17,7 @@ import { ReactElement, useState } from "react";
 import { InputOTP, InputOTPGroup, InputOTPSlot } from "../ui/input-otp";
 import { useRouter } from "next/navigation";
 import { GetOtp, VerifyOtp } from "@/app/joining/_utils/actions";
+import { Sun } from "lucide-react";
 
 const EmailModal = ({
   buttonText,
@@ -28,19 +29,24 @@ const EmailModal = ({
   const [step, setStep] = useState(1);
   const [email, setEmail] = useState("");
   const [otp, setOtp] = useState("");
+  const [pending, setPending] = useState(false);
   const router = useRouter();
 
   const submitEmail = async () => {
+    setPending(true);
     const result = await GetOtp(email);
     console.log(result);
     if (result.success) {
       setStep(2);
     }
+    setPending(false);
   };
 
   const verifyEmail = async () => {
-    const result = await VerifyOtp(parseInt(otp));
-    console.log(result)
+    setPending(true);
+    const result = await VerifyOtp(parseInt(otp), email);
+    console.log(result);
+    setPending(false);
     if (result.success) {
       if (typeof window !== "undefined") {
         localStorage.setItem("user_email", email);
@@ -107,9 +113,11 @@ const EmailModal = ({
             <Button
               type="submit"
               variant="secondary"
-              className="w-full"
+              className="w-full items-center gap-2"
               onClick={step === 1 ? submitEmail : verifyEmail}
+              disabled={pending}
             >
+              {pending ? <Sun className="w-4 h-4 animate-spin" /> : null}
               {step === 1 ? "Get Started" : "Verify Email"}
             </Button>
             <DialogClose className="w-full">

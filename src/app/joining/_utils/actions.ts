@@ -1,9 +1,10 @@
 "use server";
-
+// @this variable should be in env in future while refactoring
 const BaseURL = "https://sociomatic-backend.onrender.com";
 
 export const GetOtp = async (email: string) => {
   try {
+    console.log(email);
     const response = await fetch(`${BaseURL}/send-otp`, {
       method: "POST",
       headers: {
@@ -14,6 +15,7 @@ export const GetOtp = async (email: string) => {
       }),
     });
     const result = await response.json();
+    // console.log(result);
     return result;
   } catch (error) {
     return {
@@ -23,7 +25,7 @@ export const GetOtp = async (email: string) => {
   }
 };
 
-export const VerifyOtp = async (otp: number) => {
+export const VerifyOtp = async (otp: number, email: string) => {
   try {
     const response = await fetch(`${BaseURL}/verify-otp`, {
       method: "POST",
@@ -32,6 +34,7 @@ export const VerifyOtp = async (otp: number) => {
       },
       body: JSON.stringify({
         otp,
+        email,
       }),
     });
     const result = await response.json();
@@ -45,20 +48,20 @@ export const VerifyOtp = async (otp: number) => {
 };
 
 export const FunnelFormAction = async (data: any) => {
-    try {
-      const response = await fetch(`${BaseURL}/funnel-form`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
-      const result = await response.json();
-      return result;
-    } catch (error) {
-      return {
-        success: false,
-        message: "Something went wrong",
-      };
-    }
-  };
+  try {
+    const response = await fetch(`${BaseURL}/funnel-form`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+    const result = await response.json();
+    return result;
+  } catch (error) {
+    return {
+      success: false,
+      message: "Something went wrong",
+    };
+  }
+};

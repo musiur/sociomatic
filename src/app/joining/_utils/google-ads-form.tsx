@@ -4,15 +4,25 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 
 import { Button } from "@/components/ui/button";
-import { Form } from "@/components/ui/form";
+import {
+  Form,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
 import { toast } from "@/components/ui/use-toast";
 import { FunnelFormSchema, TFunnelFormSchema } from "./types";
 import CustomSelect from "./custom-select";
 import CustomInput from "./custom-input";
 import CustomRadio from "./custom-radio";
 import { FunnelFormAction } from "./actions";
+import CountryCombobox from "@/components/ui/country-combobox";
+import { Sun } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export function GoogleAdsForm() {
+  const router = useRouter()
   const form = useForm<TFunnelFormSchema>({
     resolver: zodResolver(FunnelFormSchema),
   });
@@ -27,17 +37,22 @@ export function GoogleAdsForm() {
       ),
     });
 
-
     if (typeof window !== "undefined") {
-      console.log("Running")
+      console.log("Running");
       const email = localStorage.getItem("user_email") || "dummy@mail.test";
       if (email) {
         const result = await FunnelFormAction({ ...data, email });
         console.log(result);
+        toast({
+          variant: result?.success ? "default" : "destructive",
+          title: "Joining to program",
+          description: result?.message || "Thank you for your joining!",
+        });
+        if(result.success){
+          router.push("/joining/end?type=googleads")
+        }
       }
     }
-
-    
   }
 
   console.log(form.formState.errors);
@@ -48,18 +63,40 @@ export function GoogleAdsForm() {
         onSubmit={form.handleSubmit(onSubmit)}
         className="space-y-8 p-4 md:p-8 rounded-lg border-2 shadow-[2px_2px_20px_lightgray]"
       >
+        <FormField
+          control={form.control}
+          name="country"
+          render={() => (
+            <FormItem>
+              <FormLabel>Country</FormLabel>
+              <CountryCombobox
+                onChange={(value: any) => {
+                  console.log(value);
+                  form.setValue("country", value.target.value);
+                }}
+              />
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        <CustomInput form={form} name="phone" label="Phone" />
         <CustomSelect
           form={form}
           name="businessType"
           label="What type of business do you currently own?"
           options={[
             {
-              label: "Small business to grow",
-              value: "Small business to grow",
+              label: "Startup",
+              value: "Startup",
             },
             {
-              label: "Medium business want to grow",
-              value: "Medium business want to grow",
+              label: "Small Business Aiming for Growth",
+              value: "Small Business Aiming for Growth",
+            },
+            {
+              label: "Medium-Sized Business on the Path to Expansion",
+              value: "Medium-Sized Business on the Path to Expansion",
             },
           ]}
         />
@@ -168,7 +205,16 @@ export function GoogleAdsForm() {
             },
           ]}
         />
-        <Button type="submit">Submit</Button>
+        <Button
+          type="submit"
+          disabled={form.formState.isSubmitting}
+          className="items-center gap-2"
+        >
+          {form.formState.isSubmitting ? (
+            <Sun className="w-4 h-4 animate-spin" />
+          ) : null}
+          {form.formState.isSubmitting ? "Submiting" : "Submit"}
+        </Button>
       </form>
     </Form>
   );
