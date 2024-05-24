@@ -18,8 +18,11 @@ import CustomInput from "./custom-input";
 import CustomRadio from "./custom-radio";
 import { FunnelFormAction } from "./actions";
 import CountryCombobox from "@/components/ui/country-combobox";
+import { Sun } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export function GoogleAdsForm() {
+  const router = useRouter()
   const form = useForm<TFunnelFormSchema>({
     resolver: zodResolver(FunnelFormSchema),
   });
@@ -40,6 +43,14 @@ export function GoogleAdsForm() {
       if (email) {
         const result = await FunnelFormAction({ ...data, email });
         console.log(result);
+        toast({
+          variant: result?.success ? "default" : "destructive",
+          title: "Joining to program",
+          description: result?.message || "Thank you for your joining!",
+        });
+        if(result.success){
+          router.push("/joining/end?type=googleads")
+        }
       }
     }
   }
@@ -60,7 +71,7 @@ export function GoogleAdsForm() {
               <FormLabel>Country</FormLabel>
               <CountryCombobox
                 onChange={(value: any) => {
-                  console.log(value)
+                  console.log(value);
                   form.setValue("country", value.target.value);
                 }}
               />
@@ -194,7 +205,16 @@ export function GoogleAdsForm() {
             },
           ]}
         />
-        <Button type="submit">Submit</Button>
+        <Button
+          type="submit"
+          disabled={form.formState.isSubmitting}
+          className="items-center gap-2"
+        >
+          {form.formState.isSubmitting ? (
+            <Sun className="w-4 h-4 animate-spin" />
+          ) : null}
+          {form.formState.isSubmitting ? "Submiting" : "Submit"}
+        </Button>
       </form>
     </Form>
   );
