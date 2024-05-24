@@ -1,11 +1,10 @@
 "use server";
-
+// @this variable should be in env in future while refactoring
 const BaseURL = "https://sociomatic-backend.onrender.com";
-// const BaseURL = "https://a814-104-28-208-85.ngrok-free.app";
 
 export const GetOtp = async (email: string) => {
   try {
-    console.log(email)
+    console.log(email);
     const response = await fetch(`${BaseURL}/send-otp`, {
       method: "POST",
       headers: {
@@ -16,7 +15,7 @@ export const GetOtp = async (email: string) => {
       }),
     });
     const result = await response.json();
-    console.log(result)
+    // console.log(result);
     return result;
   } catch (error) {
     return {
@@ -35,7 +34,7 @@ export const VerifyOtp = async (otp: number, email: string) => {
       },
       body: JSON.stringify({
         otp,
-        email
+        email,
       }),
     });
     const result = await response.json();
@@ -49,20 +48,20 @@ export const VerifyOtp = async (otp: number, email: string) => {
 };
 
 export const FunnelFormAction = async (data: any) => {
-    try {
-      const response = await fetch(`${BaseURL}/funnel-form`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
-      const result = await response.json();
-      return result;
-    } catch (error) {
-      return {
-        success: false,
-        message: "Something went wrong",
-      };
-    }
-  };
+  try {
+    const response = await fetch(`${BaseURL}/funnel-form`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+    const result = await response.json();
+    return result;
+  } catch (error) {
+    return {
+      success: false,
+      message: "Something went wrong",
+    };
+  }
+};

@@ -1,6 +1,8 @@
 import { z } from "zod";
 
 export const FunnelFormSchema = z.object({
+    country: z.string().min(1),
+    phone: z.string().min(1),
     businessType: z.string().min(1),
     industryType: z.string().min(1),
     goals: z.string().min(1),
