@@ -1,6 +1,7 @@
 "use server";
 // @this variable should be in env in future while refactoring
 const BaseURL = "https://sociomatic-backend.onrender.com";
+// const BaseURL = "https://f9f3-104-28-208-84.ngrok-free.app";
 
 export const GetOtp = async (email: string) => {
   try {
@@ -57,8 +58,10 @@ export const FunnelFormAction = async (data: any) => {
       body: JSON.stringify(data),
     });
     const result = await response.json();
+    console.log(result)
     return result;
   } catch (error) {
+    console.log(error)
     return {
       success: false,
       message: "Something went wrong",

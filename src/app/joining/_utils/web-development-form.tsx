@@ -194,7 +194,7 @@ function WebDevelopmentForm() {
 
         <CustomInput
           form={form}
-          name="customerType"
+          name="customerAsPersona"
           label="Can you describe your perfect customer? (Consider age, location, and interests)"
           type="textarea"
         />
