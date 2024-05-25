@@ -12,7 +12,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { toast } from "@/components/ui/use-toast";
-import { GoogleAdsFunnelForm, TGoogleAdsFunnelForm } from "./types";
+import { WebDevelopmentFunnelForm, TWebDevelopmentFunnelForm } from "./types";
 import CustomSelect from "./custom-select";
 import CustomInput from "./custom-input";
 import CustomRadio from "./custom-radio";
@@ -21,13 +21,13 @@ import CountryCombobox from "@/components/ui/country-combobox";
 import { Sun } from "lucide-react";
 import { useRouter } from "next/navigation";
 
-function GoogleAdsForm() {
+function WebDevelopmentForm() {
   const router = useRouter();
-  const form = useForm<TGoogleAdsFunnelForm>({
-    resolver: zodResolver(GoogleAdsFunnelForm),
+  const form = useForm<TWebDevelopmentFunnelForm>({
+    resolver: zodResolver(WebDevelopmentFunnelForm),
   });
 
-  async function onSubmit(data: TGoogleAdsFunnelForm) {
+  async function onSubmit(data: TWebDevelopmentFunnelForm) {
     toast({
       title: "You submitted the following values:",
       description: (
@@ -89,7 +89,7 @@ function GoogleAdsForm() {
         <CustomSelect
           form={form}
           name="businessType"
-          label="What type of business do you currently own?"
+          label="Which industry does your business thrive in?"
           options={[
             {
               label: "Startup",
@@ -115,35 +115,38 @@ function GoogleAdsForm() {
               value: "Ecommerce",
             },
             {
+              label: "Educational Technologies",
+              value: "Educational Technologies",
+            },
+            {
+              label: "Financial Technologies",
+              value: "Financial Technologies",
+            },
+            {
+              label: "Software as a Service",
+              value: "Software as a Service",
+            },
+          ]}
+        />
+        {form.watch("industryType") === "Others" ? (
+          <CustomInput form={form} name="customIndustry" label="Add your own" />
+        ) : null}
+        <CustomSelect
+          form={form}
+          name="goals"
+          label="What are your core goals for development? (Select your primary focus)"
+          options={[
+            {
+              label: "Boosting Brand Visiblity",
+              value: "Boosting Brand Visiblity",
+            },
+            {
               label: "Lead generation",
               value: "Lead generation",
             },
             {
-              label: "Blog",
-              value: "Blog",
-            },
-            {
-              label: "SaaS",
-              value: "SaaS",
-            },
-          ]}
-        />
-        <CustomSelect
-          form={form}
-          name="goals"
-          label="What are your main advertising goals? (Increase brand awareness, generate leads, drive sales, etc.)"
-          options={[
-            {
-              label: "Increase Traffic",
-              value: "Increase Traffic",
-            },
-            {
-              label: "Generate Leads",
-              value: "Generate Leads",
-            },
-            {
-              label: "Drive Sales",
-              value: "Drive Sales",
+              label: "Driving Sales Conversions",
+              value: "Driving Sales Conversions",
             },
             {
               label: "Others",
@@ -153,24 +156,28 @@ function GoogleAdsForm() {
         />
 
         {form.watch("goals") === "Others" ? (
-          <CustomInput form={form} name="customGoals" label="Add your own" />
+          <CustomInput
+            form={form}
+            name="customGoals"
+            label="Add your own goals"
+          />
         ) : null}
         <CustomInput
           form={form}
           name="challengesFaced"
-          label="Have you ever run Google Ads campaigns before? If so, what were the biggest challenges you faced?"
+          label="Have you embarked on web development ventures before? If so, what were your main obstacles?"
         />
         <CustomInput
           form={form}
           name="budget"
-          label="What's your estimated monthly budget for Google Advestising?"
+          label="What is your projected budget for web development?"
           type="number"
         />
 
         <CustomRadio
           form={form}
           name="workExperience"
-          label="Have you worked with any marketing agencies before?"
+          label="Have you previously partnered with a development company?"
           options={[
             { label: "Yes", value: "Yes" },
             { label: "No", value: "No" },
@@ -181,9 +188,17 @@ function GoogleAdsForm() {
           <CustomInput
             form={form}
             name="workExperienceDetails"
-            label="If yes, please share the details"
+            label="Please share your experiences with your former development agency."
           />
         ) : null}
+
+        <CustomInput
+          form={form}
+          name="customerType"
+          label="Can you describe your perfect customer? (Consider age, location, and interests)"
+          type="textarea"
+        />
+
         <CustomInput
           form={form}
           name="painpoints"
@@ -192,21 +207,19 @@ function GoogleAdsForm() {
         <CustomSelect
           form={form}
           name="commitment"
-          label="Considering the program's intensity and the time commitment involved, how committed are you to giving this your all?"
+          label=" How ready can you fully engage with our intensive web development program?"
           options={[
             {
-              label: "I am Highly Committed",
-              value: "I am Highly Committed",
+              label: "Fully commited",
+              value: "Fully commited",
             },
             {
-              label: "I still have a few questions on how best to go forward",
-              value: "I still have a few questions on how best to go forward",
+              label: "Seeking more information",
+              value: "Seeking more information",
             },
             {
-              label:
-                "I am not ready to make this type of commitment, but possibly in the future",
-              value:
-                "I am not ready to make this type of commitment, but possibly in the future",
+              label: "Considering future commitments",
+              value: "Considering future commitments",
             },
           ]}
         />
@@ -225,4 +238,4 @@ function GoogleAdsForm() {
   );
 }
 
-export default GoogleAdsForm;
+export default WebDevelopmentForm;

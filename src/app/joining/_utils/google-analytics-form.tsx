@@ -12,7 +12,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { toast } from "@/components/ui/use-toast";
-import { GoogleAdsFunnelForm, TGoogleAdsFunnelForm } from "./types";
+import { GoogleAnalyticsFunnelForm, TGoogleAnalyticsFunnelForm } from "./types";
 import CustomSelect from "./custom-select";
 import CustomInput from "./custom-input";
 import CustomRadio from "./custom-radio";
@@ -21,13 +21,13 @@ import CountryCombobox from "@/components/ui/country-combobox";
 import { Sun } from "lucide-react";
 import { useRouter } from "next/navigation";
 
-function GoogleAdsForm() {
+function GoogleAnalyticsForm() {
   const router = useRouter();
-  const form = useForm<TGoogleAdsFunnelForm>({
-    resolver: zodResolver(GoogleAdsFunnelForm),
+  const form = useForm<TGoogleAnalyticsFunnelForm>({
+    resolver: zodResolver(GoogleAnalyticsFunnelForm),
   });
 
-  async function onSubmit(data: TGoogleAdsFunnelForm) {
+  async function onSubmit(data: TGoogleAnalyticsFunnelForm) {
     toast({
       title: "You submitted the following values:",
       description: (
@@ -67,7 +67,7 @@ function GoogleAdsForm() {
           Please, fill up the form so that you may get us in painpoint to
           resolve
         </h4>
-        <CustomInput form={form} name="name" label="Name" />
+        <CustomInput form={form} name="name" label="Your name" />
         <FormField
           control={form.control}
           name="country"
@@ -86,25 +86,7 @@ function GoogleAdsForm() {
         />
 
         <CustomInput form={form} name="phone" label="Phone" />
-        <CustomSelect
-          form={form}
-          name="businessType"
-          label="What type of business do you currently own?"
-          options={[
-            {
-              label: "Startup",
-              value: "Startup",
-            },
-            {
-              label: "Small Business Aiming for Growth",
-              value: "Small Business Aiming for Growth",
-            },
-            {
-              label: "Medium-Sized Business on the Path to Expansion",
-              value: "Medium-Sized Business on the Path to Expansion",
-            },
-          ]}
-        />
+
         <CustomSelect
           form={form}
           name="industryType"
@@ -128,88 +110,77 @@ function GoogleAdsForm() {
             },
           ]}
         />
-        <CustomSelect
-          form={form}
-          name="goals"
-          label="What are your main advertising goals? (Increase brand awareness, generate leads, drive sales, etc.)"
-          options={[
-            {
-              label: "Increase Traffic",
-              value: "Increase Traffic",
-            },
-            {
-              label: "Generate Leads",
-              value: "Generate Leads",
-            },
-            {
-              label: "Drive Sales",
-              value: "Drive Sales",
-            },
-            {
-              label: "Others",
-              value: "Others",
-            },
-          ]}
-        />
 
-        {form.watch("goals") === "Others" ? (
-          <CustomInput form={form} name="customGoals" label="Add your own" />
-        ) : null}
         <CustomInput
           form={form}
           name="challengesFaced"
           label="Have you ever run Google Ads campaigns before? If so, what were the biggest challenges you faced?"
-        />
-        <CustomInput
-          form={form}
-          name="budget"
-          label="What's your estimated monthly budget for Google Advestising?"
-          type="number"
+          type="textarea"
         />
 
         <CustomRadio
           form={form}
-          name="workExperience"
-          label="Have you worked with any marketing agencies before?"
+          name="tools"
+          label="Are you currently using any website analytics tools?"
           options={[
             { label: "Yes", value: "Yes" },
             { label: "No", value: "No" },
           ]}
         />
 
-        {form.watch("workExperience") === "Yes" ? (
+        {form.watch("tools") === "Yes" ? (
           <CustomInput
             form={form}
-            name="workExperienceDetails"
-            label="If yes, please share the details"
+            name="toolsUsed"
+            label="If yes, please make a list tools"
           />
         ) : null}
+
         <CustomInput
           form={form}
-          name="painpoints"
-          label=" What are your biggest challenges with attracting customers? (Any pain points)"
+          name="goals"
+          label="Briefly describe your top 2-3 goals for implementing GA4 & GTM. (e.g., Button Click, Ecommerce tracking,Form Submission etc.)"
+          type="textarea"
         />
+
+        {form.watch("goals") === "Others" ? (
+          <CustomInput form={form} name="customGoals" label="Add your own" />
+        ) : null}
+
+        <CustomRadio
+          form={form}
+          name="xpGA4GTM"
+          label="Do you have any experience with Google Analytics 4 or Google Tag Manager?"
+          options={[
+            { label: "Yes", value: "Yes" },
+            { label: "No", value: "No" },
+          ]}
+        />
+
         <CustomSelect
           form={form}
-          name="commitment"
-          label="Considering the program's intensity and the time commitment involved, how committed are you to giving this your all?"
+          name="platformToSetup"
+          label="Which platform do you need to set up tracking ?"
           options={[
             {
-              label: "I am Highly Committed",
-              value: "I am Highly Committed",
+              label: "Google Ads Converstion",
+              value: "Google Ads Converstion",
             },
             {
-              label: "I still have a few questions on how best to go forward",
-              value: "I still have a few questions on how best to go forward",
+              label: "Google Analytics",
+              value: "Google Analytics",
             },
             {
-              label:
-                "I am not ready to make this type of commitment, but possibly in the future",
-              value:
-                "I am not ready to make this type of commitment, but possibly in the future",
+              label: "TikTok Pixel",
+              value: "TikTok Pixel",
+            },
+            {
+              label: "Facebook Pixel",
+              value: "Facebook Pixel",
             },
           ]}
         />
+
         <Button
           type="submit"
           disabled={form.formState.isSubmitting}
@@ -225,4 +196,4 @@ function GoogleAdsForm() {
   );
 }
 
-export default GoogleAdsForm;
+export default GoogleAnalyticsForm;

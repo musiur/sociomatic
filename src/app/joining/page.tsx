@@ -1,5 +1,7 @@
 import HeroSectionJoining from "@/components/pages/joining/hero.section";
 import GoogleAdsForm from "./_utils/google-ads-form";
+import GoogleAnalyticsForm from "./_utils/google-analytics-form";
+import WebDevelopmentForm from "./_utils/web-development-form";
 
 type E_FormTypes = "googleads" | "googleanalytics";
 
@@ -10,8 +12,8 @@ const Page = ({
 }) => {
   const Forms = {
     googleads: <GoogleAdsForm />,
-    googleanalytics: <GoogleAdsForm />,
-    customwebdev: <GoogleAdsForm />,
+    googleanalytics: <GoogleAnalyticsForm />,
+    customwebdev: <WebDevelopmentForm />,
     software: <GoogleAdsForm />,
     uiux: <GoogleAdsForm />,
     shopify: <GoogleAdsForm />,
