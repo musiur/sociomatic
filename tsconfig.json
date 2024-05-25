@@ -22,6 +22,14 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/molecule/whatsapp.jsx", "src/lib/cookies.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/components/molecule/whatsapp.jsx",
+    "src/lib/cookies.ts",
+    "src/app/joining/_utils/confetti-extra.js"
+  ],
   "exclude": ["node_modules"]
 }

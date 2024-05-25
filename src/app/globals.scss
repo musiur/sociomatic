@@ -189,3 +189,42 @@ h2 {
 .swiper-slide {
   height: calc((100% - 30px) / 2) !important;
 }
+
+
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  transform-origin: center bottom;
+  animation: fall 4s linear infinite;
+}
+
+.confetti.square {
+  clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
+}
+
+.confetti.triangle {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+@keyframes fall {
+  10% {
+    transform: translateY(-3h) rotate(120deg);
+  }
+
+  20% {
+    transform: translateY(20vh) rotate(720deg);
+  }
+
+  60% {
+    transform: translateY(70vh) rotate(120deg);
+  }
+
+  90% {
+    transform: translateY(90vh) rotate(720deg);
+  }
+
+  100% {
+    transform: translateY(100vh) rotate(120deg);
+  }
+}
