@@ -21,7 +21,7 @@ import CountryCombobox from "@/components/ui/country-combobox";
 import { Sun } from "lucide-react";
 import { useRouter } from "next/navigation";
 
-function SoftwareDevelopmentForm() {
+function ShopifyDevelopmentForm() {
   const router = useRouter();
   const form = useForm<TWebDevelopmentFunnelForm>({
     resolver: zodResolver(WebDevelopmentFunnelForm),
@@ -98,11 +98,7 @@ function SoftwareDevelopmentForm() {
             {
               label: "Growth-Oriented Small Business",
               value: "Growth-Oriented Small Business",
-            },
-            {
-              label: "Medium-Sized Business Looking to Scale",
-              value: "Medium-Sized Business Looking to Scale",
-            },
+            }
           ]}
         />
         <CustomSelect
@@ -130,19 +126,19 @@ function SoftwareDevelopmentForm() {
         <CustomSelect
           form={form}
           name="goals"
-          label="Primary Objectives for Software Development"
+          label="What are your core goals for development? (Select your primary focus)"
           options={[
             {
-              label: "Enhance Efficiency",
-              value: "Enhance Efficiency",
+              label: "Boost Sales Performance",
+              value: "Boost Sales Performance",
             },
             {
-              label: "Amplify User Experience",
-              value: "Amplify User Experience",
+              label: "Elevate User Experience",
+              value: "Elevate User Experience",
             },
             {
-              label: "System Integration",
-              value: "System Integration",
+              label: "Optimize for Mobile Devices",
+              value: "Optimize for Mobile Devices",
             },
             {
               label: "Others",
@@ -161,19 +157,19 @@ function SoftwareDevelopmentForm() {
         <CustomInput
           form={form}
           name="challengesFaced"
-          label="Have you previously invested in software development? If yes, what were the major hurdles you encountered?"
+          label="Have you embarked on shopify development ventures before? If so, what were your main obstacles?"
         />
         <CustomInput
           form={form}
           name="budget"
-          label="Your Budget for Development"
+          label="What is your projected budget for shopify development?"
           type="number"
         />
 
         <CustomRadio
           form={form}
           name="workExperience"
-          label="Have you collaborated with a development firm before?"
+          label="Have you previously partnered with a development company?"
           options={[
             { label: "Yes", value: "Yes" },
             { label: "No", value: "No" },
@@ -184,8 +180,7 @@ function SoftwareDevelopmentForm() {
           <CustomInput
             form={form}
             name="workExperienceDetails"
-            label="Please describe your experience with your previous development partner. (Text box for description)
-            "
+            label="Please share your experiences with your former development company."
           />
         ) : null}
 
@@ -204,7 +199,7 @@ function SoftwareDevelopmentForm() {
         <CustomSelect
           form={form}
           name="commitment"
-          label="How ready can you fully engage with our intensive web development program?"
+          label="How ready can you fully engage with our intensive shopify development program?"
           options={[
             {
               label: "Fully commited",
@@ -235,4 +230,4 @@ function SoftwareDevelopmentForm() {
   );
 }
 
-export default SoftwareDevelopmentForm;
+export default ShopifyDevelopmentForm;

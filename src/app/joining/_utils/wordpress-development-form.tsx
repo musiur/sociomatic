@@ -21,7 +21,7 @@ import CountryCombobox from "@/components/ui/country-combobox";
 import { Sun } from "lucide-react";
 import { useRouter } from "next/navigation";
 
-function SoftwareDevelopmentForm() {
+function WordpressDevelopmentForm() {
   const router = useRouter();
   const form = useForm<TWebDevelopmentFunnelForm>({
     resolver: zodResolver(WebDevelopmentFunnelForm),
@@ -92,17 +92,13 @@ function SoftwareDevelopmentForm() {
           label="Which industry does your business thrive in?"
           options={[
             {
-              label: "Innovative Startup",
-              value: "Innovative Startup",
+              label: "Startup",
+              value: "Startup",
             },
             {
-              label: "Growth-Oriented Small Business",
-              value: "Growth-Oriented Small Business",
-            },
-            {
-              label: "Medium-Sized Business Looking to Scale",
-              value: "Medium-Sized Business Looking to Scale",
-            },
+              label: "Small Business Seeking Growth",
+              value: "Small Business Seeking Growth",
+            }
           ]}
         />
         <CustomSelect
@@ -111,12 +107,8 @@ function SoftwareDevelopmentForm() {
           label="What is your industry?"
           options={[
             {
-              label: "Digital Commerce",
-              value: "Digital Commerce",
-            },
-            {
-              label: "Content Creation",
-              value: "Content Creation",
+              label: "ECommerce",
+              value: "ECommerce",
             },
             {
               label: "Others",
@@ -130,19 +122,19 @@ function SoftwareDevelopmentForm() {
         <CustomSelect
           form={form}
           name="goals"
-          label="Primary Objectives for Software Development"
+          label="Primary Objectives for Your WordPress Website"
           options={[
             {
-              label: "Enhance Efficiency",
-              value: "Enhance Efficiency",
+              label: "Improve SEO",
+              value: "Improve SEO",
             },
             {
-              label: "Amplify User Experience",
-              value: "Amplify User Experience",
+              label: "Enhance User Experience",
+              value: "Enhance User Experience",
             },
             {
-              label: "System Integration",
-              value: "System Integration",
+              label: "Integrate New Features",
+              value: "Integrate New Features",
             },
             {
               label: "Others",
@@ -161,19 +153,19 @@ function SoftwareDevelopmentForm() {
         <CustomInput
           form={form}
           name="challengesFaced"
-          label="Have you previously invested in software development? If yes, what were the major hurdles you encountered?"
+          label="Have you embarked on wordpress development ventures before? If so, what were your main obstacles?"
         />
         <CustomInput
           form={form}
           name="budget"
-          label="Your Budget for Development"
+          label="What is your projected budget for wordpress development?"
           type="number"
         />
 
         <CustomRadio
           form={form}
           name="workExperience"
-          label="Have you collaborated with a development firm before?"
+          label="Have you previously partnered with a development company?"
           options={[
             { label: "Yes", value: "Yes" },
             { label: "No", value: "No" },
@@ -184,8 +176,7 @@ function SoftwareDevelopmentForm() {
           <CustomInput
             form={form}
             name="workExperienceDetails"
-            label="Please describe your experience with your previous development partner. (Text box for description)
-            "
+            label="Please share your experiences with your former development company."
           />
         ) : null}
 
@@ -204,19 +195,19 @@ function SoftwareDevelopmentForm() {
         <CustomSelect
           form={form}
           name="commitment"
-          label="How ready can you fully engage with our intensive web development program?"
+          label="How ready can you fully engage with our intensive wordpress development program?"
           options={[
             {
-              label: "Fully commited",
-              value: "Fully commited",
+              label: "Highly Committed",
+              value: "Highly Committed",
             },
             {
-              label: "Seeking more information",
-              value: "Seeking more information",
+              label: "A Few Questions Before Proceeding",
+              value: "A Few Questions Before Proceeding",
             },
             {
-              label: "Considering future commitments",
-              value: "Considering future commitments",
+              label: "I am Not Ready to Commit Yet, but Possibly in the Future",
+              value: "I am Not Ready to Commit Yet, but Possibly in the Future",
             },
           ]}
         />
@@ -235,4 +226,4 @@ function SoftwareDevelopmentForm() {
   );
 }
 
-export default SoftwareDevelopmentForm;
+export default WordpressDevelopmentForm;
