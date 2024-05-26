@@ -21,7 +21,7 @@ import CountryCombobox from "@/components/ui/country-combobox";
 import { Sun } from "lucide-react";
 import { useRouter } from "next/navigation";
 
-function SoftwareDevelopmentForm() {
+function UiUxForm() {
   const router = useRouter();
   const form = useForm<TWebDevelopmentFunnelForm>({
     resolver: zodResolver(WebDevelopmentFunnelForm),
@@ -92,17 +92,17 @@ function SoftwareDevelopmentForm() {
           label="Which industry does your business thrive in?"
           options={[
             {
-              label: "Innovative Startup",
-              value: "Innovative Startup",
+              label: "Startup",
+              value: "Startup",
             },
             {
-              label: "Growth-Oriented Small Business",
-              value: "Growth-Oriented Small Business",
+              label: "Growing Small Business",
+              value: "Growing Small Business",
             },
             {
-              label: "Medium-Sized Business Looking to Scale",
-              value: "Medium-Sized Business Looking to Scale",
-            },
+              label: "Expanding Medium-Sized Enterprise",
+              value: "Expanding Medium-Sized Enterprise",
+            }
           ]}
         />
         <CustomSelect
@@ -111,12 +111,20 @@ function SoftwareDevelopmentForm() {
           label="What is your industry?"
           options={[
             {
-              label: "Digital Commerce",
-              value: "Digital Commerce",
+              label: "ECommerce",
+              value: "ECommerce",
             },
             {
-              label: "Content Creation",
-              value: "Content Creation",
+              label: "Educational Technology",
+              value: "Educational Technology",
+            },
+            {
+              label: "Financial Technology",
+              value: "Financial Technology",
+            },
+            {
+              label: "Software as a Service",
+              value: "Software as a Service",
             },
             {
               label: "Others",
@@ -130,19 +138,19 @@ function SoftwareDevelopmentForm() {
         <CustomSelect
           form={form}
           name="goals"
-          label="Primary Objectives for Software Development"
+          label="What objectives do you aim to achieve with UI/UX design? (Select all that apply)"
           options={[
             {
-              label: "Enhance Efficiency",
-              value: "Enhance Efficiency",
+              label: "Boost User Engagement",
+              value: "Boost User Engagement",
             },
             {
-              label: "Amplify User Experience",
-              value: "Amplify User Experience",
+              label: "Increase Accessibility",
+              value: "Increase Accessibility",
             },
             {
-              label: "System Integration",
-              value: "System Integration",
+              label: "Simplify User Navigation",
+              value: "Simplify User Navigation",
             },
             {
               label: "Others",
@@ -161,19 +169,19 @@ function SoftwareDevelopmentForm() {
         <CustomInput
           form={form}
           name="challengesFaced"
-          label="Have you previously invested in software development? If yes, what were the major hurdles you encountered?"
+          label="Have you invested in UI/UX design? What challenges did you encounter?"
         />
         <CustomInput
           form={form}
           name="budget"
-          label="Your Budget for Development"
+          label=" What is your UI/UX design project budget range?"
           type="number"
         />
 
         <CustomRadio
           form={form}
           name="workExperience"
-          label="Have you collaborated with a development firm before?"
+          label="Have you previously partnered with any company?"
           options={[
             { label: "Yes", value: "Yes" },
             { label: "No", value: "No" },
@@ -184,15 +192,14 @@ function SoftwareDevelopmentForm() {
           <CustomInput
             form={form}
             name="workExperienceDetails"
-            label="Please describe your experience with your previous development partner. (Text box for description)
-            "
+            label="Please share your experiences with your former company."
           />
         ) : null}
 
         <CustomInput
           form={form}
           name="customerAsPersona"
-          label="Can you describe your perfect customer? (Consider age, location, and interests)"
+          label="Describe your vision for the ideal user experience. (Include target audience, essential features, preferred design style)"
           type="textarea"
         />
 
@@ -204,19 +211,19 @@ function SoftwareDevelopmentForm() {
         <CustomSelect
           form={form}
           name="commitment"
-          label="How ready can you fully engage with our intensive web development program?"
+          label="Given the program's demands and time investment, how ready are you to embark on this UI/UX design journey?"
           options={[
             {
-              label: "Fully commited",
-              value: "Fully commited",
+              label: "Fully Committed",
+              value: "Fully Committed",
             },
             {
-              label: "Seeking more information",
-              value: "Seeking more information",
+              label: "Seeking Further Information",
+              value: "Seeking Further Information",
             },
             {
-              label: "Considering future commitments",
-              value: "Considering future commitments",
+              label: "Considering Future Engagement",
+              value: "Considering Future Engagement",
             },
           ]}
         />
@@ -235,4 +242,4 @@ function SoftwareDevelopmentForm() {
   );
 }
 
-export default SoftwareDevelopmentForm;
+export default UiUxForm;

@@ -194,7 +194,7 @@ function WebDevelopmentForm() {
 
         <CustomInput
           form={form}
-          name="customerType"
+          name="customerAsPersona"
           label="Can you describe your perfect customer? (Consider age, location, and interests)"
           type="textarea"
         />
@@ -202,12 +202,12 @@ function WebDevelopmentForm() {
         <CustomInput
           form={form}
           name="painpoints"
-          label=" What are your biggest challenges with attracting customers? (Any pain points)"
+          label="What are your biggest challenges with attracting customers? (Any pain points)"
         />
         <CustomSelect
           form={form}
           name="commitment"
-          label=" How ready can you fully engage with our intensive web development program?"
+          label="How ready can you fully engage with our intensive web development program?"
           options={[
             {
               label: "Fully commited",
