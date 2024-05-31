@@ -18,11 +18,11 @@ const FeatureCartIconText = ({
         "flex-row": alignment === "left",
       })}
     >
-      <div className="min-w-[80px] min-h-[80px] rounded-[10px] bg-secondary/10 text-secondary flex items-center justify-center text-4xl font-extrabold">
+      <div className="min-w-[40px] min-h-[40px] lg:min-w-[80px] lg:min-h-[80px] rounded-[10px] bg-secondary/10 text-secondary flex items-center justify-center text-2xl lg:text-4xl font-extrabold">
         0{id}
       </div>
       <p
-        className={clsx({
+        className={clsx("text-sm lg:text-base", {
           "text-left": alignment === "left",
           "text-right": alignment === "right",
         })}

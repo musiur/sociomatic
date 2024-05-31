@@ -1,11 +1,11 @@
-import Faq from "@/components/pages/home/faq";
-import CoreBenefits from "@/components/pages/services/core-benefits";
-import EndingFunnel from "@/components/pages/services/ending-funnel";
-import ServiceHeroSection from "@/components/pages/services/herosection";
-import LimitedOfferSection from "@/components/pages/services/limited-offer-section";
-import Testimonials from "@/components/pages/services/testimonials";
-import UserEmpathyBanner from "@/components/pages/services/user-empathy-banner";
-import WhatAndWhySection from "@/components/pages/services/what-and-why-section";
+import Faq from "@/app/_utils/faq";
+import CoreBenefits from "@/app/services/_utils/core-benefits";
+import EndingFunnel from "@/app/services/_utils/ending-funnel";
+import ServiceHeroSection from "@/app/services/_utils/herosection";
+import LimitedOfferSection from "@/app/services/_utils/limited-offer-section";
+import Testimonials from "@/app/services/_utils/testimonials";
+import UserEmpathyBanner from "@/app/services/_utils/user-empathy-banner";
+import WhatAndWhySection from "@/app/services/_utils/what-and-why-section";
 import { ServicePageCOPY } from "@/lib/data/services";
 
 const Services = ({ params }: { params: { slug: string } }) => {

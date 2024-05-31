@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { ReactElement } from "react";
 
-import { BrandCarousel } from "@/components/core/home/carousel";
-import VideoPlayer from "@/components/core/home/video-player";
+import { BrandCarousel } from "@/app/_utils/carousel";
+import VideoPlayer from "@/app/_utils/video-player";
 import GetConsultation from "@/components/molecule/get-consultation";
 import GetAQuote from "@/components/molecule/get-a-quote";
 

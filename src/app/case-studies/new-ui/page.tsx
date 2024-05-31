@@ -1,10 +1,10 @@
-import About from "@/components/pages/case-studies/about";
-import Approach from "@/components/pages/case-studies/approach";
-import Challenges from "@/components/pages/case-studies/challenges";
-import ClientsReviews from "@/components/pages/case-studies/clients-reviews";
-import Hero from "@/components/pages/case-studies/hero";
-import OurReview from "@/components/pages/case-studies/our-review";
-import Results from "@/components/pages/case-studies/results";
+import About from "@/app/case-studies/_utils/about";
+import Approach from "@/app/case-studies/_utils/approach";
+import Challenges from "@/app/case-studies/_utils/challenges";
+import ClientsReviews from "@/app/case-studies/_utils/clients-reviews";
+import Hero from "@/app/case-studies/_utils/hero";
+import OurReview from "@/app/case-studies/_utils/our-review";
+import Results from "@/app/case-studies/_utils/results";
 import { BarChart, DatabaseZap, Filter } from "lucide-react";
 
 const HeroProps = {

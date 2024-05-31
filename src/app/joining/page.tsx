@@ -1,6 +1,6 @@
-import HeroSectionJoining from "@/components/pages/joining/hero.section";
 import GoogleAdsForm from "./_utils/google-ads-form";
 import GoogleAnalyticsForm from "./_utils/google-analytics-form";
+import HeroSectionJoining from "./_utils/hero.section";
 import WebDevelopmentForm from "./_utils/web-development-form";
 
 type E_FormTypes = "googleads" | "googleanalytics";

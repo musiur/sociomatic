@@ -1,4 +1,4 @@
-import CoreBenefits from "@/components/pages/services/core-benefits";
+import CoreBenefits from "@/app/services/_utils/core-benefits";
 import Confetti from "../_utils/confetti";
 
 const Page = () => {

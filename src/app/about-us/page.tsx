@@ -1,5 +1,5 @@
 "use client";
-import { BrandCarousel } from "@/components/core/home/carousel";
+import { BrandCarousel } from "@/app/_utils/carousel";
 import SectionHead from "@/components/molecule/section-head";
 import ShortReviews from "@/components/molecule/short-reviews";
 import { Button } from "@/components/ui/button";
@@ -385,7 +385,7 @@ const AboutUS = () => {
                 setTimeout(() => {
                   setDisable(false);
                 }, 1000);
-                console.log("hello")
+                console.log("hello");
                 if (email) {
                   toast({
                     title: "Request Sending",
