@@ -16,9 +16,9 @@ type T__SlugType =
   | "shopifydevelopment"
   | "uiux"
   | "softwaredevelopment";
-const Services = ({ params }: { params: { slug: T__SlugType } }) => {
+const Services = ({ params }: { params: { slug: string } }) => {
   let data: any = ServicePageCOPY.googleads;
-  if (params.slug) {
+  if (Object.keys(data).includes(params.slug)) {
     const key = params.slug.replaceAll("-", "");
     data = ServicePageCOPY[key as T__SlugType];
   }

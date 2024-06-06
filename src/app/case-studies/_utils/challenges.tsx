@@ -2,15 +2,15 @@ import { ReactElement } from "react";
 import FeatureCartIconText from "./feature-card-icon-text";
 
 const Challenges = ({
-  ChallengesData = Challengesdata,
+  data = Challengesdata,
 }: {
-  ChallengesData?: {
+  data?: {
     title: string;
     description: string;
     challenges: { id: number; text: ReactElement }[];
   };
 }) => {
-  const { title, description, challenges } = ChallengesData;
+  const { title, description, challenges } = data;
   return (
     <section className="bg-muted">
       <div className="container section space-y-[48px]">
