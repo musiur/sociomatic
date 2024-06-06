@@ -8,31 +8,19 @@ import UserEmpathyBanner from "@/app/services/_utils/user-empathy-banner";
 import WhatAndWhySection from "@/app/services/_utils/what-and-why-section";
 import { ServicePageCOPY } from "@/lib/data/services";
 
-const Services = ({ params }: { params: { slug: string } }) => {
-  const {
-    googleAds,
-    webDevelopment,
-    softwareDevelopment,
-    wordpressDevelopment,
-    shopifyDevelopment,
-    uiux,
-    googleAnalytics,
-  } = ServicePageCOPY;
-  let data: any = googleAds;
-  if (params.slug.includes("google-ads")) {
-    data = googleAds;
-  } else if (params.slug.includes("google-analytics")) {
-    data = googleAnalytics;
-  } else if (params.slug.includes("custom-web-development")) {
-    data = webDevelopment;
-  } else if (params.slug.includes("software-development")) {
-    data = softwareDevelopment;
-  } else if (params.slug.includes("wordpress-development")) {
-    data = wordpressDevelopment;
-  } else if (params.slug.includes("shopify-development")) {
-    data = shopifyDevelopment;
-  } else if (params.slug.includes("uiux")) {
-    data = uiux;
+type T__SlugType =
+  | "googleads"
+  | "googleanalytics"
+  | "customwebdevelopment"
+  | "wordpressdevelopment"
+  | "shopifydevelopment"
+  | "uiux"
+  | "softwaredevelopment";
+const Services = ({ params }: { params: { slug: T__SlugType } }) => {
+  let data: any = ServicePageCOPY.googleads;
+  if (params.slug) {
+    const key = params.slug.replaceAll("-", "");
+    data = ServicePageCOPY[key as T__SlugType];
   }
 
   const {

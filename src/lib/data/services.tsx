@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const ServicePageCOPY = {
-  googleAds: {
+  googleads: {
     hero: {
       tagline: <>100% Trust Worthy Solutions</>,
       title: (
@@ -401,7 +401,7 @@ export const ServicePageCOPY = {
       ],
     },
   },
-  webDevelopment: {
+  customwebdevelopment: {
     hero: {
       tagline: <>End-to-End Web Solutions</>,
       title: (
@@ -735,7 +735,7 @@ export const ServicePageCOPY = {
       ],
     },
   },
-  softwareDevelopment: {
+  softwaredevelopment: {
     hero: {
       tagline: <>Unlock Potential with Software Solutions</>,
       title: (
@@ -1084,7 +1084,7 @@ export const ServicePageCOPY = {
       ],
     },
   },
-  wordpressDevelopment: {
+  wordpressdevelopment: {
     hero: {
       tagline: <>End-to-end WordPress solutions</>,
       title: (
@@ -1389,7 +1389,7 @@ export const ServicePageCOPY = {
       ],
     },
   },
-  shopifyDevelopment: {
+  shopifydevelopment: {
     hero: {
       tagline: <>End-to-end Shopify solutions</>,
       title: <>Tailored Shopify Solutions for Your Online Store Success</>,
@@ -1909,7 +1909,7 @@ export const ServicePageCOPY = {
       title: (
         <>
           Partner with Us for Engaging User Experiences,Our commitment is
-          <span>determined</span>
+          determined
         </>
       ),
       body: (
@@ -2000,7 +2000,7 @@ export const ServicePageCOPY = {
       ],
     },
   },
-  googleAnalytics: {
+  googleanalytics: {
     hero: {
       tagline: <>Get Trust in Your Arsenal</>,
       title: (

@@ -79,7 +79,7 @@ $h2_max_font: 39px;
   *::before,
   *::after {
     @include fluid-type($min_width, $max_width, $p_min_font, $p_max_font);
-    @apply m-0 p-0 box-border;
+    @apply m-0 p-0 box-border min-w-0;
     line-height: 160%;
   }
 }
