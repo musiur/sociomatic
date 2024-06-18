@@ -24,7 +24,9 @@ const LimitedOfferSection = ({
     <div className="container pb-[96px] flex flex-col min-[700px]:flex-row gap-10 items-center justify-center">
       <TransactionDashboard className="w-full hidden sm:block" />
       <div className="space-y-[32px] max-w-[600px]">
-        <h2 className="h2 text-primary leading-normal">{title}</h2>
+        <h2 className="h2 text-primary leading-normal [&>span]:px-3 [&>span]:text-secondary">
+          {title}
+        </h2>
         <p>{para}</p>
         <ul className="space-y-4">
           {benefits.map(

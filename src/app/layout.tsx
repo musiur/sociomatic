@@ -2,7 +2,6 @@
 import Footer from "@/components/layout/footer";
 import Navbar from "@/components/layout/navbar";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.scss";
 import GotoTop from "@/components/molecule/go-to-top";
 import { Toaster } from "@/components/ui/toaster";
@@ -10,6 +9,11 @@ import WhatsApp from "@/components/molecule/whatsapp";
 import CookiePolicyNotificationBar from "@/components/molecule/cookie-policy";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import PageView from "@/lib/datalayer/page-view";
+import { Poppins } from "next/font/google";
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
 
 // Declare the dataLayer object as a global variable
 declare global {
@@ -17,8 +21,6 @@ declare global {
     dataLayer: any[];
   }
 }
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Sociomatic | Digital Solutions for Growth",
@@ -56,7 +58,7 @@ export default function RootLayout({
         />
       </head>
 
-      <body className={inter.className}>
+      <body className={poppins.className}>
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-WP6VXKV"

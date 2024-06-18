@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -89,7 +91,69 @@ html {
   scroll-behavior: smooth !important;
 }
 
+.lato-thin {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.lato-light {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.lato-regular {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lato-bold {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.lato-black {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.lato-thin-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.lato-light-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.lato-regular-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.lato-bold-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.lato-black-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+
 h1 {
+  @extend .lato-black;
   @include fluid-type($min_width, $max_width, $h1_min_font, $h1_max_font);
   @apply font-bold;
   line-height: 120%;
@@ -102,6 +166,8 @@ h1 {
 }
 
 h2 {
+  @extend .lato-black;
+
   @include fluid-type($min_width, $max_width, $h2_min_font, $h2_max_font);
   @apply font-bold;
   line-height: 120%;
@@ -130,10 +196,10 @@ h2 {
 }
 
 .hero-description {
-  @apply text-[16px] md:text-[20px];
+  @apply text-sm md:text-base;
 
   span {
-    @apply font-medium text-primary text-[16px] md:text-[20px];
+    @apply font-semibold text-primary;
   }
 }
 

@@ -18,8 +18,9 @@ type T__SlugType =
   | "softwaredevelopment";
 const Services = ({ params }: { params: { slug: string } }) => {
   let data: any = ServicePageCOPY.googleads;
-  if (Object.keys(data).includes(params.slug)) {
-    const key = params.slug.replaceAll("-", "");
+  const key = params?.slug?.replaceAll("-", "");
+  console.log(key, Object.keys(ServicePageCOPY));
+  if (Object.keys(ServicePageCOPY).includes(key)) {
     console.log(key, "<--");
     data = ServicePageCOPY[key as T__SlugType];
   }

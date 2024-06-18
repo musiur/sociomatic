@@ -28,7 +28,7 @@ const ServiceHeroSection = ({
     <div className="py-16">
       <div className="container flex flex-col items-center justify-center gap-[32px]">
         <Tagline text={tagline} />
-        <h1 className="h1 text-primary text-center [&>span]:text-secondary">
+        <h1 className="h1 text-primary text-center [&>span]:text-secondary [&>span]:px-3">
           {title}
         </h1>
         <p className="max-w-[640px] text-center [&>span]:text-secondary [&>span]:px-1 [&>span]:font-semibold">

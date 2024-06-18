@@ -36,7 +36,8 @@ export const ServicePageCOPY = {
       tagline: <></>,
       title: (
         <>
-          <span>Hurry up!</span> to Supercharge
+          <span style={{ paddingLeft: "0!important" }}>Hurry up!</span> to
+          Supercharge
           <span>Your Growth with Google Ads!</span>
         </>
       ),
@@ -405,16 +406,21 @@ export const ServicePageCOPY = {
     hero: {
       tagline: <>End-to-End Web Solutions</>,
       title: (
-        <>End to End Custom Web Development That Delivery Outstanding Product</>
+        <>
+          End to End Custom Web Development That
+          <span>Delivery Outstanding Product</span>
+        </>
       ),
       body: (
         <>
           We are crafting unique websites for your specific needs. Sociomatic
           provides custom website and web application development services that
-          help businesses differentiate themselves online. From modern landing
-          pages to sophisticated web applications, our team delivers
-          personalized solutions that reflect your brand identity and engage
-          your audience.
+          help businesses differentiate themselves online.
+          <span>
+            From modern landing pages to sophisticated web applications, our
+            team delivers personalized solutions that reflect your brand
+            identity and engage your audience.
+          </span>
         </>
       ),
       cta: {
@@ -436,8 +442,10 @@ export const ServicePageCOPY = {
           <>
             Don&apos;t miss the chance to propel your business forward in 2024.
             Sociomatic offers special deals on custom web development services
-            to expedite your digital ambitions. Contact us now to unlock the
-            full potential of your business!
+            to expedite your digital ambitions.
+            <span>
+              Contact us now to unlock the full potential of your business!
+            </span>
           </>
         ),
         benefits: [],
@@ -461,9 +469,11 @@ export const ServicePageCOPY = {
           <>
             At Sociomatic, we&apos;re committed to empowering your digital
             journey through innovative web solutions. Our dedicated team works
-            collaboratively with clients to understand their objectives and
-            deliver custom websites that look great and perform seamlessly
-            across all devices.
+            collaboratively with clients to understand
+            <span>
+              your objectives and deliver custom websites that look great and
+              perform seamlessly across all devices.
+            </span>
           </>
         ),
         benefits: [
@@ -592,14 +602,20 @@ export const ServicePageCOPY = {
     },
     coreBenefits: {
       tagline: <>Innovation meets excellence</>,
-      title: <>Crafting Solutions, Fostering Relationships</>,
+      title: (
+        <>
+          <span>Crafting Solutions</span>, Fostering Relationships
+        </>
+      ),
       body: {
         para: (
           <>
             Our commitment to excellence sets us apart in the realm of web
-            development. We ensure your online success with personalized
-            solutions, optimized performance, scalability, and dedicated
-            support.
+            development.
+            <span>
+              We ensure your online success with personalized solutions,
+              optimized performance, scalability, and dedicated support.
+            </span>
           </>
         ),
         benefits: [
@@ -651,7 +667,7 @@ export const ServicePageCOPY = {
       title: (
         <>
           Partner with Us for Exceptional Web Solutions. We deliver exceptional
-          results, guaranteed!
+          results, <span>guaranteed!</span>
         </>
       ),
       body: (
