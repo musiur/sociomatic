@@ -25,8 +25,12 @@ const CoreBenefits = ({
     <div className="py-[64px]">
       <div className="container flex flex-col items-center justify-center gap-[32px]">
         <Tagline text={tagline} />
-        <h2 className="h2 text-primary text-center">{title}</h2>
-        <p className="max-w-[640px] text-center">{para}</p>
+        <h2 className="h2 text-primary text-center [&>span]:text-secondary [&>span]:px-3">
+          {title}
+        </h2>
+        <p className="max-w-[640px] text-center [&>span]:text-secondary [&>span]:px-1 [&>span]:font-semibold">
+          {para}
+        </p>
       </div>
       <div className="container pt-[48px] grid grid-cols-1 sm:grid-cols-2 gap-10">
         {benefits.map(

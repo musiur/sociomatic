@@ -11,7 +11,7 @@ const About = ({
 }) => {
   const { image, paragraphs } = data;
   return (
-    <div className="container section flex flex-col sm:flex-row items-center justify-center gap-10">
+    <div className="container section grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-10">
       <SectionSideImage image={image} />
       <div className="max-w-[580px] space-y-[48px]">
         <h2>About the Brand</h2>

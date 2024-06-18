@@ -26,8 +26,12 @@ const WhatAndWhySection = ({
     <div className="py-16 bg-muted">
       <div className="container flex flex-col items-center justify-center gap-[32px]">
         <Tagline text={tagline} />
-        <h2 className="h2 text-primary text-center">{title}</h2>
-        <p className="max-w-[640px] text-center">{para}</p>
+        <h2 className="h2 text-primary text-center [&>span]:text-secondary [&>span]:px-3">
+          {title}
+        </h2>
+        <p className="max-w-[640px] text-center [&>span]:text-secondary [&>span]:px-1 [&>span]:font-semibold">
+          {para}
+        </p>
       </div>
       <div className="container pt-[48px] space-y-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:grid-cols-3">

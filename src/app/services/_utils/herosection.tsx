@@ -20,7 +20,7 @@ const ServiceHeroSection = ({
         link: string;
       };
     };
-  },
+  };
 }) => {
   const { tagline, title, body, cta } = data;
 
@@ -28,8 +28,12 @@ const ServiceHeroSection = ({
     <div className="py-16">
       <div className="container flex flex-col items-center justify-center gap-[32px]">
         <Tagline text={tagline} />
-        <h1 className="h1 text-primary text-center">{title}</h1>
-        <p className="max-w-[640px] text-center">{body}</p>
+        <h1 className="h1 text-primary text-center [&>span]:text-secondary">
+          {title}
+        </h1>
+        <p className="max-w-[640px] text-center [&>span]:text-secondary [&>span]:px-1 [&>span]:font-semibold">
+          {body}
+        </p>
       </div>
       <div className="py-[48px] relative">
         <LunarCircle className="absolute top-0 left-0 w-full h-full z-[-1]" />

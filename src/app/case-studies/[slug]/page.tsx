@@ -15,7 +15,9 @@ const CaseStudiesTemplate = ({ params }: { params: { slug: string } }) => {
     const key = params.slug.replaceAll("-", "");
     data = PageData[key as T__Slug];
   }
+
   const { hero, about, challenge, apporach, result, review } = data;
+  console.log(data.hero);
   return (
     <>
       <Hero data={hero} />

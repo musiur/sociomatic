@@ -1,7 +1,5 @@
-import Springle from "@/components/assets/springle";
 import TransactionDashboard from "@/components/assets/transactions-dashbaord";
 import ServicesCTA from "@/components/molecule/services-cta";
-import { Button } from "@/components/ui/button";
 import { ReactElement } from "react";
 
 const LimitedOfferSection = ({
@@ -38,7 +36,9 @@ const LimitedOfferSection = ({
               const { id, paragraph } = item;
               return (
                 <li key={id}>
-                  <span className="font-semibold">{item.title}</span>
+                  <span className="font-semibold text-secondary pr-1">
+                    {item.title}
+                  </span>
                   {paragraph}
                 </li>
               );

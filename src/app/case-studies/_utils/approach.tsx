@@ -21,8 +21,8 @@ const Approach = ({
         <p>{description}</p>
       </div>
 
-      <div className="flex flex-col sm:flex-row items-center justify-center gap-16">
-        <div className="max-w-[580px] space-y-[32px]">
+      <div className="grid gird-cols-1 md:grid-cols-2 items-center justify-center gap-16">
+        <div className="space-y-[32px]">
           {approaches.map((para: { id: number; text: ReactElement }) => {
             const { id, text } = para;
             return (

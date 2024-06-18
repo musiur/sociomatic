@@ -15,9 +15,9 @@ const Results = ({
         <h2>The Results</h2>
       </div>
 
-      <div className="flex flex-col min-[850px]:flex-row items-center justify-center gap-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-10">
         <SectionSideImage image={image} />
-        <div className="max-w-[580px] space-y-[32px]">
+        <div className="space-y-[32px]">
           {results.map((para: { id: number; text: ReactElement }) => {
             const { id, text } = para;
             return <FeatureCartIconText key={id} id={id} text={text} />;

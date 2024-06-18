@@ -8,7 +8,7 @@ const SectionSideImage = ({ image }: { image: string }) => {
         alt=""
         width={1000}
         height={1000}
-        className="max-w-[280px] ms:max-w-[350px] lg:max-w-[500px] h-auto my-auto"
+        className="max-w-[280px] ms:max-w-[350px] lg:max-w-[450px] h-auto m-auto"
       />
     </div>
   );

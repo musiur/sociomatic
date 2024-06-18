@@ -22,8 +22,13 @@ const EndingFunnel = ({
     <div className="bg-muted">
       <div className="container py-[64px] flex flex-col min-[700px]:flex-row gap-10 items-center justify-center">
         <div className="space-y-[32px] max-w-[600px]">
-          <h2 className="text-3xl text-primary leading-normal">{title}</h2>
-          <p>{body}</p>
+          <h2 className="text-3xl text-primary leading-normal [&>span]:text-secondary [&>span]:text-3xl">
+            {title}
+          </h2>
+          <p className="max-w-[640px] text-center [&>span]:text-secondary [&>span]:px-1 [&>span]:font-semibold">
+            {body}
+          </p>
+
           <ServicesCTA cta={cta} />
         </div>
         <TransactionDashboard className="w-full hidden sm:block" />
