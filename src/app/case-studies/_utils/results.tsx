@@ -2,6 +2,7 @@ import Image from "next/image";
 import { ReactElement } from "react";
 import FeatureCartIconText from "./feature-card-icon-text";
 import SectionSideImage from "./sections-side-image";
+import ANIM__FadeInOutOnScroll from "@/components/anims/fadein.anim";
 
 const Results = ({
   data = resultData,
@@ -10,21 +11,21 @@ const Results = ({
 }) => {
   const { image, results } = data;
   return (
-    <section className="container section space-y-[48px]">
+    <ANIM__FadeInOutOnScroll className="container section space-y-[48px]">
       <div className="max-w-[640px] mx-auto [&>*]:text-center space-y-[32px]">
         <h2>The Results</h2>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-10">
+      <ANIM__FadeInOutOnScroll className="grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-10">
         <SectionSideImage image={image} />
-        <div className="space-y-[32px]">
+        <ANIM__FadeInOutOnScroll className="space-y-[32px]">
           {results.map((para: { id: number; text: ReactElement }) => {
             const { id, text } = para;
             return <FeatureCartIconText key={id} id={id} text={text} />;
           })}
-        </div>
-      </div>
-    </section>
+        </ANIM__FadeInOutOnScroll>
+      </ANIM__FadeInOutOnScroll>
+    </ANIM__FadeInOutOnScroll>
   );
 };
 

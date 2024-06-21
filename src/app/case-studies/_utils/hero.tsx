@@ -1,3 +1,4 @@
+import ANIM__FadeInOutOnScroll from "@/components/anims/fadein.anim";
 import LunarCircle from "@/components/assets/lunar-circle";
 import ServicesCTA from "@/components/molecule/services-cta";
 import Tagline from "@/components/molecule/tagline";
@@ -32,7 +33,7 @@ const Hero = ({
   return (
     <div className="py-16 relative">
       <LunarCircle className="absolute min-w-[1000px] top-0 left-0 w-full h-full z-[-1] rotate-180" />
-      <div className="container flex flex-col items-center justify-center gap-[32px]">
+      <ANIM__FadeInOutOnScroll className="container flex flex-col items-center justify-center gap-[32px]">
         <Tagline text={tagline} />
         <h1 className="h1 text-primary text-center [&>span]:text-secondary">
           {title}
@@ -42,9 +43,14 @@ const Hero = ({
           {data.features.map((feature) => {
             const { id, text, icon } = feature;
             return (
-              <div key={id} className="inline-flex items-center gap-2 [&>svg]:stroke-[2px] [&>svg]:stroke-secondary">
+              <div
+                key={id}
+                className="inline-flex items-center gap-2 [&>svg]:stroke-[2px] [&>svg]:stroke-secondary"
+              >
                 {icon}
-                <p className="inline-flex gap-1 [&>span]:text-primary font-bold text-primary/50">{text}</p>
+                <p className="inline-flex gap-1 [&>span]:text-primary font-bold text-primary/50">
+                  {text}
+                </p>
               </div>
             );
           })}
@@ -52,7 +58,7 @@ const Hero = ({
         <div className="flex justify-center">
           <ServicesCTA position="center" cta={cta} />
         </div>
-      </div>
+      </ANIM__FadeInOutOnScroll>
     </div>
   );
 };

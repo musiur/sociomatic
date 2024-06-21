@@ -1,5 +1,6 @@
 import { ReactElement } from "react";
 import FeatureCartIconText from "./feature-card-icon-text";
+import ANIM__FadeInOutOnScroll from "@/components/anims/fadein.anim";
 
 const Challenges = ({
   data = Challengesdata,
@@ -13,12 +14,12 @@ const Challenges = ({
   const { title, description, challenges } = data;
   return (
     <section className="bg-muted">
-      <div className="container section space-y-[48px]">
+      <ANIM__FadeInOutOnScroll className="container section space-y-[48px]">
         <div className="max-w-[640px] mx-auto [&>*]:text-center space-y-[32px]">
           <h2>{title}</h2>
           <p>{description}</p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
+        <ANIM__FadeInOutOnScroll className="grid grid-cols-1 sm:grid-cols-2 gap-10">
           {challenges.map((challenge: { id: number; text: ReactElement }) => {
             const { id, text } = challenge;
             return (
@@ -30,8 +31,8 @@ const Challenges = ({
               />
             );
           })}
-        </div>
-      </div>
+        </ANIM__FadeInOutOnScroll>
+      </ANIM__FadeInOutOnScroll>
     </section>
   );
 };

@@ -1,5 +1,6 @@
 "use client";
 import { BrandCarousel } from "@/app/_utils/carousel";
+import ANIM__FadeInOutOnScroll from "@/components/anims/fadein.anim";
 import SectionHead from "@/components/molecule/section-head";
 import ShortReviews from "@/components/molecule/short-reviews";
 import { Button } from "@/components/ui/button";
@@ -185,7 +186,7 @@ const AboutUS = () => {
             <div className="w-full bg-[url('/images/pages/about-us/about.jpg')] bg-center bg-cover grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 large-gap p-[25px] md:p-[50px] rounded-[10px]">
               {NumberCards.map((item: any) => {
                 return (
-                  <div
+                  <ANIM__FadeInOutOnScroll
                     key={item.id}
                     className={`backdrop-blur-lg bg-white/30 border border-secondarymuted rounded-[10px] px-4 py-8 flex flex-col small-gap text-center items-center justify-center ${
                       item.id === 3
@@ -200,7 +201,7 @@ const AboutUS = () => {
                       {item.title}
                     </h3>
                     <p className="text-white">{item.desc}</p>
-                  </div>
+                  </ANIM__FadeInOutOnScroll>
                 );
               })}
             </div>
@@ -215,7 +216,7 @@ const AboutUS = () => {
             <>Our shared values keep us connected and guide us as one team</>,
           ]}
         />
-        <div className="grid grid-cols-1 sm:grid-cols-2 large-gap container">
+        <ANIM__FadeInOutOnScroll className="grid grid-cols-1 sm:grid-cols-2 large-gap container">
           {Values.map((item: any) => {
             return (
               <div
@@ -234,19 +235,19 @@ const AboutUS = () => {
               </div>
             );
           })}
-        </div>
+        </ANIM__FadeInOutOnScroll>
       </section>
       <section className="bg-muted rounded-b-[20px] md:rounded-b-[40px]">
         <div className="py-[63px] container">
           <BrandCarousel />
         </div>
       </section>
-      <section className="container section bg-[url('/images/backgrounds/CircleNest.svg')] bg-cover bg-center">
+      <ANIM__FadeInOutOnScroll className="container section bg-[url('/images/backgrounds/CircleNest.svg')] bg-cover bg-center">
         <h2 className="text-center text-primary">Key Offerings</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 large-gap pt-[50px]">
           {Offerings.map((item: any) => {
             return (
-              <div
+              <ANIM__FadeInOutOnScroll
                 key={item.id}
                 className={`flex flex-col small-gap text-center items-center justify-center ${
                   item.id % 5 === 0 ? "col-span-1 sm:col-span-2 " : "col-span-1"
@@ -259,13 +260,13 @@ const AboutUS = () => {
                   {item.title}
                 </h3>
                 <p className="">{item.desc}</p>
-              </div>
+              </ANIM__FadeInOutOnScroll>
             );
           })}
         </div>
-      </section>
+      </ANIM__FadeInOutOnScroll>
       <section className="container section grid grid-cols-1 md:grid-cols-2 large-gap bg-[url('/images/backgrounds/StarBackground.svg')] bg-cover bg-center">
-        <div className="flex flex-col small-gap">
+        <ANIM__FadeInOutOnScroll className="flex flex-col small-gap">
           <span className="text-[16px] md:text-[20px] font-semibold text-secondary text-center md:text-left">
             Our Leadership
           </span>
@@ -290,9 +291,9 @@ const AboutUS = () => {
             an unwavering commitment to excellence, Yeatiq brings experience and
             expertise to the forefront.
           </p>
-        </div>
-        <div className="flex flex-col large-gap">
-          <div className="flex flex-col small-gap">
+        </ANIM__FadeInOutOnScroll>
+        <ANIM__FadeInOutOnScroll className="flex flex-col large-gap">
+          <ANIM__FadeInOutOnScroll className="flex flex-col small-gap">
             <h4 className="text-[16px] md:text-[20px] font-semibold text-primary">
               Years of Experience
             </h4>
@@ -301,8 +302,8 @@ const AboutUS = () => {
               <span className="text-primary font-medium">since 2019</span>,
               we&apos;ve accumulated invaluable experience and insights.
             </p>
-          </div>
-          <div className="flex flex-col small-gap">
+          </ANIM__FadeInOutOnScroll>
+          <ANIM__FadeInOutOnScroll className="flex flex-col small-gap">
             <h4 className="text-[16px] md:text-[20px] font-semibold text-primary">
               Sociomatic in&nbsp;
               <span className="text-[16px] md:text-[20px] font-semibold text-secondary">
@@ -324,8 +325,8 @@ const AboutUS = () => {
               catalyst for brands in Dubai, propelling them to new heights in
               the digital realm
             </p>
-          </div>
-          <div className="flex flex-col small-gap">
+          </ANIM__FadeInOutOnScroll>
+          <ANIM__FadeInOutOnScroll className="flex flex-col small-gap">
             <h4 className="text-[16px] md:text-[20px] font-semibold text-primary">
               Innovate, Elevate,&nbsp;
               <span className="text-[16px] md:text-[20px] font-semibold text-secondary">
@@ -341,19 +342,19 @@ const AboutUS = () => {
               catalyst for brands in Dubai, propelling them to new heights in
               the digital realm
             </p>
-          </div>
+          </ANIM__FadeInOutOnScroll>
           <div className="font-semibold text-primary">
             Yeatiq and Sociomatic are dedicated to making your brands fly and
             soar in the digital skies. Let&apos;s chart the course for your
             brand&apos;s digital success together!
           </div>
-        </div>
+        </ANIM__FadeInOutOnScroll>
       </section>
 
       <ShortReviews />
       <section className="bg-primary">
         <div className="container section flex flex-col md:flex-row justify-between items-center large-gap">
-          <div className="flex flex-col small-gap">
+          <ANIM__FadeInOutOnScroll className="flex flex-col small-gap">
             <h2 className="text-muted text-center md:text-left">
               Join Us on the Journey
             </h2>
@@ -363,8 +364,8 @@ const AboutUS = () => {
               trusted partner on the Journey to digital success. Let&apos;s
               create, innovate, and elevate together
             </p>
-          </div>
-          <div className="flex flex-col small-gap min-w-[300px]">
+          </ANIM__FadeInOutOnScroll>
+          <ANIM__FadeInOutOnScroll className="flex flex-col small-gap min-w-[300px]">
             <Input
               placeholder="Enter your email"
               defaultValue={email}
@@ -402,7 +403,7 @@ const AboutUS = () => {
             >
               Subscribe
             </Button>
-          </div>
+          </ANIM__FadeInOutOnScroll>
         </div>
       </section>
     </>

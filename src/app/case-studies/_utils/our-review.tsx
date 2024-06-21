@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Link from "next/link";
 import { ReactElement } from "react";
+import ANIM__FadeInOutOnScroll from "@/components/anims/fadein.anim";
 
 const OurReview = ({
   data = reviewData,
@@ -23,13 +24,13 @@ const OurReview = ({
   return (
     <section className="bg-gradient-to-tr from-primary to-secondary [&>*]:text-white">
       <div className="container section space-y-[48px]">
-        <div className="max-w-[640px] mx-auto [&>*]:text-center space-y-[32px]">
+        <ANIM__FadeInOutOnScroll className="max-w-[640px] mx-auto [&>*]:text-center space-y-[32px]">
           <h2>{title}</h2>
           <p>{description}</p>
-        </div>
+        </ANIM__FadeInOutOnScroll>
 
-        <div className="flex flex-col min-[950px]:flex-row items-center justify-center gap-16">
-          <div className="max-w-[500px] space-y-[32px]">
+        <ANIM__FadeInOutOnScroll className="flex flex-col min-[950px]:flex-row items-center justify-center gap-16">
+          <ANIM__FadeInOutOnScroll className="max-w-[500px] space-y-[32px]">
             <p className="text-lg md:text-xl xl:text-2xl text-center min-[950px]:text-right italic">
               {qouteText}
             </p>
@@ -47,7 +48,7 @@ const OurReview = ({
                 <AvatarFallback>CN</AvatarFallback>
               </Avatar>
             </div>
-          </div>
+          </ANIM__FadeInOutOnScroll>
           <div className="max-w-[500px] h-auto p-4 rounded-lg bg-white/90 backdrop-blur-xl">
             <Image
               src={image}
@@ -57,7 +58,7 @@ const OurReview = ({
               className="w-full h-auto my-auto"
             />
           </div>
-        </div>
+        </ANIM__FadeInOutOnScroll>
       </div>
     </section>
   );

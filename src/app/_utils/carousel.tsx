@@ -4,9 +4,18 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 import Link from "next/link";
+import ANIM__FadeInOnScroll from "@/components/anims/fadein.anim";
+
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 export const BrandCarousel = () => {
-  const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay()]);
   const BrandDetails = [
     {
       id: 1,
@@ -41,30 +50,40 @@ export const BrandCarousel = () => {
   ];
 
   return (
-    <div className="embla overflow-hidden" ref={emblaRef}>
-      <div className="embla__container flex small-gap justify-start">
-        {BrandDetails.map((item: any) => {
-          const { id, image, link } = item;
-          return (
-            <Link
-              key={id}
-              href={link}
-              passHref={true}
-              target="_blank"
-              className="embla__slide flex-[0 0 100%] min-w-[150px] h-[60px] rounded-lg bg-white p-3 border border-secondarymuted cursor-pointer"
+    <Carousel
+      className="w-full"
+      opts={{
+        align: "start",
+        loop: true,
+      }}
+      plugins={[
+        Autoplay({
+          delay: 2000,
+        }),
+      ]}
+    >
+      <ANIM__FadeInOnScroll>
+        <CarouselContent className="-ml-1">
+          {BrandDetails.map((_) => (
+            <CarouselItem
+              key={_.id}
+              className="p-1 basis-1/2 md:basis-1/3 lg:basis-1/5 "
             >
-              <Image
-                src={`/images/brands/${image}`}
-                alt="brandImage"
-                width={1000}
-                height={1000}
-                className="h-full w-auto mx-auto"
-              />
-            </Link>
-          );
-        })}
-        <div></div>
-      </div>
-    </div>
+              <div className="p-4 flex items-center justify-center border rounded-lg bg-white h-[80px]">
+                <Image
+                  src={"/images/brands/" + _.image}
+                  alt=""
+                  width={500}
+                  height={200}
+                  className="w-auto max-h-[40px]"
+                />
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+      </ANIM__FadeInOnScroll>
+      {/* <CarouselPrevious />
+      <CarouselNext /> */}
+    </Carousel>
   );
 };

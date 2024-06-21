@@ -21,56 +21,67 @@ import {
 import ServicesCTA from "@/components/molecule/services-cta";
 import Tagline from "@/components/molecule/tagline";
 import { Sparkle } from "lucide-react";
+import ANIM__FadeInOutOnScroll from "@/components/anims/fadein.anim";
 
 const Testimonials = () => {
   return (
     <div className="py-16 bg-muted">
-      <div className="container flex flex-col items-center justify-center gap-[32px]">
-        <Tagline text={<>Testimonials</>} />
-        <h2 className="h2 text-primary text-center">
-          Checkout What Our
-          <br />
-          <span className="text-secondary relative">Customers</span>
-          &nbsp;Have To Say
-        </h2>
-      </div>
+      <ANIM__FadeInOutOnScroll>
+        <div className="container flex flex-col items-center justify-center gap-[32px]">
+          <Tagline text={<>Testimonials</>} />
+          <h2 className="h2 text-primary text-center">
+            Checkout What Our
+            <br />
+            <span className="text-secondary relative">Customers</span>
+            &nbsp;Have To Say
+          </h2>
+        </div>
+      </ANIM__FadeInOutOnScroll>
       <div className="py-[48px] container">
         <div className="space-y-8">
           <div className="relative">
-            <Swiper
-              spaceBetween={0}
-              loop={true}
-              pagination={{
-                clickable: true,
-              }}
-              navigation={true}
-              mousewheel={true}
-              keyboard={true}
-              autoplay={{
-                delay: 2500,
-                disableOnInteraction: true,
-              }}
-              breakpoints={{
-                640: {
-                  slidesPerView: 1,
-                },
-                768: {
-                  slidesPerView: 2,
-                },
-                1024: {
-                  slidesPerView: 3,
-                },
-              }}
-              modules={[Pagination, Navigation, Mousewheel, Keyboard, Autoplay]}
-            >
-              {TestimonialCardsData.map((item: any) => {
-                return (
-                  <SwiperSlide key={item.id} className="pt-4 pb-16 px-4">
-                    <TestimonialCard details={item} />
-                  </SwiperSlide>
-                );
-              })}
-            </Swiper>
+            <ANIM__FadeInOutOnScroll>
+              <Swiper
+                spaceBetween={0}
+                loop={true}
+                pagination={{
+                  clickable: true,
+                }}
+                navigation={true}
+                mousewheel={true}
+                keyboard={true}
+                autoplay={{
+                  delay: 2500,
+                  disableOnInteraction: true,
+                }}
+                breakpoints={{
+                  640: {
+                    slidesPerView: 1,
+                  },
+                  768: {
+                    slidesPerView: 2,
+                  },
+                  1024: {
+                    slidesPerView: 3,
+                  },
+                }}
+                modules={[
+                  Pagination,
+                  Navigation,
+                  Mousewheel,
+                  Keyboard,
+                  Autoplay,
+                ]}
+              >
+                {TestimonialCardsData.map((item: any) => {
+                  return (
+                    <SwiperSlide key={item.id} className="pt-4 pb-16 px-4">
+                      <TestimonialCard details={item} />
+                    </SwiperSlide>
+                  );
+                })}
+              </Swiper>
+            </ANIM__FadeInOutOnScroll>
           </div>
           <div className="flex justify-center">
             <ServicesCTA
@@ -101,7 +112,7 @@ export const TestimonialCard = ({
   const { testimonial, customer } = details;
   const { name, company, image, rating } = customer;
   return (
-    <div className="inline-block min-w-[300px] shadow p-4 rounded-2xl space-y-[16px] border-2 border-white hover:border-secondary hover:scale-105 bg-white transition ease-in-out duration-500 hover:shadow-xl">
+    <div className="inline-block min-w-[300px] shadow-lg p-4 rounded-2xl space-y-[16px] border-2 border-white hover:border-secondary hover:scale-105 bg-white transition ease-in-out duration-500 hover:shadow-2xl">
       <div className="flex">
         {[1, 2, 3, 4, 5].map((item: number) => {
           return <Sparkle key={item} className="rotate-45" />;

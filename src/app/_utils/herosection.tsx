@@ -5,6 +5,7 @@ import { BrandCarousel } from "@/app/_utils/carousel";
 import VideoPlayer from "@/app/_utils/video-player";
 import GetConsultation from "@/components/molecule/get-consultation";
 import GetAQuote from "@/components/molecule/get-a-quote";
+import ANIM__FadeInOnScroll from "@/components/anims/fadein.anim";
 
 const HeroSection = ({
   H1 = (
@@ -34,28 +35,30 @@ const HeroSection = ({
   return (
     <section className={`${backgroundImage} bg-center bg-cover`}>
       <div className="container section grid grid-cols-1 lg:grid-cols-2 items-center large-gap">
-        <div className="order-2 lg:order-1 flex flex-col small-gap">
+        <ANIM__FadeInOnScroll className="order-2 lg:order-1 flex flex-col small-gap">
           <h1 className="text-primary [&>span]:text-secondary">{H1}</h1>
           <p className="hero-description">{P}</p>
           <div className="flex flex-wrap items-center small-gap">
             <GetConsultation />
             <GetAQuote />
           </div>
-        </div>
-        <div className="order-1 lg:order-2">
-          <div className="min-h-[200px] relative">
-            <Image
-              src="/images/pages/home/heroVideo.png"
-              alt=""
-              width={1000}
-              height={1000}
-              className="w-full h-full"
-            />
-            {/* <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
-              <VideoPlayer videoLink={videoLink} />
-            </div> */}
-          </div>
-        </div>
+        </ANIM__FadeInOnScroll>
+        <ANIM__FadeInOnScroll className="order-1 lg:order-2">
+          {[
+            <div key={1} className="min-h-[200px] relative">
+              <Image
+                src="/images/pages/home/heroVideo.png"
+                alt=""
+                width={1000}
+                height={1000}
+                className="w-full h-full"
+              />
+              {/* <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+                <VideoPlayer videoLink={videoLink} />
+              </div> */}
+            </div>,
+          ]}
+        </ANIM__FadeInOnScroll>
       </div>
       {brands ? (
         <div className="bg-muted rounded-b-[20px] md:rounded-b-[40px]">

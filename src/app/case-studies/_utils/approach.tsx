@@ -2,6 +2,7 @@ import Image from "next/image";
 import { ReactElement } from "react";
 import FeatureCartIconText from "./feature-card-icon-text";
 import SectionSideImage from "./sections-side-image";
+import ANIM__FadeInOutOnScroll from "@/components/anims/fadein.anim";
 
 const Approach = ({
   data = apporachData,
@@ -16,13 +17,13 @@ const Approach = ({
   const { title, description, approaches, image } = data;
   return (
     <section className="container section space-y-[48px]">
-      <div className="max-w-[640px] mx-auto [&>*]:text-center space-y-[32px]">
+      <ANIM__FadeInOutOnScroll className="max-w-[640px] mx-auto [&>*]:text-center space-y-[32px]">
         <h2>{title}</h2>
         <p>{description}</p>
-      </div>
+      </ANIM__FadeInOutOnScroll>
 
-      <div className="grid gird-cols-1 md:grid-cols-2 items-center justify-center gap-16">
-        <div className="space-y-[32px]">
+      <ANIM__FadeInOutOnScroll className="grid gird-cols-1 md:grid-cols-2 items-center justify-center gap-16">
+        <ANIM__FadeInOutOnScroll className="space-y-[32px]">
           {approaches.map((para: { id: number; text: ReactElement }) => {
             const { id, text } = para;
             return (
@@ -34,9 +35,9 @@ const Approach = ({
               />
             );
           })}
-        </div>
+        </ANIM__FadeInOutOnScroll>
         <SectionSideImage image={image} />
-      </div>
+      </ANIM__FadeInOutOnScroll>
     </section>
   );
 };

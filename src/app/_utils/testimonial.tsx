@@ -6,6 +6,7 @@ import { useState } from "react";
 import Calendly from "./calendly";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import ANIM__FadeInOutOnScroll from "@/components/anims/fadein.anim";
 
 const Testimonial = ({ data, calendly }: { data: any; calendly: boolean }) => {
   const [currentTestimonial, setCurrentTestimonial] = useState(2);
@@ -40,15 +41,15 @@ const Testimonial = ({ data, calendly }: { data: any; calendly: boolean }) => {
               }
             )}
           </div>
-          <div className="max-w-[611px] min-w-[300px] bg-[url('/images/backgrounds/Quotes.svg')] bg-center bg-contain bg-no-repeat flex items-center justify-center">
-            <p className="hero-description text-center lg:text-left p-[16.5px]">
+          <ANIM__FadeInOutOnScroll className="max-w-[611px] min-w-[300px] bg-[url('/images/backgrounds/Quotes.svg')] bg-center bg-contain bg-no-repeat flex items-center justify-center">
+            <p className="hero-description text-center lg:text-left p-[16.5px] italic leading-loose">
               {
                 data.testimonialList.find(
                   (item: any) => item.id === currentTestimonial
                 )?.testimonial
               }
             </p>
-          </div>
+          </ANIM__FadeInOutOnScroll>
         </div>
         <Link href="/reviews" className="flex items-center justify-center">
           <Button variant={"outline"}>View Our Wall of Love</Button>

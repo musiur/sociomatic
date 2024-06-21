@@ -1,3 +1,4 @@
+import ANIM__FadeInOutOnScroll from "@/components/anims/fadein.anim";
 import ThreeDStar from "@/components/assets/three-d-star";
 import Tagline from "@/components/molecule/tagline";
 import { ReactElement } from "react";
@@ -23,7 +24,7 @@ const CoreBenefits = ({
   const { para, benefits } = body;
   return (
     <div className="py-[64px]">
-      <div className="container flex flex-col items-center justify-center gap-[32px]">
+      <ANIM__FadeInOutOnScroll className="container flex flex-col items-center justify-center gap-[32px]">
         <Tagline text={tagline} />
         <h2 className="h2 text-primary text-center [&>span]:text-secondary [&>span]:px-3">
           {title}
@@ -31,8 +32,8 @@ const CoreBenefits = ({
         <p className="max-w-[640px] text-center [&>span]:text-secondary [&>span]:px-1 [&>span]:font-semibold">
           {para}
         </p>
-      </div>
-      <div className="container pt-[48px] grid grid-cols-1 sm:grid-cols-2 gap-10">
+      </ANIM__FadeInOutOnScroll>
+      <ANIM__FadeInOutOnScroll className="container pt-[48px] grid grid-cols-1 sm:grid-cols-2 gap-10">
         {benefits.map(
           (item: {
             id: number;
@@ -52,7 +53,7 @@ const CoreBenefits = ({
             );
           }
         )}
-      </div>
+      </ANIM__FadeInOutOnScroll>
     </div>
   );
 };

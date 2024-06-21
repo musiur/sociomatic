@@ -13,6 +13,7 @@ import { useToast } from "@/components/ui/use-toast";
 import { Building, MessageCircle, Phone } from "lucide-react";
 import axios from "axios";
 import Link from "next/link";
+import ANIM__FadeInOutOnScroll from "@/components/anims/fadein.anim";
 
 // Function to track contact form submissions
 function trackContactFormSubmission(formData: any) {
@@ -166,8 +167,8 @@ const ContactUs = () => {
   ];
   return (
     <div className="bg-[url('/images/backgrounds/StarBackground.svg')] bg-cover bg-center">
-      <div className="container section grid grid-cols-1 md:grid-cols-2 small-gap">
-        <div className="flex flex-col bg-primary rounded-xl p-[25px] lg:p-[50px] large-gap">
+      <ANIM__FadeInOutOnScroll className="container section grid grid-cols-1 md:grid-cols-2 small-gap">
+        <ANIM__FadeInOutOnScroll className="flex flex-col bg-primary rounded-xl p-[25px] lg:p-[50px] large-gap">
           <div className="flex flex-col small-gap">
             <h1 className="text-white">Contact Us</h1>
             <p className="text-secondarymuted">
@@ -178,11 +179,11 @@ const ContactUs = () => {
           </div>
           {ContactInfo.map((item: any) => {
             return (
-              <div
+              <ANIM__FadeInOutOnScroll
                 key={item.id}
-                className="grid grid-cols-1 gap-[10px] [&>svg]:stroke-white"
+                className="grid grid-cols-1 gap-[10px]"
               >
-                {item.icon}
+                <div className="[&>svg]:stroke-white">{item.icon}</div>
                 <h3 className="text-[16px] lg:text-[20px] font-bold text-white">
                   {item.title}
                 </h3>
@@ -193,10 +194,10 @@ const ContactUs = () => {
                 ) : (
                   <p className="text-white">{item.info}</p>
                 )}
-              </div>
+              </ANIM__FadeInOutOnScroll>
             );
           })}
-        </div>
+        </ANIM__FadeInOutOnScroll>
         <form
           onSubmit={handleOnSubmit}
           className="mx-auto pt-[50px] grid grid-cols-1 large-gap"
@@ -256,7 +257,7 @@ const ContactUs = () => {
                 Services you are interested on&nbsp;
                 <span className="text-pink-600 font-bold">*</span>
               </Label>
-              <ul className="grid grid-cols-1 lg:grid-cols-2 gap-1.5">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-1.5">
                 {ServicesList.map((item: any) => {
                   return (
                     <li key={item.id} className="flex items-center space-x-2">
@@ -285,7 +286,7 @@ const ContactUs = () => {
                     </li>
                   );
                 })}
-              </ul>
+              </div>
               <ErrorMessages errors={errors} name="services" />
             </div>
 
@@ -318,7 +319,7 @@ const ContactUs = () => {
             </Button>
           </div>
         </form>
-      </div>
+      </ANIM__FadeInOutOnScroll>
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import React from "react";
 import { TestimonialCard } from "../services/_utils/testimonials";
+import ANIM__FadeInOutOnScroll from "@/components/anims/fadein.anim";
 
 const MasonryLayout = () => {
   return (
@@ -7,9 +8,9 @@ const MasonryLayout = () => {
       <div className="columns-1 min-[700px]:columns-2 min-[1030px]:columns-3 space-x-4">
         {testimonials.map((testimonial) => {
           return (
-            <div key={testimonial.id} className="py-4">
+            <ANIM__FadeInOutOnScroll key={testimonial.id} className="py-4">
               <TestimonialCard details={{ ...testimonial }} />
-            </div>
+            </ANIM__FadeInOutOnScroll>
           );
         })}
       </div>

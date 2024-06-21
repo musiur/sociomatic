@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import { Facebook, Instagram, Linkedin } from "lucide-react";
 import BrandLogo from "../assets/brandlogo";
+import ANIM__FadeInOutOnScroll from "../anims/fadein.anim";
 
 const Footer = () => {
   return (
@@ -9,7 +10,7 @@ const Footer = () => {
       <div className="h-2 bg-gradient-to-r from-secondary/5 via-secondary to-secondary/5"></div>
       <div className="section container">
         <section className="flex flex-col sm:flex-row flex-wrap items-start justify-between large-gap md:small-gap">
-          <div className="order-4 md:order-first w-full md:w-auto">
+          <ANIM__FadeInOutOnScroll className="order-4 md:order-first w-full md:w-auto">
             <div className="small-gap">
               <BrandLogo />
             </div>
@@ -45,11 +46,11 @@ const Footer = () => {
             <p className="pt-[25px]">
               © {new Date().getFullYear()}. All rights reserved
             </p>
-          </div>
+          </ANIM__FadeInOutOnScroll>
 
           {HeadingLinks.map((item) => {
             return (
-              <div
+              <ANIM__FadeInOutOnScroll
                 key={item.id}
                 className=" flex flex-col items-start flex-start small-gap md:flex-start"
               >
@@ -67,7 +68,7 @@ const Footer = () => {
                     </Link>
                   );
                 })}
-              </div>
+              </ANIM__FadeInOutOnScroll>
             );
           })}
         </section>

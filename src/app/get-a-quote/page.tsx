@@ -72,14 +72,14 @@ const GetAQuotePage = () => {
     setFormData({ ...formData, [name]: value });
   };
   useEffect(() => {
-    trackGetAQuoteFormSubmissionA(formData)
-  }, [formData])
+    trackGetAQuoteFormSubmissionA(formData);
+  }, [formData]);
   const handleOnSubmit = async () => {
     const validationErrors = validation();
 
     if (Object.keys(validationErrors).length === 0) {
       setLoading(true);
-      trackGetAQuoteFormSubmissionA(formData)
+      trackGetAQuoteFormSubmissionA(formData);
       try {
         const response = await axios.post(
           "https://sociomatic-backend.onrender.com/auth/receive-mail",

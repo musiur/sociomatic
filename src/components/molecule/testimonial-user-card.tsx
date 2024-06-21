@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ANIM__FadeInOutOnScroll from "../anims/fadein.anim";
 
 const TestimonialUserCard = ({
   name = "John Doe",
@@ -12,7 +13,7 @@ const TestimonialUserCard = ({
   selected: boolean;
 }) => {
   return (
-    <div
+    <ANIM__FadeInOutOnScroll
       className={`w-auto lg:w-[250px] h-auto lg:h-[100px] p-[3px] border ${
         selected ? "border-secondary" : "border-secondarymuted"
       } hover:border-secondary rounded-[10px] cursor-pointer bg-white/60 backdrop-blur-xl`}
@@ -46,7 +47,7 @@ const TestimonialUserCard = ({
           </div>
         </div>
       </div>
-    </div>
+    </ANIM__FadeInOutOnScroll>
   );
 };
 

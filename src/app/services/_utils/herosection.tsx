@@ -1,3 +1,4 @@
+import ANIM__FadeInOutOnScroll from "@/components/anims/fadein.anim";
 import LunarCircle from "@/components/assets/lunar-circle";
 import ServicesCTA from "@/components/molecule/services-cta";
 import Tagline from "@/components/molecule/tagline";
@@ -26,7 +27,7 @@ const ServiceHeroSection = ({
 
   return (
     <div className="py-16">
-      <div className="container flex flex-col items-center justify-center gap-[32px]">
+      <ANIM__FadeInOutOnScroll className="container flex flex-col items-center justify-center gap-[32px]">
         <Tagline text={tagline} />
         <h1 className="h1 text-primary text-center [&>span]:text-secondary [&>span]:px-3">
           {title}
@@ -34,8 +35,8 @@ const ServiceHeroSection = ({
         <p className="max-w-[640px] text-center [&>span]:text-secondary [&>span]:px-1 [&>span]:font-semibold">
           {body}
         </p>
-      </div>
-      <div className="py-[48px] relative">
+      </ANIM__FadeInOutOnScroll>
+      <ANIM__FadeInOutOnScroll className="py-[48px] relative">
         <LunarCircle className="absolute top-0 left-0 w-full h-full z-[-1]" />
         <div className="container flex flex-col gap-[48px]">
           <iframe
@@ -51,7 +52,7 @@ const ServiceHeroSection = ({
             <ServicesCTA position="center" cta={cta} />
           </div>
         </div>
-      </div>
+      </ANIM__FadeInOutOnScroll>
     </div>
   );
 };

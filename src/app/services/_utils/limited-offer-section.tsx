@@ -1,3 +1,4 @@
+import ANIM__FadeInOutOnScroll from "@/components/anims/fadein.anim";
 import TransactionDashboard from "@/components/assets/transactions-dashbaord";
 import ServicesCTA from "@/components/molecule/services-cta";
 import { ReactElement } from "react";
@@ -23,7 +24,8 @@ const LimitedOfferSection = ({
   return (
     <div className="container pb-[96px] flex flex-col min-[700px]:flex-row gap-10 items-center justify-center">
       <TransactionDashboard className="w-full hidden sm:block" />
-      <div className="space-y-[32px] max-w-[600px]">
+
+      <ANIM__FadeInOutOnScroll className="space-y-[32px] max-w-[600px]">
         <h2 className="h2 text-primary leading-normal [&>span]:px-3 [&>span]:text-secondary">
           {title}
         </h2>
@@ -48,7 +50,7 @@ const LimitedOfferSection = ({
           )}
         </ul>
         <ServicesCTA cta={cta} />
-      </div>
+      </ANIM__FadeInOutOnScroll>
     </div>
   );
 };
