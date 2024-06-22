@@ -6,7 +6,7 @@ import ANIM__FadeInOutOnScroll from "../anims/fadein.anim";
 
 const Footer = () => {
   return (
-    <footer className="bg-muted">
+    <footer className="bg-white">
       <div className="h-2 bg-gradient-to-r from-secondary/5 via-secondary to-secondary/5"></div>
       <div className="section container">
         <section className="flex flex-col sm:flex-row flex-wrap items-start justify-between large-gap md:small-gap">
