@@ -278,11 +278,11 @@ const Links = [
         text: "Google Ads",
         link: "/services/google-ads",
       },
-      // {
-      //   id: 2,
-      //   text: "Social Media Paid Ads",
-      //   link: "/services/social-media-paid-ads",
-      // },
+      {
+        id: 2,
+        text: "Social Media Paid Ads",
+        link: "/services/social-media-paid-ads",
+      },
       {
         id: 3,
         text: "Google Analytics",
