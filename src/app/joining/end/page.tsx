@@ -3,7 +3,7 @@ import Confetti from "../_utils/confetti";
 
 const Page = ({ searchParams }: { searchParams: { type: "googleads" } }) => {
   let data = PageData.googleads;
-  if (searchParams.type) {
+  if (searchParams.type && Object.keys(PageData)?.includes(searchParams.type)) {
     data = PageData[searchParams.type];
   }
 

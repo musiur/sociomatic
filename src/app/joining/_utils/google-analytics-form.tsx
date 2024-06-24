@@ -28,15 +28,6 @@ function GoogleAnalyticsForm() {
   });
 
   async function onSubmit(data: TGoogleAnalyticsFunnelForm) {
-    toast({
-      title: "You submitted the following values:",
-      description: (
-        <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-          <code className="text-white">{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      ),
-    });
-
     if (typeof window !== "undefined") {
       console.log("Running");
       const email = localStorage.getItem("user_email") || "dummy@mail.test";
@@ -49,7 +40,7 @@ function GoogleAnalyticsForm() {
           description: result?.message || "Thank you for your joining!",
         });
         if (result.success) {
-          router.push("/joining/end?type=googleads");
+          router.push("/joining/end?type=googleanalytics");
         }
       }
     }
@@ -68,6 +59,7 @@ function GoogleAnalyticsForm() {
           resolve
         </h4>
         <CustomInput form={form} name="name" label="Your name" />
+        <CustomInput form={form} name="websiteUrl" label="Website URL" />
         <FormField
           control={form.control}
           name="country"

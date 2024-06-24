@@ -12,7 +12,10 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { toast } from "@/components/ui/use-toast";
-import { GoogleAdsFunnelForm, TGoogleAdsFunnelForm } from "./types";
+import {
+  SocialMediaAdsServicePageDataForm,
+  TSocialMediaAdsServicePageDataForm,
+} from "./types";
 import CustomSelect from "./custom-select";
 import CustomInput from "./custom-input";
 import CustomRadio from "./custom-radio";
@@ -21,13 +24,13 @@ import CountryCombobox from "@/components/ui/country-combobox";
 import { Sun } from "lucide-react";
 import { useRouter } from "next/navigation";
 
-function GoogleAdsForm() {
+function SocialMediaPaidAdsForm() {
   const router = useRouter();
-  const form = useForm<TGoogleAdsFunnelForm>({
-    resolver: zodResolver(GoogleAdsFunnelForm),
+  const form = useForm<TSocialMediaAdsServicePageDataForm>({
+    resolver: zodResolver(SocialMediaAdsServicePageDataForm),
   });
 
-  async function onSubmit(data: TGoogleAdsFunnelForm) {
+  async function onSubmit(data: TSocialMediaAdsServicePageDataForm) {
     if (typeof window !== "undefined") {
       console.log("Running");
       const email = localStorage.getItem("user_email") || "dummy@mail.test";
@@ -40,11 +43,13 @@ function GoogleAdsForm() {
           description: result?.message || "Thank you for your joining!",
         });
         if (result.success) {
-          router.push("/joining/end?type=googleads");
+          router.push("/joining/end?type=socialmediapaidads");
         }
       }
     }
   }
+
+  console.log(form.formState.errors);
 
   return (
     <Form {...form}>
@@ -74,66 +79,57 @@ function GoogleAdsForm() {
             </FormItem>
           )}
         />
-
         <CustomInput form={form} name="phone" label="Phone" />
         <CustomSelect
           form={form}
-          name="businessType"
-          label="What type of business do you currently own?"
+          name="platformType"
+          label="Which social media platforms are most relevant to your target audience? (Select all that apply)"
           options={[
             {
-              label: "Startup",
-              value: "Startup",
+              label: "Facebook",
+              value: "Facebook",
             },
             {
-              label: "Small Business Aiming for Growth",
-              value: "Small Business Aiming for Growth",
+              label: "Instagram",
+              value: "Instagram",
             },
             {
-              label: "Medium-Sized Business on the Path to Expansion",
-              value: "Medium-Sized Business on the Path to Expansion",
+              label: "Linkedin",
+              value: "Linkedin",
+            },
+            {
+              label: "Others",
+              value: "Others",
             },
           ]}
         />
-        <CustomSelect
-          form={form}
-          name="industryType"
-          label="What is your industry?"
-          options={[
-            {
-              label: "Ecommerce",
-              value: "Ecommerce",
-            },
-            {
-              label: "Lead generation",
-              value: "Lead generation",
-            },
-            {
-              label: "Blog",
-              value: "Blog",
-            },
-            {
-              label: "SaaS",
-              value: "SaaS",
-            },
-          ]}
-        />
+        {form.watch("platformType") === "Others" ? (
+          <CustomInput form={form} name="customPlatform" label="Add your own" />
+        ) : null}
         <CustomSelect
           form={form}
           name="goals"
-          label="What are your main advertising goals? (Increase brand awareness, generate leads, drive sales, etc.)"
+          label="What are your primary goals for social media advertising? (Select all that apply)"
           options={[
             {
-              label: "Increase Traffic",
-              value: "Increase Traffic",
+              label: "Increase brand awareness",
+              value: "Increase brand awareness",
             },
             {
-              label: "Generate Leads",
-              value: "Generate Leads",
+              label: "Generate leads",
+              value: "Generate leads",
             },
             {
-              label: "Drive Sales",
-              value: "Drive Sales",
+              label: "Drive sales",
+              value: "Drive sales",
+            },
+            {
+              label: "Website traffic",
+              value: "Website traffic",
+            },
+            {
+              label: "Improve brand engagement",
+              value: "Improve brand engagement",
             },
             {
               label: "Others",
@@ -143,24 +139,29 @@ function GoogleAdsForm() {
         />
 
         {form.watch("goals") === "Others" ? (
-          <CustomInput form={form} name="customGoals" label="Add your own" />
+          <CustomInput
+            form={form}
+            name="customGoals"
+            label="Add your own goals"
+          />
         ) : null}
         <CustomInput
           form={form}
           name="challengesFaced"
-          label="Have you ever run Google Ads campaigns before? If so, what were the biggest challenges you faced?"
+          label="Have you embarked on web development ventures before? If so, what were your main obstacles?"
+          type="textarea"
         />
         <CustomInput
           form={form}
           name="budget"
-          label="What's your estimated monthly budget for Google Advestising?"
+          label="Do you currently have a dedicated budget for social media advertising, or are you still exploring options?"
           type="number"
         />
 
         <CustomRadio
           form={form}
           name="workExperience"
-          label="Have you worked with any marketing agencies before?"
+          label="Have you previously partnered with a development company?"
           options={[
             { label: "Yes", value: "Yes" },
             { label: "No", value: "No" },
@@ -171,34 +172,22 @@ function GoogleAdsForm() {
           <CustomInput
             form={form}
             name="workExperienceDetails"
-            label="If yes, please share the details"
+            label="Do you have any prior experience with social media advertising?"
           />
         ) : null}
+
+        <CustomInput
+          form={form}
+          name="partnerYouWant"
+          label="What are the top 2-3 things you look for in a social media advertising partner?"
+          type="textarea"
+        />
+
         <CustomInput
           form={form}
           name="painpoints"
-          label=" What are your biggest challenges with attracting customers? (Any pain points)"
-        />
-        <CustomSelect
-          form={form}
-          name="commitment"
-          label="Considering the program's intensity and the time commitment involved, how committed are you to giving this your all?"
-          options={[
-            {
-              label: "I am Highly Committed",
-              value: "I am Highly Committed",
-            },
-            {
-              label: "I still have a few questions on how best to go forward",
-              value: "I still have a few questions on how best to go forward",
-            },
-            {
-              label:
-                "I am not ready to make this type of commitment, but possibly in the future",
-              value:
-                "I am not ready to make this type of commitment, but possibly in the future",
-            },
-          ]}
+          label="Briefly describe your biggest challenge in reaching your target audience on social media."
+          type="textarea"
         />
         <Button
           type="submit"
@@ -215,4 +204,4 @@ function GoogleAdsForm() {
   );
 }
 
-export default GoogleAdsForm;
+export default SocialMediaPaidAdsForm;

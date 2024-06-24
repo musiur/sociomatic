@@ -4,6 +4,7 @@ export const GoogleAdsFunnelForm = z.object({
     name: z.string().min(1),
     country: z.string().min(1),
     phone: z.string().min(1),
+    website: z.string().optional(),
     businessType: z.string().min(1),
     industryType: z.string().min(1),
     goals: z.string().min(1),
@@ -23,6 +24,7 @@ export const GoogleAnalyticsFunnelForm = z.object({
     name: z.string().min(1),
     country: z.string().min(1),
     phone: z.string().min(1),
+    website: z.string().optional(),
     industryType: z.string().min(1),
     challengesFaced: z.string().min(1),
     tools: z.string().min(1).default("No"),
@@ -40,6 +42,7 @@ export const WebDevelopmentFunnelForm = z.object({
     name: z.string().min(1),
     country: z.string().min(1),
     phone: z.string().min(1),
+    website: z.string().optional(),
     businessType: z.string().min(1),
     industryType: z.string().min(1),
     customIndustry: z.string().optional(),
@@ -55,3 +58,22 @@ export const WebDevelopmentFunnelForm = z.object({
 });
 
 export type TWebDevelopmentFunnelForm = z.infer<typeof WebDevelopmentFunnelForm>
+
+export const SocialMediaAdsServicePageDataForm = z.object({
+    name: z.string().min(1),
+    country: z.string().min(1),
+    phone: z.string().min(1),
+    website: z.string().optional(),
+    platformType: z.string().min(1),
+    customPlatform: z.string().optional(),
+    goals: z.string().min(1),
+    customGoals: z.string().optional(),
+    challengesFaced: z.string().min(1),
+    budget: z.number().min(1),
+    workExperience: z.string().min(1).default("No"),
+    workExperienceDetails: z.string().optional(),
+    partnerYouWant: z.string().min(1),
+    painpoints: z.string(),
+});
+
+export type TSocialMediaAdsServicePageDataForm = z.infer<typeof SocialMediaAdsServicePageDataForm>
