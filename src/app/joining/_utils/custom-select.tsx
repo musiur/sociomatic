@@ -34,7 +34,7 @@ const CustomSelect = ({
           <Select onValueChange={field.onChange} defaultValue={field.value}>
             <FormControl>
               <SelectTrigger>
-                <SelectValue placeholder="Choose business type" />
+                <SelectValue />
               </SelectTrigger>
             </FormControl>
             <SelectContent>

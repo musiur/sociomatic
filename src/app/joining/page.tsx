@@ -1,9 +1,18 @@
 import GoogleAdsForm from "./_utils/google-ads-form";
 import GoogleAnalyticsForm from "./_utils/google-analytics-form";
 import HeroSectionJoining from "./_utils/hero.section";
+import SocialMediaPaidAdsForm from "./_utils/social-media-paid-ads";
 import WebDevelopmentForm from "./_utils/web-development-form";
 
-type E_FormTypes = "googleads" | "googleanalytics";
+type E_FormTypes =
+  | "googleads"
+  | "googleanalytics"
+  | "customwebdev"
+  | "uiux"
+  | "wordpress"
+  | "shopify"
+  | "software"
+  | "socialmediapaidads";
 
 const Page = ({
   searchParams = { type: "googleads" },
@@ -18,18 +27,43 @@ const Page = ({
     uiux: <GoogleAdsForm />,
     shopify: <GoogleAdsForm />,
     wordpress: <GoogleAdsForm />,
+    socialmediapaidads: <SocialMediaPaidAdsForm />,
   };
   const type: E_FormTypes = searchParams.type || "googleads";
+  const service =
+    searchParams.type === "googleads"
+      ? "Google Ads"
+      : searchParams.type === "googleanalytics"
+      ? "Google Analytics"
+      : searchParams.type === "uiux"
+      ? "UI/UX Design"
+      : searchParams.type === "wordpress"
+      ? "Wordpress Development"
+      : searchParams.type === "shopify"
+      ? "Shopify Development"
+      : searchParams.type === "software"
+      ? "Software Development"
+      : searchParams.type === "socialmediapaidads"
+      ? "Social Media Paid Ads"
+      : searchParams.type === "customwebdev"
+      ? "Custom Web Developer"
+      : "";
   return (
     <>
       <HeroSectionJoining
         data={{
           tagline: <>Offshore in Growth</>,
-          title: <>Join Our Google Ads program TODAY(Spot Limited)</>,
+          title: (
+            <>
+              Join Our
+              <span>{service}</span>
+              Program TODAY(Spot Limited)
+            </>
+          ),
           body: (
             <>
-              Unlock Your Free Google Ads Audit & Growth Strategy And Finally
-              Build The Business, Freedom, And Wealth You Want!
+              Unlock Your <span>Free {service} Audit & Growth Strategy</span>
+              And Finally Build The Business, Freedom, And Wealth You Want!
             </>
           ),
         }}
