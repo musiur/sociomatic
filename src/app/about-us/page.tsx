@@ -194,7 +194,7 @@ const AboutUS = () => {
                         : "col-span-1"
                     }`}
                   >
-                    <span className="text-6xl font-bold text-white">
+                    <span className="text-6xl font-medium text-white">
                       {item.numbers}
                     </span>
                     <h3 className="text-white text-[16px] md:text-[20px] font-semibold">

@@ -3,7 +3,7 @@ import Link from "next/link";
 const TermsAndConditions = () => {
   return (
     <div className="container section">
-      <h1 className="text-3xl font-bold mb-6 text-blue-900">
+      <h1 className="text-3xl font-medium mb-6 text-blue-900">
         Terms and Conditions of Service
       </h1>
 

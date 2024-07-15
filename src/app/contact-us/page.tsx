@@ -184,7 +184,7 @@ const ContactUs = () => {
                 className="grid grid-cols-1 gap-[10px]"
               >
                 <div className="[&>svg]:stroke-white">{item.icon}</div>
-                <h3 className="text-[16px] lg:text-[20px] font-bold text-white">
+                <h3 className="text-[16px] lg:text-[20px] font-medium text-white">
                   {item.title}
                 </h3>
                 {item.id === 2 || item.id === 0 ? (
@@ -203,12 +203,12 @@ const ContactUs = () => {
           className="mx-auto pt-[50px] grid grid-cols-1 large-gap"
         >
           <div className="flex flex-col small-gap">
-            <h4 className="text-xl md:text-2xl font-bold text-primary">
+            <h4 className="text-xl md:text-2xl font-medium text-primary">
               Get in Touch With Us
             </h4>
             <div className="grid w-full items-center gap-1.5">
               <Label htmlFor="name">
-                Name <span className="text-pink-600 font-bold">*</span>
+                Name <span className="text-pink-600 font-medium">*</span>
               </Label>
               <Input
                 type="name"
@@ -223,7 +223,7 @@ const ContactUs = () => {
 
             <div className="grid w-full items-center gap-1.5">
               <Label htmlFor="email">
-                Email <span className="text-pink-600 font-bold">*</span>
+                Email <span className="text-pink-600 font-medium">*</span>
               </Label>
               <Input
                 type="email"
@@ -238,7 +238,7 @@ const ContactUs = () => {
 
             <div className="grid w-full items-center gap-1.5">
               <Label htmlFor="phone">
-                Phone <span className="text-pink-600 font-bold">*</span>
+                Phone <span className="text-pink-600 font-medium">*</span>
               </Label>
               <Input
                 type="phone"
@@ -255,7 +255,7 @@ const ContactUs = () => {
             <div className="flex flex-col gap-1.5">
               <Label htmlFor="message">
                 Services you are interested on&nbsp;
-                <span className="text-pink-600 font-bold">*</span>
+                <span className="text-pink-600 font-medium">*</span>
               </Label>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-1.5">
                 {ServicesList.map((item: any) => {

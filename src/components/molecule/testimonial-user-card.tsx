@@ -33,7 +33,7 @@ const TestimonialUserCard = ({
             className="w-[30px] h-[30px] lg:w-[60px] lg:h-[60px] rounded-full bg-secondary"
           /> */}
           <div className="flex flex-col items-center lg:items-start justify-center gap-[10px] ">
-            <p className="font-bold text-primary text-[12px] sm:text-[14px] lg:text-[20px]">
+            <p className="font-medium text-primary text-[12px] sm:text-[14px] lg:text-[20px]">
               {name.slice(0, 15)}
               {name.length > 15 ? "..." : null}
             </p>

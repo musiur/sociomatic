@@ -21,7 +21,7 @@ const HeroSectionJoining = ({
         <h1 className="h1 text-primary text-center [&>span]:text-secondary [&>span]:mx-4">
           {title}
         </h1>
-        <p className="max-w-[640px] text-center [&>span]:font-bold [&>span]:mx-1">
+        <p className="max-w-[640px] text-center [&>span]:font-medium [&>span]:mx-1">
           {body}
         </p>
       </div>

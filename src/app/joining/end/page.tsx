@@ -10,7 +10,7 @@ const Page = ({ searchParams }: { searchParams: { type: "googleads" } }) => {
   const { title, paragraphs } = data;
   return (
     <div className="container section flex flex-col gap-8">
-      <div className="text-secondary font-bold inline-block text-2xl md:text-3xl lg:text-4xl">
+      <div className="text-secondary font-medium inline-block text-2xl md:text-3xl lg:text-4xl">
         Congratulations!
       </div>
       <div className="max-w-[800px] space-y-8">
@@ -21,7 +21,7 @@ const Page = ({ searchParams }: { searchParams: { type: "googleads" } }) => {
           {paragraphs.map((paragraph, index) => (
             <li
               key={index}
-              className="leading-loose text-gray-600 [&>span]:font-bold [&>span]:mx-1"
+              className="leading-loose text-gray-600 [&>span]:font-medium [&>span]:mx-1"
             >
               {paragraph}
             </li>

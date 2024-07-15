@@ -3,7 +3,9 @@ import Link from "next/link";
 const Privacy = () => {
   return (
     <div className="container section">
-      <h1 className="text-3xl font-bold mb-6 text-blue-900">Privacy Policy</h1>
+      <h1 className="text-3xl font-medium mb-6 text-blue-900">
+        Privacy Policy
+      </h1>
 
       <section className="mb-8">
         <h2 className="text-xl font-semibold mb-4 text-blue-900">

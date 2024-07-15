@@ -178,7 +178,7 @@ const GetAQuotePage = () => {
                 return (
                   <li
                     key={index}
-                    className={`px-4 py-2 md:px-8 md:py-3 border  font-bold cursor-pointer ${
+                    className={`px-4 py-2 md:px-8 md:py-3 border  font-medium cursor-pointer ${
                       index + 1 === currentTab
                         ? "bg-secondary text-white hover:bg-blue-600 border-secondary "
                         : "bg-white hover:bg-muted hover:text-secondary border-secondarymuted "
@@ -200,7 +200,7 @@ const GetAQuotePage = () => {
           <div className="flex flex-col small-gap">
             <div className="grid w-full items-center gap-1.5">
               <Label htmlFor="name">
-                Name <span className="text-pink-600 font-bold">*</span>
+                Name <span className="text-pink-600 font-medium">*</span>
               </Label>
               <Input
                 type="name"
@@ -213,7 +213,7 @@ const GetAQuotePage = () => {
             </div>
             <div className="grid w-full items-center gap-1.5">
               <Label htmlFor="email">
-                Email <span className="text-pink-600 font-bold">*</span>
+                Email <span className="text-pink-600 font-medium">*</span>
               </Label>
               <Input
                 type="email"
@@ -226,7 +226,7 @@ const GetAQuotePage = () => {
             </div>
             <div className="grid w-full items-center gap-1.5">
               <Label htmlFor="phone">
-                Phone <span className="text-pink-600 font-bold">*</span>
+                Phone <span className="text-pink-600 font-medium">*</span>
               </Label>
               <Input
                 type="phone"
@@ -239,7 +239,7 @@ const GetAQuotePage = () => {
             </div>
             <div className="grid w-full items-center gap-1.5">
               <Label htmlFor="country">
-                Country <span className="text-pink-600 font-bold">*</span>
+                Country <span className="text-pink-600 font-medium">*</span>
               </Label>
               <CountryCombobox onChange={handleOnChange} />
               <ErrorMessages errors={errors} name="country" />
@@ -270,7 +270,7 @@ const GetAQuotePage = () => {
               <div className="flex flex-col gap-1.5">
                 <Label htmlFor="budget">
                   Probable budget range&nbsp;
-                  <span className="text-pink-600 font-bold">*</span>
+                  <span className="text-pink-600 font-medium">*</span>
                 </Label>
                 <Select
                   onValueChange={(value) => {
@@ -297,7 +297,7 @@ const GetAQuotePage = () => {
             <div className="flex flex-col gap-1.5">
               <Label htmlFor="message">
                 Services you are interested on&nbsp;
-                <span className="text-pink-600 font-bold">*</span>
+                <span className="text-pink-600 font-medium">*</span>
               </Label>
               <ul className="grid grid-cols-1 lg:grid-cols-2 gap-1.5">
                 {ServicesList.map((item: any) => {
@@ -333,7 +333,7 @@ const GetAQuotePage = () => {
             <div className="grid w-full gap-1.5">
               <Label htmlFor="message">
                 Your message&nbsp;
-                <span className="text-pink-600 font-bold">*</span>
+                <span className="text-pink-600 font-medium">*</span>
               </Label>
               <Textarea
                 placeholder="Type your message here."
