@@ -54,6 +54,7 @@
     "react-use": "^17.5.0",
     "react-whatsapp": "^0.3.0",
     "sass": "^1.76.0",
+    "sharp": "^0.33.4",
     "swiper": "^11.1.1",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
