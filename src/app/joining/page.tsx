@@ -72,7 +72,7 @@ const Page = ({
         <div className="space-y-12">
           <div className="w-full min-h-[300px] max-h-[350px] bg-gray-200 rounded-lg"></div>
           <div className="space-y-8">
-            <h3 className="text-xl md:text-2xl font-bold">
+            <h3 className="text-xl md:text-2xl font-medium">
               Et tempor eu tempor do mollit veniam sit. Et labore magna
             </h3>
             {[1, 2, 3].map((item) => {

@@ -71,7 +71,7 @@ const EmailModal = ({
         <DialogHeader className="space-y-2 pt-[180px] md:pt-[240px] z-10">
           <DialogTitle className="text-xl md:text-2xl font-normal">
             {step === 1 ? "Join a small group of" : "Email"}&nbsp;
-            <span className="font-bold text-xl md:text-2xl">
+            <span className="font-medium text-xl md:text-2xl">
               {step === 1 ? "elite entrepreneurs" : "Verification"}
             </span>
             &nbsp;{step === 1 ? "today" : null}

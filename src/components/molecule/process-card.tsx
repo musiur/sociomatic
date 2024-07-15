@@ -17,10 +17,12 @@ const ProcessCard = ({
   image: ReactElement;
 }) => {
   return (
-    <div className="flex flex-col items-center justify-center mx-auto small-gap bg-white w-full  md:max-w-[376px] text-center h-auto p-[25px] rounded-[8px] cursor-pointer border border-secondarymuted hover:border-secondary hover:shadow-[0_4px_25px_0_rgba(89,86,255,0.05)] transition ease-in-out duration-600  ">
+    <div className="flex flex-col items-center justify-center mx-auto small-gap bg-white w-full  md:max-w-[376px] text-center h-auto p-[25px] rounded-[20px] cursor-pointer border-2 border-white hover:border-secondary hover:shadow-[0_4px_25px_0_rgba(89,86,255,0.05)] hover:scale-[1.06] transition ease-in-out duration-700">
       {image}
-      <h5 className="font-extrabold text-primary">{title}</h5>
-      <p className="[&>span]:font-bold">{details}</p>
+      <h5 className="font-semibold text-primary">{title}</h5>
+      <p className="[&>span]:font-medium text-primary/80 [&>span]:text-primary">
+        {details}
+      </p>
     </div>
   );
 };

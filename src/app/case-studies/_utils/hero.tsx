@@ -48,7 +48,7 @@ const Hero = ({
                 className="inline-flex items-center gap-2 [&>svg]:stroke-[2px] [&>svg]:stroke-secondary"
               >
                 {icon}
-                <p className="inline-flex gap-1 [&>span]:text-primary font-bold text-primary/50">
+                <p className="inline-flex gap-1 [&>span]:text-primary font-medium text-primary/50">
                   {text}
                 </p>
               </div>

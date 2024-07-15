@@ -170,7 +170,13 @@ export const homeFeaturesData = [
 
 export const homeTestimonialData = {
   highlighter: "Testimonials",
-  H2: <>Don&apos;t Take Our Words, We Embrace Their</>,
+  H2: (
+    <>
+      Don&apos;t Take Our Words,
+      <br />
+      We Embrace Their
+    </>
+  ),
   paragraphs: [
     <>
       Our <span>satisfied</span> clients are from all over the world. We

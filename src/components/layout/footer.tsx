@@ -54,7 +54,7 @@ const Footer = () => {
                 key={item.id}
                 className=" flex flex-col items-start flex-start small-gap md:flex-start"
               >
-                <h4 className="font-bold text-secondary text-lg md:text-xl">
+                <h4 className="font-medium text-secondary text-lg md:text-xl">
                   {item.title}
                 </h4>
                 {item.links.map((link) => {

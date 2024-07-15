@@ -3,6 +3,7 @@ import { Button } from "../ui/button";
 import { ReactElement } from "react";
 import EmailModal from "./email-modal";
 import ANIM__FadeInOutOnScroll from "../anims/fadein.anim";
+import Link from "next/link";
 
 const ServicesCTA = ({
   position = "left",
@@ -13,7 +14,7 @@ const ServicesCTA = ({
     },
     secondary: {
       text: <></>,
-      link: "/",
+      link: "/#calendly",
     },
   },
 }: {
@@ -37,7 +38,9 @@ const ServicesCTA = ({
       </p>
       <div className="grid grid-cols-1 min-[400px]:flex flex-wrap items-center justify-start gap-[12px]">
         <EmailModal buttonText={primary.text} path={primary.link} />
-        <Button variant="outline">{secondary.text}</Button>
+        <Link href="/#calendly">
+          <Button variant="outline">{secondary.text}</Button>
+        </Link>
       </div>
     </ANIM__FadeInOutOnScroll>
   );

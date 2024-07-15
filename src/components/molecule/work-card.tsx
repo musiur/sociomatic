@@ -44,10 +44,10 @@ const WorkCard = ({
         {image}
 
         <div className="flex flex-col small-gap">
-          <p className="text-[20px] md:text-[24px] font-bold text-primary">
+          <p className="text-[20px] md:text-[24px] font-medium text-primary">
             {title}
           </p>
-          <p className="[&>span]:font-bold [&>span]:text-primary">
+          <p className="[&>span]:font-medium [&>span]:text-primary text-primary/80">
             {description}
           </p>
         </div>

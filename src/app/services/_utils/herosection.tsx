@@ -49,7 +49,16 @@ const ServiceHeroSection = ({
             allowFullScreen
           ></iframe>
           <div className="flex justify-center">
-            <ServicesCTA position="center" cta={cta} />
+            <ServicesCTA
+              position="center"
+              cta={{
+                ...cta,
+                secondary: {
+                  ...cta.secondary,
+                  link: "/#calendly",
+                },
+              }}
+            />
           </div>
         </div>
       </ANIM__FadeInOutOnScroll>

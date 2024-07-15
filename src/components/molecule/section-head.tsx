@@ -18,7 +18,7 @@ const SectionHead = ({
   return (
     <ANIM__FadeInOnScroll className="flex flex-col items-center justify-center small-gap max-w-[566px] mx-auto text-center">
       {highlighter ? (
-        <p className="text-[16px] md:text-[20px] text-secondary font-semibold">
+        <p className="text-[12px] md:text-[16px] text-secondary font-semibold inline-block px-4 py-[4px] rounded-full border border-primary/20">
           {highlighter}
         </p>
       ) : null}
@@ -30,7 +30,7 @@ const SectionHead = ({
             return (
               <p
                 key={index}
-                className="[&>span]:font-medium [&>span]:text-primary"
+                className="[&>span]:font-medium [&>span]:text-primary text-primary/80"
               >
                 {item}
               </p>

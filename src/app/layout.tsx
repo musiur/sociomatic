@@ -9,10 +9,16 @@ import WhatsApp from "@/components/molecule/whatsapp";
 import CookiePolicyNotificationBar from "@/components/molecule/cookie-policy";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import PageView from "@/lib/datalayer/page-view";
-import { Poppins } from "next/font/google";
+import { Poppins, Lato } from "next/font/google";
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
+
+const lato = Lato({
+  subsets: ["latin"],
+  variable: "--font-lato",
+  weight: ["100", "300", "400", "700", "900"],
 });
 
 // Declare the dataLayer object as a global variable
@@ -58,7 +64,7 @@ export default function RootLayout({
         />
       </head>
 
-      <body className={poppins.className}>
+      <body className={`${poppins.className} ${lato.variable}`}>
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-WP6VXKV"

@@ -98,24 +98,24 @@ const CaseStudies = ({ params }: { params: { slug: string } }) => {
                 >
                   {image}
                   <div className="flex flex-col items-start justify-start small-gap pt-10">
-                    <h3 className="text-[20px] lg:text-[24px] font-bold text-center w-full">
+                    <h3 className="text-[20px] lg:text-[24px] font-medium text-center w-full">
                       {brand}
                     </h3>
                     {item.title ? (
-                      <h4 className="font-bold text-primary text-[16px] md:text-[20px] w-full text-center mb-10">
+                      <h4 className="font-medium text-primary text-[16px] md:text-[20px] w-full text-center mb-10">
                         {item.title}
                       </h4>
                     ) : null}
                     <div className="grid grid-cols-1 small-gap">
                       <div className="grid grid-cols-1 sm:grid-cols-2 small-gap items-start justify-start">
                         <div className="grid grid-cols-1 gap-[10px] ">
-                          <h4 className="font-bold text-dimmed flex items-center gap-[5px]">
+                          <h4 className="font-medium text-dimmed flex items-center gap-[5px]">
                             <Frown /> The Challenge
                           </h4>
                           <p>{challenge}</p>
                         </div>
                         <div className="grid grid-cols-1 gap-[10px]">
-                          <h4 className="font-bold text-secondary flex items-center gap-[5px]">
+                          <h4 className="font-medium text-secondary flex items-center gap-[5px]">
                             <Smile className="stroke-secondary" /> {followupH}
                           </h4>
                           <p>{followup}</p>
@@ -124,7 +124,7 @@ const CaseStudies = ({ params }: { params: { slug: string } }) => {
                       <div className="grid grid-cols-1 sm:grid-cols-2 small-gap ms:pl-[20px]">
                         {item.before ? (
                           <div className="flex flex-col justify-start items-start gap-[10px]">
-                            <h4 className="font-bold text-dimmed flex items-center gap-[5px]">
+                            <h4 className="font-medium text-dimmed flex items-center gap-[5px]">
                               <Frown /> Results Before
                             </h4>
                             <p>{item.before}</p>
@@ -133,7 +133,7 @@ const CaseStudies = ({ params }: { params: { slug: string } }) => {
                           <div></div>
                         )}
                         <div className="flex flex-col items-start justify-start gap-[15px]">
-                          <h4 className="font-bold text-secondary flex items-center gap-[5px]">
+                          <h4 className="font-medium text-secondary flex items-center gap-[5px]">
                             <Smile className="stroke-secondary" /> After
                             Sociomatic
                           </h4>

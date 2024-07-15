@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -71,9 +69,9 @@ $max_width: 1196px;
 $p_min_font: 14px;
 $p_max_font: 16px;
 $h1_min_font: 28px;
-$h1_max_font: 49px;
+$h1_max_font: 44px;
 $h2_min_font: 22px;
-$h2_max_font: 39px;
+$h2_max_font: 32px;
 
 @layer base {
 
@@ -91,90 +89,33 @@ html {
   scroll-behavior: smooth !important;
 }
 
-.lato-thin {
-  font-family: "Lato", sans-serif;
-  font-weight: 100;
-  font-style: normal;
+h1,
+h2 {
+  @apply font-[var(--font-lato)];
+  font-weight: 500;
 }
-
-.lato-light {
-  font-family: "Lato", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.lato-regular {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.lato-bold {
-  font-family: "Lato", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.lato-black {
-  font-family: "Lato", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-}
-
-.lato-thin-italic {
-  font-family: "Lato", sans-serif;
-  font-weight: 100;
-  font-style: italic;
-}
-
-.lato-light-italic {
-  font-family: "Lato", sans-serif;
-  font-weight: 300;
-  font-style: italic;
-}
-
-.lato-regular-italic {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.lato-bold-italic {
-  font-family: "Lato", sans-serif;
-  font-weight: 700;
-  font-style: italic;
-}
-
-.lato-black-italic {
-  font-family: "Lato", sans-serif;
-  font-weight: 900;
-  font-style: italic;
-}
-
 
 h1 {
-  @extend .lato-black;
   @include fluid-type($min_width, $max_width, $h1_min_font, $h1_max_font);
-  @apply font-bold;
+  // @apply font-semibold;
   line-height: 120%;
 
   span {
     @include fluid-type($min_width, $max_width, $h1_min_font, $h1_max_font);
-    @apply font-bold;
+    // @apply font-semibold;
     line-height: 120%;
   }
 }
 
 h2 {
-  @extend .lato-black;
 
   @include fluid-type($min_width, $max_width, $h2_min_font, $h2_max_font);
-  @apply font-bold;
+  // @apply font-semibold;
   line-height: 120%;
 
   span {
     @include fluid-type($min_width, $max_width, $h2_min_font, $h2_max_font);
-    @apply font-bold;
+    // @apply font-semibold;
     line-height: 120%;
   }
 }
