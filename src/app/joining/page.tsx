@@ -1,8 +1,12 @@
 import GoogleAdsForm from "./_utils/google-ads-form";
 import GoogleAnalyticsForm from "./_utils/google-analytics-form";
 import HeroSectionJoining from "./_utils/hero.section";
+import ShopifyDevelopmentForm from "./_utils/shopify-development-form";
 import SocialMediaPaidAdsForm from "./_utils/social-media-paid-ads";
+import SoftwareDevelopmentForm from "./_utils/software-development-form";
+import UiUxForm from "./_utils/uiux-form";
 import WebDevelopmentForm from "./_utils/web-development-form";
+import WordpressDevelopmentForm from "./_utils/wordpress-development-form";
 
 type E_FormTypes =
   | "googleads"
@@ -19,14 +23,15 @@ const Page = ({
 }: {
   searchParams: { type: E_FormTypes };
 }) => {
+  console.log(searchParams);
   const Forms = {
     googleads: <GoogleAdsForm />,
     googleanalytics: <GoogleAnalyticsForm />,
     customwebdev: <WebDevelopmentForm />,
-    software: <GoogleAdsForm />,
-    uiux: <GoogleAdsForm />,
-    shopify: <GoogleAdsForm />,
-    wordpress: <GoogleAdsForm />,
+    software: <SoftwareDevelopmentForm />,
+    uiux: <UiUxForm />,
+    shopify: <ShopifyDevelopmentForm />,
+    wordpress: <WordpressDevelopmentForm />,
     socialmediapaidads: <SocialMediaPaidAdsForm />,
   };
   const type: E_FormTypes = searchParams.type || "googleads";

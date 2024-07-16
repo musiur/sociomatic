@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
 import { Button } from "@/components/ui/button";
@@ -13,11 +14,65 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import Image from "next/image";
-import { ReactElement, useState } from "react";
+import { ReactElement, useEffect, useState } from "react";
 import { InputOTP, InputOTPGroup, InputOTPSlot } from "../ui/input-otp";
 import { useRouter } from "next/navigation";
 import { GetOtp, VerifyOtp } from "@/app/joining/_utils/actions";
 import { Sun } from "lucide-react";
+
+const winDow = typeof window !== "undefined";
+
+// Function to track email modal form submissions
+function trackEmailModalFormSubmission(formData: any) {
+  if (typeof window !== "undefined") {
+    window[`dataLayer`] = window?.dataLayer || [];
+
+    window.dataLayer.push({
+      event: "funnelEmailSubmission",
+      formName: "funnelEmailSubmit",
+      formData,
+    });
+  }
+}
+
+// Function to track otp verification modal form submissions
+function trackEmailVerificationOTPFormSubmission(formData: any) {
+  if (typeof window !== "undefined") {
+    window[`dataLayer`] = window?.dataLayer || [];
+
+    window.dataLayer.push({
+      event: "funnelOtpVerificationSubmission",
+      formName: "funnelOtpVerification",
+      formData,
+    });
+  }
+}
+
+// Function to track email modal form submissions which is abandoned
+function trackEmailModalFormSubmissionA(formData: any) {
+  if (typeof window !== "undefined") {
+    window[`dataLayer`] = window?.dataLayer || [];
+
+    window.dataLayer.push({
+      event: "emailModalFormSubmissionAbandoned",
+      formName: "email_modal_form_abandoned",
+      formData,
+    });
+  }
+}
+
+// Function to track otp verification modal form submissions which is abandoned
+function trackOtpVerificationModalFormSubmissionA(formData: any) {
+  if (typeof window !== "undefined") {
+    window[`dataLayer`] = window?.dataLayer || [];
+
+    window.dataLayer.push({
+      event: "otpVerificationAbandoned",
+      formName: "otp_verification_abandoned",
+      formData,
+    });
+  }
+}
 
 const EmailModal = ({
   buttonText,
@@ -39,6 +94,7 @@ const EmailModal = ({
     if (result.success) {
       setStep(2);
     }
+    trackEmailModalFormSubmission({ email });
     setPending(false);
   };
 
@@ -48,12 +104,21 @@ const EmailModal = ({
     console.log(result);
     setPending(false);
     if (result.success) {
-      if (typeof window !== "undefined") {
+      if (winDow) {
         localStorage.setItem("user_email", email);
+        trackEmailVerificationOTPFormSubmission({ email, otp });
       }
       router.push(path);
+    } else {
+      winDow && trackOtpVerificationModalFormSubmissionA({ email, otp });
     }
   };
+
+  useEffect(() => {
+    if (step === 1) {
+      email.length > 0 && trackEmailModalFormSubmissionA({ email });
+    }
+  }, [email]);
   return (
     <Dialog>
       <DialogTrigger asChild>

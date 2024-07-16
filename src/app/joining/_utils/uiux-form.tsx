@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -20,6 +21,8 @@ import { FunnelFormAction } from "./actions";
 import CountryCombobox from "@/components/ui/country-combobox";
 import { Sun } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { DL___FormData } from "./datalayer";
+import { useEffect } from "react";
 
 function UiUxForm() {
   const router = useRouter();
@@ -51,11 +54,23 @@ function UiUxForm() {
         if (result.success) {
           router.push("/joining/end?type=googleads");
         }
+        typeof window !== "undefined" &&
+          DL___FormData(
+            data,
+            "joiningUiUxFormSubmission",
+            "joining_ui_ux_form_submission"
+          );
       }
     }
   }
 
-  console.log(form.formState.errors);
+  useEffect(() => {
+    DL___FormData(
+      form.getValues(),
+      "joiningUiUxFormSubmissionAbandoned",
+      "joining_ui_ux_form_submission_abandoned"
+    );
+  }, [form.getValues()]);
 
   return (
     <Form {...form}>
@@ -102,7 +117,7 @@ function UiUxForm() {
             {
               label: "Expanding Medium-Sized Enterprise",
               value: "Expanding Medium-Sized Enterprise",
-            }
+            },
           ]}
         />
         <CustomSelect

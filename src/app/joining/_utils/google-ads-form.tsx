@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -20,6 +21,8 @@ import { FunnelFormAction } from "./actions";
 import CountryCombobox from "@/components/ui/country-combobox";
 import { Sun } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { DL___FormData } from "./datalayer";
+import { useEffect } from "react";
 
 function GoogleAdsForm() {
   const router = useRouter();
@@ -42,9 +45,23 @@ function GoogleAdsForm() {
         if (result.success) {
           router.push("/joining/end?type=googleads");
         }
+        typeof window !== "undefined" &&
+          DL___FormData(
+            data,
+            "joiningGoogleAdsFormSubmission",
+            "joining_google_ads_form_submission"
+          );
       }
     }
   }
+
+  useEffect(() => {
+    DL___FormData(
+      form.getValues(),
+      "joiningGoogleAdsFormAbandoned",
+      "joining_google_ads_form_abandoned"
+    );
+  }, [form.getValues()]);
 
   return (
     <Form {...form}>
