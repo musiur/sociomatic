@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -20,6 +21,8 @@ import { FunnelFormAction } from "./actions";
 import CountryCombobox from "@/components/ui/country-combobox";
 import { Sun } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { DL___FormData } from "./datalayer";
+import { useEffect } from "react";
 
 function WebDevelopmentForm() {
   const router = useRouter();
@@ -42,11 +45,23 @@ function WebDevelopmentForm() {
         if (result.success) {
           router.push("/joining/end?type=customwebdev");
         }
+        typeof window !== "undefined" &&
+          DL___FormData(
+            data,
+            "joiningWebFormSubmission",
+            "joining_web_form_submission"
+          );
       }
     }
   }
 
-  console.log(form.formState.errors);
+  useEffect(() => {
+    DL___FormData(
+      form.getValues(),
+      "joiningWebFormSubmissionAbandoned",
+      "joining_web_form_submission_abandoned"
+    );
+  }, [form.getValues()]);
 
   return (
     <Form {...form}>

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -20,6 +21,8 @@ import { FunnelFormAction } from "./actions";
 import CountryCombobox from "@/components/ui/country-combobox";
 import { Sun } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { DL___FormData } from "./datalayer";
+import { useEffect } from "react";
 
 function WordpressDevelopmentForm() {
   const router = useRouter();
@@ -51,11 +54,23 @@ function WordpressDevelopmentForm() {
         if (result.success) {
           router.push("/joining/end?type=googleads");
         }
+        typeof window !== "undefined" &&
+          DL___FormData(
+            data,
+            "joiningWordpressFormSubmission",
+            "joining_wordpress_form_submission"
+          );
       }
     }
   }
 
-  console.log(form.formState.errors);
+  useEffect(() => {
+    DL___FormData(
+      form.getValues(),
+      "joiningWordpressFormAbandoned",
+      "joining_wordpress_form_abandoned"
+    );
+  }, [form.getValues()]);
 
   return (
     <Form {...form}>
@@ -98,7 +113,7 @@ function WordpressDevelopmentForm() {
             {
               label: "Small Business Seeking Growth",
               value: "Small Business Seeking Growth",
-            }
+            },
           ]}
         />
         <CustomSelect

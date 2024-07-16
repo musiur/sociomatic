@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -23,6 +24,8 @@ import { FunnelFormAction } from "./actions";
 import CountryCombobox from "@/components/ui/country-combobox";
 import { Sun } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { DL___FormData } from "./datalayer";
+import { useEffect } from "react";
 
 function SocialMediaPaidAdsForm() {
   const router = useRouter();
@@ -45,11 +48,23 @@ function SocialMediaPaidAdsForm() {
         if (result.success) {
           router.push("/joining/end?type=socialmediapaidads");
         }
+        typeof window !== "undefined" &&
+          DL___FormData(
+            data,
+            "joiningSocialMediaAdsFormSubmission",
+            "joining_social_media_ads_form_submission"
+          );
       }
     }
   }
 
-  console.log(form.formState.errors);
+  useEffect(() => {
+    DL___FormData(
+      form.getValues(),
+      "joiningSocialMediaAdsFormAbandoned",
+      "joining_social_media_ads_form_abandoned"
+    );
+  }, [form.getValues()]);
 
   return (
     <Form {...form}>
