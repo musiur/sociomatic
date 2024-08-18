@@ -63,7 +63,7 @@ const Navbar = () => {
                                 <a
                                   key={child.id}
                                   href={child.link}
-                                  className={`text-primary hover:text-secondary ${
+                                  className={`text-primary hover:text-secondary [&>*]:text-xs ${
                                     pathname === child.link
                                       ? "text-secondary font-semibold"
                                       : "text-primary"
@@ -248,12 +248,12 @@ const Links = [
       },
       {
         id: 5,
-        text: "Custom Web Development",
+        text: "Web Development",
         link: "/case-studies/custom-web-development",
       },
       {
         id: 6,
-        text: "Shopify Store Development",
+        text: "Shopify Development",
         link: "/case-studies/shopify-store-development",
       },
       {
@@ -275,7 +275,7 @@ const Links = [
     children: [
       {
         id: 1,
-        text: "Google Ads",
+        text: "Google Paid Ads",
         link: "/services/google-ads",
       },
       {
@@ -295,7 +295,7 @@ const Links = [
       },
       {
         id: 5,
-        text: "Custom Web Development",
+        text: "Web Development",
         link: "/services/custom-web-development",
       },
       {
@@ -310,7 +310,7 @@ const Links = [
       },
       {
         id: 8,
-        text: "UI/UX",
+        text: "UI/UX & Graphic Design",
         link: "/services/uiux",
       },
       // {
