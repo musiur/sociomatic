@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/form";
 import { toast } from "@/components/ui/use-toast";
 import { GoogleAdsFunnelForm, TGoogleAdsFunnelForm } from "./types";
-import CustomSelect from "./custom-select";
+
 import CustomInput from "./custom-input";
 import CustomRadio from "./custom-radio";
 import { FunnelFormAction } from "./actions";
@@ -23,6 +23,7 @@ import { Sun } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { DL___FormData } from "./datalayer";
 import { useEffect } from "react";
+import Checkboxes from "@/components/molecule/checkboxes";
 
 function GoogleAdsForm() {
   const router = useRouter();
@@ -31,6 +32,7 @@ function GoogleAdsForm() {
   });
 
   async function onSubmit(data: TGoogleAdsFunnelForm) {
+    console.log(data);
     if (typeof window !== "undefined") {
       console.log("Running");
       const email = localStorage.getItem("user_email") || "dummy@mail.test";
@@ -93,7 +95,7 @@ function GoogleAdsForm() {
         />
 
         <CustomInput form={form} name="phone" label="Phone" />
-        <CustomSelect
+        <Checkboxes
           form={form}
           name="businessType"
           label="What type of business do you currently own?"
@@ -101,18 +103,21 @@ function GoogleAdsForm() {
             {
               label: "Startup",
               value: "Startup",
+              checked: false,
             },
             {
               label: "Small Business Aiming for Growth",
               value: "Small Business Aiming for Growth",
+              checked: false,
             },
             {
               label: "Medium-Sized Business on the Path to Expansion",
               value: "Medium-Sized Business on the Path to Expansion",
+              checked: false,
             },
           ]}
         />
-        <CustomSelect
+        <Checkboxes
           form={form}
           name="industryType"
           label="What is your industry?"
@@ -120,22 +125,26 @@ function GoogleAdsForm() {
             {
               label: "Ecommerce",
               value: "Ecommerce",
+              checked: false,
             },
             {
               label: "Lead generation",
               value: "Lead generation",
+              checked: false,
             },
             {
               label: "Blog",
               value: "Blog",
+              checked: false,
             },
             {
               label: "SaaS",
               value: "SaaS",
+              checked: false,
             },
           ]}
         />
-        <CustomSelect
+        <Checkboxes
           form={form}
           name="goals"
           label="What are your main advertising goals? (Increase brand awareness, generate leads, drive sales, etc.)"
@@ -143,23 +152,27 @@ function GoogleAdsForm() {
             {
               label: "Increase Traffic",
               value: "Increase Traffic",
+              checked: false,
             },
             {
               label: "Generate Leads",
               value: "Generate Leads",
+              checked: false,
             },
             {
               label: "Drive Sales",
               value: "Drive Sales",
+              checked: false,
             },
             {
               label: "Others",
               value: "Others",
+              checked: false,
             },
           ]}
         />
 
-        {form.watch("goals") === "Others" ? (
+        {form.watch("goals")?.includes("others") ? (
           <CustomInput form={form} name="customGoals" label="Add your own" />
         ) : null}
         <CustomInput
@@ -196,7 +209,7 @@ function GoogleAdsForm() {
           name="painpoints"
           label=" What are your biggest challenges with attracting customers? (Any pain points)"
         />
-        <CustomSelect
+        <Checkboxes
           form={form}
           name="commitment"
           label="Considering the program's intensity and the time commitment involved, how committed are you to giving this your all?"
@@ -204,16 +217,19 @@ function GoogleAdsForm() {
             {
               label: "I am Highly Committed",
               value: "I am Highly Committed",
+              checked: false,
             },
             {
               label: "I still have a few questions on how best to go forward",
               value: "I still have a few questions on how best to go forward",
+              checked: false,
             },
             {
               label:
                 "I am not ready to make this type of commitment, but possibly in the future",
               value:
                 "I am not ready to make this type of commitment, but possibly in the future",
+              checked: false,
             },
           ]}
         />
