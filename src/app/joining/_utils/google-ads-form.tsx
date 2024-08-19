@@ -32,7 +32,6 @@ function GoogleAdsForm() {
   });
 
   async function onSubmit(data: TGoogleAdsFunnelForm) {
-    console.log(data);
     if (typeof window !== "undefined") {
       console.log("Running");
       const email = localStorage.getItem("user_email") || "dummy@mail.test";
