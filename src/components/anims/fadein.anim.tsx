@@ -35,8 +35,8 @@ const ANIM__FadeInOutOnScroll: React.FC<ANIM__FadeInOutOnScrollProps> = ({
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.5,
-        delay: i * 0.2, // Staggered delay for each child
+        duration: 0.3,
+        delay: i * 0.1, // Staggered delay for each child
       },
     }),
   };

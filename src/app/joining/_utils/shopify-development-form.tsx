@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/form";
 import { toast } from "@/components/ui/use-toast";
 import { WebDevelopmentFunnelForm, TWebDevelopmentFunnelForm } from "./types";
-import CustomSelect from "./custom-select";
+
 import CustomInput from "./custom-input";
 import CustomRadio from "./custom-radio";
 import { FunnelFormAction } from "./actions";
@@ -23,6 +23,7 @@ import { Sun } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { DL___FormData } from "./datalayer";
 import { useEffect } from "react";
+import Checkboxes from "@/components/molecule/checkboxes";
 
 function ShopifyDevelopmentForm() {
   const router = useRouter();
@@ -101,7 +102,7 @@ function ShopifyDevelopmentForm() {
         />
 
         <CustomInput form={form} name="phone" label="Phone" />
-        <CustomSelect
+        <Checkboxes
           form={form}
           name="businessType"
           label="Which industry does your business thrive in?"
@@ -109,14 +110,16 @@ function ShopifyDevelopmentForm() {
             {
               label: "Innovative Startup",
               value: "Innovative Startup",
+              checked: false,
             },
             {
               label: "Growth-Oriented Small Business",
               value: "Growth-Oriented Small Business",
+              checked: false,
             },
           ]}
         />
-        <CustomSelect
+        <Checkboxes
           form={form}
           name="industryType"
           label="What is your industry?"
@@ -124,21 +127,24 @@ function ShopifyDevelopmentForm() {
             {
               label: "Digital Commerce",
               value: "Digital Commerce",
+              checked: false,
             },
             {
               label: "Content Creation",
               value: "Content Creation",
+              checked: false,
             },
             {
               label: "Others",
               value: "Others",
+              checked: false,
             },
           ]}
         />
-        {form.watch("industryType") === "Others" ? (
+        {form.watch("industryType")?.includes("Others") ? (
           <CustomInput form={form} name="customIndustry" label="Add your own" />
         ) : null}
-        <CustomSelect
+        <Checkboxes
           form={form}
           name="goals"
           label="What are your core goals for development? (Select your primary focus)"
@@ -146,23 +152,27 @@ function ShopifyDevelopmentForm() {
             {
               label: "Boost Sales Performance",
               value: "Boost Sales Performance",
+              checked: false,
             },
             {
               label: "Elevate User Experience",
               value: "Elevate User Experience",
+              checked: false,
             },
             {
               label: "Optimize for Mobile Devices",
               value: "Optimize for Mobile Devices",
+              checked: false,
             },
             {
               label: "Others",
               value: "Others",
+              checked: false,
             },
           ]}
         />
 
-        {form.watch("goals") === "Others" ? (
+        {form.watch("goals")?.includes("Others") ? (
           <CustomInput
             form={form}
             name="customGoals"
@@ -211,7 +221,7 @@ function ShopifyDevelopmentForm() {
           name="painpoints"
           label="What are your biggest challenges with attracting customers? (Any pain points)"
         />
-        <CustomSelect
+        <Checkboxes
           form={form}
           name="commitment"
           label="How ready can you fully engage with our intensive shopify development program?"
@@ -219,14 +229,17 @@ function ShopifyDevelopmentForm() {
             {
               label: "Fully commited",
               value: "Fully commited",
+              checked: false,
             },
             {
               label: "Seeking more information",
               value: "Seeking more information",
+              checked: false,
             },
             {
               label: "Considering future commitments",
               value: "Considering future commitments",
+              checked: false,
             },
           ]}
         />

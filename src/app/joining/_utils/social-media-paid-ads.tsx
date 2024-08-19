@@ -17,7 +17,7 @@ import {
   SocialMediaAdsServicePageDataForm,
   TSocialMediaAdsServicePageDataForm,
 } from "./types";
-import CustomSelect from "./custom-select";
+
 import CustomInput from "./custom-input";
 import CustomRadio from "./custom-radio";
 import { FunnelFormAction } from "./actions";
@@ -26,6 +26,7 @@ import { Sun } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { DL___FormData } from "./datalayer";
 import { useEffect } from "react";
+import Checkboxes from "@/components/molecule/checkboxes";
 
 function SocialMediaPaidAdsForm() {
   const router = useRouter();
@@ -95,7 +96,7 @@ function SocialMediaPaidAdsForm() {
           )}
         />
         <CustomInput form={form} name="phone" label="Phone" />
-        <CustomSelect
+        <Checkboxes
           form={form}
           name="platformType"
           label="Which social media platforms are most relevant to your target audience? (Select all that apply)"
@@ -103,25 +104,29 @@ function SocialMediaPaidAdsForm() {
             {
               label: "Facebook",
               value: "Facebook",
+              checked: false,
             },
             {
               label: "Instagram",
               value: "Instagram",
+              checked: false,
             },
             {
               label: "Linkedin",
               value: "Linkedin",
+              checked: false,
             },
             {
               label: "Others",
               value: "Others",
+              checked: false,
             },
           ]}
         />
-        {form.watch("platformType") === "Others" ? (
+        {form.watch("platformType")?.includes("Others") ? (
           <CustomInput form={form} name="customPlatform" label="Add your own" />
         ) : null}
-        <CustomSelect
+        <Checkboxes
           form={form}
           name="goals"
           label="What are your primary goals for social media advertising? (Select all that apply)"
@@ -129,31 +134,37 @@ function SocialMediaPaidAdsForm() {
             {
               label: "Increase brand awareness",
               value: "Increase brand awareness",
+              checked: false,
             },
             {
               label: "Generate leads",
               value: "Generate leads",
+              checked: false,
             },
             {
               label: "Drive sales",
               value: "Drive sales",
+              checked: false,
             },
             {
               label: "Website traffic",
               value: "Website traffic",
+              checked: false,
             },
             {
               label: "Improve brand engagement",
               value: "Improve brand engagement",
+              checked: false,
             },
             {
               label: "Others",
               value: "Others",
+              checked: false,
             },
           ]}
         />
 
-        {form.watch("goals") === "Others" ? (
+        {form.watch("goals")?.includes("Others") ? (
           <CustomInput
             form={form}
             name="customGoals"

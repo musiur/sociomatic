@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/form";
 import { toast } from "@/components/ui/use-toast";
 import { WebDevelopmentFunnelForm, TWebDevelopmentFunnelForm } from "./types";
-import CustomSelect from "./custom-select";
+
 import CustomInput from "./custom-input";
 import CustomRadio from "./custom-radio";
 import { FunnelFormAction } from "./actions";
@@ -23,6 +23,7 @@ import { Sun } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { DL___FormData } from "./datalayer";
 import { useEffect } from "react";
+import Checkboxes from "@/components/molecule/checkboxes";
 
 function WordpressDevelopmentForm() {
   const router = useRouter();
@@ -101,7 +102,7 @@ function WordpressDevelopmentForm() {
         />
 
         <CustomInput form={form} name="phone" label="Phone" />
-        <CustomSelect
+        <Checkboxes
           form={form}
           name="businessType"
           label="Which industry does your business thrive in?"
@@ -109,14 +110,16 @@ function WordpressDevelopmentForm() {
             {
               label: "Startup",
               value: "Startup",
+              checked: false,
             },
             {
               label: "Small Business Seeking Growth",
               value: "Small Business Seeking Growth",
+              checked: false,
             },
           ]}
         />
-        <CustomSelect
+        <Checkboxes
           form={form}
           name="industryType"
           label="What is your industry?"
@@ -124,17 +127,19 @@ function WordpressDevelopmentForm() {
             {
               label: "ECommerce",
               value: "ECommerce",
+              checked: false,
             },
             {
               label: "Others",
               value: "Others",
+              checked: false,
             },
           ]}
         />
-        {form.watch("industryType") === "Others" ? (
+        {form.watch("industryType")?.includes("Others") ? (
           <CustomInput form={form} name="customIndustry" label="Add your own" />
         ) : null}
-        <CustomSelect
+        <Checkboxes
           form={form}
           name="goals"
           label="Primary Objectives for Your WordPress Website"
@@ -142,23 +147,27 @@ function WordpressDevelopmentForm() {
             {
               label: "Improve SEO",
               value: "Improve SEO",
+              checked: false,
             },
             {
               label: "Enhance User Experience",
               value: "Enhance User Experience",
+              checked: false,
             },
             {
               label: "Integrate New Features",
               value: "Integrate New Features",
+              checked: false,
             },
             {
               label: "Others",
               value: "Others",
+              checked: false,
             },
           ]}
         />
 
-        {form.watch("goals") === "Others" ? (
+        {form.watch("goals").includes("Others") ? (
           <CustomInput
             form={form}
             name="customGoals"
@@ -207,7 +216,7 @@ function WordpressDevelopmentForm() {
           name="painpoints"
           label="What are your biggest challenges with attracting customers? (Any pain points)"
         />
-        <CustomSelect
+        <Checkboxes
           form={form}
           name="commitment"
           label="How ready can you fully engage with our intensive wordpress development program?"
@@ -215,14 +224,17 @@ function WordpressDevelopmentForm() {
             {
               label: "Highly Committed",
               value: "Highly Committed",
+              checked: false,
             },
             {
               label: "A Few Questions Before Proceeding",
               value: "A Few Questions Before Proceeding",
+              checked: false,
             },
             {
               label: "I am Not Ready to Commit Yet, but Possibly in the Future",
               value: "I am Not Ready to Commit Yet, but Possibly in the Future",
+              checked: false,
             },
           ]}
         />

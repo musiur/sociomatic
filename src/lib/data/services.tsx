@@ -118,108 +118,71 @@ export const ServicePageCOPY = {
           {
             id: 1,
             icon: <></>,
-            title: <>Real-time update</>,
+            title: <>Unmatched Expertise</>,
             paragraph: (
               <>
-                Sync your calendar and track your meeting expenses. Mercury will
-                read this and categorize your expense against your budget in
-                seconds.
+                Our Google Ads-certified team is constantly up-to-date on the
+                latest strategies and best practices.
               </>
             ),
           },
           {
             id: 2,
             icon: <></>,
-            title: <>Testing feedback</>,
+            title: <>Results-Obsessed</>,
             paragraph: (
               <>
-                We prioritize responsive design principles, ensuring that your
-                website functions flawlessly and looks great on all devices,
-                from desktops to mobile phones
+                We don&apos;t just manage ads; we drive results. Your success is
+                our top priority.
               </>
             ),
           },
           {
             id: 3,
             icon: <></>,
-            title: <>Advanced Functionality</>,
+            title: <>Transparent Communication</>,
             paragraph: (
               <>
-                Sociomatic websites are equipped with advanced features and
-                functionalities that enhance user experience and streamline
-                business processes
+                We believe in clear and ongoing communication, keeping you
+                informed every step of the way.
               </>
             ),
           },
           {
             id: 4,
             icon: <></>,
-            title: <>Scalability</>,
+            title: <>Custom Tailored Solutions</>,
             paragraph: (
               <>
-                Our websites are built with scalability in mind, allowing them
-                to grow and adapt to your business&apos;s evolving needs and
-                requirements over time
+                We don&apos;t believe in a one-size-fits-all approach. We get to
+                know your business and create a Google Ads strategy that aligns
+                perfectly with your goals.
               </>
             ),
           },
           {
             id: 5,
             icon: <></>,
-            title: <>Robust Security</>,
+            title: <>Technology & Automation</>,
             paragraph: (
               <>
-                Security is paramount in today&apos;s digital landscape. We
-                implement robust security measures to protect your website and
-                data from potential threats and vulnerabilities
+                We use advanced technology to manage campaigns, optimize bids,
+                and target ads effectively. This helps us focus on strategy and
+                deliver better results for your business.
               </>
             ),
           },
           {
             id: 6,
             icon: <></>,
-            title: <>Optimized Performance</>,
+            title: <>Long-Term Partnership</>,
             paragraph: (
               <>
-                We optimize website performance to ensure fast loading times,
-                smooth navigation, and an overall seamless user experience that
-                keeps visitors engaged
-              </>
-            ),
-          },
-          {
-            id: 7,
-            icon: <></>,
-            title: <>Cutting Edge Techs</>,
-            paragraph: (
-              <>
-                We leverage the latest technologies, such as NextJS, NodeJS, and
-                ExpressJS, to build modern, high-performance websites that meet
-                the demands of today&apos;s digital landscape
-              </>
-            ),
-          },
-          {
-            id: 8,
-            icon: <></>,
-            title: <>Cloud Hosting</>,
-            paragraph: (
-              <>
-                Sociomatic utilizes AWS(Amazon Web Services), Vercel, and
-                VPS(Virtual Private Server) setup to provide reliable, scalable
-                hosting solutions that become accessible anytime
-              </>
-            ),
-          },
-          {
-            id: 9,
-            icon: <></>,
-            title: <>Advanced DBMS</>,
-            paragraph: (
-              <>
-                Our expertise in Database Technologies, including SQL(Postgres,
-                SQLite) and NoSQL(MongoDB, DynamoDB), allows us to design
-                efficient data storage solutions.
+                We understand that Google Ads success isn&apos;t a one-time
+                thing. We&apos;re committed to building a long-term partnership
+                with you, continuously refining your campaigns, and adapting to
+                market changes to ensure sustainable growth and maximize your
+                return on investment (ROI) over time.
               </>
             ),
           },
@@ -436,7 +399,11 @@ export const ServicePageCOPY = {
     },
     limitedOffer: {
       tagline: <>Exclusive Opportunity for Rapid Business Growth</>,
-      title: <>Accelerate! Your Success in 2024</>,
+      title: (
+        <>
+          <span>Accelerate!</span> Your Success in 2024
+        </>
+      ),
       body: {
         para: (
           <>
@@ -756,7 +723,7 @@ export const ServicePageCOPY = {
       tagline: <>Unlock Potential with Software Solutions</>,
       title: (
         <>
-          Transforming Ideas into <span>Robust</span> Software
+          <span>Transforming Ideas</span> into Robust Software
         </>
       ),
       body: (
@@ -1408,7 +1375,13 @@ export const ServicePageCOPY = {
   shopifydevelopment: {
     hero: {
       tagline: <>End-to-end Shopify solutions</>,
-      title: <>Tailored Shopify Solutions for Your Online Store Success</>,
+      title: (
+        <>
+          Tailored Shopify Solutions for
+          <br />
+          <span>Your</span> Online Store <span>Success</span>
+        </>
+      ),
       body: (
         <>
           Sociomatic offers expert Shopify development services to help
@@ -1706,7 +1679,11 @@ export const ServicePageCOPY = {
   uiux: {
     hero: {
       tagline: <>Modern UI/UX solutions</>,
-      title: <>Crafting Reflexive Interfaces for Seamless Interactions </>,
+      title: (
+        <>
+          Crafting <span>Reflexive Interfaces</span> for Seamless Interactions
+        </>
+      ),
       body: (
         <>
           Sociomatic specializes in UI/UX services to create engaging,
@@ -2021,8 +1998,8 @@ export const ServicePageCOPY = {
       tagline: <>Get Trust in Your Arsenal</>,
       title: (
         <>
-          Unlock User Insights & Retention: The Power of GA4 & Google Tag
-          Manager
+          Unlock User <span>Insights & Retention</span>: The Power of GA4 &
+          Google Tag Manager
         </>
       ),
       body: (

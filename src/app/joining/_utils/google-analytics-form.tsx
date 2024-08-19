@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/form";
 import { toast } from "@/components/ui/use-toast";
 import { GoogleAnalyticsFunnelForm, TGoogleAnalyticsFunnelForm } from "./types";
-import CustomSelect from "./custom-select";
+
 import CustomInput from "./custom-input";
 import CustomRadio from "./custom-radio";
 import { FunnelFormAction } from "./actions";
@@ -23,6 +23,7 @@ import { Sun } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { DL___FormData } from "./datalayer";
 import { useEffect } from "react";
+import Checkboxes from "@/components/molecule/checkboxes";
 
 function GoogleAnalyticsForm() {
   const router = useRouter();
@@ -31,8 +32,8 @@ function GoogleAnalyticsForm() {
   });
 
   async function onSubmit(data: TGoogleAnalyticsFunnelForm) {
+    console.log(data);
     if (typeof window !== "undefined") {
-      console.log("Running");
       const email = localStorage.getItem("user_email") || "dummy@mail.test";
       if (email) {
         const result = await FunnelFormAction({ ...data, email });
@@ -94,7 +95,7 @@ function GoogleAnalyticsForm() {
 
         <CustomInput form={form} name="phone" label="Phone" />
 
-        <CustomSelect
+        <Checkboxes
           form={form}
           name="industryType"
           label="What is your industry?"
@@ -102,18 +103,22 @@ function GoogleAnalyticsForm() {
             {
               label: "Ecommerce",
               value: "Ecommerce",
+              checked: false,
             },
             {
               label: "Lead generation",
               value: "Lead generation",
+              checked: false,
             },
             {
               label: "Blog",
               value: "Blog",
+              checked: false,
             },
             {
               label: "SaaS",
               value: "SaaS",
+              checked: false,
             },
           ]}
         />
@@ -150,7 +155,7 @@ function GoogleAnalyticsForm() {
           type="textarea"
         />
 
-        {form.watch("goals") === "Others" ? (
+        {form.watch("goals")?.includes("Others") ? (
           <CustomInput form={form} name="customGoals" label="Add your own" />
         ) : null}
 
@@ -164,7 +169,7 @@ function GoogleAnalyticsForm() {
           ]}
         />
 
-        <CustomSelect
+        <Checkboxes
           form={form}
           name="platformToSetup"
           label="Which platform do you need to set up tracking ?"
@@ -172,18 +177,22 @@ function GoogleAnalyticsForm() {
             {
               label: "Google Ads Converstion",
               value: "Google Ads Converstion",
+              checked: false,
             },
             {
               label: "Google Analytics",
               value: "Google Analytics",
+              checked: false,
             },
             {
               label: "TikTok Pixel",
               value: "TikTok Pixel",
+              checked: false,
             },
             {
               label: "Facebook Pixel",
               value: "Facebook Pixel",
+              checked: false,
             },
           ]}
         />

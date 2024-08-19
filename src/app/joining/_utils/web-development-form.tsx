@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/form";
 import { toast } from "@/components/ui/use-toast";
 import { WebDevelopmentFunnelForm, TWebDevelopmentFunnelForm } from "./types";
-import CustomSelect from "./custom-select";
+
 import CustomInput from "./custom-input";
 import CustomRadio from "./custom-radio";
 import { FunnelFormAction } from "./actions";
@@ -23,6 +23,7 @@ import { Sun } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { DL___FormData } from "./datalayer";
 import { useEffect } from "react";
+import Checkboxes from "@/components/molecule/checkboxes";
 
 function WebDevelopmentForm() {
   const router = useRouter();
@@ -93,7 +94,7 @@ function WebDevelopmentForm() {
         />
 
         <CustomInput form={form} name="phone" label="Phone" />
-        <CustomSelect
+        <Checkboxes
           form={form}
           name="businessType"
           label="Which industry does your business thrive in?"
@@ -101,18 +102,21 @@ function WebDevelopmentForm() {
             {
               label: "Startup",
               value: "Startup",
+              checked: false,
             },
             {
               label: "Small Business Aiming for Growth",
               value: "Small Business Aiming for Growth",
+              checked: false,
             },
             {
               label: "Medium-Sized Business on the Path to Expansion",
               value: "Medium-Sized Business on the Path to Expansion",
+              checked: false,
             },
           ]}
         />
-        <CustomSelect
+        <Checkboxes
           form={form}
           name="industryType"
           label="What is your industry?"
@@ -120,25 +124,29 @@ function WebDevelopmentForm() {
             {
               label: "Ecommerce",
               value: "Ecommerce",
+              checked: false,
             },
             {
               label: "Educational Technologies",
               value: "Educational Technologies",
+              checked: false,
             },
             {
               label: "Financial Technologies",
               value: "Financial Technologies",
+              checked: false,
             },
             {
               label: "Software as a Service",
               value: "Software as a Service",
+              checked: false,
             },
           ]}
         />
-        {form.watch("industryType") === "Others" ? (
+        {form.watch("industryType")?.includes("Others") ? (
           <CustomInput form={form} name="customIndustry" label="Add your own" />
         ) : null}
-        <CustomSelect
+        <Checkboxes
           form={form}
           name="goals"
           label="What are your core goals for development? (Select your primary focus)"
@@ -146,23 +154,27 @@ function WebDevelopmentForm() {
             {
               label: "Boosting Brand Visiblity",
               value: "Boosting Brand Visiblity",
+              checked: false,
             },
             {
               label: "Lead generation",
               value: "Lead generation",
+              checked: false,
             },
             {
               label: "Driving Sales Conversions",
               value: "Driving Sales Conversions",
+              checked: false,
             },
             {
               label: "Others",
               value: "Others",
+              checked: false,
             },
           ]}
         />
 
-        {form.watch("goals") === "Others" ? (
+        {form.watch("goals")?.includes("Others") ? (
           <CustomInput
             form={form}
             name="customGoals"
@@ -211,7 +223,7 @@ function WebDevelopmentForm() {
           name="painpoints"
           label="What are your biggest challenges with attracting customers? (Any pain points)"
         />
-        <CustomSelect
+        <Checkboxes
           form={form}
           name="commitment"
           label="How ready can you fully engage with our intensive web development program?"
@@ -219,14 +231,17 @@ function WebDevelopmentForm() {
             {
               label: "Fully commited",
               value: "Fully commited",
+              checked: false,
             },
             {
               label: "Seeking more information",
               value: "Seeking more information",
+              checked: false,
             },
             {
               label: "Considering future commitments",
               value: "Considering future commitments",
+              checked: false,
             },
           ]}
         />

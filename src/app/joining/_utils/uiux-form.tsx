@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/form";
 import { toast } from "@/components/ui/use-toast";
 import { WebDevelopmentFunnelForm, TWebDevelopmentFunnelForm } from "./types";
-import CustomSelect from "./custom-select";
+
 import CustomInput from "./custom-input";
 import CustomRadio from "./custom-radio";
 import { FunnelFormAction } from "./actions";
@@ -23,6 +23,7 @@ import { Sun } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { DL___FormData } from "./datalayer";
 import { useEffect } from "react";
+import Checkboxes from "@/components/molecule/checkboxes";
 
 function UiUxForm() {
   const router = useRouter();
@@ -101,7 +102,7 @@ function UiUxForm() {
         />
 
         <CustomInput form={form} name="phone" label="Phone" />
-        <CustomSelect
+        <Checkboxes
           form={form}
           name="businessType"
           label="Which industry does your business thrive in?"
@@ -109,18 +110,21 @@ function UiUxForm() {
             {
               label: "Startup",
               value: "Startup",
+              checked: false,
             },
             {
               label: "Growing Small Business",
               value: "Growing Small Business",
+              checked: false,
             },
             {
               label: "Expanding Medium-Sized Enterprise",
               value: "Expanding Medium-Sized Enterprise",
+              checked: false,
             },
           ]}
         />
-        <CustomSelect
+        <Checkboxes
           form={form}
           name="industryType"
           label="What is your industry?"
@@ -128,29 +132,34 @@ function UiUxForm() {
             {
               label: "ECommerce",
               value: "ECommerce",
+              checked: false,
             },
             {
               label: "Educational Technology",
               value: "Educational Technology",
+              checked: false,
             },
             {
               label: "Financial Technology",
               value: "Financial Technology",
+              checked: false,
             },
             {
               label: "Software as a Service",
               value: "Software as a Service",
+              checked: false,
             },
             {
               label: "Others",
               value: "Others",
+              checked: false,
             },
           ]}
         />
-        {form.watch("industryType") === "Others" ? (
+        {form.watch("industryType")?.includes("Others") ? (
           <CustomInput form={form} name="customIndustry" label="Add your own" />
         ) : null}
-        <CustomSelect
+        <Checkboxes
           form={form}
           name="goals"
           label="What objectives do you aim to achieve with UI/UX design? (Select all that apply)"
@@ -158,23 +167,27 @@ function UiUxForm() {
             {
               label: "Boost User Engagement",
               value: "Boost User Engagement",
+              checked: false,
             },
             {
               label: "Increase Accessibility",
               value: "Increase Accessibility",
+              checked: false,
             },
             {
               label: "Simplify User Navigation",
               value: "Simplify User Navigation",
+              checked: false,
             },
             {
               label: "Others",
               value: "Others",
+              checked: false,
             },
           ]}
         />
 
-        {form.watch("goals") === "Others" ? (
+        {form.watch("goals")?.includes("Others") ? (
           <CustomInput
             form={form}
             name="customGoals"
@@ -223,7 +236,7 @@ function UiUxForm() {
           name="painpoints"
           label="What are your biggest challenges with attracting customers? (Any pain points)"
         />
-        <CustomSelect
+        <Checkboxes
           form={form}
           name="commitment"
           label="Given the program's demands and time investment, how ready are you to embark on this UI/UX design journey?"
@@ -231,14 +244,17 @@ function UiUxForm() {
             {
               label: "Fully Committed",
               value: "Fully Committed",
+              checked: false,
             },
             {
               label: "Seeking Further Information",
               value: "Seeking Further Information",
+              checked: false,
             },
             {
               label: "Considering Future Engagement",
               value: "Considering Future Engagement",
+              checked: false,
             },
           ]}
         />
