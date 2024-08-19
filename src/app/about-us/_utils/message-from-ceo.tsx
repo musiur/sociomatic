@@ -1,96 +1,103 @@
-import ANIM__FadeInOutOnScroll from "@/components/anims/fadein.anim";
-import { ArrowUpRight } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
+import { E_FormTypes } from "@/app/joining/_utils/types";
 
-const MessageFromCEO = () => {
+const MessageFromCEO = ({
+  searchParams,
+}: {
+  searchParams: { type: E_FormTypes };
+}) => {
+  let data = PageData.googleads;
+  //   if (searchParams.type && Object.keys(PageData)?.includes(searchParams.type)) {
+  //     data = PageData[searchParams.type];
+  //   }
+
+  const { title, paragraphs } = data;
   return (
-    <section className="container section grid grid-cols-1 md:grid-cols-2 large-gap bg-[url('/images/backgrounds/StarBackground.svg')] bg-cover bg-center">
-      <ANIM__FadeInOutOnScroll className="flex flex-col small-gap">
-        <span className="text-[16px] md:text-[20px] font-semibold text-secondary text-center md:text-left">
-          Our Leadership
-        </span>
-        <div className="max-w-[250px] mx-auto md:mr-auto md:ml-0">
-          <Image
-            src="/images/yeatiq.png"
-            alt="CEO"
-            width={1000}
-            height={1000}
-            className="w-full h-full rounded-2xl"
-          />
-        </div>
-
-        <h2 className="text-primary">
-          Meet&nbsp;<span className="text-secondary">Yeatiqur Rahman</span>,
-          Visionary CEO and Top Rated Seller
+    <div>
+      <div className="space-y-8">
+        <div className="min-h-[320px] bg-gray-200 rounded-xl"></div>
+        <h2 className="text-gray-400 [&>span]:text-primary [&>span]:mx-3">
+          {title}
         </h2>
-
-        <p>
-          Yeatiq, the driving force behind Sociomatic, serves as the CEO and is
-          recognized as a top-rated seller in the digital landscape. With an
-          unwavering commitment to excellence, Yeatiq brings experience and
-          expertise to the forefront.
-        </p>
-      </ANIM__FadeInOutOnScroll>
-      <ANIM__FadeInOutOnScroll className="flex flex-col large-gap">
-        <ANIM__FadeInOutOnScroll className="flex flex-col small-gap">
-          <h4 className="text-[16px] md:text-[20px] font-semibold text-primary">
-            Years of Experience
-          </h4>
-          <p>
-            Active contributors to the digital landscape&nbsp;
-            <span className="text-primary font-medium">since 2019</span>,
-            we&apos;ve accumulated invaluable experience and insights.
-          </p>
-        </ANIM__FadeInOutOnScroll>
-        <ANIM__FadeInOutOnScroll className="flex flex-col small-gap">
-          <h4 className="text-[16px] md:text-[20px] font-semibold text-primary">
-            Sociomatic in&nbsp;
-            <span className="text-[16px] md:text-[20px] font-semibold text-secondary">
-              Dubai
-            </span>
-          </h4>
-          <p>
-            Sociomatic recently spread its&nbsp;
-            <Link
-              href="https://drive.google.com/file/d/1g6Vz623OdZHR_YtJfUbDUIXyxIH_K513/view?usp=sharing"
-              passHref={true}
-              target="_blank"
-              className="text-secondary hover:underline font-medium inline-flex items-center group gap-[2px]"
+        <ul className="space-y-4">
+          {paragraphs.map((paragraph, index) => (
+            <li
+              key={index}
+              className="leading-loose text-gray-600 [&>span]:font-medium [&>span]:mx-1"
             >
-              wings to Dubai{" "}
-              <ArrowUpRight className="w-[12px] h-[12px] stroke-secondary group-hover:mb-2 transition ease-in-out duration-500" />
-            </Link>
-            , adding a new chapter to its Journey. We envision Sociomatic as a
-            catalyst for brands in Dubai, propelling them to new heights in the
-            digital realm
-          </p>
-        </ANIM__FadeInOutOnScroll>
-        <ANIM__FadeInOutOnScroll className="flex flex-col small-gap">
-          <h4 className="text-[16px] md:text-[20px] font-semibold text-primary">
-            Innovate, Elevate,&nbsp;
-            <span className="text-[16px] md:text-[20px] font-semibold text-secondary">
-              Dominate
-            </span>
-          </h4>
-          <p>
-            Yeatiq&apos;s mantra for success mirrors what every CEO aspires to
-            achieve - continuous innovation, elevation of standards, and
-            ultimate market domination.
-            <span className="text-primary font-medium">wings to Dubai</span>,
-            adding a new chapter to its Journey. We envision Sociomatic as a
-            catalyst for brands in Dubai, propelling them to new heights in the
-            digital realm
-          </p>
-        </ANIM__FadeInOutOnScroll>
-        <div className="font-semibold text-primary">
-          Yeatiq and Sociomatic are dedicated to making your brands fly and soar
-          in the digital skies. Let&apos;s chart the course for your
-          brand&apos;s digital success together!
-        </div>
-      </ANIM__FadeInOutOnScroll>
-    </section>
+              {paragraph}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
   );
 };
 
 export default MessageFromCEO;
+
+const PageData = {
+  googleads: {
+    id: 1,
+    title: (
+      <>
+        Hey there! First off, a huge
+        <span>thanks on considering Sociomatic</span>
+        for your Google Ads Management Needs
+      </>
+    ),
+    paragraphs: [
+      <>
+        Now you&apos;re on the application page... (we can all take a deep
+        breath together here) ... and maybe a few questions are swirling in your
+        mind:
+        <span>
+          Is Sociomatic the right fit for me? Can my business truly achieve
+          success with Google Ads?
+        </span>
+      </>,
+      <>
+        <span>Believe us, you&apos;re not alone.</span> Many who&apos;ve joined
+        our <span>Google Ads management service</span> (and seen amazing
+        results) felt the exact same way. It&apos;s totally normal to have
+        doubts.
+      </>,
+      <>
+        <span>But here&apos;s the thing: </span> Sociomatic is built to take the
+        reins of your Google Ads campaigns, allowing you to focus on what you do
+        best - running your business. Our team of
+        <span>
+          Google Ads experts will handle the strategy, optimization, and
+          campaign management, ensuring your ads reach the right audience and
+          deliver powerful results
+        </span>
+      </>,
+      <>
+        <span>
+          Before you submit your application, take a moment to watch the short
+          video above.
+        </span>
+        It features real businesses, just like yours, who saw amazing results by
+        letting Sociomatic handle their Google Ads. Their success stories can be
+        your inspiration!
+      </>,
+      <>
+        Watch the video, and then fill out that application with a surge of
+        confidence! Sociomatic is designed for YOU, and we&apos;re here to help
+        you succeed.
+      </>,
+      <>
+        <span>Onwards and Upwards!</span>
+      </>,
+      <>
+        P.S. We&apos;re not just saying that! Check out our stellar client
+        <span>testimonials</span> - you won&apos;t be disappointed!
+      </>,
+      <>Sincerely,</>,
+      <>
+        Yeatiq
+        <br />
+        CEO | Top Rated Seller
+      </>,
+    ],
+  },
+};

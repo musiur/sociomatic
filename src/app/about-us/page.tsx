@@ -20,7 +20,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
-import MessageFromCEO from "./_utils/message-from-ceo";
+import MessageFromCEO from "./_utils/meet-our-ceo";
 
 const AboutUS = () => {
   const [captcha, setCaptcha] = useState(false);

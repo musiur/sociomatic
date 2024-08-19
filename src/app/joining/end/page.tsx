@@ -1,6 +1,6 @@
 import CoreBenefits from "@/app/services/_utils/core-benefits";
 import Confetti from "../_utils/confetti";
-import MessageFromCEO from "@/app/about-us/_utils/message-from-ceo";
+import MeetOurCEO from "@/app/about-us/_utils/meet-our-ceo";
 
 const Page = ({ searchParams }: { searchParams: { type: "googleads" } }) => {
   let data = PageData.googleads;
@@ -10,8 +10,8 @@ const Page = ({ searchParams }: { searchParams: { type: "googleads" } }) => {
 
   const { title, paragraphs } = data;
   return (
-    <div className="flex flex-col gap-8">
-      <div className="container section ">
+    <div className="flex flex-col gap-8 pb-20">
+      <div className="container pt-32">
         <div className="text-secondary font-bold inline-block text-2xl md:text-3xl lg:text-4xl pb-8">
           Congratulations!
         </div>
@@ -19,20 +19,10 @@ const Page = ({ searchParams }: { searchParams: { type: "googleads" } }) => {
           <h2 className="text-gray-400 [&>span]:text-primary [&>span]:mx-3">
             {title}
           </h2>
-          <ul className="space-y-4">
-            {paragraphs.map((paragraph, index) => (
-              <li
-                key={index}
-                className="leading-loose text-gray-600 [&>span]:font-medium [&>span]:mx-1"
-              >
-                {paragraph}
-              </li>
-            ))}
-          </ul>
         </div>
       </div>
       <Confetti />
-      <MessageFromCEO />
+      <MeetOurCEO />
       <CoreBenefits data={CoreBenefitsData} />
     </div>
   );

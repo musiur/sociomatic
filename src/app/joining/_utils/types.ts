@@ -77,3 +77,13 @@ export const SocialMediaAdsServicePageDataForm = z.object({
 });
 
 export type TSocialMediaAdsServicePageDataForm = z.infer<typeof SocialMediaAdsServicePageDataForm>
+
+export type E_FormTypes =
+    | "googleads"
+    | "googleanalytics"
+    | "customwebdev"
+    | "uiux"
+    | "wordpress"
+    | "shopify"
+    | "software"
+    | "socialmediapaidads";
