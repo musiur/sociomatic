@@ -41,8 +41,8 @@ function trackEmailVerificationOTPFormSubmission(formData: any) {
     window[`dataLayer`] = window?.dataLayer || [];
 
     window.dataLayer.push({
-      event: "funnelOtpVerificationSubmission",
-      formName: "funnelOtpVerification",
+      event: "emailVerified",
+      formName: "emailVerified",
       formData,
     });
   }

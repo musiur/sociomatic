@@ -15,7 +15,6 @@ const Page = ({
 }: {
   searchParams: { type: E_FormTypes };
 }) => {
-  console.log(searchParams);
   const Forms = {
     googleads: <GoogleAdsForm />,
     googleanalytics: <GoogleAnalyticsForm />,
