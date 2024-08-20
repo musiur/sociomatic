@@ -22,28 +22,23 @@ const MasonryLayout = async () => {
               date,
             } = review;
             return (
-              <div
-                key={_id}
-                className="border rounded-2xl p-1 flex flex-col items-center justify-center"
-              >
-                <ANIM__FadeInOutOnScroll key={_id} className="py-4">
-                  <TestimonialCard
-                    details={{
-                      id: _id,
-                      testimonial: text,
-                      image,
-                      customer: {
-                        name,
-                        company,
-                        image: avatar,
-                        rating,
-                        country,
-                      },
-                      date,
-                    }}
-                  />
-                </ANIM__FadeInOutOnScroll>
-              </div>
+              <ANIM__FadeInOutOnScroll key={_id} className="py-4">
+                <TestimonialCard
+                  details={{
+                    id: _id,
+                    testimonial: text,
+                    image,
+                    customer: {
+                      name,
+                      company,
+                      image: avatar,
+                      rating,
+                      country,
+                    },
+                    date,
+                  }}
+                />
+              </ANIM__FadeInOutOnScroll>
             );
           })
         ) : (
