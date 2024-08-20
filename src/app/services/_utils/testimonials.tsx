@@ -22,6 +22,7 @@ import ServicesCTA from "@/components/molecule/services-cta";
 import Tagline from "@/components/molecule/tagline";
 import { Sparkle } from "lucide-react";
 import ANIM__FadeInOutOnScroll from "@/components/anims/fadein.anim";
+import Image from "next/image";
 
 const Testimonials = () => {
   return (
@@ -119,11 +120,14 @@ export const TestimonialCard = ({
   };
 }) => {
   const { testimonial, customer } = details;
-  const { name, company, image, rating } = customer;
+  const { name, company, rating } = customer;
+  const createArray = (n: number): number[] => {
+    return Array.from({ length: n }, (_, i) => i + 1);
+  };
   return (
     <div className="inline-block min-w-[300px] shadow-lg p-4 rounded-2xl space-y-[16px] border-2 border-white hover:border-secondary hover:scale-105 bg-white transition ease-in-out duration-500 hover:shadow-2xl">
       <div className="flex">
-        {[1, 2, 3, 4, 5].map((item: number) => {
+        {createArray(rating || 1).map((item: number) => {
           return <Sparkle key={item} className="rotate-45" />;
         })}
       </div>
@@ -131,12 +135,25 @@ export const TestimonialCard = ({
         <i>{`"${testimonial}"`}</i>
       </p>
       <div className="flex items-center gap-4">
-        <div className="h-10 w-10 rounded-full bg-gray-200"></div>
+        <Image
+          src={customer?.image || ""}
+          alt=""
+          width={300}
+          height={300}
+          className="h-10 w-10 rounded-full bg-gray-200"
+        />
         <div>
           <p className="font-semibold">{name}</p>
           <p className="text-gray-400 text-sm">{company}</p>
         </div>
       </div>
+      <Image
+        src={details?.image || ""}
+        alt=""
+        width={300}
+        height={300}
+        className="w-full h-auto rounded-md bg-gray-200"
+      />
     </div>
   );
 };
