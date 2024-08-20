@@ -3,3 +3,4 @@ Disallow:
 Disallow: /cgi-bin/
 Disallow: /services/new-ui
 Disallow: /case-studies/new-ui
+Disallow: /reviews/post
