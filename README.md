@@ -20,3 +20,5 @@ IT Agency
 - ✅ Use SVGs as TSX component and for background use inline background image in tailwind storing SVGs in /public/images/backgrounds/\*.svg directory
 
 Happy contribution 🚀
+
+...
