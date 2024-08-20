@@ -20,6 +20,7 @@ export const Action___POST__Review = async (data: any) => {
         return {
             success: false,
             message: "Something went wrong",
+            error
         }
     }
 }
@@ -33,6 +34,7 @@ export const Action___GET__AllReviews = async () => {
         return {
             success: false,
             message: "Something went wrong",
+            error
         }
     }
 }
@@ -46,6 +48,7 @@ export const Action___GET__Review = async (id: string) => {
         return {
             success: false,
             message: "Something went wrong",
+            error
         }
     }
 }
@@ -67,6 +70,7 @@ export const Action___PATCH__Review = async (id: string, data: any) => {
         return {
             success: false,
             message: "Something went wrong",
+            error
         }
     }
 }
@@ -84,6 +88,7 @@ export const Action___DELETE__Review = async (id: string) => {
         return {
             success: false,
             message: "Something went wrong",
+            error
         }
     }
 }
