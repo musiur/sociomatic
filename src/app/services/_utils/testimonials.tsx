@@ -106,7 +106,16 @@ export const TestimonialCard = ({
   details: {
     id: number;
     testimonial: string;
-    customer: { name: string; company: string; image: string; rating: number };
+    image?: string;
+    date?: string;
+    rating?: number;
+    customer: {
+      name: string;
+      company: string;
+      image: string;
+      rating: number;
+      country?: string;
+    };
   };
 }) => {
   const { testimonial, customer } = details;
