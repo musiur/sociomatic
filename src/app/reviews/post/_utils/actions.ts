@@ -27,7 +27,13 @@ export const Action___POST__Review = async (data: any) => {
 
 export const Action___GET__AllReviews = async () => {
     try {
-        const response = await fetch(`${BASEURL}/reviews`);
+        const response = await fetch(`${BASEURL}/reviews`, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            cache: "no-store"
+        });
         const result = await response.json();
         return result;
     } catch (error) {
@@ -41,7 +47,13 @@ export const Action___GET__AllReviews = async () => {
 
 export const Action___GET__Review = async (id: string) => {
     try {
-        const response = await fetch(`${BASEURL}/reviews/${id}`);
+        const response = await fetch(`${BASEURL}/reviews/${id}`, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            cache: "no-store"
+        });
         const result = await response.json();
         return result;
     } catch (error) {
