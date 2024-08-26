@@ -34,10 +34,10 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           build-args: |
-            CLOUDINARY_API_SECRET=${{ vars.CLOUDINARY_API_SECRET }}
-            NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=${{ vars.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME }}
-            NEXT_PUBLIC_CLOUDINARY_API_SECRET=${{ vars.NEXT_PUBLIC_CLOUDINARY_API_SECRET }}
-            BASEURL=${{ vars.BASEURL }}
+            CLOUDINARY_API_SECRET=${{ secrets.CLOUDINARY_API_SECRET }}
+            NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=${{ secrets.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME }}
+            NEXT_PUBLIC_CLOUDINARY_API_SECRET=${{ secrets.NEXT_PUBLIC_CLOUDINARY_API_SECRET }}
+            BASEURL=${{ secrets.BASEURL }}
   update_ssh_server:
     name: Telling Hostinger Server to Update
     needs: "push_to_registry"
