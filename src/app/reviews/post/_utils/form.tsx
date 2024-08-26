@@ -10,11 +10,13 @@ import { toast } from "@/components/ui/use-toast";
 import C__Input from "./input";
 import CLD__UploadWidget from "./cld-upload-widget";
 import { Action___POST__Review } from "./actions";
+import CustomSelect from "@/app/joining/_utils/custom-select";
 
 // Define the schema using Zod
 const FormSchema = z.object({
   name: z.string().min(1, { message: "Name is required" }),
   rating: z.number().min(0, { message: "Rating is required" }).max(5),
+  category: z.string().min(1),
   text: z.string().min(1, { message: "Text is required" }),
   avatar: z.string().min(1, { message: "Avatar URL is required" }),
   company: z.string().min(1, { message: "Company is required" }),
@@ -33,6 +35,7 @@ export default function ReviewPostForm() {
       avatar: "",
       company: "",
       country: "",
+      category: "",
       image: "",
     },
   });
@@ -59,7 +62,18 @@ export default function ReviewPostForm() {
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
         <C__Input form={form} name="name" label="Client's name" />
         <C__Input form={form} name="rating" label="Rating" type="number" />
-        <C__Input form={form} name="text" label="Client's Message" />
+        <CustomSelect
+          form={form}
+          name="category"
+          label="Category"
+          options={categoryOptions}
+        />
+        <C__Input
+          form={form}
+          name="text"
+          label="Client's Message"
+          type="textarea"
+        />
         <C__Input form={form} name="company" label="Client's Company" />
         <C__Input
           form={form}
@@ -83,3 +97,38 @@ export default function ReviewPostForm() {
     </Form>
   );
 }
+
+const categoryOptions = [
+  {
+    label: "Google Ads",
+    value: "google-ads",
+  },
+  {
+    label: "Google Analytics",
+    value: "google-analytics",
+  },
+  {
+    label: "Social Media Paid Ads",
+    value: "social-media-paid-ads",
+  },
+  {
+    label: "UI/UX & Graphic Design",
+    value: "uiux",
+  },
+  {
+    label: "Custom Web Development",
+    value: "custom-web-dev",
+  },
+  {
+    label: "Software dev",
+    value: "software-dev",
+  },
+  {
+    label: "Wordpress dev",
+    value: "wordpress-dev",
+  },
+  {
+    label: "Shopify Development",
+    value: "shopify-dev",
+  },
+];

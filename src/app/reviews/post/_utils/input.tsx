@@ -18,7 +18,7 @@ const C__Input = ({
   name: string;
   label: string;
   placeholder?: string;
-  type?: "text" | "number" | "email" | "password" | "tel";
+  type?: "text" | "number" | "email" | "password" | "tel" | "textarea";
 }) => {
   return (
     <FormField
