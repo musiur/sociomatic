@@ -21,42 +21,17 @@ const Page = async () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {reviews?.data?.length ? (
             reviews.data.map((review: any) => {
-              const {
-                _id,
-                name,
-                text,
-                company,
-                country,
-                rating,
-                avatar,
-                image,
-                date,
-              } = review;
               return (
                 <div
-                  key={_id}
+                  key={review._id}
                   className="border rounded-2xl p-1 flex flex-col items-center justify-center"
                 >
-                  <TestimonialCard
-                    details={{
-                      id: _id,
-                      testimonial: text,
-                      image,
-                      customer: {
-                        name,
-                        company,
-                        image: avatar,
-                        rating,
-                        country,
-                      },
-                      date,
-                    }}
-                  />
+                  <TestimonialCard details={review} />
                   <div className="py-2 flex items-center gap-2">
                     <Button size="icon" variant="outline" disabled>
                       <Edit />
                     </Button>
-                    <DeleteReview id={_id} />
+                    <DeleteReview id={review._id} />
                   </div>
                 </div>
               );
