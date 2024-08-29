@@ -11,6 +11,7 @@ import C__Input from "./input";
 import CLD__UploadWidget from "./cld-upload-widget";
 import { Action___POST__Review } from "./actions";
 import CustomSelect from "@/app/joining/_utils/custom-select";
+import { T__SlugType } from "@/app/services/[slug]/page";
 
 // Define the schema using Zod
 const FormSchema = z.object({
@@ -98,18 +99,18 @@ export default function ReviewPostForm() {
   );
 }
 
-const categoryOptions = [
+const categoryOptions: { label: string; value: T__SlugType }[] = [
   {
     label: "Google Ads",
-    value: "google-ads",
+    value: "googleads",
   },
   {
     label: "Google Analytics",
-    value: "google-analytics",
+    value: "googleanalytics",
   },
   {
     label: "Social Media Paid Ads",
-    value: "social-media-paid-ads",
+    value: "socialmediapaidads",
   },
   {
     label: "UI/UX & Graphic Design",
@@ -117,18 +118,18 @@ const categoryOptions = [
   },
   {
     label: "Custom Web Development",
-    value: "custom-web-dev",
+    value: "customwebdevelopment",
   },
   {
     label: "Software dev",
-    value: "software-dev",
+    value: "softwaredevelopment",
   },
   {
     label: "Wordpress dev",
-    value: "wordpress-dev",
+    value: "wordpressdevelopment",
   },
   {
     label: "Shopify Development",
-    value: "shopify-dev",
+    value: "shopifydevelopment",
   },
 ];

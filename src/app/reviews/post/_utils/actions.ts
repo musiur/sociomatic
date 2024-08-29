@@ -1,5 +1,6 @@
 "use server"
 
+import { T__SlugType } from "@/app/services/[slug]/page";
 import { revalidatePath } from "next/cache";
 
 const BASEURL = process.env.BASEURL;
@@ -48,6 +49,26 @@ export const Action___GET__AllReviews = async () => {
 export const Action___GET__Review = async (id: string) => {
     try {
         const response = await fetch(`${BASEURL}/reviews/${id}`, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            cache: "no-store"
+        });
+        const result = await response.json();
+        return result;
+    } catch (error) {
+        return {
+            success: false,
+            message: "Something went wrong",
+            error
+        }
+    }
+}
+
+export const Action___Get__Review_By_Category = async (category: T__SlugType) => {
+    try {
+        const response = await fetch(`${BASEURL}/reviews/category/${category}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",

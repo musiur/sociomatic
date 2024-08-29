@@ -1,4 +1,5 @@
 import Faq from "@/app/_utils/faq";
+import { Action___Get__Review_By_Category } from "@/app/reviews/post/_utils/actions";
 import CoreBenefits from "@/app/services/_utils/core-benefits";
 import EndingFunnel from "@/app/services/_utils/ending-funnel";
 import ServiceHeroSection from "@/app/services/_utils/herosection";
@@ -8,7 +9,7 @@ import UserEmpathyBanner from "@/app/services/_utils/user-empathy-banner";
 import WhatAndWhySection from "@/app/services/_utils/what-and-why-section";
 import { ServicePageCOPY } from "@/lib/data/services";
 
-type T__SlugType =
+export type T__SlugType =
   | "googleads"
   | "googleanalytics"
   | "customwebdevelopment"
@@ -17,9 +18,11 @@ type T__SlugType =
   | "uiux"
   | "softwaredevelopment"
   | "socialmediapaidads";
-const Services = ({ params }: { params: { slug: string } }) => {
+const Services = async ({ params }: { params: { slug: string } }) => {
   let data: any = ServicePageCOPY.googleads;
   const key = params?.slug?.replaceAll("-", "");
+  const result = await Action___Get__Review_By_Category(key as T__SlugType);
+  const reviews = result?.data?.length ? result?.data : [];
 
   if (Object.keys(ServicePageCOPY).includes(key)) {
     data = ServicePageCOPY[key as T__SlugType];
@@ -41,7 +44,7 @@ const Services = ({ params }: { params: { slug: string } }) => {
       <LimitedOfferSection data={limitedOffer} />
       <WhatAndWhySection data={whyWeAndWhatWeDo} />
       <UserEmpathyBanner data={userEmpathy} />
-      <Testimonials />
+      <Testimonials data={reviews} />
       <CoreBenefits data={coreBenefits} />
       <EndingFunnel data={endingFunnel} />
       <Faq data={faq} />
