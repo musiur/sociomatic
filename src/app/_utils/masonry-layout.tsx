@@ -10,34 +10,9 @@ const MasonryLayout = async () => {
       <div className="columns-1 min-[700px]:columns-2 min-[1030px]:columns-3 space-x-4">
         {reviews?.data?.length ? (
           reviews.data.map((review: any) => {
-            const {
-              _id,
-              name,
-              text,
-              company,
-              country,
-              rating,
-              avatar,
-              image,
-              date,
-            } = review;
             return (
-              <ANIM__FadeInOutOnScroll key={_id} className="py-4">
-                <TestimonialCard
-                  details={{
-                    id: _id,
-                    testimonial: text,
-                    image,
-                    customer: {
-                      name,
-                      company,
-                      image: avatar,
-                      rating,
-                      country,
-                    },
-                    date,
-                  }}
-                />
+              <ANIM__FadeInOutOnScroll key={review?._id} className="py-4">
+                <TestimonialCard details={review} />
               </ANIM__FadeInOutOnScroll>
             );
           })
