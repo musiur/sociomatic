@@ -24,7 +24,7 @@ import { Sparkle } from "lucide-react";
 import ANIM__FadeInOutOnScroll from "@/components/anims/fadein.anim";
 import Image from "next/image";
 
-const Testimonials = () => {
+const Testimonials = ({ data }: { data: any }) => {
   return (
     <div className="py-16 bg-muted">
       <ANIM__FadeInOutOnScroll>
@@ -74,13 +74,15 @@ const Testimonials = () => {
                   Autoplay,
                 ]}
               >
-                {TestimonialCardsData.map((item: any) => {
-                  return (
-                    <SwiperSlide key={item.id} className="pt-4 pb-16 px-4">
-                      <TestimonialCard details={item} />
-                    </SwiperSlide>
-                  );
-                })}
+                {data?.length
+                  ? data?.map((item: any) => {
+                      return (
+                        <SwiperSlide key={item._id} className="pt-4 pb-16 px-4">
+                          <TestimonialCard details={item} />
+                        </SwiperSlide>
+                      );
+                    })
+                  : null}
               </Swiper>
             </ANIM__FadeInOutOnScroll>
           </div>
@@ -105,22 +107,30 @@ export const TestimonialCard = ({
   details,
 }: {
   details: {
-    id: number;
-    testimonial: string;
+    _id: number;
+    name: string;
+    rating?: number;
+    category: string;
+    text: string;
+    avatar: string;
+    company: string;
+    country: string;
     image?: string;
     date?: string;
-    rating?: number;
-    customer: {
-      name: string;
-      company: string;
-      image: string;
-      rating: number;
-      country?: string;
-    };
   };
 }) => {
-  const { testimonial, customer } = details;
-  const { name, company, rating } = customer;
+  const {
+    _id,
+    name,
+    rating,
+    category,
+    text,
+    avatar,
+    company,
+    country,
+    image,
+    date,
+  } = details;
   const createArray = (n: number): number[] => {
     return Array.from({ length: n }, (_, i) => i + 1);
   };
@@ -128,15 +138,15 @@ export const TestimonialCard = ({
     <div className="inline-block min-w-[300px] shadow-lg p-4 rounded-2xl space-y-[16px] border-2 border-white hover:border-secondary hover:scale-105 bg-white transition ease-in-out duration-500 hover:shadow-2xl">
       <div className="flex">
         {createArray(rating || 1).map((item: number) => {
-          return <Sparkle key={item} className="rotate-45" />;
+          return <Sparkle key={item} className="rotate-45 text-secondary" />;
         })}
       </div>
       <p>
-        <i>{`"${testimonial}"`}</i>
+        <i>{`"${text}"`}</i>
       </p>
       <div className="flex items-center gap-4">
         <Image
-          src={customer?.image || ""}
+          src={avatar || ""}
           alt=""
           width={300}
           height={300}
@@ -148,7 +158,7 @@ export const TestimonialCard = ({
         </div>
       </div>
       <Image
-        src={details?.image || ""}
+        src={image || ""}
         alt=""
         width={300}
         height={300}
@@ -157,94 +167,3 @@ export const TestimonialCard = ({
     </div>
   );
 };
-
-const TestimonialCardsData = [
-  {
-    id: 1,
-    testimonial:
-      "It's intuitive, functional, easy-to-setup and presents content in an interactive and interesting way.",
-    customer: {
-      name: "John Smith",
-      company: "Marketing Manager @RabbitQ",
-      image: "",
-      rating: 5,
-    },
-  },
-  {
-    id: 2,
-    testimonial:
-      "It's intuitive, functional, easy-to-setup and presents content in an interactive and interesting way.",
-    customer: {
-      name: "John Smith",
-      company: "Marketing Manager @RabbitQ",
-      image: "",
-      rating: 5,
-    },
-  },
-  {
-    id: 3,
-    testimonial:
-      "It's intuitive, functional, easy-to-setup and presents content in an interactive and interesting way.",
-    customer: {
-      name: "John Smith",
-      company: "Marketing Manager @RabbitQ",
-      image: "",
-      rating: 5,
-    },
-  },
-  {
-    id: 4,
-    testimonial:
-      "It's intuitive, functional, easy-to-setup and presents content in an interactive and interesting way.",
-    customer: {
-      name: "John Smith",
-      company: "Marketing Manager @RabbitQ",
-      image: "",
-      rating: 5,
-    },
-  },
-  {
-    id: 5,
-    testimonial:
-      "It's intuitive, functional, easy-to-setup and presents content in an interactive and interesting way.",
-    customer: {
-      name: "John Smith",
-      company: "Marketing Manager @RabbitQ",
-      image: "",
-      rating: 5,
-    },
-  },
-  {
-    id: 6,
-    testimonial:
-      "It's intuitive, functional, easy-to-setup and presents content in an interactive and interesting way.",
-    customer: {
-      name: "John Smith",
-      company: "Marketing Manager @RabbitQ",
-      image: "",
-      rating: 5,
-    },
-  },
-  {
-    id: 7,
-    testimonial:
-      "It's intuitive, functional, easy-to-setup and presents content in an interactive and interesting way.",
-    customer: {
-      name: "John Smith",
-      company: "Marketing Manager @RabbitQ",
-      image: "",
-      rating: 5,
-    },
-  },
-  {
-    id: 8,
-    testimonial:
-      "It's intuitive, functional, easy-to-setup and presents content in an interactive and interesting way.",
-    customer: {
-      name: "John Smith",
-      company: "Marketing Manager @RabbitQ",
-      image: "",
-      rating: 5,
-    },
-  },
-];
