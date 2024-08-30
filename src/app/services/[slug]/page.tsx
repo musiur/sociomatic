@@ -44,7 +44,7 @@ const Services = async ({ params }: { params: { slug: string } }) => {
       <LimitedOfferSection data={limitedOffer} />
       <WhatAndWhySection data={whyWeAndWhatWeDo} />
       <UserEmpathyBanner data={userEmpathy} />
-      <Testimonials data={reviews} />
+      {reviews?.length ? <Testimonials data={reviews} /> : null}
       <CoreBenefits data={coreBenefits} />
       <EndingFunnel data={endingFunnel} />
       <Faq data={faq} />
