@@ -154,7 +154,7 @@ export const TestimonialCard = ({
         />
         <div>
           <p className="font-semibold">{name}</p>
-          <p className="text-gray-400 text-sm">{company}</p>
+          <p className="text-gray-400 text-sm">{country}</p>
         </div>
       </div>
       <Image
