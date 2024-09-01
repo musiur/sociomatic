@@ -45,7 +45,7 @@ export default function ReviewPostForm() {
     // Combine the form data with the uploaded image URL
     const formData = { ...data };
     const result = await Action___POST__Review(formData);
-    console.log(result);
+
     toast({
       title: "Form submitted successfully!",
       description: (
@@ -118,18 +118,18 @@ const categoryOptions: { label: string; value: T__SlugType }[] = [
   },
   {
     label: "Custom Web Development",
-    value: "customwebdevelopment",
+    value: "customwebdev",
   },
   {
-    label: "Software dev",
-    value: "softwaredevelopment",
+    label: "Software Development",
+    value: "software",
   },
   {
-    label: "Wordpress dev",
-    value: "wordpressdevelopment",
+    label: "Wordpress Development",
+    value: "wordpress",
   },
   {
     label: "Shopify Development",
-    value: "shopifydevelopment",
+    value: "shopify",
   },
 ];

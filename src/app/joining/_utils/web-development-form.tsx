@@ -33,25 +33,31 @@ function WebDevelopmentForm() {
 
   async function onSubmit(data: TWebDevelopmentFunnelForm) {
     if (typeof window !== "undefined") {
-      console.log("Running");
       const email = localStorage.getItem("user_email") || "dummy@mail.test";
       if (email) {
         const result = await FunnelFormAction({ ...data, email });
-        console.log(result);
+
         toast({
           variant: result?.success ? "default" : "destructive",
           title: "Joining to program",
           description: result?.message || "Thank you for your joining!",
         });
-        if (result.success) {
-          router.push("/joining/end?type=customwebdev");
+        if (typeof window !== "undefined") {
+          if (result.success) {
+            router.push("/joining/end?type=customwebdev");
+            DL___FormData(
+              form.getValues(),
+              "joiningWebFormSubmission",
+              "joining_web_form_submission"
+            );
+          } else {
+            DL___FormData(
+              form.getValues(),
+              "joiningWebFormAbandoned",
+              "joining_web_form_abandoned"
+            );
+          }
         }
-        typeof window !== "undefined" &&
-          DL___FormData(
-            data,
-            "joiningWebFormSubmission",
-            "joining_web_form_submission"
-          );
       }
     }
   }
@@ -59,8 +65,8 @@ function WebDevelopmentForm() {
   useEffect(() => {
     DL___FormData(
       form.getValues(),
-      "joiningWebFormSubmissionAbandoned",
-      "joining_web_form_submission_abandoned"
+      "joiningWebFormSubmissionProcessing",
+      "joining_web_form_submission_processing"
     );
   }, [form.getValues()]);
 
@@ -84,7 +90,6 @@ function WebDevelopmentForm() {
               <FormLabel>Country</FormLabel>
               <CountryCombobox
                 onChange={(value: any) => {
-                  console.log(value);
                   form.setValue("country", value.target.value);
                 }}
               />

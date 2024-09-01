@@ -32,35 +32,31 @@ function SoftwareDevelopmentForm() {
   });
 
   async function onSubmit(data: TWebDevelopmentFunnelForm) {
-    toast({
-      title: "You submitted the following values:",
-      description: (
-        <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-          <code className="text-white">{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      ),
-    });
-
     if (typeof window !== "undefined") {
-      console.log("Running");
       const email = localStorage.getItem("user_email") || "dummy@mail.test";
       if (email) {
         const result = await FunnelFormAction({ ...data, email });
-        console.log(result);
         toast({
           variant: result?.success ? "default" : "destructive",
           title: "Joining to program",
           description: result?.message || "Thank you for your joining!",
         });
-        if (result.success) {
-          router.push("/joining/end?type=googleads");
+        if (typeof window !== "undefined") {
+          if (result.success) {
+            router.push("/joining/end?type=software");
+            DL___FormData(
+              form.getValues(),
+              "joiningSoftwareFormSubmission",
+              "joining_software_form_submission"
+            );
+          } else {
+            DL___FormData(
+              form.getValues(),
+              "joiningSoftwareFormAbandoned",
+              "joining_software_form_abandoned"
+            );
+          }
         }
-        typeof window !== "undefined" &&
-          DL___FormData(
-            data,
-            "joiningSoftwareFormSubmission",
-            "joining_software_form_submission"
-          );
       }
     }
   }
@@ -68,8 +64,8 @@ function SoftwareDevelopmentForm() {
   useEffect(() => {
     DL___FormData(
       form.getValues(),
-      "joiningSoftwareFormAbandoned",
-      "joining_software_form_abandoned"
+      "joiningSoftwareFormProcessing",
+      "joining_software_form_processing"
     );
   }, [form.getValues()]);
 
@@ -92,7 +88,6 @@ function SoftwareDevelopmentForm() {
               <FormLabel>Country</FormLabel>
               <CountryCombobox
                 onChange={(value: any) => {
-                  console.log(value);
                   form.setValue("country", value.target.value);
                 }}
               />

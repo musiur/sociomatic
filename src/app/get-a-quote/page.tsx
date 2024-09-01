@@ -346,7 +346,6 @@ const GetAQuotePage = () => {
             <ReCAPTCHA
               sitekey={process.env.siteKey!}
               onChange={(e: any) => {
-                console.log(e);
                 e ? setCaptcha(true) : setCaptcha(false);
               }}
             />

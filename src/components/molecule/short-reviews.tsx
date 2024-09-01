@@ -10,9 +10,7 @@ const ShortReviews = () => {
     <section className="bg-[url('/images/backgrounds/SquareBackground.svg')] bg-center bg-cover">
       <Script
         src="https://static.senja.io/dist/platform.js"
-        onLoad={() => {
-          console.log("console hoilo...");
-        }}
+        // onLoad={() => {}}}
       />
       <div className="section container">
         <SectionHead

@@ -32,26 +32,31 @@ function GoogleAnalyticsForm() {
   });
 
   async function onSubmit(data: TGoogleAnalyticsFunnelForm) {
-    console.log(data);
     if (typeof window !== "undefined") {
       const email = localStorage.getItem("user_email") || "dummy@mail.test";
       if (email) {
         const result = await FunnelFormAction({ ...data, email });
-        console.log(result);
         toast({
           variant: result?.success ? "default" : "destructive",
           title: "Joining to program",
           description: result?.message || "Thank you for your joining!",
         });
-        if (result.success) {
-          router.push("/joining/end?type=googleanalytics");
+        if (typeof window !== "undefined") {
+          if (result.success) {
+            router.push("/joining/end?type=googleanalytics");
+            DL___FormData(
+              form.getValues(),
+              "joiningGoogleAnalyticsFormSubmission",
+              "joining_google_analytics_form_submission"
+            );
+          } else {
+            DL___FormData(
+              form.getValues(),
+              "joiningGoogleAnalyticsFormAbandoned",
+              "joining_google_analytics_form_abandoned"
+            );
+          }
         }
-        typeof window !== "undefined" &&
-          DL___FormData(
-            data,
-            "joiningGoogleAnalyticsFormSubmission",
-            "joining_google_analytics_form_submission"
-          );
       }
     }
   }
@@ -59,8 +64,8 @@ function GoogleAnalyticsForm() {
   useEffect(() => {
     DL___FormData(
       form.getValues(),
-      "joiningGoogleAnalyticsFormAbandoned",
-      "joining_google_analytics_form_abandoned"
+      "joiningGoogleAnalyticsFormProcessing",
+      "joining_google_analytics_form_processing"
     );
   }, [form.getValues()]);
 
@@ -84,7 +89,6 @@ function GoogleAnalyticsForm() {
               <FormLabel>Country</FormLabel>
               <CountryCombobox
                 onChange={(value: any) => {
-                  console.log(value);
                   form.setValue("country", value.target.value);
                 }}
               />

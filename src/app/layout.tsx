@@ -66,10 +66,10 @@ export default function RootLayout({
       </head>
 
       <body className={`${poppins.className} ${lato.variable}`}>
-        <Script
+        {/* <Script
           type="text/javascript"
           src="//static.klaviyo.com/onsite/js/klaviyo.js?company_id=X5AtQr"
-        />
+        /> */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-WP6VXKV"
@@ -79,9 +79,9 @@ export default function RootLayout({
           ></iframe>
         </noscript>
         <PageView />
-        {/* <div className="py-2 text-center bg-pink-700 text-white animate-pulse">
+        <div className="py-2 text-center bg-pink-700 text-white animate-pulse">
           This site is under maintenance
-        </div> */}
+        </div>
         <Navbar />
         <main className="overflow-hidden">{children}</main>
         <SpeedInsights />

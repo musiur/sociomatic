@@ -289,7 +289,6 @@ const AboutUS = () => {
             <ReCAPTCHA
               sitekey={process.env.siteKey!}
               onChange={(e: any) => {
-                console.log(e);
                 e ? setCaptcha(true) : setCaptcha(false);
               }}
             />
@@ -301,7 +300,6 @@ const AboutUS = () => {
                 setTimeout(() => {
                   setDisable(false);
                 }, 1000);
-                console.log("hello");
                 if (email) {
                   toast({
                     title: "Request Sending",

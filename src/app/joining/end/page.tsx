@@ -1,14 +1,16 @@
 import CoreBenefits from "@/app/services/_utils/core-benefits";
 import Confetti from "../_utils/confetti";
 import MeetOurCEO from "@/app/about-us/_utils/meet-our-ceo";
+import { E_FormTypes } from "../_utils/types";
 
-const Page = ({ searchParams }: { searchParams: { type: "googleads" } }) => {
+const Page = ({ searchParams }: { searchParams: { type: E_FormTypes } }) => {
   let data = PageData.googleads;
   if (searchParams.type && Object.keys(PageData)?.includes(searchParams.type)) {
+    // @ts-ignore
     data = PageData[searchParams.type];
   }
 
-  const { title, paragraphs } = data;
+  const { title } = data;
   return (
     <div className="flex flex-col gap-8 pb-20">
       <div className="container pt-32">
@@ -39,60 +41,76 @@ const PageData = {
         for your Google Ads Management Needs
       </>
     ),
-    paragraphs: [
+  },
+  googleanalytics: {
+    id: 2,
+    title: (
       <>
-        Now you&apos;re on the application page... (we can all take a deep
-        breath together here) ... and maybe a few questions are swirling in your
-        mind:
-        <span>
-          Is Sociomatic the right fit for me? Can my business truly achieve
-          success with Google Ads?
-        </span>
-      </>,
+        Hey there! First off, a huge
+        <span>congratulations on considering Sociomatic</span>
+        for your Google Analytics Management Needs
+      </>
+    ),
+  },
+  socialmediapaidads: {
+    id: 3,
+    title: (
       <>
-        <span>Believe us, you&apos;re not alone.</span> Many who&apos;ve joined
-        our <span>Google Ads management service</span> (and seen amazing
-        results) felt the exact same way. It&apos;s totally normal to have
-        doubts.
-      </>,
+        Hey there! First off, a huge
+        <span>congratulations on considering Sociomatic</span>
+        for your Social Media Paid Ads Management Needs
+      </>
+    ),
+  },
+  uiux: {
+    id: 4,
+    title: (
       <>
-        <span>But here&apos;s the thing: </span> Sociomatic is built to take the
-        reins of your Google Ads campaigns, allowing you to focus on what you do
-        best - running your business. Our team of
-        <span>
-          Google Ads experts will handle the strategy, optimization, and
-          campaign management, ensuring your ads reach the right audience and
-          deliver powerful results
-        </span>
-      </>,
+        Hey there! First off, a huge
+        <span>congratulations on considering Sociomatic</span>
+        for your UI/UX and Graphic Design Needs
+      </>
+    ),
+  },
+  customwebdev: {
+    id: 5,
+    title: (
       <>
-        <span>
-          Before you submit your application, take a moment to watch the short
-          video above.
-        </span>
-        It features real businesses, just like yours, who saw amazing results by
-        letting Sociomatic handle their Google Ads. Their success stories can be
-        your inspiration!
-      </>,
+        Hey there! First off, a huge
+        <span>congratulations on considering Sociomatic</span>
+        for your Custom Web Development Needs
+      </>
+    ),
+  },
+  software: {
+    id: 6,
+    title: (
       <>
-        Watch the video, and then fill out that application with a surge of
-        confidence! Sociomatic is designed for YOU, and we&apos;re here to help
-        you succeed.
-      </>,
+        Hey there! First off, a huge
+        <span>congratulations on considering Sociomatic</span>
+        for your Software Development Needs
+      </>
+    ),
+  },
+  wordpress: {
+    id: 7,
+    title: (
       <>
-        <span>Onwards and Upwards!</span>
-      </>,
+        Hey there! First off, a huge
+        <span>congratulations on considering Sociomatic</span>
+        for your Wordpress Development Needs
+      </>
+    ),
+  },
+  shopify: {
+    id: 8,
+    title: (
       <>
-        P.S. We&apos;re not just saying that! Check out our stellar client
-        <span>testimonials</span> - you won&apos;t be disappointed!
-      </>,
-      <>Sincerely,</>,
-      <>
-        Yeatiq
-        <br />
-        CEO | Top Rated Seller
-      </>,
-    ],
+        Hey there! First off, a huge
+        <span>congratulations on considering Sociomatic</span>
+        for your Shopify Development Needs
+      </>
+    ),
   },
 };
 

@@ -88,7 +88,6 @@ const ContactUs = () => {
         });
       }
     } catch (error) {
-      console.log(error);
       setLoading(false);
       toast({
         variant: "error",
@@ -303,7 +302,6 @@ const ContactUs = () => {
             <ReCAPTCHA
               sitekey={process.env.siteKey!}
               onChange={(e: any) => {
-                console.log(e);
                 e ? setCaptcha(true) : setCaptcha(false);
               }}
             />

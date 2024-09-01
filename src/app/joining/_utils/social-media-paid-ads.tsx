@@ -36,25 +36,30 @@ function SocialMediaPaidAdsForm() {
 
   async function onSubmit(data: TSocialMediaAdsServicePageDataForm) {
     if (typeof window !== "undefined") {
-      console.log("Running");
       const email = localStorage.getItem("user_email") || "dummy@mail.test";
       if (email) {
         const result = await FunnelFormAction({ ...data, email });
-        console.log(result);
         toast({
           variant: result?.success ? "default" : "destructive",
           title: "Joining to program",
           description: result?.message || "Thank you for your joining!",
         });
-        if (result.success) {
-          router.push("/joining/end?type=socialmediapaidads");
+        if (typeof window !== "undefined") {
+          if (result.success) {
+            router.push("/joining/end?type=socialmediapaidads");
+            DL___FormData(
+              form.getValues(),
+              "joiningSocialMediaAdsFormSubmission",
+              "joining_social_media_ads_form_submission"
+            );
+          } else {
+            DL___FormData(
+              form.getValues(),
+              "joiningSocialMediaAdsFormAbandoned",
+              "joining_social_media_ads_form_abandoned"
+            );
+          }
         }
-        typeof window !== "undefined" &&
-          DL___FormData(
-            data,
-            "joiningSocialMediaAdsFormSubmission",
-            "joining_social_media_ads_form_submission"
-          );
       }
     }
   }
@@ -62,8 +67,8 @@ function SocialMediaPaidAdsForm() {
   useEffect(() => {
     DL___FormData(
       form.getValues(),
-      "joiningSocialMediaAdsFormAbandoned",
-      "joining_social_media_ads_form_abandoned"
+      "joiningSocialMediaAdsFormProcessing",
+      "joining_social_media_ads_form_processing"
     );
   }, [form.getValues()]);
 
@@ -87,7 +92,6 @@ function SocialMediaPaidAdsForm() {
               <FormLabel>Country</FormLabel>
               <CountryCombobox
                 onChange={(value: any) => {
-                  console.log(value);
                   form.setValue("country", value.target.value);
                 }}
               />

@@ -87,7 +87,7 @@ export const ServicePageCOPY = {
       cta: {
         primary: {
           text: <>Get Started Right Away</>,
-          link: "/",
+          link: "/joining?type=googleads",
         },
         secondary: {
           text: <>Get A Free Consultation</>,
@@ -294,7 +294,7 @@ export const ServicePageCOPY = {
       cta: {
         primary: {
           text: <>Get Started Right Away</>,
-          link: "/",
+          link: "/joining?type=googleads",
         },
         secondary: {
           text: <>Get A Free Consultation</>,
@@ -365,7 +365,7 @@ export const ServicePageCOPY = {
       ],
     },
   },
-  customwebdevelopment: {
+  customwebdev: {
     hero: {
       tagline: <>End-to-End Web Solutions</>,
       title: (
@@ -420,7 +420,7 @@ export const ServicePageCOPY = {
       cta: {
         primary: {
           text: <>Get Started Right Away</>,
-          link: "/",
+          link: "/joining?type=customwebdev",
         },
         secondary: {
           text: <>Get A Free Consultation</>,
@@ -647,7 +647,7 @@ export const ServicePageCOPY = {
       cta: {
         primary: {
           text: <>Get Started Right Away</>,
-          link: "/",
+          link: "/joining?type=customwebdev",
         },
         secondary: {
           text: <>Get A Free Consultation</>,
@@ -718,7 +718,7 @@ export const ServicePageCOPY = {
       ],
     },
   },
-  softwaredevelopment: {
+  software: {
     hero: {
       tagline: <>Unlock Potential with Software Solutions</>,
       title: (
@@ -767,7 +767,7 @@ export const ServicePageCOPY = {
       cta: {
         primary: {
           text: <>Get Started Right Away</>,
-          link: "/",
+          link: "/joining?type=software",
         },
         secondary: {
           text: <>Get A Free Consultation</>,
@@ -894,8 +894,8 @@ export const ServicePageCOPY = {
               <>
                 Our expertise in database technologies such as SQL NoSQL enables
                 us to design efficient data storage solutions that support your
-                software’s functionalities and scalability while ensuring data
-                integrity and security.
+                software&apos;s functionalities and scalability while ensuring
+                data integrity and security.
               </>
             ),
           },
@@ -990,7 +990,7 @@ export const ServicePageCOPY = {
       cta: {
         primary: {
           text: <>Get Started Right Away</>,
-          link: "/",
+          link: "/joining?type=software",
         },
         secondary: {
           text: <>Get A Free Consultation</>,
@@ -1067,7 +1067,7 @@ export const ServicePageCOPY = {
       ],
     },
   },
-  wordpressdevelopment: {
+  wordpress: {
     hero: {
       tagline: <>End-to-end WordPress solutions</>,
       title: (
@@ -1092,7 +1092,7 @@ export const ServicePageCOPY = {
       cta: {
         primary: {
           text: <>Get Started Right Away</>,
-          link: "/joining?type=software",
+          link: "/joining?type=wordpress",
         },
         secondary: {
           text: <>Get A Free Consultation</>,
@@ -1122,7 +1122,7 @@ export const ServicePageCOPY = {
       cta: {
         primary: {
           text: <>Get Started Right Away</>,
-          link: "/",
+          link: "/joining?type=wordpress",
         },
         secondary: {
           text: <>Get A Free Consultation</>,
@@ -1304,7 +1304,7 @@ export const ServicePageCOPY = {
       cta: {
         primary: {
           text: <>Get Started Right Away</>,
-          link: "/",
+          link: "/joining?type=wordpress",
         },
         secondary: {
           text: <>Get A Free Consultation</>,
@@ -1372,7 +1372,7 @@ export const ServicePageCOPY = {
       ],
     },
   },
-  shopifydevelopment: {
+  shopify: {
     hero: {
       tagline: <>End-to-end Shopify solutions</>,
       title: (
@@ -1422,7 +1422,7 @@ export const ServicePageCOPY = {
       cta: {
         primary: {
           text: <>Get Started Right Away</>,
-          link: "/",
+          link: "/joining?type=shopify",
         },
         secondary: {
           text: <>Get A Free Consultation</>,
@@ -1593,13 +1593,14 @@ export const ServicePageCOPY = {
         <>
           Ready to boost your online sales with Shopify? Let our dedicated team
           craft a scalable and user-friendly e-commerce solution for your
-          business. Contact us today, and let’s turn your store into a success.
+          business. Contact us today, and let&apos;s turn your store into a
+          success.
         </>
       ),
       cta: {
         primary: {
           text: <>Get Started Right Away</>,
-          link: "/",
+          link: "/joining?type=shopify",
         },
         secondary: {
           text: <>Get A Free Consultation</>,
@@ -1725,7 +1726,7 @@ export const ServicePageCOPY = {
       cta: {
         primary: {
           text: <>Get Started Right Away</>,
-          link: "/",
+          link: "/joining?type=uiux",
         },
         secondary: {
           text: <>Get A Free Consultation</>,
@@ -1918,7 +1919,7 @@ export const ServicePageCOPY = {
       cta: {
         primary: {
           text: <>Get Started Right Away</>,
-          link: "/",
+          link: "/joining?type=uiux",
         },
         secondary: {
           text: <>Get A Free Consultation</>,
@@ -2041,7 +2042,7 @@ export const ServicePageCOPY = {
       cta: {
         primary: {
           text: <>Get Started Right Away</>,
-          link: "/",
+          link: "/joining?type=googleanalytics",
         },
         secondary: {
           text: <>Get A Free Consultation</>,
@@ -2221,7 +2222,7 @@ export const ServicePageCOPY = {
       cta: {
         primary: {
           text: <>Get Started Right Away</>,
-          link: "/",
+          link: "/joining?type=googleanalytics",
         },
         secondary: {
           text: <>Get A Free Consultation</>,
@@ -2395,7 +2396,7 @@ export const ServicePageCOPY = {
       cta: {
         primary: {
           text: <>Get Started Right Away</>,
-          link: "/",
+          link: "/joining?type=socialmediapaidads",
         },
         secondary: {
           text: <>Get A Free Consultation</>,
@@ -2584,7 +2585,7 @@ export const ServicePageCOPY = {
       cta: {
         primary: {
           text: <>Get Started Right Away</>,
-          link: "/",
+          link: "/joining?type=socialmediapaidads",
         },
         secondary: {
           text: <>Get A Free Consultation</>,

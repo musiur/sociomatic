@@ -5,7 +5,6 @@ const BaseURL = "https://sociomatic-backend.onrender.com";
 
 export const GetOtp = async (email: string) => {
   try {
-    console.log(email);
     const response = await fetch(`${BaseURL}/send-otp`, {
       method: "POST",
       headers: {
@@ -16,7 +15,6 @@ export const GetOtp = async (email: string) => {
       }),
     });
     const result = await response.json();
-    // console.log(result);
     return result;
   } catch (error) {
     return {
@@ -58,10 +56,8 @@ export const FunnelFormAction = async (data: any) => {
       body: JSON.stringify(data),
     });
     const result = await response.json();
-    console.log(result)
     return result;
   } catch (error) {
-    console.log(error)
     return {
       success: false,
       message: "Something went wrong",
