@@ -36,7 +36,7 @@ function trackEmailModalFormSubmission(formData: any) {
 }
 
 // Function to track otp verification modal form submissions
-function trackEmailVerificationOTPFormSubmission(formData: any) {
+function emailVerified(formData: any) {
   if (typeof window !== "undefined") {
     window[`dataLayer`] = window?.dataLayer || [];
 
@@ -49,20 +49,20 @@ function trackEmailVerificationOTPFormSubmission(formData: any) {
 }
 
 // Function to track email modal form submissions which is abandoned
-function trackEmailModalFormSubmissionA(formData: any) {
+function emailModalFormProcessing(formData: any) {
   if (typeof window !== "undefined") {
     window[`dataLayer`] = window?.dataLayer || [];
 
     window.dataLayer.push({
-      event: "emailModalFormSubmissionAbandoned",
-      formName: "email_modal_form_abandoned",
+      event: "emailModalFormProcessing",
+      formName: "email_modal_form_processing",
       formData,
     });
   }
 }
 
 // Function to track otp verification modal form submissions which is abandoned
-function trackOtpVerificationModalFormSubmissionA(formData: any) {
+function otpVerificationAbandoned(formData: any) {
   if (typeof window !== "undefined") {
     window[`dataLayer`] = window?.dataLayer || [];
 
@@ -90,7 +90,7 @@ const EmailModal = ({
   const submitEmail = async () => {
     setPending(true);
     const result = await GetOtp(email);
-    console.log(result);
+
     if (result.success) {
       setStep(2);
     }
@@ -101,22 +101,22 @@ const EmailModal = ({
   const verifyEmail = async () => {
     setPending(true);
     const result = await VerifyOtp(parseInt(otp), email);
-    console.log(result);
+
     setPending(false);
     if (result.success) {
       if (winDow) {
         localStorage.setItem("user_email", email);
-        trackEmailVerificationOTPFormSubmission({ email, otp });
+        emailVerified({ email, otp });
       }
       router.push(path);
     } else {
-      winDow && trackOtpVerificationModalFormSubmissionA({ email, otp });
+      winDow && otpVerificationAbandoned({ email, otp });
     }
   };
 
   useEffect(() => {
     if (step === 1) {
-      email.length > 0 && trackEmailModalFormSubmissionA({ email });
+      email.length > 0 && emailModalFormProcessing({ email });
     }
   }, [email]);
   return (

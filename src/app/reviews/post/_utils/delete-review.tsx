@@ -10,7 +10,7 @@ const DeleteReview = ({ id }: { id: string }) => {
   const HandleDelete = async () => {
     setFreeze(true);
     const result = await Action___DELETE__Review(id);
-    console.log(result);
+
     setFreeze(false);
   };
   return (

@@ -17,7 +17,6 @@ const CaseStudiesTemplate = ({ params }: { params: { slug: string } }) => {
   }
 
   const { hero, about, challenge, apporach, result, review } = data;
-  console.log(data.hero);
   return (
     <>
       <Hero data={hero} />

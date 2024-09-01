@@ -32,35 +32,32 @@ function UiUxForm() {
   });
 
   async function onSubmit(data: TWebDevelopmentFunnelForm) {
-    toast({
-      title: "You submitted the following values:",
-      description: (
-        <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-          <code className="text-white">{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      ),
-    });
-
     if (typeof window !== "undefined") {
-      console.log("Running");
       const email = localStorage.getItem("user_email") || "dummy@mail.test";
       if (email) {
         const result = await FunnelFormAction({ ...data, email });
-        console.log(result);
+
         toast({
           variant: result?.success ? "default" : "destructive",
           title: "Joining to program",
           description: result?.message || "Thank you for your joining!",
         });
-        if (result.success) {
-          router.push("/joining/end?type=googleads");
+        if (typeof window !== "undefined") {
+          if (result.success) {
+            router.push("/joining/end?type=uiux");
+            DL___FormData(
+              form.getValues(),
+              "joiningUiUxFormSubmission",
+              "joining_uiux_form_submission"
+            );
+          } else {
+            DL___FormData(
+              form.getValues(),
+              "joiningUiUxFormAbandoned",
+              "joining_uiux_form_abandoned"
+            );
+          }
         }
-        typeof window !== "undefined" &&
-          DL___FormData(
-            data,
-            "joiningUiUxFormSubmission",
-            "joining_ui_ux_form_submission"
-          );
       }
     }
   }
@@ -68,8 +65,8 @@ function UiUxForm() {
   useEffect(() => {
     DL___FormData(
       form.getValues(),
-      "joiningUiUxFormSubmissionAbandoned",
-      "joining_ui_ux_form_submission_abandoned"
+      "joiningUiUxFormProcessing",
+      "joining_ui_ux_form_processing"
     );
   }, [form.getValues()]);
 
@@ -92,7 +89,6 @@ function UiUxForm() {
               <FormLabel>Country</FormLabel>
               <CountryCombobox
                 onChange={(value: any) => {
-                  console.log(value);
                   form.setValue("country", value.target.value);
                 }}
               />

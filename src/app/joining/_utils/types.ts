@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-const T__ArrayOfString = z.array(z.string().min(1));
+const T__ArrayOfString = z.array(z.string()).optional();
 
 export const GoogleAdsFunnelForm = z.object({
     name: z.string().min(1),

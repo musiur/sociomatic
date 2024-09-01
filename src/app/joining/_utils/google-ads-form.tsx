@@ -33,25 +33,30 @@ function GoogleAdsForm() {
 
   async function onSubmit(data: TGoogleAdsFunnelForm) {
     if (typeof window !== "undefined") {
-      console.log("Running");
       const email = localStorage.getItem("user_email") || "dummy@mail.test";
       if (email) {
         const result = await FunnelFormAction({ ...data, email });
-        console.log(result);
         toast({
           variant: result?.success ? "default" : "destructive",
           title: "Joining to program",
           description: result?.message || "Thank you for your joining!",
         });
-        if (result.success) {
-          router.push("/joining/end?type=googleads");
+        if (typeof window !== "undefined") {
+          if (result.success) {
+            router.push("/joining/end?type=googleads");
+            DL___FormData(
+              data,
+              "joiningGoogleAdsFormSubmission",
+              "joining_google_ads_form_submission"
+            );
+          } else {
+            DL___FormData(
+              data,
+              "joiningGoogleAdsFormAbandoned",
+              "joining_google_ads_form_abandoned"
+            );
+          }
         }
-        typeof window !== "undefined" &&
-          DL___FormData(
-            data,
-            "joiningGoogleAdsFormSubmission",
-            "joining_google_ads_form_submission"
-          );
       }
     }
   }
@@ -59,8 +64,8 @@ function GoogleAdsForm() {
   useEffect(() => {
     DL___FormData(
       form.getValues(),
-      "joiningGoogleAdsFormAbandoned",
-      "joining_google_ads_form_abandoned"
+      "joiningGoogleAdsFormProcessing",
+      "joining_google_ads_form_processing"
     );
   }, [form.getValues()]);
 
@@ -84,7 +89,6 @@ function GoogleAdsForm() {
               <FormLabel>Country</FormLabel>
               <CountryCombobox
                 onChange={(value: any) => {
-                  console.log(value);
                   form.setValue("country", value.target.value);
                 }}
               />
