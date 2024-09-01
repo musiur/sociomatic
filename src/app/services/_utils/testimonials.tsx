@@ -23,8 +23,22 @@ import Tagline from "@/components/molecule/tagline";
 import { Sparkle } from "lucide-react";
 import ANIM__FadeInOutOnScroll from "@/components/anims/fadein.anim";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const Testimonials = ({ data }: { data: any }) => {
+  const pathname = usePathname();
+  const materedPath = pathname
+    ?.replaceAll("/services/", "")
+    ?.replaceAll("-", "");
+  const path: any = {
+    googleads: "googleads",
+    googleanalytics: "googleanalytics",
+    socialmediapaidads: "socialmediapaidads",
+    softwaredevelopment: "software",
+    shopifydevelopment: "shopify",
+    customwebdevelopment: "customwebdev",
+    uiux: "uiux",
+  };
   return (
     <div className="py-16 bg-muted">
       <ANIM__FadeInOutOnScroll>
@@ -90,7 +104,10 @@ const Testimonials = ({ data }: { data: any }) => {
             <ServicesCTA
               position="center"
               cta={{
-                primary: { text: <>Get Started Right Away</>, link: "/" },
+                primary: {
+                  text: <>Get Started Right Away</>,
+                  link: `/joining?type=${path[materedPath]}`,
+                },
                 secondary: { text: <>Get A Free Consultation</>, link: "/" },
               }}
             />
