@@ -26,6 +26,7 @@ import GetAQuote from "../molecule/get-a-quote";
 import { useEffect, useState } from "react";
 import clsx from "clsx";
 import ANIM__ScrollFade from "../anims/fadeupdown.anim";
+import ShimmerButton from "../magicui/shimmer-button";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -203,7 +204,7 @@ const Navbar = () => {
                 );
               })}
               <Link href="/get-a-quote">
-                <Button variant="secondary">Get a Quote</Button>
+                <ShimmerButton>Gat a Quote</ShimmerButton>
               </Link>
             </ul>
           </div>
