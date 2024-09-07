@@ -19,6 +19,7 @@ import { InputOTP, InputOTPGroup, InputOTPSlot } from "../ui/input-otp";
 import { useRouter } from "next/navigation";
 import { GetOtp, VerifyOtp } from "@/app/joining/_utils/actions";
 import { Sun } from "lucide-react";
+import ShimmerButton from "../magicui/shimmer-button";
 
 const winDow = typeof window !== "undefined";
 
@@ -122,9 +123,7 @@ const EmailModal = ({
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <span className="bg-secondary text-white text-center h-[38px] rounded-lg border border-secondary hover:bg-secondary/80 flex items-center justify-center px-6 font-medium sm:cursor-pointer">
-          {buttonText}
-        </span>
+        <ShimmerButton>{buttonText}</ShimmerButton>
       </DialogTrigger>
       <DialogContent className="max-w-[300px] sm:max-w-[425px]">
         <Image
@@ -175,16 +174,15 @@ const EmailModal = ({
         </div>
         <DialogFooter>
           <div className="w-full space-y-4 z-10">
-            <Button
+            <ShimmerButton
               type="submit"
-              variant="secondary"
               className="w-full items-center gap-2"
               onClick={step === 1 ? submitEmail : verifyEmail}
               disabled={pending}
             >
               {pending ? <Sun className="w-4 h-4 animate-spin" /> : null}
               {step === 1 ? "Get Started" : "Verify Email"}
-            </Button>
+            </ShimmerButton>
             <DialogClose className="w-full">
               <span className="bg-white text-center h-[38px] rounded-lg border flex items-center justify-center px-6 font-medium sm:cursor-pointer">
                 Close
