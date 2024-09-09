@@ -39,7 +39,11 @@ const CustomInput = ({
               defaultValue={field.value}
             />
           ) : (
-            <Textarea onChange={field.onChange} value={field.value} rows={3} />
+            <Textarea
+              onChange={field.onChange}
+              value={field.value}
+              className="min-h-[240px]"
+            />
           )}
           <FormMessage />
         </FormItem>
