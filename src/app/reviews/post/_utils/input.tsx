@@ -36,7 +36,7 @@ const C__Input = ({
                 const value = event.target.value;
                 form.setValue(
                   name,
-                  type === "number" ? parseInt(value || 0) : value
+                  type === "number" ? parseFloat(value || 0) : value
                 );
               }}
             />
