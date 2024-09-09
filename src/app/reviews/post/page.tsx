@@ -23,15 +23,16 @@ const Page = async () => {
             reviews.data.map((review: any) => {
               return (
                 <div
-                  key={review._id}
+                  key={review?._id}
                   className="border rounded-2xl p-1 flex flex-col items-center justify-center"
                 >
                   <TestimonialCard details={review} />
                   <div className="py-2 flex items-center gap-2">
+                    <div className="p-2 bg-gray-200 border">{review?._id}</div>
                     <Button size="icon" variant="outline" disabled>
                       <Edit />
                     </Button>
-                    <DeleteReview id={review._id} />
+                    <DeleteReview id={review?._id} />
                   </div>
                 </div>
               );
