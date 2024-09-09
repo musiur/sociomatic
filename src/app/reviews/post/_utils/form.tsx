@@ -12,6 +12,7 @@ import CLD__UploadWidget from "./cld-upload-widget";
 import { Action___POST__Review } from "./actions";
 import CustomSelect from "@/app/joining/_utils/custom-select";
 import { T__SlugType } from "@/app/services/[slug]/page";
+import CustomInput from "@/app/joining/_utils/custom-input";
 
 // Define the schema using Zod
 const FormSchema = z.object({
@@ -61,22 +62,22 @@ export default function ReviewPostForm() {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-        <C__Input form={form} name="name" label="Client's name" />
-        <C__Input form={form} name="rating" label="Rating" type="number" />
+        <CustomInput form={form} name="name" label="Client's name" />
+        <CustomInput form={form} name="rating" label="Rating" type="number" />
         <CustomSelect
           form={form}
           name="category"
           label="Category"
           options={categoryOptions}
         />
-        <C__Input
+        <CustomInput
           form={form}
           name="text"
           label="Client's Message"
           type="textarea"
         />
-        <C__Input form={form} name="company" label="Client's Company" />
-        <C__Input
+        <CustomInput form={form} name="company" label="Client's Company" />
+        <CustomInput
           form={form}
           name="country"
           label="Company location (Country)"
