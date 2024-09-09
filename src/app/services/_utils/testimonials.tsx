@@ -1,16 +1,10 @@
-// import { InteractiveMarquee } from "@/components/framer/marquee/marquee";
 "use client";
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/grid";
 import "swiper/css/pagination";
 
-// import "./styles.css";
-
-// import required modules
 import {
   Autoplay,
   Keyboard,
@@ -24,6 +18,8 @@ import { Sparkle } from "lucide-react";
 import ANIM__FadeInOutOnScroll from "@/components/anims/fadein.anim";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
+import clsx from "clsx";
 
 const Testimonials = ({ data }: { data: any }) => {
   const pathname = usePathname();
@@ -151,6 +147,8 @@ export const TestimonialCard = ({
   const createArray = (n: number): number[] => {
     return Array.from({ length: n }, (_, i) => i + 1);
   };
+  const [moreText, setMoreText] = useState(false);
+  const letterCount = 100;
   return (
     <div className="inline-block min-w-[300px] shadow-lg p-4 rounded-2xl space-y-[16px] border-2 border-white hover:border-secondary hover:scale-105 bg-white transition ease-in-out duration-500 hover:shadow-2xl">
       <div className="flex">
@@ -158,8 +156,28 @@ export const TestimonialCard = ({
           return <Sparkle key={item} className="rotate-45 text-secondary" />;
         })}
       </div>
-      <p>
-        <i>{`"${text}"`}</i>
+      <p
+        className={clsx("space-y-2 space-x-2 min-h-[120px]", {
+          "max-h-[160px] overflow-hidden": !moreText,
+          "h-auto": moreText,
+        })}
+      >
+        <i>{`"${
+          text?.length > letterCount
+            ? moreText
+              ? text
+              : text?.slice(0, letterCount) + "..."
+            : text
+        }"`}</i>
+        {text?.length > letterCount ? (
+          <span
+            role="button"
+            onClick={() => setMoreText(!moreText)}
+            className="text-secondary text-xs"
+          >
+            {moreText ? "See less" : "See more"}
+          </span>
+        ) : null}
       </p>
       <div className="flex items-center gap-4">
         <Image
