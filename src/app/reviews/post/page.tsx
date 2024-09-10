@@ -20,7 +20,7 @@ const Page = async () => {
         <h2>All Reviews</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {reviews?.data?.length ? (
-            reviews.data.map((review: any) => {
+            reviews.data.map((review: any, index: number) => {
               return (
                 <div
                   key={review?._id}
@@ -28,7 +28,7 @@ const Page = async () => {
                 >
                   <TestimonialCard details={review} />
                   <div className="py-2 flex items-center gap-2">
-                    <div className="p-2 bg-gray-200 border">{review?._id}</div>
+                    <div className="p-2 bg-gray-200 border">{index + 1}</div>
                     <Button size="icon" variant="outline" disabled>
                       <Edit />
                     </Button>
