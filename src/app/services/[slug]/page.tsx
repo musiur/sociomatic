@@ -8,6 +8,8 @@ import Testimonials from "@/app/services/_utils/testimonials";
 import UserEmpathyBanner from "@/app/services/_utils/user-empathy-banner";
 import WhatAndWhySection from "@/app/services/_utils/what-and-why-section";
 import { ServicePageCOPY } from "@/lib/data/services";
+import { FeatureWithGrid } from "../../../components/magicui/feature-with-grid";
+import { FeatureWithBar } from "../../../components/magicui/feature-with-bar";
 
 export type T__SlugType =
   | "googleads"
@@ -50,6 +52,8 @@ const Services = async ({ params }: { params: { slug: string } }) => {
       <UserEmpathyBanner data={userEmpathy} />
       {reviews?.length ? <Testimonials data={reviews} /> : null}
       <CoreBenefits data={coreBenefits} />
+      {/* <FeatureWithBar />
+      <FeatureWithGrid /> */}
       <EndingFunnel data={endingFunnel} />
       <Faq data={faq} />
     </div>
