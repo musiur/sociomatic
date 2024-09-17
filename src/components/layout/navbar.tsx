@@ -21,11 +21,9 @@ import BrandLogo from "../assets/brandlogo";
 
 import { Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
-import { Button } from "../ui/button";
 import GetAQuote from "../molecule/get-a-quote";
 import { useEffect, useState } from "react";
 import clsx from "clsx";
-import ANIM__ScrollFade from "../anims/fadeupdown.anim";
 import ShimmerButton from "../magicui/shimmer-button";
 
 const Navbar = () => {
@@ -36,7 +34,7 @@ const Navbar = () => {
   }, [pathname]);
   return (
     <nav id="topPoint" className="sticky top-0 z-50">
-      <ANIM__ScrollFade className="backdrop-blur-xl bg-white/70 border-b border-gray-200 ">
+      <div className="backdrop-blur-xl bg-white/70 border-b border-gray-200 ">
         <div className="container py-3 flex items-center justify-between">
           <Link href="/">
             <BrandLogo />
@@ -120,7 +118,7 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-      </ANIM__ScrollFade>
+      </div>
       <div
         className={clsx(
           "fixed top-0 right-0 bg-black/60  w-[100vw] overflow-hidden transition-opacity ease-in-out duration-500",
