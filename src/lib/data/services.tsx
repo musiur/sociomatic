@@ -1,4 +1,6 @@
+import { Gift, PercentIcon, Star, Users, Palette, Target, Zap, Headphones, Layers, Maximize, Shield, Repeat, UserCheck, Briefcase, PenTool, Sliders, BarChart2, DollarSign, TrendingUp, Database, Cpu, Cloud, Server, Layout, Smartphone, Code, GitBranch, Eye, Compass, Crosshair, Feather, MessageCircle, BarChart } from "lucide-react";
 import Link from "next/link";
+
 
 export const ServicePageCOPY = {
   googleads: {
@@ -60,6 +62,7 @@ export const ServicePageCOPY = {
                 $2.50 Million Value)
               </>
             ),
+            icon: <Star />
           },
           {
             id: 2,
@@ -70,6 +73,7 @@ export const ServicePageCOPY = {
                 a discounted rate to kickstart your growth.
               </>
             ),
+            icon: <PercentIcon />
           },
           {
             id: 3,
@@ -81,6 +85,7 @@ export const ServicePageCOPY = {
                 seamlessly between Google Ads and Google Analytics
               </>
             ),
+            icon: <Gift />
           },
         ],
       },
@@ -117,7 +122,7 @@ export const ServicePageCOPY = {
         benefits: [
           {
             id: 1,
-            icon: <></>,
+            icon: <Users />,
             title: <>Unmatched Expertise</>,
             paragraph: (
               <>
@@ -128,7 +133,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 2,
-            icon: <></>,
+            icon: <Target />,
             title: <>Results-Obsessed</>,
             paragraph: (
               <>
@@ -139,7 +144,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 3,
-            icon: <></>,
+            icon: <MessageCircle />,
             title: <>Transparent Communication</>,
             paragraph: (
               <>
@@ -150,7 +155,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 4,
-            icon: <></>,
+            icon: <Palette />,
             title: <>Custom Tailored Solutions</>,
             paragraph: (
               <>
@@ -162,7 +167,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 5,
-            icon: <></>,
+            icon: <Zap />,
             title: <>Technology & Automation</>,
             paragraph: (
               <>
@@ -174,7 +179,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 6,
-            icon: <></>,
+            icon: <Headphones />,
             title: <>Long-Term Partnership</>,
             paragraph: (
               <>
@@ -230,6 +235,7 @@ export const ServicePageCOPY = {
         benefits: [
           {
             id: 1,
+            icon: <BarChart />,
             title: <>Direct Access & Measurable Results</>,
             para: (
               <>
@@ -242,6 +248,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 2,
+            icon: <Headphones />,
             title: <>Get the Support You Deserve</>,
             para: (
               <>
@@ -252,6 +259,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 3,
+            icon: <Sliders />,
             title: <>Ongoing Campaign Optimization</>,
             para: (
               <>
@@ -262,6 +270,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 4,
+            icon: <Briefcase />,
             title: <>Your Success is Our CEO&apos;s Passion</>,
             para: (
               <>
@@ -446,7 +455,7 @@ export const ServicePageCOPY = {
         benefits: [
           {
             id: 1,
-            icon: <></>,
+            icon: <Palette />,
             title: <>Tailored Solutions</>,
             paragraph: (
               <>
@@ -458,7 +467,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 2,
-            icon: <></>,
+            icon: <Smartphone />,
             title: <>Responsive Design</>,
             paragraph: (
               <>
@@ -470,7 +479,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 3,
-            icon: <></>,
+            icon: <Layers />,
             title: <>Advanced Functionality</>,
             paragraph: (
               <>
@@ -482,7 +491,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 4,
-            icon: <></>,
+            icon: <Maximize />,
             title: <>Scalability</>,
             paragraph: (
               <>
@@ -494,7 +503,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 5,
-            icon: <></>,
+            icon: <Shield />,
             title: <>Robust Security</>,
             paragraph: (
               <>
@@ -506,7 +515,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 6,
-            icon: <></>,
+            icon: <Zap />,
             title: <>Optimized Performance</>,
             paragraph: (
               <>
@@ -518,7 +527,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 7,
-            icon: <></>,
+            icon: <Code />,
             title: <>Cutting Edge Techs</>,
             paragraph: (
               <>
@@ -530,7 +539,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 8,
-            icon: <></>,
+            icon: <Cloud />,
             title: <>Cloud Hosting</>,
             paragraph: (
               <>
@@ -542,7 +551,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 9,
-            icon: <></>,
+            icon: <Database />,
             title: <>Advanced DBMS</>,
             paragraph: (
               <>
@@ -588,6 +597,7 @@ export const ServicePageCOPY = {
         benefits: [
           {
             id: 1,
+            icon: <Palette />,
             title: <>Personalization</>,
             para: (
               <>
@@ -598,6 +608,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 2,
+            icon: <Sliders />,
             title: <>Optimization</>,
             para: (
               <>
@@ -608,6 +619,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 3,
+            icon: <Maximize />,
             title: <>Scalability</>,
             para: (
               <>
@@ -618,6 +630,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 4,
+            icon: <Headphones />,
             title: <>Dedicated Support</>,
             para: (
               <>
@@ -796,7 +809,7 @@ export const ServicePageCOPY = {
         benefits: [
           {
             id: 1,
-            icon: <></>,
+            icon: <Palette />,
             title: <>Custom Solutions</>,
             paragraph: (
               <>
@@ -808,7 +821,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 2,
-            icon: <></>,
+            icon: <Maximize />,
             title: <>Scalability</>,
             paragraph: (
               <>
@@ -819,7 +832,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 3,
-            icon: <></>,
+            icon: <Shield />,
             title: <>Security</>,
             paragraph: (
               <>
@@ -830,7 +843,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 4,
-            icon: <></>,
+            icon: <GitBranch />,
             title: <>Integration</>,
             paragraph: (
               <>
@@ -841,7 +854,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 5,
-            icon: <></>,
+            icon: <Layout />,
             title: <>User-Centric Design</>,
             paragraph: (
               <>
@@ -852,7 +865,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 6,
-            icon: <></>,
+            icon: <Repeat />,
             title: <>Agile Development</>,
             paragraph: (
               <>
@@ -863,7 +876,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 7,
-            icon: <></>,
+            icon: <Code />,
             title: <>Cutting Edge Tech Stack</>,
             paragraph: (
               <>
@@ -875,7 +888,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 8,
-            icon: <></>,
+            icon: <Cloud />,
             title: <>Cloud Infrastructure</>,
             paragraph: (
               <>
@@ -888,7 +901,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 9,
-            icon: <></>,
+            icon: <Database />,
             title: <>Advanced DBMS</>,
             paragraph: (
               <>
@@ -928,6 +941,7 @@ export const ServicePageCOPY = {
         benefits: [
           {
             id: 1,
+            icon: <Palette />,
             title: <>Customization</>,
             para: (
               <>
@@ -940,6 +954,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 2,
+            icon: <Cpu />,
             title: <>Reliablity</>,
             para: (
               <>
@@ -950,6 +965,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 3,
+            icon: <Maximize />,
             title: <>Scalability</>,
             para: (
               <>
@@ -960,6 +976,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 4,
+            icon: <Shield />,
             title: <>Security</>,
             para: (
               <>

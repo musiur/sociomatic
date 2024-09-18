@@ -1,44 +1,50 @@
 import { cn } from "@/lib/utils";
 import { Cloud, DollarSign, Heart, HelpCircle, LineChart, Route, Square, Terminal } from "lucide-react";
+import { ReactElement } from "react";
+
+type Type__Feature = {
+  title: ReactElement;
+  paragraph: ReactElement;
+  icon: ReactElement;
+  id: number;
+}
 
 
-export function FeatureWithBar({features = defaultData}: {features?: typeof defaultData}) {
+export function FeatureWithBar({features = defaultData}: {features?: Type__Feature[]}) {
   
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  relative z-10 container section">
-      {features.map((feature, index) => (
-        <Feature key={feature.title} {...feature} index={index} />
-      ))}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  relative z-10 container">
+      {features.map((feature) => {
+        const { id } = feature;
+        return (
+          <Feature key={id} {...feature} id={id} />
+        )
+      })}
     </div>
   );
 }
 
 const Feature = ({
   title,
-  description,
+  paragraph,
   icon,
-  index,
-}: {
-  title: string;
-  description: string;
-  icon: React.ReactNode;
-  index: number;
-}) => {
+  id,
+}: Type__Feature) => {
   return (
     <div
       className={cn(
         "flex flex-col lg:border-r  py-10 relative group/feature dark:border-neutral-800",
-        (index === 0 || index === 4) && "lg:border-l dark:border-neutral-800",
-        index < 4 && "lg:border-b dark:border-neutral-800"
+        (id === 0 || id === 4) && "lg:border-l dark:border-neutral-800",
+        id < 4 && "lg:border-b dark:border-neutral-800"
       )}
     >
-      {index < 4 && (
+      {id < 4 && (
         <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-t from-neutral-100 dark:from-neutral-800 to-transparent pointer-events-none" />
       )}
-      {index >= 4 && (
+      {id >= 4 && (
         <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-b from-neutral-100 dark:from-neutral-800 to-transparent pointer-events-none" />
       )}
-      <div className="mb-4 relative z-10 px-10 text-neutral-600 dark:text-neutral-400">
+      <div className="mb-4 relative z-10 px-10 [&>svg]:h-10 [&>svg]:w-10">
         {icon}
       </div>
       <div className="text-lg font-bold mb-2 relative z-10 px-10">
@@ -48,56 +54,64 @@ const Feature = ({
         </span>
       </div>
       <p className="text-sm relative z-10 px-10">
-        {description}
+        {paragraph}
       </p>
     </div>
   );
 };
 
-const defaultData = [
+const defaultData: Type__Feature[] = [
   {
-    title: "Built for developers",
-    description:
-      "Built for engineers, developers, dreamers, thinkers and doers.",
+    id: 1,
+    title: <>Built for developers</>,
+    paragraph:
+      <>Built for engineers, developers, dreamers, thinkers and doers.</>,
     icon: <Terminal />,
   },
   {
-    title: "Ease of use",
-    description:
-      "It's as easy as using an Apple, and as expensive as buying one.",
+    id: 2,
+    title: <>Ease of use</>,
+    paragraph:
+      <>It's as easy as using an Apple, and as expensive as buying one.</>,
     icon: <LineChart />,
   },
   {
-    title: "Pricing like no other",
-    description:
-      "Our prices are best in the market. No cap, no lock, no credit card required.",
+    id: 3,
+    title: <>Pricing like no other</>,
+    paragraph:
+      <>Our prices are best in the market. No cap, no lock, no credit card required.</>,
     icon: <DollarSign />,
   },
   {
-    title: "100% Uptime guarantee",
-    description: "We just cannot be taken down by anyone.",
+    id: 4,
+    title: <>100% Uptime guarantee</>,
+    paragraph: <>We just cannot be taken down by anyone.</>,
     icon: <Cloud />,
   },
   {
-    title: "Multi-tenant Architecture",
-    description: "You can simply share passwords instead of buying new seats",
+    id: 5,
+    title: <>Multi-tenant Architecture</>,
+    paragraph: <>You can simply share passwords instead of buying new seats</>,
     icon: <Route />,
   },
   {
-    title: "24/7 Customer Support",
-    description:
-      "We are available a 100% of the time. Atleast our AI Agents are.",
+    id: 6,
+    title: <>24/7 Customer Support</>,
+    paragraph:
+      <>We are available a 100% of the time. Atleast our AI Agents are.</>,
     icon: <HelpCircle />,
   },
   {
-    title: "Money back guarantee",
-    description:
-      "If you donot like EveryAI, we will convince you to like us.",
+    id: 7,
+    title: <>Money back guarantee</>,
+    paragraph:
+      <>If you donot like EveryAI, we will convince you to like us.</>,
     icon: <Square />,
   },
   {
-    title: "And everything else",
-    description: "I just ran out of copy ideas. Accept my sincere apologies",
+    id: 8,
+    title: <>And everything else</>,
+    paragraph: <>I just ran out of copy ideas. Accept my sincere apologies</>,
     icon: <Heart />,
   },
 ];

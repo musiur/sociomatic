@@ -1,5 +1,6 @@
 import ANIM__FadeInOutOnScroll from "@/components/anims/fadein.anim";
 import ThreeDStar from "@/components/assets/three-d-star";
+import { FeatureWithBar } from "@/components/magicui/feature-with-bar";
 import Tagline from "@/components/molecule/tagline";
 import { ReactElement } from "react";
 
@@ -34,7 +35,15 @@ const WhatAndWhySection = ({
           {para}
         </p>
       </ANIM__FadeInOutOnScroll>
-      <div className="container pt-[48px] space-y-10">
+      <FeatureWithBar features={benefits} />
+    </div>
+  );
+};
+
+export default WhatAndWhySection;
+
+
+{/* <div className="container pt-[48px] space-y-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:grid-cols-3">
           {benefits.map(
             (item: {
@@ -59,9 +68,4 @@ const WhatAndWhySection = ({
             }
           )}
         </div>
-      </div>
-    </div>
-  );
-};
-
-export default WhatAndWhySection;
+      </div> */}
