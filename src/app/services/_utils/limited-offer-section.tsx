@@ -26,7 +26,7 @@ const LimitedOfferSection = ({
       <TransactionDashboard className="w-full hidden sm:block" />
 
       <ANIM__FadeInOutOnScroll className="space-y-[32px] max-w-[600px]">
-        <h2 className="h2 text-primary leading-normal [&>span]:px-3 [&>span]:text-secondary [&>span]:bg-blue-100">
+        <h2 className="h2 text-primary leading-normal [&>span]:px-3 [&>span]:text-secondary [&>span]:bg-muted">
           {title}
         </h2>
         <p>{para}</p>

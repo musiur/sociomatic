@@ -20,10 +20,11 @@ export function FeatureWithGrid({
       {features.map((feature) => (
         <ANIM__FadeInOutOnScroll
           key={feature.id}
-          className="relative bg-gradient-to-b dark:from-neutral-900 to-white p-6 rounded-xl overflow-hidden border border-secondary/5 transition duration-300 hover:shadow-xl"
+          className="relative bg-gradient-to-b dark:from-neutral-900 to-white p-6 rounded-xl overflow-hidden border border-secondary/5 transition duration-300 hover:shadow-xl space-y-4"
         >
           <Grid size={20} />
-          <p className="font-medium pb-20">{feature.title}</p>
+          <p className="text-8xl font-bold text-muted">{feature.id}</p>
+          <p className="font-medium">{feature.title}</p>
           <p>{feature.para}</p>
         </ANIM__FadeInOutOnScroll>
       ))}

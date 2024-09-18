@@ -50,7 +50,7 @@ export const BrandCarousel = () => {
   ];
 
   return (
-    <div className="bg-secondary/5 rounded-b-[20px] md:rounded-b-[40px]">
+    <div className="bg-muted rounded-b-[20px] md:rounded-b-[40px]">
       <div className="py-10 container">
       <Carousel
         className="w-full"
