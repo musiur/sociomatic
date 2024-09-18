@@ -1,28 +1,35 @@
-import React from "react";
+import { Star } from "lucide-react";
+import React, { ReactElement } from "react";
 import { useId } from "react";
+import ANIM__FadeInOutOnScroll from "../anims/fadein.anim";
 
-export function FeatureWithGrid({ features = defaultData }: { features?: typeof defaultData }) {
+type Type__Feature = {
+  id: number;
+  icon: ReactElement;
+  title: ReactElement;
+  para: ReactElement;
+};
+
+export function FeatureWithGrid({
+  features = defaultData,
+}: {
+  features?: Type__Feature[];
+}) {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 md:gap-2 container">
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 container">
       {features.map((feature) => (
-        <div
-          key={feature.title}
-          className="relative bg-gradient-to-b dark:from-neutral-900 to-white p-6 rounded-xl overflow-hidden border"
+        <ANIM__FadeInOutOnScroll
+          key={feature.id}
+          className="relative bg-gradient-to-b dark:from-neutral-900 to-white p-6 rounded-xl overflow-hidden border border-secondary/5 transition duration-300 hover:shadow-xl"
         >
           <Grid size={20} />
-          <p className="font-medium pb-20">
-            {feature.title}
-          </p>
-          <p>
-            {feature.description}
-          </p>
-        </div>
+          <p className="font-medium pb-20">{feature.title}</p>
+          <p>{feature.para}</p>
+        </ANIM__FadeInOutOnScroll>
       ))}
     </div>
   );
 }
-
-
 
 export const Grid = ({
   pattern,
@@ -95,35 +102,71 @@ export function GridPattern({ width, height, x, y, squares, ...props }: any) {
   );
 }
 
-const defaultData = [
+const defaultData: Type__Feature[] = [
   {
-    title: "HIPAA and SOC2 Compliant",
-    description:
-      "Our applications are HIPAA and SOC2 compliant, your data is safe with us, always.",
+    id: 1,
+    icon: <Star />,
+    title: <>HIPAA and SOC2 Compliant</>,
+    para: (
+      <>
+        Our applications are HIPAA and SOC2 compliant, your data is safe with
+        us, always.
+      </>
+    ),
   },
   {
-    title: "Automated Social Media Posting",
-    description:
-      "Schedule and automate your social media posts across multiple platforms to save time and maintain a consistent online presence.",
+    id: 2,
+    icon: <Star />,
+    title: <>HIPAA and SOC2 Compliant</>,
+    para: (
+      <>
+        Our applications are HIPAA and SOC2 compliant, your data is safe with
+        us, always.
+      </>
+    ),
   },
   {
-    title: "Advanced Analytics",
-    description:
-      "Gain insights into your social media performance with detailed analytics and reporting tools to measure engagement and ROI.",
+    id: 3,
+    icon: <Star />,
+    title: <>HIPAA and SOC2 Compliant</>,
+    para: (
+      <>
+        Our applications are HIPAA and SOC2 compliant, your data is safe with
+        us, always.
+      </>
+    ),
   },
   {
-    title: "Content Calendar",
-    description:
-      "Plan and organize your social media content with an intuitive calendar view, ensuring you never miss a post.",
+    id: 4,
+    icon: <Star />,
+    title: <>HIPAA and SOC2 Compliant</>,
+    para: (
+      <>
+        Our applications are HIPAA and SOC2 compliant, your data is safe with
+        us, always.
+      </>
+    ),
   },
   {
-    title: "Audience Targeting",
-    description:
-      "Reach the right audience with advanced targeting options, including demographics, interests, and behaviors.",
+    id: 5,
+    icon: <Star />,
+    title: <>HIPAA and SOC2 Compliant</>,
+    para: (
+      <>
+        Our applications are HIPAA and SOC2 compliant, your data is safe with
+        us, always.
+      </>
+    ),
   },
   {
-    title: "Social Listening",
-    description:
-      "Monitor social media conversations and trends to stay informed about what your audience is saying and respond in real-time.",
+    id: 6,
+    icon: <Star />,
+    title: <>HIPAA and SOC2 Compliant</>,
+    para: (
+      <>
+        Our applications are HIPAA and SOC2 compliant, your data is safe with
+        us, always.
+      </>
+    ),
   },
 ];

@@ -1,5 +1,4 @@
 import ANIM__FadeInOutOnScroll from "@/components/anims/fadein.anim";
-import ThreeDStar from "@/components/assets/three-d-star";
 import { FeatureWithGrid } from "@/components/magicui/feature-with-grid";
 import Tagline from "@/components/molecule/tagline";
 import { ReactElement } from "react";
@@ -34,7 +33,7 @@ const CoreBenefits = ({
           {para}
         </p>
       </ANIM__FadeInOutOnScroll>
-      <FeatureWithGrid />
+      <FeatureWithGrid features={benefits} />
     </div>
   );
 };

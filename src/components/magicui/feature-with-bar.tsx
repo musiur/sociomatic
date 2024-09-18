@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import { Cloud, DollarSign, Heart, HelpCircle, LineChart, Route, Square, Terminal } from "lucide-react";
 import { ReactElement } from "react";
+import ANIM__FadeInOutOnScroll from "../anims/fadein.anim";
 
 type Type__Feature = {
   title: ReactElement;
@@ -31,7 +32,7 @@ const Feature = ({
   id,
 }: Type__Feature) => {
   return (
-    <div
+    <ANIM__FadeInOutOnScroll
       className={cn(
         "flex flex-col lg:border-r  py-10 relative group/feature dark:border-neutral-800",
         (id === 0 || id === 4) && "lg:border-l dark:border-neutral-800",
@@ -56,7 +57,7 @@ const Feature = ({
       <p className="text-sm relative z-10 px-10">
         {paragraph}
       </p>
-    </div>
+    </ANIM__FadeInOutOnScroll>
   );
 };
 
