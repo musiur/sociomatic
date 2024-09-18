@@ -1,25 +1,23 @@
 import React from "react";
 import { useId } from "react";
 
-export function FeatureWithGrid({features = defaultData}: {features?: typeof defaultData}) {
+export function FeatureWithGrid({ features = defaultData }: { features?: typeof defaultData }) {
   return (
-    <div className="section">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 md:gap-2 container">
-        {features.map((feature) => (
-          <div
-            key={feature.title}
-            className="relative bg-gradient-to-b dark:from-neutral-900 from-neutral-100 dark:to-neutral-950 to-white p-6 rounded-3xl overflow-hidden"
-          >
-            <Grid size={20} />
-            <p className="text-base font-bold text-neutral-800 dark:text-white relative z-20">
-              {feature.title}
-            </p>
-            <p className="text-neutral-600 dark:text-neutral-400 mt-4 text-base font-normal relative z-20">
-              {feature.description}
-            </p>
-          </div>
-        ))}
-      </div>
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 md:gap-2 container">
+      {features.map((feature) => (
+        <div
+          key={feature.title}
+          className="relative bg-gradient-to-b dark:from-neutral-900 to-white p-6 rounded-xl overflow-hidden border"
+        >
+          <Grid size={20} />
+          <p className="font-medium pb-20">
+            {feature.title}
+          </p>
+          <p>
+            {feature.description}
+          </p>
+        </div>
+      ))}
     </div>
   );
 }
@@ -127,15 +125,5 @@ const defaultData = [
     title: "Social Listening",
     description:
       "Monitor social media conversations and trends to stay informed about what your audience is saying and respond in real-time.",
-  },
-  {
-    title: "Customizable Templates",
-    description:
-      "Create stunning social media posts with our customizable templates, designed to fit your brand's unique style and voice.",
-  },
-  {
-    title: "Collaboration Tools",
-    description:
-      "Work seamlessly with your team using our collaboration tools, allowing you to assign tasks, share drafts, and provide feedback in real-time.",
   },
 ];

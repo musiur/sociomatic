@@ -1,4 +1,4 @@
-import { Gift, PercentIcon, Star, Users, Palette, Target, Zap, Headphones, Layers, Maximize, Shield, Repeat, UserCheck, Briefcase, PenTool, Sliders, BarChart2, DollarSign, TrendingUp, Database, Cpu, Cloud, Server, Layout, Smartphone, Code, GitBranch, Eye, Compass, Crosshair, Feather, MessageCircle, BarChart } from "lucide-react";
+import { Gift, PercentIcon, Star, Users, Palette, Target, Zap, Headphones, Layers, Maximize, Shield, Repeat, UserCheck, Briefcase, PenTool, Sliders, BarChart2, DollarSign, TrendingUp, Database, Cpu, Cloud, Server, Layout, Smartphone, Code, GitBranch, Eye, Compass, Crosshair, Feather, MessageCircle, BarChart, ShoppingCart, Settings, Wallet } from "lucide-react";
 import Link from "next/link";
 
 
@@ -1162,7 +1162,7 @@ export const ServicePageCOPY = {
         benefits: [
           {
             id: 1,
-            icon: <></>,
+            icon: <Zap />,
             title: <>Lightning Fast Hosting</>,
             paragraph: (
               <>
@@ -1174,7 +1174,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 2,
-            icon: <></>,
+            icon: <PenTool />,
             title: <>Intuitive Editing Tools</>,
             paragraph: (
               <>
@@ -1186,7 +1186,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 3,
-            icon: <></>,
+            icon: <Layers />,
             title: <>Flexible Customizable</>,
             paragraph: (
               <>
@@ -1199,7 +1199,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 4,
-            icon: <></>,
+            icon: <Users />,
             title: <>Audience Engagement</>,
             paragraph: (
               <>
@@ -1211,7 +1211,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 5,
-            icon: <></>,
+            icon: <Maximize />,
             title: <>Scalability</>,
             paragraph: (
               <>
@@ -1223,7 +1223,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 6,
-            icon: <></>,
+            icon: <Shield />,
             title: <>Security Measures</>,
             paragraph: (
               <>
@@ -1462,7 +1462,7 @@ export const ServicePageCOPY = {
         benefits: [
           {
             id: 1,
-            icon: <></>,
+            icon: <Palette />,
             title: <>Customized Store Design</>,
             paragraph: (
               <>
@@ -1474,7 +1474,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 2,
-            icon: <></>,
+            icon: <Smartphone />,
             title: <>Responsive Design</>,
             paragraph: (
               <>
@@ -1486,7 +1486,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 3,
-            icon: <></>,
+            icon: <ShoppingCart />,
             title: <>Streamlined Checkout Process</>,
             paragraph: (
               <>
@@ -1498,7 +1498,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 4,
-            icon: <></>,
+            icon: <Database />,
             title: <>Advanced Functionalities</>,
             paragraph: (
               <>
@@ -1510,7 +1510,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 5,
-            icon: <></>,
+            icon: <Eye />,
             title: <>SEO Optimization</>,
             paragraph: (
               <>
@@ -1522,7 +1522,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 6,
-            icon: <></>,
+            icon: <BarChart2 />,
             title: <>Robust analytics and Reporting</>,
             paragraph: (
               <>
@@ -1769,7 +1769,7 @@ export const ServicePageCOPY = {
         benefits: [
           {
             id: 1,
-            icon: <></>,
+            icon: <Palette />,
             title: <>User Centric Design</>,
             paragraph: (
               <>
@@ -1781,7 +1781,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 2,
-            icon: <></>,
+            icon: <Users />,
             title: <>UX Research</>,
             paragraph: (
               <>
@@ -1793,7 +1793,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 3,
-            icon: <></>,
+            icon: <PenTool />,
             title: <>Wireframing & Prototyping</>,
             paragraph: (
               <>
@@ -1805,7 +1805,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 4,
-            icon: <></>,
+            icon: <Eye />,
             title: <>Accessibility Focus</>,
             paragraph: (
               <>
@@ -1817,7 +1817,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 5,
-            icon: <></>,
+            icon: <Repeat />,
             title: <>Iterative Design</>,
             paragraph: (
               <>
@@ -1829,7 +1829,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 6,
-            icon: <></>,
+            icon: <Users />,
             title: <>Collaborative Approach</>,
             paragraph: (
               <>
@@ -2080,7 +2080,7 @@ export const ServicePageCOPY = {
         benefits: [
           {
             id: 1,
-            icon: <></>,
+            icon: <Database />,
             title: <>Deep Expertise</>,
             paragraph: (
               <>
@@ -2091,7 +2091,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 2,
-            icon: <></>,
+            icon: <Zap />,
             title: <>Streamlined Approach</>,
             paragraph: (
               <>
@@ -2102,7 +2102,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 3,
-            icon: <></>,
+            icon: <Eye />,
             title: <>Actionable Insights</>,
             paragraph: (
               <>
@@ -2113,7 +2113,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 4,
-            icon: <></>,
+            icon: <Settings />,
             title: <>Customizable Solutions</>,
             paragraph: (
               <>
@@ -2124,7 +2124,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 5,
-            icon: <></>,
+            icon: <Headphones />,
             title: <>Ongoing Support</>,
             paragraph: (
               <>
@@ -2135,7 +2135,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 6,
-            icon: <></>,
+            icon: <Target />,
             title: <>Proven Results</>,
             paragraph: (
               <>
@@ -2439,7 +2439,7 @@ export const ServicePageCOPY = {
         benefits: [
           {
             id: 1,
-            icon: <></>,
+            icon: <Target />,
             title: <>Targeted Precision</>,
             paragraph: (
               <>
@@ -2451,7 +2451,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 2,
-            icon: <></>,
+            icon: <Palette />,
             title: <>Creative Powerhouse</>,
             paragraph: (
               <>
@@ -2464,7 +2464,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 3,
-            icon: <></>,
+            icon: <BarChart2 />,
             title: <>Data-Driven Decisions</>,
             paragraph: (
               <>
@@ -2478,7 +2478,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 4,
-            icon: <></>,
+            icon: <DollarSign />,
             title: <>Measurable Success</>,
             paragraph: (
               <>
@@ -2491,7 +2491,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 5,
-            icon: <></>,
+            icon: <Wallet />,
             title: <>Budget-Conscious Experts</>,
             paragraph: (
               <>
@@ -2504,7 +2504,7 @@ export const ServicePageCOPY = {
           },
           {
             id: 6,
-            icon: <></>,
+            icon: <Headphones />,
             title: <>Always in Your Corner</>,
             paragraph: (
               <>
