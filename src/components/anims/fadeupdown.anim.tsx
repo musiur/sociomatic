@@ -20,7 +20,7 @@ const ANIM__ScrollFade: React.FC<ANIM__ScrollFadeProps> = ({
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-
+      console.log(currentScrollY + 20, currentScrollY, scrollY);
       if (currentScrollY > scrollY) {
         setScrollDirection("down");
       } else {

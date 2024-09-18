@@ -25,6 +25,8 @@ import GetAQuote from "../molecule/get-a-quote";
 import { useEffect, useState } from "react";
 import clsx from "clsx";
 import ShimmerButton from "../magicui/shimmer-button";
+import ANIM__FadeInOutOnScroll from "../anims/fadein.anim";
+import ANIM__ScrollFade from "../anims/fadeupdown.anim";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -34,7 +36,7 @@ const Navbar = () => {
   }, [pathname]);
   return (
     <nav id="topPoint" className="sticky top-0 z-50">
-      <div className="backdrop-blur-xl bg-white/70 border-b border-gray-200 ">
+      <ANIM__ScrollFade className="backdrop-blur-xl bg-white/70 border-b border-gray-200 ">
         <div className="container py-3 flex items-center justify-between">
           <Link href="/">
             <BrandLogo />
@@ -118,7 +120,7 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-      </div>
+      </ANIM__ScrollFade>
       <div
         className={clsx(
           "fixed top-0 right-0 bg-black/60  w-[100vw] overflow-hidden transition-opacity ease-in-out duration-500",
