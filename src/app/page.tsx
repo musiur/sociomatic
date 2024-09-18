@@ -10,6 +10,7 @@ import {
 } from "@/lib/data/data";
 import HeroSection from "./_utils/herosection";
 import Faq from "./_utils/faq";
+import { BrandCarousel } from "./_utils/carousel";
 
 const Home = () => {
   return (
@@ -34,6 +35,7 @@ const Home = () => {
         brands={true}
         background="HeroBackground"
       />
+      <BrandCarousel />
       <OurServices FeaturesData={homeFeaturesData.slice(0, 6)} />
       <OurProcess />
       <HowWeWork />

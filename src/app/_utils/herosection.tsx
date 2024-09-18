@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import { ReactElement } from "react";
 
@@ -6,6 +7,7 @@ import VideoPlayer from "@/app/_utils/video-player";
 import GetConsultation from "@/components/molecule/get-consultation";
 import GetAQuote from "@/components/molecule/get-a-quote";
 import ANIM__FadeInOnScroll from "@/components/anims/fadein.anim";
+import { AuroraBackground } from "@/components/ui/aurora-background";
 
 const HeroSection = ({
   H1 = (
@@ -33,7 +35,8 @@ const HeroSection = ({
 }) => {
   const backgroundImage = `bg-[url('/images/backgrounds/HeroBackground.svg')]`;
   return (
-    <section className={`${backgroundImage} bg-center bg-cover`}>
+    <AuroraBackground>
+      <section className={`${backgroundImage} bg-center bg-cover`}>
       <div className="container section grid grid-cols-1 lg:grid-cols-2 items-center large-gap">
         <ANIM__FadeInOnScroll className="order-2 lg:order-1 flex flex-col small-gap">
           <h1 className="text-primary [&>span]:text-secondary">{H1}</h1>
@@ -60,14 +63,15 @@ const HeroSection = ({
           ]}
         </ANIM__FadeInOnScroll>
       </div>
-      {brands ? (
+      {/* {brands ? (
         <div className="bg-muted rounded-b-[20px] md:rounded-b-[40px]">
           <div className="py-[63px] container">
             <BrandCarousel />
           </div>
         </div>
-      ) : null}
+      ) : null} */}
     </section>
+    </AuroraBackground>
   );
 };
 
