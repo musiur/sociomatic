@@ -36,7 +36,7 @@ const Navbar = () => {
   }, [pathname]);
   return (
     <nav id="topPoint" className="sticky top-0 z-50">
-      <ANIM__ScrollFade className="backdrop-blur-xl bg-white/70 border-b border-gray-200 ">
+      <div className="backdrop-blur-xl bg-white/70 border-b border-gray-200 ">
         <div className="container py-3 flex items-center justify-between">
           <Link href="/">
             <BrandLogo />
@@ -120,7 +120,7 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-      </ANIM__ScrollFade>
+      </div>
       <div
         className={clsx(
           "fixed top-0 right-0 bg-black/60  w-[100vw] overflow-hidden transition-opacity ease-in-out duration-500",

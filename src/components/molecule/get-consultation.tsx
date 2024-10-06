@@ -3,8 +3,8 @@ import { Button } from "../ui/button";
 
 const GetConsultation = () => {
   return (
-    <Link href={`/#calendly`} aria-label="topTitle" title="topTitle">
-      <Button variant="outline">Get a Free Consultation</Button>
+    <Link href={`/#calendly`} aria-label="topTitle" title="topTitle" className="w-full sm:w-auto">
+      <Button variant="outline" className="w-full">Get a Free Consultation</Button>
     </Link>
   );
 };

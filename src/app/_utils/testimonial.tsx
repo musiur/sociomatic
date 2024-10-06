@@ -52,8 +52,8 @@ const Testimonial = ({ data, calendly }: { data: any; calendly: boolean }) => {
             </p>
           </ANIM__FadeInOutOnScroll>
         </div>
-        <Link href="/reviews" className="flex items-center justify-center">
-          <Button variant={"outline"}>View Our Wall of Love</Button>
+        <Link href="/reviews" className="flex items-center justify-center w-full">
+          <Button variant={"outline"} className="w-full sm:w-auto">View Our Wall of Love</Button>
         </Link>
       </div>
       </div>

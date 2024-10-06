@@ -1,4 +1,7 @@
 import MessageFromCEO from "../about-us/_utils/message-from-ceo";
+import { Action___Get__Review_By_Category } from "../reviews/post/_utils/actions";
+import { T__SlugType } from "../services/[slug]/page";
+import Testimonials from "../services/_utils/testimonials";
 import GoogleAdsForm from "./_utils/google-ads-form";
 import GoogleAnalyticsForm from "./_utils/google-analytics-form";
 import HeroSectionJoining from "./_utils/hero.section";
@@ -10,7 +13,7 @@ import UiUxForm from "./_utils/uiux-form";
 import WebDevelopmentForm from "./_utils/web-development-form";
 import WordpressDevelopmentForm from "./_utils/wordpress-development-form";
 
-const Page = ({
+const Page = async ({
   searchParams = { type: "googleads" },
 }: {
   searchParams: { type: E_FormTypes };
@@ -44,6 +47,9 @@ const Page = ({
       : searchParams.type === "customwebdev"
       ? "Custom Web Developer"
       : "";
+
+  // const result = await Action___Get__Review_By_Category(type as T__SlugType);
+  // const reviews = result?.data?.length ? result?.data : [];
   return (
     <>
       <HeroSectionJoining
@@ -73,6 +79,9 @@ const Page = ({
           }
         </div>
       </section>
+      {/* <section>
+        {reviews?.length ? <Testimonials data={reviews} /> : null}
+      </section> */}
     </>
   );
 };
