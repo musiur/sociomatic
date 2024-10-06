@@ -1,4 +1,5 @@
 import MessageFromCEO from "../about-us/_utils/message-from-ceo";
+import ClientsReviews from "../case-studies/_utils/clients-reviews";
 import { Action___Get__Review_By_Category } from "../reviews/post/_utils/actions";
 import { T__SlugType } from "../services/[slug]/page";
 import Testimonials from "../services/_utils/testimonials";
@@ -48,8 +49,6 @@ const Page = async ({
       ? "Custom Web Developer"
       : "";
 
-  // const result = await Action___Get__Review_By_Category(type as T__SlugType);
-  // const reviews = result?.data?.length ? result?.data : [];
   return (
     <>
       <HeroSectionJoining
@@ -79,9 +78,7 @@ const Page = async ({
           }
         </div>
       </section>
-      {/* <section>
-        {reviews?.length ? <Testimonials data={reviews} /> : null}
-      </section> */}
+      <ClientsReviews />
     </>
   );
 };

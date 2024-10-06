@@ -25,7 +25,7 @@ const CaseStudiesTemplate = ({ params }: { params: { slug: string } }) => {
       <Approach data={apporach} />
       <Results data={result} />
       <OurReview data={review} />
-      <ClientsReviews />
+      <ClientsReviews testimonial={false} />
     </>
   );
 };
