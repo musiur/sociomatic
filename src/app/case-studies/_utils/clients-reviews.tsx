@@ -7,7 +7,7 @@ const ClientsReviews = async () => {
   const reviews = result?.data?.length ? result?.data : [];
   return (
     <>
-      <Testimonials data={reviews} />
+      {/* <Testimonials data={reviews} /> */}
       <ProjectIdea />
     </>
   );
