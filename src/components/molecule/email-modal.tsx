@@ -123,7 +123,7 @@ const EmailModal = ({
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <ShimmerButton>{buttonText}</ShimmerButton>
+        <ShimmerButton className="w-full sm:w-auto">{buttonText}</ShimmerButton>
       </DialogTrigger>
       <DialogContent className="max-w-[300px] sm:max-w-[425px]">
         <Image

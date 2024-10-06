@@ -20,7 +20,7 @@ const ShimmerButton = React.forwardRef<HTMLButtonElement, ShimmerButtonProps>(
       shimmerSize = "0.1em",
       shimmerDuration = "3s",
       borderRadius = "8px",
-      background = "hsl(223 100% 54%)",
+      background = "#1457FF",
       className,
       children,
       ...props
@@ -40,7 +40,7 @@ const ShimmerButton = React.forwardRef<HTMLButtonElement, ShimmerButtonProps>(
           } as CSSProperties
         }
         className={cn(
-          "h-10 px-[16px] py-[11px] md:px-[20px] md:py-[15px] group relative z-0 flex cursor-pointer items-center justify-center overflow-hidden whitespace-nowrap border border-white/10 text-white [background:var(--bg)] [border-radius:var(--radius)] dark:text-black font-semibold",
+          "w-full h-10 px-[16px] py-[11px] md:px-[20px] md:py-[15px] group relative z-0 flex cursor-pointer items-center justify-center overflow-hidden whitespace-nowrap border border-white/30 ring-1 ring-blue-600 text-white [background:var(--bg)] [border-radius:var(--radius)] dark:text-black font-semibold shadow-md hover:shadow-2xl",
           "transform-gpu transition-transform duration-300 ease-in-out active:translate-y-[1px]",
           className
         )}
@@ -67,7 +67,7 @@ const ShimmerButton = React.forwardRef<HTMLButtonElement, ShimmerButtonProps>(
           className={cn(
             "insert-0 absolute h-full w-full",
 
-            "rounded-[8px] px-4 py-1.5 text-sm font-medium shadow-[inset_0_-8px_10px_#ffffff1f]",
+            "rounded-[6px] px-4 py-1.5 text-sm font-medium shadow-[inset_0_-8px_10px_#ffffff20]",
 
             // transition
             "transform-gpu transition-all duration-300 ease-in-out",

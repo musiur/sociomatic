@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import { ReactElement } from "react";
 
@@ -37,40 +37,32 @@ const HeroSection = ({
   return (
     <AuroraBackground>
       <section className={`${backgroundImage} bg-center bg-cover`}>
-      <div className="container section grid grid-cols-1 lg:grid-cols-2 items-center large-gap">
-        <ANIM__FadeInOnScroll className="order-2 lg:order-1 flex flex-col small-gap">
-          <h1 className="text-primary [&>span]:text-secondary">{H1}</h1>
-          <p className="hero-description">{P}</p>
-          <div className="flex flex-wrap items-center small-gap">
-            <GetConsultation />
-            <GetAQuote />
-          </div>
-        </ANIM__FadeInOnScroll>
-        <ANIM__FadeInOnScroll className="order-1 lg:order-2">
-          {[
-            <div key={1} className="min-h-[200px] relative">
-              <Image
-                src="/images/pages/home/heroVideo.png"
-                alt=""
-                width={1000}
-                height={1000}
-                className="w-full h-full"
-              />
-              {/* <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
-                <VideoPlayer videoLink={videoLink} />
-              </div> */}
-            </div>,
-          ]}
-        </ANIM__FadeInOnScroll>
-      </div>
-      {/* {brands ? (
-        <div className="bg-muted rounded-b-[20px] md:rounded-b-[40px]">
-          <div className="py-[63px] container">
-            <BrandCarousel />
-          </div>
+        <div className="container section grid grid-cols-1 lg:grid-cols-2 items-center large-gap">
+          <ANIM__FadeInOnScroll className="order-2 lg:order-1 flex flex-col small-gap">
+            <h1 className="text-primary [&>span]:text-secondary">{H1}</h1>
+            <p className="hero-description">{P}</p>
+            <div className="flex flex-wrap items-center small-gap">
+              <GetConsultation />
+              <GetAQuote />
+            </div>
+          </ANIM__FadeInOnScroll>
+          <ANIM__FadeInOnScroll className="order-1 lg:order-2">
+            {[
+              <div key={1} className="min-h-[200px] shadow-2xl z-10 relative">
+                <iframe
+                  className="w-full h-full min-h-[30vh] md:min-h-[60vh] lg:min-h-[40vh] rounded-2xl mx-auto border shadow-xl"
+                  src="https://www.youtube.com/embed/eRxKwyhM59U?si=R66bAMX4xLgmqoCf"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                ></iframe>
+              </div>,
+            ]}
+          </ANIM__FadeInOnScroll>
         </div>
-      ) : null} */}
-    </section>
+      </section>
     </AuroraBackground>
   );
 };

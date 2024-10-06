@@ -13,7 +13,7 @@ const Page = ({ searchParams }: { searchParams: { type: E_FormTypes } }) => {
   const { title } = data;
   return (
     <div className="flex flex-col gap-8 pb-20">
-      <div className="container pt-32">
+      <div className="container pt-32 [&>*]:text-center flex flex-col items-center justify-center">
         <div className="text-secondary font-bold inline-block text-2xl md:text-3xl lg:text-4xl pb-8">
           Congratulations!
         </div>
@@ -24,7 +24,7 @@ const Page = ({ searchParams }: { searchParams: { type: E_FormTypes } }) => {
         </div>
       </div>
       <Confetti />
-      <MeetOurCEO />
+      {/* <MeetOurCEO /> */}
       <CoreBenefits data={CoreBenefitsData} />
     </div>
   );

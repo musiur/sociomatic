@@ -13,9 +13,9 @@ const ProjectIdea = () => {
             skillful Global team. You can take a free counciling by taking a
             schedule
           </p>
-          <Link href="/get-a-quote">
-            <Button variant="outline" className="bg-white">
-              Get A Quote
+          <Link href="/get-a-quote" className="w-full flex items-center justify-center">
+            <Button variant="outline" className="bg-white w-full sm:w-auto">
+              Get Started
             </Button>
           </Link>
         </div>
