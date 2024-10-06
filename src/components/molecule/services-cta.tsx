@@ -34,12 +34,15 @@ const ServicesCTA = ({
           "text-right": position === "right",
         })}
       >
-        Go Here To Fill Out A 2-Minute Application For The Free Resources
+        Discover success in 2 minutes—Get Started to see our client success
+        stories!
       </p>
       <div className="grid grid-cols-1 min-[400px]:flex flex-wrap items-center justify-start gap-[12px]">
         <EmailModal buttonText={primary.text} path={primary.link} />
         <Link href="/#calendly" className="w-full sm:w-auto">
-          <Button variant="outline" className="w-full">{secondary.text}</Button>
+          <Button variant="outline" className="w-full">
+            {secondary.text}
+          </Button>
         </Link>
       </div>
     </ANIM__FadeInOutOnScroll>
