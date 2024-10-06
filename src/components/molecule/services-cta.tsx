@@ -38,8 +38,8 @@ const ServicesCTA = ({
       </p>
       <div className="grid grid-cols-1 min-[400px]:flex flex-wrap items-center justify-start gap-[12px]">
         <EmailModal buttonText={primary.text} path={primary.link} />
-        <Link href="/#calendly">
-          <Button variant="outline">{secondary.text}</Button>
+        <Link href="/#calendly" className="w-full sm:w-auto">
+          <Button variant="outline" className="w-full">{secondary.text}</Button>
         </Link>
       </div>
     </ANIM__FadeInOutOnScroll>
