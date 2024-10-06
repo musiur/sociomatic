@@ -1,4 +1,5 @@
 import Faq from "@/app/_utils/faq";
+import ClientsReviews from "@/app/case-studies/_utils/clients-reviews";
 import { Action___Get__Review_By_Category } from "@/app/reviews/post/_utils/actions";
 import CoreBenefits from "@/app/services/_utils/core-benefits";
 import EndingFunnel from "@/app/services/_utils/ending-funnel";
@@ -48,7 +49,8 @@ const Services = async ({ params }: { params: { slug: string } }) => {
       <LimitedOfferSection data={limitedOffer} />
       <WhatAndWhySection data={whyWeAndWhatWeDo} />
       <UserEmpathyBanner data={userEmpathy} />
-      {reviews?.length ? <Testimonials data={reviews} /> : null}
+      {/* {reviews?.length ? <Testimonials data={reviews} /> : null} */}
+      <ClientsReviews reviews={reviews} projectIdea={false} />
       <CoreBenefits data={coreBenefits} />
       <EndingFunnel data={endingFunnel} />
       <Faq data={faq} />
