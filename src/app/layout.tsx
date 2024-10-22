@@ -70,6 +70,13 @@ export default function RootLayout({
           type="text/javascript"
           src="//static.klaviyo.com/onsite/js/klaviyo.js?company_id=X5AtQr"
         /> */}
+        <script
+          id="vtag-ai-js"
+          async
+          src="https://r2.leadsy.ai/tag.js"
+          data-pid="1oBHnrjiydTAck930"
+          data-version="062024"
+        ></script>
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-WP6VXKV"
