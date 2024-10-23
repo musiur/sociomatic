@@ -17,7 +17,7 @@ const ClientsReviews = async ({
   }
   return (
     <>
-      {testimonial ? <Testimonials data={reviews} /> : null}
+      {testimonial && reviews?.length ? <Testimonials data={reviews} /> : null}
       {projectIdea ? <ProjectIdea /> : null}
     </>
   );

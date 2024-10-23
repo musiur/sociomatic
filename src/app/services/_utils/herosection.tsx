@@ -8,6 +8,7 @@ const ServiceHeroSection = ({
   data,
 }: {
   data: {
+    video: string;
     tagline: ReactElement;
     title: ReactElement;
     body: ReactElement;
@@ -23,7 +24,7 @@ const ServiceHeroSection = ({
     };
   };
 }) => {
-  const { tagline, title, body, cta } = data;
+  const { video, tagline, title, body, cta } = data;
 
   return (
     <div className="py-16">
@@ -41,7 +42,10 @@ const ServiceHeroSection = ({
         <div className="container flex flex-col gap-[48px]">
           <iframe
             className="w-full md:w-4/5 h-full min-h-[50vh] md:min-h-[60vh] rounded-2xl mx-auto border shadow-xl"
-            src="https://www.youtube.com/embed/eRxKwyhM59U?si=R66bAMX4xLgmqoCf"
+            src={
+              video ||
+              "https://www.youtube.com/embed/eRxKwyhM59U?si=R66bAMX4xLgmqoCf"
+            }
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
