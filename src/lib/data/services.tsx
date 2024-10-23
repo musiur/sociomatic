@@ -1,10 +1,41 @@
-import { Gift, PercentIcon, Star, Users, Palette, Target, Zap, Headphones, Layers, Maximize, Shield, Repeat, UserCheck, Briefcase, PenTool, Sliders, BarChart2, DollarSign, TrendingUp, Database, Cpu, Cloud, Server, Layout, Smartphone, Code, GitBranch, Eye, Compass, Crosshair, Feather, MessageCircle, BarChart, ShoppingCart, Settings, Wallet } from "lucide-react";
+import {
+  Gift,
+  PercentIcon,
+  Star,
+  Users,
+  Palette,
+  Target,
+  Zap,
+  Headphones,
+  Layers,
+  Maximize,
+  Shield,
+  Repeat,
+  Briefcase,
+  PenTool,
+  Sliders,
+  BarChart2,
+  DollarSign,
+  Database,
+  Cpu,
+  Cloud,
+  Layout,
+  Smartphone,
+  Code,
+  GitBranch,
+  Eye,
+  MessageCircle,
+  BarChart,
+  ShoppingCart,
+  Settings,
+  Wallet,
+} from "lucide-react";
 import Link from "next/link";
-
 
 export const ServicePageCOPY = {
   googleads: {
     hero: {
+      video: "https://www.youtube.com/embed/S8rncQvo-nU?si=JrIKuomxaHXBotUT",
       tagline: <>100% Trust Worthy Solutions</>,
       title: (
         <>
@@ -62,7 +93,7 @@ export const ServicePageCOPY = {
                 $2.50 Million Value)
               </>
             ),
-            icon: <Star />
+            icon: <Star />,
           },
           {
             id: 2,
@@ -73,7 +104,7 @@ export const ServicePageCOPY = {
                 a discounted rate to kickstart your growth.
               </>
             ),
-            icon: <PercentIcon />
+            icon: <PercentIcon />,
           },
           {
             id: 3,
@@ -85,7 +116,7 @@ export const ServicePageCOPY = {
                 seamlessly between Google Ads and Google Analytics
               </>
             ),
-            icon: <Gift />
+            icon: <Gift />,
           },
         ],
       },
@@ -376,6 +407,7 @@ export const ServicePageCOPY = {
   },
   customwebdev: {
     hero: {
+      video: "https://www.youtube.com/embed/1hZ8dJMv0WM?si=qP5at9LHY-DJVb3b",
       tagline: <>End-to-End Web Solutions</>,
       title: (
         <>
@@ -733,6 +765,7 @@ export const ServicePageCOPY = {
   },
   software: {
     hero: {
+      video: "https://www.youtube.com/embed/wDUhej5mgkQ?si=2NwVcxfn6JNI1fD3",
       tagline: <>Unlock Potential with Software Solutions</>,
       title: (
         <>
@@ -1086,6 +1119,7 @@ export const ServicePageCOPY = {
   },
   wordpress: {
     hero: {
+      video: "https://www.youtube.com/embed/2aM1vvkqalY?si=74fkvuCAFbHz7OkG",
       tagline: <>End-to-end WordPress solutions</>,
       title: (
         <>
@@ -1391,6 +1425,7 @@ export const ServicePageCOPY = {
   },
   shopify: {
     hero: {
+      video: "https://www.youtube.com/embed/wBliKrwi59s?si=7307wRLRTV8B6YtK",
       tagline: <>End-to-end Shopify solutions</>,
       title: (
         <>
@@ -1696,6 +1731,7 @@ export const ServicePageCOPY = {
   },
   uiux: {
     hero: {
+      video: "https://www.youtube.com/embed/1hZ8dJMv0WM?si=qP5at9LHY-DJVb3b",
       tagline: <>Modern UI/UX solutions</>,
       title: (
         <>
@@ -2013,6 +2049,7 @@ export const ServicePageCOPY = {
   },
   googleanalytics: {
     hero: {
+      video: "https://www.youtube.com/embed/5e6FG0603H0?si=Rz6NMoiwi2rqOuMl",
       tagline: <>Get Trust in Your Arsenal</>,
       title: (
         <>
@@ -2330,6 +2367,7 @@ export const ServicePageCOPY = {
   },
   socialmediapaidads: {
     hero: {
+      video: "https://www.youtube.com/embed/1hZ8dJMv0WM?si=qP5at9LHY-DJVb3b",
       tagline: <>Get Trust in Your Arsenal</>,
       title: (
         <>

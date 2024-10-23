@@ -5,7 +5,6 @@ import CoreBenefits from "@/app/services/_utils/core-benefits";
 import EndingFunnel from "@/app/services/_utils/ending-funnel";
 import ServiceHeroSection from "@/app/services/_utils/herosection";
 import LimitedOfferSection from "@/app/services/_utils/limited-offer-section";
-import Testimonials from "@/app/services/_utils/testimonials";
 import UserEmpathyBanner from "@/app/services/_utils/user-empathy-banner";
 import WhatAndWhySection from "@/app/services/_utils/what-and-why-section";
 import { ServicePageCOPY } from "@/lib/data/services";
