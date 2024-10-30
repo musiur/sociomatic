@@ -34,8 +34,7 @@ const ServicesCTA = ({
           "text-right": position === "right",
         })}
       >
-        Discover success in 2 minutes—Get Started to see our client success
-        stories!
+        Get a free one-on-one Consultation
       </p>
       <div className="grid grid-cols-1 min-[400px]:flex flex-wrap items-center justify-start gap-[12px]">
         <EmailModal buttonText={primary.text} path={primary.link} />
