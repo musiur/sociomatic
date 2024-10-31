@@ -23,7 +23,7 @@ const CoreBenefits = ({
   const { tagline, title, body } = data;
   const { para, benefits } = body;
   return (
-    <div className="py-[64px] space-y-8">
+    <div className="pt-[64px] pb-[128px] space-y-8">
       <ANIM__FadeInOutOnScroll className="container flex flex-col items-center justify-center gap-[32px]">
         <Tagline text={tagline} />
         <h2 className="h2 text-primary text-center [&>span]:text-secondary [&>span]:px-3">
