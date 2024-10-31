@@ -1,4 +1,5 @@
 import ANIM__FadeInOutOnScroll from "@/components/anims/fadein.anim";
+import GraphicAggrementBoard from "@/components/assets/aggrement-board";
 import TransactionDashboard from "@/components/assets/transactions-dashbaord";
 import ServicesCTA from "@/components/molecule/services-cta";
 import { ReactElement } from "react";
@@ -30,7 +31,8 @@ const EndingFunnel = ({
 
           <ServicesCTA cta={cta} />
         </ANIM__FadeInOutOnScroll>
-        <TransactionDashboard className="w-full hidden sm:block" />
+        {/* <TransactionDashboard className="w-full hidden sm:block" /> */}
+        <GraphicAggrementBoard className="w-full hidden sm:block" />
       </ANIM__FadeInOutOnScroll>
     </div>
   );
