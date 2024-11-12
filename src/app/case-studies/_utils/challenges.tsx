@@ -6,8 +6,8 @@ const Challenges = ({
   data = Challengesdata,
 }: {
   data?: {
-    title: string;
-    description: string;
+    title: ReactElement;
+    description: ReactElement;
     challenges: { id: number; text: ReactElement }[];
   };
 }) => {
@@ -17,7 +17,7 @@ const Challenges = ({
       <ANIM__FadeInOutOnScroll className="container section space-y-[48px]">
         <div className="max-w-[640px] mx-auto [&>*]:text-center space-y-[32px]">
           <h2>{title}</h2>
-          <p>{description}</p>
+          <p className="[&>span]:font-bold">{description}</p>
         </div>
         <ANIM__FadeInOutOnScroll className="grid grid-cols-1 sm:grid-cols-2 gap-10">
           {challenges.map((challenge: { id: number; text: ReactElement }) => {
@@ -40,9 +40,9 @@ const Challenges = ({
 export default Challenges;
 
 const Challengesdata = {
-  title: "Challenges We Have Faced",
+  title: <>Challenges We Have Faced</>,
   description:
-    "With our easy-to-use solutions, start a smooth Google Ads experience to streamline the procedure for newbies to guarantee peak performance - the best Return On Investment (ROI)",
+    <>With our easy-to-use solutions, start a smooth Google Ads experience to streamline the procedure for newbies to guarantee peak performance - the best Return On Investment (ROI)</>,
   challenges: [
     {
       id: 1,

@@ -22,7 +22,7 @@ const FeatureCartIconText = ({
         0{id}
       </div>
       <p
-        className={clsx("text-sm lg:text-base", {
+        className={clsx("text-sm lg:text-base [&>span]:font-bold", {
           "text-left": alignment === "left",
           "text-right": alignment === "right",
         })}

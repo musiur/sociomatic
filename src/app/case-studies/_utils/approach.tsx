@@ -8,8 +8,8 @@ const Approach = ({
   data = apporachData,
 }: {
   data?: {
-    title: string;
-    description: string;
+    title: ReactElement;
+    description: ReactElement;
     approaches: { id: number; text: ReactElement }[];
     image: string;
   };
@@ -45,9 +45,14 @@ const Approach = ({
 export default Approach;
 
 const apporachData = {
-  title: "Our Strategic Approaches",
-  description:
-    "With our easy-to-use solutions, start a smooth Google Ads experience to streamline the procedure for newbies to guarantee peak performance - the best Return On Investment (ROI)",
+  title: <>Our Strategic Approaches</>,
+  description: (
+    <span>
+      With our easy-to-use solutions, start a smooth Google Ads experience to
+      streamline the procedure for newbies to guarantee peak performance - the
+      best Return On Investment (ROI)
+    </span>
+  ),
   approaches: [
     {
       id: 1,

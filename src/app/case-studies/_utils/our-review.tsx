@@ -31,9 +31,9 @@ const OurReview = ({
 
         <ANIM__FadeInOutOnScroll className="flex flex-col min-[950px]:flex-row items-center justify-center gap-16">
           <ANIM__FadeInOutOnScroll className="max-w-[500px] space-y-[32px]">
-            <p className="text-lg md:text-xl xl:text-2xl text-center min-[950px]:text-right italic">
+            <div className="text-lg md:text-xl xl:text-2xl text-center min-[950px]:text-right italic text-white/60 [&>span]:text-white [&>span]:text-lg md:[&>span]:text-xl xl:[&>span]:text-2xl [&>span]:font-bold [&>span]:px-2">
               {qouteText}
-            </p>
+            </div>
             <div className="flex items-center justify-center min-[950px]:justify-end gap-4">
               <div className="space-y-1 order-2 min-[950px]:order-1">
                 {/* <Link href="/"> */}
@@ -41,7 +41,7 @@ const OurReview = ({
                   {name}
                 </p>
                 {/* </Link> */}
-                <p className="text-xs md:text-base">{org}</p>
+                <p className="text-xs md:text-base text-white/60">{org}</p>
               </div>
               <Avatar className="order-1 min-[950px]:order-1">
                 <AvatarImage src={avatar} />

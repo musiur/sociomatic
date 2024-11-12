@@ -38,7 +38,7 @@ const Hero = ({
         <h1 className="h1 text-primary text-center [&>span]:text-secondary">
           {title}
         </h1>
-        <p className="max-w-[640px] text-center">{body}</p>
+        <p className="max-w-[640px] text-center [&>span]:font-bold">{body}</p>
         <div className="flex flex-wrap items-center justify-center gap-16">
           {data.features.map((feature) => {
             const { id, text, icon } = feature;
@@ -48,7 +48,7 @@ const Hero = ({
                 className="inline-flex items-center gap-2 [&>svg]:stroke-[2px] [&>svg]:stroke-secondary"
               >
                 {icon}
-                <p className="inline-flex gap-1 [&>span]:text-primary font-medium text-primary/50">
+                <p className="inline-flex gap-1 [&>span]:text-primary font-medium text-primary/50 [&>span]:font-bold">
                   {text}
                 </p>
               </div>
