@@ -48,7 +48,7 @@ const HeroSection = ({
           </ANIM__FadeInOnScroll>
           <ANIM__FadeInOnScroll className="order-1 lg:order-2">
             {[
-              <div key={1} className="min-h-[200px] shadow-2xl z-10 relative rounded-2xl">
+              <div key={1} className="min-h-[300px] shadow-2xl z-10 relative rounded-2xl">
                 <iframe
                   className="w-full h-full min-h-[30vh] md:min-h-[60vh] lg:min-h-[40vh] rounded-2xl mx-auto border shadow-xl"
                   src="https://www.youtube.com/embed/eRxKwyhM59U?si=R66bAMX4xLgmqoCf"

@@ -10,7 +10,6 @@ import CookiePolicyNotificationBar from "@/components/molecule/cookie-policy";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import PageView from "@/lib/datalayer/page-view";
 import { Poppins, Lato } from "next/font/google";
-import Script from "next/script";
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -66,10 +65,7 @@ export default function RootLayout({
       </head>
 
       <body className={`${poppins.className} ${lato.variable}`}>
-        {/* <Script
-          type="text/javascript"
-          src="//static.klaviyo.com/onsite/js/klaviyo.js?company_id=X5AtQr"
-        /> */}
+
         <script
           id="vtag-ai-js"
           async
@@ -93,7 +89,7 @@ export default function RootLayout({
         <main className="overflow-hidden">{children}</main>
         <SpeedInsights />
         <Toaster />
-        <CookiePolicyNotificationBar />
+        {/* <CookiePolicyNotificationBar /> */}
         <WhatsApp />
         <GotoTop />
         <Footer />

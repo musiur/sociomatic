@@ -20,7 +20,7 @@ const About = ({
           {paragraphs.map((para: { id: number; text: ReactElement }) => {
             const { id, text } = para;
             return (
-              <p key={id} className="text-sm lg:text-base">
+              <p key={id} className="text-sm lg:text-base [&>span]:font-bold">
                 {text}
               </p>
             );
