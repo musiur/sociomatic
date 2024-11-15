@@ -31,7 +31,7 @@ const Home = () => {
             <span>campaigns</span>, and extensive <span>maintenance</span>
           </>
         }
-        videoLink="https://www.youtube.com/embed/Gl465-ugqbM?si=Njv8OZykPsz9LsYZ"
+        videoLink="https://www.youtube.com/embed/04pWB5aj-DE?si=KhMa8PqMC6WmL_K1"
         brands={true}
         background="HeroBackground"
       />
