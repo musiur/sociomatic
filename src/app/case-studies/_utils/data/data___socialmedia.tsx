@@ -143,7 +143,7 @@ export const DATA___Socialmedia = {
         },
       ],
     },
-    apporach: {
+    approach: {
       title: <>Our Strategic Approaches</>,
       description: (
         <>

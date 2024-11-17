@@ -247,26 +247,26 @@ const Links = [
       //   text: "Software Development",
       //   link: "/case-studies/software-development",
       // },
-      // {
-      //   id: 5,
-      //   text: "Web Development",
-      //   link: "/case-studies/custom-web-development",
-      // },
+      {
+        id: 5,
+        text: "Web Development",
+        link: "/case-studies/custom-web-development",
+      },
       // {
       //   id: 6,
       //   text: "Shopify Development",
       //   link: "/case-studies/shopify-store-development",
       // },
-      // {
-      //   id: 7,
-      //   text: "Wordpress Development",
-      //   link: "/case-studies/wordpress-development",
-      // },
-      // {
-      //   id: 8,
-      //   text: "UI/UX & Graphic Design",
-      //   link: "/case-studies/ui-ux-and-graphic-design",
-      // },
+      {
+        id: 7,
+        text: "Wordpress Development",
+        link: "/case-studies/wordpress-development",
+      },
+      {
+        id: 8,
+        text: "UI/UX & Graphic Design",
+        link: "/case-studies/ui-ux-and-graphic-design",
+      },
     ],
   },
   {

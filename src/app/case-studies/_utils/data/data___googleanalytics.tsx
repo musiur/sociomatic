@@ -141,7 +141,7 @@ export const DATA___Googleanalytics = {
       },
     ],
   },
-  apporach: {
+  approach: {
     title: <>Our Strategic Approaches</>,
     description: (
       <>
