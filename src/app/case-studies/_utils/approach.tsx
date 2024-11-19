@@ -5,7 +5,7 @@ import SectionSideImage from "./sections-side-image";
 import ANIM__FadeInOutOnScroll from "@/components/anims/fadein.anim";
 
 const Approach = ({
-  data = apporachData,
+  data = approachData,
 }: {
   data?: {
     title: ReactElement;
@@ -31,7 +31,6 @@ const Approach = ({
                 key={id}
                 id={id}
                 text={text}
-                alignment={id % 2 === 0 ? "right" : "left"}
               />
             );
           })}
@@ -44,7 +43,7 @@ const Approach = ({
 
 export default Approach;
 
-const apporachData = {
+const approachData = {
   title: <>Our Strategic Approaches</>,
   description: (
     <span>

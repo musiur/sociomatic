@@ -38,8 +38,8 @@ const Home = () => {
       <BrandCarousel />
       <OurServices FeaturesData={homeFeaturesData.slice(0, 6)} />
       <OurProcess />
-      <HowWeWork />
       <Testimonial calendly={true} data={homeTestimonialData} />
+      <HowWeWork />
       <div className="bg-[url('/images/backgrounds/CircleNest.svg')] bg-center bg-cover">
         <Faq data={homeFAQ} />
         <ProjectIdea />

@@ -48,7 +48,7 @@ export const DATA___Googleads = {
       ],
       cta: {
         primary: {
-          text: <>Get other case studies</>,
+          text: <>See proven results</>,
           link: "/",
         },
         secondary: {
@@ -58,7 +58,7 @@ export const DATA___Googleads = {
       },
     },
     about: {
-      image: "https://utfs.io/f/915ff318-de2b-4494-b3df-73a78967133d-9fmvb.png",
+      image: "https://utfs.io/f/TLm9XcQ0Drp9QVCs1bzJOXn07FcSGmxihE9u8RMCHgVwl16P",
       paragraphs: [
         {
           id: 1,
@@ -141,7 +141,7 @@ export const DATA___Googleads = {
         },
       ],
     },
-    apporach: {
+    approach: {
       title: <>Our Strategic Approaches</>,
       description: (
         <>
@@ -191,10 +191,10 @@ export const DATA___Googleads = {
           ),
         },
       ],
-      image: "https://utfs.io/f/915ff318-de2b-4494-b3df-73a78967133d-9fmvb.png",
+      image: "https://utfs.io/f/TLm9XcQ0Drp9QVCs1bzJOXn07FcSGmxihE9u8RMCHgVwl16P",
     },
     result: {
-      image: "https://utfs.io/f/915ff318-de2b-4494-b3df-73a78967133d-9fmvb.png",
+      image: "https://utfs.io/f/TLm9XcQ0Drp9JAGiGra9E2SNJBQlTAsxDIm4fg0doXLUVjRv",
       description: (
         <>
           Our efforts led to <span>remarkable results</span> over one year,
@@ -274,6 +274,6 @@ export const DATA___Googleads = {
         avatar: "https://github.com/shadcn.png",
         org: "Skin Healing Expert, BBC Dragon's Den Brand",
       },
-      image: "https://utfs.io/f/915ff318-de2b-4494-b3df-73a78967133d-9fmvb.png",
+      image: "https://utfs.io/f/TLm9XcQ0Drp9ED6zD8GSylPMoGRzqraO8f3UChiNwJZBcA6Y",
     },
   }

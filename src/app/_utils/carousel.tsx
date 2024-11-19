@@ -1,18 +1,13 @@
 "use client";
 
-import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
-import Link from "next/link";
 import ANIM__FadeInOnScroll from "@/components/anims/fadein.anim";
 
-import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel";
 
 export const BrandCarousel = () => {
@@ -32,11 +27,11 @@ export const BrandCarousel = () => {
       image: "grovebedding.png",
       link: "https://grovebedding.com/?utm_source=google&utm_medium=organic",
     },
-    {
-      id: 4,
-      image: "mbc2.png",
-      link: "https://www.mbc2.de/",
-    },
+    // {
+    //   id: 4,
+    //   image: "mbc2.png",
+    //   link: "https://www.mbc2.de/",
+    // },
     {
       id: 5,
       image: "k9cakery.png",

@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import Link from "next/link";
 import { ReactElement } from "react";
 import ANIM__FadeInOutOnScroll from "@/components/anims/fadein.anim";
+import MagnifierImage from "@/components/molecule/magnifier-image";
 
 const OurReview = ({
   data = reviewData,
@@ -21,6 +21,8 @@ const OurReview = ({
 }) => {
   const { title, description, review, image } = data;
   const { avatar, qouteText, org, name } = review;
+  const defaultImage =
+    "https://utfs.io/f/915ff318-de2b-4494-b3df-73a78967133d-9fmvb.png";
   return (
     <section className="bg-gradient-to-tr from-primary to-secondary [&>*]:text-white">
       <div className="container section space-y-[48px]">
@@ -49,14 +51,24 @@ const OurReview = ({
               </Avatar>
             </div>
           </ANIM__FadeInOutOnScroll>
-          <div className="max-w-[500px] h-auto p-4 rounded-lg bg-white/90 backdrop-blur-xl">
-            <Image
-              src={image}
-              alt=""
-              width={1000}
-              height={1000}
-              className="w-full h-auto my-auto"
-            />
+          <div className="max-w-[500px] h-auto">
+            {image && image !== defaultImage ? (
+              <MagnifierImage
+                src={image}
+                alt=""
+                width={500}
+                height={500}
+                className="max-w-[400px] max-h-[500px] my-auto rounded-[40px]"
+              />
+            ) : (
+              <Image
+                src={defaultImage}
+                alt=""
+                width={500}
+                height={500}
+                className="max-w-[400px] max-h-[500px] my-auto"
+              />
+            )}
           </div>
         </ANIM__FadeInOutOnScroll>
       </div>

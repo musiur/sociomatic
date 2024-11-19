@@ -14,16 +14,15 @@ const CaseStudiesTemplate = ({ params }: { params: { slug: string } }) => {
   let data = CaseStudiesData["google-paid-ads"];
   if (Object.keys(CaseStudiesData).includes(params.slug)) {
     const key = params.slug;
-    console.log({key})
     data = CaseStudiesData[key as T__Slug];
   }
-  const { hero, about, challenge, apporach, result, review } = data;
+  const { hero, about, challenge, approach, result, review } = data;
   return (
     <Fragment>
       <Hero data={hero} />
       <About data={about} />
       <Challenges data={challenge} />
-      <Approach data={apporach} />
+      <Approach data={approach} />
       <Results data={result} />
       <OurReview data={review} />
       <ClientsReviews testimonial={false} />
