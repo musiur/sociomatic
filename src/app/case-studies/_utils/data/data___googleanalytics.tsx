@@ -45,7 +45,7 @@ export const DATA___Googleanalytics = {
     ],
     cta: {
       primary: {
-        text: <>Get other case studies</>,
+        text: <>See proven results</>,
         link: "/",
       },
       secondary: {

@@ -38,7 +38,7 @@ const MagnifierImage: React.FC<MagnifierImageProps> = ({
   return (
     <div
       className="relative overflow-visible"
-      style={{ width, height }}
+      style={{ width: "inherit", height: "inherit" }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >

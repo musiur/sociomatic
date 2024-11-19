@@ -44,7 +44,7 @@ export const DATA___UIUX = {
       ],
       cta: {
         primary: {
-          text: <>Get other case studies</>,
+          text: <>See proven results</>,
           link: "/",
         },
         secondary: {

@@ -31,7 +31,6 @@ const Approach = ({
                 key={id}
                 id={id}
                 text={text}
-                alignment={id % 2 === 0 ? "right" : "left"}
               />
             );
           })}

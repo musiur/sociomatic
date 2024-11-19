@@ -304,7 +304,7 @@ const data___googleads = {
           <span>We mean it</span>
         </>
       ),
-      image: "https://utfs.io/f/TLm9XcQ0Drp9ED6zD8GSylPMoGRzqraO8f3UChiNwJZBcA6Y",
+      image: "https://utfs.io/f/TLm9XcQ0Drp9HFudVV63lrKW6cbSangxZGDNTm1szfYJEjkL",
       body: (
         <>
           Spots for The Sociomatic&apos;s Google Ads Family are filling up

@@ -44,7 +44,7 @@ export const DATA___Webdev = {
       ],
       cta: {
         primary: {
-          text: <>Get other case studies</>,
+          text: <>See proven results</>,
           link: "/",
         },
         secondary: {
