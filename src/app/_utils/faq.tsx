@@ -1,6 +1,5 @@
 "use client";
 import ANIM__FadeInOutOnScroll from "@/components/anims/fadein.anim";
-import SectionHead from "@/components/molecule/section-head";
 import {
   Accordion,
   AccordionContent,

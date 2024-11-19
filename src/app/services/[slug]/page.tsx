@@ -7,7 +7,7 @@ import ServiceHeroSection from "@/app/services/_utils/herosection";
 import LimitedOfferSection from "@/app/services/_utils/limited-offer-section";
 import UserEmpathyBanner from "@/app/services/_utils/user-empathy-banner";
 import WhatAndWhySection from "@/app/services/_utils/what-and-why-section";
-import { ServicePageCOPY } from "@/lib/data/services";
+import { ServicePageCOPY } from "@/app/services/_utils/data/services";
 
 export type T__SlugType =
   | "googleads"

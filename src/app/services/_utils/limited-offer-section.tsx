@@ -1,8 +1,8 @@
 import ANIM__FadeInOutOnScroll from "@/components/anims/fadein.anim";
+import MagnifierImage from "@/components/molecule/magnifier-image";
 import ServicesCTA from "@/components/molecule/services-cta";
 import Image from "next/image";
 import { ReactElement } from "react";
-import FlyingRocket from "@/components/assets/FlyingRocket.png";
 
 const LimitedOfferSection = ({
   data,
@@ -10,6 +10,7 @@ const LimitedOfferSection = ({
   data: {
     tagline: ReactElement;
     title: ReactElement;
+    image: string;
     body: {
       para: ReactElement;
       benefits: { id: number; title: ReactElement; paragraph: ReactElement }[];
@@ -20,17 +21,29 @@ const LimitedOfferSection = ({
     };
   };
 }) => {
-  const { title, body, cta } = data;
+  const { title, body, cta, image } = data;
   const { para, benefits } = body;
+  const defaultImage =
+    "https://utfs.io/f/TLm9XcQ0Drp9XyQOfuw2mQDWcPdinh2OTCGSAMHj5ubsEyo1";
   return (
     <div className="container pb-[96px] flex flex-col min-[700px]:flex-row gap-10 items-center justify-center">
-      <Image
-        src={FlyingRocket}
-        alt="limited offer"
-        width={500}
-        height={500}
-        className="w-full h-auto"
-      />
+      {image && image !== defaultImage ? (
+        <MagnifierImage
+          src={image}
+          alt="limited offer"
+          width={500}
+          height={500}
+          className="w-full h-auto max-w-[400px] rounded-[40px]"
+        />
+      ) : (
+        <Image
+          src={defaultImage}
+          alt="limited offer"
+          width={500}
+          height={500}
+          className="w-full h-auto max-w-[400px] rounded"
+        />
+      )}
 
       <ANIM__FadeInOutOnScroll className="space-y-[32px] max-w-[600px]">
         <h2 className="h2 text-primary leading-normal [&>span]:px-3 [&>span]:text-secondary [&>span]:bg-muted">
