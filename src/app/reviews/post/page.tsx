@@ -7,15 +7,15 @@ import DeleteReview from "./_utils/delete-review";
 
 const Page = async () => {
   const reviews = await Action___GET__AllReviews();
-
+  return null;
   return (
     <>
-      {/* <section className="container section space-y-4">
+      <section className="container section space-y-4">
         <h2>Add a new review</h2>
         <div className="max-w-[460px] bg-gray-100 p-4 md:p-8 rounded-xl">
           <ReviewPostForm />
         </div>
-      </section> */}
+      </section>
       <section className="container section space-y-4">
         <h2>All Reviews</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -27,13 +27,13 @@ const Page = async () => {
                   className="border rounded-2xl p-1 flex flex-col items-center justify-center"
                 >
                   <TestimonialCard details={review} />
-                  {/* <div className="py-2 flex items-center gap-2">
+                  <div className="py-2 flex items-center gap-2">
                     <div className="p-2 bg-gray-200 border">{index + 1}</div>
                     <Button size="icon" variant="outline" disabled>
                       <Edit />
                     </Button>
                     <DeleteReview id={review?._id} />
-                  </div> */}
+                  </div>
                 </div>
               );
             })
