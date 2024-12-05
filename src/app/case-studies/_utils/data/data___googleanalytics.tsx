@@ -55,7 +55,7 @@ export const DATA___Googleanalytics = {
     },
   },
   about: {
-    image: "https://utfs.io/f/915ff318-de2b-4494-b3df-73a78967133d-9fmvb.png",
+    image: "https://utfs.io/f/TLm9XcQ0Drp9XqB8IE2mQDWcPdinh2OTCGSAMHj5ubsEyo1L",
     paragraphs: [
       {
         id: 1,
@@ -202,10 +202,10 @@ export const DATA___Googleanalytics = {
         ),
       },
     ],
-    image: "https://utfs.io/f/915ff318-de2b-4494-b3df-73a78967133d-9fmvb.png",
+    image: "https://utfs.io/f/TLm9XcQ0Drp9FSMXcxvqQdfs7iR41D96kJZWo0uK2LTHz5ex",
   },
   result: {
-    image: "https://utfs.io/f/915ff318-de2b-4494-b3df-73a78967133d-9fmvb.png",
+    image: "https://utfs.io/f/TLm9XcQ0Drp9ZVXED3AHrgZ0HcJLmNYeCSPw1Dz5Wox3OlsF",
     description: (
       <>
         Our implementation of <span>Google Analytics and GTM</span> had a
@@ -291,6 +291,6 @@ export const DATA___Googleanalytics = {
       avatar: "https://github.com/shadcn.png",
       org: "Skin Healing Expert, BBC Dragon's Den Brand",
     },
-    image: "https://utfs.io/f/915ff318-de2b-4494-b3df-73a78967133d-9fmvb.png",
+    image: "https://utfs.io/f/TLm9XcQ0Drp9W31uT3LNLzEa1lZ9kY8psT2JSQicPVCdDIFy",
   },
 };
