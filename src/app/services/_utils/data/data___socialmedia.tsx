@@ -1,3 +1,4 @@
+import CurrentYear from "@/components/molecule/current-year";
 import {
     Palette,
     Target,
@@ -13,14 +14,14 @@ const data___socialmedia = {
       tagline: <>Get Trust in Your Arsenal</>,
       title: (
         <>
-          2024 is <span>Your Year to Explode Growth</span>: Will Your Business
+          <CurrentYear /> is <span>Your Year to Explode Growth</span>: Will Your Business
           Be Left Behind? (47 Spots Available)
         </>
       ),
       body: (
         <>
           Description: A handful of business owners are about to unlock
-          explosive growth in 2024... Are you ready to join them? At The
+          explosive growth in <CurrentYear />... Are you ready to join them? At The
           Sociomatic,
           <span>
             we&apos;re on a mission to empower Fifty businesses this year

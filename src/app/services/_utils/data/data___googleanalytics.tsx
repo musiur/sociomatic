@@ -1,3 +1,4 @@
+import CurrentYear from "@/components/molecule/current-year";
 import {
     Target,
     Zap,
@@ -40,7 +41,7 @@ const data___googleanalytics = {
       tagline: <></>,
       title: (
         <>
-          <span>Redefine!</span> User Engagement in 2024
+          <span>Redefine!</span> User Engagement in <CurrentYear />
         </>
       ),
       image: "https://utfs.io/f/TLm9XcQ0Drp9XyQOfuw2mQDWcPdinh2OTCGSAMHj5ubsEyo1",

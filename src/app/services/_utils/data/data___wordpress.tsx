@@ -1,3 +1,4 @@
+import CurrentYear from "@/components/molecule/current-year";
 import {
     Users,
     Zap,
@@ -45,7 +46,7 @@ const data___wordpress = {
       tagline: <></>,
       title: (
         <>
-          <span>Unlock!</span> Explosive Growth in 2024
+          <span>Unlock!</span> Explosive Growth in <CurrentYear />
         </>
       ),
       image: "https://utfs.io/f/TLm9XcQ0Drp9XyQOfuw2mQDWcPdinh2OTCGSAMHj5ubsEyo1",

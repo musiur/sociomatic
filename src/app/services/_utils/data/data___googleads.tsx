@@ -1,3 +1,4 @@
+import CurrentYear from "@/components/molecule/current-year";
 import {
     Gift,
     PercentIcon,
@@ -20,14 +21,14 @@ const data___googleads = {
       tagline: <>100% Trust Worthy Solutions</>,
       title: (
         <>
-          2024 is Your <span>Year to Explode Growth:</span> Will Your Business
+          <CurrentYear /> is Your <span>Year to Explode Growth:</span> Will Your Business
           Be Left Behind? (Limited Spots Available)
         </>
       ),
       body: (
         <>
           Just a handful of business owners are about to unlock explosive growth
-          in 2024... Are you ready to join them? At The Sociomatic, Take your
+          in <CurrentYear />... Are you ready to join them? At The Sociomatic, Take your
           chance to be one of them.
           <span>we&apos;re on a mission to empower thirty businesses</span>this
           year with game-changing Google Ads strategies.
