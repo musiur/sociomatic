@@ -43,12 +43,13 @@ function SoftwareDevelopmentForm() {
         });
         if (typeof window !== "undefined") {
           if (result.success) {
-            router.push("/joining/end?type=software");
+            
             DL___FormData(
               form.getValues(),
               "joiningSoftwareFormSubmission",
               "joining_software_form_submission"
             );
+            router.push("/joining/end?type=software");
           } else {
             DL___FormData(
               form.getValues(),

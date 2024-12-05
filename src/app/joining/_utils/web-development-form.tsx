@@ -44,12 +44,13 @@ function WebDevelopmentForm() {
         });
         if (typeof window !== "undefined") {
           if (result.success) {
-            router.push("/joining/end?type=customwebdev");
+            
             DL___FormData(
               form.getValues(),
               "joiningWebFormSubmission",
               "joining_web_form_submission"
             );
+            router.push("/joining/end?type=customwebdev");
           } else {
             DL___FormData(
               form.getValues(),

@@ -44,12 +44,13 @@ function UiUxForm() {
         });
         if (typeof window !== "undefined") {
           if (result.success) {
-            router.push("/joining/end?type=uiux");
+            
             DL___FormData(
               form.getValues(),
               "joiningUiUxFormSubmission",
               "joining_uiux_form_submission"
             );
+            router.push("/joining/end?type=uiux");
           } else {
             DL___FormData(
               form.getValues(),
