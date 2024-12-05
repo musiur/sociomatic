@@ -6,13 +6,13 @@ import ANIM__FadeInOutOnScroll from "../anims/fadein.anim";
 
 const Footer = () => {
   return (
-    <footer className="bg-muted">
+    <footer className="bg-gradient-to-b from-primary via-primary to-secondary [&>*]:text-white">
       <div className="h-2 bg-gradient-to-r from-secondary/5 via-secondary to-secondary/5"></div>
       <div className="section container">
         <section className="flex flex-col sm:flex-row flex-wrap items-start justify-between large-gap md:small-gap">
           <ANIM__FadeInOutOnScroll className="order-4 md:order-first w-full md:w-auto">
             <div className="small-gap">
-              <BrandLogo />
+              <BrandLogo dark={true} />
             </div>
             <p className="py-[25px]">
               Business Center 1, M Floor, Nad Al Sheba, Dubai, U.A.E
@@ -54,7 +54,7 @@ const Footer = () => {
                 key={item.id}
                 className=" flex flex-col items-start flex-start small-gap md:flex-start"
               >
-                <h4 className="font-medium text-secondary text-lg md:text-xl">
+                <h4 className="font-medium text-white text-lg md:text-xl">
                   {item.title}
                 </h4>
                 {item.links.map((link) => {
