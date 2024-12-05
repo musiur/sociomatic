@@ -1,3 +1,4 @@
+import CurrentYear from "@/components/molecule/current-year";
 import {
     Palette,
     BarChart2,
@@ -41,7 +42,7 @@ const data___shopify = {
       tagline: <></>,
       title: (
         <>
-          <span>Unlock!</span> Explosive Growth in 2024
+          <span>Unlock!</span> Explosive Growth in <CurrentYear />
         </>
       ),
       image: "https://utfs.io/f/TLm9XcQ0Drp9XyQOfuw2mQDWcPdinh2OTCGSAMHj5ubsEyo1",
@@ -49,7 +50,7 @@ const data___shopify = {
         para: (
           <>
             Just a handful of business owners are about to unlock explosive
-            growth in 2024. Are you ready to join them? At The Sociomatic,
+            growth in <CurrentYear />. Are you ready to join them? At The Sociomatic,
             we&apos;re on a mission to empower thirty businesses this year with
             game-changing strategies.
           </>

@@ -1,3 +1,4 @@
+import CurrentYear from "@/components/molecule/current-year";
 import {
   Palette,
   Maximize,
@@ -43,7 +44,7 @@ const data___software = {
     tagline: <></>,
     title: (
       <>
-        <span>Revolutionize!</span> Your Busniess in 2024
+        <span>Revolutionize!</span> Your Busniess in <CurrentYear />
       </>
     ),
     image: "https://utfs.io/f/TLm9XcQ0Drp9XyQOfuw2mQDWcPdinh2OTCGSAMHj5ubsEyo1",
@@ -51,7 +52,7 @@ const data___software = {
       para: (
         <>
           Join the ranks of successful businesses poised for exponential growth
-          in 2024. Sociomatic is offering exclusive opportunities to harness the
+          in <CurrentYear />. Sociomatic is offering exclusive opportunities to harness the
           power of custom software solutions. Contact us now to unlock your
           business&apos;s full potential and stay ahead of the competition.
         </>

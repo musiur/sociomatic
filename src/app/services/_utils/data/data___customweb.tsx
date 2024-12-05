@@ -1,3 +1,4 @@
+import CurrentYear from "@/components/molecule/current-year";
 import {
     Palette,
     Zap,
@@ -49,14 +50,14 @@ const data___customweb = {
       tagline: <>Exclusive Opportunity for Rapid Business Growth</>,
       title: (
         <>
-          <span>Accelerate!</span> Your Success in 2024
+          <span>Accelerate!</span> Your Success in <CurrentYear />
         </>
       ),
       image: "https://utfs.io/f/TLm9XcQ0Drp9XyQOfuw2mQDWcPdinh2OTCGSAMHj5ubsEyo1",
       body: {
         para: (
           <>
-            Don&apos;t miss the chance to propel your business forward in 2024.
+            Don&apos;t miss the chance to propel your business forward in <CurrentYear />.
             Sociomatic offers special deals on custom web development services
             to expedite your digital ambitions.
             <span>
