@@ -7,7 +7,7 @@ import DeleteReview from "./_utils/delete-review";
 
 const Page = async () => {
   const reviews = await Action___GET__AllReviews();
-
+  return null;
   return (
     <>
       <section className="container section space-y-4">
