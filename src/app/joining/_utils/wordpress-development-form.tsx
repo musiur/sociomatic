@@ -44,12 +44,13 @@ function WordpressDevelopmentForm() {
         });
         if (typeof window !== "undefined") {
           if (result.success) {
-            router.push("/joining/end?type=wordpress");
+            
             DL___FormData(
               form.getValues(),
               "joiningWordpressFormSubmission",
               "joining_wordpress_form_submission"
             );
+            router.push("/joining/end?type=wordpress");
           } else {
             DL___FormData(
               form.getValues(),

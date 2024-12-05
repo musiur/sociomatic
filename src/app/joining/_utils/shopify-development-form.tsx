@@ -43,12 +43,13 @@ function ShopifyDevelopmentForm() {
         });
         if (typeof window !== "undefined") {
           if (result.success) {
-            router.push("/joining/end?type=shopify");
+            
             DL___FormData(
               form.getValues(),
               "joiningShopifyFormSubmission",
               "joining_shopify_form_submission"
             );
+            router.push("/joining/end?type=shopify");
           } else {
             DL___FormData(
               form.getValues(),

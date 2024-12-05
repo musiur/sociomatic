@@ -43,12 +43,13 @@ function GoogleAnalyticsForm() {
         });
         if (typeof window !== "undefined") {
           if (result.success) {
-            router.push("/joining/end?type=googleanalytics");
+            
             DL___FormData(
               form.getValues(),
               "joiningGoogleAnalyticsFormSubmission",
               "joining_google_analytics_form_submission"
             );
+            router.push("/joining/end?type=googleanalytics");
           } else {
             DL___FormData(
               form.getValues(),

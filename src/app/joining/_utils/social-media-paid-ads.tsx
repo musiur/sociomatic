@@ -46,12 +46,13 @@ function SocialMediaPaidAdsForm() {
         });
         if (typeof window !== "undefined") {
           if (result.success) {
-            router.push("/joining/end?type=socialmediapaidads");
+            
             DL___FormData(
               form.getValues(),
               "joiningSocialMediaAdsFormSubmission",
               "joining_social_media_ads_form_submission"
             );
+            router.push("/joining/end?type=socialmediapaidads");
           } else {
             DL___FormData(
               form.getValues(),

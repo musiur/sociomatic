@@ -43,12 +43,13 @@ function GoogleAdsForm() {
         });
         if (typeof window !== "undefined") {
           if (result.success) {
-            router.push("/joining/end?type=googleads");
+            
             DL___FormData(
               data,
               "joiningGoogleAdsFormSubmission",
               "joining_google_ads_form_submission"
             );
+            router.push("/joining/end?type=googleads");
           } else {
             DL___FormData(
               data,
