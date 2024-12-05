@@ -10,6 +10,7 @@ import CookiePolicyNotificationBar from "@/components/molecule/cookie-policy";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import PageView from "@/lib/datalayer/page-view";
 import { Poppins, Lato } from "next/font/google";
+import UnderConstruction from "@/components/molecule/under-construction";
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -82,9 +83,7 @@ export default function RootLayout({
           ></iframe>
         </noscript>
         <PageView />
-        <div className="py-2 text-center bg-pink-700 text-white animate-pulse">
-          This site is under maintenance
-        </div>
+        <UnderConstruction />
         <Navbar />
         <main className="overflow-hidden">{children}</main>
         <SpeedInsights />
