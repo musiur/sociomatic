@@ -1,11 +1,10 @@
 "use server";
 // @this variable should be in env in future while refactoring
-const BaseURL = "https://sociomatic-backend.onrender.com";
-// const BaseURL = "https://f9f3-104-28-208-84.ngrok-free.app";
+const BASEURL = process.env.BASEURL;
 
 export const GetOtp = async (email: string) => {
   try {
-    const response = await fetch(`${BaseURL}/send-otp`, {
+    const response = await fetch(`${BASEURL}/send-otp`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -15,6 +14,7 @@ export const GetOtp = async (email: string) => {
       }),
     });
     const result = await response.json();
+
     return result;
   } catch (error) {
     return {
@@ -26,7 +26,7 @@ export const GetOtp = async (email: string) => {
 
 export const VerifyOtp = async (otp: number, email: string) => {
   try {
-    const response = await fetch(`${BaseURL}/verify-otp`, {
+    const response = await fetch(`${BASEURL}/verify-otp`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -48,7 +48,7 @@ export const VerifyOtp = async (otp: number, email: string) => {
 
 export const FunnelFormAction = async (data: any) => {
   try {
-    const response = await fetch(`${BaseURL}/funnel-form`, {
+    const response = await fetch(`${BASEURL}/funnel-form`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

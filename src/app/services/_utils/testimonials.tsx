@@ -54,13 +54,15 @@ const Testimonials = ({ data }: { data: any }) => {
               itemWidth={300}
               gapWidth={16}
             >
-              {filteredData?.slice(0, 10)?.map((item: any) => (
-                <TestimonialCard 
-                  key={item._id} 
-                  details={item}
-                  className="flex-shrink-0"
-                />
-              ))}
+              {filteredData?.slice(0, 10)?.map((item: any, index: number) => {
+                return (
+                  <TestimonialCard 
+                    key={index} 
+                    details={item}
+                    className="flex-shrink-0"
+                  />
+                )
+              })}
             </MarqueeWrapper>
           )}
           <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-muted dark:from-background"></div>

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import Marquee from "@/components/ui/marquee";
 
 interface MarqueeWrapperProps {
@@ -80,7 +80,9 @@ const MarqueeWrapper = ({
         onMouseLeave={() => setIsHovered(false)} // Reset hover state on mouse leave
       >
         <div className="flex min-w-full shrink-0 gap-4 py-10">
-          {infiniteChildren}
+          {infiniteChildren.map((child, index) => (
+            <Fragment key={index}>{child}</Fragment>
+          ))}
         </div>
       </div>
     </div>

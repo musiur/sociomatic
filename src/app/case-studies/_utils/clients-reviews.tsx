@@ -8,13 +8,13 @@ import { useEffect, useState } from "react";
 const ClientsReviews = ({
   testimonial = true,
   projectIdea = true,
-  reviews,
+  reviews = [],
 }: {
   testimonial?: boolean;
   projectIdea?: boolean;
   reviews?: object[];
   }) => {
-  const [clientReviews, setClientReviews] = useState<object[]>([]);
+  const [clientReviews, setClientReviews] = useState<object[]>(reviews);
   const fetchReviews = async () => {
     const result = await Action___GET__AllReviews();
     setClientReviews(result?.data?.length ? result?.data : []);
@@ -25,7 +25,8 @@ const ClientsReviews = ({
     if (!reviews) {
       fetchReviews();
     }
-  }, []);
+  }, [reviews]);
+  console.log(reviews?.length, clientReviews?.length)
   return (
     <>
       {testimonial ? (

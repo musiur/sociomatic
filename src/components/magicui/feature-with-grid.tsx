@@ -17,7 +17,7 @@ export function FeatureWithGrid({
 }) {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 container">
-      {features.map((feature) => (
+      {features.map((feature, index) => (
         <ANIM__FadeInOutOnScroll
           key={feature.id}
           className="relative bg-gradient-to-b dark:from-neutral-900 to-white p-6 rounded-xl overflow-hidden border border-secondary/5 transition duration-300 hover:shadow-xl space-y-4"
@@ -87,10 +87,10 @@ export function GridPattern({ width, height, x, y, squares, ...props }: any) {
       />
       {squares && (
         <svg x={x} y={y} className="overflow-visible">
-          {squares.map(([x, y]: any) => (
+          {squares.map(([x, y]: any, index: number) => (
             <rect
               strokeWidth="0"
-              key={`${x}-${y}`}
+              key={`${x}-${y}-${index}-${Math.floor(Math.random() * 10000)}`}
               width={width + 1}
               height={height + 1}
               x={x * width}

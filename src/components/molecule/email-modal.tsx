@@ -1,7 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
-import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogClose,
@@ -20,6 +19,7 @@ import { useRouter } from "next/navigation";
 import { GetOtp, VerifyOtp } from "@/app/joining/_utils/actions";
 import { Sun } from "lucide-react";
 import ShimmerButton from "../magicui/shimmer-button";
+import { toast } from "../ui/use-toast";
 
 const winDow = typeof window !== "undefined";
 
@@ -86,6 +86,7 @@ const EmailModal = ({
   const [email, setEmail] = useState("");
   const [otp, setOtp] = useState("");
   const [pending, setPending] = useState(false);
+  const [redirecting, setRedirecting] = useState(false);
   const router = useRouter();
 
   const submitEmail = async () => {
@@ -103,15 +104,21 @@ const EmailModal = ({
     setPending(true);
     const result = await VerifyOtp(parseInt(otp), email);
 
-    setPending(false);
     if (result.success) {
       if (winDow) {
         localStorage.setItem("user_email", email);
         emailVerified({ email, otp });
       }
+      setRedirecting(true);
       router.push(path);
     } else {
+      setPending(false);
       winDow && otpVerificationAbandoned({ email, otp });
+      toast({
+        variant: "error",
+        title: "OTP Verification",
+        description: result?.message || "Something went wrong!",
+      });
     }
   };
 
@@ -178,10 +185,14 @@ const EmailModal = ({
               type="submit"
               className="w-full items-center gap-2"
               onClick={step === 1 ? submitEmail : verifyEmail}
-              disabled={pending}
+              disabled={pending || redirecting}
             >
               {pending ? <Sun className="w-4 h-4 animate-spin" /> : null}
-              {step === 1 ? "Get Started" : "Verify Email"}
+              {step === 1
+                ? "Get Started"
+                : redirecting
+                ? "Redirecting..."
+                : "Verify Email"}
             </ShimmerButton>
             <DialogClose className="w-full">
               <span className="bg-white text-center h-[38px] rounded-lg border flex items-center justify-center px-6 font-medium sm:cursor-pointer">

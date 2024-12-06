@@ -12,7 +12,7 @@ const Testimonial = ({ data, calendly }: { data: any; calendly: boolean }) => {
   const [currentTestimonial, setCurrentTestimonial] = useState(2);
   return (
     <section>
-      <div className="bg-muted">
+      <div className="bg-white">
       <div className="container section flex flex-col large-gap">
         <SectionHead
           highlighter={data?.highlighter}
