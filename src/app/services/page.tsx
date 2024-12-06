@@ -6,16 +6,17 @@ import {
   homeTestimonialData,
 } from "@/lib/data/data";
 import Faq from "../_utils/faq";
+import { Fragment } from "react";
 
 const Services = () => {
   return (
-    <main>
+    <Fragment>
       <OurServices FeaturesData={homeFeaturesData} />
       <Testimonial calendly={true} data={homeTestimonialData} />
       <div className="bg-[url('/images/backgrounds/CircleNest.svg')] bg-center bg-cover">
         <Faq data={homeFAQ} />
       </div>
-    </main>
+    </Fragment>
   );
 };
 

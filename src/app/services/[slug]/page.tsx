@@ -8,6 +8,7 @@ import LimitedOfferSection from "@/app/services/_utils/limited-offer-section";
 import UserEmpathyBanner from "@/app/services/_utils/user-empathy-banner";
 import WhatAndWhySection from "@/app/services/_utils/what-and-why-section";
 import { ServicePageCOPY } from "@/app/services/_utils/data/services";
+import { Fragment } from "react";
 
 export type T__SlugType =
   | "googleads"
@@ -43,7 +44,7 @@ const Services = async ({ params }: { params: { slug: string } }) => {
   } = data;
 
   return (
-    <div>
+    <Fragment>
       <ServiceHeroSection data={hero} />
       <LimitedOfferSection data={limitedOffer} />
       <WhatAndWhySection data={whyWeAndWhatWeDo} />
@@ -52,7 +53,7 @@ const Services = async ({ params }: { params: { slug: string } }) => {
       <CoreBenefits data={coreBenefits} />
       <EndingFunnel data={endingFunnel} />
       <Faq data={faq} />
-    </div>
+    </Fragment>
   );
 };
 
