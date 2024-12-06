@@ -1,8 +1,11 @@
+"use client"
+
 import { Action___GET__AllReviews } from "@/app/reviews/post/_utils/actions";
 import ProjectIdea from "../../_utils/project-idea-banner";
 import Testimonials from "../../services/_utils/testimonials";
+import { useEffect, useState } from "react";
 
-const ClientsReviews = async ({
+const ClientsReviews = ({
   testimonial = true,
   projectIdea = true,
   reviews,
@@ -10,14 +13,26 @@ const ClientsReviews = async ({
   testimonial?: boolean;
   projectIdea?: boolean;
   reviews?: object[];
-}) => {
-  if (!reviews) {
+  }) => {
+  const [clientReviews, setClientReviews] = useState<object[]>([]);
+  const fetchReviews = async () => {
     const result = await Action___GET__AllReviews();
-    reviews = result?.data?.length ? result?.data : [];
+    setClientReviews(result?.data?.length ? result?.data : []);
   }
+  
+
+  useEffect(() => {
+    if (!reviews) {
+      fetchReviews();
+    }
+  }, []);
   return (
     <>
-      {testimonial && reviews?.length ? <Testimonials data={reviews} /> : null}
+      {testimonial ? (
+        clientReviews?.length ? (
+          <Testimonials data={clientReviews} />
+        ) : null
+      ) : null}
       {projectIdea ? <ProjectIdea /> : null}
     </>
   );
