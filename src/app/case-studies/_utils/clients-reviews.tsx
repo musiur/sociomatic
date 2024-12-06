@@ -9,7 +9,7 @@ const ClientsReviews = async ({
 }: {
   testimonial?: boolean;
   projectIdea?: boolean;
-  reviews?: any[];
+  reviews?: object[];
 }) => {
   if (!reviews) {
     const result = await Action___GET__AllReviews();
