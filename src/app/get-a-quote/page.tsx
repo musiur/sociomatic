@@ -21,6 +21,7 @@ import { useToast } from "@/components/ui/use-toast";
 import ShortReviews from "@/components/molecule/short-reviews";
 import CountryCombobox from "@/components/ui/country-combobox";
 import axios from "axios";
+import { Action___POST__SendMail } from "../contact-us/actions";
 
 // Function to track Get A Get form submissions
 function trackGetAQuoteFormSubmission(formData: any) {
@@ -81,16 +82,8 @@ const GetAQuotePage = () => {
       setLoading(true);
       trackGetAQuoteFormSubmissionA(formData);
       try {
-        const response = await axios.post(
-          "https://sociomatic-backend.onrender.com/auth/receive-mail",
-          formData,
-          {
-            headers: {
-              "Content-type": "application/json",
-            },
-          }
-        );
-        if (response.status === 200) {
+        const result = await Action___POST__SendMail(formData, "quote")
+        if (result.success) {
           toast({
             title: "Message Sending",
             description: "Successful! Mail send successfully.",

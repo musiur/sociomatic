@@ -14,6 +14,7 @@ import { Building, MessageCircle, Phone } from "lucide-react";
 import axios from "axios";
 import Link from "next/link";
 import ANIM__FadeInOutOnScroll from "@/components/anims/fadein.anim";
+import { Action___POST__SendMail } from "./actions";
 
 // Function to track contact form submissions
 function trackContactFormSubmission(formData: any) {
@@ -61,16 +62,9 @@ const ContactUs = () => {
   const SendEmail = async (formData: any) => {
     setLoading(true);
     try {
-      const response = await axios.post(
-        "https://sociomatic-backend.onrender.com/auth/receive-mail",
-        formData,
-        {
-          headers: {
-            "Content-type": "application/json",
-          },
-        }
-      );
-      if (response.status === 200) {
+      const result = await Action___POST__SendMail(formData, "contact");
+      console.log(result)
+      if (result?.success) {
         toast({
           title: "Message Sending",
           description: "Successful! Mail send successfully.",
