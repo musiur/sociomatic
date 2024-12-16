@@ -241,7 +241,8 @@ svg {
     @apply antialiased;
 
     shape-rendering: geometricPrecision;
-    image-rendering: -webkit-optimize-contrast;
+    // image-rendering: -webkit-optimize-contrast;
     text-rendering: optimizeLegibility;
+    image-rendering: auto;
   }
 }
