@@ -25,8 +25,6 @@ import GetAQuote from "../molecule/get-a-quote";
 import { useEffect, useState } from "react";
 import clsx from "clsx";
 import ShimmerButton from "../magicui/shimmer-button";
-import ANIM__FadeInOutOnScroll from "../anims/fadein.anim";
-import ANIM__ScrollFade from "../anims/fadeupdown.anim";
 
 const Navbar = () => {
   const pathname = usePathname();
