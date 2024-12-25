@@ -24,11 +24,9 @@ const Home = () => {
         }
         P={
           <>
-            Being digital <span>agency</span>, the sociomatic&nbsp;
-            <span>specialized with A to Z</span> to help improving
-            business&nbsp;
-            <span>analytics</span>, software <span>development</span>,&nbsp;
-            <span>campaigns</span>, and extensive <span>maintenance</span>
+            Being a dedicated digital agency, Sociomatic specializes in Google
+            Analytics, Ads Campaigns, Web Development, and extensive maintenance
+            with 3x-4x ROI
           </>
         }
         videoLink="https://www.youtube.com/embed/04pWB5aj-DE?si=KhMa8PqMC6WmL_K1"
