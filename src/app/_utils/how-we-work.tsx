@@ -62,12 +62,13 @@ const WorkProcessStepsData = [
       </div>
     ),
     image: <Requirements />,
-    title: "Requirement Analysis",
+    title: "Goal Setting & Free Audit",
     description: (
       <>
-        We&apos;d like to get to know more about you and your brand!
-        Understanding <span>your requirements</span> and{" "}
-        <span>expectations</span> is key for any project.
+        We start by understanding your business goals—whether it&apos;s
+        launching high-ROI ad campaigns, optimizing your website, or tracking
+        performance with precision. Our free audit identifies the best
+        strategies for success.
       </>
     ),
   },
@@ -79,12 +80,12 @@ const WorkProcessStepsData = [
       </div>
     ),
     image: <ResearchAndConecptualization />,
-    title: "Research & Conceptualization",
+    title: "Strategy Development",
     description: (
       <>
-        We base all our work on solid research.Through{" "}
-        <span>constant communication</span> , we will draft up ideas for{" "}
-        <span>your review and final approval.</span>
+        Using data-driven insights, we craft tailored solutions. From creating
+        engaging ad campaigns and conversion-focused websites to setting up
+        advanced analytics, we design strategies to maximize your results.
       </>
     ),
   },
@@ -96,12 +97,12 @@ const WorkProcessStepsData = [
       </div>
     ),
     image: <ProjectHandover />,
-    title: "Project Handover",
+    title: "Implementation & Handover",
     description: (
       <>
-        Once you&apos;re <span>fully satisfied</span> , we will hand over all
-        the files in all the formats and <span>variations you require.</span> We
-        often go the extra mile!.
+        We deliver projects seamlessly—whether it&apos;s a fully functional
+        website, ad campaign dashboard, or actionable analytics report. We also
+        go the extra mile with ongoing support to ensure your continued success.
       </>
     ),
   },

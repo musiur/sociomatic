@@ -51,36 +51,38 @@ export default OurProcess;
 const ProcessData = [
   {
     id: 1,
-    title: "Quality & Experience",
+    title: "Proven Expertise Worldwide",
     details: (
       <>
-        Our skill <span>qualities</span> and experience are a strong match for
-        the job requirements.Which means we are <span>ready made</span> for this
-        job.
+        Trusted by clients across the globe, we&apos;ve delivered 700+
+        successful projects with 500+ glowing feedbacks. Our results-driven
+        approach ensures your business gets the growth it deserves.
       </>
     ),
     image: <Quality />,
   },
   {
     id: 2,
-    title: "Commercial Awareness",
+    title: "Unmatched ROI Performance",
     details: (
       <>
-        We are commercially <span>aware</span>.We will always work hard to help
-        you <span>increase sales</span> whilst at the same time helping you to
-        save money by being <span>frugal</span> with our resources and supplies.
+        Our tailored strategies consistently drive 3x-4x ROI. From scaling
+        sales/leads to optimizing costs, we deliver real growth backed by
+        data.We build websites that not only captivate your audience but also
+        convert visitors into loyal customers, ensuring measurable growth for
+        your business.
       </>
     ),
     image: <Dollar />,
   },
   {
     id: 3,
-    title: "Ownership",
+    title: "Your Dedicated Growth Partner",
     details: (
       <>
-        We always take ownership of our <span>professional</span> development.
-        We will always improve and grow in the role so that you see it{" "}
-        <span>sustained.</span>
+        We&apos;re not just service providers; we&apos;re partners in your
+        success. Count on us for personalized solutions, ongoing support, and a
+        relentless focus on scaling your business
       </>
     ),
     image: <Centralized />,
