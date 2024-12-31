@@ -54,7 +54,7 @@ export const DATA___UIUX = {
       },
     },
     about: {
-      image: "https://utfs.io/f/915ff318-de2b-4494-b3df-73a78967133d-9fmvb.png",
+      image: "https://utfs.io/f/TLm9XcQ0Drp9ypvpy8T8ifMzxL2knb3TrPRA1YB64ZpqK0Q9",
       paragraphs: [
         {
           id: 1,
@@ -133,10 +133,10 @@ export const DATA___UIUX = {
           ),
         },
         ],
-        image: "https://utfs.io/f/915ff318-de2b-4494-b3df-73a78967133d-9fmvb.png",
+        image: "https://utfs.io/f/TLm9XcQ0Drp9JeYGJ91a9E2SNJBQlTAsxDIm4fg0doXLUVjR",
     },
     result: {
-      image: "https://utfs.io/f/915ff318-de2b-4494-b3df-73a78967133d-9fmvb.png",
+      image: "https://utfs.io/f/TLm9XcQ0Drp9HpKx7F63lrKW6cbSangxZGDNTm1szfYJEjkL",
       description: (
         <>
           The results of our efforts were significant:
@@ -190,10 +190,10 @@ export const DATA___UIUX = {
             <span>Holistic Approach:</span> Our design not only improved aesthetics but also functionality, leading to a better user experience.
           </>
         ),
-        name: "Christian AntonCharles", // Placeholder for the client's name
-        avatar: "https://github.com/shadcn.png", // Placeholder for the client's avatar
+        name: "Christian AntonCharles",
+        avatar: "https://github.com/shadcn.png",
         org: "Dein Handy Markt",
       },
-      image: "https://utfs.io/f/915ff318-de2b-4494-b3df-73a78967133d-9fmvb.png", // Placeholder for the review image
+      image: "https://utfs.io/f/TLm9XcQ0Drp91S4Mrub7qjhiF4QX2KzvTemlno5AxI0au3wU",
     },
   }
