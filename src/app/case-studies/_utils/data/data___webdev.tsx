@@ -54,7 +54,7 @@ export const DATA___Webdev = {
       },
     },
     about: {
-      image: "https://utfs.io/f/915ff318-de2b-4494-b3df-73a78967133d-9fmvb.png",
+      image: "https://utfs.io/f/TLm9XcQ0Drp9zUponMf45CoFD7gQdVHk1rvzTZnhYB9cGewt",
       paragraphs: [
         {
           id: 1,
@@ -141,10 +141,10 @@ export const DATA___Webdev = {
           ),
         },
       ],
-      image: "https://utfs.io/f/915ff318-de2b-4494-b3df-73a78967133d-9fmvb.png",
+      image: "https://utfs.io/f/TLm9XcQ0Drp9ypvpy8T8ifMzxL2knb3TrPRA1YB64ZpqK0Q9",
     },
     result: {
-      image: "https://utfs.io/f/915ff318-de2b-4494-b3df-73a78967133d-9fmvb.png",
+      image: "https://utfs.io/f/TLm9XcQ0Drp95vanO4sLohbUxGRq9NF4Zma8dfpcywMt7KQs",
       description: (
         <>
           The results of our efforts were significant:
@@ -203,6 +203,6 @@ export const DATA___Webdev = {
         avatar: "https://github.com/shadcn.png",
         org: "Dein Handy Markt",
       },
-      image: "https://utfs.io/f/915ff318-de2b-4494-b3df-73a78967133d-9fmvb.png",
+      image: "https://utfs.io/f/TLm9XcQ0Drp9HpKx7F63lrKW6cbSangxZGDNTm1szfYJEjkL",
     },
   }

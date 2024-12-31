@@ -54,7 +54,7 @@ export const DATA___WordPress = {
       },
     },
     about: {
-      image: "https://utfs.io/f/915ff318-de2b-4494-b3df-73a78967133d-9fmvb.png",
+      image: "https://utfs.io/f/TLm9XcQ0Drp9XBAupu2mQDWcPdinh2OTCGSAMHj5ubsEyo1L",
       paragraphs: [
         {
           id: 1,
@@ -149,10 +149,10 @@ export const DATA___WordPress = {
           ),
         },
         ],
-        image: "https://utfs.io/f/915ff318-de2b-4494-b3df-73a78967133d-9fmvb.png",
+        image: "https://utfs.io/f/TLm9XcQ0Drp9iHf1BbWqe0JKD1kI3xMghjRomyvz59WT8VnG",
     },
     result: {
-      image: "https://utfs.io/f/915ff318-de2b-4494-b3df-73a78967133d-9fmvb.png",
+      image: "https://utfs.io/f/TLm9XcQ0Drp9iHf1BbWqe0JKD1kI3xMghjRomyvz59WT8VnG",
       description: (
         <>
           The results of our efforts were significant:
@@ -210,6 +210,6 @@ export const DATA___WordPress = {
         avatar: "https://github.com/shadcn.png",
         org: "Guardian Medical Transportation LLC",
       },
-      image: "https://utfs.io/f/915ff318-de2b-4494-b3df-73a78967133d-9fmvb.png",
+      image: "https://utfs.io/f/TLm9XcQ0Drp9iHf1BbWqe0JKD1kI3xMghjRomyvz59WT8VnG",
     },
   }
