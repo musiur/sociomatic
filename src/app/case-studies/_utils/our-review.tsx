@@ -38,11 +38,9 @@ const OurReview = ({
             </div>
             <div className="flex items-center justify-center min-[950px]:justify-end gap-4">
               <div className="space-y-1 order-2 min-[950px]:order-1">
-                {/* <Link href="/"> */}
                 <p className="hover:underline font-semibold text-lg md:text-xl text-left min-[950px]:text-right">
                   {name}
                 </p>
-                {/* </Link> */}
                 <p className="text-xs md:text-base text-white/60">{org}</p>
               </div>
               <Avatar className="order-1 min-[950px]:order-1">

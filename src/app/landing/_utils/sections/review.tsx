@@ -1,10 +1,11 @@
 import ShimmerButton from "@/components/magicui/shimmer-button";
 import { CheckCheckIcon, FastForwardIcon, FileWarning, X } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 const LandingReviewSection = () => {
   return (
-    <div className="container section grid grid-cols-1 md:grid-cols-2 gap-10">
+    <div className="container section grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
       <div className="space-y-4">
         <p className="inline-block px-4 py-1 rounded-xl border">
           What Clients Are Saying
@@ -36,18 +37,17 @@ const LandingReviewSection = () => {
             winning strategy
           </p>
         </div>
-        <Link href="/#contact" className="inline-block">
-            <ShimmerButton>Book Your Free Meeting Today!</ShimmerButton>
-          </Link>
+        <Link href="/landing/#contact" className="inline-block">
+          <ShimmerButton>Book Your Free Meeting Today!</ShimmerButton>
+        </Link>
       </div>
-      <div className="p-6 bg-white rounded-xl flex flex-col items-start justify-center gap-4">
-        <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-secondary/10 text-secondary">
-          <FastForwardIcon className="w-6 h-6" />
-        </div>
-        <p className="text-md md:text-lg">
-          My mission is simple: to listen, understand your challenges
-        </p>
-      </div>
+      <Image
+        src="https://utfs.io/f/TLm9XcQ0Drp9VpRj6CXtzjwcuqoVvpZmxNrkdWPhDefA1Mb2"
+        alt="proof"
+        width={1000}
+        height={1000}
+        className="rounded-2xl"
+      />
     </div>
   );
 };
