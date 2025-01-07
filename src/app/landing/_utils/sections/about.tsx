@@ -1,4 +1,5 @@
 import { FastForwardIcon, RocketIcon } from "lucide-react";
+import Image from "next/image";
 
 const LandingAboutSection = () => {
   return (
@@ -31,6 +32,7 @@ const LandingAboutSection = () => {
             create a personalized strategy that guarantees success.
           </p>
         </div>
+        
       </div>
     </div>
   );

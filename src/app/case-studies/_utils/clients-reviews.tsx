@@ -9,10 +9,12 @@ const ClientsReviews = ({
   testimonial = true,
   projectIdea = true,
   reviews = [],
+  hideCTA = false
 }: {
   testimonial?: boolean;
   projectIdea?: boolean;
   reviews?: object[];
+  hideCTA?: boolean;
   }) => {
   const [clientReviews, setClientReviews] = useState<object[]>(reviews);
   const fetchReviews = async () => {
@@ -31,7 +33,7 @@ const ClientsReviews = ({
     <>
       {testimonial ? (
         clientReviews?.length ? (
-          <Testimonials data={clientReviews} />
+          <Testimonials data={clientReviews} hideCTA={hideCTA}/>
         ) : null
       ) : null}
       {projectIdea ? <ProjectIdea /> : null}

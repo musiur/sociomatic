@@ -1,7 +1,6 @@
 const LandingVisualsSection = () => {
   return (
-    <div className="bg-muted">
-      <div className="container section space-y-10">
+    <div className="container section space-y-10 text-center">
         <h2>See the Numbers Behind the Success</h2>
 
         <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 [&>li]:border [&>li]:p-8 [&>li]:bg-white [&>li]:flex [&>li]:flex-col [&>li]:items-center [&>li]:justify-center [&>li]:gap-4 [&>li]:rounded-xl [&>li>span]:text-4xl [&>li>span]:font-bold [&>li>span]:text-primary capitalize">
@@ -16,7 +15,6 @@ const LandingVisualsSection = () => {
           </li>
         </ul>
       </div>
-    </div>
   );
 };
 

@@ -10,7 +10,7 @@ import { useState, useEffect } from "react";
 import clsx from "clsx";
 import MarqueeWrapper from "./marquee-wrapper";
 
-const Testimonials = ({ data }: { data: any }) => {
+const Testimonials = ({ data, hideCTA }: { data: any; hideCTA?: boolean }) => {
   const pathname = usePathname();
   const materedPath = pathname
     ?.replaceAll("/services/", "")
@@ -26,12 +26,13 @@ const Testimonials = ({ data }: { data: any }) => {
   };
 
   const [isClient, setIsClient] = useState(false);
-  
+
   useEffect(() => {
     setIsClient(true);
   }, []);
 
-  const filteredData = data?.filter((item: any) => item.text?.length < 100) || [];
+  const filteredData =
+    data?.filter((item: any) => item.text?.length < 100) || [];
 
   return (
     <div className="py-16 bg-muted">
@@ -49,46 +50,48 @@ const Testimonials = ({ data }: { data: any }) => {
       <div className="space-y-8">
         <div className="relative container">
           {isClient && (
-            <MarqueeWrapper 
+            <MarqueeWrapper
               className="gap-4 w-full"
               itemWidth={300}
               gapWidth={16}
             >
               {filteredData?.slice(0, 10)?.map((item: any, index: number) => {
                 return (
-                  <TestimonialCard 
-                    key={index} 
+                  <TestimonialCard
+                    key={index}
                     details={item}
                     className="flex-shrink-0"
                   />
-                )
+                );
               })}
             </MarqueeWrapper>
           )}
           <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-muted dark:from-background"></div>
           <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-muted dark:from-background"></div>
         </div>
-        <div className="flex justify-center">
-          <ServicesCTA
-            position="center"
-            cta={{
-              primary: {
-                text: <>Get Started Right Away</>,
-                link: `/joining?type=${path[materedPath]}`,
-              },
-              secondary: { text: <>Get A Free Consultation</>, link: "/" },
-            }}
-          />
-        </div>
+        {!hideCTA ? (
+          <div className="flex justify-center">
+            <ServicesCTA
+              position="center"
+              cta={{
+                primary: {
+                  text: <>Get Started Right Away</>,
+                  link: `/joining?type=${path[materedPath]}`,
+                },
+                secondary: { text: <>Get A Free Consultation</>, link: "/" },
+              }}
+            />
+          </div>
+        ) : null}
       </div>
     </div>
   );
 };
 
-export const TestimonialCard = ({ 
-  details, 
-  className = "" 
-}: { 
+export const TestimonialCard = ({
+  details,
+  className = "",
+}: {
   details: any;
   className?: string;
 }) => {
@@ -111,7 +114,9 @@ export const TestimonialCard = ({
 
   const letterCount = 100;
   return (
-    <div className={`w-[300px] shrink-0 mx-2 hover:shadow-lg p-4 rounded-2xl space-y-[16px] border-2 border-white hover:border-secondary hover:scale-105 bg-white transition ease-in-out duration-500 ${className}`}>
+    <div
+      className={`w-[300px] shrink-0 mx-2 hover:shadow-lg p-4 rounded-2xl space-y-[16px] border-2 border-white hover:border-secondary hover:scale-105 bg-white transition ease-in-out duration-500 ${className}`}
+    >
       <div className="flex">
         {createArray(rating || 1).map((item: number) => {
           return (
@@ -122,10 +127,12 @@ export const TestimonialCard = ({
           );
         })}
       </div>
-      <p className={clsx(
-        "text-sm leading-relaxed", 
-        moreText ? "h-auto" : "line-clamp-4"
-      )}>
+      <p
+        className={clsx(
+          "text-sm leading-relaxed",
+          moreText ? "h-auto" : "line-clamp-4"
+        )}
+      >
         <i>{`"${text}"`}</i>
         {text?.length > letterCount && (
           <span
