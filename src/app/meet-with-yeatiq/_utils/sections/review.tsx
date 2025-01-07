@@ -37,7 +37,7 @@ const LandingReviewSection = () => {
             winning strategy
           </p>
         </div>
-        <Link href="/landing/#contact" className="inline-block">
+        <Link href="/meet-with-yeatiq/#contact" className="inline-block">
           <ShimmerButton>Book Your Free Meeting Today!</ShimmerButton>
         </Link>
       </div>
