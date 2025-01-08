@@ -14,7 +14,7 @@ const LandingHeroSection = () => {
           Meet Yeatiq, a trusted expert with 700+ successful projects and 500+
           glowing reviews, ready to help your business grow.
         </p>
-        <Link href="/landing/#contact" className="inline-block">
+        <Link href="/meet-with-yeatiq/#contact" className="inline-block">
           <ShimmerButton>Book Your Free Strategy Session Now!</ShimmerButton>
         </Link>
       </div>
