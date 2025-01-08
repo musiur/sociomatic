@@ -8,6 +8,7 @@ import LandingCTASection from "./_utils/sections/cta";
 import ClientsReviews from "../case-studies/_utils/clients-reviews";
 import { Action___Get__Review_By_Category } from "../reviews/post/_utils/actions";
 import LandingCalendlySection from "./_utils/sections/calendly";
+import LandingBottomSection from "./_utils/sections/bottom";
 
 const LandingPage = async () => {
   const result = await Action___Get__Review_By_Category("socialmediapaidads");
@@ -22,6 +23,7 @@ const LandingPage = async () => {
       <LandingVisualsSection />
       <LandingCTASection />
       <LandingCalendlySection />
+      <LandingBottomSection />
     </Fragment>
   );
 };

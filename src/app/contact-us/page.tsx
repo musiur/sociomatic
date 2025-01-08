@@ -11,7 +11,6 @@ import ErrorMessages from "@/components/molecule/errors-messages";
 import Loader from "@/components/molecule/loader";
 import { useToast } from "@/components/ui/use-toast";
 import { Building, MessageCircle, Phone } from "lucide-react";
-import axios from "axios";
 import Link from "next/link";
 import ANIM__FadeInOutOnScroll from "@/components/anims/fadein.anim";
 import { Action___POST__SendMail } from "./actions";
