@@ -13,7 +13,7 @@ const LandingCalendlySection = () => {
           paragraphs={[]}
         />
       </div>
-      <InlineWidget url="https://calendly.com/thesociomatic/thesociomatic" />
+      <InlineWidget url="https://calendly.com/yeatiqpersonal/let-s-make-your-business-a-success-story?hide_gdpr_banner=1" />
     </div>
   );
 };
