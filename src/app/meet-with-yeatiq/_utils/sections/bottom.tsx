@@ -28,9 +28,13 @@ const LandingBottomSection = () => {
             +971507477541
           </li>
           <li className="flex items-center gap-2">
+            <Link
+      href="https://wa.me/+971507477541"
+      passHref={true}
+      target="_blank">
             <WhatsAppIcon className="w-6 h-6 min-w-6 bg-secondary/10 stroke-[2px] stroke-secondary rounded-full p-1" />{" "}
              +971507477541 (WhatsApp)
-          </li>
+          </Link>         </li>
         </ul>
       </div>
     </div>
