@@ -21,7 +21,7 @@ const LandingBottomSection = () => {
         <ul className="space-y-2">
           <li className="flex items-center gap-2">
             <Mail className="w-6 h-6 min-w-6 bg-secondary/10 stroke-secondary rounded-full p-1" />{" "}
-            Email
+            hello@thesociomatic.com
           </li>
           <li className="flex items-center gap-2">
             <Phone className="w-6 h-6 min-w-6 bg-secondary/10 stroke-secondary rounded-full p-1" />{" "}
