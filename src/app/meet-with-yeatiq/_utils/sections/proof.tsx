@@ -1,4 +1,4 @@
-import { CheckCheckIcon, FastForwardIcon } from "lucide-react";
+import { CheckCheckIcon } from "lucide-react";
 import Image from "next/image";
 
 const LandingProofSection = () => {
