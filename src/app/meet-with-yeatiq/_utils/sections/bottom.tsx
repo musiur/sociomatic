@@ -1,7 +1,7 @@
 import WhatsAppIcon from "@/components/assets/whatsapp";
 import { CheckCheckIcon, Mail, Phone } from "lucide-react";
 import Image from "next/image";
-import Link from " next/link";
+import Link from "next/link";
 
 const LandingBottomSection = () => {
   return (
