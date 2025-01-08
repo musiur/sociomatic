@@ -19,18 +19,26 @@ const LandingBottomSection = () => {
         <h2>Have Questions?</h2>
         <p>Reach out anytime—I&apos;m happy to help!</p>
         <ul className="space-y-2">
+          <Link href="/contact-us">
+          
+          
           <li className="flex items-center gap-2">
             <Mail className="w-6 h-6 min-w-6 bg-secondary/10 stroke-secondary rounded-full p-1" />{" "}
             hello@thesociomatic.com
           </li>
+            </Link>
           <li className="flex items-center gap-2">
             <Phone className="w-6 h-6 min-w-6 bg-secondary/10 stroke-secondary rounded-full p-1" />{" "}
             +971507477541
           </li>
-          <li className="flex items-center gap-2">
+          <li>
+            <Link
+      href="https://wa.me/+971507477541"
+      passHref={true}
+      target="_blank" className="flex items-center gap-2">
             <WhatsAppIcon className="w-6 h-6 min-w-6 bg-secondary/10 stroke-[2px] stroke-secondary rounded-full p-1" />{" "}
              +971507477541 (WhatsApp)
-          </li>
+          </Link>         </li>
         </ul>
       </div>
     </div>
