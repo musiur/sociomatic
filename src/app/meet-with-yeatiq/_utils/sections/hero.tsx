@@ -1,5 +1,7 @@
 import ShimmerButton from "@/components/magicui/shimmer-button";
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { FreeOnlineDialogue } from "./free-online-dialogue";
 
 const LandingHeroSection = () => {
   return (
@@ -14,9 +16,12 @@ const LandingHeroSection = () => {
           Meet Yeatiq, a trusted expert with 700+ successful projects and 500+
           glowing reviews, ready to help your business grow.
         </p>
-        <Link href="/meet-with-yeatiq/#contact" className="inline-block">
-          <ShimmerButton>Book Your Free Strategy Session Now!</ShimmerButton>
-        </Link>
+        <div className="flex items-center flex-wrap gap-4">
+          <Link href="/meet-with-yeatiq/#contact" className="inline-block">
+            <ShimmerButton>Book Your Free Strategy Session Now!</ShimmerButton>
+          </Link>
+          <FreeOnlineDialogue />
+        </div>
       </div>
       <div className="min-h-[300px] shadow-2xl z-10 relative rounded-2xl">
         <iframe
