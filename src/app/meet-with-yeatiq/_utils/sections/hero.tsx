@@ -1,7 +1,7 @@
 import ShimmerButton from "@/components/magicui/shimmer-button";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { FreeOnlineDialogue } from "./free-online-dialogue";
+import DataLayerPusherLink from "../components/data-layer-pusher-link";
 
 const LandingHeroSection = () => {
   return (
@@ -17,9 +17,7 @@ const LandingHeroSection = () => {
           glowing reviews, ready to help your business grow.
         </p>
         <div className="flex items-center flex-wrap gap-4">
-          <Link href="/meet-with-yeatiq/#contact" className="inline-block">
-            <ShimmerButton>Book Your Free Strategy Session Now!</ShimmerButton>
-          </Link>
+          <DataLayerPusherLink />
           <FreeOnlineDialogue />
         </div>
       </div>

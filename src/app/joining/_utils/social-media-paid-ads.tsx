@@ -49,15 +49,15 @@ function SocialMediaPaidAdsForm() {
             
             DL___FormData(
               form.getValues(),
-              "joiningSocialMediaAdsFormSubmission",
-              "joining_social_media_ads_form_submission"
+              "joiningFormSubmission",
+              "social_media_ads"
             );
             router.push("/joining/end?type=socialmediapaidads");
           } else {
             DL___FormData(
               form.getValues(),
-              "joiningSocialMediaAdsFormAbandoned",
-              "joining_social_media_ads_form_abandoned"
+              "joiningFormAbandoned",
+              "social_media_ads"
             );
           }
         }
@@ -68,8 +68,8 @@ function SocialMediaPaidAdsForm() {
   useEffect(() => {
     DL___FormData(
       form.getValues(),
-      "joiningSocialMediaAdsFormProcessing",
-      "joining_social_media_ads_form_processing"
+      "joiningFormProcessing",
+      "social_media_ads"
     );
   }, [form.getValues()]);
 

@@ -47,15 +47,15 @@ function WordpressDevelopmentForm() {
             
             DL___FormData(
               form.getValues(),
-              "joiningWordpressFormSubmission",
-              "joining_wordpress_form_submission"
+              "joiningFormSubmission",
+              "wordpress"
             );
             router.push("/joining/end?type=wordpress");
           } else {
             DL___FormData(
               form.getValues(),
-              "joiningWordpressFormAbandoned",
-              "joining_Wordpress_form_abandoned"
+              "joiningFormAbandoned",
+              "wordpress"
             );
           }
         }
@@ -66,8 +66,8 @@ function WordpressDevelopmentForm() {
   useEffect(() => {
     DL___FormData(
       form.getValues(),
-      "joiningWordpressFormProcessing",
-      "joining_wordpress_form_processing"
+      "joiningFormProcessing",
+      "wordpress"
     );
   }, [form.getValues()]);
 

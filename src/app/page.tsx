@@ -12,7 +12,7 @@ import HeroSection from "./_utils/herosection";
 import Faq from "./_utils/faq";
 import { BrandCarousel } from "./_utils/carousel";
 
-const Home = () => {
+const HomePage = () => {
   return (
     <main>
       <HeroSection
@@ -46,4 +46,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;

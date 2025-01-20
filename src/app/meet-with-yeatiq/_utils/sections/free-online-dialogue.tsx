@@ -3,18 +3,15 @@ import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import DataLayerPusher from "../components/data-layer-pusher";
 
 export function FreeOnlineDialogue() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline">Free Online Session</Button>
+        <DataLayerPusher />
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px] max-h-[80dvh] overflow-y-auto">
         <ContactForm />

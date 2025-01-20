@@ -47,15 +47,15 @@ function WebDevelopmentForm() {
             
             DL___FormData(
               form.getValues(),
-              "joiningWebFormSubmission",
-              "joining_web_form_submission"
+              "joiningFormSubmission",
+              "web"
             );
             router.push("/joining/end?type=customwebdev");
           } else {
             DL___FormData(
               form.getValues(),
-              "joiningWebFormAbandoned",
-              "joining_web_form_abandoned"
+              "joiningFormAbandoned",
+              "web"
             );
           }
         }
@@ -66,8 +66,8 @@ function WebDevelopmentForm() {
   useEffect(() => {
     DL___FormData(
       form.getValues(),
-      "joiningWebFormSubmissionProcessing",
-      "joining_web_form_submission_processing"
+      "joiningFormProcessing",
+      "web"
     );
   }, [form.getValues()]);
 

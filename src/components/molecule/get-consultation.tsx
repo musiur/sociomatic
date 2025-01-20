@@ -1,11 +1,23 @@
-import Link from "next/link";
+"use client";
 import { Button } from "../ui/button";
+import { useRouter } from "next/navigation";
 
 const GetConsultation = () => {
+  const router = useRouter();
+  const handleLinkClick = () => {
+    router.push("/#calendly");
+    window.dataLayer.push({
+      event: "get_a_free_consultation_button_click",
+    });
+  };
   return (
-    <Link href={`/#calendly`} aria-label="topTitle" title="topTitle" className="w-full sm:w-auto">
-      <Button variant="outline" className="w-full">Get a Free Consultation</Button>
-    </Link>
+    <Button
+      variant="outline"
+      className="w-full sm:w-auto"
+      onClick={handleLinkClick}
+    >
+      Get a Free Consultation
+    </Button>
   );
 };
 

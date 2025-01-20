@@ -1,8 +1,6 @@
 "use client";
 
 import SectionHead from "@/components/molecule/section-head";
-import Script from "next/script";
-import { InlineWidget } from "react-calendly";
 import NeetoCal from "./neetocal";
 
 const Calendly = () => {
