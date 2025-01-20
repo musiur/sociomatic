@@ -46,15 +46,15 @@ function SoftwareDevelopmentForm() {
             
             DL___FormData(
               form.getValues(),
-              "joiningSoftwareFormSubmission",
-              "joining_software_form_submission"
+              "joiningFormSubmission",
+              "software"
             );
             router.push("/joining/end?type=software");
           } else {
             DL___FormData(
               form.getValues(),
-              "joiningSoftwareFormAbandoned",
-              "joining_software_form_abandoned"
+              "joiningFormAbandoned",
+              "software"
             );
           }
         }
@@ -65,8 +65,8 @@ function SoftwareDevelopmentForm() {
   useEffect(() => {
     DL___FormData(
       form.getValues(),
-      "joiningSoftwareFormProcessing",
-      "joining_software_form_processing"
+      "joiningFormProcessing",
+      "software"
     );
   }, [form.getValues()]);
 

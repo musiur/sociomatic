@@ -46,15 +46,15 @@ function GoogleAnalyticsForm() {
             
             DL___FormData(
               form.getValues(),
-              "joiningGoogleAnalyticsFormSubmission",
-              "joining_google_analytics_form_submission"
+              "joiningFormSubmission",
+              "google_analytics"
             );
             router.push("/joining/end?type=googleanalytics");
           } else {
             DL___FormData(
               form.getValues(),
-              "joiningGoogleAnalyticsFormAbandoned",
-              "joining_google_analytics_form_abandoned"
+              "joiningFormAbandoned",
+              "google_analytics"
             );
           }
         }
@@ -65,8 +65,8 @@ function GoogleAnalyticsForm() {
   useEffect(() => {
     DL___FormData(
       form.getValues(),
-      "joiningGoogleAnalyticsFormProcessing",
-      "joining_google_analytics_form_processing"
+      "joiningFormProcessing",
+      "google_analytics"
     );
   }, [form.getValues()]);
 

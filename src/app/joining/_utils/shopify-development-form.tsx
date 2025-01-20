@@ -46,15 +46,15 @@ function ShopifyDevelopmentForm() {
             
             DL___FormData(
               form.getValues(),
-              "joiningShopifyFormSubmission",
-              "joining_shopify_form_submission"
+              "joiningFormSubmission",
+              "shopify"
             );
             router.push("/joining/end?type=shopify");
           } else {
             DL___FormData(
               form.getValues(),
-              "joiningShopifyFormAbandoned",
-              "joining_shopify_form_abandoned"
+              "joiningFormAbandoned",
+              "shopify"
             );
           }
         }
@@ -65,8 +65,8 @@ function ShopifyDevelopmentForm() {
   useEffect(() => {
     DL___FormData(
       form.getValues(),
-      "joiningShopifyFormProcessing",
-      "joining_shopify_form_processing"
+      "joiningFormProcessing",
+      "shopify"
     );
   }, [form.getValues()]);
 

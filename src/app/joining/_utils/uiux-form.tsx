@@ -47,15 +47,15 @@ function UiUxForm() {
             
             DL___FormData(
               form.getValues(),
-              "joiningUiUxFormSubmission",
-              "joining_uiux_form_submission"
+              "joiningFormSubmission",
+              "uiux"
             );
             router.push("/joining/end?type=uiux");
           } else {
             DL___FormData(
               form.getValues(),
-              "joiningUiUxFormAbandoned",
-              "joining_uiux_form_abandoned"
+              "joiningFormAbandoned",
+              "uiux"
             );
           }
         }
@@ -66,8 +66,8 @@ function UiUxForm() {
   useEffect(() => {
     DL___FormData(
       form.getValues(),
-      "joiningUiUxFormProcessing",
-      "joining_ui_ux_form_processing"
+      "joiningFormProcessing",
+      "ui_ux"
     );
   }, [form.getValues()]);
 

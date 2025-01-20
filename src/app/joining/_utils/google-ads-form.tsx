@@ -46,15 +46,15 @@ function GoogleAdsForm() {
             
             DL___FormData(
               data,
-              "joiningGoogleAdsFormSubmission",
-              "joining_google_ads_form_submission"
+              "joiningFormSubmission",
+              "google_ads"
             );
             router.push("/joining/end?type=googleads");
           } else {
             DL___FormData(
               data,
-              "joiningGoogleAdsFormAbandoned",
-              "joining_google_ads_form_abandoned"
+              "joiningFormAbandoned",
+              "google_ads"
             );
           }
         }
@@ -65,8 +65,8 @@ function GoogleAdsForm() {
   useEffect(() => {
     DL___FormData(
       form.getValues(),
-      "joiningGoogleAdsFormProcessing",
-      "joining_google_ads_form_processing"
+      "joiningFormProcessing",
+      "google_ads"
     );
   }, [form.getValues()]);
 

@@ -1,9 +1,5 @@
 "use client";
-import Image from "next/image";
 import { ReactElement } from "react";
-
-import { BrandCarousel } from "@/app/_utils/carousel";
-import VideoPlayer from "@/app/_utils/video-player";
 import GetConsultation from "@/components/molecule/get-consultation";
 import GetAQuote from "@/components/molecule/get-a-quote";
 import ANIM__FadeInOnScroll from "@/components/anims/fadein.anim";
