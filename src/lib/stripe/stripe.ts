@@ -25,8 +25,8 @@ export async function createStripeCheckout(gigId: number) {
     mode: 'payment',
     metadata,
     payment_intent_data: { metadata },
-    success_url: `${process.env.NEXT_PUBLIC_URL}/gigs/payment-verify?success=true`,
-    cancel_url: `${process.env.NEXT_PUBLIC_URL}/gigs/payment-verify?success=false`,
+    success_url: `${process.env.NEXT_PUBLIC_URL}/gigs/payment-verify?success=true&session_id={CHECKOUT_SESSION_ID}`,
+    cancel_url: `${process.env.NEXT_PUBLIC_URL}/gigs/payment-verify?success=false&session_id={CHECKOUT_SESSION_ID}`,
   });
 
   return session.url;

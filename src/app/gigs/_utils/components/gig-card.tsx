@@ -38,7 +38,7 @@ export default function GigCard({ gig }: { gig: T__Gig }) {
 
 async function handleStripePurchase(gigId: number) {
   try {
-    const response = await fetch("/api/create", {
+    const response = await fetch("/api/stripe/create", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

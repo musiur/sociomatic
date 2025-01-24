@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
+import { Action___GET__VerifyPayment } from "../_utils/actions";
 
 export default function PaymentVerificationPage() {
   const searchParams = useSearchParams();
@@ -20,10 +21,7 @@ export default function PaymentVerificationPage() {
 
   async function verifyPayment(sessionId: string) {
     try {
-      const response = await fetch(
-        `/api/verify-payment?session_id=${sessionId}`
-      );
-      const data = await response.json();
+      const data = await Action___GET__VerifyPayment(sessionId)
 
       if (data.success) {
         setPaymentStatus("success");
@@ -32,6 +30,7 @@ export default function PaymentVerificationPage() {
         setPaymentStatus("failed");
       }
     } catch (error) {
+      console.log(error)
       setPaymentStatus("error");
     }
   }
