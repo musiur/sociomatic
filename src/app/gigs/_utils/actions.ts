@@ -20,3 +20,25 @@ export const Action___GET__VerifyPayment = async (sessionId: string) => {
         }
     }
 }
+
+export const Action___GET__AllGigs = async () => {
+    try {
+        const url = `${process.env.BASEURL}/gigs`;
+        const response = await fetch(url, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            next: {
+                revalidate: 60 * 60 * 24 * 2,
+            },
+        });
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        return {
+            success: false,
+            message: "Failed to fetch gigs"
+        }
+    }
+}

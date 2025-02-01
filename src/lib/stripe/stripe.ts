@@ -1,10 +1,10 @@
-import { GigsData } from '@/app/gigs/_utils/components/data/gig-list-data';
+
 import Stripe from 'stripe';
 
 export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
 
 export async function createStripeCheckout(gigId: number) {
-  const gig = GigsData.find(g => g.id === gigId);
+  // const gig = GigsData.find(g => g.id === gigId);
   const metadata = {
     userId: "test_user_43634563",
     gigId: gigId.toString(),
@@ -16,9 +16,9 @@ export async function createStripeCheckout(gigId: number) {
       price_data: {
         currency: 'usd',
         product_data: {
-          name: gig.title,
+          name: "test",
         },
-        unit_amount: gig.price * 100,
+        unit_amount: 100,
       },
       quantity: 1,
     }],
