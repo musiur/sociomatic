@@ -5,7 +5,7 @@ const StripePaymentButton = ({ gigId }: { gigId: string }) => {
     return <Button
         onClick={() => handleStripePurchase(gigId)}
     >
-        Buy with Stripe
+        Buy Now
     </Button>;
 };
 

@@ -12,6 +12,8 @@ function PaymentVerificationContent() {
     const sessionId = searchParams.get("session_id");
     const success = searchParams.get("success");
 
+    console.log({sessionId, success})
+
     if (sessionId && success) {
       verifyPayment(sessionId);
     } else {
@@ -21,7 +23,9 @@ function PaymentVerificationContent() {
 
   async function verifyPayment(sessionId: string) {
     try {
-      const data = await Action___GET__VerifyPayment(sessionId)
+      console.log("Verifying payment: ", sessionId)
+      const data = await Action___GET__VerifyPayment(sessionId);
+      console.log(data)
       if (data.success) {
         setPaymentStatus("success");
       } else {

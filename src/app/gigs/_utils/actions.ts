@@ -2,18 +2,21 @@
 
 export const Action___GET__VerifyPayment = async (sessionId: string) => {
     try {
+        const baseURL = process.env.FRONTEND_URL;
         const response = await fetch(
-            `/api/stripe/verify?session_id=${sessionId}`,
+            `${baseURL}/api/stripe/verify?session_id=${sessionId}`,
             {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json"
-                }
+                },
+                cache: "no-store"
             }
         );
         const data = await response.json();
         return data
     } catch (error) {
+        console.log(error)
         return {
             success: false,
             message: "Failed to verify payment"
