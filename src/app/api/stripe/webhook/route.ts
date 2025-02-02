@@ -3,9 +3,9 @@ import { stripe } from '@/lib/stripe/stripe';
 import { headers } from 'next/headers';
 
 export async function POST(req: Request) {
-  const body = await req.text();
+  const body = await req.json();
   const signature = headers().get('Stripe-Signature')!;
-  console.log("\nwebhook hit\n")
+  console.log("\nwebhook hit\n", body, signature)
   try {
     const event = stripe.webhooks.constructEvent(
       body,
