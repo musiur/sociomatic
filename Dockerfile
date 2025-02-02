@@ -15,7 +15,8 @@ ENV BASEURL=$BASEURL
 WORKDIR /app
 
 COPY package.json .
-RUN npm install --legacy-peer-deps
+RUN npm config set registry https://registry.npmjs.org/ && \
+    npm install --legacy-peer-deps --production --fetch-retries=5 --fetch-retry-mintimeout=20000
 
 COPY . .
 
