@@ -1,7 +1,7 @@
 
 import Stripe from 'stripe';
 
-export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
+export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || "dummy_sk_key", {
   apiVersion: '2025-01-27.acacia',
   typescript: true,
 });
@@ -11,6 +11,9 @@ export async function createStripeCheckout(gigId: number) {
   const metadata = {
     userId: "test_user_43634563",
     gigId: gigId.toString(),
+  }
+  if(!stripe){
+    return "/"
   }
 
   const session = await stripe.checkout.sessions.create({
