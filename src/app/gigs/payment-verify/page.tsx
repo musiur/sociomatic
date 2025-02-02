@@ -1,10 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { Action___GET__VerifyPayment } from "../_utils/actions";
 
-export default function PaymentVerificationPage() {
+function PaymentVerificationContent() {
   const searchParams = useSearchParams();
   const [paymentStatus, setPaymentStatus] = useState("verifying");
 
@@ -22,10 +22,8 @@ export default function PaymentVerificationPage() {
   async function verifyPayment(sessionId: string) {
     try {
       const data = await Action___GET__VerifyPayment(sessionId)
-
       if (data.success) {
         setPaymentStatus("success");
-        // You can show order details here
       } else {
         setPaymentStatus("failed");
       }
@@ -49,5 +47,13 @@ export default function PaymentVerificationPage() {
         <p>Error verifying payment. Please contact support.</p>
       )}
     </div>
+  );
+}
+
+export default function PaymentVerificationPage() {
+  return (
+    <Suspense fallback={<div className="container mx-auto px-4 py-8">Loading payment verification...</div>}>
+      <PaymentVerificationContent />
+    </Suspense>
   );
 }

@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Fragment } from "react";
 import { Action___GET__AllGigs } from "./_utils/actions";
 import { Button } from "@/components/ui/button";
+import StripePaymentButton from "./_utils/stripe-payment-button";
 
 type T___Gig = {
   _id: string;
@@ -100,17 +101,6 @@ const GigsPage = async () => {
                 Visit Fiverr Profile
               </Button>
             </Link>
-            {/* <Link
-              href="https://thesociomatic.com"
-              passHref={true}
-              target="_blank"
-            >
-              <Button variant="outline" className="w-full">
-                Visit Company Website
-              </Button>
-            </Link> */}
-
-            {/* <p className="text-gray-600">Presented by thesociomatic.com</p> */}
           </div>
         </div>
       </div>
@@ -132,12 +122,7 @@ const GigsPage = async () => {
                   <p><span className="text-gray-400">Starting from</span> US$15</p>
                   <div className="flex items-center gap-2">
                     <Button variant="outline">Buy on Fiverr</Button>
-                    <button
-                      onClick={() => handleStripePurchase(item._id)}
-                      className="bg-blue-500 text-white px-4 py-2 rounded"
-                    >
-                      Buy with Stripe
-                    </button>
+                    <StripePaymentButton gigId={item._id} />
                   </div>
                 </div>
               </FadeInOnScroll>
@@ -150,23 +135,6 @@ const GigsPage = async () => {
 };
 
 export default GigsPage;
-
-async function handleStripePurchase(gigId: string) {
-  try {
-    const response = await fetch("/api/stripe/create", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ gigId }),
-    });
-
-    const { url } = await response.json();
-    window.location.href = url;
-  } catch (error) {
-    console.error("Error:", error);
-  }
-}
 
 const Characteristics = () => {
   return (

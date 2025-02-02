@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { stripe } from '@/lib/stripe/stripe';
 
-export async function GET(request: Request) {
+export const GET = async (request: Request) => {
   const { searchParams } = new URL(request.url);
   const sessionId = searchParams.get('session_id');
 
@@ -11,13 +11,11 @@ export async function GET(request: Request) {
 
   try {
     const session = await stripe.checkout.sessions.retrieve(sessionId);
-
-    if (session.payment_status === 'paid') {
-      return NextResponse.json({ success: true, session });
-    } else {
-      return NextResponse.json({ success: false }, { status: 400 });
-    }
+    return NextResponse.json({
+      success: session.payment_status === 'paid',
+      session: session.payment_status === 'paid' ? session : undefined
+    });
   } catch (error) {
     return NextResponse.json({ success: false }, { status: 500 });
   }
-}
+};
