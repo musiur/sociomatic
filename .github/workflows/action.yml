@@ -38,6 +38,10 @@ jobs:
             NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=${{ secrets.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME }}
             NEXT_PUBLIC_CLOUDINARY_API_SECRET=${{ secrets.NEXT_PUBLIC_CLOUDINARY_API_SECRET }}
             BASEURL=${{ secrets.BASEURL }}
+            FRONTEND_URL=${{ secrets.FRONTEND_URL }}
+            STRIPE_WEBHOOK_SECRET=${{ secrets.STRIPE_WEBHOOK_SECRET }}
+            STRIPE_SECRET_KEY=${{ secrets.STRIPE_SECRET_KEY }}
+            STRIPE_PUBLISHABLE_KEY=${{ secrets.STRIPE_PUBLISHABLE_KEY }}
   update_ssh_server:
     name: Telling Hostinger Server to Update
     needs: "push_to_registry"
