@@ -4,7 +4,6 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
 import { toast } from "sonner"
-import { Button } from "@/components/ui/button"
 import {
     Form
 } from "@/components/ui/form"
@@ -12,6 +11,7 @@ import CustomInput from "@/app/joining/_utils/custom-input"
 import Link from "next/link"
 import { Sun } from "lucide-react"
 import ShimmerButton from "@/components/magicui/shimmer-button"
+import { A___Auth__Register } from "./actions"
 
 const FormSchema = z.object({
     name: z.string().min(2, {
@@ -37,54 +37,45 @@ const RegisterForm = () => {
             password: "",
             phone: ""
         },
-
-
     })
 
-
-    function onSubmit(data: z.infer<typeof FormSchema>) {
-        toast.success("You submitted the following values:", {
-            description: (
-                <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-
-                    <code className="text-white">{JSON.stringify(data, null, 2)}</code>
-                </pre>
-            ),
-        })
+    async function onSubmit(data: z.infer<typeof FormSchema>) {
+        const result = await A___Auth__Register(data)
+        console.log(result);
+        if (result.success) {
+            toast.success(result.message)
+        } else {
+            toast.error(result.message)
+        }
     }
 
     return (
-        <div className="flex justify-center items-start py-16 h-screen">
-            <div className="max-w-[520px] w-full mx-auto px-10 py-8 rounded-[32px] shadow-xl bg-white border space-y-6">
+        <>
+            <h3 className="text-lg md:text-2xl font-semibold">Create an account</h3>
+            <Form {...form}>
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                    <CustomInput form={form} name="name" label="Name" />
 
-                <h3 className="text-2xl font-semibold">Create an account</h3>
-                <Form {...form}>
-                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                        <CustomInput form={form} name="name" label="Name" />
+                    <CustomInput form={form} name="email" label="Email" />
+                    <CustomInput form={form} name="phone" label="Phone" />
+                    <CustomInput form={form} name="password" label="Password" type="password" />
 
-                        <CustomInput form={form} name="email" label="Email" />
-                        <CustomInput form={form} name="phone" label="Phone" />
-                        <CustomInput form={form} name="password" label="Password" type="password" />
-                        
-                        <ShimmerButton type="submit"
-                            disabled={form.formState.isSubmitting}
+                    <ShimmerButton type="submit"
+                        disabled={form.formState.isSubmitting}
 
-                            className="w-full items-center gap-2">
-                            {form.formState.isSubmitting ? (
-                                <Sun className="w-4 h-4 animate-spin" />
-                            ) : null}
-                            {form.formState.isSubmitting ? "Submiting" : "Submit"}
-                        </ShimmerButton>
-                    </form>
+                        className="w-full items-center gap-2">
+                        {form.formState.isSubmitting ? (
+                            <Sun className="w-4 h-4 animate-spin" />
+                        ) : null}
+                        {form.formState.isSubmitting ? "Submiting" : "Submit"}
+                    </ShimmerButton>
+                </form>
 
-                </Form>
-                <div>
-                    <p>Already have an account? <Link href="/login" className="text-primary underline">Login</Link></p>
-                </div>
+            </Form>
+            <div>
+                <p>Already have an account? <Link href="/login" className="text-primary underline">Login</Link></p>
             </div>
-        </div>
-
-
+        </>
     )
 }
 

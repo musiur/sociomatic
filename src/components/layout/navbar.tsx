@@ -201,8 +201,8 @@ const Navbar = () => {
                   </li>
                 );
               })}
-              <Link href="/get-a-quote">
-                <ShimmerButton>Gat a Quote</ShimmerButton>
+              <Link href="/login">
+                <ShimmerButton>Get started</ShimmerButton>
               </Link>
             </ul>
           </div>
