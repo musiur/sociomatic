@@ -1,5 +1,7 @@
 "use server";
 
+import { cookies } from "next/headers";
+
 const BASEURL = process.env.BASEURL;
 const FRONTEND_URL = process.env.FRONTEND_URL;
 
@@ -15,7 +17,11 @@ export const A___Auth__Login = async (data: { email: string, password: string })
         });
 
         const result = await response.json();
-
+        
+        if (result?.success) {
+            cookies().set("token", result?.result?.token);
+        }
+        
         return result;
 
     } catch (error) {
@@ -28,7 +34,6 @@ export const A___Auth__Login = async (data: { email: string, password: string })
 
 export const A___Auth__Register = async (data: { email: string, password: string, phone: string }) => {
     try {
-        console.log(BASEURL)
         const response = await fetch(`${BASEURL}/auth/signup`, {
             method: "POST",
             body: JSON.stringify({ ...data, host: FRONTEND_URL }),
@@ -38,7 +43,7 @@ export const A___Auth__Register = async (data: { email: string, password: string
         });
 
         const result = await response.json();
-        console.log(result, "<--")
+        console.log(result)
         return result;
     } catch (error) {
         console.log(error, "<--")
@@ -61,7 +66,7 @@ export const A___Auth__Verify = async (email: string, token: string) => {
         });
 
         const result = await response.json();
-        console.log(result, "<--")
+        console.log(result)
         return result;
 
     } catch (error) {

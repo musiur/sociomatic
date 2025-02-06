@@ -12,6 +12,7 @@ import Link from "next/link"
 import { Sun } from "lucide-react"
 import ShimmerButton from "@/components/magicui/shimmer-button"
 import { A___Auth__Register } from "./actions"
+import { useRouter } from "next/navigation"
 
 const FormSchema = z.object({
     name: z.string().min(2, {
@@ -29,6 +30,7 @@ const FormSchema = z.object({
 
 
 const RegisterForm = () => {
+    const router = useRouter();
     const form = useForm<z.infer<typeof FormSchema>>({
         resolver: zodResolver(FormSchema),
         defaultValues: {
@@ -43,7 +45,8 @@ const RegisterForm = () => {
         const result = await A___Auth__Register(data)
         console.log(result);
         if (result.success) {
-            toast.success(result.message)
+            toast.success(result.message);
+            router.push("/refer-mailbox")
         } else {
             toast.error(result.message)
         }

@@ -1,7 +1,9 @@
+import UnderDevelopmentUI from "@/components/molecule/under-development-ui";
+
 const DashboardPage = () => {
   return (
     <div className="h-screen container section">
-      <h1>Dashboard</h1>
+      <UnderDevelopmentUI />
     </div>
   );
 };

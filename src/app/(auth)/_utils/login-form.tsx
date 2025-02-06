@@ -37,7 +37,6 @@ const LoginForm = () => {
 
     if (result?.success) {
       toast.success("Login Successful");
-      router.back();
     } else {
       toast.error(result?.message || "Something went wrong");
     }
