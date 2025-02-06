@@ -26,6 +26,7 @@ import { useEffect, useState } from "react";
 import clsx from "clsx";
 import ShimmerButton from "../magicui/shimmer-button";
 import { getCookie } from "@/lib/utils";
+import NavActions from "../molecule/nav-actions";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -120,9 +121,9 @@ const Navbar = () => {
                 })}
               </NavigationMenuList>
             </NavigationMenu>
-            <Link href="/dashboard">
-              <ShimmerButton>Account</ShimmerButton>
-            </Link>
+            {pageState?.user ? (
+              <NavActions loggedin={pageState.user} />
+            ) : null}
           </div>
 
           <div className="block lg:hidden">
