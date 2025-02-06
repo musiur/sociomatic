@@ -11,6 +11,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import PageView from "@/lib/datalayer/page-view";
 import { Poppins, Lato } from "next/font/google";
 import UnderConstruction from "@/components/molecule/under-construction";
+import { Toaster as ToasterSonner } from "sonner";
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -88,6 +89,7 @@ export default function RootLayout({
         <main className="overflow-hidden">{children}</main>
         <SpeedInsights />
         <Toaster />
+        <ToasterSonner />
         {/* <CookiePolicyNotificationBar /> */}
         <WhatsApp />
         <GotoTop />

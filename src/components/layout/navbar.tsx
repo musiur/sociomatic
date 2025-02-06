@@ -25,13 +25,24 @@ import GetAQuote from "../molecule/get-a-quote";
 import { useEffect, useState } from "react";
 import clsx from "clsx";
 import ShimmerButton from "../magicui/shimmer-button";
+import { getCookie } from "@/lib/utils";
 
 const Navbar = () => {
   const pathname = usePathname();
-  const [openMobileMenu, setOpenMobileMenu] = useState(false);
+  const [pageState, setPageState] = useState<{
+    open: boolean;
+    user: String | null;
+  }>({
+    open: false,
+    user: null,
+  });
   useEffect(() => {
-    openMobileMenu && setOpenMobileMenu(false);
+    pageState.open && setPageState({ ...pageState, open: false });
   }, [pathname]);
+
+  useEffect(() => {
+    setPageState({ ...pageState, user: getCookie("token") || null });
+  }, []);
   return (
     <nav id="topPoint" className="sticky top-0 z-50">
       <div className="backdrop-blur-xl bg-white/70 border-b border-gray-200 ">
@@ -109,12 +120,17 @@ const Navbar = () => {
                 })}
               </NavigationMenuList>
             </NavigationMenu>
-            <GetAQuote />
+            <Link href="/dashboard">
+              <ShimmerButton>Account</ShimmerButton>
+            </Link>
           </div>
 
           <div className="block lg:hidden">
             <div>
-              <Menu role="button" onClick={() => setOpenMobileMenu(true)} />
+              <Menu
+                role="button"
+                onClick={() => setPageState({ ...pageState, open: true })}
+              />
             </div>
           </div>
         </div>
@@ -123,19 +139,19 @@ const Navbar = () => {
         className={clsx(
           "fixed top-0 right-0 bg-black/60  w-[100vw] overflow-hidden transition-opacity ease-in-out duration-500",
           {
-            "opacity-100 z-50  delay-0": openMobileMenu,
-            "opacity-0 -z-50  delay-150": !openMobileMenu,
+            "opacity-100 z-50  delay-0": pageState.open,
+            "opacity-0 -z-50  delay-150": !pageState.open,
           }
         )}
         role="button"
-        onClick={() => setOpenMobileMenu(false)}
+        onClick={() => setPageState({ ...pageState, open: false })}
       >
         <div
           className={clsx(
             "bg-white px-[16px] py-[32px] h-[100dvh] shadow-2xl ml-auto max-w-[300px] min-w-[280px] transition ease-in-out duration-300",
             {
-              "block delay-150": openMobileMenu,
-              "hidden delay-150": !openMobileMenu,
+              "block delay-150": pageState.open,
+              "hidden delay-150": !pageState.open,
             }
           )}
         >
@@ -144,7 +160,7 @@ const Navbar = () => {
             <X
               className="stroke-[1.3px] stroke-gray-500"
               role="button"
-              onClick={() => setOpenMobileMenu(false)}
+              onClick={() => setPageState({ ...pageState, open: false })}
             />
           </div>
           <div className="max-h-[80vh] overflow-auto">
@@ -201,8 +217,8 @@ const Navbar = () => {
                   </li>
                 );
               })}
-              <Link href="/get-a-quote">
-                <ShimmerButton>Gat a Quote</ShimmerButton>
+              <Link href="/login">
+                <ShimmerButton>Get started</ShimmerButton>
               </Link>
             </ul>
           </div>

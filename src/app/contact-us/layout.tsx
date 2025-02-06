@@ -9,11 +9,7 @@ export const metadata: Metadata = {
 };
 
 const ContactUsLayout = ({ children }: { children: ReactElement }) => {
-  return (
-    <div>
-      {children}
-    </div>
-  );
+  return children
 };
 
 export default ContactUsLayout;
