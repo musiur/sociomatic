@@ -12,6 +12,7 @@ import PageView from "@/lib/datalayer/page-view";
 import { Poppins, Lato } from "next/font/google";
 import UnderConstruction from "@/components/molecule/under-construction";
 import { Toaster as ToasterSonner } from "sonner";
+import NavWrapper from "@/components/layout/nav-wrapper";
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -85,7 +86,7 @@ export default function RootLayout({
         </noscript>
         <PageView />
         <UnderConstruction />
-        <Navbar />
+        <NavWrapper />
         <main className="overflow-hidden">{children}</main>
         <SpeedInsights />
         <Toaster />

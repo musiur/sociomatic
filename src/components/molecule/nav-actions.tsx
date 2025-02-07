@@ -6,15 +6,11 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { LogOut, Settings, User } from "lucide-react";
+import { Settings, User } from "lucide-react";
 import Logout from "./logout";
 import clsx from "clsx";
 
-const NavActions = ({
-  loggedin = null,
-}: {
-  loggedin: String | undefined | null;
-}) => {
+const NavActions = ({ token }: { token: string | undefined | null }) => {
   const links = [
     {
       id: 1,
@@ -31,7 +27,7 @@ const NavActions = ({
       active: false,
     },
   ];
-  return !loggedin ? (
+  return !token ? (
     <Link href="/dashboard">
       <ShimmerButton>Account</ShimmerButton>
     </Link>
