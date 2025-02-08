@@ -19,7 +19,7 @@ export const A___Auth__Login = async (data: { email: string, password: string })
         const result = await response.json();
         
         if (result?.success) {
-            cookies().set("token", result?.result?.token);
+            (await cookies()).set("token", result?.result?.token);
         }
         
         return result;

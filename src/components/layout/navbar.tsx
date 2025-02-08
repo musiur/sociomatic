@@ -27,8 +27,9 @@ import clsx from "clsx";
 import ShimmerButton from "../magicui/shimmer-button";
 import { getCookie } from "@/lib/utils";
 import NavActions from "../molecule/nav-actions";
+import Logout from "../molecule/logout";
 
-const Navbar = ({token}: {token: string | undefined | null}) => {
+const Navbar = ({ token }: { token: string | undefined | null }) => {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   useEffect(() => {
@@ -117,10 +118,7 @@ const Navbar = ({token}: {token: string | undefined | null}) => {
 
           <div className="block lg:hidden">
             <div>
-              <Menu
-                role="button"
-                onClick={() => setOpen(true)}
-              />
+              <Menu role="button" onClick={() => setOpen(true)} />
             </div>
           </div>
         </div>
@@ -207,9 +205,17 @@ const Navbar = ({token}: {token: string | undefined | null}) => {
                   </li>
                 );
               })}
-              <Link href="/login">
-                <ShimmerButton>Get started</ShimmerButton>
+              <Link
+                href="/dashboard"
+                className={
+                  pathname.includes("/dashboard")
+                    ? "text-secondary font-semibold"
+                    : "text-primary"
+                }
+              >
+                Dashboard
               </Link>
+              <Logout />
             </ul>
           </div>
         </div>

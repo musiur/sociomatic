@@ -20,7 +20,7 @@ const NavActions = ({ token }: { token: string | undefined | null }) => {
       active: true,
     },
     {
-      id: 1,
+      id: 2,
       title: "Settings",
       link: "/settings",
       icon: <Settings />,
@@ -44,8 +44,8 @@ const NavActions = ({ token }: { token: string | undefined | null }) => {
           {links.map((item) => {
             return (
               <Link
-                href={item.active ? item.link : ""}
                 key={item.id}
+                href={item.active ? item.link : ""}
                 className={clsx(
                   "px-4 py-2  flex items-center gap-2 [&>*]:w-4 [&>*]:h-4",
                   {

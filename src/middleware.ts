@@ -1,58 +1,44 @@
-// middleware.ts
+import { cookies } from 'next/headers';
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
-export function middleware(req: NextRequest) {
-  const isAuthenticated = checkAuthentication(req); // Your authentication logic
+export async function middleware(request: NextRequest) {
+  const path = request.nextUrl.pathname;
+  const privateRoutes = ["/dashboard"];
+  const publicRoutes = ["/login", "/register", "/reset-password", "/forget-password", "/change-password", "/checkout"];
 
-  const protectedPaths = ['/dashboard']; // Example protected routes
+  const isPrivateRoute = privateRoutes.includes(path);
+  const isPublicRoute = publicRoutes.includes(path);
 
-  const pathname = req.nextUrl.pathname;
+  const token = request.cookies.get('token')?.value || '';
+  const from = request.cookies.get('from')?.value || "/dashboard";
 
-  const isProtectedPath = protectedPaths.some(path => pathname.startsWith(path));
+  console.log(path, isPrivateRoute, token, from);
 
-  if (isProtectedPath && !isAuthenticated) {
-    // Redirect to login or show an unauthorized message
-    const url = req.nextUrl.clone();
-    url.pathname = '/login'; // Or wherever your login page is
-    return NextResponse.redirect(url);
-
-     //OR, if you prefer to show a message on the same page:
-     // return new NextResponse('Unauthorized. Please Login.', { status: 401 });
-
+  // If the user is trying to access a private route without a token, redirect to login
+  if (isPrivateRoute && !token) {
+    (await cookies()).set("from", path);
+    return NextResponse.redirect(new URL('/login', request.url));
   }
 
-  if (pathname === '/login' && isAuthenticated) {
-     const url = req.nextUrl.clone();
-     url.pathname = '/'; // Redirect to home or dashboard after successful login
-     return NextResponse.redirect(url);
+  // If the user is trying to access a public route with a token, redirect to the 'from' URL
+  if (isPublicRoute && token) {
+    return NextResponse.redirect(new URL(from, request.url));
   }
 
-  return NextResponse.next();
+  // Security headers
+  const response = NextResponse.next();
+  response.headers.set('X-Frame-Options', 'DENY');
+  response.headers.set('X-Content-Type-Options', 'nosniff');
+  response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
+  response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
+
+  return response;
 }
-
-// Example authentication check (replace with your actual logic)
-function checkAuthentication(req: NextRequest): boolean {
-  // Check for a token in cookies, local storage, or headers
-  const token = req.cookies.get('token'); // Example using cookies
-
-  // Or check local storage:
-  // const token = localStorage.getItem('token'); // This won't work directly in middleware, see below.
-
-  // Or check headers:
-  // const authHeader = req.headers.get('Authorization');
-
-  // Validate the token (e.g., against your backend)
-  if (token) {
-    //  Add your token verification logic here.  This is crucial.
-    //  For example, you might fetch user data using the token and check if the session is valid.
-    return true; //  Return true ONLY if the token is valid.
-  }
-
-  return false;
-}
-
 
 export const config = {
-  matcher: ['/((?!api|_next/static|_next/image|favicon.ico|login).*)'], // Match all routes EXCEPT those listed
+  matcher: [
+    "/dashboard", "/login", "/register", "/reset-password", "/forget-password", "/change-password", "/checkout"
+    // '/((?!_next/static|_next/image|favicon.ico|api|static).*)',
+  ],
 };

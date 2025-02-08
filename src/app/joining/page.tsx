@@ -14,11 +14,12 @@ import UiUxForm from "./_utils/uiux-form";
 import WebDevelopmentForm from "./_utils/web-development-form";
 import WordpressDevelopmentForm from "./_utils/wordpress-development-form";
 
-const Page = async ({
-  searchParams = { type: "googleads" },
-}: {
-  searchParams: { type: E_FormTypes };
-}) => {
+const Page = async (
+  props: {
+    searchParams: Promise<{ type: E_FormTypes }>;
+  }
+) => {
+  const searchParams = await props.searchParams;
   const Forms = {
     googleads: <GoogleAdsForm />,
     googleanalytics: <GoogleAnalyticsForm />,

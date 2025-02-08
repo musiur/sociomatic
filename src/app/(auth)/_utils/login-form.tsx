@@ -4,7 +4,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { toast } from "sonner";
-import { Button } from "@/components/ui/button";
 import { Form } from "@/components/ui/form";
 import CustomInput from "@/app/joining/_utils/custom-input";
 import Link from "next/link";
@@ -37,6 +36,7 @@ const LoginForm = () => {
 
     if (result?.success) {
       toast.success("Login Successful");
+      router.refresh();
     } else {
       toast.error(result?.message || "Something went wrong");
     }

@@ -2,8 +2,8 @@
 import { cookies } from "next/headers";
 import Navbar from "./navbar";
 
-const NavWrapper = () => {
-    const token = cookies().get("token")?.value;
+const NavWrapper = async () => {
+    const token = (await cookies())?.get("token")?.value;
     return <Navbar token={token} />
 }
 
