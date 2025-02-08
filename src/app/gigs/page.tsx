@@ -119,10 +119,15 @@ const GigsPage = async () => {
                       {item.title}
                     </h4>
                   </Link>
-                  <p><span className="text-gray-400">Starting from</span> US$15</p>
+                  <p>
+                    <span className="text-gray-400">Starting from</span> US$15
+                  </p>
                   <div className="flex items-center gap-2">
                     <Button variant="outline">Buy on Fiverr</Button>
-                    <StripePaymentButton gigId={item._id} />
+                    <Link href={`/checkout?id=${item._id}	`}>
+                      <Button>View Details</Button>
+                    </Link>
+                    {/* <StripePaymentButton gigId={item._id} /> */}
                   </div>
                 </div>
               </FadeInOnScroll>
