@@ -1,8 +1,11 @@
+/* eslint-disable react-hooks/rules-of-hooks */
+
 "use client";
 
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
+
 
 const Carousel = ({ images }: { images: any }) => {
   const [currentSlide, setCurrentSlide] = useState(0);

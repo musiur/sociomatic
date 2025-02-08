@@ -2,13 +2,11 @@
 
 import { deleteCookie } from "@/lib/utils";
 import { LogOut } from "lucide-react";
-import { useRouter } from "next/navigation";
 
 const Logout = () => {
-  const router = useRouter();
   const logoutHandler = () => {
     deleteCookie("token");
-    router.push("/login");
+    window.location.replace("/login");
   };
   return (
     <div

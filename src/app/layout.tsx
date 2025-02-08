@@ -12,7 +12,7 @@ import PageView from "@/lib/datalayer/page-view";
 import { Poppins, Lato } from "next/font/google";
 import UnderConstruction from "@/components/molecule/under-construction";
 import { Toaster as ToasterSonner } from "sonner";
-import NavWrapper from "@/components/layout/nav-wrapper";
+import { cookies } from "next/headers";
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -37,11 +37,12 @@ export const metadata: Metadata = {
     "Elevate your online presence with Sociomatic. We provide cutting-edge digital marketing and web development services, delivering measurable results for businesses worldwide.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
-}) {
+  }) {
+  const token = (await cookies())?.get("token")?.value;
   return (
     <html lang="en">
       <head>
@@ -86,7 +87,8 @@ export default function RootLayout({
         </noscript>
         <PageView />
         <UnderConstruction />
-        <NavWrapper />
+        {/* <NavWrapper /> */}
+        <Navbar token={token} />
         <main className="overflow-hidden">{children}</main>
         <SpeedInsights />
         <Toaster />
