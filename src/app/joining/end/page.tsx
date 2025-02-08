@@ -3,7 +3,8 @@ import Confetti from "../_utils/confetti";
 import MeetOurCEO from "@/app/about-us/_utils/meet-our-ceo";
 import { E_FormTypes } from "../_utils/types";
 
-const Page = ({ searchParams }: { searchParams: { type: E_FormTypes } }) => {
+const Page = async (props: { searchParams: Promise<{ type: E_FormTypes }> }) => {
+  const searchParams = await props.searchParams;
   let data = PageData.googleads;
   if (searchParams.type && Object.keys(PageData)?.includes(searchParams.type)) {
     // @ts-ignore

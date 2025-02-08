@@ -10,7 +10,8 @@ import { Fragment } from "react";
 
 type T__Slug = "google-paid-ads" | "google-analytics" | "social-media-paid-ads";
 
-const CaseStudiesTemplate = ({ params }: { params: { slug: string } }) => {
+const CaseStudiesTemplate = async (props: { params: Promise<{ slug: string }> }) => {
+  const params = await props.params;
   let data = CaseStudiesData["google-paid-ads"];
   if (Object.keys(CaseStudiesData).includes(params.slug)) {
     const key = params.slug;

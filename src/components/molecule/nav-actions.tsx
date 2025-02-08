@@ -6,15 +6,11 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { LogOut, Settings, User } from "lucide-react";
+import { Settings, User } from "lucide-react";
 import Logout from "./logout";
 import clsx from "clsx";
 
-const NavActions = ({
-  loggedin = null,
-}: {
-  loggedin: String | undefined | null;
-}) => {
+const NavActions = ({ token }: { token: string | undefined | null }) => {
   const links = [
     {
       id: 1,
@@ -24,14 +20,14 @@ const NavActions = ({
       active: true,
     },
     {
-      id: 1,
+      id: 2,
       title: "Settings",
       link: "/settings",
       icon: <Settings />,
       active: false,
     },
   ];
-  return !loggedin ? (
+  return !token ? (
     <Link href="/dashboard">
       <ShimmerButton>Account</ShimmerButton>
     </Link>
@@ -48,8 +44,8 @@ const NavActions = ({
           {links.map((item) => {
             return (
               <Link
-                href={item.active ? item.link : ""}
                 key={item.id}
+                href={item.active ? item.link : ""}
                 className={clsx(
                   "px-4 py-2  flex items-center gap-2 [&>*]:w-4 [&>*]:h-4",
                   {

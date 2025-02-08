@@ -27,23 +27,15 @@ import clsx from "clsx";
 import ShimmerButton from "../magicui/shimmer-button";
 import { getCookie } from "@/lib/utils";
 import NavActions from "../molecule/nav-actions";
+import Logout from "../molecule/logout";
 
-const Navbar = () => {
+const Navbar = ({ token }: { token: string | undefined | null }) => {
   const pathname = usePathname();
-  const [pageState, setPageState] = useState<{
-    open: boolean;
-    user: String | null;
-  }>({
-    open: false,
-    user: null,
-  });
+  const [open, setOpen] = useState(false);
   useEffect(() => {
-    pageState.open && setPageState({ ...pageState, open: false });
+    open && setOpen(false);
   }, [pathname]);
 
-  useEffect(() => {
-    setPageState({ ...pageState, user: getCookie("token") || null });
-  }, []);
   return (
     <nav id="topPoint" className="sticky top-0 z-50">
       <div className="backdrop-blur-xl bg-white/70 border-b border-gray-200 ">
@@ -121,17 +113,12 @@ const Navbar = () => {
                 })}
               </NavigationMenuList>
             </NavigationMenu>
-            {pageState?.user ? (
-              <NavActions loggedin={pageState.user} />
-            ) : null}
+            <NavActions token={token} />
           </div>
 
           <div className="block lg:hidden">
             <div>
-              <Menu
-                role="button"
-                onClick={() => setPageState({ ...pageState, open: true })}
-              />
+              <Menu role="button" onClick={() => setOpen(true)} />
             </div>
           </div>
         </div>
@@ -140,19 +127,19 @@ const Navbar = () => {
         className={clsx(
           "fixed top-0 right-0 bg-black/60  w-[100vw] overflow-hidden transition-opacity ease-in-out duration-500",
           {
-            "opacity-100 z-50  delay-0": pageState.open,
-            "opacity-0 -z-50  delay-150": !pageState.open,
+            "opacity-100 z-50  delay-0": open,
+            "opacity-0 -z-50  delay-150": !open,
           }
         )}
         role="button"
-        onClick={() => setPageState({ ...pageState, open: false })}
+        onClick={() => setOpen(false)}
       >
         <div
           className={clsx(
             "bg-white px-[16px] py-[32px] h-[100dvh] shadow-2xl ml-auto max-w-[300px] min-w-[280px] transition ease-in-out duration-300",
             {
-              "block delay-150": pageState.open,
-              "hidden delay-150": !pageState.open,
+              "block delay-150": open,
+              "hidden delay-150": !open,
             }
           )}
         >
@@ -161,7 +148,7 @@ const Navbar = () => {
             <X
               className="stroke-[1.3px] stroke-gray-500"
               role="button"
-              onClick={() => setPageState({ ...pageState, open: false })}
+              onClick={() => setOpen(false)}
             />
           </div>
           <div className="max-h-[80vh] overflow-auto">
@@ -218,9 +205,17 @@ const Navbar = () => {
                   </li>
                 );
               })}
-              <Link href="/login">
-                <ShimmerButton>Get started</ShimmerButton>
+              <Link
+                href="/dashboard"
+                className={
+                  pathname.includes("/dashboard")
+                    ? "text-secondary font-semibold"
+                    : "text-primary"
+                }
+              >
+                Dashboard
               </Link>
+              <Logout />
             </ul>
           </div>
         </div>

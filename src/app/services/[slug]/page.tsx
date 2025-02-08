@@ -19,7 +19,8 @@ export type T__SlugType =
   | "uiux"
   | "software"
   | "socialmediapaidads";
-const Services = async ({ params }: { params: { slug: string } }) => {
+const Services = async (props: { params: Promise<{ slug: string }> }) => {
+  const params = await props.params;
   let data: any = ServicePageCOPY.googleads;
   const key = params?.slug
     ?.replaceAll("development", "")
