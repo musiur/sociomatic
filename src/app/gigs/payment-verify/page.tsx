@@ -3,6 +3,8 @@
 import { Suspense, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { Action___GET__VerifyPayment } from "../_utils/actions";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 function PaymentVerificationContent() {
   const searchParams = useSearchParams();
@@ -12,7 +14,7 @@ function PaymentVerificationContent() {
     const sessionId = searchParams.get("session_id");
     const success = searchParams.get("success");
 
-    console.log({sessionId, success})
+    console.log({ sessionId, success });
 
     if (sessionId && success) {
       verifyPayment(sessionId);
@@ -23,16 +25,16 @@ function PaymentVerificationContent() {
 
   async function verifyPayment(sessionId: string) {
     try {
-      console.log("Verifying payment: ", sessionId)
+      console.log("Verifying payment: ", sessionId);
       const data = await Action___GET__VerifyPayment(sessionId);
-      console.log(data)
+      console.log(data);
       if (data.success) {
         setPaymentStatus("success");
       } else {
         setPaymentStatus("failed");
       }
     } catch (error) {
-      console.log(error)
+      console.log(error);
       setPaymentStatus("error");
     }
   }
@@ -40,7 +42,14 @@ function PaymentVerificationContent() {
   return (
     <div className="container mx-auto px-4 py-8">
       {paymentStatus === "verifying" && <p>Verifying payment...</p>}
-      {paymentStatus === "success" && <p>Payment successful!</p>}
+      {paymentStatus === "success" && (
+        <div>
+          <div>Payment successful!</div>
+          <Link href="/dashboard/orders">
+            <Button> View orders</Button>
+          </Link>
+        </div>
+      )}
       {paymentStatus === "failed" && (
         <p>Payment verification failed. Please contact support.</p>
       )}
@@ -56,7 +65,13 @@ function PaymentVerificationContent() {
 
 export default function PaymentVerificationPage() {
   return (
-    <Suspense fallback={<div className="container mx-auto px-4 py-8">Loading payment verification...</div>}>
+    <Suspense
+      fallback={
+        <div className="container mx-auto px-4 py-8">
+          Loading payment verification...
+        </div>
+      }
+    >
       <PaymentVerificationContent />
     </Suspense>
   );
