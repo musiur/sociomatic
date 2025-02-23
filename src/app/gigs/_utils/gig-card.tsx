@@ -19,7 +19,9 @@ const GigCard = ({ item }: { item: T___Gig }) => {
             <span className="text-gray-400">Starting from</span> US$15
           </p>
           <div className="flex items-center gap-2">
-            <Button variant="outline">Buy on Fiverr</Button>
+            <Link href={item.link}>
+              <Button variant="outline">Buy on Fiverr</Button>
+            </Link>
             <Link href={`/checkout?id=${item._id}`}>
               <Button>Buy Now</Button>
             </Link>

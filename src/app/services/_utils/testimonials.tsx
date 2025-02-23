@@ -70,7 +70,7 @@ const Testimonials = ({ data, hideCTA }: { data: any; hideCTA?: boolean }) => {
           <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-muted dark:from-background"></div>
         </div>
         {!hideCTA ? (
-          <div className="flex justify-center">
+          <div className="flex justify-center px-4">
             <ServicesCTA
               position="center"
               cta={{

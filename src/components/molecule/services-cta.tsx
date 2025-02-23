@@ -36,7 +36,10 @@ const ServicesCTA = ({
       >
         Go Here To Fill Out A 2-Minute Application For The Free Resources
       </p>
-      <div className="grid grid-cols-1 min-[400px]:flex flex-wrap items-center justify-start gap-[12px]">
+      <div className={clsx("grid grid-cols-1 min-[400px]:flex flex-wrap items-center gap-[12px]", {
+        "justify-center": position === "center",
+        "justify-start": position !== "center"
+      })}>
         <EmailModal buttonText={primary.text} path={primary.link} />
         <Link href="/#calendly" className="w-full sm:w-auto">
           <Button variant="outline" className="w-full">
