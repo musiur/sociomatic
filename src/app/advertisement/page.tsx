@@ -11,6 +11,7 @@ import AchieveSection from "./_components/achieve-section";
 import ExpireSection from "./_components/expire-section";
 import FaqSection from "./_components/faq-section";
 import RiskFreeSection from "./_components/risk-free-section";
+import FooterSection from "./_components/footer-section";
 
 const Advertisement = () => {
   return (
@@ -27,6 +28,7 @@ const Advertisement = () => {
       <RiskFreeSection />
       <FaqSection />
       <ExpireSection />
+      <FooterSection />
     </Fragment>
   );
 };

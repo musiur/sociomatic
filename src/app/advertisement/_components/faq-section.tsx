@@ -15,63 +15,50 @@ const FaqData = {
   faqs: [
     {
       id: 1,
-      question: <>What is Sociomatic, and what is your primary mission?</>,
+      question: <>What if I cancel before 90 days?</>,
       answer: (
         <>
-          The Sociomatic is a digital marketing organization with a primary
-          mission to help businesses succeed online. We&apos;re dedicated to
-          enhancing our online presence and achieving growth for our clients.
+          The refund guarantee applies only after completing the full 3-month
+          challenge. We need time to optimize properly.
         </>
       ),
     },
     {
       id: 2,
-      question: (
-        <>
-          How does The Sociomatic stand out in the digital marketing industry?
-        </>
-      ),
+      question: <>How do you define &apos;failure&apos; for the refund?</>,
       answer: (
         <>
-          We differentiate ourselves by offering various services, providing
-          comprehensive solutions for our client&apos;s digital marketing needs,
-          and delivering tangible results.
+          We&apos;ll agree on clear KPIs upfront (e.g., 20% ROAS, 50
+          leads/month). If we miss them, you get 100% back.
         </>
       ),
     },
     {
       id: 3,
-      question: <>What is your approach to client success?</>,
+      question: <>What if I ignore your optimization suggestions?</>,
       answer: (
         <>
-          We&apos;re committed to ensuring the success of our clients by
-          identifying new digital marketing opportunities and implementing
-          strategies to help them become market leaders and achieve an
-          outstanding return on investment (ROI).
+          The guarantee requires collaboration. If you reject critical
+          strategies, the refund terms may not apply
         </>
       ),
     },
     {
       id: 4,
-      question: <>What values drive The Sociomatic&apos;s operations?</>,
+      question: <>How do I know you won&apos;t waste my budget?</>,
       answer: (
         <>
-          Our core values include innovation, dedication, excellence, and
-          client-centricity. We strive to bring fresh ideas and solutions,
-          ensuring the best possible service.
+          We use AI bid strategies + manual optimizations. You&apos;ll approve
+          every campaign.
         </>
       ),
     },
     {
       id: 5,
-      question: (
-        <>How can I contact The Sociomatic for inquiries or collaboration?</>
-      ),
+      question: <>What industries do you work with?</>,
       answer: (
         <>
-          You can contact us through our website or our customer support team to
-          discuss how we can assist your business. We&apos;re here to help you
-          navigate digital marketing and achieve your goals.
+          E-commerce, local services, SaaS—if you sell online, we can scale it.
         </>
       ),
     },
