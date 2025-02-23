@@ -1,7 +1,71 @@
+import Image from "next/image";
+import TransperancyIcon from "../_assets/transperancy-icon";
+import CoinIcon from "../_assets/coin-icon";
+import CalendarTimeIcon from "../_assets/calendar-time-icon";
+import TestimonialAside from "./testimonial-aside";
+
+const features = [
+  {
+    icon: <TransperancyIcon />,
+    text: "100% transparency: Full access to your ad accounts and web analytics",
+  },
+  {
+    icon: <CoinIcon />,
+    text: "Get a full refund if we don't deliver results",
+  },
+  {
+    icon: <CalendarTimeIcon />,
+    text: "No lock-in contracts, but we ask for 90 days",
+  },
+];
+
 const WhySafeSection = () => {
-    return (
-        <div>Why safe section</div>
-    )
-}
+  return (
+    <section className="section container space-y-[48px]">
+      <h2 className="text-center mb-12">
+        Why This is the{" "}
+        <span className="text-secondary">
+          Safest
+          <br /> Decision
+        </span>{" "}
+        You&apos;ll Ever Make
+      </h2>
+
+      <div className="grid md:grid-cols-2 gap-8">
+        <div className="space-y-6">
+          {features.map((feature, index) => (
+            <div
+              key={index}
+              className="flex items-center gap-4 [&>svg]:w-6 [&>svg]:h-6 [&>svg]:min-w-6 [&>svg]:min-h-6"
+            >
+              {feature.icon}
+              <p>{feature.text}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="space-y-6">
+          <TestimonialAside />
+        </div>
+      </div>
+      <div className="flex justify-center items-center gap-8">
+        <Image
+          src="https://in8cddcab4.ufs.sh/f/TLm9XcQ0Drp9VIzd4elXtzjwcuqoVvpZmxNrkdWPhDefA1Mb"
+          alt="90 Day Guarantee"
+          width={120}
+          height={120}
+          className="w-[160px] h-auto"
+        />
+        <Image
+          src="https://in8cddcab4.ufs.sh/f/TLm9XcQ0Drp9HXIUHKQ63lrKW6cbSangxZGDNTm1szfYJEjk"
+          alt="Meta Certified"
+          width={120}
+          height={120}
+          className="w-[100px] h-auto"
+        />
+      </div>
+    </section>
+  );
+};
 
 export default WhySafeSection;

@@ -10,6 +10,7 @@ import ComparisonTableSection from "./_components/comparison-table-section";
 import AchieveSection from "./_components/achieve-section";
 import ExpireSection from "./_components/expire-section";
 import FaqSection from "./_components/faq-section";
+import RiskFreeSection from "./_components/risk-free-section";
 
 const Advertisement = () => {
   return (
@@ -23,8 +24,9 @@ const Advertisement = () => {
       <ComparisonCopySection />
       <ComparisonTableSection />
       <AchieveSection />
-      <ExpireSection />
+      <RiskFreeSection />
       <FaqSection />
+      <ExpireSection />
     </Fragment>
   );
 };

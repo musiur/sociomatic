@@ -1,0 +1,50 @@
+import { CubeIcon } from "@radix-ui/react-icons";
+import { BarChart3, Settings } from "lucide-react";
+import Tagline from "@/components/molecule/tagline";
+
+const phases = [
+  {
+    icon: <CubeIcon className="w-6 h-6" />,
+    description: "Pay upfront with zero risk.",
+  },
+  {
+    icon: <BarChart3 className="w-6 h-6" />,
+    description:
+      'No Results = No Pay: "If we miss targets, we refund 100% + shut off campaigns."',
+  },
+  {
+    icon: <Settings className="w-6 h-6" />,
+    description:
+      'Direct Line to Founder: "No bots. No tiers. Text me personally if issues arise."',
+  },
+];
+
+const RiskFreeSection = () => {
+  return (
+    <section className="section bg-muted">
+      <div className="container">
+        <div className="flex flex-col items-center justify-center gap-6">
+          <Tagline text={<>No Risks</>} />
+          <h2 className="text-center mb-12">
+            Why This is <span className="text-secondary">Risk-Free</span>{" "}
+            (Seriously)
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-center justify-center">
+          {phases.map((phase, index) => (
+            <div
+              key={index}
+              className="relative bg-white/60 rounded-lg p-6 border hover:border-secondary transition-border backdrop-blur-lg [&>*]:text-center min-w-[300px] min-h-[160px] flex flex-col items-center justify-center gap-4"
+            >
+              {phase.icon}
+              <p>{phase.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default RiskFreeSection;
