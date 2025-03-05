@@ -29,8 +29,6 @@ export async function middleware(request: NextRequest) {
   const token = request.cookies.get('token')?.value || '';
   const from = request.cookies.get('from')?.value || "/dashboard";
 
-  console.log(path, isPrivateRoute, token, from);
-
   // If the user is trying to access a private route without a token, redirect to login
   if (isPrivateRoute && !token) {
     const fullUrl = path + request.nextUrl.search; // Combine pathname with query parameters

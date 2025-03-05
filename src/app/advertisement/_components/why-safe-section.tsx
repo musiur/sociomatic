@@ -3,19 +3,33 @@ import TransperancyIcon from "../_assets/transperancy-icon";
 import CoinIcon from "../_assets/coin-icon";
 import CalendarTimeIcon from "../_assets/calendar-time-icon";
 import TestimonialAside from "./testimonial-aside";
+import AdvertisementCTA from "./advertisement-cta";
 
 const features = [
   {
     icon: <TransperancyIcon />,
-    text: "100% transparency: Full access to your ad accounts and web analytics",
+    text: (
+      <>
+        <span>100% transparency:</span> Full access to your ad accounts and web
+        analytics
+      </>
+    ),
   },
   {
     icon: <CoinIcon />,
-    text: "Get a full refund if we don't deliver results",
+    text: (
+      <>
+        Get a full <span>refund</span> if we don&apos;t deliver results
+      </>
+    ),
   },
   {
     icon: <CalendarTimeIcon />,
-    text: "No lock-in contracts, but we ask for 90 days",
+    text: (
+      <>
+        <span>No lock-in contracts</span>, but we ask for 90 days
+      </>
+    ),
   },
 ];
 
@@ -31,38 +45,41 @@ const WhySafeSection = () => {
         You&apos;ll Ever Make
       </h2>
 
-      <div className="grid md:grid-cols-2 gap-8">
-        <div className="space-y-6">
+      <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="flex-1 space-y-6">
           {features.map((feature, index) => (
             <div
               key={index}
               className="flex items-center gap-4 [&>svg]:w-6 [&>svg]:h-6 [&>svg]:min-w-6 [&>svg]:min-h-6"
             >
               {feature.icon}
-              <p>{feature.text}</p>
+              <p className="[&>span]:font-semibold">{feature.text}</p>
             </div>
           ))}
+          <div className="flex items-center gap-8">
+            <Image
+              src="https://in8cddcab4.ufs.sh/f/TLm9XcQ0Drp9VIzd4elXtzjwcuqoVvpZmxNrkdWPhDefA1Mb"
+              alt="90 Day Guarantee"
+              width={120}
+              height={120}
+              className="w-[160px] h-auto"
+            />
+            <Image
+              src="https://in8cddcab4.ufs.sh/f/TLm9XcQ0Drp9HXIUHKQ63lrKW6cbSangxZGDNTm1szfYJEjk"
+              alt="Meta Certified"
+              width={120}
+              height={120}
+              className="w-[100px] h-auto"
+            />
+          </div>
+          <div className="flex flex-wrap items-center small-gap">
+            <AdvertisementCTA />
+          </div>
         </div>
 
-        <div className="space-y-6">
+        <div className="flex-1 space-y-6">
           <TestimonialAside />
         </div>
-      </div>
-      <div className="flex justify-center items-center gap-8">
-        <Image
-          src="https://in8cddcab4.ufs.sh/f/TLm9XcQ0Drp9VIzd4elXtzjwcuqoVvpZmxNrkdWPhDefA1Mb"
-          alt="90 Day Guarantee"
-          width={120}
-          height={120}
-          className="w-[160px] h-auto"
-        />
-        <Image
-          src="https://in8cddcab4.ufs.sh/f/TLm9XcQ0Drp9HXIUHKQ63lrKW6cbSangxZGDNTm1szfYJEjk"
-          alt="Meta Certified"
-          width={120}
-          height={120}
-          className="w-[100px] h-auto"
-        />
       </div>
     </section>
   );

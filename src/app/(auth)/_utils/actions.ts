@@ -43,10 +43,8 @@ export const A___Auth__Register = async (data: { email: string, password: string
         });
 
         const result = await response.json();
-        console.log(result)
         return result;
     } catch (error) {
-        console.log(error, "<--")
         return {
             success: false,
             message: "Something went wrong"
@@ -66,7 +64,6 @@ export const A___Auth__Verify = async (email: string, token: string) => {
         });
 
         const result = await response.json();
-        console.log(result)
         return result;
 
     } catch (error) {

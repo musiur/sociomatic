@@ -43,7 +43,6 @@ const RegisterForm = () => {
 
     async function onSubmit(data: z.infer<typeof FormSchema>) {
         const result = await A___Auth__Register(data)
-        console.log(result);
         if (result.success) {
             toast.success(result.message);
             router.push("/refer-mailbox")

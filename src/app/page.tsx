@@ -30,8 +30,6 @@ const HomePage = () => {
           </>
         }
         videoLink="https://www.youtube.com/embed/04pWB5aj-DE?si=KhMa8PqMC6WmL_K1"
-        brands={true}
-        background="HeroBackground"
       />
       <BrandCarousel />
       <OurServices FeaturesData={homeFeaturesData.slice(0, 6)} />
