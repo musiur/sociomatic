@@ -6,7 +6,7 @@ const AdvertisementCTA = () => {
   return (
     <Fragment>
       <ShimmerButton className="w-auto">Get Started Right Away</ShimmerButton>
-      <Button variant="outline">Get a Free Consultation Now!</Button>
+      <Button variant="outline">Start Your Free Consultation Now</Button>
     </Fragment>
   );
 };

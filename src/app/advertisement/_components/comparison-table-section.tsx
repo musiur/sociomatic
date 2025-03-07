@@ -1,7 +1,5 @@
-import ServicesCTA from "@/components/molecule/services-cta";
-import { Button } from "@/components/ui/button";
-import clsx from "clsx";
-import Link from "next/link";
+import clsx from "clsx"; 
+import AdvertisementCTA from "./advertisement-cta";
 
 const comparisonData = [
   {
@@ -75,13 +73,9 @@ const ComparisonTableSection = () => {
           </tbody>
         </table>
       </div>
-      <ServicesCTA
-        position="center"
-        cta={{
-          primary: { text: <>Get Started Right Away</>, link: "/" },
-          secondary: { text: <>Get a Free Consultation</>, link: "/#calendly" },
-        }}
-      />
+      <div className="flex justify-center gap-4">
+        <AdvertisementCTA />
+      </div>
     </section>
   );
 };
