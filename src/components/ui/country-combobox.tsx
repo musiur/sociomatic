@@ -46,7 +46,7 @@ const CountryCombobox = ({ onChange }: { onChange: Function }) => {
         <Command>
           <CommandInput placeholder="Search country..." />
           <CommandEmpty>No country found.</CommandEmpty>
-          <CommandGroup className="max-h-[50vh] overflow-auto">
+          <CommandGroup className="max-h-[200px] overflow-auto">
             {frameworks.map((country) => (
               <CommandItem
                 key={country.value}

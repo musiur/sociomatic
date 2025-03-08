@@ -22,11 +22,21 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import CountryCombobox from "@/components/ui/country-combobox";
+import { InputOTPGroup, InputOTPSlot } from "@/components/ui/input-otp";
+import { InputOTP } from "@/components/ui/input-otp";
+import { useState } from "react";
+import { toast } from "@/components/ui/use-toast";
+import { GetOtp, VerifyOtp } from "@/app/joining/_utils/actions";
+import clsx from "clsx";
+import { Action___POST__SendMail } from "@/app/contact-us/actions";
 
 const formSchema = z.object({
   name: z.string().min(1),
   email: z.string().email(),
   country: z.string().min(1),
+  phone: z.string().optional(),
+  website: z.string().optional(),
+  message: z.string().optional(),
 });
 
 type TCTAForm = z.infer<typeof formSchema>;
@@ -42,16 +52,84 @@ const CTAForm = (): JSX.Element => {
       name: "",
       email: "",
       country: "",
+      phone: "",
+      website: "",
+      message: "",
     },
   });
+  const [otp, setOtp] = useState("");
+  const [emailSent, setEmailSent] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [open, setOpen] = useState(false);
 
-  const HandleOnSubmit = (values: TCTAForm) => {
-    console.log(values);
+  const HandleOnSubmit = async (values: TCTAForm) => {
+    const result = await GetOtp(values.email);
+    if (result.success) {
+      setEmailSent(true);
+      toast({
+        title: "Verification Code",
+        description: result?.message || "Something went wrong!",
+      });
+    } else {
+      toast({
+        variant: "error",
+        title: "Verification Code",
+        description: result?.message || "Something went wrong!",
+      });
+    }
+  };
+
+  const SendFinalEmail = async () => {
+    const result = await Action___POST__SendMail(
+      {
+        ...form.getValues(),
+        services: ["google-paid-ads", "social-media-paids", "google-analytics"],
+      },
+      "contact"
+    );
+    console.table(result);
+    if (result.success) {
+      toast({
+        title: "Verification",
+        description: result?.message || "Something went wrong!",
+      });
+      form.reset();
+      setEmailSent(false);
+      setOpen(false);
+    } else {
+      toast({
+        variant: "error",
+        title: "Verification",
+        description: result?.message || "Something went wrong!",
+      });
+    }
+  };
+
+  const HandleVerify = async () => {
+    setLoading(true);
+    const email = form.getValues("email");
+
+    const result = await VerifyOtp(parseInt(otp), email);
+
+    if (result.success) {
+      toast({
+        title: "Verification",
+        description: result?.message || "Something went wrong!",
+      });
+      await SendFinalEmail();
+    } else {
+      toast({
+        variant: "error",
+        title: "Verification",
+        description: result?.message || "Something went wrong!",
+      });
+    }
+    setLoading(false);
   };
 
   return (
     <div>
-      <Dialog>
+      <Dialog open={open} onOpenChange={setOpen}>
         <DialogTrigger asChild>
           <ShimmerButton className="w-auto">
             Get Started Right Away
@@ -68,7 +146,12 @@ const CTAForm = (): JSX.Element => {
           <Form {...form}>
             <form
               onSubmit={form.handleSubmit(HandleOnSubmit)}
-              className="space-y-4 py-4"
+              className={clsx(
+                "space-y-4 py-4 max-h-[80dvh] overflow-y-auto p-1",
+                {
+                  hidden: emailSent,
+                }
+              )}
             >
               <CustomInput name="name" label="Name" />
               <CustomInput name="email" label="Email" />
@@ -88,6 +171,9 @@ const CTAForm = (): JSX.Element => {
                 )}
               />
               <CustomInput name="phone" label="Phone" />
+              <CustomInput name="website" label="Your Website Link" />
+              <CustomInput name="message" label="Message" type="textarea" />
+
               <ShimmerButton
                 type="submit"
                 disabled={form.formState.isSubmitting}
@@ -100,6 +186,31 @@ const CTAForm = (): JSX.Element => {
               </ShimmerButton>
             </form>
           </Form>
+          <div
+            className={clsx("space-y-4", {
+              hidden: !emailSent,
+            })}
+          >
+            <InputOTP
+              maxLength={4}
+              value={otp}
+              onChange={(value: any) => setOtp(value)}
+            >
+              <InputOTPGroup>
+                <InputOTPSlot index={0} />
+                <InputOTPSlot index={1} />
+                <InputOTPSlot index={2} />
+                <InputOTPSlot index={3} />
+              </InputOTPGroup>
+            </InputOTP>
+            <ShimmerButton
+              onClick={HandleVerify}
+              disabled={loading}
+              className="w-full items-center gap-2 mt-4"
+            >
+              {loading ? "Verifying" : "Verify"}
+            </ShimmerButton>
+          </div>
         </DialogContent>
       </Dialog>
     </div>
