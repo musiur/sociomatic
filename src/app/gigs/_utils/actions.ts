@@ -16,7 +16,6 @@ export const Action___GET__VerifyPayment = async (sessionId: string) => {
         const data = await response.json();
         return data
     } catch (error) {
-        console.log(error)
         return {
             success: false,
             message: "Failed to verify payment"

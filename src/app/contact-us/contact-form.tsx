@@ -62,7 +62,6 @@ const ContactUs = () => {
     setLoading(true);
     try {
       const result = await Action___POST__SendMail(formData, "contact");
-      console.log(result);
       if (result?.success) {
         toast({
           title: "Message Sending",

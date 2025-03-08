@@ -55,8 +55,8 @@ const rightFeatures = [
 const ComparisonCopySection = () => {
   return (
     <section className="container section">
-      <div className="flex flex-col md:flex-row items-center justify-between gap-12">
-        <div className="flex-1 space-y-8">
+      <div className="flex flex-col md:flex-row items-start justify-between gap-12">
+        <div className="max-w-2xl space-y-8">
           <h2>
             Most Agencies Take Your Money and Guess.{" "}
             <span className="text-secondary">We Do the Opposite.</span>
@@ -71,7 +71,7 @@ const ComparisonCopySection = () => {
           </div>
         </div>
 
-        <div className="pt-12 flex-1 space-y-8">
+        <div className="space-y-8">
           <h3 className="text-lg md:text-xl font-medium">
             What You Get for $300/Month
             <br /> Package Breakdown

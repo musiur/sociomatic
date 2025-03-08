@@ -28,7 +28,7 @@ const ClientsReviews = ({
       fetchReviews();
     }
   }, [reviews]);
-  console.log(reviews?.length, clientReviews?.length)
+  
   return (
     <>
       {testimonial ? (

@@ -1,9 +1,8 @@
 "use client";
-import { ReactElement } from "react";
-import GetConsultation from "@/components/molecule/get-consultation";
-import GetAQuote from "@/components/molecule/get-a-quote";
+import { ReactElement, ReactNode } from "react";
 import ANIM__FadeInOnScroll from "@/components/anims/fadein.anim";
 import { AuroraBackground } from "@/components/ui/aurora-background";
+import HeroCTA from "./hero-cta";
 
 const HeroSection = ({
   H1 = (
@@ -20,14 +19,12 @@ const HeroSection = ({
     </>
   ),
   videoLink = "https://www.youtube.com/embed/Gl465-ugqbM?si=Njv8OZykPsz9LsYZ",
-  brands = false,
-  background = "HeroBackgroundServices",
+  cta = <HeroCTA />,
 }: {
   H1: ReactElement;
   P: ReactElement;
   videoLink: string;
-  brands: boolean;
-  background: string;
+  cta?: ReactNode;
 }) => {
   const backgroundImage = `bg-[url('/images/backgrounds/HeroBackground.svg')]`;
   return (
@@ -37,10 +34,9 @@ const HeroSection = ({
           <ANIM__FadeInOnScroll className="order-2 lg:order-1 flex flex-col small-gap">
             <h1 className="text-primary [&>span]:text-secondary">{H1}</h1>
             <p className="hero-description">{P}</p>
-            <div className="flex flex-wrap items-center small-gap">
-              <GetConsultation />
-              <GetAQuote />
-            </div>
+            {cta ? (
+              <div className="flex flex-wrap items-center small-gap">{cta}</div>
+            ) : null}
           </ANIM__FadeInOnScroll>
           <ANIM__FadeInOnScroll className="order-1 lg:order-2">
             {[

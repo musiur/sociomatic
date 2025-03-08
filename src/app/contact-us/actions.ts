@@ -13,7 +13,6 @@ export const Action___POST__SendMail = async (payload: any, type: "contact" | "q
         const result = await response.json();
         return result;
     } catch (error) {
-        console.log(error);
         return {
             success: false,
             message: "Something went wrong",
