@@ -80,8 +80,8 @@ function GoogleAnalyticsForm() {
           Please, fill up the form so that you may get us in painpoint to
           resolve
         </h4>
-        <CustomInput form={form} name="name" label="Your name" />
-        <CustomInput form={form} name="websiteUrl" label="Website URL" />
+        <CustomInput name="name" label="Your name" />
+        <CustomInput name="websiteUrl" label="Website URL" />
         <FormField
           control={form.control}
           name="country"
@@ -98,10 +98,9 @@ function GoogleAnalyticsForm() {
           )}
         />
 
-        <CustomInput form={form} name="phone" label="Phone" />
+        <CustomInput name="phone" label="Phone" />
 
         <Checkboxes
-          form={form}
           name="industryType"
           label="What is your industry?"
           options={[
@@ -129,14 +128,12 @@ function GoogleAnalyticsForm() {
         />
 
         <CustomInput
-          form={form}
           name="challengesFaced"
           label="Have you ever run Google Ads campaigns before? If so, what were the biggest challenges you faced?"
           type="textarea"
         />
 
         <CustomRadio
-          form={form}
           name="tools"
           label="Are you currently using any website analytics tools?"
           options={[
@@ -147,25 +144,23 @@ function GoogleAnalyticsForm() {
 
         {form.watch("tools") === "Yes" ? (
           <CustomInput
-            form={form}
             name="toolsUsed"
             label="If yes, please make a list tools"
           />
         ) : null}
 
         <CustomInput
-          form={form}
+          
           name="goals"
           label="Briefly describe your top 2-3 goals for implementing GA4 & GTM. (e.g., Button Click, Ecommerce tracking,Form Submission etc.)"
           type="textarea"
         />
 
         {form.watch("goals")?.includes("Others") ? (
-          <CustomInput form={form} name="customGoals" label="Add your own" />
+          <CustomInput name="customGoals" label="Add your own" />
         ) : null}
 
         <CustomRadio
-          form={form}
           name="xpGA4GTM"
           label="Do you have any experience with Google Analytics 4 or Google Tag Manager?"
           options={[
@@ -175,7 +170,7 @@ function GoogleAnalyticsForm() {
         />
 
         <Checkboxes
-          form={form}
+          
           name="platformToSetup"
           label="Which platform do you need to set up tracking ?"
           options={[

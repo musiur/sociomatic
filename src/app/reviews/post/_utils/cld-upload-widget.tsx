@@ -9,16 +9,16 @@ import {
 import { CldUploadWidget } from "next-cloudinary";
 import Image from "next/image";
 import { useState } from "react";
+import { useFormContext } from "react-hook-form";
 
 const CLD__UploadWidget = ({
-  form,
   name,
   label,
 }: {
-  form: any;
   name: string;
   label: string;
 }) => {
+  const form = useFormContext();
   const [image, setImage] = useState<string | null>(null);
 
   return (

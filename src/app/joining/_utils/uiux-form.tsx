@@ -81,7 +81,7 @@ function UiUxForm() {
           Please, fill up the form so that you may get us in painpoint to
           resolve
         </h4>
-        <CustomInput form={form} name="name" label="Name" />
+        <CustomInput name="name" label="Name" />
         <FormField
           control={form.control}
           name="country"
@@ -98,9 +98,9 @@ function UiUxForm() {
           )}
         />
 
-        <CustomInput form={form} name="phone" label="Phone" />
+        <CustomInput name="phone" label="Phone" />
         <Checkboxes
-          form={form}
+          
           name="businessType"
           label="Which industry does your business thrive in?"
           options={[
@@ -122,7 +122,6 @@ function UiUxForm() {
           ]}
         />
         <Checkboxes
-          form={form}
           name="industryType"
           label="What is your industry?"
           options={[
@@ -154,10 +153,9 @@ function UiUxForm() {
           ]}
         />
         {form.watch("industryType")?.includes("Others") ? (
-          <CustomInput form={form} name="customIndustry" label="Add your own" />
+          <CustomInput name="customIndustry" label="Add your own" />
         ) : null}
         <Checkboxes
-          form={form}
           name="goals"
           label="What objectives do you aim to achieve with UI/UX design? (Select all that apply)"
           options={[
@@ -186,25 +184,21 @@ function UiUxForm() {
 
         {form.watch("goals")?.includes("Others") ? (
           <CustomInput
-            form={form}
             name="customGoals"
             label="Add your own goals"
           />
         ) : null}
         <CustomInput
-          form={form}
           name="challengesFaced"
           label="Have you invested in UI/UX design? What challenges did you encounter?"
         />
         <CustomInput
-          form={form}
           name="budget"
           label=" What is your UI/UX design project budget range?"
           type="number"
         />
 
         <CustomRadio
-          form={form}
           name="workExperience"
           label="Have you previously partnered with any company?"
           options={[
@@ -215,26 +209,22 @@ function UiUxForm() {
 
         {form.watch("workExperience") === "Yes" ? (
           <CustomInput
-            form={form}
             name="workExperienceDetails"
             label="Please share your experiences with your former company."
           />
         ) : null}
 
         <CustomInput
-          form={form}
           name="customerAsPersona"
           label="Describe your vision for the ideal user experience. (Include target audience, essential features, preferred design style)"
           type="textarea"
         />
 
         <CustomInput
-          form={form}
           name="painpoints"
           label="What are your biggest challenges with attracting customers? (Any pain points)"
         />
         <Checkboxes
-          form={form}
           name="commitment"
           label="Given the program's demands and time investment, how ready are you to embark on this UI/UX design journey?"
           options={[

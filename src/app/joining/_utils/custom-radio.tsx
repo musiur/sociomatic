@@ -6,18 +6,18 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { useFormContext } from "react-hook-form";
 
 const CustomRadio = ({
-  form,
   name,
   label,
   options,
 }: {
-  form: any;
   name: string;
   label: string;
   options: { label: string; value: string }[];
-}) => {
+  }) => {
+  const form = useFormContext();
   return (
     <FormField
       control={form.control}
@@ -28,7 +28,7 @@ const CustomRadio = ({
           <FormControl>
             <RadioGroup
               onValueChange={field.onChange}
-              defaultValue={form.value}
+              defaultValue={field.value}
               className="flex flex-col space-y-1"
             >
               {options?.map(

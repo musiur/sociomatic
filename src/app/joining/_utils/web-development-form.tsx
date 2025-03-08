@@ -44,19 +44,10 @@ function WebDevelopmentForm() {
         });
         if (typeof window !== "undefined") {
           if (result.success) {
-            
-            DL___FormData(
-              form.getValues(),
-              "joiningFormSubmission",
-              "web"
-            );
+            DL___FormData(form.getValues(), "joiningFormSubmission", "web");
             router.push("/joining/end?type=customwebdev");
           } else {
-            DL___FormData(
-              form.getValues(),
-              "joiningFormAbandoned",
-              "web"
-            );
+            DL___FormData(form.getValues(), "joiningFormAbandoned", "web");
           }
         }
       }
@@ -64,11 +55,7 @@ function WebDevelopmentForm() {
   }
 
   useEffect(() => {
-    DL___FormData(
-      form.getValues(),
-      "joiningFormProcessing",
-      "web"
-    );
+    DL___FormData(form.getValues(), "joiningFormProcessing", "web");
   }, [form.getValues()]);
 
   return (
@@ -81,8 +68,8 @@ function WebDevelopmentForm() {
           Please, fill up the form so that you may get us in painpoint to
           resolve
         </h4>
-        <CustomInput form={form} name="name" label="Name" />
-        <CustomInput form={form} name="websiteUrl" label="Website URL" />
+        <CustomInput name="name" label="Name" />
+        <CustomInput name="websiteUrl" label="Website URL" />
         <FormField
           control={form.control}
           name="country"
@@ -99,9 +86,8 @@ function WebDevelopmentForm() {
           )}
         />
 
-        <CustomInput form={form} name="phone" label="Phone" />
+        <CustomInput name="phone" label="Phone" />
         <Checkboxes
-          form={form}
           name="businessType"
           label="Which industry does your business thrive in?"
           options={[
@@ -123,7 +109,6 @@ function WebDevelopmentForm() {
           ]}
         />
         <Checkboxes
-          form={form}
           name="industryType"
           label="What is your industry?"
           options={[
@@ -150,10 +135,9 @@ function WebDevelopmentForm() {
           ]}
         />
         {form.watch("industryType")?.includes("Others") ? (
-          <CustomInput form={form} name="customIndustry" label="Add your own" />
+          <CustomInput name="customIndustry" label="Add your own" />
         ) : null}
         <Checkboxes
-          form={form}
           name="goals"
           label="What are your core goals for development? (Select your primary focus)"
           options={[
@@ -181,26 +165,19 @@ function WebDevelopmentForm() {
         />
 
         {form.watch("goals")?.includes("Others") ? (
-          <CustomInput
-            form={form}
-            name="customGoals"
-            label="Add your own goals"
-          />
+          <CustomInput name="customGoals" label="Add your own goals" />
         ) : null}
         <CustomInput
-          form={form}
           name="challengesFaced"
           label="Have you embarked on web development ventures before? If so, what were your main obstacles?"
         />
         <CustomInput
-          form={form}
           name="budget"
           label="What is your projected budget for web development?"
           type="number"
         />
 
         <CustomRadio
-          form={form}
           name="workExperience"
           label="Have you previously partnered with a development company?"
           options={[
@@ -211,26 +188,22 @@ function WebDevelopmentForm() {
 
         {form.watch("workExperience") === "Yes" ? (
           <CustomInput
-            form={form}
             name="workExperienceDetails"
             label="Please share your experiences with your former development agency."
           />
         ) : null}
 
         <CustomInput
-          form={form}
           name="customerAsPersona"
           label="Can you describe your perfect customer? (Consider age, location, and interests)"
           type="textarea"
         />
 
         <CustomInput
-          form={form}
           name="painpoints"
           label="What are your biggest challenges with attracting customers? (Any pain points)"
         />
         <Checkboxes
-          form={form}
           name="commitment"
           label="How ready can you fully engage with our intensive web development program?"
           options={[
