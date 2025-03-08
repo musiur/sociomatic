@@ -35,7 +35,7 @@ const RiskFreeSection = () => {
           {phases.map((phase, index) => (
             <div
               key={index}
-              className="relative bg-white/60 rounded-lg p-6 border hover:border-secondary transition-border backdrop-blur-lg [&>*]:text-center min-w-[300px] min-h-[160px] flex flex-col items-center justify-center gap-4"
+              className="relative bg-white/60 rounded-lg p-6 border-[2px] hover:border-secondary transition-border backdrop-blur-lg [&>*]:text-center min-w-[300px] min-h-[160px] flex flex-col items-center justify-center gap-4"
             >
               {phase.icon}
               <p>{phase.description}</p>

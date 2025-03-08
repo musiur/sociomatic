@@ -31,8 +31,8 @@ const ExpireSection = () => {
   }, []);
 
   return (
-    <section className="bg-gradient-to-tr from-primary to-secondary text-white py-16">
-      <div className="container section">
+    <section className="section bg-gradient-to-tr from-primary to-secondary text-white">
+      <div className="container">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-8 order-2 md:order-1">
             <h2 className="text-3xl font-bold">

@@ -49,10 +49,9 @@ const LoginForm = () => {
       </h3>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-          <CustomInput form={form} name="email" label="Email" />
+          <CustomInput name="email" label="Email" />
 
           <CustomInput
-            form={form}
             name="password"
             label="Password"
             type="password"

@@ -1,12 +1,14 @@
 import ShimmerButton from "@/components/magicui/shimmer-button";
+import GetConsultation from "@/components/molecule/get-consultation";
 import { Button } from "@/components/ui/button";
 import { Fragment } from "react";
+import CTAForm from "./cta-form";
 
 const AdvertisementCTA = () => {
   return (
     <Fragment>
-      <ShimmerButton className="w-auto">Get Started Right Away</ShimmerButton>
-      <Button variant="outline">Start Your Free Consultation Now</Button>
+      <CTAForm />
+      <GetConsultation />
     </Fragment>
   );
 };

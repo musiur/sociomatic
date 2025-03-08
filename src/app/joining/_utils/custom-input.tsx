@@ -10,18 +10,18 @@ import { Textarea } from "@/components/ui/textarea";
 import { Eye } from "lucide-react";
 import { EyeOff } from "lucide-react";
 import { useState } from "react";
+import { useFormContext } from "react-hook-form";
 
 const CustomInput = ({
-  form,
   name,
   label,
   type = "text",
 }: {
-  form: any;
   name: string;
   label: string;
   type?: "text" | "textarea" | "number" | "password";
-}) => {
+  }) => {
+  const form = useFormContext();
   const [showPassword, setShowPassword] = useState(false);
   return (
     <FormField
