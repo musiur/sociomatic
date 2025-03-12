@@ -2,7 +2,6 @@
 
 import * as React from "react";
 
-import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -12,6 +11,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { FormField, FormItem, FormLabel, FormMessage } from "../ui/form";
+import { useFormContext } from "react-hook-form";
 
 type Type__Option = {
   label: string;
@@ -21,17 +21,16 @@ type Type__Option = {
 
 export default function Checkboxes({
   options = [],
-  form,
   name,
   label,
   menuLabel = "Select",
 }: {
   options: Type__Option[];
-  form: any;
   name: string;
   label: string;
   menuLabel?: string;
-}) {
+  }) {
+  const form = useFormContext();
   const [selected, setSelected] = React.useState<Type__Option[]>(options);
   const [showValues, setShowValues] = React.useState<Type__Option[]>(
     selected.filter((item: Type__Option) => item.checked)

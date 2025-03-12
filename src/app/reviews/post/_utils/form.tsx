@@ -62,34 +62,33 @@ export default function ReviewPostForm() {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-        <CustomInput form={form} name="name" label="Client's name" />
-        <CustomInput form={form} name="rating" label="Rating" type="number" />
+        <CustomInput name="name" label="Client's name" />
+        <CustomInput name="rating" label="Rating" type="number" />
         <CustomSelect
-          form={form}
           name="category"
           label="Category"
           options={categoryOptions}
         />
         <CustomInput
-          form={form}
+          
           name="text"
           label="Client's Message"
           type="textarea"
         />
-        <CustomInput form={form} name="company" label="Client's Company" />
+        <CustomInput name="company" label="Client's Company" />
         <CustomInput
-          form={form}
+          
           name="country"
           label="Company location (Country)"
         />
 
         <CLD__UploadWidget
-          form={form}
+          
           name="avatar"
           label="Client's Avatar/Profile picture"
         />
         <CLD__UploadWidget
-          form={form}
+          
           name="image"
           label="Review Image (Fiverr/Other marketplace Review Screenshot/image)"
         />

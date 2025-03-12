@@ -12,18 +12,18 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { useFormContext } from "react-hook-form";
 
 const CustomSelect = ({
-  form,
   name,
   options,
   label = "test",
 }: {
-  form: any;
   name: string;
   options: { label: string; value: string }[];
   label: string;
 }) => {
+  const form = useFormContext();
   return (
     <FormField
       control={form.control}

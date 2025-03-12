@@ -83,8 +83,8 @@ function SocialMediaPaidAdsForm() {
           Please, fill up the form so that you may get us in painpoint to
           resolve
         </h4>
-        <CustomInput form={form} name="name" label="Name" />
-        <CustomInput form={form} name="websiteUrl" label="Website URL" />
+        <CustomInput name="name" label="Name" />
+        <CustomInput name="websiteUrl" label="Website URL" />
         <FormField
           control={form.control}
           name="country"
@@ -100,9 +100,8 @@ function SocialMediaPaidAdsForm() {
             </FormItem>
           )}
         />
-        <CustomInput form={form} name="phone" label="Phone" />
+        <CustomInput name="phone" label="Phone" />
         <Checkboxes
-          form={form}
           name="platformType"
           label="Which social media platforms are most relevant to your target audience? (Select all that apply)"
           options={[
@@ -129,10 +128,9 @@ function SocialMediaPaidAdsForm() {
           ]}
         />
         {form.watch("platformType")?.includes("Others") ? (
-          <CustomInput form={form} name="customPlatform" label="Add your own" />
+          <CustomInput name="customPlatform" label="Add your own" />
         ) : null}
         <Checkboxes
-          form={form}
           name="goals"
           label="What are your primary goals for social media advertising? (Select all that apply)"
           options={[
@@ -171,26 +169,23 @@ function SocialMediaPaidAdsForm() {
 
         {form.watch("goals")?.includes("Others") ? (
           <CustomInput
-            form={form}
             name="customGoals"
             label="Add your own goals"
           />
         ) : null}
         <CustomInput
-          form={form}
           name="challengesFaced"
           label="Have you embarked on web development ventures before? If so, what were your main obstacles?"
           type="textarea"
         />
         <CustomInput
-          form={form}
+          
           name="budget"
           label="Do you currently have a dedicated budget for social media advertising, or are you still exploring options?"
           type="number"
         />
 
         <CustomRadio
-          form={form}
           name="workExperience"
           label="Have you previously partnered with a development company?"
           options={[
@@ -201,21 +196,21 @@ function SocialMediaPaidAdsForm() {
 
         {form.watch("workExperience") === "Yes" ? (
           <CustomInput
-            form={form}
+            
             name="workExperienceDetails"
             label="Do you have any prior experience with social media advertising?"
           />
         ) : null}
 
         <CustomInput
-          form={form}
+          
           name="partnerYouWant"
           label="What are the top 2-3 things you look for in a social media advertising partner?"
           type="textarea"
         />
 
         <CustomInput
-          form={form}
+          
           name="painpoints"
           label="Briefly describe your biggest challenge in reaching your target audience on social media."
           type="textarea"

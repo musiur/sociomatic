@@ -56,11 +56,11 @@ const RegisterForm = () => {
             <h3 className="text-lg md:text-2xl font-semibold">Create an account</h3>
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                    <CustomInput form={form} name="name" label="Name" />
+                    <CustomInput name="name" label="Name" />
 
-                    <CustomInput form={form} name="email" label="Email" />
-                    <CustomInput form={form} name="phone" label="Phone" />
-                    <CustomInput form={form} name="password" label="Password" type="password" />
+                    <CustomInput name="email" label="Email" />
+                    <CustomInput name="phone" label="Phone" />
+                    <CustomInput name="password" label="Password" type="password" />
 
                     <ShimmerButton type="submit"
                         disabled={form.formState.isSubmitting}

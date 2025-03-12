@@ -80,7 +80,7 @@ function SoftwareDevelopmentForm() {
           Please, fill up the form so that you may get us in painpoint to
           resolve
         </h4>
-        <CustomInput form={form} name="name" label="Name" />
+        <CustomInput name="name" label="Name" />
         <FormField
           control={form.control}
           name="country"
@@ -97,9 +97,8 @@ function SoftwareDevelopmentForm() {
           )}
         />
 
-        <CustomInput form={form} name="phone" label="Phone" />
+        <CustomInput name="phone" label="Phone" />
         <Checkboxes
-          form={form}
           name="businessType"
           label="Which industry does your business thrive in?"
           options={[
@@ -121,7 +120,6 @@ function SoftwareDevelopmentForm() {
           ]}
         />
         <Checkboxes
-          form={form}
           name="industryType"
           label="What is your industry?"
           options={[
@@ -143,10 +141,9 @@ function SoftwareDevelopmentForm() {
           ]}
         />
         {form.watch("industryType")?.includes("Others") ? (
-          <CustomInput form={form} name="customIndustry" label="Add your own" />
+          <CustomInput name="customIndustry" label="Add your own" />
         ) : null}
         <Checkboxes
-          form={form}
           name="goals"
           label="Primary Objectives for Software Development"
           options={[
@@ -175,25 +172,22 @@ function SoftwareDevelopmentForm() {
 
         {form.watch("goals")?.includes("Others") ? (
           <CustomInput
-            form={form}
+            
             name="customGoals"
             label="Add your own goals"
           />
         ) : null}
         <CustomInput
-          form={form}
           name="challengesFaced"
           label="Have you previously invested in software development? If yes, what were the major hurdles you encountered?"
         />
         <CustomInput
-          form={form}
           name="budget"
           label="Your Budget for Development"
           type="number"
         />
 
         <CustomRadio
-          form={form}
           name="workExperience"
           label="Have you collaborated with a development firm before?"
           options={[
@@ -204,7 +198,6 @@ function SoftwareDevelopmentForm() {
 
         {form.watch("workExperience") === "Yes" ? (
           <CustomInput
-            form={form}
             name="workExperienceDetails"
             label="Please describe your experience with your previous development partner. (Text box for description)
             "
@@ -212,19 +205,16 @@ function SoftwareDevelopmentForm() {
         ) : null}
 
         <CustomInput
-          form={form}
           name="customerAsPersona"
           label="Can you describe your perfect customer? (Consider age, location, and interests)"
           type="textarea"
         />
 
         <CustomInput
-          form={form}
           name="painpoints"
           label="What are your biggest challenges with attracting customers? (Any pain points)"
         />
         <Checkboxes
-          form={form}
           name="commitment"
           label="How ready can you fully engage with our intensive web development program?"
           options={[

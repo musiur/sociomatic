@@ -80,8 +80,8 @@ function GoogleAdsForm() {
           Please, fill up the form so that you may get us in painpoint to
           resolve
         </h4>
-        <CustomInput form={form} name="name" label="Name" />
-        <CustomInput form={form} name="websiteUrl" label="Website URL" />
+        <CustomInput name="name" label="Name" />
+        <CustomInput name="websiteUrl" label="Website URL" />
         <FormField
           control={form.control}
           name="country"
@@ -98,9 +98,8 @@ function GoogleAdsForm() {
           )}
         />
 
-        <CustomInput form={form} name="phone" label="Phone" />
+        <CustomInput name="phone" label="Phone" />
         <Checkboxes
-          form={form}
           name="businessType"
           label="What type of business do you currently own?"
           options={[
@@ -122,7 +121,6 @@ function GoogleAdsForm() {
           ]}
         />
         <Checkboxes
-          form={form}
           name="industryType"
           label="What is your industry?"
           options={[
@@ -149,7 +147,6 @@ function GoogleAdsForm() {
           ]}
         />
         <Checkboxes
-          form={form}
           name="goals"
           label="What are your main advertising goals? (Increase brand awareness, generate leads, drive sales, etc.)"
           options={[
@@ -177,22 +174,19 @@ function GoogleAdsForm() {
         />
 
         {form.watch("goals")?.includes("others") ? (
-          <CustomInput form={form} name="customGoals" label="Add your own" />
+          <CustomInput name="customGoals" label="Add your own" />
         ) : null}
         <CustomInput
-          form={form}
           name="challengesFaced"
           label="Have you ever run Google Ads campaigns before? If so, what were the biggest challenges you faced?"
         />
         <CustomInput
-          form={form}
           name="budget"
           label="What's your estimated monthly budget for Google Advestising?"
           type="number"
         />
 
         <CustomRadio
-          form={form}
           name="workExperience"
           label="Have you worked with any marketing agencies before?"
           options={[
@@ -203,18 +197,15 @@ function GoogleAdsForm() {
 
         {form.watch("workExperience") === "Yes" ? (
           <CustomInput
-            form={form}
             name="workExperienceDetails"
             label="If yes, please share the details"
           />
         ) : null}
         <CustomInput
-          form={form}
           name="painpoints"
           label=" What are your biggest challenges with attracting customers? (Any pain points)"
         />
         <Checkboxes
-          form={form}
           name="commitment"
           label="Considering the program's intensity and the time commitment involved, how committed are you to giving this your all?"
           options={[

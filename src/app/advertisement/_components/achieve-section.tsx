@@ -1,58 +1,96 @@
-import { CubeIcon } from "@radix-ui/react-icons";
-import { BarChart3, Settings } from "lucide-react";
-import ArrowLine from "../_assets/arrow-line";
-import Tagline from "@/components/molecule/tagline";
+import Image from "next/image";
+import Link from "next/link";
+import ShimmerButton from "@/components/magicui/shimmer-button";
+import {
+  SearchIcon,
+  SparklesIcon,
+  TrendingUpIcon,
+  Undo2Icon,
+  Users2,
+} from "lucide-react";
 
-const phases = [
+const features = [
   {
-    icon: <CubeIcon className="w-6 h-6 text-primary" />,
-    title: "1st Month: Crush Testing Phase",
-    description: "Find winning audiences & creatives",
-    stats: "15 Leads generated",
+    icon: <TrendingUpIcon />,
+    text: (
+      <>
+        <span>300% Increase in Conversions:</span> Clients have seen up to a
+        300% boost in conversion rates within 90 days.
+      </>
+    ),
   },
   {
-    icon: <BarChart3 className="w-6 h-6 text-primary" />,
-    title: "2nd Month: Scale Profitably",
-    description: "Double down on what works",
-    stats: "45 Leads generated",
+    icon: <Undo2Icon />,
+    text: (
+      <>
+        <span>ROI Amplification:</span> On average, we turn $300 into $3,000 in
+        revenue.
+      </>
+    ),
   },
   {
-    icon: <Settings className="w-6 h-6 text-primary" />,
-    title: "3rd Month: Automate Growth",
-    description: "Refine campaigns for long-term ROI",
-    stats: "30 Leads generated",
+    icon: <Users2 />,
+    text: (
+      <>
+        <span>Lead Generation:</span> Delivered up to 90 qualified leads in just
+        3 months
+      </>
+    ),
+  },
+  {
+    icon: <SparklesIcon />,
+    text: (
+      <>
+        <span>Client Satisfaction:</span> Earned 500+ five-star reviews from
+        850+ businesses.
+      </>
+    ),
+  },
+  {
+    icon: <SearchIcon />,
+    text: (
+      <>
+        <span>Complete Transparency:</span> Full access to real-time dashboards
+        and daily tracking
+      </>
+    ),
   },
 ];
 
 const AchieveSection = () => {
   return (
-    <section className="section container">
-      <div className="flex flex-col items-center justify-center gap-6">
-        <Tagline text={<>Core benefits</>} />
-        <h2 className="text-center mb-12">
-          Here&apos;s How We Make Your $300/Month
-          <br /> Work Harder{" "}
-          <span className="text-secondary">Than a $3,000 Agency</span>
-        </h2>
-      </div>
+    <section className="section container space-y-[48px]">
+      <h2 className="text-center mb-12">
+        Our <span className="text-secondary">Proven Results</span> Speak for Themselves
+      </h2>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-center justify-center">
-        {phases.map((phase, index) => (
-          <div
-            key={index}
-            className="relative bg-white/60 rounded-lg p-6 border hover:border-secondary transition-border backdrop-blur-lg max-w-2xl mx-auto [&>*]:text-center min-w-[300px]"
-          >
-            <div className="relative z-10 flex flex-col items-center justify-center gap-4">
-              <div>{phase.icon}</div>
-              <div>
-                <h3 className="font-semibold text-sm md:text-lg">
-                  {phase.title}
-                </h3>
-                <p className="text-gray-500">{phase.description}</p>
-              </div>
+      <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="flex-1 space-y-6">
+          {features.map((feature, index) => (
+            <div
+              key={index}
+              className="flex items-center gap-4 [&>svg]:w-6 [&>svg]:h-6 [&>svg]:min-w-6 [&>svg]:min-h-6"
+            >
+              {feature.icon}
+              <p className="[&>span]:font-semibold">{feature.text}</p>
             </div>
-          </div>
-        ))}
+          ))}
+          <Link href="/" className="inline-block w-full pt-8">
+            <ShimmerButton className="w-auto">
+              See How We Turn $300 into $3,000
+            </ShimmerButton>
+          </Link>
+        </div>
+
+        <div className="flex-1 space-y-6">
+          <Image
+            src="https://in8cddcab4.ufs.sh/f/TLm9XcQ0Drp9HXIUHKQ63lrKW6cbSangxZGDNTm1szfYJEjk"
+            alt="Meta Certified"
+            width={120}
+            height={120}
+            className="w-full h-auto"
+          />
+        </div>
       </div>
     </section>
   );

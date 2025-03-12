@@ -1,5 +1,7 @@
 import XRedIcon from "@/components/assets/x-red";
 import CheckGreenIcon from "@/components/assets/check-green";
+import ShimmerButton from "@/components/magicui/shimmer-button";
+import Link from "next/link";
 
 const painPoints = [
   "Throwing money at ads with no clear strategy.",
@@ -15,8 +17,8 @@ const solutions = [
 
 const FailFixSection = () => {
   return (
-    <section className="section container">
-      <h2 className="text-center mb-12">
+    <section className="section container space-y-12">
+      <h2 className="text-center">
         Why Most Businesses Fail at Ads{" "}
         <span className="text-secondary">(And How We Fix It)</span>
       </h2>
@@ -50,6 +52,10 @@ const FailFixSection = () => {
           </div>
         </div>
       </div>
+
+      <Link href="/" className="inline-block w-full">
+        <ShimmerButton className="w-auto mx-auto">See How We Turn $300 into $3,000</ShimmerButton>
+      </Link>
     </section>
   );
 };
