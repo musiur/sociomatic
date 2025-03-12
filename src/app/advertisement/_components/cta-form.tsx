@@ -29,6 +29,7 @@ import { toast } from "@/components/ui/use-toast";
 import { GetOtp, VerifyOtp } from "@/app/joining/_utils/actions";
 import clsx from "clsx";
 import { Action___POST__SendMail } from "@/app/contact-us/actions";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 const formSchema = z.object({
   name: z.string().min(1),
@@ -132,7 +133,7 @@ const CTAForm = (): JSX.Element => {
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogTrigger asChild>
           <ShimmerButton className="w-auto">
-          Start Your Free Consultation Now
+            Start Your Free Consultation Now
           </ShimmerButton>
         </DialogTrigger>
         <DialogContent className="max-w-md">
@@ -143,74 +144,73 @@ const CTAForm = (): JSX.Element => {
               account and remove your data from our servers.
             </DialogDescription>
           </DialogHeader>
-          <Form {...form}>
-            <form
-              onSubmit={form.handleSubmit(HandleOnSubmit)}
-              className={clsx(
-                "space-y-4 py-4 max-h-[80dvh] overflow-y-auto p-1",
-                {
+          <ScrollArea className="max-h-[60vh]">
+            <Form {...form}>
+              <form
+                onSubmit={form.handleSubmit(HandleOnSubmit)}
+                className={clsx("space-y-4 py-4 p-1", {
                   hidden: emailSent,
-                }
-              )}
-            >
-              <CustomInput name="name" label="Name" />
-              <CustomInput name="email" label="Email" />
-              <FormField
-                control={form.control}
-                name="country"
-                render={() => (
-                  <FormItem>
-                    <FormLabel>Country</FormLabel>
-                    <CountryCombobox
-                      onChange={(value: any) => {
-                        form.setValue("country", value.target.value);
-                      }}
-                    />
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <CustomInput name="phone" label="Phone" />
-              <CustomInput name="website" label="Your Website Link" />
-              <CustomInput name="message" label="Message" type="textarea" />
+                })}
+              >
+                <CustomInput name="name" label="Name" />
+                <CustomInput name="email" label="Email" />
+                <FormField
+                  control={form.control}
+                  name="country"
+                  render={() => (
+                    <FormItem>
+                      <FormLabel>Country</FormLabel>
+                      <CountryCombobox
+                        onChange={(value: any) => {
+                          form.setValue("country", value.target.value);
+                        }}
+                      />
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <CustomInput name="phone" label="Phone" />
+                <CustomInput name="website" label="Your Website Link" />
+                <CustomInput name="message" label="Message" type="textarea" />
 
+                <ShimmerButton
+                  type="submit"
+                  disabled={form.formState.isSubmitting}
+                  className="w-full items-center gap-2 mt-4"
+                >
+                  {form.formState.isSubmitting ? (
+                    <Sun className="w-4 h-4 animate-spin" />
+                  ) : null}
+                  {form.formState.isSubmitting ? "Submiting" : "Submit"}
+                </ShimmerButton>
+              </form>
+            </Form>
+            <div
+              className={clsx("space-y-4", {
+                hidden: !emailSent,
+              })}
+            >
+              <InputOTP
+                maxLength={4}
+                value={otp}
+                onChange={(value: any) => setOtp(value)}
+              >
+                <InputOTPGroup>
+                  <InputOTPSlot index={0} />
+                  <InputOTPSlot index={1} />
+                  <InputOTPSlot index={2} />
+                  <InputOTPSlot index={3} />
+                </InputOTPGroup>
+              </InputOTP>
               <ShimmerButton
-                type="submit"
-                disabled={form.formState.isSubmitting}
+                onClick={HandleVerify}
+                disabled={loading}
                 className="w-full items-center gap-2 mt-4"
               >
-                {form.formState.isSubmitting ? (
-                  <Sun className="w-4 h-4 animate-spin" />
-                ) : null}
-                {form.formState.isSubmitting ? "Submiting" : "Submit"}
+                {loading ? "Verifying" : "Verify"}
               </ShimmerButton>
-            </form>
-          </Form>
-          <div
-            className={clsx("space-y-4", {
-              hidden: !emailSent,
-            })}
-          >
-            <InputOTP
-              maxLength={4}
-              value={otp}
-              onChange={(value: any) => setOtp(value)}
-            >
-              <InputOTPGroup>
-                <InputOTPSlot index={0} />
-                <InputOTPSlot index={1} />
-                <InputOTPSlot index={2} />
-                <InputOTPSlot index={3} />
-              </InputOTPGroup>
-            </InputOTP>
-            <ShimmerButton
-              onClick={HandleVerify}
-              disabled={loading}
-              className="w-full items-center gap-2 mt-4"
-            >
-              {loading ? "Verifying" : "Verify"}
-            </ShimmerButton>
-          </div>
+            </div>
+          </ScrollArea>
         </DialogContent>
       </Dialog>
     </div>
