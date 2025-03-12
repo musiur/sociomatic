@@ -77,9 +77,10 @@ const AchieveSection = () => {
           ))}
           <Link href="/" className="inline-block w-full pt-8">
             <ShimmerButton className="w-auto">
-              See How We Turn $300 into $3,000
+            See How We Achieved These Results
             </ShimmerButton>
           </Link>
+          
         </div>
 
         <div className="flex-1 space-y-6">

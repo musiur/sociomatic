@@ -10,11 +10,9 @@ const GigCard = ({ item }: { item: T___Gig }) => {
       <FadeInOnScroll>
         <Carousel images={item.thumbnails} />
         <div className="flex flex-col items-start justify-start gap-4 pt-4">
-          <Link href={`/checkout?id=${item._id}`}>
-            <h4 className="font-medium hover:underline cursor-pointer">
-              {item.title}
-            </h4>
-          </Link>
+          <h4 className="font-medium hover:underline cursor-pointer">
+            {item.title}
+          </h4>
           <p>
             <span className="text-gray-400">Starting from</span> US$15
           </p>
