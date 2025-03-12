@@ -60,7 +60,7 @@ const ExpireSection = () => {
             </div>
 
             <Link href="/#calendly" className="inline-block">
-              <Button variant="outline">Get a Free Consultation</Button>
+              <Button variant="outline">Lock In My 90-Day Challenge</Button>
             </Link>
 
             <div className="space-y-3">

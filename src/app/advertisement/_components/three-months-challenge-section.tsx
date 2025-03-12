@@ -2,6 +2,8 @@ import { CubeIcon } from "@radix-ui/react-icons";
 import { BarChart3, Settings } from "lucide-react";
 import ArrowLine from "../_assets/arrow-line";
 import Tagline from "@/components/molecule/tagline";
+import Link from "next/link";
+import ShimmerButton from "@/components/magicui/shimmer-button";
 
 const phases = [
   {
@@ -58,6 +60,11 @@ const ThreeMonthsChallengeSection = () => {
           </div>
         ))}
       </div>
+      <Link href="/" className="inline-block w-full pt-8">
+        <ShimmerButton className="w-auto mx-auto">
+          Discover Our 3-Month Challenge
+        </ShimmerButton>
+      </Link>
     </section>
   );
 };

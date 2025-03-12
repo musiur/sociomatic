@@ -4,6 +4,8 @@ import CoinIcon from "../_assets/coin-icon";
 import CalendarTimeIcon from "../_assets/calendar-time-icon";
 import TestimonialAside from "./testimonial-aside";
 import AdvertisementCTA from "./advertisement-cta";
+import Link from "next/link";
+import ShimmerButton from "@/components/magicui/shimmer-button";
 
 const features = [
   {
@@ -73,7 +75,11 @@ const WhySafeSection = () => {
             />
           </div>
           <div className="flex flex-wrap items-center small-gap">
-            <AdvertisementCTA />
+            <Link href="/" className="inline-block w-full">
+              <ShimmerButton className="w-auto">
+                Switch to Transparent, Data-Driven Growth
+              </ShimmerButton>
+            </Link>
           </div>
         </div>
 
