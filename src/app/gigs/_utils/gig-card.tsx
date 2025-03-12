@@ -22,8 +22,12 @@ const GigCard = ({ item }: { item: T___Gig }) => {
             <Link href={item.link}>
               <Button variant="outline">Buy on Fiverr</Button>
             </Link>
-            <Link href={`/checkout?id=${item._id}`}>
-              <Button>Buy Now</Button>
+            <Link
+              href="https://wa.me/+971507477541"
+              passHref={true}
+              target="_blank"
+            >
+              <Button>WhatsApp</Button>
             </Link>
           </div>
         </div>

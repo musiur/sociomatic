@@ -132,7 +132,7 @@ const CTAForm = (): JSX.Element => {
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogTrigger asChild>
           <ShimmerButton className="w-auto">
-            Get Started Right Away
+          Start Your Free Consultation Now
           </ShimmerButton>
         </DialogTrigger>
         <DialogContent className="max-w-md">

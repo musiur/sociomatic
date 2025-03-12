@@ -1,6 +1,8 @@
 import { CubeIcon } from "@radix-ui/react-icons";
 import { BarChart3, Settings } from "lucide-react";
 import Tagline from "@/components/molecule/tagline";
+import ShimmerButton from "@/components/magicui/shimmer-button";
+import Link from "next/link";
 
 const phases = [
   {
@@ -22,10 +24,10 @@ const phases = [
 const RiskFreeSection = () => {
   return (
     <section className="section bg-muted">
-      <div className="container">
+      <div className="container space-y-12">
         <div className="flex flex-col items-center justify-center gap-6">
           <Tagline text={<>No Risks</>} />
-          <h2 className="text-center mb-12">
+          <h2 className="text-center">
             Why This is <span className="text-secondary">Risk-Free</span>{" "}
             (Seriously)
           </h2>
@@ -42,6 +44,12 @@ const RiskFreeSection = () => {
             </div>
           ))}
         </div>
+
+        <Link href="/" className="inline-block w-full">
+          <ShimmerButton className="w-auto mx-auto">
+            See How We Turn $300 into $3,000
+          </ShimmerButton>
+        </Link>
       </div>
     </section>
   );
