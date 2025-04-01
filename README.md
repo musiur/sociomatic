@@ -22,3 +22,5 @@ IT Agency
 Happy contribution 🚀
 
 ...
+
+![CodeRabbit Pull Request Reviews](https://img.shields.io/coderabbit/prs/github/musiur/sociomatic?utm_source=oss&utm_medium=github&utm_campaign=musiur%2Fsociomatic&labelColor=171717&color=FF570A&link=https%3A%2F%2Fcoderabbit.ai&label=CodeRabbit+Reviews)
