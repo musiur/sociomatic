@@ -6,9 +6,9 @@ const HeroSection = () => {
     <AdvertisementHeroSection
       H1={
         <>
-          Prove Us Wrong: We&apos;ll <span>Grow Your Business</span> with Google
+          Prove Us Wrong: We&apos;ll Grow Your Business with Google
           & Meta Ads in 90 Days… Or&nbsp;
-          <span className="!text-gray-500">You Pay Nothing.</span>
+          <span>You Pay Nothing.</span>
         </>
       }
       P={

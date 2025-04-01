@@ -12,6 +12,7 @@ import ExpireSection from "./_components/expire-section";
 import FaqSection from "./_components/faq-section";
 import RiskFreeSection from "./_components/risk-free-section";
 import FooterSection from "./_components/footer-section";
+import AchieveSectionTwo from "./_components/achieve-section-two";
 
 const Advertisement = () => {
   return (
@@ -21,6 +22,7 @@ const Advertisement = () => {
       <BrandsSection />
       <WhySafeSection />
       <TestimonialsSection />
+      <AchieveSectionTwo />
       <ThreeMonthsChallengeSection />
       <ComparisonCopySection />
       <ComparisonTableSection />

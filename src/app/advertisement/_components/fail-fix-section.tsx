@@ -23,9 +23,9 @@ const FailFixSection = () => {
         <span className="text-secondary">(And How We Fix It)</span>
       </h2>
 
-      <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4">
+      <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto md:px-4">
         <div className="space-y-6">
-          <h3 className="font-semibold text-sm md:text-xl mb-4">
+          <h3 className="font-semibold text-lg md:text-xl mb-4">
             Pain points you may encounter
           </h3>
           <div className="space-y-4">
@@ -39,7 +39,7 @@ const FailFixSection = () => {
         </div>
 
         <div className="space-y-6">
-          <h3 className="font-semibold text-xl mb-4">
+          <h3 className="font-semibold text-lg md:text-xl mb-4">
             Solution within 3 months
           </h3>
           <div className="space-y-4">

@@ -47,7 +47,7 @@ const WhySafeSection = () => {
         You&apos;ll Ever Make
       </h2>
 
-      <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+      <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-8">
         <div className="flex-1 space-y-6">
           {features.map((feature, index) => (
             <div

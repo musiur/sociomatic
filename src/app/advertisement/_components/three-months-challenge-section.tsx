@@ -33,7 +33,7 @@ const ThreeMonthsChallengeSection = () => {
         <Tagline text={<>Our Challenge</>} />
         <h2 className="text-center mb-12">
           Here&apos;s How We Make Your $300/Month
-          <br /> Work Harder{" "}
+          <br className="hidden md:inline-block"/> Work Harder{" "}
           <span className="text-secondary">Than a $3,000 Agency</span>
         </h2>
       </div>

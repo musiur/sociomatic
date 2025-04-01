@@ -9,6 +9,7 @@ import {
   Database,
   Video,
 } from "lucide-react";
+import AdvertisementCTA from "./advertisement-cta";
 
 const leftFeatures = [
   {
@@ -68,6 +69,7 @@ const ComparisonCopySection = () => {
                 <p className="text-lg">{feature.text}</p>
               </div>
             ))}
+            <AdvertisementCTA />
           </div>
         </div>
 

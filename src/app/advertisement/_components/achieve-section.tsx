@@ -2,20 +2,21 @@ import Image from "next/image";
 import Link from "next/link";
 import ShimmerButton from "@/components/magicui/shimmer-button";
 import {
+  Heart,
   SearchIcon,
   SparklesIcon,
   TrendingUpIcon,
   Undo2Icon,
   Users2,
 } from "lucide-react";
+import AdvertisementCTA from "./advertisement-cta";
 
 const features = [
   {
     icon: <TrendingUpIcon />,
     text: (
       <>
-        <span>300% Increase in Conversions:</span> Clients have seen up to a
-        300% boost in conversion rates within 90 days.
+        <span>300% Increase in Conversions:</span> Clients have seen up to a 300% boost in conversion rate within 90 days.
       </>
     ),
   },
@@ -23,8 +24,7 @@ const features = [
     icon: <Undo2Icon />,
     text: (
       <>
-        <span>ROI Amplification:</span> On average, we turn $300 into $3,000 in
-        revenue.
+        <span>ROI Amplification:</span> On average, we turn $300 into <span>$30k in revenue.</span>
       </>
     ),
   },
@@ -32,8 +32,7 @@ const features = [
     icon: <Users2 />,
     text: (
       <>
-        <span>Lead Generation:</span> Delivered up to 90 qualified leads in just
-        3 months
+        <span>Lead Generation:</span> Delivered up to 150 plus qualified leads in just 3 months.
       </>
     ),
   },
@@ -41,8 +40,15 @@ const features = [
     icon: <SparklesIcon />,
     text: (
       <>
-        <span>Client Satisfaction:</span> Earned 500+ five-star reviews from
-        850+ businesses.
+        <span>Client Endorsment:</span> “Yeatiq was able to help us understand and help us make decisions best. He has done an excellent job. We will be back to do more projects”
+      </>
+    ),
+  },
+  {
+    icon: <Heart />,
+    text: (
+      <>
+        <span>Trusted by 850+ Businesses:</span> 500+ <span>five-star reviews</span> prove our success.
       </>
     ),
   },
@@ -64,7 +70,7 @@ const AchieveSection = () => {
         Our <span className="text-secondary">Proven Results</span> Speak for Themselves
       </h2>
 
-      <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+      <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-8">
         <div className="flex-1 space-y-6">
           {features.map((feature, index) => (
             <div
@@ -75,21 +81,17 @@ const AchieveSection = () => {
               <p className="[&>span]:font-semibold">{feature.text}</p>
             </div>
           ))}
-          <Link href="/" className="inline-block w-full pt-8">
-            <ShimmerButton className="w-auto">
-            See How We Achieved These Results
-            </ShimmerButton>
-          </Link>
+          <AdvertisementCTA />
           
         </div>
 
         <div className="flex-1 space-y-6">
           <Image
-            src="https://in8cddcab4.ufs.sh/f/TLm9XcQ0Drp9HXIUHKQ63lrKW6cbSangxZGDNTm1szfYJEjk"
+            src="https://utfs.io/f/TLm9XcQ0Drp9VpRj6CXtzjwcuqoVvpZmxNrkdWPhDefA1Mb2"
             alt="Meta Certified"
-            width={120}
-            height={120}
-            className="w-full h-auto"
+            width={500}
+            height={500}
+            className="w-full h-auto min-h-[200px] rounded-xl"
           />
         </div>
       </div>
