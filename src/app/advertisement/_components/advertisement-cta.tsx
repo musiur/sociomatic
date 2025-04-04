@@ -1,11 +1,20 @@
-import { Fragment } from "react";
-import CTAForm from "./cta-form";
+import ShimmerButton from "@/components/magicui/shimmer-button";
 
+/**
+ * Here we are using cal.com
+ * Previous there was our own custom form CtaForm
+ */
 const AdvertisementCTA = () => {
   return (
-    <Fragment>
-      <CTAForm />
-    </Fragment>
+    <div className="inline-block">
+      <ShimmerButton
+        data-cal-link="yeatiq-ceo-of-the-sociomatic/unlock-real-growth-your-90-day-ad-challenge"
+        data-cal-namespace="unlock-real-growth-your-90-day-ad-challenge"
+        data-cal-config="{'layout':'month_view'}"
+      >
+        Get a free consultation now
+      </ShimmerButton>
+    </div>
   );
 };
 
