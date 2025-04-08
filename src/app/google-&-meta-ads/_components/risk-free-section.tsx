@@ -45,7 +45,7 @@ const RiskFreeSection = () => {
           ))}
         </div>
 
-        <Link href="/" className="inline-block w-full">
+        <Link href="/#calendly" className="inline-block w-full">
           <ShimmerButton className="w-auto mx-auto">
             Experience Risk-Free Growth Today
           </ShimmerButton>

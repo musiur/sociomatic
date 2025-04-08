@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { Play, Lock, Coins } from "lucide-react";
+import { Lock, Coins } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -79,7 +79,7 @@ const ExpireSection = () => {
             <iframe
               className="w-full min-h-[400px] rounded-2xl mx-auto"
               src={
-                "https://www.youtube.com/embed/eRxKwyhM59U?si=R66bAMX4xLgmqoCf"
+                "https://youtu.be/mhnH_KOEJ3M?si=tUB9j7Z9cLdq0QL5"
               }
               title="YouTube video player"
               frameBorder="0"

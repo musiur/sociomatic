@@ -75,7 +75,7 @@ const WhySafeSection = () => {
             />
           </div>
           <div className="flex flex-wrap items-center small-gap">
-            <Link href="/" className="inline-block w-full">
+            <Link href="/#calendly" className="inline-block w-full">
               <ShimmerButton className="w-auto">
                 Switch to Transparent, Data-Driven Growth
               </ShimmerButton>

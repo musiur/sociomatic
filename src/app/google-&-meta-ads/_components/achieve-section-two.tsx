@@ -1,6 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
-import ShimmerButton from "@/components/magicui/shimmer-button";
 import {
     Heart,
     SearchIcon,

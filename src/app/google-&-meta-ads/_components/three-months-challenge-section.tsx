@@ -60,7 +60,7 @@ const ThreeMonthsChallengeSection = () => {
           </div>
         ))}
       </div>
-      <Link href="/" className="inline-block w-full pt-8">
+      <Link href="/#calendly" className="inline-block w-full pt-8">
         <ShimmerButton className="w-auto mx-auto">
           Discover Our 3-Month Challenge
         </ShimmerButton>

@@ -53,7 +53,7 @@ const FailFixSection = () => {
         </div>
       </div>
 
-      <Link href="/" className="inline-block w-full">
+      <Link href="/#calendly" className="inline-block w-full">
         <ShimmerButton className="w-auto mx-auto">See How We Turn $300 into $3,000</ShimmerButton>
       </Link>
     </section>

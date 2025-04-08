@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@14islands/r3f-scroll-rig": "^8.13.1",
+    "@calcom/embed-react": "^1.5.2",
     "@hookform/resolvers": "^3.3.4",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-avatar": "^1.1.2",

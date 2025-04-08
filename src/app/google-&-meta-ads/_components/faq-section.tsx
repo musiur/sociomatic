@@ -6,7 +6,7 @@ const FaqSection = () => {
   return (
     <div>
       <Faq data={FaqData} />
-      <Link href="/" className="inline-block w-full pt-8 pb-24">
+      <Link href="/#calendly" className="inline-block w-full pt-8 pb-24">
         <ShimmerButton className="w-auto mx-auto">
           Still Have Questions? Let&apos;s Talk
         </ShimmerButton>

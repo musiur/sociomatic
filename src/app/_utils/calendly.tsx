@@ -1,7 +1,7 @@
 "use client";
 
 import SectionHead from "@/components/molecule/section-head";
-import NeetoCal from "./neetocal";
+import Cal from "@calcom/embed-react";
 
 const Calendly = () => {
   return (
@@ -13,12 +13,11 @@ const Calendly = () => {
           paragraphs={[]}
         />
       </div>
-      {/* <InlineWidget url="https://calendly.com/thesociomatic/thesociomatic" /> */}
 
-      <NeetoCal
-        id="fb3bc1b0-66f3-479c-95da-ad3f83bdc85e"
-        organization="the-sociomatic-llc"
-      />
+      <Cal 
+        calLink="yeatiq-ceo-of-the-sociomatic/unlock-real-growth-your-90-day-ad-challenge" 
+        config={{ theme: "light" }}
+      ></Cal>
     </div>
   );
 };
