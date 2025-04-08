@@ -75,9 +75,9 @@ const ExpireSection = () => {
             </div>
           </div>
 
-          <div className="order-1 md:order-2 aspect-video bg-white/40 rounded-2xl flex items-center justify-center cursor-pointer hover:bg-primary-light/90 transition-colors">
+          <div className="order-1 md:order-2">
             <iframe
-              className="w-full min-h-[400px] rounded-2xl mx-auto"
+              className="aspect-video w-full h-full rounded-2xl mx-auto"
               src={
                 "https://youtu.be/mhnH_KOEJ3M?si=tUB9j7Z9cLdq0QL5"
               }

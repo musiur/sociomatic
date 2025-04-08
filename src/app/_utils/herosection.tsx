@@ -42,10 +42,9 @@ const HeroSection = ({
             {[
               <div
                 key={1}
-                className="min-h-[300px] shadow-2xl z-10 relative rounded-2xl"
               >
                 <iframe
-                  className="w-full h-full min-h-[30vh] md:min-h-[60vh] lg:min-h-[40vh] rounded-2xl mx-auto border shadow-xl"
+                  className="aspect-video w-full h-full rounded-2xl mx-auto border shadow-xl shadow-2xl"
                   src={videoLink}
                   title="YouTube video player"
                   frameBorder="0"
