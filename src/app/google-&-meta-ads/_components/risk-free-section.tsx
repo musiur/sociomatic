@@ -3,6 +3,7 @@ import { BarChart3, Settings } from "lucide-react";
 import Tagline from "@/components/molecule/tagline";
 import ShimmerButton from "@/components/magicui/shimmer-button";
 import Link from "next/link";
+import AdvertisementCTA from "./advertisement-cta";
 
 const phases = [
   {
@@ -45,11 +46,9 @@ const RiskFreeSection = () => {
           ))}
         </div>
 
-        <Link href="/#calendly" className="inline-block w-full">
-          <ShimmerButton className="w-auto mx-auto">
-            Experience Risk-Free Growth Today
-          </ShimmerButton>
-        </Link>
+        <div className="w-full flex justify-center">
+          <AdvertisementCTA text="Experience Risk-Free Growth Today" />
+        </div>
       </div>
     </section>
   );

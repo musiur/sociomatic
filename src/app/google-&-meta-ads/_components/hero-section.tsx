@@ -6,8 +6,8 @@ const HeroSection = () => {
     <AdvertisementHeroSection
       H1={
         <>
-          Prove Us Wrong: We&apos;ll Grow Your Business with Google
-          & Meta Ads in 90 Days… Or&nbsp;
+          Prove Us Wrong: We&apos;ll Grow Your Business with Google & Meta Ads
+          in 90 Days… Or&nbsp;
           <span>You Pay Nothing.</span>
         </>
       }
@@ -19,7 +19,7 @@ const HeroSection = () => {
         </>
       }
       videoLink={
-        "https://www.youtube.com/embed/S8rncQvo-nU?si=JrIKuomxaHXBotUT"
+        "https://www.youtube.com/embed/9z5KZ1GQB3Y?si=3C5sXDE00dwQ-w3A"
       }
       cta={<AdvertisementCTA />}
     />

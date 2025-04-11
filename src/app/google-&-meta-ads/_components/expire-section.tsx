@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Lock, Coins } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import AdvertisementCTA from "./advertisement-cta";
 
 const ExpireSection = () => {
   const [time, setTime] = useState({
@@ -59,9 +60,7 @@ const ExpireSection = () => {
               </div>
             </div>
 
-            <Link href="/#calendly" className="inline-block">
-              <Button variant="outline">Lock In My 90-Day Challenge</Button>
-            </Link>
+            <AdvertisementCTA text="Lock In My 90-Day Challenge" />
 
             <div className="space-y-3">
               <div className="flex items-center gap-2">
@@ -78,9 +77,7 @@ const ExpireSection = () => {
           <div className="order-1 md:order-2">
             <iframe
               className="aspect-video w-full h-full rounded-2xl mx-auto"
-              src={
-                "https://youtu.be/mhnH_KOEJ3M?si=tUB9j7Z9cLdq0QL5"
-              }
+              src="https://www.youtube.com/embed/mhnH_KOEJ3M?si=dZT1oNfr_-MiITR0"
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

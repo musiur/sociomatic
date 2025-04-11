@@ -2,6 +2,7 @@ import XRedIcon from "@/components/assets/x-red";
 import CheckGreenIcon from "@/components/assets/check-green";
 import ShimmerButton from "@/components/magicui/shimmer-button";
 import Link from "next/link";
+import AdvertisementCTA from "./advertisement-cta";
 
 const painPoints = [
   "Throwing money at ads with no clear strategy.",
@@ -53,9 +54,11 @@ const FailFixSection = () => {
         </div>
       </div>
 
-      <Link href="/#calendly" className="inline-block w-full">
-        <ShimmerButton className="w-auto mx-auto">See How We Turn $300 into $3,000</ShimmerButton>
-      </Link>
+      <div className="w-full flex justify-center">
+        <AdvertisementCTA
+          text="See How We Turn $300 into $3,000"
+        />
+      </div>
     </section>
   );
 };

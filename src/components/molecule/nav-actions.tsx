@@ -28,8 +28,8 @@ const NavActions = ({ token }: { token: string | undefined | null }) => {
     },
   ];
   return !token ? (
-    <Link href="/dashboard">
-      <ShimmerButton>Account</ShimmerButton>
+    <Link href="/get-a-quote">
+      <ShimmerButton>Get Started</ShimmerButton>
     </Link>
   ) : (
     <Popover>

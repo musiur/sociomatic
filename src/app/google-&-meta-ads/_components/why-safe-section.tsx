@@ -74,13 +74,7 @@ const WhySafeSection = () => {
               className="w-[100px] h-auto"
             />
           </div>
-          <div className="flex flex-wrap items-center small-gap">
-            <Link href="/#calendly" className="inline-block w-full">
-              <ShimmerButton className="w-auto">
-                Switch to Transparent, Data-Driven Growth
-              </ShimmerButton>
-            </Link>
-          </div>
+          <AdvertisementCTA text="Switch to Transparent, Data-Driven Growth" />
         </div>
 
         <div className="flex-1 space-y-6">

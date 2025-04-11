@@ -4,6 +4,7 @@ import ArrowLine from "../_assets/arrow-line";
 import Tagline from "@/components/molecule/tagline";
 import Link from "next/link";
 import ShimmerButton from "@/components/magicui/shimmer-button";
+import AdvertisementCTA from "./advertisement-cta";
 
 const phases = [
   {
@@ -28,12 +29,12 @@ const phases = [
 
 const ThreeMonthsChallengeSection = () => {
   return (
-    <section className="section container">
+    <section className="section container space-y-8">
       <div className="flex flex-col items-center justify-center gap-6">
         <Tagline text={<>Our Challenge</>} />
-        <h2 className="text-center mb-12">
+        <h2 className="text-center">
           Here&apos;s How We Make Your $300/Month
-          <br className="hidden md:inline-block"/> Work Harder{" "}
+          <br className="hidden md:inline-block" /> Work Harder{" "}
           <span className="text-secondary">Than a $3,000 Agency</span>
         </h2>
       </div>
@@ -60,11 +61,9 @@ const ThreeMonthsChallengeSection = () => {
           </div>
         ))}
       </div>
-      <Link href="/#calendly" className="inline-block w-full pt-8">
-        <ShimmerButton className="w-auto mx-auto">
-          Discover Our 3-Month Challenge
-        </ShimmerButton>
-      </Link>
+      <div className="w-full flex justify-center">
+        <AdvertisementCTA text="Discover Our 3-Month Challenge" />
+      </div>
     </section>
   );
 };

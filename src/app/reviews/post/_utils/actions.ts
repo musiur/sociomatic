@@ -36,6 +36,7 @@ export const Action___GET__AllReviews = async () => {
             cache: "no-store"
         });
         const result = await response.json();
+        console.log(result)
         return result;
     } catch (error) {
         return {
