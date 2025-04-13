@@ -1,7 +1,6 @@
 import React from "react";
 import { TestimonialCard } from "../services/_utils/testimonials";
 import ANIM__FadeInOutOnScroll from "@/components/anims/fadein.anim";
-import { Action___GET__AllReviews } from "../reviews/post/_utils/actions";
 
 const MasonryLayout = ({ reviews }: { reviews: object[] }) => {
   return (
