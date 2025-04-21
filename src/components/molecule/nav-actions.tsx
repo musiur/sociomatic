@@ -28,7 +28,7 @@ const NavActions = ({ token }: { token: string | undefined | null }) => {
     },
   ];
   return !token ? (
-    <Link href="/google-&-meta-ads">
+    <Link href="/scale-with-ads">
       <ShimmerButton>Scale now</ShimmerButton>
     </Link>
   ) : (

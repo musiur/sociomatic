@@ -60,21 +60,24 @@ const WhySafeSection = () => {
           ))}
           <div className="flex items-center gap-8">
             <Image
-              src="https://in8cddcab4.ufs.sh/f/TLm9XcQ0Drp9VIzd4elXtzjwcuqoVvpZmxNrkdWPhDefA1Mb"
-              alt="90 Day Guarantee"
-              width={120}
-              height={120}
-              className="w-[160px] h-auto"
-            />
-            <Image
               src="https://in8cddcab4.ufs.sh/f/TLm9XcQ0Drp9HXIUHKQ63lrKW6cbSangxZGDNTm1szfYJEjk"
               alt="Meta Certified"
               width={120}
               height={120}
               className="w-[100px] h-auto"
             />
+            <Image
+              src="https://in8cddcab4.ufs.sh/f/TLm9XcQ0Drp9eZIdO0Mg12HplPK8sxy493Dm0uSbhzjXZnEf"
+              alt="Google Partner"
+              width={120}
+              height={120}
+              className="w-[160px] h-auto"
+            />
           </div>
-          <AdvertisementCTA text="Switch to Transparent, Data-Driven Growth" />
+          <AdvertisementCTA
+            text="Switch to Transparent, Data-Driven Growth"
+            section="Why This is the Safest Decision You'll Ever Make"
+          />
         </div>
 
         <div className="flex-1 space-y-6">

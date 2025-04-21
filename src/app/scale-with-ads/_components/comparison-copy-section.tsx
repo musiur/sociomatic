@@ -69,7 +69,7 @@ const ComparisonCopySection = () => {
                 <p className="text-lg">{feature.text}</p>
               </div>
             ))}
-            <AdvertisementCTA />
+            <AdvertisementCTA section="Most Agencies Take Your Money and Guess. We do the Opposite"/>
           </div>
         </div>
 

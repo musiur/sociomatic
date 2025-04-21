@@ -62,7 +62,10 @@ const ThreeMonthsChallengeSection = () => {
         ))}
       </div>
       <div className="w-full flex justify-center">
-        <AdvertisementCTA text="Discover Our 3-Month Challenge" />
+        <AdvertisementCTA
+          text="Discover Our 3-Month Challenge"
+          section="Here's How We Make Your $300/Month Work Harder Than a $3,000 Agency"
+        />
       </div>
     </section>
   );

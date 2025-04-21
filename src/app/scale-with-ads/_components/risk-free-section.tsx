@@ -47,7 +47,10 @@ const RiskFreeSection = () => {
         </div>
 
         <div className="w-full flex justify-center">
-          <AdvertisementCTA text="Experience Risk-Free Growth Today" />
+          <AdvertisementCTA
+            text="Experience Risk-Free Growth Today"
+            section="Why This is Risk-Free (Seriously)"
+          />
         </div>
       </div>
     </section>

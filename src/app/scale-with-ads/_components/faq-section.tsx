@@ -6,7 +6,10 @@ const FaqSection = () => {
     <div>
       <Faq data={FaqData} />
       <div className="w-full flex justify-center pb-24">
-        <AdvertisementCTA text="Experience Risk-Free Growth Today" />
+        <AdvertisementCTA
+          text="Experience Risk-Free Growth Today"
+          section="Frequently Asked Questions"
+        />
       </div>
     </div>
   );

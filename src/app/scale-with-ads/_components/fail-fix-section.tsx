@@ -56,7 +56,8 @@ const FailFixSection = () => {
 
       <div className="w-full flex justify-center">
         <AdvertisementCTA
-          text="See How We Turn $300 into $3,000"
+          text="See How We Turn $300 into $99k"
+          section="Why Most Businesses Fail at Ads (And How We Fix It)"
         />
       </div>
     </section>

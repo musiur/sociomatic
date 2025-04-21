@@ -60,7 +60,10 @@ const ExpireSection = () => {
               </div>
             </div>
 
-            <AdvertisementCTA text="Lock In My 90-Day Challenge" />
+            <AdvertisementCTA
+              text="Lock In My 90-Day Challenge"
+              section="Only 15 Spots Left This Month Claim Your $300/Month Slot Now"
+            />
 
             <div className="space-y-3">
               <div className="flex items-center gap-2">

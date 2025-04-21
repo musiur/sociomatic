@@ -1,7 +1,7 @@
 "use client";
 
 import ShimmerButton from "@/components/magicui/shimmer-button";
-import { trackGoogleMetaAdsLandingCTA } from "@/lib/datalayer/google-&-meta-ads";
+import { trackGoogleMetaAdsLandingCTA } from "@/lib/datalayer/scale-with-ads";
 import { cn } from "@/lib/utils";
 import { useRouter } from "next/navigation";
 
@@ -11,23 +11,22 @@ import { useRouter } from "next/navigation";
  */
 const AdvertisementCTA = ({
   text = "Get a free consultation now",
+  section,
   className,
 }: {
   text?: string;
+  section?: string;
   className?: string;
 }) => {
   const router = useRouter();
 
   const handleOnClick = () => {
-    trackGoogleMetaAdsLandingCTA();
+    trackGoogleMetaAdsLandingCTA(text, section);
     router.push("/#calendly");
   }
   return (
     <div className={cn(className, "inline-block")}>
       <ShimmerButton
-        // data-cal-link="yeatiq-ceo-of-the-sociomatic/unlock-real-growth-your-90-day-ad-challenge"
-        // data-cal-namespace="unlock-real-growth-your-90-day-ad-challenge"
-        // data-cal-config="{'layout':'month_view'}"
         onClick={handleOnClick}
       >
         {text}

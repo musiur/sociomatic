@@ -21,7 +21,7 @@ const HeroSection = () => {
       videoLink={
         "https://www.youtube.com/embed/9z5KZ1GQB3Y?si=3C5sXDE00dwQ-w3A"
       }
-      cta={<AdvertisementCTA />}
+      cta={<AdvertisementCTA section="Hero Section"/>}
     />
   );
 };

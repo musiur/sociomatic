@@ -89,7 +89,7 @@ const AchieveSectionTwo = () => {
               <p className="[&>span]:font-semibold">{feature.text}</p>
             </div>
           ))}
-          <AdvertisementCTA />
+          <AdvertisementCTA section="Our Proven Results Speak For Themselves - Two"/>
         </div>
 
         <div className="flex-1 space-y-6">
