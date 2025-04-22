@@ -4,8 +4,6 @@ import CoinIcon from "../_assets/coin-icon";
 import CalendarTimeIcon from "../_assets/calendar-time-icon";
 import TestimonialAside from "./testimonial-aside";
 import AdvertisementCTA from "./advertisement-cta";
-import Link from "next/link";
-import ShimmerButton from "@/components/magicui/shimmer-button";
 
 const features = [
   {
@@ -59,6 +57,13 @@ const WhySafeSection = () => {
             </div>
           ))}
           <div className="flex items-center gap-8">
+            <Image
+              src="https://in8cddcab4.ufs.sh/f/TLm9XcQ0Drp9VIzd4elXtzjwcuqoVvpZmxNrkdWPhDefA1Mb"
+              alt="90% Guarantee"
+              width={120}
+              height={120}
+              className="w-[160px] h-auto"
+            />
             <Image
               src="https://in8cddcab4.ufs.sh/f/TLm9XcQ0Drp9HXIUHKQ63lrKW6cbSangxZGDNTm1szfYJEjk"
               alt="Meta Certified"

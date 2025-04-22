@@ -1,31 +1,45 @@
 "use client";
-import { Button } from "@/components/ui/button";
+
 import { Lock, Coins } from "lucide-react";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import AdvertisementCTA from "./advertisement-cta";
 
 const ExpireSection = () => {
-  const [time, setTime] = useState({
-    hours: 23,
-    minutes: 59,
-    seconds: 59,
-  });
+  const calculateTimeLeft = (targetDate: Date) => {
+    const now = new Date();
+    const difference = targetDate.getTime() - now.getTime();
+
+    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((difference / (1000 * 60)) % 60);
+    const seconds = Math.floor((difference / 1000) % 60);
+
+    return {
+      days,
+      hours,
+      minutes,
+      seconds,
+    };
+  };
+
+  const getTargetDate = () => {
+    if (typeof window === "undefined") return new Date("2025-04-26T23:59:59.999Z");
+
+    const storedDate = localStorage.getItem("targetDate");
+    if (storedDate) {
+      return new Date(storedDate);
+    } else {
+      const newTargetDate = new Date("2025-04-26T23:59:59.999Z"); // Set target date to April 26, 2025
+      localStorage.setItem("targetDate", newTargetDate.toISOString());
+      return newTargetDate;
+    }
+  };
+
+  const [time, setTime] = useState(calculateTimeLeft(getTargetDate()));
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setTime((prevTime) => {
-        const newSeconds = prevTime.seconds - 1;
-        const newMinutes =
-          newSeconds < 0 ? prevTime.minutes - 1 : prevTime.minutes;
-        const newHours = newMinutes < 0 ? prevTime.hours - 1 : prevTime.hours;
-
-        return {
-          hours: newHours >= 0 ? newHours : 23,
-          minutes: newMinutes >= 0 ? newMinutes : 59,
-          seconds: newSeconds >= 0 ? newSeconds : 59,
-        };
-      });
+      setTime(calculateTimeLeft(getTargetDate()));
     }, 1000);
 
     return () => clearInterval(timer);
@@ -45,6 +59,10 @@ const ExpireSection = () => {
             <div className="bg-white/10 rounded-lg p-6 inline-block">
               <p className="text-sm mb-4">OFFER EXPIRES IN</p>
               <div className="flex gap-4">
+                <div className="bg-white/30 rounded p-3 text-center min-w-[80px]">
+                  <div className="text-2xl font-bold">{time.days}</div>
+                  <div className="text-sm">Days</div>
+                </div>
                 <div className="bg-white/30 rounded p-3 text-center min-w-[80px]">
                   <div className="text-2xl font-bold">{time.hours}</div>
                   <div className="text-sm">Hours</div>
