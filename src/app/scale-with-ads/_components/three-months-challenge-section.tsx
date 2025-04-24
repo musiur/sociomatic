@@ -11,19 +11,19 @@ const phases = [
     icon: <CubeIcon className="w-6 h-6 text-primary" />,
     title: "1st Month: Crush Testing Phase",
     description: "Find winning audiences & creatives",
-    stats: "15 Leads generated",
+    stats: "15-30+ Leads & 2x ROAS",
   },
   {
     icon: <BarChart3 className="w-6 h-6 text-primary" />,
     title: "2nd Month: Scale Profitably",
     description: "Double down on what works",
-    stats: "45 Leads generated",
+    stats: "40-60+ Leads & 3x ROAS",
   },
   {
     icon: <Settings className="w-6 h-6 text-primary" />,
     title: "3rd Month: Automate Growth",
     description: "Refine campaigns for long-term ROI",
-    stats: "30 Leads generated",
+    stats: "70-100 Leads & 4x ROAS",
   },
 ];
 
@@ -64,7 +64,7 @@ const ThreeMonthsChallengeSection = () => {
       <div className="w-full flex justify-center">
         <AdvertisementCTA
           text="Discover Our 3-Month Challenge"
-          section="Here's How We Make Your $300/Month Work Harder Than a $3,000 Agency"
+          section="Here's How We Make Your $300/Month Work Harder Than a $3000 Agency"
         />
       </div>
     </section>

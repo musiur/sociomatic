@@ -4,7 +4,7 @@ import AdvertisementCTA from "./advertisement-cta";
 const comparisonData = [
   {
     feature: "Pricing",
-    typical: "$1500+/month + hidden fees",
+    typical: "$3000+/month + hidden fees",
     ours: "$300 flat/month (No surprises)",
   },
   {
