@@ -60,22 +60,22 @@ const WhySafeSection = () => {
             <Image
               src="https://in8cddcab4.ufs.sh/f/TLm9XcQ0Drp9VIzd4elXtzjwcuqoVvpZmxNrkdWPhDefA1Mb"
               alt="90% Guarantee"
-              width={120}
-              height={120}
+              width={100}
+              height={100}
               className="w-[160px] h-auto"
             />
             <Image
               src="https://in8cddcab4.ufs.sh/f/TLm9XcQ0Drp9HXIUHKQ63lrKW6cbSangxZGDNTm1szfYJEjk"
               alt="Meta Certified"
-              width={120}
-              height={120}
+              width={80}
+              height={80}
               className="w-[100px] h-auto"
             />
             <Image
               src="https://in8cddcab4.ufs.sh/f/TLm9XcQ0Drp9eZIdO0Mg12HplPK8sxy493Dm0uSbhzjXZnEf"
               alt="Google Partner"
-              width={120}
-              height={120}
+              width={100}
+              height={100}
               className="w-[160px] h-auto"
             />
           </div>

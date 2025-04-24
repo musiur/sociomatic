@@ -88,9 +88,9 @@ const AchieveSection = () => {
         <div className="flex-1 space-y-6">
           <Image
             src="https://utfs.io/f/TLm9XcQ0Drp9VpRj6CXtzjwcuqoVvpZmxNrkdWPhDefA1Mb2"
-            alt="Meta Certified"
-            width={500}
-            height={500}
+            alt="Proven results"
+            width={400}
+            height={400}
             className="w-full h-auto min-h-[200px] rounded-xl"
           />
         </div>

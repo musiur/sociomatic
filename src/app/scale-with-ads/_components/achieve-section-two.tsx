@@ -95,9 +95,9 @@ const AchieveSectionTwo = () => {
         <div className="flex-1 space-y-6">
           <Image
             src="https://in8cddcab4.ufs.sh/f/TLm9XcQ0Drp98Kmttf5SAa1I3BDoFJtcP4VhWbZvQrYmuyi0"
-            alt="Meta Certified"
-            width={500}
-            height={500}
+            alt="Proven results"
+            width={400}
+            height={400}
             className="w-full h-auto min-h-[200px] rounded-xl"
           />
         </div>
