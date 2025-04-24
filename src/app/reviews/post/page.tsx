@@ -1,28 +1,22 @@
-"use client"
-
-import { Action___GET__AllReviews } from "./_utils/actions";
 import { TestimonialCard } from "@/app/services/_utils/testimonials";
-import { Delete, Edit } from "lucide-react";
-import DeleteReview from "./_utils/delete-review";
+import { Action___GET__AllReviews } from "./_utils/actions";
 import ReviewPostForm from "./_utils/form";
+import { Delete, Edit } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import DeleteReview from "./_utils/delete-review";
 
-const Page = () => {
-  const handleProcessKill = () => {
-    process.exit();
-  }
-  // const reviews = await Action___GET__AllReviews();
-  // return null;
+const Page = async () => {
+  const reviews = await Action___GET__AllReviews();
+  return null;
   return (
     <>
       <section className="container section space-y-4">
         <h2>Add a new review</h2>
-        <Button onClick={handleProcessKill}>Click</Button>
         <div className="max-w-[460px] bg-gray-100 p-4 md:p-8 rounded-xl">
           <ReviewPostForm />
         </div>
       </section>
-      {/* <section className="container section space-y-4">
+      <section className="container section space-y-4">
         <h2>All Reviews</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {reviews?.data?.length ? (
@@ -47,7 +41,7 @@ const Page = () => {
             <div>No review found! Please add newone.</div>
           )}
         </div>
-      </section> */}
+      </section>
     </>
   );
 };
