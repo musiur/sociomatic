@@ -1,3 +1,5 @@
+"use client"
+
 import { Action___GET__AllReviews } from "./_utils/actions";
 import { TestimonialCard } from "@/app/services/_utils/testimonials";
 import { Delete, Edit } from "lucide-react";
@@ -5,7 +7,7 @@ import DeleteReview from "./_utils/delete-review";
 import ReviewPostForm from "./_utils/form";
 import { Button } from "@/components/ui/button";
 
-const Page = async () => {
+const Page = () => {
   const handleProcessKill = () => {
     process.exit();
   }
