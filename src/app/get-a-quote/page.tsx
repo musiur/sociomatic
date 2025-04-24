@@ -20,7 +20,6 @@ import Loader from "@/components/molecule/loader";
 import { useToast } from "@/components/ui/use-toast";
 import ShortReviews from "@/components/molecule/short-reviews";
 import CountryCombobox from "@/components/ui/country-combobox";
-import axios from "axios";
 import { Action___POST__SendMail } from "../contact-us/actions";
 
 // Function to track Get A Get form submissions
@@ -48,23 +47,25 @@ function trackGetAQuoteFormSubmissionA(formData: any) {
   }
 }
 
+const defaultFormData = {
+  name: "",
+  email: "",
+  phone: "",
+  country: "",
+  companyName: "",
+  companyURL: "",
+  budgetRange: "",
+  services: [],
+  message: "",
+  subject: "Get a Quote",
+  title: "Get a Quote Form Submission",
+}
+
 const GetAQuotePage = () => {
   const { toast } = useToast();
   const [currentTab, setCurrentTab] = useState(1);
   const [loading, setLoading] = useState(false);
-  const [formData, setFormData] = useState<any>({
-    name: "",
-    email: "",
-    phone: "",
-    country: "",
-    companyName: "",
-    companyURL: "",
-    budgetRange: "",
-    services: [],
-    message: "",
-    subject: "Get a Quote",
-    title: "Get a Quote Form Submission",
-  });
+  const [formData, setFormData] = useState<any>(defaultFormData);
   const [errors, setErrors] = useState<any>({});
   const [captcha, setCaptcha] = useState(false);
 
@@ -97,10 +98,8 @@ const GetAQuotePage = () => {
                 ? "Half yearly"
                 : "Yearly",
           });
-          setLoading(false);
-          setTimeout(() => {
-            window.location.reload();
-          }, 5000);
+          
+          setFormData(defaultFormData);
         }
       } catch (error: any) {
         toast({
@@ -108,6 +107,8 @@ const GetAQuotePage = () => {
           title: "Messange Sending",
           description: "Something went wrong!",
         });
+      } finally {
+        setLoading(false);
       }
     } else {
       setErrors(validationErrors);
@@ -200,6 +201,7 @@ const GetAQuotePage = () => {
                 id="name"
                 placeholder="Name"
                 name="name"
+                value={formData.name}
                 onChange={handleOnChange}
               />
               <ErrorMessages errors={errors} name="name" />
@@ -213,6 +215,7 @@ const GetAQuotePage = () => {
                 id="email"
                 placeholder="Email"
                 name="email"
+                value={formData.email}
                 onChange={handleOnChange}
               />
               <ErrorMessages errors={errors} name="email" />
@@ -226,6 +229,7 @@ const GetAQuotePage = () => {
                 id="phone"
                 placeholder="Phone"
                 name="phone"
+                value={formData.phone}
                 onChange={handleOnChange}
               />
               <ErrorMessages errors={errors} name="phone" />
@@ -244,6 +248,7 @@ const GetAQuotePage = () => {
                 id="companyName"
                 placeholder="Company Name"
                 name="companyName"
+                value={formData.companyName}
                 onChange={handleOnChange}
               />
             </div>
@@ -254,11 +259,12 @@ const GetAQuotePage = () => {
                 id="companyURL"
                 placeholder="Company URL"
                 name="companyURL"
+                value={formData.companyURL}
                 onChange={handleOnChange}
               />
             </div>
           </div>
-          <div className="flex flex-col small-gap overflow-hidden">
+          <div className="flex flex-col small-gap">
             {currentTab !== 1 ? (
               <div className="flex flex-col gap-1.5">
                 <Label htmlFor="budget">
@@ -274,6 +280,7 @@ const GetAQuotePage = () => {
                       },
                     });
                   }}
+                  value={formData.budgetRange}
                 >
                   <SelectTrigger className="w-full">
                     <SelectValue placeholder="Select budget range" />
@@ -310,6 +317,7 @@ const GetAQuotePage = () => {
                                 ],
                           })
                         }
+                        checked={formData.services.includes(item.value)}
                       />
                       <label
                         htmlFor={item.name}
@@ -332,6 +340,7 @@ const GetAQuotePage = () => {
                 placeholder="Type your message here."
                 id="message"
                 name="message"
+                value={formData.message}
                 onChange={handleOnChange}
               />
               <ErrorMessages errors={errors} name="message" />
