@@ -54,4 +54,4 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
-          script: bash deploy-frontend.sh
+          script: pm2 start ecosystem.config.js
