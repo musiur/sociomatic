@@ -3,12 +3,18 @@
 import { Lock, Coins } from "lucide-react";
 import { useEffect, useState } from "react";
 import AdvertisementCTA from "./advertisement-cta";
-import { OfferDateString, OfferPrice } from "@/lib/constants";
+import { OfferDateString, OfferDaysLeft, OfferPrice } from "@/lib/constants";
 
 const ExpireSection = () => {
   const calculateTimeLeft = (targetDate: Date) => {
     const now = new Date();
-    const difference = targetDate.getTime() - now.getTime();
+    let difference = targetDate.getTime() - now.getTime();
+
+    if( difference <=0){
+      // add four days to the target date if the difference is less than or equal to zero and then return the 
+      localStorage.setItem("targetDate", new Date(now.getTime() + OfferDaysLeft * 24 * 60 * 60 * 1000).toISOString());
+      difference = OfferDaysLeft * 24 * 60 * 60 * 1000;
+    }
 
     const days = Math.floor(difference / (1000 * 60 * 60 * 24));
     const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);

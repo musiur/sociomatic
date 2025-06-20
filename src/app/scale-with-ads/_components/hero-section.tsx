@@ -14,7 +14,7 @@ const HeroSection = () => {
       }
       P={
         <>
-          Stop risking thousands on vague promises. For just ${OfferPrice}/month,
+          Stop risking thousands on vague promises. For just <span className="font-bold">${OfferPrice}/month</span>,
           we&apos;ll handle your ads and deliver REAL results—or we&apos;ll
           refund every penny.
         </>
