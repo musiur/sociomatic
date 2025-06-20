@@ -10,6 +10,7 @@ import {
   Users2,
 } from "lucide-react";
 import AdvertisementCTA from "./advertisement-cta";
+import { OfferPrice } from "@/lib/constants";
 
 const features = [
   {
@@ -24,7 +25,7 @@ const features = [
     icon: <Undo2Icon />,
     text: (
       <>
-        <span>ROI Amplification:</span> On average, we turn $300 into <span>$30k in revenue.</span>
+        <span>ROI Amplification:</span> On average, we turn ${OfferPrice} into <span>$30k in revenue.</span>
       </>
     ),
   },

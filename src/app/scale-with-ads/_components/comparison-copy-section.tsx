@@ -8,8 +8,12 @@ import {
   UserCircle,
   Database,
   Video,
+  RotateCcw,
+  ArrowUpWideNarrow,
 } from "lucide-react";
 import AdvertisementCTA from "./advertisement-cta";
+import ROI from "@/components/assets/roi";
+import { OfferPrice } from "@/lib/constants";
 
 const leftFeatures = [
   {
@@ -17,12 +21,16 @@ const leftFeatures = [
     text: "Transparent Tracking: Daily updates + live dashboard access.",
   },
   {
-    icon: <Unlock />,
-    text: "No Lock-Ins: Cancel anytime if unhappy.",
+    icon: <ArrowUpWideNarrow />,
+    text: "Data-driven ad campaigns that 3x-4x your ROI",
   },
   {
     icon: <Settings />,
     text: "Ads That Adapt: We tweak bids, audiences, and creatives DAILY.",
+  },
+  {
+    icon: <Unlock />,
+    text: "No Lock-Ins: Cancel anytime if unhappy.",
   },
 ];
 
@@ -41,7 +49,7 @@ const rightFeatures = [
   },
   {
     icon: <UserCircle />,
-    text: "Direct contact to founder.",
+    text: "Direct contact to CEO (Data-Driven Marketer)",
   },
   {
     icon: <Database />,
@@ -75,7 +83,7 @@ const ComparisonCopySection = () => {
 
         <div className="space-y-8">
           <h3 className="text-lg md:text-xl font-medium">
-            What You Get for $300/Month
+            What You Get for ${OfferPrice}/Month
             <br /> Package Breakdown
           </h3>
           <div className="space-y-4">

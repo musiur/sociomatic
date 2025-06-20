@@ -1,5 +1,6 @@
 import { default as AdvertisementHeroSection } from "@/app/_utils/herosection";
 import AdvertisementCTA from "./advertisement-cta";
+import { OfferPrice } from "@/lib/constants";
 
 const HeroSection = () => {
   return (
@@ -13,7 +14,7 @@ const HeroSection = () => {
       }
       P={
         <>
-          Stop risking thousands on vague promises. For just $300/month,
+          Stop risking thousands on vague promises. For just ${OfferPrice}/month,
           we&apos;ll handle your ads and deliver REAL results—or we&apos;ll
           refund every penny.
         </>

@@ -3,6 +3,7 @@
 import { Lock, Coins } from "lucide-react";
 import { useEffect, useState } from "react";
 import AdvertisementCTA from "./advertisement-cta";
+import { OfferDateString, OfferPrice } from "@/lib/constants";
 
 const ExpireSection = () => {
   const calculateTimeLeft = (targetDate: Date) => {
@@ -23,13 +24,13 @@ const ExpireSection = () => {
   };
 
   const getTargetDate = () => {
-    if (typeof window === "undefined") return new Date("2025-04-26T23:59:59.999Z");
+    if (typeof window === "undefined") return new Date(OfferDateString);
 
     const storedDate = localStorage.getItem("targetDate");
     if (storedDate) {
       return new Date(storedDate);
     } else {
-      const newTargetDate = new Date("2025-04-26T23:59:59.999Z"); // Set target date to April 26, 2025
+      const newTargetDate = new Date(OfferDateString); // Set target date to April 26, 2025
       localStorage.setItem("targetDate", newTargetDate.toISOString());
       return newTargetDate;
     }
@@ -53,7 +54,7 @@ const ExpireSection = () => {
             <h2 className="text-3xl font-bold">
               Only 15 Spots Left This Month
               <br />
-              Claim Your $300/Month Slot Now
+              Claim Your ${OfferPrice}/Month Slot Now
             </h2>
 
             <div className="bg-white/10 rounded-lg p-6 inline-block">
@@ -80,7 +81,7 @@ const ExpireSection = () => {
 
             <AdvertisementCTA
               text="Lock In My 90-Day Challenge"
-              section="Only 15 Spots Left This Month Claim Your $300/Month Slot Now"
+              section={`Only 15 Spots Left This Month Claim Your $${OfferPrice}/Month Slot Now`}
             />
 
             <div className="space-y-3">

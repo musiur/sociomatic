@@ -20,11 +20,11 @@ const Advertisement = () => {
       <HeroSection />
       <FailFixSection />
       <BrandsSection />
+      <ComparisonCopySection />
       <WhySafeSection />
       <TestimonialsSection />
       <AchieveSectionTwo />
       <ThreeMonthsChallengeSection />
-      <ComparisonCopySection />
       <ComparisonTableSection />
       <AchieveSection />
       <RiskFreeSection />

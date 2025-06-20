@@ -5,6 +5,7 @@ import Tagline from "@/components/molecule/tagline";
 import Link from "next/link";
 import ShimmerButton from "@/components/magicui/shimmer-button";
 import AdvertisementCTA from "./advertisement-cta";
+import { OfferPrice } from "@/lib/constants";
 
 const phases = [
   {
@@ -33,7 +34,7 @@ const ThreeMonthsChallengeSection = () => {
       <div className="flex flex-col items-center justify-center gap-6">
         <Tagline text={<>Our Challenge</>} />
         <h2 className="text-center">
-          Here&apos;s How We Make Your $300/Month
+          Here&apos;s How We Make Your ${OfferPrice}/Month
           <br className="hidden md:inline-block" /> Work Harder{" "}
           <span className="text-secondary">Than a $3,000 Agency</span>
         </h2>
@@ -64,7 +65,7 @@ const ThreeMonthsChallengeSection = () => {
       <div className="w-full flex justify-center">
         <AdvertisementCTA
           text="Discover Our 3-Month Challenge"
-          section="Here's How We Make Your $300/Month Work Harder Than a $3000 Agency"
+          section={`Here's How We Make Your $${OfferPrice}/Month Work Harder Than a $3000 Agency`}
         />
       </div>
     </section>

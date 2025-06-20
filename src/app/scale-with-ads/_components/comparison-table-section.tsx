@@ -1,11 +1,12 @@
 import clsx from "clsx";
 import AdvertisementCTA from "./advertisement-cta";
+import { OfferPrice } from "@/lib/constants";
 
 const comparisonData = [
   {
     feature: "Pricing",
     typical: "$3000+/month + hidden fees",
-    ours: "$300 flat/month (No surprises)",
+    ours: `$${OfferPrice} flat/month (No surprises)`,
   },
   {
     feature: "Contract",
@@ -19,7 +20,7 @@ const comparisonData = [
   },
   {
     feature: "Tracking",
-    typical: "$300-$500",
+    typical: `$${OfferPrice}-$500`,
     ours: "$80 one time",
   },
   {

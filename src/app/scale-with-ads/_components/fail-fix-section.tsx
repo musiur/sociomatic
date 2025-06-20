@@ -3,6 +3,7 @@ import CheckGreenIcon from "@/components/assets/check-green";
 import ShimmerButton from "@/components/magicui/shimmer-button";
 import Link from "next/link";
 import AdvertisementCTA from "./advertisement-cta";
+import { OfferPrice } from "@/lib/constants";
 
 const painPoints = [
   "Throwing money at ads with no clear strategy.",
@@ -56,7 +57,7 @@ const FailFixSection = () => {
 
       <div className="w-full flex justify-center">
         <AdvertisementCTA
-          text="See How We Turn $300 into $99k"
+          text={`See How We Turn $${OfferPrice} into $99k`}
           section="Why Most Businesses Fail at Ads (And How We Fix It)"
         />
       </div>
