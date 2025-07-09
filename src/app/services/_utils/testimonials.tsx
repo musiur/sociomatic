@@ -9,8 +9,20 @@ import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import clsx from "clsx";
 import MarqueeWrapper from "./marquee-wrapper";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
-const Testimonials = ({ data, hideCTA }: { data: any; hideCTA?: boolean }) => {
+const Testimonials = ({
+  data,
+  hideCTA,
+  seeAllReview = false,
+  mutedBG = false,
+}: {
+  data: any;
+  hideCTA?: boolean;
+  seeAllReview?: boolean;
+  mutedBG?: boolean;
+}) => {
   const pathname = usePathname();
   const materedPath = pathname
     ?.replaceAll("/services/", "")
@@ -35,7 +47,11 @@ const Testimonials = ({ data, hideCTA }: { data: any; hideCTA?: boolean }) => {
     data?.filter((item: any) => item.text?.length < 100) || [];
 
   return (
-    <div className="py-16 bg-muted">
+    <div
+      className={clsx("py-16", {
+        "bg-muted": mutedBG,
+      })}
+    >
       <ANIM__FadeInOutOnScroll>
         <div className="container flex flex-col items-center justify-center gap-[32px]">
           <Tagline text={<>Testimonials</>} />
@@ -66,11 +82,27 @@ const Testimonials = ({ data, hideCTA }: { data: any; hideCTA?: boolean }) => {
               })}
             </MarqueeWrapper>
           )}
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-muted dark:from-background"></div>
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-muted dark:from-background"></div>
+          <div
+            className={clsx(
+              "pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r dark:from-background",
+              {
+                "from-muted": mutedBG,
+                "from-background": !mutedBG,
+              }
+            )}
+          ></div>
+          <div
+            className={clsx(
+              "pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l dark:from-background",
+              {
+                "from-muted": mutedBG,
+                "from-background": !mutedBG,
+              }
+            )}
+          ></div>
         </div>
-        {!hideCTA ? (
-          <div className="flex justify-center px-4">
+        <div className="flex justify-center px-4">
+          {!hideCTA ? (
             <ServicesCTA
               position="center"
               cta={{
@@ -81,8 +113,13 @@ const Testimonials = ({ data, hideCTA }: { data: any; hideCTA?: boolean }) => {
                 secondary: { text: <>Get A Free Consultation</>, link: "/" },
               }}
             />
-          </div>
-        ) : null}
+          ) : null}
+          {seeAllReview ? (
+            <Link href="/reviews">
+              <Button variant="outline">See all reviews</Button>
+            </Link>
+          ) : null}
+        </div>
       </div>
     </div>
   );

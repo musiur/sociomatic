@@ -7,7 +7,13 @@ const TestimonialsSection = async () => {
   const reviews = result?.data?.length ? result?.data : [];
   return (
     <Fragment>
-      <ClientsReviews reviews={reviews} projectIdea={false} hideCTA={true} />
+      <ClientsReviews
+        reviews={reviews}
+        projectIdea={false}
+        hideCTA={true}
+        seeAllReview={true}
+        mutedBG={false}
+      />
     </Fragment>
   );
 };

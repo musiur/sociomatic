@@ -47,41 +47,39 @@ export const BrandCarousel = () => {
   return (
     <div className="bg-muted rounded-b-[20px] md:rounded-b-[40px]">
       <div className="py-10 container">
-      <Carousel
-        className="w-full"
-        opts={{
-          align: "start",
-          loop: true,
-        }}
-        plugins={[
-          Autoplay({
-            delay: 2000,
-          }),
-        ]}
-      >
-        <ANIM__FadeInOnScroll>
-          <CarouselContent className="-ml-1">
-            {BrandDetails.map((_) => (
-              <CarouselItem
-                key={_.id}
-                className="p-1 basis-1/2 md:basis-1/3 lg:basis-1/5 "
-              >
-                <div className="p-4 flex items-center justify-center border rounded-lg bg-white h-[80px]">
-                  <Image
-                    src={"/images/brands/" + _.image}
-                    alt=""
-                    width={500}
-                    height={200}
-                    className="w-auto max-h-[40px]"
-                  />
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-        </ANIM__FadeInOnScroll>
-        {/* <CarouselPrevious />
-    <CarouselNext /> */}
-      </Carousel>
+        <Carousel
+          className="w-full"
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          plugins={[
+            Autoplay({
+              delay: 2000,
+            }),
+          ]}
+        >
+          <ANIM__FadeInOnScroll>
+            <CarouselContent className="-ml-1">
+              {BrandDetails.map((_) => (
+                <CarouselItem
+                  key={_.id}
+                  className="p-1 basis-1/2 md:basis-1/3 lg:basis-1/5 "
+                >
+                  <div className="p-4 flex items-center justify-center border rounded-lg bg-white h-[80px]">
+                    <Image
+                      src={"/images/brands/" + _.image}
+                      alt=""
+                      width={500}
+                      height={200}
+                      className="w-auto max-h-[40px]"
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </ANIM__FadeInOnScroll>
+        </Carousel>
       </div>
     </div>
   );
