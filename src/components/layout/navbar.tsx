@@ -21,13 +21,10 @@ import BrandLogo from "../assets/brandlogo";
 
 import { Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
-import GetAQuote from "../molecule/get-a-quote";
 import { useEffect, useState } from "react";
 import clsx from "clsx";
-import ShimmerButton from "../magicui/shimmer-button";
-import { getCookie } from "@/lib/utils";
 import NavActions from "../molecule/nav-actions";
-import Logout from "../molecule/logout";
+import ShimmerButton from "../magicui/shimmer-button";
 
 const Navbar = ({ token }: { token: string | undefined | null }) => {
   const pathname = usePathname();
@@ -215,7 +212,9 @@ const Navbar = ({ token }: { token: string | undefined | null }) => {
               >
                 Dashboard
               </Link>
-              <Logout />
+              <Link href="/scale-with-ads">
+                <ShimmerButton>Scale now</ShimmerButton>
+              </Link>
             </ul>
           </div>
         </div>
