@@ -15,7 +15,7 @@ const Calendly = () => {
       <div className="container pb-[25px]">
         <SectionHead
           highlighter=""
-          H2={<>Book Now To Discuss Your Project With Us</>}
+          H2={<>Let Us Show You How We Helped Others Make Millions</>}
           paragraphs={[]}
         />
       </div>
