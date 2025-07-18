@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "@/components/ui/use-toast";
 import {
-  ArrowUpRight,
   Clock,
   Globe,
   MessageCircle,
@@ -16,8 +15,6 @@ import {
   Stars,
   Wand2Icon,
 } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import MessageFromCEO from "./_utils/meet-our-ceo";
