@@ -45,7 +45,7 @@ export function GigCard({ gig }: { gig: Gig }) {
             alt={gig.highlight}
             width={400}
             height={320}
-            className="rounded-xl shadow-xl"
+            className="rounded-xl shadow-xl w-auto h-full"
           />
         </motion.div>
 
