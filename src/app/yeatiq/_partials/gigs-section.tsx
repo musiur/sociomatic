@@ -10,7 +10,7 @@ const gigs = [
       "I will set up Google Analytics 4 (GA4), facebook pixel ,any tracking  with Google Tag Manager (GTM) to help you track user behavior, conversions, and events accurately — so you can make smarter marketing decisions",
     features: [],
     cta: "View on Fiverr",
-    ctaLink: "https://www.fiverr.com/yeatiq/set-up-google-analytics-gtm-ga4-ga",
+    ctaLink: "https://in8cddcab4.ufs.sh/f/TLm9XcQ0Drp9Y1vbzMMewegdpFt7V6LEuisRYh0Ka9TIlonN",
   },
   {
     image: "/images/yeatiq.png",
@@ -22,7 +22,7 @@ const gigs = [
     cta: "View on Fiverr",
     reverse: true,
     ctaLink:
-      "https://www.fiverr.com/yeatiq/setup-or-fix-google-analytics-4-ga4-ecommerce-tracking-gads-conversion-gtm",
+      "https://in8cddcab4.ufs.sh/f/TLm9XcQ0Drp9YYyzj6ewegdpFt7V6LEuisRYh0Ka9TIlonNJ",
   },
   {
     image: "/images/yeatiq.png",
@@ -33,7 +33,7 @@ const gigs = [
     features: [],
     cta: "View on Fiverr",
     ctaLink:
-      "https://www.fiverr.com/yeatiq/setup-and-efficiently-manage-your-google-ads-adwords-ppc-campaigns",
+      "https://in8cddcab4.ufs.sh/f/TLm9XcQ0Drp9QjpbXVVzJOXn07FcSGmxihE9u8RMCHgVwl16",
   },
   {
     image: "/images/yeatiq.png",
@@ -45,7 +45,7 @@ const gigs = [
     cta: "View on Fiverr",
     reverse: true,
     ctaLink:
-      "https://www.fiverr.com/yeatiq/setup-and-manage-your-facebook-ads-campaigns",
+      "https://in8cddcab4.ufs.sh/f/TLm9XcQ0Drp9ImEiTXyAyQejaUZzu3FMHs46W1SOvgq7fbVL",
   },
 ];
 
