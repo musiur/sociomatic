@@ -1,17 +1,22 @@
-import MagnifierImage from "@/components/molecule/magnifier-image";
-// import Image from "next/image";
+import { ImageZoom } from "@/components/molecule/image-zoom";
+import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 const SectionSideImage = ({ image }: { image: string }) => {
   return (
-    <div className="p-4">
-      <MagnifierImage
+    <ImageZoom
+      backdropClassName={cn(
+        '[&_[data-rmiz-modal-overlay="visible"]]:bg-black/80'
+      )}
+    >
+      <Image
+        alt="Placeholder image"
+        className="h-auto w-96 rounded-xl md:rounded-2xl overflow-hidden"
+        height={800}
         src={image}
-        alt=""
-        width={500}
-        height={500}
-        className="max-w-[450px] max-h-[500px] rounded-[40px]"
+        width={1200}
       />
-    </div>
+    </ImageZoom>
   );
 };
 
